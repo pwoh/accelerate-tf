@@ -1,11 +1,9 @@
--- | Simple linear regression example for the README.
-
 import Control.Monad (replicateM, replicateM_, zipWithM)
 import System.Random (randomIO)
 import Test.HUnit (assertBool)
 
 import qualified TensorFlow.Core as TF
---import qualified TensorFlow.GenOps.Core as TF
+import qualified TensorFlow.GenOps.Core as TF
 import qualified TensorFlow.Gradient as TF
 import qualified TensorFlow.Ops as TF
 
@@ -18,10 +16,7 @@ main = do
     (w, b) <- fit xData yData
     assertBool "w == 3" (abs (3 - w) < 0.001)
     assertBool "b == 8" (abs (8 - b) < 0.001)
-    print w
-    print b
-    putStrLn "lolasdfasdf"
-    putStrLn "asdfdshfgvbhtfgtr"
+    putStrLn "asdfsd"
 
 fit :: [Float] -> [Float] -> IO (Float, Float)
 fit xData yData = TF.runSession $ do

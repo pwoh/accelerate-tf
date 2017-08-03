@@ -25,29 +25,11 @@ executable DerpTest
   build-depends: base >= 4.7 && < 5
                 , random
                 , HUnit
-                , proto-lens == 0.2.*
-                , proto-lens-protoc == 0.2.*
-                , tensorflow-proto == 0.1.*
-                , async
-                , attoparsec
-                , bytestring
-                , containers
-                , data-default
-                , exceptions
-                , fgl
-                , lens-family
-                , mainland-pretty
-                , mtl
-                , semigroups
-                , split
-                , text
-                , temporary
-                , transformers
-                , vector
                 , tensorflow == 0.1.*
                 , tensorflow-core-ops
                 , tensorflow-ops
                 , tensorflow-opgen
+                , tensorflow-proto == 0.1.*
 
 source-repository head
   type:     git
