@@ -7,6 +7,8 @@ import qualified TensorFlow.GenOps.Core as TF
 import qualified TensorFlow.Gradient as TF
 import qualified TensorFlow.Ops as TF
 
+import qualified Data.Array.Accelerate as A
+
 main :: IO ()
 main = do
     -- Generate data where `y = x*3 + 8`.
@@ -14,6 +16,8 @@ main = do
     let yData = [x*3 + 8 | x <- xData]
     -- Fit linear regression model.
     (w, b) <- fit xData yData
+    putStrLn $ show w
+    putStrLn $ show b
     assertBool "w == 3" (abs (3 - w) < 0.001)
     assertBool "b == 8" (abs (8 - b) < 0.001)
     putStrLn "asdfsd"

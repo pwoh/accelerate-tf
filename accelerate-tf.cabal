@@ -30,6 +30,23 @@ executable DerpTest
                 , tensorflow-ops
                 , tensorflow-opgen
                 , tensorflow-proto == 0.1.*
+                , accelerate
+                , text
+                
+executable Dotp
+  default-language: Haskell2010
+  main-is: src/Dotp.hs
+  build-depends: base >= 4.7 && < 5
+                , random
+                , HUnit
+                , tensorflow == 0.1.*
+                , tensorflow-core-ops
+                , tensorflow-ops
+                , tensorflow-opgen
+                , tensorflow-proto == 0.1.*
+                , accelerate
+                , text
+                , vector
 
 source-repository head
   type:     git
