@@ -1,3 +1,4 @@
+{-# LANGUAGE PartialTypeSignatures #-}
 {-# LANGUAGE FlexibleContexts #-}
 
 import Control.Monad (replicateM, replicateM_, zipWithM, foldM)
@@ -42,9 +43,9 @@ main = do
     --V.fromList [2, 1, 1, 7 :: Int32] @=? x -- this fixes the ambiguous shape?
 
 
-    putStrLn $ show z
+    --putStrLn $ show z
     --putStrLn $ show zz
-    putStrLn $ show x
+    --putStrLn $ show x
     --putStrLn $ show f
     --putStrLn $ show a
     --putStrLn $ show b
@@ -57,15 +58,8 @@ main = do
 eval :: TF.Fetchable t a => t -> IO a
 eval = TF.runSession . TF.run
 
-derp1 :: IO (Float)
-derp1 = TF.runSession $ do
-    let x = TF.vector [1.0, 2.0, 3.0 :: Float]
-        y = TF.vector [1.0, 2.0, 3.0 :: Float]
-    v <- TF.initializedVariable (TF.constant (TF.Shape [3]) [1.0, 2.0, 3.0 :: Float])
-    result <- (TF.run (TF.readValue v)) 
-    return 1.0
 
-derp :: IO (Float)
+-- derp :: IO (Float, V.Vector Float, Float)
 derp = TF.runSession $ do 
     let x = TF.vector [1.0, 2.0, 3.0 :: Float]
         y = TF.vector [1.0, 2.0, 3.0 :: Float]
@@ -78,7 +72,10 @@ derp = TF.runSession $ do
     --TF.Scalar z <- TF.run $ TF.readValue v
     --return z
     TF.Scalar z <- TF.run $ TF.reduceSum w
-    return z
+    w' <- TF.run w :: TF.Session (V.Vector Float) -- XXX needs type signature on TF.run
+    s  <- TF.run w -- or use the result as a Vector somewhere, or top-level type signature, etc...
+    -- Data.Storable check if that works.
+    return (z, w', V.sum s)
     --(TF.Scalar z, TF.Scalar zz) <- TF.run (TF.reduceSum x, TF.reduceSum w)
     --return (z, zz)
 
@@ -109,3 +106,18 @@ derp = TF.runSession $ do
         --return (w')
         --TF.render w
         --return w
+
+froob :: IO [V.Vector Int64]
+froob = TF.runSession $ do
+    let shapes = map TF.Shape [[1],[2,3]]
+    let tensors = map TF.zeros shapes :: [TF.Tensor TF.Build Float]
+    result <- TF.run $ TF.shapeN tensors
+    return result
+
+t2 :: IO (V.Vector Float)
+t2 = TF.runSession $ do
+  let x = TF.vector [1..10 :: Float]
+  result <- TF.run x
+  return result
+
+
