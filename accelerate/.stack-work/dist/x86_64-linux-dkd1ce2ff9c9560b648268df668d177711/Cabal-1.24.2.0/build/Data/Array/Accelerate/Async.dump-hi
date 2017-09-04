@@ -1,0 +1,734 @@
+
+==================== FINAL INTERFACE ====================
+2017-08-29 05:26:55.97745 UTC
+
+interface accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Async 8002
+  interface hash: 2ade146d473fd87a9ed619f4ae5ad908
+  ABI hash: 4ea05467391cfed3a75be0fdfde46c88
+  export-list hash: 80c1bfd7c1efd875c7429d1e7ed99b07
+  orphan hash: baf5905ce09045ab63f26d8e509fb885
+  flag hash: 07d1d12fb4c9df6222baf766e217e575
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Data.Array.Accelerate.Async.async
+  Data.Array.Accelerate.Async.asyncBound
+  Data.Array.Accelerate.Async.asyncOn
+  Data.Array.Accelerate.Async.cancel
+  Data.Array.Accelerate.Async.poll
+  Data.Array.Accelerate.Async.wait
+  Data.Array.Accelerate.Async.Async
+module dependencies:
+package dependencies: base-4.9.1.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:GHC.Exts
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Control.Concurrent 2ee6a0a58489520b9a96d8fef10380fa
+import  -/  base-4.9.1.0:Control.Exception a76dd9666251322fe34dbcca3a0817bf
+import  -/  base-4.9.1.0:Control.Exception.Base 1e106916283856f4d9caeddab92cd861
+import  -/  base-4.9.1.0:Data.Either 20b09ef8d0a5b74fdec011c40c1587f5
+import  -/  base-4.9.1.0:Data.Maybe d876c4ffe4b3c43755a781e8ad860d88
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Conc b311a66cb9dd2068c2414c0492c6937c
+import  -/  base-4.9.1.0:GHC.Conc.Sync 8d0a228e5fc4d8c110495066f4d52ea1
+import  -/  base-4.9.1.0:GHC.Exception e38fa3e73d54022fb9e3ce06477dfd07
+import  -/  base-4.9.1.0:GHC.Exts 26da1d42716da321d2d8df514b70012a
+import  -/  base-4.9.1.0:GHC.IO eb504c57b397cf133849f8586f15dafb
+import  -/  base-4.9.1.0:GHC.IO.Exception 5064be4c355632a1d1c4f2322f56ac52
+import  -/  base-4.9.1.0:GHC.MVar 2b6c6f2887cffa9e72fc08229ba0f346
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  ghc-prim-0.5.0.0:GHC.Magic fdc8848818e43be1f10a4b3d51d8478a
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+addDependentFile "/home/pwoh/.stack/programs/x86_64-linux-dkd1ce2ff9c9560b648268df668d177711/ghc-8.0.2/lib/ghc-8.0.2/include/ghcversion.h"
+addDependentFile ".stack-work/dist/x86_64-linux-dkd1ce2ff9c9560b648268df668d177711/Cabal-1.24.2.0/build/autogen/cabal_macros.h"
+addDependentFile "/usr/include/stdc-predef.h"
+0e3ac65abf2b01215f7f5a0ad366783e
+  $s=<< :: (a -> GHC.Types.IO b) -> GHC.Types.IO a -> GHC.Types.IO b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,C(C1(U(U,U)))><L,C(U(U,U))>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a
+                   @ b
+                   (f :: a -> GHC.Types.IO b)
+                   (x :: GHC.Types.IO a)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (GHC.Base.bindIO @ a @ b x f) `cast` (GHC.Types.N:IO[0] <b>_R) eta)
+                  `cast`
+                (forall (a :: <*>_N) (b :: <*>_N).
+                 <a -> GHC.Types.IO b>_R
+                 ->_R <GHC.Types.IO a>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <b>_R)) -}
+00cf21e92c7d898cd56a1ca59e1e36fe
+  $tc'Async :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3189716495598609184##
+                   16904548121188555079##
+                   Data.Array.Accelerate.Async.$trModule
+                   Data.Array.Accelerate.Async.$tc'Async1) -}
+93df256c69a95fdde39c49295c82ca7d
+  $tc'Async1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Async"#) -}
+033a253e93b2c9afaf493007741fd1ea
+  $tcAsync :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3715013562877654192##
+                   3240930323087858511##
+                   Data.Array.Accelerate.Async.$trModule
+                   Data.Array.Accelerate.Async.$tcAsync1) -}
+e2ffc7f73b9bc3785632c69273115a66
+  $tcAsync1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Async"#) -}
+12a4f4745170357fad88462c5e5b9cf5
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Data.Array.Accelerate.Async.$trModule2
+                   Data.Array.Accelerate.Async.$trModule1) -}
+0350bc5b25a8b8541dae177b695c594c
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Data.Array.Accelerate.Async"#) -}
+545dcf336a8f4f9ffdcc1031d4187ecd
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw"#) -}
+6710ceaafdaf40f8edf08a02bfe5ddae
+  $wasyncOn ::
+    GHC.Prim.Int#
+    -> GHC.Types.IO a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Array.Accelerate.Async.Async a #)
+  {- Arity: 3, HasNoCafRefs, Strictness: <S,U><L,C(U)><S,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (ww :: GHC.Prim.Int#)
+                   (w :: GHC.Types.IO a)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newMVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Data.Either.Either GHC.Exception.SomeException a)
+                        w1 of ds { (#,#) ipv ipv1 ->
+                 case GHC.Prim.getMaskingState# ipv of ds1 { (#,#) ipv2 ipv3 ->
+                 case ipv3 of ds2 {
+                   DEFAULT
+                   -> case GHC.Prim.forkOn#
+                             @ (GHC.Types.IO ())
+                             ww
+                             (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                              case GHC.Prim.catch#
+                                     @ (Data.Either.Either GHC.Exception.SomeException a)
+                                     @ GHC.Exception.SomeException
+                                     (GHC.Magic.lazy
+                                        @ (GHC.Types.IO
+                                             (Data.Either.Either GHC.Exception.SomeException a))
+                                        (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                         case GHC.Prim.maskAsyncExceptions#
+                                                @ a
+                                                w `cast` (GHC.Types.N:IO[0] <a>_R)
+                                                s1 of ds3 { (#,#) ipv4 ipv5 ->
+                                         (# ipv4,
+                                            Data.Either.Right
+                                              @ GHC.Exception.SomeException
+                                              @ a
+                                              ipv5 #) })
+                                          `cast`
+                                        (Sym (GHC.Types.N:IO[0]
+                                                  <Data.Either.Either
+                                                     GHC.Exception.SomeException a>_R)))
+                                       `cast`
+                                     (GHC.Types.N:IO[0]
+                                          <Data.Either.Either GHC.Exception.SomeException a>_R)
+                                     (Data.Array.Accelerate.Async.async2 @ a)
+                                     s of ds3 { (#,#) ipv4 ipv5 ->
+                              case GHC.Prim.putMVar#
+                                     @ GHC.Prim.RealWorld
+                                     @ (Data.Either.Either GHC.Exception.SomeException a)
+                                     ipv1
+                                     ipv5
+                                     ipv4 of s2# { DEFAULT ->
+                              (# s2#, GHC.Tuple.() #) } })
+                               `cast`
+                             (Sym (GHC.Types.N:IO[0] <()>_R))
+                             ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                      (# ipv4, Data.Array.Accelerate.Async.Async @ a ipv5 ipv1 #) }
+                   0#
+                   -> case GHC.Prim.maskAsyncExceptions#
+                             @ GHC.Conc.Sync.ThreadId
+                             (\ (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                              case GHC.Prim.forkOn#
+                                     @ (GHC.Types.IO ())
+                                     ww
+                                     (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                      case GHC.Prim.catch#
+                                             @ (Data.Either.Either GHC.Exception.SomeException a)
+                                             @ GHC.Exception.SomeException
+                                             (GHC.Magic.lazy
+                                                @ (GHC.Types.IO
+                                                     (Data.Either.Either
+                                                        GHC.Exception.SomeException a))
+                                                (\ (s1 :: GHC.Prim.State#
+                                                            GHC.Prim.RealWorld)[OneShot] ->
+                                                 case GHC.Prim.unmaskAsyncExceptions#
+                                                        @ a
+                                                        w `cast` (GHC.Types.N:IO[0] <a>_R)
+                                                        s1 of ds3 { (#,#) ipv4 ipv5 ->
+                                                 (# ipv4,
+                                                    Data.Either.Right
+                                                      @ GHC.Exception.SomeException
+                                                      @ a
+                                                      ipv5 #) })
+                                                  `cast`
+                                                (Sym (GHC.Types.N:IO[0]
+                                                          <Data.Either.Either
+                                                             GHC.Exception.SomeException a>_R)))
+                                               `cast`
+                                             (GHC.Types.N:IO[0]
+                                                  <Data.Either.Either
+                                                     GHC.Exception.SomeException a>_R)
+                                             (Data.Array.Accelerate.Async.async2 @ a)
+                                             s of ds3 { (#,#) ipv4 ipv5 ->
+                                      case GHC.Prim.putMVar#
+                                             @ GHC.Prim.RealWorld
+                                             @ (Data.Either.Either GHC.Exception.SomeException a)
+                                             ipv1
+                                             ipv5
+                                             ipv4 of s2# { DEFAULT ->
+                                      (# s2#, GHC.Tuple.() #) } })
+                                       `cast`
+                                     (Sym (GHC.Types.N:IO[0] <()>_R))
+                                     eta of ds3 { (#,#) ipv4 ipv5 ->
+                              (# ipv4, GHC.Conc.Sync.ThreadId ipv5 #) })
+                             ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                      (# ipv4,
+                         case ipv5 of dt { GHC.Conc.Sync.ThreadId dt1 ->
+                         Data.Array.Accelerate.Async.Async @ a dt1 ipv1 } #) }
+                   1#
+                   -> case GHC.Prim.forkOn#
+                             @ (GHC.Types.IO ())
+                             ww
+                             (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                              case GHC.Prim.catch#
+                                     @ (Data.Either.Either GHC.Exception.SomeException a)
+                                     @ GHC.Exception.SomeException
+                                     (GHC.Magic.lazy
+                                        @ (GHC.Types.IO
+                                             (Data.Either.Either GHC.Exception.SomeException a))
+                                        (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                         case GHC.Prim.maskUninterruptible#
+                                                @ a
+                                                w `cast` (GHC.Types.N:IO[0] <a>_R)
+                                                s1 of ds3 { (#,#) ipv4 ipv5 ->
+                                         (# ipv4,
+                                            Data.Either.Right
+                                              @ GHC.Exception.SomeException
+                                              @ a
+                                              ipv5 #) })
+                                          `cast`
+                                        (Sym (GHC.Types.N:IO[0]
+                                                  <Data.Either.Either
+                                                     GHC.Exception.SomeException a>_R)))
+                                       `cast`
+                                     (GHC.Types.N:IO[0]
+                                          <Data.Either.Either GHC.Exception.SomeException a>_R)
+                                     (Data.Array.Accelerate.Async.async2 @ a)
+                                     s of ds3 { (#,#) ipv4 ipv5 ->
+                              case GHC.Prim.putMVar#
+                                     @ GHC.Prim.RealWorld
+                                     @ (Data.Either.Either GHC.Exception.SomeException a)
+                                     ipv1
+                                     ipv5
+                                     ipv4 of s2# { DEFAULT ->
+                              (# s2#, GHC.Tuple.() #) } })
+                               `cast`
+                             (Sym (GHC.Types.N:IO[0] <()>_R))
+                             ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                      (# ipv4,
+                         Data.Array.Accelerate.Async.Async @ a ipv5 ipv1 #) } } } }) -}
+10a3a49acc8276e1b35373305c482066
+  data Async a
+    = Async {-# UNPACK #-}GHC.Conc.Sync.ThreadId
+            {-# UNPACK #-}(GHC.MVar.MVar
+                             (Data.Either.Either GHC.Exception.SomeException a))
+c609ba5be68b1c8074f6e2f96d08fe55
+  async ::
+    GHC.Types.IO a
+    -> GHC.Types.IO (Data.Array.Accelerate.Async.Async a)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Async.async1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Types.IO a>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <Data.Array.Accelerate.Async.Async a>_R)) -}
+19e843a96b30e73f23b34652033066ba
+  async1 ::
+    GHC.Types.IO a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Array.Accelerate.Async.Async a #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><S,U>,
+     Unfolding: (\ @ a
+                   (action :: GHC.Types.IO a)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newMVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Data.Either.Either GHC.Exception.SomeException a)
+                        eta of ds { (#,#) ipv ipv1 ->
+                 case GHC.Prim.getMaskingState# ipv of ds1 { (#,#) ipv2 ipv3 ->
+                 case ipv3 of ds2 {
+                   DEFAULT
+                   -> case GHC.Prim.fork#
+                             @ (GHC.Types.IO ())
+                             (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                              case GHC.Prim.catch#
+                                     @ (Data.Either.Either GHC.Exception.SomeException a)
+                                     @ GHC.Exception.SomeException
+                                     (GHC.Magic.lazy
+                                        @ (GHC.Types.IO
+                                             (Data.Either.Either GHC.Exception.SomeException a))
+                                        (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                         case GHC.Prim.maskAsyncExceptions#
+                                                @ a
+                                                action `cast` (GHC.Types.N:IO[0] <a>_R)
+                                                s1 of ds3 { (#,#) ipv4 ipv5 ->
+                                         (# ipv4,
+                                            Data.Either.Right
+                                              @ GHC.Exception.SomeException
+                                              @ a
+                                              ipv5 #) })
+                                          `cast`
+                                        (Sym (GHC.Types.N:IO[0]
+                                                  <Data.Either.Either
+                                                     GHC.Exception.SomeException a>_R)))
+                                       `cast`
+                                     (GHC.Types.N:IO[0]
+                                          <Data.Either.Either GHC.Exception.SomeException a>_R)
+                                     (Data.Array.Accelerate.Async.async2 @ a)
+                                     s of ds3 { (#,#) ipv4 ipv5 ->
+                              case GHC.Prim.putMVar#
+                                     @ GHC.Prim.RealWorld
+                                     @ (Data.Either.Either GHC.Exception.SomeException a)
+                                     ipv1
+                                     ipv5
+                                     ipv4 of s2# { DEFAULT ->
+                              (# s2#, GHC.Tuple.() #) } })
+                               `cast`
+                             (Sym (GHC.Types.N:IO[0] <()>_R))
+                             ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                      (# ipv4, Data.Array.Accelerate.Async.Async @ a ipv5 ipv1 #) }
+                   0#
+                   -> case GHC.Prim.maskAsyncExceptions#
+                             @ GHC.Conc.Sync.ThreadId
+                             (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                              case GHC.Prim.fork#
+                                     @ (GHC.Types.IO ())
+                                     (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                      case GHC.Prim.catch#
+                                             @ (Data.Either.Either GHC.Exception.SomeException a)
+                                             @ GHC.Exception.SomeException
+                                             (GHC.Magic.lazy
+                                                @ (GHC.Types.IO
+                                                     (Data.Either.Either
+                                                        GHC.Exception.SomeException a))
+                                                (\ (s2 :: GHC.Prim.State#
+                                                            GHC.Prim.RealWorld)[OneShot] ->
+                                                 case GHC.Prim.unmaskAsyncExceptions#
+                                                        @ a
+                                                        action `cast` (GHC.Types.N:IO[0] <a>_R)
+                                                        s2 of ds3 { (#,#) ipv4 ipv5 ->
+                                                 (# ipv4,
+                                                    Data.Either.Right
+                                                      @ GHC.Exception.SomeException
+                                                      @ a
+                                                      ipv5 #) })
+                                                  `cast`
+                                                (Sym (GHC.Types.N:IO[0]
+                                                          <Data.Either.Either
+                                                             GHC.Exception.SomeException a>_R)))
+                                               `cast`
+                                             (GHC.Types.N:IO[0]
+                                                  <Data.Either.Either
+                                                     GHC.Exception.SomeException a>_R)
+                                             (Data.Array.Accelerate.Async.async2 @ a)
+                                             s1 of ds3 { (#,#) ipv4 ipv5 ->
+                                      case GHC.Prim.putMVar#
+                                             @ GHC.Prim.RealWorld
+                                             @ (Data.Either.Either GHC.Exception.SomeException a)
+                                             ipv1
+                                             ipv5
+                                             ipv4 of s2# { DEFAULT ->
+                                      (# s2#, GHC.Tuple.() #) } })
+                                       `cast`
+                                     (Sym (GHC.Types.N:IO[0] <()>_R))
+                                     s of ds3 { (#,#) ipv4 ipv5 ->
+                              (# ipv4, GHC.Conc.Sync.ThreadId ipv5 #) })
+                             ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                      (# ipv4,
+                         case ipv5 of dt { GHC.Conc.Sync.ThreadId dt1 ->
+                         Data.Array.Accelerate.Async.Async @ a dt1 ipv1 } #) }
+                   1#
+                   -> case GHC.Prim.fork#
+                             @ (GHC.Types.IO ())
+                             (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                              case GHC.Prim.catch#
+                                     @ (Data.Either.Either GHC.Exception.SomeException a)
+                                     @ GHC.Exception.SomeException
+                                     (GHC.Magic.lazy
+                                        @ (GHC.Types.IO
+                                             (Data.Either.Either GHC.Exception.SomeException a))
+                                        (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                         case GHC.Prim.maskUninterruptible#
+                                                @ a
+                                                action `cast` (GHC.Types.N:IO[0] <a>_R)
+                                                s1 of ds3 { (#,#) ipv4 ipv5 ->
+                                         (# ipv4,
+                                            Data.Either.Right
+                                              @ GHC.Exception.SomeException
+                                              @ a
+                                              ipv5 #) })
+                                          `cast`
+                                        (Sym (GHC.Types.N:IO[0]
+                                                  <Data.Either.Either
+                                                     GHC.Exception.SomeException a>_R)))
+                                       `cast`
+                                     (GHC.Types.N:IO[0]
+                                          <Data.Either.Either GHC.Exception.SomeException a>_R)
+                                     (Data.Array.Accelerate.Async.async2 @ a)
+                                     s of ds3 { (#,#) ipv4 ipv5 ->
+                              case GHC.Prim.putMVar#
+                                     @ GHC.Prim.RealWorld
+                                     @ (Data.Either.Either GHC.Exception.SomeException a)
+                                     ipv1
+                                     ipv5
+                                     ipv4 of s2# { DEFAULT ->
+                              (# s2#, GHC.Tuple.() #) } })
+                               `cast`
+                             (Sym (GHC.Types.N:IO[0] <()>_R))
+                             ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                      (# ipv4,
+                         Data.Array.Accelerate.Async.Async @ a ipv5 ipv1 #) } } } }) -}
+e2926c50caa3c1c1282cfed4f0c572cb
+  async2 ::
+    GHC.Exception.SomeException
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Either.Either GHC.Exception.SomeException a #)
+  {- Arity: 2, HasNoCafRefs,
+     Unfolding: (\ @ a
+                   (e1 :: GHC.Exception.SomeException)[OneShot]
+                   (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (# eta1,
+                    Data.Either.Left @ GHC.Exception.SomeException @ a e1 #)) -}
+91c0de9e7d4fd2f4be463375e30fe890
+  asyncBound ::
+    GHC.Types.IO a
+    -> GHC.Types.IO (Data.Array.Accelerate.Async.Async a)
+  {- Arity: 2, Strictness: <L,C(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Async.asyncBound1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Types.IO a>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <Data.Array.Accelerate.Async.Async a>_R)) -}
+574c92c60a466b60746f6c8b0bd409d0
+  asyncBound1 ::
+    GHC.Types.IO a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Array.Accelerate.Async.Async a #)
+  {- Arity: 2, Strictness: <L,C(U)><S,U>,
+     Unfolding: (\ @ a
+                   (action :: GHC.Types.IO a)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newMVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Data.Either.Either GHC.Exception.SomeException a)
+                        eta of ds { (#,#) ipv ipv1 ->
+                 case GHC.Prim.getMaskingState# ipv of ds1 { (#,#) ipv2 ipv3 ->
+                 case ipv3 of ds2 {
+                   DEFAULT
+                   -> case Control.Concurrent.forkOS1
+                             (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                              case GHC.Prim.catch#
+                                     @ (Data.Either.Either GHC.Exception.SomeException a)
+                                     @ GHC.Exception.SomeException
+                                     (GHC.Magic.lazy
+                                        @ (GHC.Types.IO
+                                             (Data.Either.Either GHC.Exception.SomeException a))
+                                        (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                         case GHC.Prim.maskAsyncExceptions#
+                                                @ a
+                                                action `cast` (GHC.Types.N:IO[0] <a>_R)
+                                                s1 of ds3 { (#,#) ipv4 ipv5 ->
+                                         (# ipv4,
+                                            Data.Either.Right
+                                              @ GHC.Exception.SomeException
+                                              @ a
+                                              ipv5 #) })
+                                          `cast`
+                                        (Sym (GHC.Types.N:IO[0]
+                                                  <Data.Either.Either
+                                                     GHC.Exception.SomeException a>_R)))
+                                       `cast`
+                                     (GHC.Types.N:IO[0]
+                                          <Data.Either.Either GHC.Exception.SomeException a>_R)
+                                     (Data.Array.Accelerate.Async.async2 @ a)
+                                     s of ds3 { (#,#) ipv4 ipv5 ->
+                              case GHC.Prim.putMVar#
+                                     @ GHC.Prim.RealWorld
+                                     @ (Data.Either.Either GHC.Exception.SomeException a)
+                                     ipv1
+                                     ipv5
+                                     ipv4 of s2# { DEFAULT ->
+                              (# s2#, GHC.Tuple.() #) } })
+                               `cast`
+                             (Sym (GHC.Types.N:IO[0] <()>_R))
+                             ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                      (# ipv4,
+                         case ipv5 of dt { GHC.Conc.Sync.ThreadId dt1 ->
+                         Data.Array.Accelerate.Async.Async @ a dt1 ipv1 } #) }
+                   0#
+                   -> case GHC.Prim.maskAsyncExceptions#
+                             @ GHC.Conc.Sync.ThreadId
+                             (\ (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                              Control.Concurrent.forkOS1
+                                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                 case GHC.Prim.catch#
+                                        @ (Data.Either.Either GHC.Exception.SomeException a)
+                                        @ GHC.Exception.SomeException
+                                        (GHC.Magic.lazy
+                                           @ (GHC.Types.IO
+                                                (Data.Either.Either GHC.Exception.SomeException a))
+                                           (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                            case GHC.Prim.unmaskAsyncExceptions#
+                                                   @ a
+                                                   action `cast` (GHC.Types.N:IO[0] <a>_R)
+                                                   s1 of ds3 { (#,#) ipv4 ipv5 ->
+                                            (# ipv4,
+                                               Data.Either.Right
+                                                 @ GHC.Exception.SomeException
+                                                 @ a
+                                                 ipv5 #) })
+                                             `cast`
+                                           (Sym (GHC.Types.N:IO[0]
+                                                     <Data.Either.Either
+                                                        GHC.Exception.SomeException a>_R)))
+                                          `cast`
+                                        (GHC.Types.N:IO[0]
+                                             <Data.Either.Either GHC.Exception.SomeException a>_R)
+                                        (Data.Array.Accelerate.Async.async2 @ a)
+                                        s of ds3 { (#,#) ipv4 ipv5 ->
+                                 case GHC.Prim.putMVar#
+                                        @ GHC.Prim.RealWorld
+                                        @ (Data.Either.Either GHC.Exception.SomeException a)
+                                        ipv1
+                                        ipv5
+                                        ipv4 of s2# { DEFAULT ->
+                                 (# s2#, GHC.Tuple.() #) } })
+                                  `cast`
+                                (Sym (GHC.Types.N:IO[0] <()>_R))
+                                eta1)
+                             ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                      (# ipv4,
+                         case ipv5 of dt { GHC.Conc.Sync.ThreadId dt1 ->
+                         Data.Array.Accelerate.Async.Async @ a dt1 ipv1 } #) }
+                   1#
+                   -> case Control.Concurrent.forkOS1
+                             (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                              case GHC.Prim.catch#
+                                     @ (Data.Either.Either GHC.Exception.SomeException a)
+                                     @ GHC.Exception.SomeException
+                                     (GHC.Magic.lazy
+                                        @ (GHC.Types.IO
+                                             (Data.Either.Either GHC.Exception.SomeException a))
+                                        (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                         case GHC.Prim.maskUninterruptible#
+                                                @ a
+                                                action `cast` (GHC.Types.N:IO[0] <a>_R)
+                                                s1 of ds3 { (#,#) ipv4 ipv5 ->
+                                         (# ipv4,
+                                            Data.Either.Right
+                                              @ GHC.Exception.SomeException
+                                              @ a
+                                              ipv5 #) })
+                                          `cast`
+                                        (Sym (GHC.Types.N:IO[0]
+                                                  <Data.Either.Either
+                                                     GHC.Exception.SomeException a>_R)))
+                                       `cast`
+                                     (GHC.Types.N:IO[0]
+                                          <Data.Either.Either GHC.Exception.SomeException a>_R)
+                                     (Data.Array.Accelerate.Async.async2 @ a)
+                                     s of ds3 { (#,#) ipv4 ipv5 ->
+                              case GHC.Prim.putMVar#
+                                     @ GHC.Prim.RealWorld
+                                     @ (Data.Either.Either GHC.Exception.SomeException a)
+                                     ipv1
+                                     ipv5
+                                     ipv4 of s2# { DEFAULT ->
+                              (# s2#, GHC.Tuple.() #) } })
+                               `cast`
+                             (Sym (GHC.Types.N:IO[0] <()>_R))
+                             ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                      (# ipv4,
+                         case ipv5 of dt { GHC.Conc.Sync.ThreadId dt1 ->
+                         Data.Array.Accelerate.Async.Async @ a dt1 ipv1 } #) } } } }) -}
+4e8f9524bd73dfc7d24214b267e838e8
+  asyncOn ::
+    GHC.Types.Int
+    -> GHC.Types.IO a
+    -> GHC.Types.IO (Data.Array.Accelerate.Async.Async a)
+  {- Arity: 3, HasNoCafRefs, Strictness: <S(S),1*U(U)><L,C(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Async.asyncOn1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Types.Int>_R
+                 ->_R <GHC.Types.IO a>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <Data.Array.Accelerate.Async.Async a>_R)) -}
+c0261501c5055de23705e1d5b5df43ec
+  asyncOn1 ::
+    GHC.Types.Int
+    -> GHC.Types.IO a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Array.Accelerate.Async.Async a #)
+  {- Arity: 3, HasNoCafRefs, Strictness: <S(S),1*U(U)><L,C(U)><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Types.Int)
+                   (w1 :: GHC.Types.IO a)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Data.Array.Accelerate.Async.$wasyncOn @ a ww1 w1 w2 }) -}
+a22b3d2ce803dc96a1f76bc27f348919
+  cancel :: Data.Array.Accelerate.Async.Async a -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <S(SL),1*U(U,A)><S,U>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ @ a
+                   (ds :: Data.Array.Accelerate.Async.Async a)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case ds of wild { Data.Array.Accelerate.Async.Async dt dt1 ->
+                 (GHC.Conc.Sync.throwTo
+                    @ GHC.IO.Exception.AsyncException
+                    GHC.IO.Exception.$fExceptionAsyncException
+                    (GHC.Conc.Sync.ThreadId dt)
+                    GHC.IO.Exception.ThreadKilled)
+                   `cast`
+                 (GHC.Types.N:IO[0] <()>_R)
+                   eta })
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Data.Array.Accelerate.Async.Async a>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+eb78ac0e7b79c25995464939005720a6
+  poll ::
+    Data.Array.Accelerate.Async.Async a
+    -> GHC.Types.IO (GHC.Base.Maybe a)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(LS),1*U(A,U)><S,U>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ @ a
+                   (ds :: Data.Array.Accelerate.Async.Async a)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case ds of wild { Data.Array.Accelerate.Async.Async dt dt1 ->
+                 (Data.Array.Accelerate.Async.$s=<<
+                    @ (GHC.Base.Maybe
+                         (Data.Either.Either GHC.Exception.SomeException a))
+                    @ (GHC.Base.Maybe a)
+                    (Data.Maybe.maybe
+                       @ (GHC.Types.IO (GHC.Base.Maybe a))
+                       @ (Data.Either.Either GHC.Exception.SomeException a)
+                       (GHC.Base.returnIO @ (GHC.Base.Maybe a) (GHC.Base.Nothing @ a))
+                       (Data.Either.either
+                          @ GHC.Exception.SomeException
+                          @ (GHC.Types.IO (GHC.Base.Maybe a))
+                          @ a
+                          (GHC.IO.throwIO
+                             @ GHC.Exception.SomeException
+                             @ (GHC.Base.Maybe a)
+                             GHC.Exception.$fExceptionSomeException)
+                          (\ (x :: a)
+                             (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                           (GHC.Base.returnIO @ (GHC.Base.Maybe a) (GHC.Base.Just @ a x))
+                             `cast`
+                           (GHC.Types.N:IO[0] <GHC.Base.Maybe a>_R)
+                             eta1)
+                            `cast`
+                          (<a>_R ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.Maybe a>_R))))
+                    (GHC.MVar.tryReadMVar
+                       @ (Data.Either.Either GHC.Exception.SomeException a)
+                       (GHC.MVar.MVar
+                          @ (Data.Either.Either GHC.Exception.SomeException a)
+                          dt1)))
+                   `cast`
+                 (GHC.Types.N:IO[0] <GHC.Base.Maybe a>_R)
+                   eta })
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Data.Array.Accelerate.Async.Async a>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.Maybe a>_R)) -}
+44d8dce629fff056fdf61bed4a484b74
+  wait :: Data.Array.Accelerate.Async.Async a -> GHC.Types.IO a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(LS),1*U(A,U)><S,U>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ @ a
+                   (ds :: Data.Array.Accelerate.Async.Async a)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case ds of wild { Data.Array.Accelerate.Async.Async dt dt1 ->
+                 (Data.Array.Accelerate.Async.$s=<<
+                    @ (Data.Either.Either GHC.Exception.SomeException a)
+                    @ a
+                    (Data.Either.either
+                       @ GHC.Exception.SomeException
+                       @ (GHC.Types.IO a)
+                       @ a
+                       (GHC.IO.throwIO
+                          @ GHC.Exception.SomeException
+                          @ a
+                          GHC.Exception.$fExceptionSomeException)
+                       (GHC.Base.returnIO @ a))
+                    (GHC.MVar.readMVar
+                       @ (Data.Either.Either GHC.Exception.SomeException a)
+                       (GHC.MVar.MVar
+                          @ (Data.Either.Either GHC.Exception.SomeException a)
+                          dt1)))
+                   `cast`
+                 (GHC.Types.N:IO[0] <a>_R)
+                   eta })
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Data.Array.Accelerate.Async.Async a>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <a>_R)) -}
+"SPEC/Data.Array.Accelerate.Async =<< @ IO _ _" [ALWAYS] forall @ a
+                                                                @ b
+                                                                ($dMonad :: GHC.Base.Monad
+                                                                              GHC.Types.IO)
+  GHC.Base.=<< @ GHC.Types.IO @ a @ b $dMonad
+  = Data.Array.Accelerate.Async.$s=<< @ a @ b
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

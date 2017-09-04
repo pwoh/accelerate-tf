@@ -1,0 +1,2119 @@
+
+==================== FINAL INTERFACE ====================
+2017-08-29 05:27:47.510032 UTC
+
+interface accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Classes.RealFrac [orphan module] 8002
+  interface hash: 540d1928967319b374e2d95f175e95fc
+  ABI hash: 635f73a58c448925b4c50a5549aef363
+  export-list hash: bc0bd8373c36b6f0fc6e3cad9fd62605
+  orphan hash: 1fe2bfc65acaab754adf5e2c86ca1910
+  flag hash: fe6961467c44521f9ae34a0febdb836c
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Data.Array.Accelerate.Classes.RealFrac.div'
+  Data.Array.Accelerate.Classes.RealFrac.divMod'
+  Data.Array.Accelerate.Classes.RealFrac.mod'
+  Data.Array.Accelerate.Classes.RealFrac.RealFrac{Data.Array.Accelerate.Classes.RealFrac.ceiling Data.Array.Accelerate.Classes.RealFrac.floor Data.Array.Accelerate.Classes.RealFrac.properFraction Data.Array.Accelerate.Classes.RealFrac.round Data.Array.Accelerate.Classes.RealFrac.truncate}
+module dependencies: Data.Array.Accelerate.AST
+                     Data.Array.Accelerate.Array.Data
+                     Data.Array.Accelerate.Array.Representation
+                     Data.Array.Accelerate.Array.Sugar
+                     Data.Array.Accelerate.Array.Unique Data.Array.Accelerate.Classes.Eq
+                     Data.Array.Accelerate.Classes.Floating
+                     Data.Array.Accelerate.Classes.Fractional
+                     Data.Array.Accelerate.Classes.Num Data.Array.Accelerate.Classes.Ord
+                     Data.Array.Accelerate.Classes.Real
+                     Data.Array.Accelerate.Classes.ToFloating
+                     Data.Array.Accelerate.Debug.Flags
+                     Data.Array.Accelerate.Debug.Monitoring
+                     Data.Array.Accelerate.Debug.Trace Data.Array.Accelerate.Error
+                     Data.Array.Accelerate.Lifetime Data.Array.Accelerate.Product
+                     Data.Array.Accelerate.Smart Data.Array.Accelerate.Type
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol
+                      integer-gmp-1.0.0.1 pretty-1.1.3.3@pretty-1.1.3.3
+                      template-haskell-2.11.1.0
+                      text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00
+                      unique-0@unique-0-9CJQKYGbqiDaFUmoekKeA
+orphans: accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Classes.Eq
+         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Classes.Floating
+         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Classes.Fractional
+         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Classes.Num
+         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Classes.Ord
+         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Classes.Real
+         base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu:Data.Orphans
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt:Data.Label.Point
+         hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable.Generic
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Show
+family instance modules: accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Data
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Representation
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Sugar
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Product
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Smart
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Type
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+import  -/  Data.Array.Accelerate.Array.Sugar 1095a84a969562bd64b7800341e0d23c
+  exports: a6dd551b39ab2a3a217fc8c2a6979cd5
+  Elt 78f23e81404aaf1e43268a71a575425c
+import  -/  Data.Array.Accelerate.Classes.Eq b5abcb6d2b1b2f77926ba32e74c56bfd
+  exports: 6d08b503170f674ec3fef36c5a59035f
+  == 373f16d63bf36dcf6c5be36579a78740
+import  -/  Data.Array.Accelerate.Classes.Floating 78c7950257cd37d694096876cf1b7382
+  exports: 691d74993cefe4e7a712f639003341ed
+  Floating c6033b504a6fb428fc9d28610d2d2d7f
+import  -/  Data.Array.Accelerate.Classes.Fractional 74c1164036fe4be54acc34add9158746
+  exports: 880c91e8ac0c615b5198682ab744764f
+  Fractional 6f99f01ef298935759845630a1e863d2
+import  -/  Data.Array.Accelerate.Classes.Num 5830cb8ce2e6617e88ff07c7f188117f
+  exports: 00b7c9e56019df3c44ef51ed8ebd4236
+  Num 13b6af1dd60ee5505ca10fef83916e95
+import  -/  Data.Array.Accelerate.Classes.Real fde3cd1aa5146783c04b4ab2e7090b70
+  exports: d8a3b3873325bdcd8bcfec7c6621df2a
+  Real d4f19ff1a7908a46dde912eeb354f7ab
+import  -/  Data.Array.Accelerate.Classes.ToFloating ed6aca53181b9d143484a8cea04ff101
+  exports: b3f7926ca27fa874d9e9951bca4e2004
+  ToFloating b200a93b337871def55a951dd340358b
+  toFloating b88885a0314d25fff2f0411312e8f608
+import  -/  Data.Array.Accelerate.Smart c6a471aeed497009ce791e94dc05d100
+  exports: 1e3a20050ce25466608a82a26d24d5f0
+  Cond 4628c12b51c834347b1c399b590eac59
+  Exp 2fd934232a7ed8f151cd01d9504e7b9f
+  Exp dff601899922d9e86e5ab6941dfbac5f
+  mkCeiling 07f073d10893d3f0bc008294b56babac
+  mkFloor d8f42f1999284a06ab5d2ac65cf322f2
+  mkRound f2b6d039a2fe7a477161c8428bc83b5c
+  mkTruncate ad1ebfb7ac30831edf238ed6a8616888
+  tup2 c501dd227fe5d3d61a446c8db6829c7a
+  untup2 751a423afd0ba14775d3a5cf0fe0a975
+import  -/  Data.Array.Accelerate.Type a1c7885f4a79193eaa1f192a9acbec78
+  exports: 7aad7ca015788892b1349ebab929b71f
+  IsIntegral b2c4f7b6108c37809735ca127f59a1fe
+import  -/  base-4.9.1.0:Foreign.C.Types bf568ee9a3ec4aa42333a0da5f4345de
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:Text.Printf 6701574960cd2af960fec5d940be0c25
+8c38af9b18db29070016e914e4775842
+  $fRealFracCDouble ::
+    Data.Array.Accelerate.Classes.RealFrac.RealFrac
+      Foreign.C.Types.CDouble
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Foreign.C.Types.CDouble
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$cp1RealFrac
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble5
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$cproperFraction
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$ctruncate
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$cround
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$cceiling
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$cfloor -}
+9031e773b54556d3866017d5aaf3f316
+  $fRealFracCDouble1 ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ b
+                   ($dElt :: Data.Array.Accelerate.Array.Sugar.Elt b)
+                   ($dIsIntegral :: Data.Array.Accelerate.Type.IsIntegral b)
+                   (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ b
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   $dElt
+                   (Data.Array.Accelerate.AST.PrimFloor
+                      @ (Foreign.C.Types.CDouble -> b)
+                      @ Foreign.C.Types.CDouble
+                      @ b
+                      @~ <Foreign.C.Types.CDouble -> b>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType
+                      (Data.Array.Accelerate.Type.integralType @ b $dIsIntegral))
+                   x) -}
+5738d952bc89e862288d7cddb349983b
+  $fRealFracCDouble2 ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ b
+                   ($dElt :: Data.Array.Accelerate.Array.Sugar.Elt b)
+                   ($dIsIntegral :: Data.Array.Accelerate.Type.IsIntegral b)
+                   (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ b
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   $dElt
+                   (Data.Array.Accelerate.AST.PrimCeiling
+                      @ (Foreign.C.Types.CDouble -> b)
+                      @ Foreign.C.Types.CDouble
+                      @ b
+                      @~ <Foreign.C.Types.CDouble -> b>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType
+                      (Data.Array.Accelerate.Type.integralType @ b $dIsIntegral))
+                   x) -}
+7bd90e10f3e46176439c6081ad201c6b
+  $fRealFracCDouble3 ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ b
+                   ($dElt :: Data.Array.Accelerate.Array.Sugar.Elt b)
+                   ($dIsIntegral :: Data.Array.Accelerate.Type.IsIntegral b)
+                   (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ b
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   $dElt
+                   (Data.Array.Accelerate.AST.PrimRound
+                      @ (Foreign.C.Types.CDouble -> b)
+                      @ Foreign.C.Types.CDouble
+                      @ b
+                      @~ <Foreign.C.Types.CDouble -> b>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType
+                      (Data.Array.Accelerate.Type.integralType @ b $dIsIntegral))
+                   x) -}
+263f9a548d9ce4e169750427540200e6
+  $fRealFracCDouble4 ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ b
+                   ($dElt :: Data.Array.Accelerate.Array.Sugar.Elt b)
+                   ($dIsIntegral :: Data.Array.Accelerate.Type.IsIntegral b)
+                   (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ b
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   $dElt
+                   (Data.Array.Accelerate.AST.PrimTruncate
+                      @ (Foreign.C.Types.CDouble -> b)
+                      @ Foreign.C.Types.CDouble
+                      @ b
+                      @~ <Foreign.C.Types.CDouble -> b>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType
+                      (Data.Array.Accelerate.Type.integralType @ b $dIsIntegral))
+                   x) -}
+925ff7c7fdc8fdb8e250460e2fe8bad2
+  $fRealFracCDouble5 ::
+    (Data.Array.Accelerate.Classes.Num.Num Foreign.C.Types.CDouble,
+     GHC.Real.Fractional
+       (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble))
+  {- Strictness: m,
+     Unfolding: ((Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble6,
+                  Data.Array.Accelerate.Classes.Fractional.$fFractionalExp)) -}
+4799db7b9303e576b34693c34204fb41
+  $fRealFracCDouble6 ::
+    (Data.Array.Accelerate.Array.Sugar.Elt Foreign.C.Types.CDouble,
+     GHC.Num.Num
+       (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble))
+  {- Strictness: m,
+     Unfolding: ((Data.Array.Accelerate.Array.Sugar.$fEltCDouble,
+                  Data.Array.Accelerate.Classes.Num.$fNumExp)) -}
+cfa7f253079822ee546b61267e3aaf49
+  $fRealFracCDouble_$cceiling ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble2
+                  `cast`
+                (forall (b :: <*>_N).
+                 <Data.Array.Accelerate.Array.Sugar.Elt b>_R
+                 ->_R <Data.Array.Accelerate.Type.IsIntegral b>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <b>_N) -}
+21f28ef9cc22a7f42554ffc4d6a9014f
+  $fRealFracCDouble_$cfloor ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble1
+                  `cast`
+                (forall (b :: <*>_N).
+                 <Data.Array.Accelerate.Array.Sugar.Elt b>_R
+                 ->_R <Data.Array.Accelerate.Type.IsIntegral b>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <b>_N) -}
+63abf8d624bf43380b7ef049f330d038
+  $fRealFracCDouble_$cp1RealFrac ::
+    Data.Array.Accelerate.Classes.Real.Real Foreign.C.Types.CDouble
+  {- Strictness: m,
+     Unfolding: ((Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble6,
+                  Data.Array.Accelerate.Classes.Ord.$fOrdCDouble,
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fRealExp)) -}
+76a487cb3e923b617c4cb0128b29cede
+  $fRealFracCDouble_$cproperFraction ::
+    (Data.Array.Accelerate.Classes.Num.Num b,
+     Data.Array.Accelerate.Classes.ToFloating.ToFloating
+       b Foreign.C.Types.CDouble,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> (Data.Array.Accelerate.Smart.Exp b,
+        Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble)
+  {- Arity: 3,
+     Strictness: <L,U(U,U(U,U,U,U,U,U,U))><L,C(C1(C1(U)))><L,U> -}
+10fcf29f8ebea9bc164c2b3c12441812
+  $fRealFracCDouble_$cround ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble3
+                  `cast`
+                (forall (b :: <*>_N).
+                 <Data.Array.Accelerate.Array.Sugar.Elt b>_R
+                 ->_R <Data.Array.Accelerate.Type.IsIntegral b>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <b>_N) -}
+b3d7e1369cfbcc48ddf575ae3b050b84
+  $fRealFracCDouble_$ctruncate ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble4
+                  `cast`
+                (forall (b :: <*>_N).
+                 <Data.Array.Accelerate.Array.Sugar.Elt b>_R
+                 ->_R <Data.Array.Accelerate.Type.IsIntegral b>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <b>_N) -}
+045737fd9cab4a66c08d6b03e0627e34
+  $fRealFracCDouble_$s$fOrdExp ::
+    GHC.Classes.Ord
+      (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble)
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fOrdExp_$cp1Ord
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fOrdExp_$ccompare
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fOrdExp_$c<
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fOrdExp_$c<=
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fOrdExp_$c>
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fOrdExp_$c>=
+                  Data.Array.Accelerate.Classes.Ord.$fOrdCDouble_$cmax
+                  Data.Array.Accelerate.Classes.Ord.$fOrdCDouble_$cmin -}
+008f2473c2e7770c184f5dfc398d8901
+  $fRealFracCDouble_$s$fOrdExp_$c< ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> GHC.Types.Bool
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Ord.$fOrdExp4
+                   @ Foreign.C.Types.CDouble) -}
+89f1d66f08fe6c8ad5c99c42666ef035
+  $fRealFracCDouble_$s$fOrdExp_$c<= ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> GHC.Types.Bool
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Ord.$fOrdExp3
+                   @ Foreign.C.Types.CDouble) -}
+3a214a6930087b0c00a26ac885bf1495
+  $fRealFracCDouble_$s$fOrdExp_$c> ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> GHC.Types.Bool
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Ord.$fOrdExp2
+                   @ Foreign.C.Types.CDouble) -}
+4493f2d4bcec4a6047545d609643a6a1
+  $fRealFracCDouble_$s$fOrdExp_$c>= ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> GHC.Types.Bool
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Ord.$fOrdExp1
+                   @ Foreign.C.Types.CDouble) -}
+877a4dcae5aa6caf30e97df1d85ab690
+  $fRealFracCDouble_$s$fOrdExp_$ccompare ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> GHC.Types.Ordering
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Ord.$fOrdExp5
+                   @ Foreign.C.Types.CDouble) -}
+ea561c07891005b24f503bfa9484bac0
+  $fRealFracCDouble_$s$fOrdExp_$cp1Ord ::
+    GHC.Classes.Eq
+      (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Eq.$fEqExp
+                   @ Foreign.C.Types.CDouble) -}
+3e3d765736ebfa2ccc5902afa5541686
+  $fRealFracCDouble_$s$fRealExp ::
+    GHC.Real.Real
+      (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble)
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fRealExp_$cp1Real
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fRealExp_$cp2Real
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fRealExp_$ctoRational -}
+4afa1d933ae76885847367e6dfde9525
+  $fRealFracCDouble_$s$fRealExp_$cp1Real ::
+    GHC.Num.Num
+      (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Num.$fNumExp -}
+a5a1aebf6a516865ded76153bb4ab42a
+  $fRealFracCDouble_$s$fRealExp_$cp2Real ::
+    GHC.Classes.Ord
+      (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fOrdExp -}
+cd8985d557aa5cc2680a10f6883fdc1c
+  $fRealFracCDouble_$s$fRealExp_$ctoRational ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> GHC.Real.Rational
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Real.$fRealExp1
+                   @ Foreign.C.Types.CDouble) -}
+8c38af9b18db29070016e914e4775842
+  $fRealFracCFloat ::
+    Data.Array.Accelerate.Classes.RealFrac.RealFrac
+      Foreign.C.Types.CFloat
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Foreign.C.Types.CFloat
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$cp1RealFrac
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat5
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$cproperFraction
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$ctruncate
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$cround
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$cceiling
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$cfloor -}
+029ebb1a26d4babc513354f8acfbaa9a
+  $fRealFracCFloat1 ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ b
+                   ($dElt :: Data.Array.Accelerate.Array.Sugar.Elt b)
+                   ($dIsIntegral :: Data.Array.Accelerate.Type.IsIntegral b)
+                   (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ b
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   $dElt
+                   (Data.Array.Accelerate.AST.PrimFloor
+                      @ (Foreign.C.Types.CFloat -> b)
+                      @ Foreign.C.Types.CFloat
+                      @ b
+                      @~ <Foreign.C.Types.CFloat -> b>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType
+                      (Data.Array.Accelerate.Type.integralType @ b $dIsIntegral))
+                   x) -}
+4a7b442a9022757040908ac18326d2fb
+  $fRealFracCFloat2 ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ b
+                   ($dElt :: Data.Array.Accelerate.Array.Sugar.Elt b)
+                   ($dIsIntegral :: Data.Array.Accelerate.Type.IsIntegral b)
+                   (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ b
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   $dElt
+                   (Data.Array.Accelerate.AST.PrimCeiling
+                      @ (Foreign.C.Types.CFloat -> b)
+                      @ Foreign.C.Types.CFloat
+                      @ b
+                      @~ <Foreign.C.Types.CFloat -> b>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType
+                      (Data.Array.Accelerate.Type.integralType @ b $dIsIntegral))
+                   x) -}
+9df2bd8fa370f8ce41ee3915806e70f3
+  $fRealFracCFloat3 ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ b
+                   ($dElt :: Data.Array.Accelerate.Array.Sugar.Elt b)
+                   ($dIsIntegral :: Data.Array.Accelerate.Type.IsIntegral b)
+                   (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ b
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   $dElt
+                   (Data.Array.Accelerate.AST.PrimRound
+                      @ (Foreign.C.Types.CFloat -> b)
+                      @ Foreign.C.Types.CFloat
+                      @ b
+                      @~ <Foreign.C.Types.CFloat -> b>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType
+                      (Data.Array.Accelerate.Type.integralType @ b $dIsIntegral))
+                   x) -}
+c5942152e472807a657ae405ed2041cf
+  $fRealFracCFloat4 ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ b
+                   ($dElt :: Data.Array.Accelerate.Array.Sugar.Elt b)
+                   ($dIsIntegral :: Data.Array.Accelerate.Type.IsIntegral b)
+                   (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ b
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   $dElt
+                   (Data.Array.Accelerate.AST.PrimTruncate
+                      @ (Foreign.C.Types.CFloat -> b)
+                      @ Foreign.C.Types.CFloat
+                      @ b
+                      @~ <Foreign.C.Types.CFloat -> b>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType
+                      (Data.Array.Accelerate.Type.integralType @ b $dIsIntegral))
+                   x) -}
+0541e6047974b6a25961d4122a87eb10
+  $fRealFracCFloat5 ::
+    (Data.Array.Accelerate.Classes.Num.Num Foreign.C.Types.CFloat,
+     GHC.Real.Fractional
+       (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat))
+  {- Strictness: m,
+     Unfolding: ((Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat6,
+                  Data.Array.Accelerate.Classes.Fractional.$fFractionalExp0)) -}
+d5ab03847a750548a27b0fadb1fe1a68
+  $fRealFracCFloat6 ::
+    (Data.Array.Accelerate.Array.Sugar.Elt Foreign.C.Types.CFloat,
+     GHC.Num.Num
+       (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat))
+  {- Strictness: m,
+     Unfolding: ((Data.Array.Accelerate.Array.Sugar.$fEltCFloat,
+                  Data.Array.Accelerate.Classes.Num.$fNumExp0)) -}
+6a8add951289133ca213caaa216e68cc
+  $fRealFracCFloat_$cceiling ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat2
+                  `cast`
+                (forall (b :: <*>_N).
+                 <Data.Array.Accelerate.Array.Sugar.Elt b>_R
+                 ->_R <Data.Array.Accelerate.Type.IsIntegral b>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <b>_N) -}
+83f1d6081c62aefe313dca11f372a821
+  $fRealFracCFloat_$cfloor ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat1
+                  `cast`
+                (forall (b :: <*>_N).
+                 <Data.Array.Accelerate.Array.Sugar.Elt b>_R
+                 ->_R <Data.Array.Accelerate.Type.IsIntegral b>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <b>_N) -}
+7fa1693b1eb7aeddba286fcc39dcb720
+  $fRealFracCFloat_$cp1RealFrac ::
+    Data.Array.Accelerate.Classes.Real.Real Foreign.C.Types.CFloat
+  {- Strictness: m,
+     Unfolding: ((Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat6,
+                  Data.Array.Accelerate.Classes.Ord.$fOrdCFloat,
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fRealExp)) -}
+a05a0de7ad409f02525f93601ff202b7
+  $fRealFracCFloat_$cproperFraction ::
+    (Data.Array.Accelerate.Classes.Num.Num b,
+     Data.Array.Accelerate.Classes.ToFloating.ToFloating
+       b Foreign.C.Types.CFloat,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> (Data.Array.Accelerate.Smart.Exp b,
+        Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat)
+  {- Arity: 3,
+     Strictness: <L,U(U,U(U,U,U,U,U,U,U))><L,C(C1(C1(U)))><L,U> -}
+759a5304cc816ac83de978f73cbad3b4
+  $fRealFracCFloat_$cround ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat3
+                  `cast`
+                (forall (b :: <*>_N).
+                 <Data.Array.Accelerate.Array.Sugar.Elt b>_R
+                 ->_R <Data.Array.Accelerate.Type.IsIntegral b>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <b>_N) -}
+3977c6ae42f27254c5d0088da0f90962
+  $fRealFracCFloat_$ctruncate ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat4
+                  `cast`
+                (forall (b :: <*>_N).
+                 <Data.Array.Accelerate.Array.Sugar.Elt b>_R
+                 ->_R <Data.Array.Accelerate.Type.IsIntegral b>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <b>_N) -}
+3ef73524fcaa5c36247a4404ca8006dc
+  $fRealFracCFloat_$s$fOrdExp ::
+    GHC.Classes.Ord
+      (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat)
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fOrdExp_$cp1Ord
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fOrdExp_$ccompare
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fOrdExp_$c<
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fOrdExp_$c<=
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fOrdExp_$c>
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fOrdExp_$c>=
+                  Data.Array.Accelerate.Classes.Ord.$fOrdCFloat_$cmax
+                  Data.Array.Accelerate.Classes.Ord.$fOrdCFloat_$cmin -}
+cb0896e421f62cda345af6cb65f4fbf5
+  $fRealFracCFloat_$s$fOrdExp_$c< ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> GHC.Types.Bool
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Ord.$fOrdExp4
+                   @ Foreign.C.Types.CFloat) -}
+d85b3d0d8d7102a29dce5ce4c5c09441
+  $fRealFracCFloat_$s$fOrdExp_$c<= ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> GHC.Types.Bool
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Ord.$fOrdExp3
+                   @ Foreign.C.Types.CFloat) -}
+948a6e244a7b202578a3a8a01a4c0f38
+  $fRealFracCFloat_$s$fOrdExp_$c> ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> GHC.Types.Bool
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Ord.$fOrdExp2
+                   @ Foreign.C.Types.CFloat) -}
+1600ad5ac4f872ab90dc740fdf6bef3b
+  $fRealFracCFloat_$s$fOrdExp_$c>= ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> GHC.Types.Bool
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Ord.$fOrdExp1
+                   @ Foreign.C.Types.CFloat) -}
+7eadb7edaab195c3c0df281361bd3e81
+  $fRealFracCFloat_$s$fOrdExp_$ccompare ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> GHC.Types.Ordering
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Ord.$fOrdExp5
+                   @ Foreign.C.Types.CFloat) -}
+31cf0d820dc19a4af3f111325140d0d0
+  $fRealFracCFloat_$s$fOrdExp_$cp1Ord ::
+    GHC.Classes.Eq
+      (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Eq.$fEqExp
+                   @ Foreign.C.Types.CFloat) -}
+4cdf0a034f1563b4643e2f9d709ff978
+  $fRealFracCFloat_$s$fRealExp ::
+    GHC.Real.Real
+      (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat)
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fRealExp_$cp1Real
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fRealExp_$cp2Real
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fRealExp_$ctoRational -}
+516517049f86eb1d9eea091de540f475
+  $fRealFracCFloat_$s$fRealExp_$cp1Real ::
+    GHC.Num.Num
+      (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Num.$fNumExp0 -}
+f36b17d8505b481fd032fc71a5ec0bb5
+  $fRealFracCFloat_$s$fRealExp_$cp2Real ::
+    GHC.Classes.Ord
+      (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fOrdExp -}
+9749820a9cc325558c8de6b853402abc
+  $fRealFracCFloat_$s$fRealExp_$ctoRational ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> GHC.Real.Rational
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Real.$fRealExp1
+                   @ Foreign.C.Types.CFloat) -}
+8c38af9b18db29070016e914e4775842
+  $fRealFracDouble ::
+    Data.Array.Accelerate.Classes.RealFrac.RealFrac GHC.Types.Double
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ GHC.Types.Double
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$cp1RealFrac
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble5
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$cproperFraction
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$ctruncate
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$cround
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$cceiling
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$cfloor -}
+2620d8fddd9aeb35e25a9e61974ed2b0
+  $fRealFracDouble1 ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ b
+                   ($dElt :: Data.Array.Accelerate.Array.Sugar.Elt b)
+                   ($dIsIntegral :: Data.Array.Accelerate.Type.IsIntegral b)
+                   (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ b
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   $dElt
+                   (Data.Array.Accelerate.AST.PrimFloor
+                      @ (GHC.Types.Double -> b)
+                      @ GHC.Types.Double
+                      @ b
+                      @~ <GHC.Types.Double -> b>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType
+                      (Data.Array.Accelerate.Type.integralType @ b $dIsIntegral))
+                   x) -}
+493ff96c24c3e8ac676f4c827501d3c9
+  $fRealFracDouble2 ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ b
+                   ($dElt :: Data.Array.Accelerate.Array.Sugar.Elt b)
+                   ($dIsIntegral :: Data.Array.Accelerate.Type.IsIntegral b)
+                   (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ b
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   $dElt
+                   (Data.Array.Accelerate.AST.PrimCeiling
+                      @ (GHC.Types.Double -> b)
+                      @ GHC.Types.Double
+                      @ b
+                      @~ <GHC.Types.Double -> b>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType
+                      (Data.Array.Accelerate.Type.integralType @ b $dIsIntegral))
+                   x) -}
+5a41f9fc6c4a9cc6977771525572fa68
+  $fRealFracDouble3 ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ b
+                   ($dElt :: Data.Array.Accelerate.Array.Sugar.Elt b)
+                   ($dIsIntegral :: Data.Array.Accelerate.Type.IsIntegral b)
+                   (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ b
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   $dElt
+                   (Data.Array.Accelerate.AST.PrimRound
+                      @ (GHC.Types.Double -> b)
+                      @ GHC.Types.Double
+                      @ b
+                      @~ <GHC.Types.Double -> b>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType
+                      (Data.Array.Accelerate.Type.integralType @ b $dIsIntegral))
+                   x) -}
+04e9d5bbf70abcb31dd8037feda063a8
+  $fRealFracDouble4 ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ b
+                   ($dElt :: Data.Array.Accelerate.Array.Sugar.Elt b)
+                   ($dIsIntegral :: Data.Array.Accelerate.Type.IsIntegral b)
+                   (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ b
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   $dElt
+                   (Data.Array.Accelerate.AST.PrimTruncate
+                      @ (GHC.Types.Double -> b)
+                      @ GHC.Types.Double
+                      @ b
+                      @~ <GHC.Types.Double -> b>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType
+                      (Data.Array.Accelerate.Type.integralType @ b $dIsIntegral))
+                   x) -}
+3a072837dbd7b5c2498d0ec30c0f3212
+  $fRealFracDouble5 ::
+    (Data.Array.Accelerate.Classes.Num.Num GHC.Types.Double,
+     GHC.Real.Fractional
+       (Data.Array.Accelerate.Smart.Exp GHC.Types.Double))
+  {- Strictness: m,
+     Unfolding: ((Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble6,
+                  Data.Array.Accelerate.Classes.Fractional.$fFractionalExp1)) -}
+5570fe7d1d6b795ccf7ac23824e10fb7
+  $fRealFracDouble6 ::
+    (Data.Array.Accelerate.Array.Sugar.Elt GHC.Types.Double,
+     GHC.Num.Num (Data.Array.Accelerate.Smart.Exp GHC.Types.Double))
+  {- Strictness: m,
+     Unfolding: ((Data.Array.Accelerate.Array.Sugar.$fEltDouble,
+                  Data.Array.Accelerate.Classes.Num.$fNumExp1)) -}
+243e5cb3dec3bb38d1abea62b65c6f3f
+  $fRealFracDouble_$cceiling ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble2
+                  `cast`
+                (forall (b :: <*>_N).
+                 <Data.Array.Accelerate.Array.Sugar.Elt b>_R
+                 ->_R <Data.Array.Accelerate.Type.IsIntegral b>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <b>_N) -}
+2e96498d7a81e806681c8efbc85d999e
+  $fRealFracDouble_$cfloor ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble1
+                  `cast`
+                (forall (b :: <*>_N).
+                 <Data.Array.Accelerate.Array.Sugar.Elt b>_R
+                 ->_R <Data.Array.Accelerate.Type.IsIntegral b>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <b>_N) -}
+763ead94a3e14100993fefb933ef7833
+  $fRealFracDouble_$cp1RealFrac ::
+    Data.Array.Accelerate.Classes.Real.Real GHC.Types.Double
+  {- Strictness: m,
+     Unfolding: ((Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble6,
+                  Data.Array.Accelerate.Classes.Ord.$fOrdDouble,
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fRealExp)) -}
+a4d1e991694ff8cfef262f02914aeb60
+  $fRealFracDouble_$cproperFraction ::
+    (Data.Array.Accelerate.Classes.Num.Num b,
+     Data.Array.Accelerate.Classes.ToFloating.ToFloating
+       b GHC.Types.Double,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> (Data.Array.Accelerate.Smart.Exp b,
+        Data.Array.Accelerate.Smart.Exp GHC.Types.Double)
+  {- Arity: 3,
+     Strictness: <L,U(U,U(U,U,U,U,U,U,U))><L,C(C1(C1(U)))><L,U> -}
+8886f25d3ef62d0a846fcac7c88048a6
+  $fRealFracDouble_$cround ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble3
+                  `cast`
+                (forall (b :: <*>_N).
+                 <Data.Array.Accelerate.Array.Sugar.Elt b>_R
+                 ->_R <Data.Array.Accelerate.Type.IsIntegral b>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <b>_N) -}
+e03c078f7ac5130d3fe47ee789eaa2e3
+  $fRealFracDouble_$ctruncate ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble4
+                  `cast`
+                (forall (b :: <*>_N).
+                 <Data.Array.Accelerate.Array.Sugar.Elt b>_R
+                 ->_R <Data.Array.Accelerate.Type.IsIntegral b>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <b>_N) -}
+67f3bd4eb485b6017fbc771e803b0a73
+  $fRealFracDouble_$s$fOrdExp ::
+    GHC.Classes.Ord (Data.Array.Accelerate.Smart.Exp GHC.Types.Double)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Data.Array.Accelerate.Smart.Exp GHC.Types.Double)
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fOrdExp_$cp1Ord
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fOrdExp_$ccompare
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fOrdExp_$c<
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fOrdExp_$c<=
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fOrdExp_$c>
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fOrdExp_$c>=
+                  Data.Array.Accelerate.Classes.Ord.$fOrdDouble_$cmax
+                  Data.Array.Accelerate.Classes.Ord.$fOrdDouble_$cmin -}
+38a155f99ceff6416a911382c0955ed1
+  $fRealFracDouble_$s$fOrdExp_$c< ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> GHC.Types.Bool
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Ord.$fOrdExp4 @ GHC.Types.Double) -}
+06fa0f53ab30289df85ef06886e8d5ba
+  $fRealFracDouble_$s$fOrdExp_$c<= ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> GHC.Types.Bool
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Ord.$fOrdExp3 @ GHC.Types.Double) -}
+458d5245ea96921ccf1dd401056e7f77
+  $fRealFracDouble_$s$fOrdExp_$c> ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> GHC.Types.Bool
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Ord.$fOrdExp2 @ GHC.Types.Double) -}
+7dfa425b55149a9d5c46cad93c063e4a
+  $fRealFracDouble_$s$fOrdExp_$c>= ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> GHC.Types.Bool
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Ord.$fOrdExp1 @ GHC.Types.Double) -}
+822d52abfe06ab257c24dbe0444cffbf
+  $fRealFracDouble_$s$fOrdExp_$ccompare ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> GHC.Types.Ordering
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Ord.$fOrdExp5 @ GHC.Types.Double) -}
+8d41bf816ac6d3708dd9f48c9a103fe2
+  $fRealFracDouble_$s$fOrdExp_$cp1Ord ::
+    GHC.Classes.Eq (Data.Array.Accelerate.Smart.Exp GHC.Types.Double)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Eq.$fEqExp @ GHC.Types.Double) -}
+6bf2d65669ab01754674dcbb850963f0
+  $fRealFracDouble_$s$fRealExp ::
+    GHC.Real.Real (Data.Array.Accelerate.Smart.Exp GHC.Types.Double)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Data.Array.Accelerate.Smart.Exp GHC.Types.Double)
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fRealExp_$cp1Real
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fRealExp_$cp2Real
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fRealExp_$ctoRational -}
+f555662e4fc4be2ddbe616f82b965567
+  $fRealFracDouble_$s$fRealExp_$cp1Real ::
+    GHC.Num.Num (Data.Array.Accelerate.Smart.Exp GHC.Types.Double)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Num.$fNumExp1 -}
+f6762e5f954b33ed37ca926cc16a0f92
+  $fRealFracDouble_$s$fRealExp_$cp2Real ::
+    GHC.Classes.Ord (Data.Array.Accelerate.Smart.Exp GHC.Types.Double)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fOrdExp -}
+c64ae49636b22811d8a2359a42063796
+  $fRealFracDouble_$s$fRealExp_$ctoRational ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> GHC.Real.Rational
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Real.$fRealExp1
+                   @ GHC.Types.Double) -}
+08f576da46e965fe33bdac682d70f911
+  $fRealFracExp ::
+    Data.Array.Accelerate.Classes.RealFrac.RealFrac a =>
+    GHC.Real.RealFrac (Data.Array.Accelerate.Smart.Exp a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(1*U(A,A,1*U),1*U(A,1*U),A,A,A,A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a
+                      ($dRealFrac :: Data.Array.Accelerate.Classes.RealFrac.RealFrac a).
+                  @ (Data.Array.Accelerate.Smart.Exp a)
+                  (Data.Array.Accelerate.Classes.RealFrac.$fRealFracExp_$cp1RealFrac
+                     @ a
+                     $dRealFrac)
+                  (Data.Array.Accelerate.Classes.RealFrac.$fRealFracExp_$cp2RealFrac
+                     @ a
+                     $dRealFrac)
+                  (Data.Array.Accelerate.Classes.RealFrac.$fRealFracExp_$cproperFraction
+                     @ a
+                     $dRealFrac)
+                  (Data.Array.Accelerate.Classes.RealFrac.$fRealFracExp_$ctruncate
+                     @ a
+                     $dRealFrac)
+                  (Data.Array.Accelerate.Classes.RealFrac.$fRealFracExp_$cround
+                     @ a
+                     $dRealFrac)
+                  (Data.Array.Accelerate.Classes.RealFrac.$fRealFracExp_$cceiling
+                     @ a
+                     $dRealFrac)
+                  (Data.Array.Accelerate.Classes.RealFrac.$fRealFracExp_$cfloor
+                     @ a
+                     $dRealFrac) -}
+c4d615c2bd80d0df85da3354943f4785
+  $fRealFracExp1 :: Data.Array.Accelerate.Smart.Exp a -> b
+  {- Strictness: x -}
+54ae1e28b639fb36cbd35ce2279969f8
+  $fRealFracExp2 :: Data.Array.Accelerate.Smart.Exp a -> b
+  {- Strictness: x -}
+d33dd175194ffa0e0de14b502c85601d
+  $fRealFracExp3 :: Data.Array.Accelerate.Smart.Exp a -> b
+  {- Strictness: x -}
+26c5d515a8e182abb6ab0382c3bc1007
+  $fRealFracExp4 :: Data.Array.Accelerate.Smart.Exp a -> b
+  {- Strictness: x -}
+18e44c072a4e3927d4df4474d2c7ec43
+  $fRealFracExp5 ::
+    Data.Array.Accelerate.Smart.Exp a
+    -> (b, Data.Array.Accelerate.Smart.Exp a)
+  {- Strictness: x -}
+1334dfede1dc1571088bdef61f3e75f2
+  $fRealFracExp_$cceiling ::
+    Data.Array.Accelerate.Classes.RealFrac.RealFrac a =>
+    forall b.
+    GHC.Real.Integral b =>
+    Data.Array.Accelerate.Smart.Exp a -> b
+  {- Arity: 2, Strictness: <B,A><B,A>x,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a
+                   ($dRealFrac :: Data.Array.Accelerate.Classes.RealFrac.RealFrac a)
+                   @ b
+                   ($dIntegral :: GHC.Real.Integral b) ->
+                 Data.Array.Accelerate.Classes.RealFrac.$fRealFracExp2 @ b @ a) -}
+5535f883613c544d86b39a5d87b163a0
+  $fRealFracExp_$cfloor ::
+    Data.Array.Accelerate.Classes.RealFrac.RealFrac a =>
+    forall b.
+    GHC.Real.Integral b =>
+    Data.Array.Accelerate.Smart.Exp a -> b
+  {- Arity: 2, Strictness: <B,A><B,A>x,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a
+                   ($dRealFrac :: Data.Array.Accelerate.Classes.RealFrac.RealFrac a)
+                   @ b
+                   ($dIntegral :: GHC.Real.Integral b) ->
+                 Data.Array.Accelerate.Classes.RealFrac.$fRealFracExp1 @ b @ a) -}
+34d7afe8dc95b0ba529ef6093c32486a
+  $fRealFracExp_$cp1RealFrac ::
+    Data.Array.Accelerate.Classes.RealFrac.RealFrac a =>
+    GHC.Real.Real (Data.Array.Accelerate.Smart.Exp a)
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(S(LLS)LLLLLL),1*U(1*U(A,A,1*U),A,A,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a
+                   ($dRealFrac :: Data.Array.Accelerate.Classes.RealFrac.RealFrac
+                                    a) ->
+                 GHC.Classes.$p3(%,,%)
+                   @ (Data.Array.Accelerate.Classes.Num.Num a)
+                   @ (Data.Array.Accelerate.Classes.Ord.Ord a)
+                   @ (GHC.Real.Real (Data.Array.Accelerate.Smart.Exp a))
+                   (Data.Array.Accelerate.Classes.RealFrac.$p1RealFrac
+                      @ a
+                      $dRealFrac)) -}
+82b202132c2e09f3535a4461cf5d776d
+  $fRealFracExp_$cp2RealFrac ::
+    Data.Array.Accelerate.Classes.RealFrac.RealFrac a =>
+    GHC.Real.Fractional (Data.Array.Accelerate.Smart.Exp a)
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LS(LS)LLLLL),1*U(A,1*U(A,1*U),A,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a
+                   ($dRealFrac :: Data.Array.Accelerate.Classes.RealFrac.RealFrac
+                                    a) ->
+                 GHC.Classes.$p2(%,%)
+                   @ (Data.Array.Accelerate.Classes.Num.Num a)
+                   @ (GHC.Real.Fractional (Data.Array.Accelerate.Smart.Exp a))
+                   (Data.Array.Accelerate.Classes.RealFrac.$p2RealFrac
+                      @ a
+                      $dRealFrac)) -}
+8d0d8e97ad20f353b3ace27bf27ac1ff
+  $fRealFracExp_$cproperFraction ::
+    Data.Array.Accelerate.Classes.RealFrac.RealFrac a =>
+    forall b.
+    GHC.Real.Integral b =>
+    Data.Array.Accelerate.Smart.Exp a
+    -> (b, Data.Array.Accelerate.Smart.Exp a)
+  {- Arity: 2, Strictness: <B,A><B,A>x,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a
+                   ($dRealFrac :: Data.Array.Accelerate.Classes.RealFrac.RealFrac a)
+                   @ b
+                   ($dIntegral :: GHC.Real.Integral b) ->
+                 Data.Array.Accelerate.Classes.RealFrac.$fRealFracExp5 @ b @ a) -}
+586c12b4b7e3f8a38b25fdcef31e5265
+  $fRealFracExp_$cround ::
+    Data.Array.Accelerate.Classes.RealFrac.RealFrac a =>
+    forall b.
+    GHC.Real.Integral b =>
+    Data.Array.Accelerate.Smart.Exp a -> b
+  {- Arity: 2, Strictness: <B,A><B,A>x,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a
+                   ($dRealFrac :: Data.Array.Accelerate.Classes.RealFrac.RealFrac a)
+                   @ b
+                   ($dIntegral :: GHC.Real.Integral b) ->
+                 Data.Array.Accelerate.Classes.RealFrac.$fRealFracExp3 @ b @ a) -}
+393f2298aff10dd06cde89903b85c7e1
+  $fRealFracExp_$ctruncate ::
+    Data.Array.Accelerate.Classes.RealFrac.RealFrac a =>
+    forall b.
+    GHC.Real.Integral b =>
+    Data.Array.Accelerate.Smart.Exp a -> b
+  {- Arity: 2, Strictness: <B,A><B,A>x,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a
+                   ($dRealFrac :: Data.Array.Accelerate.Classes.RealFrac.RealFrac a)
+                   @ b
+                   ($dIntegral :: GHC.Real.Integral b) ->
+                 Data.Array.Accelerate.Classes.RealFrac.$fRealFracExp4 @ b @ a) -}
+8c38af9b18db29070016e914e4775842
+  $fRealFracFloat ::
+    Data.Array.Accelerate.Classes.RealFrac.RealFrac GHC.Types.Float
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ GHC.Types.Float
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$cp1RealFrac
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat5
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$cproperFraction
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$ctruncate
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$cround
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$cceiling
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$cfloor -}
+d7449e3f5888a308b55b500bd2530e0c
+  $fRealFracFloat1 ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ b
+                   ($dElt :: Data.Array.Accelerate.Array.Sugar.Elt b)
+                   ($dIsIntegral :: Data.Array.Accelerate.Type.IsIntegral b)
+                   (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ b
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   $dElt
+                   (Data.Array.Accelerate.AST.PrimFloor
+                      @ (GHC.Types.Float -> b)
+                      @ GHC.Types.Float
+                      @ b
+                      @~ <GHC.Types.Float -> b>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType
+                      (Data.Array.Accelerate.Type.integralType @ b $dIsIntegral))
+                   x) -}
+81e65ad501a0da5895fdec9168a40e67
+  $fRealFracFloat2 ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ b
+                   ($dElt :: Data.Array.Accelerate.Array.Sugar.Elt b)
+                   ($dIsIntegral :: Data.Array.Accelerate.Type.IsIntegral b)
+                   (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ b
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   $dElt
+                   (Data.Array.Accelerate.AST.PrimCeiling
+                      @ (GHC.Types.Float -> b)
+                      @ GHC.Types.Float
+                      @ b
+                      @~ <GHC.Types.Float -> b>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType
+                      (Data.Array.Accelerate.Type.integralType @ b $dIsIntegral))
+                   x) -}
+6b8b828b31fae798157c8108d3b56a81
+  $fRealFracFloat3 ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ b
+                   ($dElt :: Data.Array.Accelerate.Array.Sugar.Elt b)
+                   ($dIsIntegral :: Data.Array.Accelerate.Type.IsIntegral b)
+                   (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ b
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   $dElt
+                   (Data.Array.Accelerate.AST.PrimRound
+                      @ (GHC.Types.Float -> b)
+                      @ GHC.Types.Float
+                      @ b
+                      @~ <GHC.Types.Float -> b>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType
+                      (Data.Array.Accelerate.Type.integralType @ b $dIsIntegral))
+                   x) -}
+19901a978f4577671281baa45812d1b8
+  $fRealFracFloat4 ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ b
+                   ($dElt :: Data.Array.Accelerate.Array.Sugar.Elt b)
+                   ($dIsIntegral :: Data.Array.Accelerate.Type.IsIntegral b)
+                   (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ b
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   $dElt
+                   (Data.Array.Accelerate.AST.PrimTruncate
+                      @ (GHC.Types.Float -> b)
+                      @ GHC.Types.Float
+                      @ b
+                      @~ <GHC.Types.Float -> b>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType
+                      (Data.Array.Accelerate.Type.integralType @ b $dIsIntegral))
+                   x) -}
+79ed5f711a9a53b6af69881c1ca88255
+  $fRealFracFloat5 ::
+    (Data.Array.Accelerate.Classes.Num.Num GHC.Types.Float,
+     GHC.Real.Fractional
+       (Data.Array.Accelerate.Smart.Exp GHC.Types.Float))
+  {- Strictness: m,
+     Unfolding: ((Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat6,
+                  Data.Array.Accelerate.Classes.Fractional.$fFractionalExp2)) -}
+d57a6c8e9f172cece7f4ea95cda4be68
+  $fRealFracFloat6 ::
+    (Data.Array.Accelerate.Array.Sugar.Elt GHC.Types.Float,
+     GHC.Num.Num (Data.Array.Accelerate.Smart.Exp GHC.Types.Float))
+  {- Strictness: m,
+     Unfolding: ((Data.Array.Accelerate.Array.Sugar.$fEltFloat,
+                  Data.Array.Accelerate.Classes.Num.$fNumExp2)) -}
+8f749a38bbee3e903b2cd7805b4dd1eb
+  $fRealFracFloat_$cceiling ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat2
+                  `cast`
+                (forall (b :: <*>_N).
+                 <Data.Array.Accelerate.Array.Sugar.Elt b>_R
+                 ->_R <Data.Array.Accelerate.Type.IsIntegral b>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <b>_N) -}
+e5bcfe0b40cd74aa46573d53c63e2d16
+  $fRealFracFloat_$cfloor ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat1
+                  `cast`
+                (forall (b :: <*>_N).
+                 <Data.Array.Accelerate.Array.Sugar.Elt b>_R
+                 ->_R <Data.Array.Accelerate.Type.IsIntegral b>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <b>_N) -}
+10d91a470e6b56c2a3ed829f7edf77b7
+  $fRealFracFloat_$cp1RealFrac ::
+    Data.Array.Accelerate.Classes.Real.Real GHC.Types.Float
+  {- Strictness: m,
+     Unfolding: ((Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat6,
+                  Data.Array.Accelerate.Classes.Ord.$fOrdFloat,
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fRealExp)) -}
+5ab48ccbc145470ce64d077699326e2f
+  $fRealFracFloat_$cproperFraction ::
+    (Data.Array.Accelerate.Classes.Num.Num b,
+     Data.Array.Accelerate.Classes.ToFloating.ToFloating
+       b GHC.Types.Float,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> (Data.Array.Accelerate.Smart.Exp b,
+        Data.Array.Accelerate.Smart.Exp GHC.Types.Float)
+  {- Arity: 3,
+     Strictness: <L,U(U,U(U,U,U,U,U,U,U))><L,C(C1(C1(U)))><L,U> -}
+176f7a91b4fa693e072d20a6be2a3098
+  $fRealFracFloat_$cround ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat3
+                  `cast`
+                (forall (b :: <*>_N).
+                 <Data.Array.Accelerate.Array.Sugar.Elt b>_R
+                 ->_R <Data.Array.Accelerate.Type.IsIntegral b>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <b>_N) -}
+8a347011cdb8aa55a32427d8cb161335
+  $fRealFracFloat_$ctruncate ::
+    (Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 3, Strictness: <L,U><L,1*U(A,A,A,1*U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat4
+                  `cast`
+                (forall (b :: <*>_N).
+                 <Data.Array.Accelerate.Array.Sugar.Elt b>_R
+                 ->_R <Data.Array.Accelerate.Type.IsIntegral b>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <b>_N) -}
+dec4b801d4db516843d4a1f5e033088d
+  $fRealFracFloat_$s$fOrdExp ::
+    GHC.Classes.Ord (Data.Array.Accelerate.Smart.Exp GHC.Types.Float)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Data.Array.Accelerate.Smart.Exp GHC.Types.Float)
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fOrdExp_$cp1Ord
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fOrdExp_$ccompare
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fOrdExp_$c<
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fOrdExp_$c<=
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fOrdExp_$c>
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fOrdExp_$c>=
+                  Data.Array.Accelerate.Classes.Ord.$fOrdFloat_$cmax
+                  Data.Array.Accelerate.Classes.Ord.$fOrdFloat_$cmin -}
+ab8adcd926cdadc82ad030f02f697ad3
+  $fRealFracFloat_$s$fOrdExp_$c< ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> GHC.Types.Bool
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Ord.$fOrdExp4 @ GHC.Types.Float) -}
+4195cea0a82562b2c3257144f270c542
+  $fRealFracFloat_$s$fOrdExp_$c<= ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> GHC.Types.Bool
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Ord.$fOrdExp3 @ GHC.Types.Float) -}
+d92b546bb976ffa964caa149956d8e19
+  $fRealFracFloat_$s$fOrdExp_$c> ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> GHC.Types.Bool
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Ord.$fOrdExp2 @ GHC.Types.Float) -}
+6ad59e1940d5f82b640f24a485c587e9
+  $fRealFracFloat_$s$fOrdExp_$c>= ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> GHC.Types.Bool
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Ord.$fOrdExp1 @ GHC.Types.Float) -}
+a473b4673f5434913f0878bdcab64738
+  $fRealFracFloat_$s$fOrdExp_$ccompare ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> GHC.Types.Ordering
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Ord.$fOrdExp5 @ GHC.Types.Float) -}
+080c492285eff2748ab7f2f5fa14816f
+  $fRealFracFloat_$s$fOrdExp_$cp1Ord ::
+    GHC.Classes.Eq (Data.Array.Accelerate.Smart.Exp GHC.Types.Float)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Eq.$fEqExp @ GHC.Types.Float) -}
+f1adccce01fa93c05bfb12b6db977629
+  $fRealFracFloat_$s$fRealExp ::
+    GHC.Real.Real (Data.Array.Accelerate.Smart.Exp GHC.Types.Float)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Data.Array.Accelerate.Smart.Exp GHC.Types.Float)
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fRealExp_$cp1Real
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fRealExp_$cp2Real
+                  Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fRealExp_$ctoRational -}
+adb17d8c531740e1f09ce78d32ef45bc
+  $fRealFracFloat_$s$fRealExp_$cp1Real ::
+    GHC.Num.Num (Data.Array.Accelerate.Smart.Exp GHC.Types.Float)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Num.$fNumExp2 -}
+08356c8f269ca0042a6d41638de0c0df
+  $fRealFracFloat_$s$fRealExp_$cp2Real ::
+    GHC.Classes.Ord (Data.Array.Accelerate.Smart.Exp GHC.Types.Float)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fOrdExp -}
+3c826f064b86f6b14fee0c9c74d031c8
+  $fRealFracFloat_$s$fRealExp_$ctoRational ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> GHC.Real.Rational
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Array.Accelerate.Classes.Real.$fRealExp1
+                   @ GHC.Types.Float) -}
+b2a912ac079495438b25bb780c45e8f5
+  $sprintf3 ::
+    GHC.Base.String -> [Text.Printf.UPrintf] -> [GHC.Types.Char]
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>,
+     Unfolding: (\ (fmts :: GHC.Base.String)
+                   (args :: [Text.Printf.UPrintf]) ->
+                 GHC.Base.map
+                   @ GHC.Types.Char
+                   @ GHC.Types.Char
+                   Text.Printf.$fIsCharChar_$cfromChar
+                   (Text.Printf.uprintfs
+                      fmts
+                      (GHC.List.reverse1
+                         @ Text.Printf.UPrintf
+                         args
+                         (GHC.Types.[] @ Text.Printf.UPrintf))
+                      (GHC.Types.[] @ GHC.Types.Char))) -}
+67fa72488a23eee9af86f326386cb253
+  $tc'C:RealFrac :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   220864142427441772##
+                   1684251219759253828##
+                   Data.Array.Accelerate.Classes.RealFrac.$trModule
+                   Data.Array.Accelerate.Classes.RealFrac.$tc'C:RealFrac1) -}
+10b6261feed117e086f6a160481b5b92
+  $tc'C:RealFrac1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'C:RealFrac"#) -}
+4a4169dd85457b327328f93aeb7f0f89
+  $tcRealFrac :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11131225170149306148##
+                   7214990537267720038##
+                   Data.Array.Accelerate.Classes.RealFrac.$trModule
+                   Data.Array.Accelerate.Classes.RealFrac.$tcRealFrac1) -}
+11e58c974d1cdc0b25a1454a21106f34
+  $tcRealFrac1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "RealFrac"#) -}
+ad23b7421dfbdc3e4f329a5a3c663706
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Data.Array.Accelerate.Classes.RealFrac.$trModule2
+                   Data.Array.Accelerate.Classes.RealFrac.$trModule1) -}
+dfd6795ef14f824fb46f3c3e5758bc94
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Data.Array.Accelerate.Classes.RealFrac"#) -}
+c26ffe95e97cb8dde0445088d2a55441
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw"#) -}
+c57f7efbe6d10280dfc4d4ce9e6b4d6d
+  $wdivMod' ::
+    (Data.Array.Accelerate.Classes.Floating.Floating a,
+     Data.Array.Accelerate.Classes.RealFrac.RealFrac a,
+     Data.Array.Accelerate.Classes.Num.Num b,
+     Data.Array.Accelerate.Type.IsIntegral b,
+     Data.Array.Accelerate.Classes.ToFloating.ToFloating b a) =>
+    Data.Array.Accelerate.Smart.Exp a
+    -> Data.Array.Accelerate.Smart.Exp a
+    -> (# Data.Array.Accelerate.Smart.Exp b,
+          Data.Array.Accelerate.Smart.Exp a #)
+  {- Arity: 7, HasNoCafRefs,
+     Strictness: <L,U(U,U)><L,U(A,1*U(A,1*U(A,1*C1(C1(U)),A,A)),A,A,A,A,1*C1(C1(C1(U))))><L,U(U,U)><L,U><L,1*C1(C1(C1(U)))><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ b
+                   (w :: Data.Array.Accelerate.Classes.Floating.Floating a)
+                   (w1 :: Data.Array.Accelerate.Classes.RealFrac.RealFrac a)
+                   (w2 :: Data.Array.Accelerate.Classes.Num.Num b)
+                   (w3 :: Data.Array.Accelerate.Type.IsIntegral b)
+                   (w4 :: Data.Array.Accelerate.Classes.ToFloating.ToFloating b a)
+                   (w5 :: Data.Array.Accelerate.Smart.Exp a)
+                   (w6 :: Data.Array.Accelerate.Smart.Exp a) ->
+                 let {
+                   f :: Data.Array.Accelerate.Smart.Exp b
+                   = Data.Array.Accelerate.Classes.RealFrac.floor
+                       @ a
+                       w1
+                       @ b
+                       (GHC.Classes.$p1(%,%)
+                          @ (Data.Array.Accelerate.Array.Sugar.Elt b)
+                          @ (GHC.Num.Num (Data.Array.Accelerate.Smart.Exp b))
+                          w2)
+                       w3
+                       (GHC.Real./
+                          @ (Data.Array.Accelerate.Smart.Exp a)
+                          (GHC.Classes.$p2(%,%)
+                             @ (Data.Array.Accelerate.Classes.Num.Num a)
+                             @ (GHC.Real.Fractional (Data.Array.Accelerate.Smart.Exp a))
+                             (Data.Array.Accelerate.Classes.RealFrac.$p2RealFrac @ a w1))
+                          w5
+                          w6)
+                 } in
+                 (# f,
+                    let {
+                      $dFloating :: GHC.Float.Floating
+                                      (Data.Array.Accelerate.Smart.Exp a)
+                      = GHC.Classes.$p2(%,%)
+                          @ (Data.Array.Accelerate.Classes.Fractional.Fractional a)
+                          @ (GHC.Float.Floating (Data.Array.Accelerate.Smart.Exp a))
+                          w
+                    } in
+                    let {
+                      $dFractional :: GHC.Real.Fractional
+                                        (Data.Array.Accelerate.Smart.Exp a)
+                      = GHC.Float.$p1Floating
+                          @ (Data.Array.Accelerate.Smart.Exp a)
+                          $dFloating
+                    } in
+                    let {
+                      $dNum :: GHC.Num.Num (Data.Array.Accelerate.Smart.Exp a)
+                      = GHC.Real.$p1Fractional
+                          @ (Data.Array.Accelerate.Smart.Exp a)
+                          $dFractional
+                    } in
+                    GHC.Num.-
+                      @ (Data.Array.Accelerate.Smart.Exp a)
+                      $dNum
+                      w5
+                      (GHC.Num.*
+                         @ (Data.Array.Accelerate.Smart.Exp a)
+                         $dNum
+                         (w4
+                            `cast`
+                          (Data.Array.Accelerate.Classes.ToFloating.N:ToFloating[0]
+                               <b>_N <a>_N)
+                            w2
+                            w
+                            f)
+                         w6) #)) -}
+8c38af9b18db29070016e914e4775842
+  class (Data.Array.Accelerate.Classes.Real.Real a,
+         Data.Array.Accelerate.Classes.Fractional.Fractional a) =>
+        RealFrac a where
+    properFraction :: (Data.Array.Accelerate.Classes.Num.Num b,
+                       Data.Array.Accelerate.Classes.ToFloating.ToFloating b a,
+                       Data.Array.Accelerate.Type.IsIntegral b) =>
+                      Data.Array.Accelerate.Smart.Exp a
+                      -> (Data.Array.Accelerate.Smart.Exp b,
+                          Data.Array.Accelerate.Smart.Exp a)
+    truncate :: (Data.Array.Accelerate.Array.Sugar.Elt b,
+                 Data.Array.Accelerate.Type.IsIntegral b) =>
+                Data.Array.Accelerate.Smart.Exp a
+                -> Data.Array.Accelerate.Smart.Exp b
+    round :: (Data.Array.Accelerate.Array.Sugar.Elt b,
+              Data.Array.Accelerate.Type.IsIntegral b) =>
+             Data.Array.Accelerate.Smart.Exp a
+             -> Data.Array.Accelerate.Smart.Exp b
+    ceiling :: (Data.Array.Accelerate.Array.Sugar.Elt b,
+                Data.Array.Accelerate.Type.IsIntegral b) =>
+               Data.Array.Accelerate.Smart.Exp a
+               -> Data.Array.Accelerate.Smart.Exp b
+    floor :: (Data.Array.Accelerate.Array.Sugar.Elt b,
+              Data.Array.Accelerate.Type.IsIntegral b) =>
+             Data.Array.Accelerate.Smart.Exp a
+             -> Data.Array.Accelerate.Smart.Exp b
+    {-# MINIMAL properFraction, truncate, round, ceiling, floor #-}
+ffd3ff9c8cd7b1b90b8b767eae7b5e05
+  div' ::
+    (Data.Array.Accelerate.Classes.RealFrac.RealFrac a,
+     Data.Array.Accelerate.Array.Sugar.Elt b,
+     Data.Array.Accelerate.Type.IsIntegral b) =>
+    Data.Array.Accelerate.Smart.Exp a
+    -> Data.Array.Accelerate.Smart.Exp a
+    -> Data.Array.Accelerate.Smart.Exp b
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <S(LLLLLLC(C(C(S)))),U(A,1*U(A,1*U(A,1*C1(C1(U)),A,A)),A,A,A,A,1*C1(C1(C1(U))))><L,U><L,U><L,U><L,U>,
+     Unfolding: (\ @ a
+                   @ b
+                   ($dRealFrac :: Data.Array.Accelerate.Classes.RealFrac.RealFrac a)
+                   ($dElt :: Data.Array.Accelerate.Array.Sugar.Elt b)
+                   ($dIsIntegral :: Data.Array.Accelerate.Type.IsIntegral b)
+                   (eta :: Data.Array.Accelerate.Smart.Exp a)
+                   (eta1 :: Data.Array.Accelerate.Smart.Exp a) ->
+                 Data.Array.Accelerate.Classes.RealFrac.floor
+                   @ a
+                   $dRealFrac
+                   @ b
+                   $dElt
+                   $dIsIntegral
+                   (GHC.Real./
+                      @ (Data.Array.Accelerate.Smart.Exp a)
+                      (GHC.Classes.$p2(%,%)
+                         @ (Data.Array.Accelerate.Classes.Num.Num a)
+                         @ (GHC.Real.Fractional (Data.Array.Accelerate.Smart.Exp a))
+                         (Data.Array.Accelerate.Classes.RealFrac.$p2RealFrac
+                            @ a
+                            $dRealFrac))
+                      eta
+                      eta1)) -}
+d691a2beed6b8894c84eef9a8b545f53
+  divMod' ::
+    (Data.Array.Accelerate.Classes.Floating.Floating a,
+     Data.Array.Accelerate.Classes.RealFrac.RealFrac a,
+     Data.Array.Accelerate.Classes.Num.Num b,
+     Data.Array.Accelerate.Type.IsIntegral b,
+     Data.Array.Accelerate.Classes.ToFloating.ToFloating b a) =>
+    Data.Array.Accelerate.Smart.Exp a
+    -> Data.Array.Accelerate.Smart.Exp a
+    -> (Data.Array.Accelerate.Smart.Exp b,
+        Data.Array.Accelerate.Smart.Exp a)
+  {- Arity: 7, HasNoCafRefs,
+     Strictness: <L,U(U,U)><L,U(A,1*U(A,1*U(A,1*C1(C1(U)),A,A)),A,A,A,A,1*C1(C1(C1(U))))><L,U(U,U)><L,U><L,1*C1(C1(C1(U)))><L,U><L,U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (7, True, False)
+                (\ @ a
+                   @ b
+                   (w :: Data.Array.Accelerate.Classes.Floating.Floating a)
+                   (w1 :: Data.Array.Accelerate.Classes.RealFrac.RealFrac a)
+                   (w2 :: Data.Array.Accelerate.Classes.Num.Num b)
+                   (w3 :: Data.Array.Accelerate.Type.IsIntegral b)
+                   (w4 :: Data.Array.Accelerate.Classes.ToFloating.ToFloating b a)
+                   (w5 :: Data.Array.Accelerate.Smart.Exp a)
+                   (w6 :: Data.Array.Accelerate.Smart.Exp a) ->
+                 case Data.Array.Accelerate.Classes.RealFrac.$wdivMod'
+                        @ a
+                        @ b
+                        w
+                        w1
+                        w2
+                        w3
+                        w4
+                        w5
+                        w6 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+4fb5ed0257122a68c98b725a0a637ccf
+  mod' ::
+    (Data.Array.Accelerate.Classes.Floating.Floating a,
+     Data.Array.Accelerate.Classes.RealFrac.RealFrac a,
+     Data.Array.Accelerate.Classes.ToFloating.ToFloating
+       GHC.Types.Int a) =>
+    Data.Array.Accelerate.Smart.Exp a
+    -> Data.Array.Accelerate.Smart.Exp a
+    -> Data.Array.Accelerate.Smart.Exp a
+  {- Arity: 5,
+     Strictness: <S(LS),U(U,U)><L,U(A,U(A,U(A,C(C1(U)),A,A)),A,A,A,A,C(C1(C1(U))))><L,1*C1(C1(C1(U)))><L,U><L,U>,
+     Unfolding: (\ @ a
+                   ($d(%,%) :: Data.Array.Accelerate.Classes.Floating.Floating a)
+                   ($dRealFrac :: Data.Array.Accelerate.Classes.RealFrac.RealFrac a)
+                   ($dToFloating :: Data.Array.Accelerate.Classes.ToFloating.ToFloating
+                                      GHC.Types.Int a)
+                   (eta :: Data.Array.Accelerate.Smart.Exp a)
+                   (eta1 :: Data.Array.Accelerate.Smart.Exp a) ->
+                 let {
+                   $dFloating :: GHC.Float.Floating
+                                   (Data.Array.Accelerate.Smart.Exp a)
+                   = GHC.Classes.$p2(%,%)
+                       @ (Data.Array.Accelerate.Classes.Fractional.Fractional a)
+                       @ (GHC.Float.Floating (Data.Array.Accelerate.Smart.Exp a))
+                       $d(%,%)
+                 } in
+                 let {
+                   $dFractional :: GHC.Real.Fractional
+                                     (Data.Array.Accelerate.Smart.Exp a)
+                   = GHC.Float.$p1Floating
+                       @ (Data.Array.Accelerate.Smart.Exp a)
+                       $dFloating
+                 } in
+                 let {
+                   $dNum :: GHC.Num.Num (Data.Array.Accelerate.Smart.Exp a)
+                   = GHC.Real.$p1Fractional
+                       @ (Data.Array.Accelerate.Smart.Exp a)
+                       $dFractional
+                 } in
+                 GHC.Num.-
+                   @ (Data.Array.Accelerate.Smart.Exp a)
+                   $dNum
+                   eta
+                   (GHC.Num.*
+                      @ (Data.Array.Accelerate.Smart.Exp a)
+                      $dNum
+                      ($dToFloating
+                         `cast`
+                       (Data.Array.Accelerate.Classes.ToFloating.N:ToFloating[0]
+                            <GHC.Types.Int>_N <a>_N)
+                         Data.Array.Accelerate.Classes.RealFrac.mod'1
+                         $d(%,%)
+                         (Data.Array.Accelerate.Classes.RealFrac.div'
+                            @ a
+                            @ GHC.Types.Int
+                            $dRealFrac
+                            Data.Array.Accelerate.Array.Sugar.$fEltInt
+                            Data.Array.Accelerate.Type.$fIsIntegralInt
+                            eta
+                            eta1))
+                      eta1)) -}
+869088c461e7e07992cc1d7712bdd350
+  mod'1 ::
+    (Data.Array.Accelerate.Array.Sugar.Elt GHC.Types.Int,
+     GHC.Num.Num (Data.Array.Accelerate.Smart.Exp GHC.Types.Int))
+  {- Strictness: m,
+     Unfolding: ((Data.Array.Accelerate.Array.Sugar.$fEltInt,
+                  Data.Array.Accelerate.Classes.Num.$fNumExp20)) -}
+instance Data.Array.Accelerate.Classes.RealFrac.RealFrac [Foreign.C.Types.CDouble]
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble
+instance Data.Array.Accelerate.Classes.RealFrac.RealFrac [Foreign.C.Types.CFloat]
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat
+instance Data.Array.Accelerate.Classes.RealFrac.RealFrac [GHC.Types.Double]
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble
+instance GHC.Real.RealFrac [Data.Array.Accelerate.Smart.Exp]
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracExp
+instance Data.Array.Accelerate.Classes.RealFrac.RealFrac [GHC.Types.Float]
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp @ CDouble" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                             Foreign.C.Types.CDouble)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp @ Foreign.C.Types.CDouble
+                                             $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fOrdExp
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp @ CFloat" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                            Foreign.C.Types.CFloat)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp @ Foreign.C.Types.CFloat
+                                             $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fOrdExp
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp @ Double" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                            GHC.Types.Double)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp @ GHC.Types.Double $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fOrdExp
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp @ Float" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                           GHC.Types.Float)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp @ GHC.Types.Float $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fOrdExp
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$c< @ CDouble" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                 Foreign.C.Types.CDouble)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$c< @ Foreign.C.Types.CDouble
+                                                 $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fOrdExp_$c<
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$c< @ CFloat" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                Foreign.C.Types.CFloat)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$c< @ Foreign.C.Types.CFloat
+                                                 $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fOrdExp_$c<
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$c< @ Double" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                GHC.Types.Double)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$c< @ GHC.Types.Double
+                                                 $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fOrdExp_$c<
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$c< @ Float" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                               GHC.Types.Float)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$c< @ GHC.Types.Float
+                                                 $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fOrdExp_$c<
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$c<= @ CDouble" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                  Foreign.C.Types.CDouble)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$c<= @ Foreign.C.Types.CDouble
+                                                  $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fOrdExp_$c<=
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$c<= @ CFloat" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                 Foreign.C.Types.CFloat)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$c<= @ Foreign.C.Types.CFloat
+                                                  $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fOrdExp_$c<=
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$c<= @ Double" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                 GHC.Types.Double)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$c<= @ GHC.Types.Double
+                                                  $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fOrdExp_$c<=
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$c<= @ Float" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                GHC.Types.Float)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$c<= @ GHC.Types.Float
+                                                  $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fOrdExp_$c<=
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$c> @ CDouble" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                 Foreign.C.Types.CDouble)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$c> @ Foreign.C.Types.CDouble
+                                                 $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fOrdExp_$c>
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$c> @ CFloat" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                Foreign.C.Types.CFloat)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$c> @ Foreign.C.Types.CFloat
+                                                 $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fOrdExp_$c>
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$c> @ Double" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                GHC.Types.Double)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$c> @ GHC.Types.Double
+                                                 $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fOrdExp_$c>
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$c> @ Float" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                               GHC.Types.Float)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$c> @ GHC.Types.Float
+                                                 $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fOrdExp_$c>
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$c>= @ CDouble" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                  Foreign.C.Types.CDouble)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$c>= @ Foreign.C.Types.CDouble
+                                                  $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fOrdExp_$c>=
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$c>= @ CFloat" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                 Foreign.C.Types.CFloat)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$c>= @ Foreign.C.Types.CFloat
+                                                  $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fOrdExp_$c>=
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$c>= @ Double" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                 GHC.Types.Double)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$c>= @ GHC.Types.Double
+                                                  $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fOrdExp_$c>=
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$c>= @ Float" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                GHC.Types.Float)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$c>= @ GHC.Types.Float
+                                                  $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fOrdExp_$c>=
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$ccompare @ CDouble" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                       Foreign.C.Types.CDouble)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$ccompare @ Foreign.C.Types.CDouble
+                                                       $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fOrdExp_$ccompare
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$ccompare @ CFloat" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                      Foreign.C.Types.CFloat)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$ccompare @ Foreign.C.Types.CFloat
+                                                       $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fOrdExp_$ccompare
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$ccompare @ Double" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                      GHC.Types.Double)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$ccompare @ GHC.Types.Double
+                                                       $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fOrdExp_$ccompare
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$ccompare @ Float" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                     GHC.Types.Float)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$ccompare @ GHC.Types.Float
+                                                       $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fOrdExp_$ccompare
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$cp1Ord @ CDouble" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                     Foreign.C.Types.CDouble)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$cp1Ord @ Foreign.C.Types.CDouble
+                                                     $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fOrdExp_$cp1Ord
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$cp1Ord @ CFloat" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                    Foreign.C.Types.CFloat)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$cp1Ord @ Foreign.C.Types.CFloat
+                                                     $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fOrdExp_$cp1Ord
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$cp1Ord @ Double" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                    GHC.Types.Double)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$cp1Ord @ GHC.Types.Double
+                                                     $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fOrdExp_$cp1Ord
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fOrdExp_$cp1Ord @ Float" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                   GHC.Types.Float)
+  Data.Array.Accelerate.Classes.Ord.$fOrdExp_$cp1Ord @ GHC.Types.Float
+                                                     $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fOrdExp_$cp1Ord
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fRealExp @ CDouble" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                              Foreign.C.Types.CDouble)
+                                                                                  ($d(%,%) :: Data.Array.Accelerate.Classes.Num.Num
+                                                                                                Foreign.C.Types.CDouble)
+  Data.Array.Accelerate.Classes.Real.$fRealExp @ Foreign.C.Types.CDouble
+                                               $d(%,%)
+                                               $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fRealExp
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fRealExp @ CFloat" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                             Foreign.C.Types.CFloat)
+                                                                                 ($d(%,%) :: Data.Array.Accelerate.Classes.Num.Num
+                                                                                               Foreign.C.Types.CFloat)
+  Data.Array.Accelerate.Classes.Real.$fRealExp @ Foreign.C.Types.CFloat
+                                               $d(%,%)
+                                               $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fRealExp
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fRealExp @ Double" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                             GHC.Types.Double)
+                                                                                 ($d(%,%) :: Data.Array.Accelerate.Classes.Num.Num
+                                                                                               GHC.Types.Double)
+  Data.Array.Accelerate.Classes.Real.$fRealExp @ GHC.Types.Double
+                                               $d(%,%)
+                                               $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fRealExp
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fRealExp @ Float" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                            GHC.Types.Float)
+                                                                                ($d(%,%) :: Data.Array.Accelerate.Classes.Num.Num
+                                                                                              GHC.Types.Float)
+  Data.Array.Accelerate.Classes.Real.$fRealExp @ GHC.Types.Float
+                                               $d(%,%)
+                                               $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fRealExp
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fRealExp_$cp1Real @ CDouble" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                       Foreign.C.Types.CDouble)
+                                                                                           ($d(%,%) :: Data.Array.Accelerate.Classes.Num.Num
+                                                                                                         Foreign.C.Types.CDouble)
+  Data.Array.Accelerate.Classes.Real.$fRealExp_$cp1Real @ Foreign.C.Types.CDouble
+                                                        $d(%,%)
+                                                        $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fRealExp_$cp1Real
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fRealExp_$cp1Real @ CFloat" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                      Foreign.C.Types.CFloat)
+                                                                                          ($d(%,%) :: Data.Array.Accelerate.Classes.Num.Num
+                                                                                                        Foreign.C.Types.CFloat)
+  Data.Array.Accelerate.Classes.Real.$fRealExp_$cp1Real @ Foreign.C.Types.CFloat
+                                                        $d(%,%)
+                                                        $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fRealExp_$cp1Real
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fRealExp_$cp1Real @ Double" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                      GHC.Types.Double)
+                                                                                          ($d(%,%) :: Data.Array.Accelerate.Classes.Num.Num
+                                                                                                        GHC.Types.Double)
+  Data.Array.Accelerate.Classes.Real.$fRealExp_$cp1Real @ GHC.Types.Double
+                                                        $d(%,%)
+                                                        $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fRealExp_$cp1Real
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fRealExp_$cp1Real @ Float" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                     GHC.Types.Float)
+                                                                                         ($d(%,%) :: Data.Array.Accelerate.Classes.Num.Num
+                                                                                                       GHC.Types.Float)
+  Data.Array.Accelerate.Classes.Real.$fRealExp_$cp1Real @ GHC.Types.Float
+                                                        $d(%,%)
+                                                        $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fRealExp_$cp1Real
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fRealExp_$cp2Real @ CDouble" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                       Foreign.C.Types.CDouble)
+                                                                                           ($d(%,%) :: Data.Array.Accelerate.Classes.Num.Num
+                                                                                                         Foreign.C.Types.CDouble)
+  Data.Array.Accelerate.Classes.Real.$fRealExp_$cp2Real @ Foreign.C.Types.CDouble
+                                                        $d(%,%)
+                                                        $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fRealExp_$cp2Real
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fRealExp_$cp2Real @ CFloat" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                      Foreign.C.Types.CFloat)
+                                                                                          ($d(%,%) :: Data.Array.Accelerate.Classes.Num.Num
+                                                                                                        Foreign.C.Types.CFloat)
+  Data.Array.Accelerate.Classes.Real.$fRealExp_$cp2Real @ Foreign.C.Types.CFloat
+                                                        $d(%,%)
+                                                        $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fRealExp_$cp2Real
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fRealExp_$cp2Real @ Double" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                      GHC.Types.Double)
+                                                                                          ($d(%,%) :: Data.Array.Accelerate.Classes.Num.Num
+                                                                                                        GHC.Types.Double)
+  Data.Array.Accelerate.Classes.Real.$fRealExp_$cp2Real @ GHC.Types.Double
+                                                        $d(%,%)
+                                                        $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fRealExp_$cp2Real
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fRealExp_$cp2Real @ Float" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                     GHC.Types.Float)
+                                                                                         ($d(%,%) :: Data.Array.Accelerate.Classes.Num.Num
+                                                                                                       GHC.Types.Float)
+  Data.Array.Accelerate.Classes.Real.$fRealExp_$cp2Real @ GHC.Types.Float
+                                                        $d(%,%)
+                                                        $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fRealExp_$cp2Real
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fRealExp_$ctoRational @ CDouble" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                           Foreign.C.Types.CDouble)
+                                                                                               ($d(%,%) :: Data.Array.Accelerate.Classes.Num.Num
+                                                                                                             Foreign.C.Types.CDouble)
+  Data.Array.Accelerate.Classes.Real.$fRealExp_$ctoRational @ Foreign.C.Types.CDouble
+                                                            $d(%,%)
+                                                            $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCDouble_$s$fRealExp_$ctoRational
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fRealExp_$ctoRational @ CFloat" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                          Foreign.C.Types.CFloat)
+                                                                                              ($d(%,%) :: Data.Array.Accelerate.Classes.Num.Num
+                                                                                                            Foreign.C.Types.CFloat)
+  Data.Array.Accelerate.Classes.Real.$fRealExp_$ctoRational @ Foreign.C.Types.CFloat
+                                                            $d(%,%)
+                                                            $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracCFloat_$s$fRealExp_$ctoRational
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fRealExp_$ctoRational @ Double" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                          GHC.Types.Double)
+                                                                                              ($d(%,%) :: Data.Array.Accelerate.Classes.Num.Num
+                                                                                                            GHC.Types.Double)
+  Data.Array.Accelerate.Classes.Real.$fRealExp_$ctoRational @ GHC.Types.Double
+                                                            $d(%,%)
+                                                            $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracDouble_$s$fRealExp_$ctoRational
+"SPEC/Data.Array.Accelerate.Classes.RealFrac $fRealExp_$ctoRational @ Float" [ALWAYS] forall ($dOrd :: Data.Array.Accelerate.Classes.Ord.Ord
+                                                                                                         GHC.Types.Float)
+                                                                                             ($d(%,%) :: Data.Array.Accelerate.Classes.Num.Num
+                                                                                                           GHC.Types.Float)
+  Data.Array.Accelerate.Classes.Real.$fRealExp_$ctoRational @ GHC.Types.Float
+                                                            $d(%,%)
+                                                            $dOrd
+  = Data.Array.Accelerate.Classes.RealFrac.$fRealFracFloat_$s$fRealExp_$ctoRational
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

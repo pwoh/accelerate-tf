@@ -1,0 +1,2016 @@
+
+==================== FINAL INTERFACE ====================
+2017-08-29 05:28:03.464939 UTC
+
+interface accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Trafo.Base [family instance module] 8002
+  interface hash: 594fc0ffe2c43ca8e95eeaacdd1c9d1e
+  ABI hash: f39e4dfe1afe26017d51fdc8678d590f
+  export-list hash: 945cc7ccce908b35cd85c2d690c34974
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 77f4739234bb7bf59b81e2f175f77872
+  sig of: Nothing
+  used TH splices: True
+  where
+exports:
+  Data.Array.Accelerate.Trafo.Base.append
+  Data.Array.Accelerate.Trafo.Base.avarIn
+  Data.Array.Accelerate.Trafo.Base.bind
+  Data.Array.Accelerate.Trafo.Base.bindExps
+  Data.Array.Accelerate.Trafo.Base.fromOpenAfun
+  Data.Array.Accelerate.Trafo.Base.hashDelayedOpenAcc
+  Data.Array.Accelerate.Trafo.Base.incExp
+  Data.Array.Accelerate.Trafo.Base.inlineA
+  Data.Array.Accelerate.Trafo.Base.kmap
+  Data.Array.Accelerate.Trafo.Base.lookupExp
+  Data.Array.Accelerate.Trafo.Base.matchDelayedOpenAcc
+  Data.Array.Accelerate.Trafo.Base.prjExp
+  Data.Array.Accelerate.Trafo.Base.sink
+  Data.Array.Accelerate.Trafo.Base.sink1
+  Data.Array.Accelerate.Trafo.Base.sinkGamma
+  Data.Array.Accelerate.Trafo.Base.subApply
+  Data.Array.Accelerate.Trafo.Base.weakenGamma1
+  Data.Array.Accelerate.Trafo.Base.DelayedAcc
+  Data.Array.Accelerate.Trafo.Base.DelayedAfun
+  Data.Array.Accelerate.Trafo.Base.DelayedExp
+  Data.Array.Accelerate.Trafo.Base.DelayedFun
+  Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc{Data.Array.Accelerate.Trafo.Base.Delayed Data.Array.Accelerate.Trafo.Base.Manifest extentD indexD linearIndexD}
+  Data.Array.Accelerate.Trafo.Base.DelayedOpenAfun
+  Data.Array.Accelerate.Trafo.Base.DelayedOpenExp
+  Data.Array.Accelerate.Trafo.Base.DelayedOpenFun
+  Data.Array.Accelerate.Trafo.Base.Extend{Data.Array.Accelerate.Trafo.Base.BaseEnv Data.Array.Accelerate.Trafo.Base.PushEnv}
+  Data.Array.Accelerate.Trafo.Base.Gamma{Data.Array.Accelerate.Trafo.Base.EmptyExp Data.Array.Accelerate.Trafo.Base.PushExp}
+  Data.Array.Accelerate.Trafo.Base.Kit{Data.Array.Accelerate.Trafo.Base.extract Data.Array.Accelerate.Trafo.Base.fromOpenAcc Data.Array.Accelerate.Trafo.Base.hashAcc Data.Array.Accelerate.Trafo.Base.inject Data.Array.Accelerate.Trafo.Base.matchAcc Data.Array.Accelerate.Trafo.Base.prettyAcc}
+  Data.Array.Accelerate.Trafo.Base.Match{Data.Array.Accelerate.Trafo.Base.match}
+  Data.Array.Accelerate.Trafo.Base.Supplement{Data.Array.Accelerate.Trafo.Base.BaseSup Data.Array.Accelerate.Trafo.Base.PushSup}
+  Data.Array.Accelerate.Trafo.Substitution.Sink{Data.Array.Accelerate.Trafo.Substitution.weaken}
+  Data.Type.Equality.:~:{Data.Type.Equality.Refl}
+module dependencies: Data.Array.Accelerate.AST
+                     Data.Array.Accelerate.Analysis.Hash
+                     Data.Array.Accelerate.Analysis.Hash.TH
+                     Data.Array.Accelerate.Analysis.Match
+                     Data.Array.Accelerate.Array.Data
+                     Data.Array.Accelerate.Array.Representation
+                     Data.Array.Accelerate.Array.Sugar
+                     Data.Array.Accelerate.Array.Unique
+                     Data.Array.Accelerate.Debug.Flags
+                     Data.Array.Accelerate.Debug.Monitoring
+                     Data.Array.Accelerate.Debug.Stats Data.Array.Accelerate.Debug.Trace
+                     Data.Array.Accelerate.Error Data.Array.Accelerate.Lifetime
+                     Data.Array.Accelerate.Pretty.Print Data.Array.Accelerate.Product
+                     Data.Array.Accelerate.Trafo.Substitution Data.Array.Accelerate.Type
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol
+                      integer-gmp-1.0.0.1 pretty-1.1.3.3@pretty-1.1.3.3
+                      template-haskell-2.11.1.0
+                      text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00
+                      unique-0@unique-0-9CJQKYGbqiDaFUmoekKeA
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu:Data.Orphans
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt:Data.Label.Point
+         hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable.Generic
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Show
+family instance modules: accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Data
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Representation
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Sugar
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Product
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Trafo.Substitution
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Type
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+import  -/  Data.Array.Accelerate.AST 4907563d36aadcb5fe024fe0eaf42ffa
+  exports: 14f3cf8c02b472222e546556891c5be1
+  Abody ee120ad61e0a5f248fbde7e991e9af28
+  Alam 9e3e3605bc50ad599485b7c0977e13d9
+  Alet 0ab0425bc7b0ec829dbc083ffa16825d
+  Avar b9746522dbbe78edef452606b6656a87
+  Body 1196576b2aa6a07bc2357625785ef2e5
+  Idx 9e7661ad7cc1bdaa299ff04fb99275fb
+  Index 63200e0b9961802f7b038a2e740789b0
+  Lam 158725fe690b603ce6a570d589782162
+  Let fb7635520863b39ad81ae4c22c0dfd53
+  OpenAcc 3461fc2319f9b06050cf56128e83b27c
+  OpenAcc d85164a68dcedbc8a54813dd240745cc
+  OpenAfun d85164a68dcedbc8a54813dd240745cc
+  PreExp e5bbd637882b51cd1da6e290359325bf
+  PreFun d3bf8e354493ff12972ab24a46d8ebad
+  PreOpenAcc 1c6afba98b6c67e35689096ef2f6efe3
+  PreOpenAfun 2e727f8d346dd6a6266c06baf474000a
+  PreOpenExp d3bf8e354493ff12972ab24a46d8ebad
+  PreOpenFun d3bf8e354493ff12972ab24a46d8ebad
+  Shape 188e3cfc394232139edff3a93b6fc738
+  SuccIdx 076f2d7bd7da8ff1d9570f0dbeb5674a
+  Var 316870341ee21060a306c8836bf702a6
+  ZeroIdx 2872af3fb6867732883d5517094bca30
+  rnfPreOpenAcc 42ebcea3a248bee98c068ec65a2906fa
+  rnfPreOpenAfun 2eb0378ae2b49ef58fb201098de56cda
+  rnfPreOpenExp a30df5bffccc43274a1d14696474af4d
+  rnfPreOpenFun d522df8223811b2e0b2cd0ba3a12fd87
+import  -/  Data.Array.Accelerate.Analysis.Hash d451e2acad217035e2f0d423cc97794f
+  exports: c32d6d07a25339c94513f250d901b849
+  HashAcc 89c6c21f1da43fd06c358d7aff5922fa
+  hashOpenAcc 51310f8a39e73318dbe8582cb7e75d8c
+  hashPreOpenAcc 7b6fb0a895464076b1e8b14a1bd994f2
+  hashPreOpenExp e3a3a7bf3d7a02b75d488a4c59831f40
+  hashPreOpenFun 8d77a7aed57b8b041aa9deb4ea624070
+import  -/  Data.Array.Accelerate.Analysis.Hash.TH 977cc08136d5af87c132c6fcef1eecba
+  hashQ f4dfb5662d6b88b5ee7f09313db035ce
+import  -/  Data.Array.Accelerate.Analysis.Match ab221b77992c08e2034eb4c4408657ab
+  exports: 6b5dbf184af5b50b039d678583ec0082
+  MatchAcc 26882ff1469bf5923d487e5b821ec778
+  matchIdx a01ba0ab1cadcadae2652cc89fde58b8
+  matchOpenAcc 70dfc7df9ce92b8792eb9f504dd40e66
+  matchPreOpenAcc d75b4cc2389e3cc7c4d38c77030f017e
+  matchPreOpenExp deacb7b703ffc8852507ae81d401daec
+  matchPreOpenFun 823369be42fbf12fede0cffdb3a683e8
+import  -/  Data.Array.Accelerate.Array.Sugar 1095a84a969562bd64b7800341e0d23c
+  exports: a6dd551b39ab2a3a217fc8c2a6979cd5
+  Array 78f23e81404aaf1e43268a71a575425c
+  Arrays 3cc6db7d6b3c36ee0c840e1566f75d38
+  Elt 78f23e81404aaf1e43268a71a575425c
+  Shape 78f23e81404aaf1e43268a71a575425c
+import  -/  Data.Array.Accelerate.Debug.Stats 233b556167dd26bfa71d8540af4d79bd
+  exports: 1a390e34a04e023aa79411b38bd9c6fa
+  substitution 8d30b18fdbea434f732e01539cdc959a
+import  -/  Data.Array.Accelerate.Error 9ed2d4a71009d558f562e118e9d36a23
+  exports: f46a01ad5e78f9618f7a91c4ba90bc31
+  Internal 354d17f13fa8c5b135052bcadc13dc67
+  call 95bf4b02947c8c3e282c15050c022fa9
+  internalError aa331c50846093a3a39d2946a445c28d
+  message 43164dbb4cecc9911948fd9ecaf0a042
+import  -/  Data.Array.Accelerate.Pretty.Print 01874303e3a2d96e9ffae6d49fcc5768
+  exports: fe94c50c46f180a54412cd142cef23e5
+  PrettyAcc 2e5246b3a85ce9e4fee76766e3f89410
+  prettyOpenAcc 3b5505d9e0fcb3ebf6af725563392863
+  prettyPreExp e3fc07fb10448d3ea1da91d52fda72c1
+  prettyPreFun b05ec17585728dd99f65fb1337528125
+  prettyPreOpenAcc 23cc13a2b61c36408940a7ec5ea943db
+import  -/  Data.Array.Accelerate.Trafo.Substitution 1ab9162bd3f0f153d1c21a8dd76bc781
+  exports: 3e411ea0b6662b69d52e36eb3bfba800
+  AccClo 66ef4576aec47ec8d492ca941826125e
+  Rebuildable 53a762194c947b304399e52c30f834b9
+  RebuildableAcc 53a762194c947b304399e52c30f834b9
+  Sink 0f35c2a1006f7263a649bd2af71efd6f
+  rebuildA 955201f71f306550e8336c5367bfdb03
+  rebuildPartial 811a6ced1153941d101d0da5c2ad8931
+  subAtop e6bc0c2586c6e7948b537e1127b8779e
+  weaken 288497aa259886b1e053b155671c75c5
+  weakenE e0056bc04d7bee1f3efab4d6442e0704
+import  -/  base-4.9.1.0:Control.Applicative 32430a90492e727f4bd80db71c28600c
+import  -/  base-4.9.1.0:Data.Functor 5ab1dc703df5b482e77efb697833ca3c
+import  -/  base-4.9.1.0:Data.Type.Equality e58d97d060ef5a0f7906bf33d6e50df2
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  deepseq-1.4.2.0@deepseq-1.4.2.0:Control.DeepSeq 3b9ddb93b8ec16cf9a98d6096b46c390
+import  -/  hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable 27b03ff780e9d73195c5aaa1719f6919
+import  -/  hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable.Class a1b222b41dee000240e3f24bda9d56d9
+import  -/  pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint abe8aeb00d775221281f89090d9fbe2a
+import  -/  pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ 5fd6ee2fcb3f4a1e810ed36714963e44
+addDependentFile "/home/pwoh/.stack/programs/x86_64-linux-dkd1ce2ff9c9560b648268df668d177711/ghc-8.0.2/lib/ghc-8.0.2/include/ghcversion.h"
+addDependentFile ".stack-work/dist/x86_64-linux-dkd1ce2ff9c9560b648268df668d177711/Cabal-1.24.2.0/build/autogen/cabal_macros.h"
+addDependentFile "/usr/include/stdc-predef.h"
+7736eeb535c49ebb0bc1fc50dc5eadf9
+  $fKitDelayedOpenAcc ::
+    Data.Array.Accelerate.Trafo.Base.Kit
+      Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                  Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc_$cp1Kit
+                  Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc_$cweaken
+                    `cast`
+                  (Sym (Data.Array.Accelerate.Trafo.Substitution.N:Sink[0]
+                            <Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc>_N))
+                  Data.Array.Accelerate.Trafo.Base.Manifest
+                  Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc_$cextract
+                  Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc_$cfromOpenAcc
+                  Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc_$cmatchAcc
+                  Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc_$chashAcc
+                  Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc_$cprettyAcc -}
+69e02aa1e1a046abd908df5768d9406f
+  $fKitDelayedOpenAcc1 ::
+    Data.Array.Accelerate.AST.PreOpenAcc
+      Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv a
+  {- Strictness: x -}
+c5759349a9891b2429b1ba919ec1de72
+  $fKitDelayedOpenAcc2 ::
+    (Data.Array.Accelerate.Trafo.Substitution.Rebuildable
+       Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc,
+     Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+     Data.Type.Equality.~ Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Data.Array.Accelerate.Trafo.Base.$fRebuildableDelayedOpenAcc,
+                  Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc3
+                    `cast`
+                  (Sym (Data.Type.Equality.N:~[0]
+                            <*
+                             -> *
+                             -> *>_N) <Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc>_N <Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc>_N))) -}
+e9ef1f848a6e99b967ad22026db767e3
+  $fKitDelayedOpenAcc3 ::
+    Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+    GHC.Types.~~ Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Eq#
+                   @ (* -> * -> *)
+                   @ (* -> * -> *)
+                   @ Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                   @ Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                   @~ <Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc>_N) -}
+a5ecb434366916dfdd950b47427de35e
+  $fKitDelayedOpenAcc_$cextract ::
+    Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv a
+    -> Data.Array.Accelerate.AST.PreOpenAcc
+         Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv a
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ @ aenv
+                   @ a
+                   (ds :: Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv a) ->
+                 case ds of wild {
+                   Data.Array.Accelerate.Trafo.Base.Manifest pacc -> pacc
+                   Data.Array.Accelerate.Trafo.Base.Delayed sh e cobox0 $dShape $dElt ds1 ds2 ds3
+                   -> case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ (Data.Array.Accelerate.Array.Sugar.SliceShape sh)
+                             @ Data.Array.Accelerate.Array.Sugar.Z
+                             (Data.Array.Accelerate.Array.Sugar.$p6Shape @ sh $dShape)
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.SliceShape
+                                                     sh>_N <Data.Array.Accelerate.Array.Sugar.Z>_N) of cobox1 { DEFAULT ->
+                      case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ (Data.Array.Accelerate.Array.Sugar.CoSliceShape sh)
+                             @ sh
+                             (Data.Array.Accelerate.Array.Sugar.$p5Shape @ sh $dShape)
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.CoSliceShape
+                                                     sh>_N <sh>_N) of cobox2 { DEFAULT ->
+                      case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ (Data.Array.Accelerate.Array.Sugar.FullShape sh)
+                             @ sh
+                             (Data.Array.Accelerate.Array.Sugar.$p4Shape @ sh $dShape)
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.FullShape
+                                                     sh>_N <sh>_N) of cobox3 { DEFAULT ->
+                      Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc1
+                        @ aenv
+                        @ a } } } }) -}
+ed8c144944f6cd2a3d711abe658ee58e
+  $fKitDelayedOpenAcc_$cfromOpenAcc ::
+    Data.Array.Accelerate.AST.OpenAcc aenv a
+    -> Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv a
+  {- Strictness: x -}
+38f972ee05c0645c1b51c6aa62c5fe46
+  $fKitDelayedOpenAcc_$chashAcc ::
+    Data.Array.Accelerate.Analysis.Hash.HashAcc
+      Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+  {- Arity: 1, Strictness: <S,1*U>m, Inline: INLINABLE[ALWAYS],
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Trafo.Base.hashDelayedOpenAcc -}
+01ed258b35ab653105f1d4f6db417017
+  $fKitDelayedOpenAcc_$cmatchAcc ::
+    Data.Array.Accelerate.Analysis.Match.MatchAcc
+      Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+  {- Arity: 2, Strictness: <S,1*U><S,1*U>, Inline: INLINABLE[ALWAYS],
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Trafo.Base.matchDelayedOpenAcc -}
+d6e270f817a962cf9ae5c846ffabd43e
+  $fKitDelayedOpenAcc_$cp1Kit ::
+    Data.Array.Accelerate.Trafo.Substitution.RebuildableAcc
+      Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc2
+                  `cast`
+                (GHC.Classes.(%,%)
+                   <Data.Array.Accelerate.Trafo.Substitution.Rebuildable
+                      Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc>_N
+                   ((Data.Type.Equality.~)
+                      <* -> * -> *>_N
+                      (Sym (Data.Array.Accelerate.Trafo.Base.D:R:AccCloDelayedOpenAcc[0]))
+                      <Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc>_N)_N)_R -}
+e52266eedaf84c58321cb84a918cb51d
+  $fKitDelayedOpenAcc_$cprettyAcc ::
+    Data.Array.Accelerate.Pretty.Print.PrettyAcc
+      Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+  {- Arity: 3, Strictness: <L,C(U)><L,U><S,1*U>,
+     Inline: INLINABLE[ALWAYS],
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Trafo.Base.prettyDelayedOpenAcc -}
+a9e20bdbb4f848e6fa3f8efaacdaa62d
+  $fKitDelayedOpenAcc_$crebuildPartial ::
+    (GHC.Base.Applicative f',
+     Data.Array.Accelerate.Trafo.Substitution.SyntacticAcc fa) =>
+    (forall a'.
+     Data.Array.Accelerate.Array.Sugar.Arrays a' =>
+     Data.Array.Accelerate.AST.Idx aenv a'
+     -> f' (fa (Data.Array.Accelerate.Trafo.Substitution.AccClo
+                  Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc) aenv' a'))
+    -> Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv a
+    -> f' (Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv' a)
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,U(U(U,U),U,U,U,U)><L,U(U,U,U)><L,U><S,1*U>,
+     Inline: INLINABLE[ALWAYS],
+     Unfolding: <stable> (\ @ (f' :: * -> *)
+                            @ (fa :: (* -> * -> *) -> * -> * -> *)
+                            @ aenv
+                            @ aenv'
+                            @ a
+                            ($dApplicative :: GHC.Base.Applicative f')
+                            ($dSyntacticAcc :: Data.Array.Accelerate.Trafo.Substitution.SyntacticAcc
+                                                 fa)
+                            (eta :: forall a'.
+                                    Data.Array.Accelerate.Array.Sugar.Arrays a' =>
+                                    Data.Array.Accelerate.AST.Idx aenv a'
+                                    -> f' (fa (Data.Array.Accelerate.Trafo.Substitution.AccClo
+                                                 Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc) aenv' a'))
+                            (eta1 :: Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv a) ->
+                          case eta1 of wild {
+                            Data.Array.Accelerate.Trafo.Base.Manifest pacc
+                            -> Data.Functor.<$>
+                                 @ f'
+                                 @ (Data.Array.Accelerate.AST.PreOpenAcc
+                                      Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv' a)
+                                 @ (Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv' a)
+                                 (GHC.Base.$p1Applicative @ f' $dApplicative)
+                                 (Data.Array.Accelerate.Trafo.Base.Manifest @ aenv' @ a)
+                                 (Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc_$s$fRebuildablePreOpenAcc_$crebuildPartial
+                                    @ f'
+                                    @ fa
+                                    @ aenv
+                                    @ aenv'
+                                    @ a
+                                    $dApplicative
+                                    $dSyntacticAcc
+                                    eta
+                                      `cast`
+                                    (forall (a' :: <*>_N).
+                                     <Data.Array.Accelerate.Array.Sugar.Arrays a'>_R
+                                     ->_R <Data.Array.Accelerate.AST.Idx aenv a'>_R
+                                     ->_R <f'>_R (<fa>_N (Sym (Data.Array.Accelerate.Trafo.Substitution.D:R:AccCloPreOpenAcc[0]
+                                                                   (Sym (Data.Array.Accelerate.Trafo.Base.D:R:AccCloDelayedOpenAcc[0])))) <aenv'>_N <a'>_N))
+                                    pacc)
+                            Data.Array.Accelerate.Trafo.Base.Delayed sh e cobox0 $dShape $dElt ds ds1 ds2
+                            -> case GHC.Types.HEq_sc
+                                      @ GHC.Types.*
+                                      @ GHC.Types.*
+                                      @ (Data.Array.Accelerate.Array.Sugar.SliceShape sh)
+                                      @ Data.Array.Accelerate.Array.Sugar.Z
+                                      (Data.Array.Accelerate.Array.Sugar.$p6Shape @ sh $dShape)
+                                        `cast`
+                                      (Data.Type.Equality.N:~[0]
+                                           <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.SliceShape
+                                                              sh>_N <Data.Array.Accelerate.Array.Sugar.Z>_N) of cobox1 { DEFAULT ->
+                               case GHC.Types.HEq_sc
+                                      @ GHC.Types.*
+                                      @ GHC.Types.*
+                                      @ (Data.Array.Accelerate.Array.Sugar.CoSliceShape sh)
+                                      @ sh
+                                      (Data.Array.Accelerate.Array.Sugar.$p5Shape @ sh $dShape)
+                                        `cast`
+                                      (Data.Type.Equality.N:~[0]
+                                           <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.CoSliceShape
+                                                              sh>_N <sh>_N) of cobox2 { DEFAULT ->
+                               case GHC.Types.HEq_sc
+                                      @ GHC.Types.*
+                                      @ GHC.Types.*
+                                      @ (Data.Array.Accelerate.Array.Sugar.FullShape sh)
+                                      @ sh
+                                      (Data.Array.Accelerate.Array.Sugar.$p4Shape @ sh $dShape)
+                                        `cast`
+                                      (Data.Type.Equality.N:~[0]
+                                           <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.FullShape
+                                                              sh>_N <sh>_N) of cobox3 { DEFAULT ->
+                               (GHC.Base.<*>
+                                  @ f'
+                                  $dApplicative
+                                  @ (Data.Array.Accelerate.AST.PreFun
+                                       Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                                       aenv'
+                                       (GHC.Types.Int -> e))
+                                  @ (Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                                       aenv' (Data.Array.Accelerate.Array.Sugar.Array sh e))
+                                  (GHC.Base.<*>
+                                     @ f'
+                                     $dApplicative
+                                     @ (Data.Array.Accelerate.AST.PreFun
+                                          Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                                          aenv'
+                                          (sh -> e))
+                                     @ (Data.Array.Accelerate.AST.PreFun
+                                          Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                                          aenv'
+                                          (GHC.Types.Int -> e)
+                                        -> Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                                             aenv' (Data.Array.Accelerate.Array.Sugar.Array sh e))
+                                     (Data.Functor.<$>
+                                        @ f'
+                                        @ (Data.Array.Accelerate.AST.PreExp
+                                             Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                                             aenv'
+                                             sh)
+                                        @ (Data.Array.Accelerate.AST.PreFun
+                                             Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                                             aenv'
+                                             (sh -> e)
+                                           -> Data.Array.Accelerate.AST.PreFun
+                                                Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                                                aenv'
+                                                (GHC.Types.Int -> e)
+                                           -> Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                                                aenv'
+                                                (Data.Array.Accelerate.Array.Sugar.Array sh e))
+                                        (GHC.Base.$p1Applicative @ f' $dApplicative)
+                                        (Data.Array.Accelerate.Trafo.Base.$WDelayed
+                                           @ aenv'
+                                           @ sh
+                                           @ e
+                                           $dShape
+                                           $dElt)
+                                        (Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc_$s$fRebuildablePreOpenExp_$crebuildPartial
+                                           @ ()
+                                           @ f'
+                                           @ fa
+                                           @ aenv
+                                           @ aenv'
+                                           @ sh
+                                           $dApplicative
+                                           $dSyntacticAcc
+                                           eta
+                                             `cast`
+                                           (forall (a' :: <*>_N).
+                                            <Data.Array.Accelerate.Array.Sugar.Arrays a'>_R
+                                            ->_R <Data.Array.Accelerate.AST.Idx aenv a'>_R
+                                            ->_R <f'>_R (<fa>_N (Trans
+                                                                     (Data.Array.Accelerate.Trafo.Base.D:R:AccCloDelayedOpenAcc[0])
+                                                                     (Sym (Data.Array.Accelerate.Trafo.Substitution.D:R:AccCloPreOpenExp[0]
+                                                                               <()>_N
+                                                                               <Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc>_N))) <aenv'>_N <a'>_N))
+                                           ds))
+                                     (Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc_$s$fRebuildablePreOpenFun_$crebuildPartial
+                                        @ ()
+                                        @ f'
+                                        @ fa
+                                        @ aenv
+                                        @ aenv'
+                                        @ (sh -> e)
+                                        $dApplicative
+                                        $dSyntacticAcc
+                                        eta
+                                          `cast`
+                                        (forall (a' :: <*>_N).
+                                         <Data.Array.Accelerate.Array.Sugar.Arrays a'>_R
+                                         ->_R <Data.Array.Accelerate.AST.Idx aenv a'>_R
+                                         ->_R <f'>_R (<fa>_N (Trans
+                                                                  (Data.Array.Accelerate.Trafo.Base.D:R:AccCloDelayedOpenAcc[0])
+                                                                  (Sym (Data.Array.Accelerate.Trafo.Substitution.D:R:AccCloPreOpenFun[0]
+                                                                            <()>_N
+                                                                            <Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc>_N))) <aenv'>_N <a'>_N))
+                                        ds1))
+                                  (Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc_$s$fRebuildablePreOpenFun_$crebuildPartial
+                                     @ ()
+                                     @ f'
+                                     @ fa
+                                     @ aenv
+                                     @ aenv'
+                                     @ (GHC.Types.Int -> e)
+                                     $dApplicative
+                                     $dSyntacticAcc
+                                     eta
+                                       `cast`
+                                     (forall (a' :: <*>_N).
+                                      <Data.Array.Accelerate.Array.Sugar.Arrays a'>_R
+                                      ->_R <Data.Array.Accelerate.AST.Idx aenv a'>_R
+                                      ->_R <f'>_R (<fa>_N (Trans
+                                                               (Data.Array.Accelerate.Trafo.Base.D:R:AccCloDelayedOpenAcc[0])
+                                                               (Sym (Data.Array.Accelerate.Trafo.Substitution.D:R:AccCloPreOpenFun[0]
+                                                                         <()>_N
+                                                                         <Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc>_N))) <aenv'>_N <a'>_N))
+                                     ds2))
+                                 `cast`
+                               (<f'>_R (Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                                          <aenv'>_N (Sym cobox0))_N) } } } }) -}
+a9e20bdbb4f848e6fa3f8efaacdaa62d
+  $fKitDelayedOpenAcc_$cweaken ::
+    (env Data.Array.Accelerate.Trafo.Substitution.:> env')
+    -> Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc env t
+    -> Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc env' t
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><S,1*U>,
+     Unfolding: (\ @ env
+                   @ env'
+                   @ t
+                   (k :: env Data.Array.Accelerate.Trafo.Substitution.:> env')
+                   (eta :: Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc env t) ->
+                 case Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc_$crebuildPartial
+                        @ Data.Array.Accelerate.Trafo.Substitution.Identity
+                        @ Data.Array.Accelerate.AST.PreOpenAcc
+                        @ env
+                        @ env'
+                        @ t
+                        Data.Array.Accelerate.Trafo.Substitution.$fApplicativeIdentity
+                        Data.Array.Accelerate.Trafo.Substitution.$fSyntacticAccPreOpenAcc
+                        (\ @ a'
+                           ($dArrays :: Data.Array.Accelerate.Array.Sugar.Arrays a')
+                           (eta1 :: Data.Array.Accelerate.AST.Idx env a') ->
+                         Data.Array.Accelerate.Trafo.Substitution.Identity
+                           @ (Data.Array.Accelerate.AST.PreOpenAcc
+                                (Data.Array.Accelerate.Trafo.Substitution.AccClo
+                                   Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc)
+                                env'
+                                a')
+                           (Data.Array.Accelerate.AST.Avar
+                              @ Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                              @ env'
+                              @ a'
+                              $dArrays
+                              (k @ a' eta1))
+                             `cast`
+                           (Data.Array.Accelerate.AST.PreOpenAcc
+                              (Sub (Sym (Data.Array.Accelerate.Trafo.Base.D:R:AccCloDelayedOpenAcc[0])))
+                              <env'>_N
+                              <a'>_N)_R)
+                        eta of wild { Data.Array.Accelerate.Trafo.Substitution.Identity ds1 ->
+                 ds1 }) -}
+a9e20bdbb4f848e6fa3f8efaacdaa62d
+  $fKitDelayedOpenAcc_$s$fRebuildablePreOpenAcc_$crebuildPartial ::
+    (GHC.Base.Applicative f',
+     Data.Array.Accelerate.Trafo.Substitution.SyntacticAcc fa) =>
+    (forall a'.
+     Data.Array.Accelerate.Array.Sugar.Arrays a' =>
+     Data.Array.Accelerate.AST.Idx aenv a'
+     -> f' (fa (Data.Array.Accelerate.Trafo.Substitution.AccClo
+                  (Data.Array.Accelerate.AST.PreOpenAcc
+                     Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc)) aenv' a'))
+    -> Data.Array.Accelerate.AST.PreOpenAcc
+         Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv a
+    -> f' (Data.Array.Accelerate.AST.PreOpenAcc
+             Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv' a)
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,U(U(U,U),U,U,U,U)><L,U(U,U,U)><L,U><S,1*U> -}
+a9e20bdbb4f848e6fa3f8efaacdaa62d
+  $fKitDelayedOpenAcc_$s$fRebuildablePreOpenExp_$crebuildPartial ::
+    (GHC.Base.Applicative f',
+     Data.Array.Accelerate.Trafo.Substitution.SyntacticAcc fa) =>
+    (forall a'.
+     Data.Array.Accelerate.Array.Sugar.Arrays a' =>
+     Data.Array.Accelerate.AST.Idx aenv a'
+     -> f' (fa (Data.Array.Accelerate.Trafo.Substitution.AccClo
+                  (Data.Array.Accelerate.AST.PreOpenExp
+                     Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc env)) aenv' a'))
+    -> Data.Array.Accelerate.AST.PreOpenExp
+         Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc env aenv a
+    -> f' (Data.Array.Accelerate.AST.PreOpenExp
+             Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc env aenv' a)
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,U(U(U,U),U,U,U,U)><L,U><L,U><S,1*U> -}
+a9e20bdbb4f848e6fa3f8efaacdaa62d
+  $fKitDelayedOpenAcc_$s$fRebuildablePreOpenFun_$crebuildPartial ::
+    (GHC.Base.Applicative f',
+     Data.Array.Accelerate.Trafo.Substitution.SyntacticAcc fa) =>
+    (forall a'.
+     Data.Array.Accelerate.Array.Sugar.Arrays a' =>
+     Data.Array.Accelerate.AST.Idx aenv a'
+     -> f' (fa (Data.Array.Accelerate.Trafo.Substitution.AccClo
+                  (Data.Array.Accelerate.AST.PreOpenFun
+                     Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc env)) aenv' a'))
+    -> Data.Array.Accelerate.AST.PreOpenFun
+         Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc env aenv a
+    -> f' (Data.Array.Accelerate.AST.PreOpenFun
+             Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc env aenv' a)
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(S(C(C(S))L)LLLL),U(U(U,U),U,U,U,U)><L,U><L,U><S,1*U> -}
+7736eeb535c49ebb0bc1fc50dc5eadf9
+  $fKitOpenAcc ::
+    Data.Array.Accelerate.Trafo.Base.Kit
+      Data.Array.Accelerate.AST.OpenAcc
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Data.Array.Accelerate.AST.OpenAcc
+                  Data.Array.Accelerate.Trafo.Base.$fKitOpenAcc_$cp1Kit
+                  Data.Array.Accelerate.Trafo.Substitution.$fSinkOpenAcc_$cweaken
+                    `cast`
+                  (Sym (Data.Array.Accelerate.Trafo.Substitution.N:Sink[0]
+                            <Data.Array.Accelerate.AST.OpenAcc>_N))
+                  Data.Array.Accelerate.Trafo.Base.$fKitOpenAcc_$cinject
+                  Data.Array.Accelerate.Trafo.Base.$fKitOpenAcc_$cextract
+                  (\ @ aenv @ a ->
+                   GHC.Base.id @ (Data.Array.Accelerate.AST.OpenAcc aenv a))
+                  Data.Array.Accelerate.Trafo.Base.$fKitOpenAcc_$cmatchAcc
+                  Data.Array.Accelerate.Trafo.Base.$fKitOpenAcc_$chashAcc
+                  Data.Array.Accelerate.Trafo.Base.$fKitOpenAcc_$cprettyAcc -}
+599d47f991b3afba25e3ae9fc19e7780
+  $fKitOpenAcc1 ::
+    Data.Array.Accelerate.AST.OpenAcc aenv a
+    -> Data.Array.Accelerate.AST.OpenAcc aenv a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ aenv @ a (ds :: Data.Array.Accelerate.AST.OpenAcc aenv a) ->
+                 ds) -}
+e0dd6d2bbeb3169ad267b291fed1b41c
+  $fKitOpenAcc2 ::
+    Data.Array.Accelerate.AST.PreOpenAcc
+      Data.Array.Accelerate.AST.OpenAcc aenv a
+    -> Data.Array.Accelerate.AST.PreOpenAcc
+         Data.Array.Accelerate.AST.OpenAcc aenv a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ aenv
+                   @ a
+                   (tpl :: Data.Array.Accelerate.AST.PreOpenAcc
+                             Data.Array.Accelerate.AST.OpenAcc aenv a) ->
+                 tpl) -}
+9747ca2fe2b9286c09516482aceb58a7
+  $fKitOpenAcc3 ::
+    (Data.Array.Accelerate.Trafo.Substitution.Rebuildable
+       Data.Array.Accelerate.AST.OpenAcc,
+     Data.Array.Accelerate.AST.OpenAcc
+     Data.Type.Equality.~ Data.Array.Accelerate.AST.OpenAcc)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Data.Array.Accelerate.Trafo.Substitution.$fRebuildableOpenAcc,
+                  Data.Array.Accelerate.Trafo.Base.$fKitOpenAcc4
+                    `cast`
+                  (Sym (Data.Type.Equality.N:~[0]
+                            <*
+                             -> *
+                             -> *>_N) <Data.Array.Accelerate.AST.OpenAcc>_N <Data.Array.Accelerate.AST.OpenAcc>_N))) -}
+faaa8f21a9bffdb04ed01b76e97f28d7
+  $fKitOpenAcc4 ::
+    Data.Array.Accelerate.AST.OpenAcc
+    GHC.Types.~~ Data.Array.Accelerate.AST.OpenAcc
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Eq#
+                   @ (* -> * -> *)
+                   @ (* -> * -> *)
+                   @ Data.Array.Accelerate.AST.OpenAcc
+                   @ Data.Array.Accelerate.AST.OpenAcc
+                   @~ <Data.Array.Accelerate.AST.OpenAcc>_N) -}
+fd1c76b05df1ab806a5940dc0bfbfe3b
+  $fKitOpenAcc_$cextract ::
+    Data.Array.Accelerate.AST.OpenAcc aenv a
+    -> Data.Array.Accelerate.AST.PreOpenAcc
+         Data.Array.Accelerate.AST.OpenAcc aenv a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Trafo.Base.$fKitOpenAcc1
+                  `cast`
+                (forall (aenv :: <*>_N) (a :: <*>_N).
+                 <Data.Array.Accelerate.AST.OpenAcc aenv a>_R
+                 ->_R Data.Array.Accelerate.AST.N:OpenAcc[0] <aenv>_N <a>_N) -}
+5df1d36805102365933bf488e1e94096
+  $fKitOpenAcc_$chashAcc ::
+    Data.Array.Accelerate.Analysis.Hash.HashAcc
+      Data.Array.Accelerate.AST.OpenAcc
+  {- Arity: 1, Strictness: <S,1*U>m, Inline: INLINABLE[ALWAYS],
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Analysis.Hash.hashOpenAcc -}
+86c5dd5720563dd4b6b8cd778d7108d4
+  $fKitOpenAcc_$cinject ::
+    Data.Array.Accelerate.AST.PreOpenAcc
+      Data.Array.Accelerate.AST.OpenAcc aenv a
+    -> Data.Array.Accelerate.AST.OpenAcc aenv a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Trafo.Base.$fKitOpenAcc2
+                  `cast`
+                (forall (aenv :: <*>_N) (a :: <*>_N).
+                 <Data.Array.Accelerate.AST.PreOpenAcc
+                    Data.Array.Accelerate.AST.OpenAcc aenv a>_R
+                 ->_R Sym (Data.Array.Accelerate.AST.N:OpenAcc[0]) <aenv>_N <a>_N) -}
+0ec935dad9972a72eb24535f49b310d9
+  $fKitOpenAcc_$cmatchAcc ::
+    Data.Array.Accelerate.Analysis.Match.MatchAcc
+      Data.Array.Accelerate.AST.OpenAcc
+  {- Arity: 2, Strictness: <S,1*U><S,1*U>, Inline: INLINABLE[ALWAYS],
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Analysis.Match.matchOpenAcc -}
+ca6af16718d4b6f5d4ffc64f37c81e3f
+  $fKitOpenAcc_$cp1Kit ::
+    Data.Array.Accelerate.Trafo.Substitution.RebuildableAcc
+      Data.Array.Accelerate.AST.OpenAcc
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Trafo.Base.$fKitOpenAcc3
+                  `cast`
+                (GHC.Classes.(%,%)
+                   <Data.Array.Accelerate.Trafo.Substitution.Rebuildable
+                      Data.Array.Accelerate.AST.OpenAcc>_N
+                   ((Data.Type.Equality.~)
+                      <* -> * -> *>_N
+                      (Sym (Data.Array.Accelerate.Trafo.Substitution.D:R:AccCloOpenAcc[0]))
+                      <Data.Array.Accelerate.AST.OpenAcc>_N)_N)_R -}
+732fd9877774dd20f2321a17622a68a6
+  $fKitOpenAcc_$cprettyAcc ::
+    Data.Array.Accelerate.Pretty.Print.PrettyAcc
+      Data.Array.Accelerate.AST.OpenAcc
+  {- Arity: 3, Strictness: <L,C(U)><L,U><L,U>,
+     Inline: INLINABLE[ALWAYS],
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Pretty.Print.prettyOpenAcc -}
+f2f3dfae333c9f0b72de61395904118a
+  $fMatchIdx ::
+    Data.Array.Accelerate.Trafo.Base.Match
+      (Data.Array.Accelerate.AST.Idx env)
+  DFunId
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                Data.Array.Accelerate.Trafo.Base.$fMatchIdx_$cmatch
+                  `cast`
+                (forall (env :: <*>_N).
+                 Sym (Data.Array.Accelerate.Trafo.Base.N:Match[0]
+                          <Data.Array.Accelerate.AST.Idx env>_N)) -}
+68c2e895a007f0b05db030d8e265e312
+  $fMatchIdx_$cmatch ::
+    Data.Array.Accelerate.AST.Idx env s
+    -> Data.Array.Accelerate.AST.Idx env t
+    -> GHC.Base.Maybe (s Data.Type.Equality.:~: t)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: INLINABLE[ALWAYS],
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Analysis.Match.matchIdx -}
+f2f3dfae333c9f0b72de61395904118a
+  $fMatchPreOpenAcc ::
+    Data.Array.Accelerate.Trafo.Base.Kit acc =>
+    Data.Array.Accelerate.Trafo.Base.Match
+      (Data.Array.Accelerate.AST.PreOpenAcc acc aenv)
+  DFunId
+  {- Arity: 3,
+     Strictness: <S(S(LS(S))LLLLLLL),U(1*U(A,1*U(1*U)),A,A,A,A,1*C(C1(U)),1*C(U(U)),A)><S,1*U><S,1*U>,
+     Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (1, False, True)
+                Data.Array.Accelerate.Trafo.Base.$fMatchPreOpenAcc_$cmatch
+                  `cast`
+                (forall (acc :: <* -> * -> *>_N) (aenv :: <*>_N).
+                 <Data.Array.Accelerate.Trafo.Base.Kit acc>_R
+                 ->_R Sym (Data.Array.Accelerate.Trafo.Base.N:Match[0]
+                               <Data.Array.Accelerate.AST.PreOpenAcc acc aenv>_N)) -}
+961ceaa6fdf69756a10dbb3dd518055a
+  $fMatchPreOpenAcc_$cmatch ::
+    Data.Array.Accelerate.Trafo.Base.Kit acc =>
+    forall s t.
+    Data.Array.Accelerate.AST.PreOpenAcc acc aenv s
+    -> Data.Array.Accelerate.AST.PreOpenAcc acc aenv t
+    -> GHC.Base.Maybe (s Data.Type.Equality.:~: t)
+  {- Arity: 3,
+     Strictness: <S(S(LS(S))LLLLLLL),U(1*U(A,1*U(1*U)),A,A,A,A,1*C(C1(U)),1*C(U(U)),A)><S,1*U><S,1*U>,
+     Inline: INLINABLE[ALWAYS],
+     Unfolding: <stable> (\ @ (acc :: * -> * -> *)
+                            @ aenv
+                            ($dKit :: Data.Array.Accelerate.Trafo.Base.Kit acc)
+                            @ s1
+                            @ t
+                            (eta :: Data.Array.Accelerate.AST.PreOpenAcc acc aenv s1)
+                            (eta1 :: Data.Array.Accelerate.AST.PreOpenAcc acc aenv t) ->
+                          case GHC.Types.HEq_sc
+                                 @ (GHC.Types.* -> GHC.Types.* -> GHC.Types.*)
+                                 @ (GHC.Types.* -> GHC.Types.* -> GHC.Types.*)
+                                 @ (Data.Array.Accelerate.Trafo.Substitution.AccClo acc)
+                                 @ acc
+                                 (GHC.Classes.$p2(%,%)
+                                    @ (Data.Array.Accelerate.Trafo.Substitution.Rebuildable acc)
+                                    @ (Data.Array.Accelerate.Trafo.Substitution.AccClo acc
+                                       Data.Type.Equality.~ acc)
+                                    (Data.Array.Accelerate.Trafo.Base.$p1Kit @ acc $dKit))
+                                   `cast`
+                                 (Data.Type.Equality.N:~[0]
+                                      <GHC.Types.*
+                                       -> GHC.Types.*
+                                       -> GHC.Types.*>_N <Data.Array.Accelerate.Trafo.Substitution.AccClo
+                                                            acc>_N <acc>_N) of cobox0 { DEFAULT ->
+                          Data.Array.Accelerate.Analysis.Match.matchPreOpenAcc
+                            @ acc
+                            @ aenv
+                            @ s1
+                            @ t
+                            (\ @ aenv1 @ s2 @ t1 ->
+                             Data.Array.Accelerate.Trafo.Base.matchAcc
+                               @ acc
+                               $dKit
+                               @ aenv1
+                               @ s2
+                               @ t1)
+                            (\ @ aenv1 @ a ->
+                             Data.Array.Accelerate.Trafo.Base.hashAcc @ acc $dKit @ aenv1 @ a)
+                            eta
+                            eta1 }) -}
+f2f3dfae333c9f0b72de61395904118a
+  $fMatchPreOpenExp ::
+    Data.Array.Accelerate.Trafo.Base.Kit acc =>
+    Data.Array.Accelerate.Trafo.Base.Match
+      (Data.Array.Accelerate.AST.PreOpenExp acc env aenv)
+  DFunId
+  {- Arity: 3,
+     Strictness: <S(S(LS(S))LLLLLLL),U(1*U(A,1*U(1*U)),A,A,A,A,1*C(C1(U)),1*C(U(U)),A)><S,1*U><S,1*U>,
+     Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (1, False, True)
+                Data.Array.Accelerate.Trafo.Base.$fMatchPreOpenExp_$cmatch
+                  `cast`
+                (forall (acc :: <* -> * -> *>_N) (env :: <*>_N) (aenv :: <*>_N).
+                 <Data.Array.Accelerate.Trafo.Base.Kit acc>_R
+                 ->_R Sym (Data.Array.Accelerate.Trafo.Base.N:Match[0]
+                               <Data.Array.Accelerate.AST.PreOpenExp acc env aenv>_N)) -}
+254b05544fc72ecdf6f8690f2e0012d1
+  $fMatchPreOpenExp_$cmatch ::
+    Data.Array.Accelerate.Trafo.Base.Kit acc =>
+    forall s t.
+    Data.Array.Accelerate.AST.PreOpenExp acc env aenv s
+    -> Data.Array.Accelerate.AST.PreOpenExp acc env aenv t
+    -> GHC.Base.Maybe (s Data.Type.Equality.:~: t)
+  {- Arity: 3,
+     Strictness: <S(S(LS(S))LLLLLLL),U(1*U(A,1*U(1*U)),A,A,A,A,1*C(C1(U)),1*C(U(U)),A)><S,1*U><S,1*U>,
+     Inline: INLINABLE[ALWAYS],
+     Unfolding: <stable> (\ @ (acc :: * -> * -> *)
+                            @ env
+                            @ aenv
+                            ($dKit :: Data.Array.Accelerate.Trafo.Base.Kit acc)
+                            @ s1
+                            @ t
+                            (eta :: Data.Array.Accelerate.AST.PreOpenExp acc env aenv s1)
+                            (eta1 :: Data.Array.Accelerate.AST.PreOpenExp acc env aenv t) ->
+                          case GHC.Types.HEq_sc
+                                 @ (GHC.Types.* -> GHC.Types.* -> GHC.Types.*)
+                                 @ (GHC.Types.* -> GHC.Types.* -> GHC.Types.*)
+                                 @ (Data.Array.Accelerate.Trafo.Substitution.AccClo acc)
+                                 @ acc
+                                 (GHC.Classes.$p2(%,%)
+                                    @ (Data.Array.Accelerate.Trafo.Substitution.Rebuildable acc)
+                                    @ (Data.Array.Accelerate.Trafo.Substitution.AccClo acc
+                                       Data.Type.Equality.~ acc)
+                                    (Data.Array.Accelerate.Trafo.Base.$p1Kit @ acc $dKit))
+                                   `cast`
+                                 (Data.Type.Equality.N:~[0]
+                                      <GHC.Types.*
+                                       -> GHC.Types.*
+                                       -> GHC.Types.*>_N <Data.Array.Accelerate.Trafo.Substitution.AccClo
+                                                            acc>_N <acc>_N) of cobox0 { DEFAULT ->
+                          Data.Array.Accelerate.Analysis.Match.matchPreOpenExp
+                            @ acc
+                            @ env
+                            @ aenv
+                            @ s1
+                            @ t
+                            (\ @ aenv1 @ s2 @ t1 ->
+                             Data.Array.Accelerate.Trafo.Base.matchAcc
+                               @ acc
+                               $dKit
+                               @ aenv1
+                               @ s2
+                               @ t1)
+                            (\ @ aenv1 @ a ->
+                             Data.Array.Accelerate.Trafo.Base.hashAcc @ acc $dKit @ aenv1 @ a)
+                            eta
+                            eta1 }) -}
+f2f3dfae333c9f0b72de61395904118a
+  $fMatchPreOpenFun ::
+    Data.Array.Accelerate.Trafo.Base.Kit acc =>
+    Data.Array.Accelerate.Trafo.Base.Match
+      (Data.Array.Accelerate.AST.PreOpenFun acc env aenv)
+  DFunId
+  {- Arity: 3,
+     Strictness: <S(S(LS(S))LLLLLLL),U(1*U(A,1*U(1*U)),A,A,A,A,1*C(C1(U)),1*C(U(U)),A)><S,1*U><S,1*U>,
+     Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (1, False, True)
+                Data.Array.Accelerate.Trafo.Base.$fMatchPreOpenFun_$cmatch
+                  `cast`
+                (forall (acc :: <* -> * -> *>_N) (env :: <*>_N) (aenv :: <*>_N).
+                 <Data.Array.Accelerate.Trafo.Base.Kit acc>_R
+                 ->_R Sym (Data.Array.Accelerate.Trafo.Base.N:Match[0]
+                               <Data.Array.Accelerate.AST.PreOpenFun acc env aenv>_N)) -}
+71754d8dc010f4d9dc32a372b8051d7c
+  $fMatchPreOpenFun_$cmatch ::
+    Data.Array.Accelerate.Trafo.Base.Kit acc =>
+    forall s t.
+    Data.Array.Accelerate.AST.PreOpenFun acc env aenv s
+    -> Data.Array.Accelerate.AST.PreOpenFun acc env aenv t
+    -> GHC.Base.Maybe (s Data.Type.Equality.:~: t)
+  {- Arity: 3,
+     Strictness: <S(S(LS(S))LLLLLLL),U(1*U(A,1*U(1*U)),A,A,A,A,1*C(C1(U)),1*C(U(U)),A)><S,1*U><S,1*U>,
+     Inline: INLINABLE[ALWAYS],
+     Unfolding: <stable> (\ @ (acc :: * -> * -> *)
+                            @ env
+                            @ aenv
+                            ($dKit :: Data.Array.Accelerate.Trafo.Base.Kit acc)
+                            @ s1
+                            @ t
+                            (eta :: Data.Array.Accelerate.AST.PreOpenFun acc env aenv s1)
+                            (eta1 :: Data.Array.Accelerate.AST.PreOpenFun acc env aenv t) ->
+                          case GHC.Types.HEq_sc
+                                 @ (GHC.Types.* -> GHC.Types.* -> GHC.Types.*)
+                                 @ (GHC.Types.* -> GHC.Types.* -> GHC.Types.*)
+                                 @ (Data.Array.Accelerate.Trafo.Substitution.AccClo acc)
+                                 @ acc
+                                 (GHC.Classes.$p2(%,%)
+                                    @ (Data.Array.Accelerate.Trafo.Substitution.Rebuildable acc)
+                                    @ (Data.Array.Accelerate.Trafo.Substitution.AccClo acc
+                                       Data.Type.Equality.~ acc)
+                                    (Data.Array.Accelerate.Trafo.Base.$p1Kit @ acc $dKit))
+                                   `cast`
+                                 (Data.Type.Equality.N:~[0]
+                                      <GHC.Types.*
+                                       -> GHC.Types.*
+                                       -> GHC.Types.*>_N <Data.Array.Accelerate.Trafo.Substitution.AccClo
+                                                            acc>_N <acc>_N) of cobox0 { DEFAULT ->
+                          Data.Array.Accelerate.Analysis.Match.matchPreOpenFun
+                            @ acc
+                            @ env
+                            @ aenv
+                            @ s1
+                            @ t
+                            (\ @ aenv1 @ s2 @ t1 ->
+                             Data.Array.Accelerate.Trafo.Base.matchAcc
+                               @ acc
+                               $dKit
+                               @ aenv1
+                               @ s2
+                               @ t1)
+                            (\ @ aenv1 @ a ->
+                             Data.Array.Accelerate.Trafo.Base.hashAcc @ acc $dKit @ aenv1 @ a)
+                            eta
+                            eta1 }) -}
+f2f3dfae333c9f0b72de61395904118a
+  $fMatchacc ::
+    Data.Array.Accelerate.Trafo.Base.Kit acc =>
+    Data.Array.Accelerate.Trafo.Base.Match (acc aenv)
+  DFunId
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(S(LS(S))LLLLSLL),U(1*U(A,1*U(1*U)),A,A,A,A,1*U,A,A)>,
+     Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (1, False, True)
+                Data.Array.Accelerate.Trafo.Base.$fMatchacc_$cmatch
+                  `cast`
+                (forall (acc :: <* -> * -> *>_N) (aenv :: <*>_N).
+                 <Data.Array.Accelerate.Trafo.Base.Kit acc>_R
+                 ->_R Sym (Data.Array.Accelerate.Trafo.Base.N:Match[0]
+                               <acc aenv>_N)) -}
+dcc9f5823a6fb5bf7e2e1acce6bae38a
+  $fMatchacc_$cmatch ::
+    Data.Array.Accelerate.Trafo.Base.Kit acc =>
+    forall s t.
+    acc aenv s
+    -> acc aenv t -> GHC.Base.Maybe (s Data.Type.Equality.:~: t)
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(S(LS(S))LLLLSLL),U(1*U(A,1*U(1*U)),A,A,A,A,1*U,A,A)>,
+     Inline: INLINABLE[ALWAYS],
+     Unfolding: <stable> (\ @ (acc :: * -> * -> *)
+                            @ aenv
+                            ($dKit :: Data.Array.Accelerate.Trafo.Base.Kit acc) ->
+                          case GHC.Types.HEq_sc
+                                 @ (GHC.Types.* -> GHC.Types.* -> GHC.Types.*)
+                                 @ (GHC.Types.* -> GHC.Types.* -> GHC.Types.*)
+                                 @ (Data.Array.Accelerate.Trafo.Substitution.AccClo acc)
+                                 @ acc
+                                 (GHC.Classes.$p2(%,%)
+                                    @ (Data.Array.Accelerate.Trafo.Substitution.Rebuildable acc)
+                                    @ (Data.Array.Accelerate.Trafo.Substitution.AccClo acc
+                                       Data.Type.Equality.~ acc)
+                                    (Data.Array.Accelerate.Trafo.Base.$p1Kit @ acc $dKit))
+                                   `cast`
+                                 (Data.Type.Equality.N:~[0]
+                                      <GHC.Types.*
+                                       -> GHC.Types.*
+                                       -> GHC.Types.*>_N <Data.Array.Accelerate.Trafo.Substitution.AccClo
+                                                            acc>_N <acc>_N) of cobox0 { DEFAULT ->
+                          \ @ s1 @ t ->
+                          Data.Array.Accelerate.Trafo.Base.matchAcc
+                            @ acc
+                            $dKit
+                            @ aenv
+                            @ s1
+                            @ t }) -}
+a9e20bdbb4f848e6fa3f8efaacdaa62d
+  $fNFDataDelayedOpenAcc ::
+    Control.DeepSeq.NFData
+      (Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv t)
+  DFunId
+  {- Arity: 1, Strictness: <S,1*U>, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                Data.Array.Accelerate.Trafo.Base.rnfDelayedOpenAcc
+                  `cast`
+                (forall (aenv :: <*>_N) (t :: <*>_N).
+                 Sym (Control.DeepSeq.N:NFData[0]
+                          <Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv t>_N)) -}
+a9e20bdbb4f848e6fa3f8efaacdaa62d
+  $fNFDataPreOpenAfun ::
+    Control.DeepSeq.NFData
+      (Data.Array.Accelerate.Trafo.Base.DelayedOpenAfun aenv t)
+  DFunId
+  {- Arity: 1, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                Data.Array.Accelerate.Trafo.Base.$fNFDataPreOpenAfun_$crnf
+                  `cast`
+                (forall (aenv :: <*>_N) (t :: <*>_N).
+                 Sym (Control.DeepSeq.N:NFData[0]
+                          <Data.Array.Accelerate.Trafo.Base.DelayedOpenAfun aenv t>_N)) -}
+a9e20bdbb4f848e6fa3f8efaacdaa62d
+  $fNFDataPreOpenAfun_$crnf ::
+    Data.Array.Accelerate.Trafo.Base.DelayedOpenAfun aenv t -> ()
+  {- Arity: 1,
+     Unfolding: (\ @ aenv @ t ->
+                 Data.Array.Accelerate.AST.rnfPreOpenAfun
+                   @ Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                   @ aenv
+                   @ t
+                   Data.Array.Accelerate.Trafo.Base.rnfDelayedOpenAcc) -}
+a9e20bdbb4f848e6fa3f8efaacdaa62d
+  $fRebuildableDelayedOpenAcc ::
+    Data.Array.Accelerate.Trafo.Substitution.Rebuildable
+      Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                  Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc_$crebuildPartial
+                  Data.Array.Accelerate.Trafo.Base.$fRebuildableDelayedOpenAcc_$s$dmrebuildA -}
+a9e20bdbb4f848e6fa3f8efaacdaa62d
+  $fRebuildableDelayedOpenAcc_$s$dmrebuildA ::
+    Data.Array.Accelerate.Trafo.Substitution.SyntacticAcc fa =>
+    (forall a'.
+     Data.Array.Accelerate.Array.Sugar.Arrays a' =>
+     Data.Array.Accelerate.AST.Idx aenv a'
+     -> fa (Data.Array.Accelerate.Trafo.Substitution.AccClo
+              Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc) aenv' a')
+    -> Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv a
+    -> Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv' a
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U(U,U,U)><L,C(U)><S,1*U>,
+     Unfolding: (\ @ (fa :: (* -> * -> *) -> * -> * -> *)
+                   @ aenv
+                   @ aenv'
+                   @ a
+                   ($dSyntacticAcc :: Data.Array.Accelerate.Trafo.Substitution.SyntacticAcc
+                                        fa)
+                   (av :: forall a'.
+                          Data.Array.Accelerate.Array.Sugar.Arrays a' =>
+                          Data.Array.Accelerate.AST.Idx aenv a'
+                          -> fa (Data.Array.Accelerate.Trafo.Substitution.AccClo
+                                   Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc) aenv' a')
+                   (eta :: Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv a) ->
+                 case Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc_$crebuildPartial
+                        @ Data.Array.Accelerate.Trafo.Substitution.Identity
+                        @ fa
+                        @ aenv
+                        @ aenv'
+                        @ a
+                        Data.Array.Accelerate.Trafo.Substitution.$fApplicativeIdentity
+                        $dSyntacticAcc
+                        (\ @ a'
+                           ($dArrays :: Data.Array.Accelerate.Array.Sugar.Arrays a') ->
+                         let {
+                           g1 :: Data.Array.Accelerate.AST.Idx aenv a'
+                                 -> fa (Data.Array.Accelerate.Trafo.Substitution.AccClo
+                                          Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc) aenv' a'
+                           = av @ a' $dArrays
+                         } in
+                         \ (x :: Data.Array.Accelerate.AST.Idx aenv a') ->
+                         Data.Array.Accelerate.Trafo.Substitution.Identity
+                           @ (fa (Data.Array.Accelerate.Trafo.Substitution.AccClo
+                                    Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc) aenv' a')
+                           (g1 x))
+                        eta of wild { Data.Array.Accelerate.Trafo.Substitution.Identity ds1 ->
+                 ds1 }) -}
+a9e20bdbb4f848e6fa3f8efaacdaa62d
+  $fSinkDelayedOpenAcc ::
+    Data.Array.Accelerate.Trafo.Substitution.Sink
+      Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+  DFunId
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><S,1*U>,
+     Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc_$cweaken
+                  `cast`
+                (Sym (Data.Array.Accelerate.Trafo.Substitution.N:Sink[0]
+                          <Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc>_N)) -}
+c39a59098a7984386e6870a27c8a070b
+  $tc'BaseEnv :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   618705614017169801##
+                   13226684211155037150##
+                   Data.Array.Accelerate.Trafo.Base.$trModule
+                   Data.Array.Accelerate.Trafo.Base.$tc'BaseEnv1) -}
+01436c5560d9288e45dc5fd5739b9414
+  $tc'BaseEnv1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'BaseEnv"#) -}
+0b1c7fb398a131bea5d1c029a07e8810
+  $tc'BaseSup :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11571641592637453568##
+                   4840522789305322203##
+                   Data.Array.Accelerate.Trafo.Base.$trModule
+                   Data.Array.Accelerate.Trafo.Base.$tc'BaseSup1) -}
+fc8ee42e806b8d554d9a669822cfca24
+  $tc'BaseSup1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'BaseSup"#) -}
+7d30883da7123aa99ccce76db01c667b
+  $tc'C:Kit :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9758427800888065600##
+                   14133319700770640241##
+                   Data.Array.Accelerate.Trafo.Base.$trModule
+                   Data.Array.Accelerate.Trafo.Base.$tc'C:Kit1) -}
+e3bf25a37b215bd611854f380ae9e08d
+  $tc'C:Kit1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'C:Kit"#) -}
+a3ffbba5f10a0a003051fd104e6e1137
+  $tc'C:Match :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11923637277744348655##
+                   8471991362500322418##
+                   Data.Array.Accelerate.Trafo.Base.$trModule
+                   Data.Array.Accelerate.Trafo.Base.$tc'C:Match1) -}
+05956820c3b0ed1b7d997706acb78fd6
+  $tc'C:Match1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'C:Match"#) -}
+5afa69504190ac811eac88dc9db71325
+  $tc'Delayed :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13749382755766135932##
+                   12827554963235799736##
+                   Data.Array.Accelerate.Trafo.Base.$trModule
+                   Data.Array.Accelerate.Trafo.Base.$tc'Delayed1) -}
+f191da9cc8a2eb3be779b6ce52415f4b
+  $tc'Delayed1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Delayed"#) -}
+67f10c0328600ad0a173ab920beec304
+  $tc'EmptyExp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5987000088757146106##
+                   5777784423802262804##
+                   Data.Array.Accelerate.Trafo.Base.$trModule
+                   Data.Array.Accelerate.Trafo.Base.$tc'EmptyExp1) -}
+08ccee9b286bae638a3682d4a1340f9d
+  $tc'EmptyExp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'EmptyExp"#) -}
+7978a70b08cca8dd20c79e61d9f6880f
+  $tc'Manifest :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9161957652052762552##
+                   17649377998999875917##
+                   Data.Array.Accelerate.Trafo.Base.$trModule
+                   Data.Array.Accelerate.Trafo.Base.$tc'Manifest1) -}
+acd616b0f70de849f536153754c94bc1
+  $tc'Manifest1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Manifest"#) -}
+49d2261889f7c2001a28d01e5eeb84c7
+  $tc'PushEnv :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8263163614134671735##
+                   8888770804874629630##
+                   Data.Array.Accelerate.Trafo.Base.$trModule
+                   Data.Array.Accelerate.Trafo.Base.$tc'PushEnv1) -}
+a1b0289fd2a78bcff8a8a50237c8cc55
+  $tc'PushEnv1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'PushEnv"#) -}
+72ede93e15ed68ffe89b93f472aab287
+  $tc'PushExp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3291723496939447551##
+                   2216054058470983446##
+                   Data.Array.Accelerate.Trafo.Base.$trModule
+                   Data.Array.Accelerate.Trafo.Base.$tc'PushExp1) -}
+4588f3dc0ca5f19a052bd919643f114d
+  $tc'PushExp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'PushExp"#) -}
+f969684c5e86ef967875c175ac959923
+  $tc'PushSup :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   882461655739660860##
+                   5836995562405780721##
+                   Data.Array.Accelerate.Trafo.Base.$trModule
+                   Data.Array.Accelerate.Trafo.Base.$tc'PushSup1) -}
+8be5657285704cd49852bb5599737648
+  $tc'PushSup1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'PushSup"#) -}
+10824e674c11975b431ebb21ed189bfc
+  $tcDelayedOpenAcc :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8674977088738517514##
+                   6374921110830605613##
+                   Data.Array.Accelerate.Trafo.Base.$trModule
+                   Data.Array.Accelerate.Trafo.Base.$tcDelayedOpenAcc1) -}
+a1dfa809fa83d0008898375bef7f65aa
+  $tcDelayedOpenAcc1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "DelayedOpenAcc"#) -}
+8de44ef4c809e8e812431e02e4586aec
+  $tcExtend :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8319511070866881546##
+                   13010393267346650482##
+                   Data.Array.Accelerate.Trafo.Base.$trModule
+                   Data.Array.Accelerate.Trafo.Base.$tcExtend1) -}
+b75c36f6caf87bf0cd7729da154dabe1
+  $tcExtend1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Extend"#) -}
+54ac4dee4cfb20767c26bb46b3278073
+  $tcGamma :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2825949951798891543##
+                   16915889997279350886##
+                   Data.Array.Accelerate.Trafo.Base.$trModule
+                   Data.Array.Accelerate.Trafo.Base.$tcGamma1) -}
+da345c148e611ce3eb17e8aa1c17ab5e
+  $tcGamma1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Gamma"#) -}
+8e1692ca3c1e20ff20021914e29e6bdb
+  $tcKit :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12904155117008339839##
+                   803104931767884764##
+                   Data.Array.Accelerate.Trafo.Base.$trModule
+                   Data.Array.Accelerate.Trafo.Base.$tcKit1) -}
+dc537ea6206bb1cdbe878a4ebce578d4
+  $tcKit1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Kit"#) -}
+57790121a575eab4fec0356af650af63
+  $tcMatch :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8393592766393569462##
+                   17938373195876568040##
+                   Data.Array.Accelerate.Trafo.Base.$trModule
+                   Data.Array.Accelerate.Trafo.Base.$tcMatch1) -}
+d499b2235d0c5aef0e7b5c2cd89da01c
+  $tcMatch1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Match"#) -}
+ad0feecd6b14fe54f6a37c0db21571b9
+  $tcSupplement :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10703575409820179686##
+                   2820538653663951676##
+                   Data.Array.Accelerate.Trafo.Base.$trModule
+                   Data.Array.Accelerate.Trafo.Base.$tcSupplement1) -}
+48014f55926519c11a38268a08fb697c
+  $tcSupplement1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Supplement"#) -}
+cd48538e36a2766fd8775b114f8a388b
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Data.Array.Accelerate.Trafo.Base.$trModule2
+                   Data.Array.Accelerate.Trafo.Base.$trModule1) -}
+54458fb4d398b0eaeccdf765f627e037
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Data.Array.Accelerate.Trafo.Base"#) -}
+6e658b5a4c542a703b34d7dcdda6ec17
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw"#) -}
+f2a734816c27eb691900f6fd977bd1d5
+  $whashDelayedOpenAcc ::
+    Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv a
+    -> GHC.Prim.Int#
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [0] -}
+a9e20bdbb4f848e6fa3f8efaacdaa62d
+  axiom D:R:AccCloDelayedOpenAcc::
+      Data.Array.Accelerate.Trafo.Substitution.AccClo
+        Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+        = Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+0c76a4cd506faf34a041a1b8f5f9d836
+  type DelayedAcc =
+    Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc () :: * -> *
+ea901cebccdec28ff494c9bb1528b9e2
+  type DelayedAfun =
+    Data.Array.Accelerate.AST.PreOpenAfun
+      Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc ()
+    :: * -> *
+640ae199f0749bb86773d09e18a40802
+  type DelayedExp =
+    Data.Array.Accelerate.Trafo.Base.DelayedOpenExp () :: * -> * -> *
+8e2b801989cab3231e48097c7700ac36
+  type DelayedFun =
+    Data.Array.Accelerate.Trafo.Base.DelayedOpenFun () :: * -> * -> *
+a9e20bdbb4f848e6fa3f8efaacdaa62d
+  type role DelayedOpenAcc nominal nominal
+  data DelayedOpenAcc aenv a where
+    Manifest :: (Data.Array.Accelerate.AST.PreOpenAcc
+                   Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv a)
+                -> DelayedOpenAcc aenv a
+    Delayed :: (Data.Array.Accelerate.Array.Sugar.Shape sh,
+                Data.Array.Accelerate.Array.Sugar.Elt e) =>
+               {extentD :: Data.Array.Accelerate.AST.PreExp
+                             Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv sh,
+                indexD :: Data.Array.Accelerate.AST.PreFun
+                            Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv (sh -> e),
+                linearIndexD :: Data.Array.Accelerate.AST.PreFun
+                                  Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                                  aenv
+                                  (GHC.Types.Int -> e)}
+               -> DelayedOpenAcc aenv
+                                 (Data.Array.Accelerate.Array.Sugar.Array sh e)
+a9e20bdbb4f848e6fa3f8efaacdaa62d
+  type DelayedOpenAfun =
+    Data.Array.Accelerate.AST.PreOpenAfun
+      Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+    :: * -> * -> *
+515662916d2a7d10916bb7025349cf87
+  type DelayedOpenExp =
+    Data.Array.Accelerate.AST.PreOpenExp
+      Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+    :: * -> * -> * -> *
+6cb2187aa320c413584725d63f29f96a
+  type DelayedOpenFun =
+    Data.Array.Accelerate.AST.PreOpenFun
+      Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+    :: * -> * -> * -> *
+51ee963679e9807db85679bf541b874d
+  type role Extend representational nominal nominal
+  data Extend (acc :: * -> * -> *) aenv aenv' where
+    BaseEnv :: Extend acc aenv aenv
+    PushEnv :: Data.Array.Accelerate.Array.Sugar.Arrays a =>
+               (Data.Array.Accelerate.Trafo.Base.Extend acc aenv aenv'1)
+               -> (acc aenv'1 a) -> Extend acc aenv (aenv'1, a)
+1619665b53029f86259dffd5eb47f475
+  type role Gamma representational nominal nominal nominal
+  data Gamma (acc :: GHC.Types.* -> GHC.Types.* -> GHC.Types.*)
+             env
+             env'
+             aenv where
+    EmptyExp :: Gamma acc env env' aenv
+    PushExp :: (Data.Array.Accelerate.Trafo.Base.Gamma
+                  acc env env'1 aenv)
+               -> (Data.Array.Accelerate.AST.PreOpenExp acc env aenv t)
+               -> Gamma acc env (env'1, t) aenv
+7736eeb535c49ebb0bc1fc50dc5eadf9
+  class (Data.Array.Accelerate.Trafo.Substitution.RebuildableAcc acc,
+         Data.Array.Accelerate.Trafo.Substitution.Sink acc) =>
+        Kit (acc :: * -> * -> *) where
+    inject :: Data.Array.Accelerate.AST.PreOpenAcc acc aenv a
+              -> acc aenv a
+    extract :: acc aenv a
+               -> Data.Array.Accelerate.AST.PreOpenAcc acc aenv a
+    fromOpenAcc :: Data.Array.Accelerate.AST.OpenAcc aenv a
+                   -> acc aenv a
+    matchAcc :: Data.Array.Accelerate.Analysis.Match.MatchAcc acc
+    hashAcc :: Data.Array.Accelerate.Analysis.Hash.HashAcc acc
+    prettyAcc :: Data.Array.Accelerate.Pretty.Print.PrettyAcc acc
+    {-# MINIMAL inject, extract, fromOpenAcc, matchAcc, hashAcc,
+                prettyAcc #-}
+f2f3dfae333c9f0b72de61395904118a
+  class Match (f :: * -> *) where
+    match :: f s -> f t -> GHC.Base.Maybe (s Data.Type.Equality.:~: t)
+    {-# MINIMAL match #-}
+1d2c2eed0b5bb4364c3fda4b57aac2fb
+  type role Supplement representational nominal nominal nominal
+  data Supplement (acc :: GHC.Types.* -> GHC.Types.* -> GHC.Types.*)
+                  env
+                  env'
+                  aenv where
+    BaseSup :: Supplement acc env env aenv
+    PushSup :: Data.Array.Accelerate.Array.Sugar.Elt e =>
+               (Data.Array.Accelerate.Trafo.Base.Supplement acc env env'1 aenv)
+               -> (Data.Array.Accelerate.AST.PreOpenExp acc env'1 aenv e)
+               -> Supplement acc env (env'1, e) aenv
+ee0e7fea82380178dc36888ef2f57369
+  append ::
+    Data.Array.Accelerate.Trafo.Base.Extend acc env env'
+    -> Data.Array.Accelerate.Trafo.Base.Extend acc env' env''
+    -> Data.Array.Accelerate.Trafo.Base.Extend acc env env''
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U><S,1*U> -}
+08abe2702920a5e9ad6913fbe45b69c0
+  avarIn ::
+    (Data.Array.Accelerate.Trafo.Base.Kit acc,
+     Data.Array.Accelerate.Array.Sugar.Arrays arrs) =>
+    Data.Array.Accelerate.AST.Idx aenv arrs -> acc aenv arrs
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(S(LS(S))LC(S)LLLLL),U(1*U(A,1*U(1*U)),A,1*C1(U),A,A,A,A,A)><L,U><L,U>,
+     Unfolding: (\ @ (acc :: * -> * -> *)
+                   @ arrs
+                   @ aenv
+                   ($dKit :: Data.Array.Accelerate.Trafo.Base.Kit acc)
+                   ($dArrays :: Data.Array.Accelerate.Array.Sugar.Arrays arrs)
+                   (eta :: Data.Array.Accelerate.AST.Idx aenv arrs) ->
+                 case GHC.Types.HEq_sc
+                        @ (GHC.Types.* -> GHC.Types.* -> GHC.Types.*)
+                        @ (GHC.Types.* -> GHC.Types.* -> GHC.Types.*)
+                        @ (Data.Array.Accelerate.Trafo.Substitution.AccClo acc)
+                        @ acc
+                        (GHC.Classes.$p2(%,%)
+                           @ (Data.Array.Accelerate.Trafo.Substitution.Rebuildable acc)
+                           @ (Data.Array.Accelerate.Trafo.Substitution.AccClo acc
+                              Data.Type.Equality.~ acc)
+                           (Data.Array.Accelerate.Trafo.Base.$p1Kit @ acc $dKit))
+                          `cast`
+                        (Data.Type.Equality.N:~[0]
+                             <GHC.Types.*
+                              -> GHC.Types.*
+                              -> GHC.Types.*>_N <Data.Array.Accelerate.Trafo.Substitution.AccClo
+                                                   acc>_N <acc>_N) of cobox0 { DEFAULT ->
+                 Data.Array.Accelerate.Trafo.Base.inject
+                   @ acc
+                   $dKit
+                   @ aenv
+                   @ arrs
+                   (Data.Array.Accelerate.AST.Avar
+                      @ acc
+                      @ aenv
+                      @ arrs
+                      $dArrays
+                      eta) }) -}
+8db015f87d608e553bb07cf7f0d14526
+  bind ::
+    (Data.Array.Accelerate.Trafo.Base.Kit acc,
+     Data.Array.Accelerate.Array.Sugar.Arrays a) =>
+    Data.Array.Accelerate.Trafo.Base.Extend acc aenv aenv'
+    -> Data.Array.Accelerate.AST.PreOpenAcc acc aenv' a
+    -> Data.Array.Accelerate.AST.PreOpenAcc acc aenv a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(S(LS(S))LLLLLLL),U(U(A,U(U)),A,C(U),A,A,A,A,A)><L,U><S,1*U><L,U> -}
+063fdcad137a45aa6fd4c0e19eee2be0
+  bindExps ::
+    (Data.Array.Accelerate.Trafo.Base.Kit acc,
+     Data.Array.Accelerate.Array.Sugar.Elt e) =>
+    Data.Array.Accelerate.Trafo.Base.Supplement acc env env' aenv
+    -> Data.Array.Accelerate.AST.PreOpenExp acc env' aenv e
+    -> Data.Array.Accelerate.AST.PreOpenExp acc env aenv e
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(S(LS(S))LLLLLLL),U(U(A,U(U)),A,A,A,A,A,A,A)><L,U><S,1*U><L,U> -}
+cb8a74f4938cc602ee16bb6c1179e8be
+  extentD ::
+    Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+      aenv (Data.Array.Accelerate.Array.Sugar.Array sh e)
+    -> Data.Array.Accelerate.AST.PreExp
+         Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv sh
+  RecSel Left Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ @ aenv
+                   @ sh
+                   @ e
+                   (ds :: Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                            aenv (Data.Array.Accelerate.Array.Sugar.Array sh e)) ->
+                 case ds of wild {
+                   Data.Array.Accelerate.Trafo.Base.Manifest ipv
+                   -> Data.Array.Accelerate.Trafo.Base.extentD1 @ aenv @ sh
+                   Data.Array.Accelerate.Trafo.Base.Delayed sh1 e1 cobox0 $dShape $dElt ds1 ds2 ds3
+                   -> case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ (Data.Array.Accelerate.Array.Sugar.SliceShape sh1)
+                             @ Data.Array.Accelerate.Array.Sugar.Z
+                             (Data.Array.Accelerate.Array.Sugar.$p6Shape @ sh1 $dShape)
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.SliceShape
+                                                     sh1>_N <Data.Array.Accelerate.Array.Sugar.Z>_N) of cobox1 { DEFAULT ->
+                      case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ (Data.Array.Accelerate.Array.Sugar.CoSliceShape sh1)
+                             @ sh1
+                             (Data.Array.Accelerate.Array.Sugar.$p5Shape @ sh1 $dShape)
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.CoSliceShape
+                                                     sh1>_N <sh1>_N) of cobox2 { DEFAULT ->
+                      case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ (Data.Array.Accelerate.Array.Sugar.FullShape sh1)
+                             @ sh1
+                             (Data.Array.Accelerate.Array.Sugar.$p4Shape @ sh1 $dShape)
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.FullShape
+                                                     sh1>_N <sh1>_N) of cobox3 { DEFAULT ->
+                      ds1
+                        `cast`
+                      (Data.Array.Accelerate.AST.PreOpenExp
+                         <Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc>_R
+                         <()>_N
+                         <aenv>_N
+                         (Nth:0 (Sym cobox0)))_R } } } }) -}
+612df264c52dfc4ba83c5e9e5daf2597
+  extentD1 ::
+    Data.Array.Accelerate.AST.PreExp
+      Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv sh
+  {- Strictness: x -}
+c037a7c857e0bc407a8cd3d7487516a3
+  fromOpenAfun ::
+    Data.Array.Accelerate.Trafo.Base.Kit acc =>
+    Data.Array.Accelerate.AST.OpenAfun aenv f
+    -> Data.Array.Accelerate.AST.PreOpenAfun acc aenv f
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(LS(S))LLLLLLL),U(U(A,U(U)),A,A,A,C(U),A,A,A)><S,1*U> -}
+b6592858426d98c2c63e9e79f8df73e9
+  hashDelayedOpenAcc ::
+    Data.Array.Accelerate.Analysis.Hash.HashAcc
+      Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+  {- Arity: 1, Strictness: <S,1*U>m, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ @ aenv
+                   @ a
+                   (w :: Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv a) ->
+                 case Data.Array.Accelerate.Trafo.Base.$whashDelayedOpenAcc
+                        @ aenv
+                        @ a
+                        w of ww { DEFAULT ->
+                 GHC.Types.I# ww }) -}
+b3e53a1dc4d60264eb586e78f464ac85
+  incExp ::
+    Data.Array.Accelerate.Trafo.Substitution.RebuildableAcc acc =>
+    Data.Array.Accelerate.Trafo.Base.Gamma acc env env' aenv
+    -> Data.Array.Accelerate.Trafo.Base.Gamma acc (env, s) env' aenv
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LS(S)),U(U,U(U))><S,1*U> -}
+17bac837dd74e9c08d6a37bb7fc5e22d
+  indexD ::
+    Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+      aenv (Data.Array.Accelerate.Array.Sugar.Array sh e)
+    -> Data.Array.Accelerate.AST.PreFun
+         Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv (sh -> e)
+  RecSel Left Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ @ aenv
+                   @ sh
+                   @ e
+                   (ds :: Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                            aenv (Data.Array.Accelerate.Array.Sugar.Array sh e)) ->
+                 case ds of wild {
+                   Data.Array.Accelerate.Trafo.Base.Manifest ipv
+                   -> Data.Array.Accelerate.Trafo.Base.indexD1 @ aenv @ e @ sh
+                   Data.Array.Accelerate.Trafo.Base.Delayed sh1 e1 cobox0 $dShape $dElt ds1 ds2 ds3
+                   -> case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ (Data.Array.Accelerate.Array.Sugar.SliceShape sh1)
+                             @ Data.Array.Accelerate.Array.Sugar.Z
+                             (Data.Array.Accelerate.Array.Sugar.$p6Shape @ sh1 $dShape)
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.SliceShape
+                                                     sh1>_N <Data.Array.Accelerate.Array.Sugar.Z>_N) of cobox1 { DEFAULT ->
+                      case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ (Data.Array.Accelerate.Array.Sugar.CoSliceShape sh1)
+                             @ sh1
+                             (Data.Array.Accelerate.Array.Sugar.$p5Shape @ sh1 $dShape)
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.CoSliceShape
+                                                     sh1>_N <sh1>_N) of cobox2 { DEFAULT ->
+                      case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ (Data.Array.Accelerate.Array.Sugar.FullShape sh1)
+                             @ sh1
+                             (Data.Array.Accelerate.Array.Sugar.$p4Shape @ sh1 $dShape)
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.FullShape
+                                                     sh1>_N <sh1>_N) of cobox3 { DEFAULT ->
+                      ds2
+                        `cast`
+                      (Data.Array.Accelerate.AST.PreOpenFun
+                         <Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc>_R
+                         <()>_N
+                         <aenv>_N
+                         (Nth:0 (Sym cobox0) ->_N Nth:1 (Sym cobox0)))_R } } } }) -}
+1fb7934dcfc097431b526f3e5cc0c67f
+  indexD1 ::
+    Data.Array.Accelerate.AST.PreFun
+      Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv (sh -> e)
+  {- Strictness: x -}
+f53ff8d8393b6e3bbe54a58c095126be
+  inlineA ::
+    Data.Array.Accelerate.Trafo.Substitution.Rebuildable f =>
+    f (aenv, s) t
+    -> Data.Array.Accelerate.AST.PreOpenAcc
+         (Data.Array.Accelerate.Trafo.Substitution.AccClo f) aenv s
+    -> f aenv t
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LC(C(C(S)))),1*U(A,1*C1(C1(C1(U))))><L,U><L,U>,
+     Unfolding: (\ @ (f :: * -> * -> *)
+                   @ aenv
+                   @ s1
+                   @ t
+                   ($dRebuildable :: Data.Array.Accelerate.Trafo.Substitution.Rebuildable
+                                       f)
+                   (f1 :: f (aenv, s1) t)
+                   (g :: Data.Array.Accelerate.AST.PreOpenAcc
+                           (Data.Array.Accelerate.Trafo.Substitution.AccClo f) aenv s1) ->
+                 Data.Array.Accelerate.Trafo.Substitution.rebuildA
+                   @ f
+                   $dRebuildable
+                   @ Data.Array.Accelerate.AST.PreOpenAcc
+                   @ (aenv, s1)
+                   @ aenv
+                   @ t
+                   Data.Array.Accelerate.Trafo.Substitution.$fSyntacticAccPreOpenAcc
+                   (\ @ a'
+                      ($dArrays :: Data.Array.Accelerate.Array.Sugar.Arrays a')
+                      (eta :: Data.Array.Accelerate.AST.Idx (aenv, s1) a') ->
+                    Data.Array.Accelerate.Trafo.Substitution.subAtop
+                      @ a'
+                      @ (Data.Array.Accelerate.Trafo.Substitution.AccClo f)
+                      @ aenv
+                      @ s1
+                      $dArrays
+                      g
+                      eta)
+                   f1) -}
+5a2deb222adb385f71938210bbdc473b
+  kmap ::
+    Data.Array.Accelerate.Trafo.Base.Kit acc =>
+    (Data.Array.Accelerate.AST.PreOpenAcc acc aenv a
+     -> Data.Array.Accelerate.AST.PreOpenAcc acc aenv b)
+    -> acc aenv a -> acc aenv b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(S(LS(S))LC(S)LLLLL),U(1*U(A,1*U(1*U)),A,1*C1(U),1*C1(U),A,A,A,A)><L,1*C1(U)><L,U>,
+     Unfolding: (\ @ (acc :: * -> * -> *)
+                   @ aenv
+                   @ a
+                   @ b
+                   ($dKit :: Data.Array.Accelerate.Trafo.Base.Kit acc)
+                   (eta :: Data.Array.Accelerate.AST.PreOpenAcc acc aenv a
+                           -> Data.Array.Accelerate.AST.PreOpenAcc acc aenv b)
+                   (eta1 :: acc aenv a) ->
+                 case GHC.Types.HEq_sc
+                        @ (GHC.Types.* -> GHC.Types.* -> GHC.Types.*)
+                        @ (GHC.Types.* -> GHC.Types.* -> GHC.Types.*)
+                        @ (Data.Array.Accelerate.Trafo.Substitution.AccClo acc)
+                        @ acc
+                        (GHC.Classes.$p2(%,%)
+                           @ (Data.Array.Accelerate.Trafo.Substitution.Rebuildable acc)
+                           @ (Data.Array.Accelerate.Trafo.Substitution.AccClo acc
+                              Data.Type.Equality.~ acc)
+                           (Data.Array.Accelerate.Trafo.Base.$p1Kit @ acc $dKit))
+                          `cast`
+                        (Data.Type.Equality.N:~[0]
+                             <GHC.Types.*
+                              -> GHC.Types.*
+                              -> GHC.Types.*>_N <Data.Array.Accelerate.Trafo.Substitution.AccClo
+                                                   acc>_N <acc>_N) of cobox0 { DEFAULT ->
+                 Data.Array.Accelerate.Trafo.Base.inject
+                   @ acc
+                   $dKit
+                   @ aenv
+                   @ b
+                   (eta
+                      (Data.Array.Accelerate.Trafo.Base.extract
+                         @ acc
+                         $dKit
+                         @ aenv
+                         @ a
+                         eta1)) }) -}
+900b7ebc5a25cb6c9d0f8d9831474864
+  linearIndexD ::
+    Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+      aenv (Data.Array.Accelerate.Array.Sugar.Array sh e)
+    -> Data.Array.Accelerate.AST.PreFun
+         Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+         aenv
+         (GHC.Types.Int -> e)
+  RecSel Left Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ @ aenv
+                   @ sh
+                   @ e
+                   (ds :: Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                            aenv (Data.Array.Accelerate.Array.Sugar.Array sh e)) ->
+                 case ds of wild {
+                   Data.Array.Accelerate.Trafo.Base.Manifest ipv
+                   -> Data.Array.Accelerate.Trafo.Base.linearIndexD1 @ aenv @ e
+                   Data.Array.Accelerate.Trafo.Base.Delayed sh1 e1 cobox0 $dShape $dElt ds1 ds2 ds3
+                   -> case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ (Data.Array.Accelerate.Array.Sugar.SliceShape sh1)
+                             @ Data.Array.Accelerate.Array.Sugar.Z
+                             (Data.Array.Accelerate.Array.Sugar.$p6Shape @ sh1 $dShape)
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.SliceShape
+                                                     sh1>_N <Data.Array.Accelerate.Array.Sugar.Z>_N) of cobox1 { DEFAULT ->
+                      case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ (Data.Array.Accelerate.Array.Sugar.CoSliceShape sh1)
+                             @ sh1
+                             (Data.Array.Accelerate.Array.Sugar.$p5Shape @ sh1 $dShape)
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.CoSliceShape
+                                                     sh1>_N <sh1>_N) of cobox2 { DEFAULT ->
+                      case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ (Data.Array.Accelerate.Array.Sugar.FullShape sh1)
+                             @ sh1
+                             (Data.Array.Accelerate.Array.Sugar.$p4Shape @ sh1 $dShape)
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.FullShape
+                                                     sh1>_N <sh1>_N) of cobox3 { DEFAULT ->
+                      ds3
+                        `cast`
+                      (Data.Array.Accelerate.AST.PreOpenFun
+                         <Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc>_R
+                         <()>_N
+                         <aenv>_N
+                         (<GHC.Types.Int>_N ->_N Nth:1 (Sym cobox0)))_R } } } }) -}
+566f24e887ebb11a2188c60bef883c07
+  linearIndexD1 ::
+    Data.Array.Accelerate.AST.PreFun
+      Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+      aenv
+      (GHC.Types.Int -> e)
+  {- Strictness: x -}
+6c6ba86eaeb774b29c7b550f310e4856
+  lookupExp ::
+    Data.Array.Accelerate.Trafo.Base.Kit acc =>
+    Data.Array.Accelerate.Trafo.Base.Gamma acc env env' aenv
+    -> Data.Array.Accelerate.AST.PreOpenExp acc env aenv t
+    -> GHC.Base.Maybe (Data.Array.Accelerate.AST.Idx env' t)
+  {- Arity: 3,
+     Strictness: <S(S(LS(S))LLLLLLL),U(U(A,U(U)),A,A,A,A,C(C1(U)),C(U(U)),A)><S,1*U><L,U> -}
+7976e1f90390bc036f8294fc07a721fb
+  matchDelayedOpenAcc ::
+    Data.Array.Accelerate.Analysis.Match.MatchAcc
+      Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+ebcc264ab1e58cfa60e6ea8d3c1795ae
+  prettyDelayedOpenAcc ::
+    Data.Array.Accelerate.Pretty.Print.PrettyAcc
+      Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+  {- Arity: 3, Strictness: <L,C(U)><L,U><S,1*U> -}
+18dfacc701d12884b3d7284a6a4b9092
+  prjExp ::
+    Data.Array.Accelerate.AST.Idx env' t
+    -> Data.Array.Accelerate.Trafo.Base.Gamma acc env env' aenv
+    -> Data.Array.Accelerate.AST.PreOpenExp acc env aenv t
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+a9e20bdbb4f848e6fa3f8efaacdaa62d
+  rnfDelayedOpenAcc ::
+    Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv t -> ()
+  {- Arity: 1, Strictness: <S,1*U> -}
+b46a1d62c6690f34f388e77060587aa9
+  sink ::
+    Data.Array.Accelerate.Trafo.Substitution.Sink f =>
+    Data.Array.Accelerate.Trafo.Base.Extend acc env env'
+    -> f env t -> f env' t
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ (f :: * -> * -> *)
+                   @ (acc :: * -> * -> *)
+                   @ env
+                   @ env'
+                   @ t
+                   ($dSink :: Data.Array.Accelerate.Trafo.Substitution.Sink f)
+                   (env1 :: Data.Array.Accelerate.Trafo.Base.Extend acc env env') ->
+                 $dSink
+                   `cast`
+                 (Data.Array.Accelerate.Trafo.Substitution.N:Sink[0] <f>_N)
+                   @ env
+                   @ env'
+                   @ t
+                   (\ @ t' ->
+                    Data.Array.Accelerate.Trafo.Base.sink_k
+                      @ acc
+                      @ env
+                      @ env'
+                      @ t'
+                      env1)) -}
+808daccdcf3a514f1b17721df68e32de
+  sink1 ::
+    Data.Array.Accelerate.Trafo.Substitution.Sink f =>
+    Data.Array.Accelerate.Trafo.Base.Extend acc env env'
+    -> f (env, s) t -> f (env', s) t
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ (f :: * -> * -> *)
+                   @ (acc :: * -> * -> *)
+                   @ env
+                   @ env'
+                   @ s1
+                   @ t
+                   ($dSink :: Data.Array.Accelerate.Trafo.Substitution.Sink f)
+                   (env1 :: Data.Array.Accelerate.Trafo.Base.Extend acc env env') ->
+                 $dSink
+                   `cast`
+                 (Data.Array.Accelerate.Trafo.Substitution.N:Sink[0] <f>_N)
+                   @ (env, s1)
+                   @ (env', s1)
+                   @ t
+                   (\ @ t' ->
+                    Data.Array.Accelerate.Trafo.Base.sink1_k
+                      @ acc
+                      @ env
+                      @ env'
+                      @ s1
+                      @ t'
+                      env1)) -}
+45b483d72de4300fe42877aa967e1bc9
+  sink1_k ::
+    Data.Array.Accelerate.Trafo.Base.Extend acc env env'
+    -> Data.Array.Accelerate.AST.Idx (env, s) t
+    -> Data.Array.Accelerate.AST.Idx (env', s) t
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+c3570e4642a0efc2abe7cc83533f254d
+  sinkGamma ::
+    Data.Array.Accelerate.Trafo.Base.Kit acc =>
+    Data.Array.Accelerate.Trafo.Base.Extend acc aenv aenv'
+    -> Data.Array.Accelerate.Trafo.Base.Gamma acc env env' aenv
+    -> Data.Array.Accelerate.Trafo.Base.Gamma acc env env' aenv'
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(SLLLLLLL),U(U,A,A,A,A,A,A,A)><L,U><S,1*U> -}
+5f0f47258379e5c3e70e8481e18bf6cb
+  sink_k ::
+    Data.Array.Accelerate.Trafo.Base.Extend acc env env'
+    -> Data.Array.Accelerate.AST.Idx env t
+    -> Data.Array.Accelerate.AST.Idx env' t
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U> -}
+1952da7109303be4625b2a51aa27763c
+  subApply ::
+    (Data.Array.Accelerate.Trafo.Substitution.RebuildableAcc acc,
+     Data.Array.Accelerate.Array.Sugar.Arrays a) =>
+    Data.Array.Accelerate.AST.PreOpenAfun acc aenv (a -> b)
+    -> acc aenv a -> Data.Array.Accelerate.AST.PreOpenAcc acc aenv b
+  {- Arity: 4,
+     Strictness: <S(LS(S)),1*U(A,1*U(1*U))><L,U><S,1*U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ (acc :: * -> * -> *)
+                   @ a
+                   @ aenv
+                   @ b
+                   ($d(%,%) :: Data.Array.Accelerate.Trafo.Substitution.RebuildableAcc
+                                 acc)
+                   ($dArrays :: Data.Array.Accelerate.Array.Sugar.Arrays a)
+                   (eta :: Data.Array.Accelerate.AST.PreOpenAfun acc aenv (a -> b))
+                   (eta1 :: acc aenv a) ->
+                 case GHC.Types.HEq_sc
+                        @ (GHC.Types.* -> GHC.Types.* -> GHC.Types.*)
+                        @ (GHC.Types.* -> GHC.Types.* -> GHC.Types.*)
+                        @ (Data.Array.Accelerate.Trafo.Substitution.AccClo acc)
+                        @ acc
+                        (GHC.Classes.$p2(%,%)
+                           @ (Data.Array.Accelerate.Trafo.Substitution.Rebuildable acc)
+                           @ (Data.Array.Accelerate.Trafo.Substitution.AccClo acc
+                              Data.Type.Equality.~ acc)
+                           $d(%,%))
+                          `cast`
+                        (Data.Type.Equality.N:~[0]
+                             <GHC.Types.*
+                              -> GHC.Types.*
+                              -> GHC.Types.*>_N <Data.Array.Accelerate.Trafo.Substitution.AccClo
+                                                   acc>_N <acc>_N) of cobox0 { DEFAULT ->
+                 case eta of wild {
+                   Data.Array.Accelerate.AST.Abody ipv ipv1
+                   -> Data.Array.Accelerate.Trafo.Base.subApply1 @ acc @ aenv @ b
+                   Data.Array.Accelerate.AST.Alam a1 t cobox1 $dArrays1 ds
+                   -> case ds of wild1 {
+                        Data.Array.Accelerate.AST.Abody $dArrays2 f
+                        -> (Data.Array.Accelerate.AST.Alet
+                              @ acc
+                              @ aenv
+                              @ t
+                              @ a
+                              $dArrays
+                              $dArrays2
+                              eta1
+                              f `cast` (<acc>_R ((,) <aenv>_N (Nth:0 (Sym cobox1)))_N <t>_N))
+                             `cast`
+                           (Data.Array.Accelerate.AST.PreOpenAcc
+                              <acc>_R <aenv>_N (Nth:1 (Sym cobox1)))_R
+                        Data.Array.Accelerate.AST.Alam ipv0 ipv1 ipv ipv2 ipv3
+                        -> Data.Array.Accelerate.Trafo.Base.subApply1
+                             @ acc
+                             @ aenv
+                             @ b } } }) -}
+890ee0c256fd85576a19227bcb154ff6
+  subApply1 :: Data.Array.Accelerate.AST.PreOpenAcc acc aenv b
+  {- Strictness: x -}
+a4f5daed877a9d2ea178fd05f3f819d1
+  weakenGamma1 ::
+    Data.Array.Accelerate.Trafo.Base.Kit acc =>
+    Data.Array.Accelerate.Trafo.Base.Gamma acc env env' aenv
+    -> Data.Array.Accelerate.Trafo.Base.Gamma acc env env' (aenv, t)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLLLLLL),U(U,A,A,A,A,A,A,A)><S,1*U> -}
+instance Data.Array.Accelerate.Trafo.Base.Kit [Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc]
+  = Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc
+instance Data.Array.Accelerate.Trafo.Base.Kit [Data.Array.Accelerate.AST.OpenAcc]
+  = Data.Array.Accelerate.Trafo.Base.$fKitOpenAcc
+instance Data.Array.Accelerate.Trafo.Base.Match [Data.Array.Accelerate.AST.Idx]
+  = Data.Array.Accelerate.Trafo.Base.$fMatchIdx
+instance Data.Array.Accelerate.Trafo.Base.Match [Data.Array.Accelerate.AST.PreOpenAcc]
+  = Data.Array.Accelerate.Trafo.Base.$fMatchPreOpenAcc
+instance Data.Array.Accelerate.Trafo.Base.Match [Data.Array.Accelerate.AST.PreOpenExp]
+  = Data.Array.Accelerate.Trafo.Base.$fMatchPreOpenExp
+instance Data.Array.Accelerate.Trafo.Base.Match [Data.Array.Accelerate.AST.PreOpenFun]
+  = Data.Array.Accelerate.Trafo.Base.$fMatchPreOpenFun
+instance [incoherent] Data.Array.Accelerate.Trafo.Base.Match [.]
+  = Data.Array.Accelerate.Trafo.Base.$fMatchacc
+instance Control.DeepSeq.NFData [Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc]
+  = Data.Array.Accelerate.Trafo.Base.$fNFDataDelayedOpenAcc
+instance Control.DeepSeq.NFData [Data.Array.Accelerate.AST.PreOpenAfun]
+  = Data.Array.Accelerate.Trafo.Base.$fNFDataPreOpenAfun
+instance Data.Array.Accelerate.Trafo.Substitution.Rebuildable [Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc]
+  = Data.Array.Accelerate.Trafo.Base.$fRebuildableDelayedOpenAcc
+instance Data.Array.Accelerate.Trafo.Substitution.Sink [Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc]
+  = Data.Array.Accelerate.Trafo.Base.$fSinkDelayedOpenAcc
+family instance Data.Array.Accelerate.Trafo.Substitution.AccClo [Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc]
+  = Data.Array.Accelerate.Trafo.Base.D:R:AccCloDelayedOpenAcc
+"SPEC/Data.Array.Accelerate.Trafo.Base $dmrebuildA @ DelayedOpenAcc" [ALWAYS] forall ($dRebuildable :: Data.Array.Accelerate.Trafo.Substitution.Rebuildable
+                                                                                                         Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc)
+  Data.Array.Accelerate.Trafo.Substitution.$dmrebuildA @ Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                                                       $dRebuildable
+  = Data.Array.Accelerate.Trafo.Base.$fRebuildableDelayedOpenAcc_$s$dmrebuildA
+"SPEC/Data.Array.Accelerate.Trafo.Base $fRebuildablePreOpenAcc_$crebuildPartial @ DelayedOpenAcc" [ALWAYS] forall ($d(%,%) :: Data.Array.Accelerate.Trafo.Substitution.RebuildableAcc
+                                                                                                                                Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc)
+  Data.Array.Accelerate.Trafo.Substitution.$fRebuildablePreOpenAcc_$crebuildPartial @ Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                                                                                    $d(%,%)
+  = Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc_$s$fRebuildablePreOpenAcc_$crebuildPartial
+"SPEC/Data.Array.Accelerate.Trafo.Base $fRebuildablePreOpenExp_$crebuildPartial @ DelayedOpenAcc _" [ALWAYS] forall @ env
+                                                                                                                    ($d(%,%) :: Data.Array.Accelerate.Trafo.Substitution.RebuildableAcc
+                                                                                                                                  Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc)
+  Data.Array.Accelerate.Trafo.Substitution.$fRebuildablePreOpenExp_$crebuildPartial @ Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                                                                                    @ env
+                                                                                    $d(%,%)
+  = Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc_$s$fRebuildablePreOpenExp_$crebuildPartial
+      @ env
+"SPEC/Data.Array.Accelerate.Trafo.Base $fRebuildablePreOpenFun_$crebuildPartial @ DelayedOpenAcc _" [ALWAYS] forall @ env
+                                                                                                                    ($d(%,%) :: Data.Array.Accelerate.Trafo.Substitution.RebuildableAcc
+                                                                                                                                  Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc)
+  Data.Array.Accelerate.Trafo.Substitution.$fRebuildablePreOpenFun_$crebuildPartial @ Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                                                                                    @ env
+                                                                                    $d(%,%)
+  = Data.Array.Accelerate.Trafo.Base.$fKitDelayedOpenAcc_$s$fRebuildablePreOpenFun_$crebuildPartial
+      @ env
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

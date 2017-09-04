@@ -1,0 +1,817 @@
+
+==================== FINAL INTERFACE ====================
+2017-08-29 05:28:46.52612 UTC
+
+interface accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Interpreter 8002
+  interface hash: a90404adf98d088d80f5969d8e68063b
+  ABI hash: 94f8a43937b8e42c5d0aeef5274b98d5
+  export-list hash: 660a3c95ba3d483aae9021b1f8c04137
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 8ad58f053b90d3a40cae22b123c55a4e
+  sig of: Nothing
+  used TH splices: True
+  where
+exports:
+  Data.Array.Accelerate.Interpreter.evalPrim
+  Data.Array.Accelerate.Interpreter.evalPrimConst
+  Data.Array.Accelerate.Interpreter.evalPrj
+  Data.Array.Accelerate.Interpreter.run
+  Data.Array.Accelerate.Interpreter.run1
+  Data.Array.Accelerate.Interpreter.runN
+  Data.Array.Accelerate.Array.Sugar.Arrays
+  Data.Array.Accelerate.Smart.Acc
+module dependencies: Data.Array.Accelerate.AST
+                     Data.Array.Accelerate.Analysis.Hash
+                     Data.Array.Accelerate.Analysis.Hash.TH
+                     Data.Array.Accelerate.Analysis.Match
+                     Data.Array.Accelerate.Analysis.Shape
+                     Data.Array.Accelerate.Array.Data
+                     Data.Array.Accelerate.Array.Representation
+                     Data.Array.Accelerate.Array.Sugar
+                     Data.Array.Accelerate.Array.Unique Data.Array.Accelerate.Debug
+                     Data.Array.Accelerate.Debug.Flags
+                     Data.Array.Accelerate.Debug.Monitoring
+                     Data.Array.Accelerate.Debug.Stats Data.Array.Accelerate.Debug.Timed
+                     Data.Array.Accelerate.Debug.Trace Data.Array.Accelerate.Error
+                     Data.Array.Accelerate.Lifetime Data.Array.Accelerate.Pretty
+                     Data.Array.Accelerate.Pretty.Graphviz
+                     Data.Array.Accelerate.Pretty.Graphviz.Monad
+                     Data.Array.Accelerate.Pretty.Graphviz.Type
+                     Data.Array.Accelerate.Pretty.Print Data.Array.Accelerate.Product
+                     Data.Array.Accelerate.Smart Data.Array.Accelerate.Trafo
+                     Data.Array.Accelerate.Trafo.Algebra
+                     Data.Array.Accelerate.Trafo.Base Data.Array.Accelerate.Trafo.Fusion
+                     Data.Array.Accelerate.Trafo.Rewrite
+                     Data.Array.Accelerate.Trafo.Sharing
+                     Data.Array.Accelerate.Trafo.Shrink
+                     Data.Array.Accelerate.Trafo.Simplify
+                     Data.Array.Accelerate.Trafo.Substitution Data.Array.Accelerate.Type
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol
+                      hashtables-1.2.1.1@hashtables-1.2.1.1-CvCXxmZFzjODUwEtnf4YU7
+                      integer-gmp-1.0.0.1 mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      pretty-1.1.3.3@pretty-1.1.3.3
+                      primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh
+                      template-haskell-2.11.1.0
+                      text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00
+                      transformers-0.5.2.0@transformers-0.5.2.0
+                      unique-0@unique-0-9CJQKYGbqiDaFUmoekKeA
+                      unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC
+                      vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ
+orphans: accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Pretty
+         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Trafo
+         base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu:Data.Orphans
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt:Data.Label.Point
+         hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable.Generic
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Show
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Fusion.Bundle
+         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
+family instance modules: accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Data
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Representation
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Sugar
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Product
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Smart
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Trafo.Base
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Trafo.Sharing
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Trafo.Substitution
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Type
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh:Control.Monad.Primitive
+                         primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh:Data.Primitive.Array
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC:Data.HashMap.Base
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC:Data.HashSet
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Primitive
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed.Base
+import  -/  Data.Array.Accelerate.AST 4907563d36aadcb5fe024fe0eaf42ffa
+  exports: 14f3cf8c02b472222e546556891c5be1
+  Abody ee120ad61e0a5f248fbde7e991e9af28
+  Acond 750209431eae401dfff3c860bd1e2fc6
+  Aforeign 5214b73c1fba23d3d4e7f85cb199ac1c
+  Alam 9e3e3605bc50ad599485b7c0977e13d9
+  Alet 0ab0425bc7b0ec829dbc083ffa16825d
+  Apply acd8c8af26b0a8b682df360df59fa8be
+  Aprj 404b31d0a415df80893151ff13fb0846
+  Atuple 902517e36fd9d4d0cfb6191b1c6684eb
+  Avar b9746522dbbe78edef452606b6656a87
+  Awhile 14384d8a9ba2da72092122c848e2ae32
+  Backpermute 4f66d0e89ef4df5962354aa16441f617
+  Body 1196576b2aa6a07bc2357625785ef2e5
+  Clamp c3a43eecdb9882efc038c7b9062cdcb4
+  Cond 85b737c39381609050fcedb2a2391a92
+  Const d4b278465afaa56210a92bc3030b1c81
+  Constant 109db35160e400a315f90946c081dc01
+  Empty ea323c94a1d2d8e366726da4fca5d5cb
+  EmptyElt 52959152240c3bad84253bde98bfc2c2
+  Fold bb3f680fb271e4fc52befb09d536ab67
+  Fold1 81a218046119358257d76f4180b62916
+  Fold1Seg e17f7dec7f49bed9b09c5dddc31f075f
+  FoldSeg 066501eca698e8d157f1bbd44032854e
+  Foreign cd3ba341b3611dd6c5a93df013aa5a0f
+  FromIndex 175bd7890f27a032cb2a1e79fa38d269
+  Function 303d21de1401dc1e63266aacbd76779e
+  Generate 36e058fa32bd3e74acd8e2c33b47dc54
+  Index 63200e0b9961802f7b038a2e740789b0
+  IndexAny 76a617483a4b1532550fe134ec1b4e43
+  IndexCons a015173a5dad6ebd2b8e31b35afb501a
+  IndexFull b79f06d91ed5766f10b485089815d3f3
+  IndexHead 3f325360371c4024fd7e59caec7726dd
+  IndexNil 8331ee2296cdcd4d19411e11e8205177
+  IndexSlice 45dcf8fd2ee557f7e6b7acb3cb7bd68d
+  IndexTail 08923ce42f0b849d79fabcb6207dc0a4
+  Intersect d61777171aa2d140c0046919d45de878
+  Lam 158725fe690b603ce6a570d589782162
+  Let fb7635520863b39ad81ae4c22c0dfd53
+  LinearIndex d5e9e584798a5b18adfd76ceee4f21f3
+  Map c186fc6c7cc5f818dedf44e9c7679cfc
+  Mirror f990633b0e9d96822dbfd328904ab57b
+  Permute 0d48aeaf25db12c40fda0dfdecef40cf
+  PreBoundary f77d583ab18e537cb481471882c136a8
+  PreExp e5bbd637882b51cd1da6e290359325bf
+  PreFun d3bf8e354493ff12972ab24a46d8ebad
+  PreOpenExp d3bf8e354493ff12972ab24a46d8ebad
+  PreOpenFun d3bf8e354493ff12972ab24a46d8ebad
+  PrimAbs d209c48ef96654554c5275b910b9556f
+  PrimAcos 82c61c0c86d1fe66e5357f3f5de7f8e4
+  PrimAcosh cc2752be79ccdc0e971bd109e444f8d7
+  PrimAdd abec5f7356b156b3058e96a276263999
+  PrimApp 4153e64d1996ff9e8d5bab83757d04cc
+  PrimAsin 3bb6318a1c7852a1cc5dfa6b733d6708
+  PrimAsinh f55fa565e1153a20dbe8746083c5b62c
+  PrimAtan 41c1bd3a72690c8fd4d955e159846d23
+  PrimAtan2 c594ceb52d82a1f61e4ed92594ec511b
+  PrimAtanh 8c45894eea88a878d1a0448ca15d131d
+  PrimBAnd e09f907ad0f271434c3dfa0e4dd027ed
+  PrimBNot 86129752defc488f87806c3eae7b471e
+  PrimBOr c428b8dd88c823a7abff692bb2159274
+  PrimBRotateL aaf1d05701f63a6b24c7709c8b5e2508
+  PrimBRotateR 9c56199f99b621b0b1c7453d07972f86
+  PrimBShiftL c93f817725c39e03e0a208409556ac6d
+  PrimBShiftR 76cdf0f360d3f3158e2faac10ac78e70
+  PrimBXor dd4f0d0536c9864c705eb5f23425ebb4
+  PrimBoolToInt 3a349e3fd3a0e4c3b1a143ab2fb6c9ae
+  PrimCeiling b3eaf24afa5482e6c34cea68a1bc6f03
+  PrimChr ac7e83f1dc92d89251707590659c253e
+  PrimCoerce a388f56ef554673c6179ee7ef4f70252
+  PrimConst c3e9d3e0be46d673c989e142b6fb53f5
+  PrimConst 5c318a616985d1340937fa9acc4a60ed
+  PrimCos bf0ff37c819577024fe479ea3f83ad66
+  PrimCosh 59f9ed895ab6779a280e671857aa744e
+  PrimCountLeadingZeros ae48c83638d32f09abf038a3e8f8c8d9
+  PrimCountTrailingZeros ee95fc8e5c86575950075aac83906c6c
+  PrimDivMod cb232ef4039741da1ab4664b587c1aac
+  PrimEq fca9b27b9251eb69994408dc1b4e9801
+  PrimExpFloating ee230492c2ecbef591db9b7c44c79a28
+  PrimFDiv 9ee34631f1f088b6961febdd2fb4e898
+  PrimFPow be48b32d9992cb26444e54ff6daa7d81
+  PrimFloor 274d4a22b46d123161d2aa48d5ac634a
+  PrimFromIntegral 34af785a81a6242e35ba5c63aef4875a
+  PrimFun 66016ad2b3472f117aa67ab3504b9f9e
+  PrimGt 8f772b424f8a15993afeb40365aaeae9
+  PrimGtEq d3d2843684fb9cf390eb124a51ac9238
+  PrimIDiv fe3ce03c38789fd885cf09aad3ca7c54
+  PrimIsInfinite d1376eb660a90af435b6978f836c89ef
+  PrimIsNaN 0e05fcbb798a7ac5d92eba21e513daf8
+  PrimLAnd 19228cebeb67700876d132a56aba35d4
+  PrimLNot 91044c8e487c5cfc1f31a6ec819f5a04
+  PrimLOr 84170947fdaff91d7c15e2d5f45e7d47
+  PrimLog 4349fdf29fd6b8f8006eac888d89a705
+  PrimLogBase 6daee89e6c93d16e3a2491aff1fe20ce
+  PrimLt 8d417e2f877e6c9899837c71e73467e7
+  PrimLtEq 12a254ada6d717cf3732968d2b11e023
+  PrimMax 1b77265bdff14b53394c4c3b587d74a6
+  PrimMaxBound 9324068ec9bc04e62a02162f27434e1d
+  PrimMin 9cc38c9b8dfae816a92105cc54d9fb53
+  PrimMinBound b0d95f4248bb24c9a14d11a5887daa45
+  PrimMod 28e59f1df7a1e1409b8e7f1f190bc4a3
+  PrimMul d1bd3edcc143ed2abdf7675bde8769d3
+  PrimNEq 10c68e604da98b09d55d023b0a2dd597
+  PrimNeg 6f5cdbead9b906ed9f5f4687d2ad8d8e
+  PrimOrd 94b241b76480407cd1bb7daec61750c4
+  PrimPi 116af9badc386ef881e3fa380bb45290
+  PrimPopCount ce7ab61b0c1b6d9be91088b0f8ede979
+  PrimQuot 39ea27653f61a9495944309df421b152
+  PrimQuotRem f8be9dc0a4e6c72a185838841787cb50
+  PrimRecip b708a6beeaec58b3a38069b7496446e8
+  PrimRem 45e41466fe8ca478c8566cf6f9dbd79c
+  PrimRound 92d2fef02629785711159c8b7a1d7940
+  PrimSig 798281bfc219b24392e9a8ecb158a12b
+  PrimSin 4f685e44ac1da04de28bd3cd0de02cd5
+  PrimSinh 96395698618267d5a9b5d4c1a4f8a840
+  PrimSqrt 9d33e4ce7d67f983ba304cc60cd3fe4c
+  PrimSub 3c917f0bfc2eadbe16c298cde9f84a33
+  PrimTan d199aa600281ce750bdce361cdb01da6
+  PrimTanh b51f7066886a9a7bcf87bfb4a28b6fe5
+  PrimToFloating 81181b7c9d6a9af8eae2e00b80f08e4f
+  PrimTruncate 69bcda46524f548a69ac5412e3d674f3
+  Prj ea0969c2ebd78e8f97f90fdce0ec5b85
+  Push aa76fccdb1691ebd1e48644eb30f6f63
+  PushElt bce53b854602d1b27e0f40f0f38e119c
+  Replicate b45b307c3ac5834be45157f9b97164b0
+  Reshape 47f08dcad6d10e3aa1cb6093ba11dd85
+  Scanl 396bf0430f22f20afe3957f5ca59a08b
+  Scanl' 1adc9e003ccf30f16828abd0fd78615a
+  Scanl1 1276c7f35ce3c67a27dcc2ffd5def021
+  Scanr 1a875086cf9a77ee605ee5eb6845fb3d
+  Scanr' 93cb828599b9e47e6605e12c5a38e182
+  Scanr1 80c7de53ede553c41fe8bb104ed3dbc8
+  Shape 188e3cfc394232139edff3a93b6fc738
+  ShapeSize f339b41eb7026d658f318c6ff3b1ddbd
+  Slice 0f021a8f0af5175920645825ac2450a8
+  Stencil 09b6572f0048c550f2782ea5ac548286
+  Stencil de90111747605bd959f975fe4292a7e7
+  Stencil2 bbe92a77ce856793eceb2afaa356761b
+  StencilR 737d780221c2db7801f815b050dbdfdb
+  StencilRtup3 f9bfda3a57010314d2541176c31f5451
+  StencilRtup5 536c2a590c7915874ecd6dc32fa51871
+  StencilRtup7 b7fd5a416a2303da108ad0d405ea5b61
+  StencilRtup9 69d81c6119ed5a19fcb04f2a93567873
+  StencilRunit3 4c89693df8773dd5f878923dbe2e054e
+  StencilRunit5 c520085f46b52d062a3594f8d1da226a
+  StencilRunit7 d8aa2268fdad7cb1f79446037eafd7e2
+  StencilRunit9 fdd9e95791f5e7b4f3dd5b8894452fd9
+  ToIndex 1778bb2206e9b9af2bfb73385aa8fcf6
+  Transform 3346841e54e9c2cae2cf221c490a757d
+  Tuple 286fa31822ac85195775eaca8264e583
+  Union a7d3a050ed47fbfc04189bf738e5cbf8
+  Unit 6a040b1551bc804afa771300d0236e16
+  Use d69e2b4a5c6ddbf9268deeebd8e6f6e2
+  Val 289bd163359a5a1221959e0f6a90d574
+  ValElt 1b6e1a1299536d51a62acb7f3b0d18c9
+  Var 316870341ee21060a306c8836bf702a6
+  While e1c4381be88ce0fc5eeff6f5cfbbbe14
+  Wrap ebef9cf28c72cc8d1ebbffba633ea578
+  ZipWith 51d1ce30678f2f98e0a9db1215a02e6e
+  prj 52cf1a43d42e556e1fb28506d500c911
+  prjElt 45266a80eccad705948f2f32fdafd0ef
+  stencil 5195e016607b58e7b02904ab42b1251d
+import  -/  Data.Array.Accelerate.Analysis.Match ab221b77992c08e2034eb4c4408657ab
+  exports: 6b5dbf184af5b50b039d678583ec0082
+  matchScalarType d50b1accab0ef9d92c33ed55e8f343b4
+import  -/  Data.Array.Accelerate.Array.Data 0f7788ba6235b9caff0f10d41744f81c
+  exports: 2e401fd3c8bac4bea058169f3641bb3b
+  AD_Pair 744bfd6434140a02d86db367b8fa36a3
+  newArrayData 201304e463ea799e89d93c85f68673af
+  runArrayData 50b20d1b99304a54265b5c8fac1d33c1
+  unsafeReadArrayData 8bfdd3f77edb6ae539fa0bd204fa485f
+  unsafeWriteArrayData 94c52ebbf090d3c8a10da43fb2424d63
+import  -/  Data.Array.Accelerate.Array.Representation 7ecc085451773e8538fbcc949c8f13b8
+  exports: 572b3ca30546aa8fe21350a43e265cdd
+  SliceAll 41d59e71823102a8b9c9b818d9efda7c
+  SliceFixed 3cce896383a0dafcfced9cfc6bcd5f28
+  SliceIndex 23dde5ac3819531720383c4ce52892fc
+  SliceNil 9655aea358522d9498a948e92c236d3f
+  ignore 28a987b4643c6243111c855c1ebccda0
+import  -/  Data.Array.Accelerate.Array.Sugar 1095a84a969562bd64b7800341e0d23c
+  exports: a6dd551b39ab2a3a217fc8c2a6979cd5
+  ! e3807c35fb9030eeade8527a73714557
+  :. c223783565410a9b6198a1e17ba970e9
+  :. 78f23e81404aaf1e43268a71a575425c
+  Any 504fe6abfa79c7236fd7286a04303a69
+  Array 39e81388e8157c36ce0f8d403ca58e72
+  Array 78f23e81404aaf1e43268a71a575425c
+  Arrays 3cc6db7d6b3c36ee0c840e1566f75d38
+  Atuple 6feaa0161ffad15a746afb867f21f70b
+  Elt 78f23e81404aaf1e43268a71a575425c
+  EltRepr 78f23e81404aaf1e43268a71a575425c
+  NilAtup cc36880f178a7e9e125505f43c8172e2
+  NilTup 36796631cb3a95a68e6a4dde7e7b2bbe
+  Scalar 78f23e81404aaf1e43268a71a575425c
+  Segments 1aaba37901236c62a5f4ce21960ed8e9
+  Shape 78f23e81404aaf1e43268a71a575425c
+  SnocAtup 8508890a48fc19a3130443094eda67f2
+  SnocTup ef3a739bcf04e48a53d49112dce542ea
+  Tuple 878418f2d4c18f6518d438b74451ef4e
+  Z 58fea0448d1d85af1b349a305fb8b4d6
+  eltType 21a580fd17202e5faf93897dd670e4dd
+  fromAtuple 3c57c0310c538b8573d7a34bd97bd482
+  fromElt 861af21aa559d711d2643de35185f0ce
+  fromFunction 77875b339cd511ebc7efa0d66be71977
+  fromIndex e1e6c50975650f89e95286428dfbe52b
+  fromTuple fa57067a67b85e81a4fc474990e7b326
+  intersect e459aac6b9d4654aa8e79eaaf59a94f3
+  iter 1275a3a4ec8cf5d788e40c13f96fa1ef
+  iter1 a6997d2f42c943138de41b2ae49a0819
+  liftToElt 2949174fb57ab865fbc41de95c2ea27e
+  listToShape 097aa9b6b17cd9c2262925442e58a14c
+  shape fb9238b911a10d86b4323d1d75ed9837
+  shapeToList feba3f9c852caed796cf0dee05541085
+  sinkFromElt2 7f01eeb0ec31b6420391348fe0ca292a
+  size 91e6223bc97202cfeac22e848316eeee
+  toArr d5ae4611e31ffb5ade4a8fc2fbb51317
+  toAtuple 3451207ee5f6bd70450b7f13ce271bd1
+  toElt fb51c826f81999ac82f2cc2c37722ff3
+  toIndex 90aa2278f9b831046a6f954b4e843960
+  toTuple fd8cd8ec56b64dba23dfe3e13f13200e
+  union 4c6e14ca4599934f466e6b9adaeedff6
+import  -/  Data.Array.Accelerate.Debug 48fd217a26d4240434223974d5084c0c
+  exports: 7e8587d30c425be122b3b310eb4ec0ea
+  dumpGraph 9a162373c986ab25d81437189c8afd7c
+  dumpSimplStats 57a4f5cc8d85aedaa77f273acac30f9d
+import  -/  Data.Array.Accelerate.Debug.Flags 4ae65d880031597019ea1d1d62ef661e
+  dump_phases 7ffd7fde09051fc1b7a0f99fadd3f5c0
+import  -/  Data.Array.Accelerate.Debug.Timed e448ffa6c758f516e228b344c72a62fa
+  elapsed 63316e340b1b9a9cd0f2675a73d0e4ba
+  timed f26581d956db094039b21db5cbbac039
+import  -/  Data.Array.Accelerate.Error 9ed2d4a71009d558f562e118e9d36a23
+  exports: f46a01ad5e78f9618f7a91c4ba90bc31
+  Bounds 6fadf6ef603dc3165050a5db5f9142ea
+  Internal 354d17f13fa8c5b135052bcadc13dc67
+  boundsCheck 5afb1405eec221b95d5609c09f30023b
+  call 95bf4b02947c8c3e282c15050c022fa9
+  doChecks ceda3ca04bd3b8516235aa07ff825eef
+  indexCheck 54e07801f21c65f47e61eb3bf2a3f03e
+  internalError aa331c50846093a3a39d2946a445c28d
+  message 43164dbb4cecc9911948fd9ecaf0a042
+import  -/  Data.Array.Accelerate.Product 8b6346e847887a013338cfe4431f2f5a
+  exports: aebe828f4ca2c96d5390ff50126a2bd3
+  SuccTupIdx 0bc8a098c8f2d27bf7ec36e6968e021b
+  TupleIdx 3dd7384d0a4490c82730ecfcb4d16f06
+  ZeroTupIdx 807a291e8a84844e2c5f3d7ffa83d357
+import  -/  Data.Array.Accelerate.Smart c6a471aeed497009ce791e94dc05d100
+  exports: 1e3a20050ce25466608a82a26d24d5f0
+  Acc dff601899922d9e86e5ab6941dfbac5f
+import  -/  Data.Array.Accelerate.Trafo d492a0a23722eb986860ba46b62266c5
+  exports: 5bc27305a6391f520340b30242539643
+  Phase bbd79513e8e9e8c9414e8f588ee6c040
+  Phase 54ecf976d0a986e7ffb82f4fb32ef39d
+  convertAccWith ac0f127ddd0c6532c026379c97cb15f3
+  convertAfunWith f00a45621390c5d740fb66b0e1f3a42d
+  convertOffsetOfSegment b1ae22f1903135413f09147a61ba1ea1
+  enableAccFusion c00deed0b039fc8bc74f97bb9cb8352f
+  floatOutAccFromExp 69e6c68939e4b382bf200c1d4c283f88
+  recoverAccSharing 5ea8a4db94c496dea9cd3df72b7394b4
+  recoverExpSharing 53f5b185d283f851ce25e0ccf2bd5292
+  recoverSeqSharing 0aaec487d0764d01e930ccb6276d86d8
+import  -/  Data.Array.Accelerate.Trafo.Base f39e4dfe1afe26017d51fdc8678d590f
+  Delayed 9fa83aa3ab98d1ddedaaa13723aa2728
+  DelayedExp 640ae199f0749bb86773d09e18a40802
+  DelayedFun 8e2b801989cab3231e48097c7700ac36
+  DelayedOpenAcc a9e20bdbb4f848e6fa3f8efaacdaa62d
+  DelayedOpenAfun a9e20bdbb4f848e6fa3f8efaacdaa62d
+  Manifest 307ec78d8ea72508f1dd4645a3683725
+  extentD cb8a74f4938cc602ee16bb6c1179e8be
+  indexD 17bac837dd74e9c08d6a37bb7fc5e22d
+  linearIndexD 900b7ebc5a25cb6c9d0f8d9831474864
+import  -/  Data.Array.Accelerate.Trafo.Sharing 21bc326414b6c38d04ea1d264783a384
+  Afunction 792ed38aabc59ccdd5401f09d3755737
+  AfunctionR 103f7acb7f6765ac70da154072788f89
+import  -/  Data.Array.Accelerate.Type a1c7885f4a79193eaa1f192a9acbec78
+  exports: 7aad7ca015788892b1349ebab929b71f
+  BoundedType 587e226fabbdef28c976ac0ac487e117
+  FloatingDict 8a9774adb9d91a2e96df68ba713376aa
+  FloatingNumType a1c94d3214352fd49597cc00d288ab27
+  FloatingType a8fbaf1931593cc4a29598dedb323812
+  IntegralBoundedType 945ccbcd09b785fc89c99d2d179a8a2b
+  IntegralDict 058e95054b258639c9f1a5f924082f0f
+  IntegralNumType 288d27e82ebde26a64dae558c6cba53f
+  IntegralType 0b35b82481c40d13579644883a8a096c
+  IsIntegral b2c4f7b6108c37809735ca127f59a1fe
+  NonNumBoundedType 10600870e0faf27aea4a62e0097d2097
+  NonNumDict f0ca47a632293eff9e2eb9a523136610
+  NonNumScalarType 3b519df15b732f21c2cd482151d11b85
+  NumScalarType 6acc6941d3123de00103f9c583fd6ce2
+  NumType 13909a3ca52b1a41105a7d98e1d63baf
+  PairTuple b47308804394be7e1f34db7591c0a9bf
+  ScalarType ab6372a7ff8e599731c2fa5da97173de
+  SingleTuple 02c34fbce3b33e7b428725bd42978f57
+  TupleType 80f35ed30c42e69f416a3f4776b90673
+  UnitTuple eae520607dd29fabf0b4e6abfa8934ce
+  floatingDict eccd4b5e93d76a53b7567fe35f0d1822
+  integralDict b945b5d6b027755a064e7b1803880f63
+  integralType a1a461d2ad76605e805cab71949dc557
+  nonNumDict b7147599aa6687c668932e8cd9711b21
+  scalarType 9a8981be29419f13a1d309f08289ab3b
+import  -/  base-4.9.1.0:Control.Exception a76dd9666251322fe34dbcca3a0817bf
+import  -/  base-4.9.1.0:Control.Monad a6784c5dab0d75c63dabec5a37843f98
+import  -/  base-4.9.1.0:Data.Bits d707ac81dd0124c7a7fb3234df2c8548
+import  -/  base-4.9.1.0:Data.Char 01433d23661edb6e5ef1536ef1e6774c
+import  -/  base-4.9.1.0:Data.Tuple 7dc4bbb45d2e69c991ffac438beeca11
+import  -/  base-4.9.1.0:Data.Type.Equality e58d97d060ef5a0f7906bf33d6e50df2
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Char 9d27e5fcb214fa9fb17cf295b3795fce
+import  -/  base-4.9.1.0:GHC.Enum 3811281f7b5f26da514529cf3ed44009
+import  -/  base-4.9.1.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.1.0:GHC.Float 33e2b9ffe427edd6a5c2fd6a3b26703c
+import  -/  base-4.9.1.0:GHC.IO eb504c57b397cf133849f8586f15dafb
+import  -/  base-4.9.1.0:GHC.IO.Unsafe 1c057c642b0e201f55a24585d3d94564
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:System.IO.Unsafe 1e3c5b8dd8cf6850ae43cce967bb46cd
+import  -/  base-4.9.1.0:Text.Printf 6701574960cd2af960fec5d940be0c25
+import  -/  base-4.9.1.0:Unsafe.Coerce 04e2cc33f45c897c8f9bc8758fbe5bc2
+import  -/  deepseq-1.4.2.0@deepseq-1.4.2.0:Control.DeepSeq 3b9ddb93b8ec16cf9a98d6096b46c390
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+addDependentFile "/home/pwoh/.stack/programs/x86_64-linux-dkd1ce2ff9c9560b648268df668d177711/ghc-8.0.2/lib/ghc-8.0.2/include/ghcversion.h"
+addDependentFile ".stack-work/dist/x86_64-linux-dkd1ce2ff9c9560b648268df668d177711/Cabal-1.24.2.0/build/autogen/cabal_macros.h"
+addDependentFile "/usr/include/stdc-predef.h"
+7355390ac1aa2dbef28921c722ccfd12
+  $sdumpSimplStats1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (# s, GHC.Tuple.() #)) -}
+f6602e2e9b0f0835e19d8d35f2071eeb
+  $tc'Clamp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9015448132243878338##
+                   10433387734398193828##
+                   Data.Array.Accelerate.Interpreter.$trModule
+                   Data.Array.Accelerate.Interpreter.$tc'Clamp1) -}
+206f82c6921d23f2c1b72fc0f3162ed3
+  $tc'Clamp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Clamp"#) -}
+c3c084053794c1af004c5a66845e7e91
+  $tc'Constant :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9023461175728992262##
+                   2589169255169854032##
+                   Data.Array.Accelerate.Interpreter.$trModule
+                   Data.Array.Accelerate.Interpreter.$tc'Constant1) -}
+5a8b2e9e4857e8692eb925f8883ccb8d
+  $tc'Constant1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Constant"#) -}
+5215fe63469d78b83f124c697db5f64d
+  $tc'Delayed :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12174295518844531684##
+                   2170110282829352##
+                   Data.Array.Accelerate.Interpreter.$trModule
+                   Data.Array.Accelerate.Interpreter.$tc'Delayed1) -}
+6efa725ad97d95bcddaf21dbf47055d8
+  $tc'Delayed1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Delayed"#) -}
+5016d7ef18957310536a505f395e393d
+  $tc'Function :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6390885075992310848##
+                   7134073504865262100##
+                   Data.Array.Accelerate.Interpreter.$trModule
+                   Data.Array.Accelerate.Interpreter.$tc'Function1) -}
+f3b1594dc907136e2d49f2599a9d9460
+  $tc'Function1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Function"#) -}
+25a9246fe7bf6af936f24b1d075030bb
+  $tc'Mirror :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10023410944693362869##
+                   7953990345752746562##
+                   Data.Array.Accelerate.Interpreter.$trModule
+                   Data.Array.Accelerate.Interpreter.$tc'Mirror1) -}
+ff1c1e755387a6a7d33e7c1e7b028bd3
+  $tc'Mirror1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Mirror"#) -}
+f594d8bf49e5341a606455d1902ce9ed
+  $tc'Wrap :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2991102469806249530##
+                   17345956106819836653##
+                   Data.Array.Accelerate.Interpreter.$trModule
+                   Data.Array.Accelerate.Interpreter.$tc'Wrap1) -}
+9b4633b09797a79c0efbaf17dfee724f
+  $tc'Wrap1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Wrap"#) -}
+e374c7fb0a21e8f69d0beb96e2a65238
+  $tcBoundary :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3532907494080635201##
+                   762134134236239899##
+                   Data.Array.Accelerate.Interpreter.$trModule
+                   Data.Array.Accelerate.Interpreter.$tcBoundary1) -}
+3946eab5f59d7ccce9843d12893bba13
+  $tcBoundary1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Boundary"#) -}
+05689266d824bb10eddb0a4549f3f084
+  $tcDelayed :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3771735502073551873##
+                   14274565051619155726##
+                   Data.Array.Accelerate.Interpreter.$trModule
+                   Data.Array.Accelerate.Interpreter.$tcDelayed1) -}
+ff83da46938d965659a888bfdca9a8c7
+  $tcDelayed1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Delayed"#) -}
+d0837c5ca45d0b40a0302aae7df6c72b
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Data.Array.Accelerate.Interpreter.$trModule2
+                   Data.Array.Accelerate.Interpreter.$trModule1) -}
+e7c02bc5295aff776260c6a1226fe416
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Data.Array.Accelerate.Interpreter"#) -}
+326f2c6e2f595cd428dd501c36bf7238
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw"#) -}
+84c766793d4b5bc9c515e12e20c27b11
+  type role Boundary nominal
+  data Boundary t where
+    Clamp :: Boundary t
+    Mirror :: Boundary t
+    Wrap :: Boundary t
+    Constant :: Data.Array.Accelerate.Array.Sugar.Elt t1 =>
+                (Data.Array.Accelerate.Array.Sugar.EltRepr t1)
+                -> Boundary (Data.Array.Accelerate.Array.Sugar.Array sh t1)
+    Function :: (Data.Array.Accelerate.Array.Sugar.Shape sh,
+                 Data.Array.Accelerate.Array.Sugar.Elt e) =>
+                (sh -> e)
+                -> Boundary (Data.Array.Accelerate.Array.Sugar.Array sh e)
+4173a1e211eb0160f97486f0921820df
+  type role Delayed nominal
+  data Delayed a where
+    Delayed :: (Data.Array.Accelerate.Array.Sugar.Shape sh,
+                Data.Array.Accelerate.Array.Sugar.Elt e) =>
+               sh -> (sh -> e) -> (GHC.Types.Int -> e)
+               -> Delayed (Data.Array.Accelerate.Array.Sugar.Array sh e)
+d9edb184dc5a54d7cfcf4b68ac1f3d14
+  type EvalAcc (acc :: * -> * -> *) =
+    forall aenv a.
+    acc aenv a -> Data.Array.Accelerate.AST.Val aenv -> a
+fd78b55e033d01c6c6a90e95e3e57e11
+  evalOpenAcc ::
+    Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc aenv a
+    -> Data.Array.Accelerate.AST.Val aenv -> a
+  {- Arity: 2, Strictness: <S,1*U><L,U> -}
+b4eff071e81fc115ef314bf0bba310e3
+  evalPrim :: Data.Array.Accelerate.AST.PrimFun p -> p
+  {- Arity: 1, Strictness: <S,1*U> -}
+411620985740928524752408b013c375
+  evalPrimConst :: Data.Array.Accelerate.AST.PrimConst a -> a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+ed7c16424ca4e244bb798f982ae7bde6
+  evalPrj :: Data.Array.Accelerate.Product.TupleIdx t e -> t -> e
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+cda31b2df9145fc3e5a8d4e2f46c90b5
+  run ::
+    Data.Array.Accelerate.Array.Sugar.Arrays a =>
+    Data.Array.Accelerate.Smart.Acc a -> a
+  {- Arity: 2, Strictness: <L,U(U,U,U,U,U,U)><L,1*U>,
+     Unfolding: (\ @ a
+                   ($dArrays :: Data.Array.Accelerate.Array.Sugar.Arrays a)
+                   (a1 :: Data.Array.Accelerate.Smart.Acc a) ->
+                 case Data.Array.Accelerate.Trafo.$wconvertAccWith
+                        @ a
+                        $dArrays
+                        GHC.Types.True
+                        GHC.Types.True
+                        GHC.Types.True
+                        GHC.Types.True
+                        GHC.Types.False
+                        a1 of ww7 { Unit# ww8 ->
+                 case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ a
+                        (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                         case GHC.Prim.noDuplicate# s of s' { DEFAULT ->
+                         let {
+                           acc :: Data.Array.Accelerate.Trafo.Base.DelayedAcc a
+                           = Data.Array.Accelerate.Trafo.Base.Manifest @ () @ a ww8
+                         } in
+                         case Data.Array.Accelerate.Trafo.Base.rnfDelayedOpenAcc
+                                @ ()
+                                @ a
+                                acc of wild { () ->
+                         GHC.Prim.seq#
+                           @ a
+                           @ GHC.Prim.RealWorld
+                           (Data.Array.Accelerate.Interpreter.evalOpenAcc
+                              @ ()
+                              @ a
+                              acc
+                              Data.Array.Accelerate.AST.$WEmpty)
+                           s' } }) of ds { (#,#) ipv ipv1 ->
+                 ipv1 } }) -}
+7a3936e8c16066de6f78d1e82eda8546
+  run1 ::
+    (Data.Array.Accelerate.Array.Sugar.Arrays a,
+     Data.Array.Accelerate.Array.Sugar.Arrays b) =>
+    (Data.Array.Accelerate.Smart.Acc a
+     -> Data.Array.Accelerate.Smart.Acc b)
+    -> a -> b
+  {- Arity: 3, Strictness: <L,U(U,U,U,U,U,U)><L,U(U,U,U,U,U,U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Interpreter.run2
+                  `cast`
+                (forall (a :: <*>_N) (b :: <*>_N).
+                 <Data.Array.Accelerate.Array.Sugar.Arrays a>_R
+                 ->_R <Data.Array.Accelerate.Array.Sugar.Arrays b>_R
+                 ->_R <Data.Array.Accelerate.Smart.Acc a
+                       -> Data.Array.Accelerate.Smart.Acc b>_R
+                 ->_R Trans
+                          (Sub (Data.Array.Accelerate.Trafo.Sharing.D:R:AfunctionR(->)[0]
+                                    <Data.Array.Accelerate.Smart.Acc b>_N <a>_N))
+                          (<a>_R
+                           ->_R Sub (Data.Array.Accelerate.Trafo.Sharing.D:R:AfunctionRAcc[0]
+                                         <b>_N))) -}
+a018267eda17d0a3eb66091ae0872a4c
+  run2 ::
+    (Data.Array.Accelerate.Array.Sugar.Arrays a,
+     Data.Array.Accelerate.Array.Sugar.Arrays b) =>
+    (Data.Array.Accelerate.Smart.Acc a
+     -> Data.Array.Accelerate.Smart.Acc b)
+    -> Data.Array.Accelerate.Trafo.Sharing.AfunctionR
+         (Data.Array.Accelerate.Smart.Acc a
+          -> Data.Array.Accelerate.Smart.Acc b)
+  {- Arity: 3, Strictness: <L,U(U,U,U,U,U,U)><L,U(U,U,U,U,U,U)><L,U>,
+     Unfolding: (\ @ a
+                   @ b
+                   ($dArrays :: Data.Array.Accelerate.Array.Sugar.Arrays a)
+                   ($dArrays1 :: Data.Array.Accelerate.Array.Sugar.Arrays b)
+                   (eta :: Data.Array.Accelerate.Smart.Acc a
+                           -> Data.Array.Accelerate.Smart.Acc b) ->
+                 Data.Array.Accelerate.Interpreter.runN
+                   @ (Data.Array.Accelerate.Smart.Acc a
+                      -> Data.Array.Accelerate.Smart.Acc b)
+                   (\ @ aenv
+                      (eta1 :: Data.Array.Accelerate.Trafo.Sharing.Config)[OneShot]
+                      (eta2 :: Data.Array.Accelerate.Trafo.Sharing.Layout
+                                 aenv aenv)[OneShot]
+                      (eta3 :: Data.Array.Accelerate.Smart.Acc a
+                               -> Data.Array.Accelerate.Smart.Acc b)[OneShot] ->
+                    Data.Array.Accelerate.AST.Alam
+                      @ Data.Array.Accelerate.AST.OpenAcc
+                      @ aenv
+                      @ (a
+                         -> Data.Array.Accelerate.Trafo.Sharing.AfunctionR
+                              (Data.Array.Accelerate.Smart.Acc b))
+                      @ a
+                      @ (Data.Array.Accelerate.Trafo.Sharing.AfunctionR
+                           (Data.Array.Accelerate.Smart.Acc b))
+                      @~ <a
+                          -> Data.Array.Accelerate.Trafo.Sharing.AfunctionR
+                               (Data.Array.Accelerate.Smart.Acc b)>_N
+                      $dArrays
+                      (case Data.Array.Accelerate.Trafo.Sharing.$w$caconvert
+                              @ b
+                              $dArrays1
+                              @ (aenv, a)
+                              eta1
+                              (Data.Array.Accelerate.Trafo.Sharing.PushLayout
+                                 @ (aenv, a)
+                                 @ (aenv, a)
+                                 @ a
+                                 @ aenv
+                                 @~ <(aenv, a)>_N
+                                 (Data.Array.Accelerate.Array.Sugar.$p1Arrays @ a $dArrays)
+                                 (Data.Array.Accelerate.Trafo.Sharing.incLayout
+                                    @ aenv
+                                    @ aenv
+                                    @ a
+                                    eta2)
+                                 (Data.Array.Accelerate.AST.$WZeroIdx @ a @ aenv))
+                              (eta3
+                                 (Data.Array.Accelerate.Smart.Atag
+                                    @ Data.Array.Accelerate.Smart.Acc
+                                    @ Data.Array.Accelerate.Smart.Exp
+                                    @ a
+                                    $dArrays
+                                    (Data.Array.Accelerate.Trafo.Sharing.sizeLayout
+                                       @ aenv
+                                       @ aenv
+                                       eta2))
+                                   `cast`
+                                 (Sym (Data.Array.Accelerate.Smart.N:Acc[0]) <a>_N)) of ww { (#,#) ww1 ww2 ->
+                       (Data.Array.Accelerate.AST.Abody
+                          @ Data.Array.Accelerate.AST.OpenAcc
+                          @ (aenv, a)
+                          @ b
+                          ww1
+                          ww2)
+                         `cast`
+                       (Data.Array.Accelerate.AST.PreOpenAfun
+                          <Data.Array.Accelerate.AST.OpenAcc>_R
+                          <(aenv, a)>_N
+                          (Sym (Data.Array.Accelerate.Trafo.Sharing.D:R:AfunctionRAcc[0]
+                                    <b>_N)))_R }))
+                     `cast`
+                   (Trans
+                        (forall (aenv :: <*>_N).
+                         <Data.Array.Accelerate.Trafo.Sharing.Config>_R
+                         ->_R <Data.Array.Accelerate.Trafo.Sharing.Layout aenv aenv>_R
+                         ->_R <Data.Array.Accelerate.Smart.Acc a
+                               -> Data.Array.Accelerate.Smart.Acc b>_R
+                         ->_R (Data.Array.Accelerate.AST.PreOpenAfun
+                                 <Data.Array.Accelerate.AST.OpenAcc>_R
+                                 <aenv>_N
+                                 (Sym (Data.Array.Accelerate.Trafo.Sharing.D:R:AfunctionR(->)[0]
+                                           <Data.Array.Accelerate.Smart.Acc b>_N <a>_N)))_R)
+                        (Sym (Data.Array.Accelerate.Trafo.Sharing.N:Afunction[0]
+                                  <Data.Array.Accelerate.Smart.Acc a
+                                   -> Data.Array.Accelerate.Smart.Acc b>_N)))
+                   eta) -}
+7b6fdb4a8787ee424a999316b28e38c4
+  runN ::
+    Data.Array.Accelerate.Trafo.Sharing.Afunction f =>
+    f -> Data.Array.Accelerate.Trafo.Sharing.AfunctionR f
+  {- Arity: 2, Strictness: <C(C(C(S))),1*C1(C1(C1(U)))><L,U>,
+     Unfolding: (\ @ f
+                   ($dAfunction :: Data.Array.Accelerate.Trafo.Sharing.Afunction f)
+                   (f1 :: f) ->
+                 case Data.Array.Accelerate.Trafo.Fusion.convertOpenAfun
+                        @ ()
+                        @ (Data.Array.Accelerate.Trafo.Sharing.AfunctionR f)
+                        GHC.Types.True
+                        ($dAfunction
+                           `cast`
+                         (Data.Array.Accelerate.Trafo.Sharing.N:Afunction[0] <f>_N)
+                           @ ()
+                           Data.Array.Accelerate.Interpreter.runN1
+                           (Data.Array.Accelerate.Trafo.Sharing.$WEmptyLayout @ ())
+                           f1) of acc { DEFAULT ->
+                 case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ (Data.Array.Accelerate.Trafo.Base.DelayedOpenAfun
+                             () (Data.Array.Accelerate.Trafo.Sharing.AfunctionR f))
+                        (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                         case GHC.Prim.noDuplicate# s of s' { DEFAULT ->
+                         case Data.Array.Accelerate.AST.rnfPreOpenAfun
+                                @ Data.Array.Accelerate.Trafo.Base.DelayedOpenAcc
+                                @ ()
+                                @ (Data.Array.Accelerate.Trafo.Sharing.AfunctionR f)
+                                Data.Array.Accelerate.Trafo.Base.rnfDelayedOpenAcc
+                                acc of wild { () ->
+                         (# s', acc #) } }) of ds { (#,#) ipv ipv1 ->
+                 Data.Array.Accelerate.Interpreter.runN_eval
+                   @ ()
+                   @ (Data.Array.Accelerate.Trafo.Sharing.AfunctionR f)
+                   ipv1
+                   Data.Array.Accelerate.AST.$WEmpty } }) -}
+632f693b29c6b953c138a883f4bff443
+  runN1 :: Data.Array.Accelerate.Trafo.Sharing.Config
+  {- HasNoCafRefs,
+     Unfolding: (Data.Array.Accelerate.Trafo.Sharing.Config
+                   GHC.Types.True
+                   GHC.Types.True
+                   GHC.Types.True
+                   GHC.Types.True) -}
+0c00aa2043c2d3d1c0b7cf4ddf0dc3e4
+  runN_eval ::
+    Data.Array.Accelerate.Trafo.Base.DelayedOpenAfun aenv f
+    -> Data.Array.Accelerate.AST.Val aenv -> f
+  {- Arity: 2, Strictness: <S,1*U><L,U> -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

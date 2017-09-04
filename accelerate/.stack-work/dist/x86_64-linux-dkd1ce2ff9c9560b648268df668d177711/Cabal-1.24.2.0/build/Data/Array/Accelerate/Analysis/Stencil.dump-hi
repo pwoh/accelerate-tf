@@ -1,0 +1,341 @@
+
+==================== FINAL INTERFACE ====================
+2017-08-29 05:27:25.313243 UTC
+
+interface accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Analysis.Stencil 8002
+  interface hash: 5c728073ab848762201cb1a5277903ba
+  ABI hash: cdb6d159d9a020602183eb0ea3e19648
+  export-list hash: cd4f613e2323f7ec67859e1b3e6fc1fd
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: c58488cef971807ccc949283aabd74ec
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Data.Array.Accelerate.Analysis.Stencil.offsets
+  Data.Array.Accelerate.Analysis.Stencil.offsets2
+module dependencies: Data.Array.Accelerate.AST
+                     Data.Array.Accelerate.Array.Data
+                     Data.Array.Accelerate.Array.Representation
+                     Data.Array.Accelerate.Array.Sugar
+                     Data.Array.Accelerate.Array.Unique
+                     Data.Array.Accelerate.Debug.Flags
+                     Data.Array.Accelerate.Debug.Monitoring
+                     Data.Array.Accelerate.Debug.Trace Data.Array.Accelerate.Error
+                     Data.Array.Accelerate.Lifetime Data.Array.Accelerate.Product
+                     Data.Array.Accelerate.Type
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol
+                      integer-gmp-1.0.0.1 pretty-1.1.3.3@pretty-1.1.3.3
+                      template-haskell-2.11.1.0
+                      text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00
+                      unique-0@unique-0-9CJQKYGbqiDaFUmoekKeA
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu:Data.Orphans
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt:Data.Label.Point
+         hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable.Generic
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Show
+family instance modules: accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Data
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Representation
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Sugar
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Product
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Type
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+import  -/  Data.Array.Accelerate.AST 4907563d36aadcb5fe024fe0eaf42ffa
+  exports: 14f3cf8c02b472222e546556891c5be1
+  Fun 55ceff312de354690e32ea06e9f15707
+  OpenAcc d85164a68dcedbc8a54813dd240745cc
+  Stencil de90111747605bd959f975fe4292a7e7
+  StencilR 737d780221c2db7801f815b050dbdfdb
+  StencilRtup3 f9bfda3a57010314d2541176c31f5451
+  StencilRtup5 536c2a590c7915874ecd6dc32fa51871
+  StencilRtup7 b7fd5a416a2303da108ad0d405ea5b61
+  StencilRtup9 69d81c6119ed5a19fcb04f2a93567873
+  StencilRunit3 4c89693df8773dd5f878923dbe2e054e
+  StencilRunit5 c520085f46b52d062a3594f8d1da226a
+  StencilRunit7 d8aa2268fdad7cb1f79446037eafd7e2
+  StencilRunit9 fdd9e95791f5e7b4f3dd5b8894452fd9
+  stencil 5195e016607b58e7b02904ab42b1251d
+import  -/  Data.Array.Accelerate.Array.Sugar 1095a84a969562bd64b7800341e0d23c
+  exports: a6dd551b39ab2a3a217fc8c2a6979cd5
+  :. c223783565410a9b6198a1e17ba970e9
+  :. 78f23e81404aaf1e43268a71a575425c
+  Array 78f23e81404aaf1e43268a71a575425c
+  Shape 78f23e81404aaf1e43268a71a575425c
+  Z 58fea0448d1d85af1b349a305fb8b4d6
+  listToShape 097aa9b6b17cd9c2262925442e58a14c
+  shapeToList feba3f9c852caed796cf0dee05541085
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+c3af2762799c659059adfe6f2517be43
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Data.Array.Accelerate.Analysis.Stencil.$trModule2
+                   Data.Array.Accelerate.Analysis.Stencil.$trModule1) -}
+60bd2124bf0b3ab615883e7ec3c43617
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Data.Array.Accelerate.Analysis.Stencil"#) -}
+2029431437cefadeb4d505edc36943ee
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw"#) -}
+7bdbf703ab7552fc32501c386b189828
+  $woffsets :: Data.Array.Accelerate.AST.Stencil sh a stencil => [sh]
+  {- Arity: 1, Strictness: <S(SLLLS),U(1*U,A,A,A,1*U)>, Inline: [0],
+     Unfolding: (\ @ a
+                   @ b
+                   @ sh
+                   @ aenv
+                   @ stencil
+                   (w :: Data.Array.Accelerate.AST.Stencil sh a stencil) ->
+                 let {
+                   $dShape :: Data.Array.Accelerate.Array.Sugar.Shape sh
+                   = Data.Array.Accelerate.AST.$p1Stencil @ sh @ a @ stencil w
+                 } in
+                 case GHC.Types.HEq_sc
+                        @ GHC.Types.*
+                        @ GHC.Types.*
+                        @ (Data.Array.Accelerate.Array.Sugar.FullShape sh)
+                        @ sh
+                        (Data.Array.Accelerate.Array.Sugar.$p4Shape @ sh $dShape)
+                          `cast`
+                        (Data.Type.Equality.N:~[0]
+                             <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.FullShape
+                                                sh>_N <sh>_N) of cobox0 { DEFAULT ->
+                 case GHC.Types.HEq_sc
+                        @ GHC.Types.*
+                        @ GHC.Types.*
+                        @ (Data.Array.Accelerate.Array.Sugar.CoSliceShape sh)
+                        @ sh
+                        (Data.Array.Accelerate.Array.Sugar.$p5Shape @ sh $dShape)
+                          `cast`
+                        (Data.Type.Equality.N:~[0]
+                             <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.CoSliceShape
+                                                sh>_N <sh>_N) of cobox1 { DEFAULT ->
+                 case GHC.Types.HEq_sc
+                        @ GHC.Types.*
+                        @ GHC.Types.*
+                        @ (Data.Array.Accelerate.Array.Sugar.SliceShape sh)
+                        @ Data.Array.Accelerate.Array.Sugar.Z
+                        (Data.Array.Accelerate.Array.Sugar.$p6Shape @ sh $dShape)
+                          `cast`
+                        (Data.Type.Equality.N:~[0]
+                             <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.SliceShape
+                                                sh>_N <Data.Array.Accelerate.Array.Sugar.Z>_N) of cobox2 { DEFAULT ->
+                 Data.Array.Accelerate.Analysis.Stencil.positionsR
+                   @ sh
+                   @ a
+                   @ stencil
+                   (Data.Array.Accelerate.AST.stencil @ sh @ a @ stencil w) } } }) -}
+5de47d223880abba6e3769637a6014e5
+  $woffsets2 ::
+    (Data.Array.Accelerate.AST.Stencil sh a stencil1,
+     Data.Array.Accelerate.AST.Stencil sh b stencil2) =>
+    (# [sh], [sh] #)
+  {- Arity: 2,
+     Strictness: <S(SLLLL),U(1*U,A,A,A,1*U)><S(SLLLL),U(1*U,A,A,A,1*U)>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ b
+                   @ c
+                   @ sh
+                   @ aenv
+                   @ stencil1
+                   @ stencil2
+                   (w :: Data.Array.Accelerate.AST.Stencil sh a stencil1)
+                   (w1 :: Data.Array.Accelerate.AST.Stencil sh b stencil2) ->
+                 let {
+                   $dShape :: Data.Array.Accelerate.Array.Sugar.Shape sh
+                   = Data.Array.Accelerate.AST.$p1Stencil @ sh @ b @ stencil2 w1
+                 } in
+                 case GHC.Types.HEq_sc
+                        @ GHC.Types.*
+                        @ GHC.Types.*
+                        @ (Data.Array.Accelerate.Array.Sugar.FullShape sh)
+                        @ sh
+                        (Data.Array.Accelerate.Array.Sugar.$p4Shape @ sh $dShape)
+                          `cast`
+                        (Data.Type.Equality.N:~[0]
+                             <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.FullShape
+                                                sh>_N <sh>_N) of cobox0 { DEFAULT ->
+                 case GHC.Types.HEq_sc
+                        @ GHC.Types.*
+                        @ GHC.Types.*
+                        @ (Data.Array.Accelerate.Array.Sugar.CoSliceShape sh)
+                        @ sh
+                        (Data.Array.Accelerate.Array.Sugar.$p5Shape @ sh $dShape)
+                          `cast`
+                        (Data.Type.Equality.N:~[0]
+                             <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.CoSliceShape
+                                                sh>_N <sh>_N) of cobox1 { DEFAULT ->
+                 case GHC.Types.HEq_sc
+                        @ GHC.Types.*
+                        @ GHC.Types.*
+                        @ (Data.Array.Accelerate.Array.Sugar.SliceShape sh)
+                        @ Data.Array.Accelerate.Array.Sugar.Z
+                        (Data.Array.Accelerate.Array.Sugar.$p6Shape @ sh $dShape)
+                          `cast`
+                        (Data.Type.Equality.N:~[0]
+                             <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.SliceShape
+                                                sh>_N <Data.Array.Accelerate.Array.Sugar.Z>_N) of cobox2 { DEFAULT ->
+                 let {
+                   $dShape1 :: Data.Array.Accelerate.Array.Sugar.Shape sh
+                   = Data.Array.Accelerate.AST.$p1Stencil @ sh @ a @ stencil1 w
+                 } in
+                 case GHC.Types.HEq_sc
+                        @ GHC.Types.*
+                        @ GHC.Types.*
+                        @ (Data.Array.Accelerate.Array.Sugar.FullShape sh)
+                        @ sh
+                        (Data.Array.Accelerate.Array.Sugar.$p4Shape @ sh $dShape1)
+                          `cast`
+                        (Data.Type.Equality.N:~[0]
+                             <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.FullShape
+                                                sh>_N <sh>_N) of cobox3 { DEFAULT ->
+                 case GHC.Types.HEq_sc
+                        @ GHC.Types.*
+                        @ GHC.Types.*
+                        @ (Data.Array.Accelerate.Array.Sugar.CoSliceShape sh)
+                        @ sh
+                        (Data.Array.Accelerate.Array.Sugar.$p5Shape @ sh $dShape1)
+                          `cast`
+                        (Data.Type.Equality.N:~[0]
+                             <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.CoSliceShape
+                                                sh>_N <sh>_N) of cobox4 { DEFAULT ->
+                 case GHC.Types.HEq_sc
+                        @ GHC.Types.*
+                        @ GHC.Types.*
+                        @ (Data.Array.Accelerate.Array.Sugar.SliceShape sh)
+                        @ Data.Array.Accelerate.Array.Sugar.Z
+                        (Data.Array.Accelerate.Array.Sugar.$p6Shape @ sh $dShape1)
+                          `cast`
+                        (Data.Type.Equality.N:~[0]
+                             <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.SliceShape
+                                                sh>_N <Data.Array.Accelerate.Array.Sugar.Z>_N) of cobox5 { DEFAULT ->
+                 (# Data.Array.Accelerate.Analysis.Stencil.positionsR
+                      @ sh
+                      @ a
+                      @ stencil1
+                      (Data.Array.Accelerate.AST.stencil @ sh @ a @ stencil1 w),
+                    Data.Array.Accelerate.Analysis.Stencil.positionsR
+                      @ sh
+                      @ b
+                      @ stencil2
+                      (Data.Array.Accelerate.AST.stencil
+                         @ sh
+                         @ b
+                         @ stencil2
+                         w1) #) } } } } } }) -}
+61defb052d16c6c9dffb8240e5e74bb5
+  offsets ::
+    Data.Array.Accelerate.AST.Stencil sh a stencil =>
+    Data.Array.Accelerate.AST.Fun aenv (stencil -> b)
+    -> Data.Array.Accelerate.AST.OpenAcc
+         aenv (Data.Array.Accelerate.Array.Sugar.Array sh a)
+    -> [sh]
+  {- Arity: 3, Strictness: <S(SLLLS),U(1*U,A,A,A,1*U)><L,A><L,A>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, True)
+                (\ @ a
+                   @ b
+                   @ sh
+                   @ aenv
+                   @ stencil
+                   (w :: Data.Array.Accelerate.AST.Stencil sh a stencil)
+                   (w1 :: Data.Array.Accelerate.AST.Fun aenv (stencil -> b))
+                   (w2 :: Data.Array.Accelerate.AST.OpenAcc
+                            aenv (Data.Array.Accelerate.Array.Sugar.Array sh a)) ->
+                 Data.Array.Accelerate.Analysis.Stencil.$woffsets
+                   @ a
+                   @ b
+                   @ sh
+                   @ aenv
+                   @ stencil
+                   w) -}
+1503e7208d8f6bdbd49641c8a610fc32
+  offsets2 ::
+    (Data.Array.Accelerate.AST.Stencil sh a stencil1,
+     Data.Array.Accelerate.AST.Stencil sh b stencil2) =>
+    Data.Array.Accelerate.AST.Fun aenv (stencil1 -> stencil2 -> c)
+    -> Data.Array.Accelerate.AST.OpenAcc
+         aenv (Data.Array.Accelerate.Array.Sugar.Array sh a)
+    -> Data.Array.Accelerate.AST.OpenAcc
+         aenv (Data.Array.Accelerate.Array.Sugar.Array sh b)
+    -> ([sh], [sh])
+  {- Arity: 5,
+     Strictness: <S(SLLLL),U(1*U,A,A,A,1*U)><S(SLLLL),U(1*U,A,A,A,1*U)><L,A><L,A><L,A>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (5, True, False)
+                (\ @ a
+                   @ b
+                   @ c
+                   @ sh
+                   @ aenv
+                   @ stencil1
+                   @ stencil2
+                   (w :: Data.Array.Accelerate.AST.Stencil sh a stencil1)
+                   (w1 :: Data.Array.Accelerate.AST.Stencil sh b stencil2)
+                   (w2 :: Data.Array.Accelerate.AST.Fun
+                            aenv (stencil1 -> stencil2 -> c))
+                   (w3 :: Data.Array.Accelerate.AST.OpenAcc
+                            aenv (Data.Array.Accelerate.Array.Sugar.Array sh a))
+                   (w4 :: Data.Array.Accelerate.AST.OpenAcc
+                            aenv (Data.Array.Accelerate.Array.Sugar.Array sh b)) ->
+                 case Data.Array.Accelerate.Analysis.Stencil.$woffsets2
+                        @ a
+                        @ b
+                        @ c
+                        @ sh
+                        @ aenv
+                        @ stencil1
+                        @ stencil2
+                        w
+                        w1 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+71cfefa90daacd064b10091b3e4096a2
+  positionsR :: Data.Array.Accelerate.AST.StencilR sh e pat -> [sh]
+  {- Arity: 1, Strictness: <S,1*U> -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

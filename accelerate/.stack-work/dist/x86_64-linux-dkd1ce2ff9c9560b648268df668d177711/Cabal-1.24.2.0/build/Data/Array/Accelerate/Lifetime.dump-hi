@@ -1,0 +1,454 @@
+
+==================== FINAL INTERFACE ====================
+2017-08-29 05:26:54.352525 UTC
+
+interface accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Lifetime 8002
+  interface hash: 50fb1c5ddd2ea5633ef497a3dfd45aac
+  ABI hash: dccc4581e69e69822b307d39d332cf71
+  export-list hash: 9c5e91865914f3275ef494bdd0dc57ea
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 743818d107f2f57898d19a638aca1287
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Data.Array.Accelerate.Lifetime.addFinalizer
+  Data.Array.Accelerate.Lifetime.finalize
+  Data.Array.Accelerate.Lifetime.mkWeak
+  Data.Array.Accelerate.Lifetime.mkWeakPtr
+  Data.Array.Accelerate.Lifetime.newLifetime
+  Data.Array.Accelerate.Lifetime.touchLifetime
+  Data.Array.Accelerate.Lifetime.unsafeGetValue
+  Data.Array.Accelerate.Lifetime.withLifetime
+  Data.Array.Accelerate.Lifetime.Lifetime{Data.Array.Accelerate.Lifetime.Lifetime}
+module dependencies:
+package dependencies: base-4.9.1.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:Data.Function 7aca86bfbd92366def5f260e30cb2628
+import  -/  base-4.9.1.0:Data.IORef 71c87b0b25a8bca3e3f4497725f5e543
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.IORef 306bd532f2f3b000347cbe6316adc20e
+import  -/  base-4.9.1.0:GHC.STRef b3a727731f236531861bcdc8c6db5a21
+import  -/  base-4.9.1.0:GHC.Weak d858f2ea485b32b834c9359490c9096f
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Prim 00000000000000000000000000000000
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+addDependentFile "/home/pwoh/.stack/programs/x86_64-linux-dkd1ce2ff9c9560b648268df668d177711/ghc-8.0.2/lib/ghc-8.0.2/include/ghcversion.h"
+addDependentFile ".stack-work/dist/x86_64-linux-dkd1ce2ff9c9560b648268df668d177711/Cabal-1.24.2.0/build/autogen/cabal_macros.h"
+addDependentFile "/usr/include/stdc-predef.h"
+f965195601055a843cf8373df4a5b9f8
+  $fEqLifetime ::
+    GHC.Classes.Eq a =>
+    GHC.Classes.Eq (Data.Array.Accelerate.Lifetime.Lifetime a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dEq :: GHC.Classes.Eq a).
+                  @ (Data.Array.Accelerate.Lifetime.Lifetime a)
+                  (Data.Array.Accelerate.Lifetime.$fEqLifetime_$c== @ a $dEq)
+                  (Data.Array.Accelerate.Lifetime.$fEqLifetime_$c/= @ a $dEq) -}
+f965195601055a843cf8373df4a5b9f8
+  $fEqLifetime_$c/= ::
+    GHC.Classes.Eq a =>
+    Data.Array.Accelerate.Lifetime.Lifetime a
+    -> Data.Array.Accelerate.Lifetime.Lifetime a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)><L,U><L,U>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (x :: Data.Array.Accelerate.Lifetime.Lifetime a)
+                   (y :: Data.Array.Accelerate.Lifetime.Lifetime a) ->
+                 GHC.Classes.not
+                   (Data.Array.Accelerate.Lifetime.$fEqLifetime_$c== @ a $dEq x y)) -}
+f965195601055a843cf8373df4a5b9f8
+  $fEqLifetime_$c== ::
+    GHC.Classes.Eq a =>
+    Data.Array.Accelerate.Lifetime.Lifetime a
+    -> Data.Array.Accelerate.Lifetime.Lifetime a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*U(A,A,1*U)><L,1*U(A,A,1*U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (eta :: Data.Array.Accelerate.Lifetime.Lifetime a)
+                   (eta1 :: Data.Array.Accelerate.Lifetime.Lifetime a) ->
+                 GHC.Classes.==
+                   @ a
+                   $dEq
+                   (case eta of wild { Data.Array.Accelerate.Lifetime.Lifetime dt dt1 a1 ->
+                    a1 })
+                   (case eta1 of wild { Data.Array.Accelerate.Lifetime.Lifetime dt dt1 a1 ->
+                    a1 })) -}
+aa745d943788af2a7ef0463970c7e32c
+  $tc'Lifetime :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9941815306366497025##
+                   11810759488602257615##
+                   Data.Array.Accelerate.Lifetime.$trModule
+                   Data.Array.Accelerate.Lifetime.$tc'Lifetime1) -}
+aefdecf3e4a18a736ee220ca8f92c604
+  $tc'Lifetime1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Lifetime"#) -}
+068c6f00406112911217d5575e0d459a
+  $tcLifetime :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11308716214050350369##
+                   17652538940676163302##
+                   Data.Array.Accelerate.Lifetime.$trModule
+                   Data.Array.Accelerate.Lifetime.$tcLifetime1) -}
+3fe560e0f74a8dd0fa2a15af88b29384
+  $tcLifetime1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Lifetime"#) -}
+bc9d4709cfbc09b6dbf682ef5775b202
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Data.Array.Accelerate.Lifetime.$trModule2
+                   Data.Array.Accelerate.Lifetime.$trModule1) -}
+d1333d1ef7886308bbf5d67d95612875
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Data.Array.Accelerate.Lifetime"#) -}
+535ed4b181c9125e4d1d06308e157542
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw"#) -}
+fbaea07585f5e9e716f8224343411119
+  $wmkWeak ::
+    GHC.Prim.MutVar# GHC.Prim.RealWorld [GHC.Types.IO ()]
+    -> GHC.Prim.Weak# Data.Array.Accelerate.Lifetime.LTF
+    -> v
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Weak.Weak v #)
+  {- Arity: 4, HasNoCafRefs, Strictness: <S,U><L,A><L,U><S,U>,
+     Inline: [0],
+     Unfolding: (\ @ k
+                   @ v
+                   (ww :: GHC.Prim.MutVar# GHC.Prim.RealWorld [GHC.Types.IO ()])
+                   (ww1 :: GHC.Prim.Weak# Data.Array.Accelerate.Lifetime.LTF)
+                   (w :: v)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.mkWeak#
+                        @ 'GHC.Types.PtrRepUnlifted
+                        @ (GHC.Prim.MutVar# GHC.Prim.RealWorld [GHC.Types.IO ()])
+                        @ v
+                        @ ()
+                        ww
+                        w
+                        (\ (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                         case GHC.Prim.atomicModifyMutVar#
+                                @ GHC.Prim.RealWorld
+                                @ [GHC.Types.IO ()]
+                                @ ([GHC.Types.IO ()], [GHC.Types.IO ()])
+                                @ [GHC.Types.IO ()]
+                                ww
+                                Data.Array.Accelerate.Lifetime.finalize3
+                                eta of ds1 { (#,#) ipv ipv1 ->
+                         Data.Array.Accelerate.Lifetime.mkWeak2 ipv1 ipv })
+                        w1 of ds { (#,#) ipv ipv1 ->
+                 (# ipv, GHC.Weak.Weak @ v ipv1 #) }) -}
+c73f855a6fda4a25eb9698fe08e14d5b
+  type LTF = GHC.IORef.IORef [GHC.Types.IO ()]
+f965195601055a843cf8373df4a5b9f8
+  data Lifetime a
+    = Lifetime ! {-# UNPACK #-}(GHC.IORef.N:IORef[0] <[GHC.Types.IO
+                                                         ()]>_N)Data.Array.Accelerate.Lifetime.LTF
+               {-# UNPACK #-}(GHC.Weak.Weak Data.Array.Accelerate.Lifetime.LTF)
+               a
+302d7a434e6192ab1f3b8121adcad03b
+  addFinalizer ::
+    Data.Array.Accelerate.Lifetime.Lifetime a
+    -> GHC.Types.IO () -> GHC.Types.IO ()
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(SLL),1*U(U,A,A)><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Lifetime.addFinalizer1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Data.Array.Accelerate.Lifetime.Lifetime a>_R
+                 ->_R <GHC.Types.IO ()>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+2a79146711128343ecd91a89b0e6f1e1
+  addFinalizer1 ::
+    Data.Array.Accelerate.Lifetime.Lifetime a
+    -> GHC.Types.IO ()
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(SLL),1*U(U,A,A)><L,U><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (ds :: Data.Array.Accelerate.Lifetime.Lifetime a)
+                   (f :: GHC.Types.IO ())
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case ds of wild { Data.Array.Accelerate.Lifetime.Lifetime dt dt1 ds1 ->
+                 case GHC.Prim.atomicModifyMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ [GHC.Types.IO ()]
+                        @ ([GHC.Types.IO ()], ())
+                        @ ()
+                        dt
+                        (\ (a1 :: [GHC.Types.IO ()]) ->
+                         (GHC.Types.: @ (GHC.Types.IO ()) f a1, GHC.Tuple.()))
+                        eta of ds2 { (#,#) ipv ipv1 ->
+                 case ipv1 of b1 { () -> (# ipv, GHC.Tuple.() #) } } }) -}
+330c54ace4d34f3e29841619d2595eff
+  finalize ::
+    Data.Array.Accelerate.Lifetime.Lifetime a -> GHC.Types.IO ()
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(SLL),1*U(U,A,A)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Lifetime.finalize1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Data.Array.Accelerate.Lifetime.Lifetime a>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+4e5ea0050cbbe291ba65bdd023a5d0f8
+  finalize1 ::
+    Data.Array.Accelerate.Lifetime.Lifetime a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(SLL),1*U(U,A,A)><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   (w :: Data.Array.Accelerate.Lifetime.Lifetime a)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { Data.Array.Accelerate.Lifetime.Lifetime ww1 ww2 ww3 ->
+                 case GHC.Prim.atomicModifyMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ [GHC.Types.IO ()]
+                        @ ([GHC.Types.IO ()], [GHC.Types.IO ()])
+                        @ [GHC.Types.IO ()]
+                        ww1
+                        Data.Array.Accelerate.Lifetime.finalize3
+                        w1 of ds1 { (#,#) ipv ipv1 ->
+                 Data.Array.Accelerate.Lifetime.finalize2 ipv1 ipv } }) -}
+83a033beb71e7cd2f80424f669b3887a
+  finalize2 ::
+    [GHC.Types.IO ()]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,U> -}
+400c4e75a7e23b1ae8bf3166738d991c
+  finalize3 ::
+    [GHC.Types.IO ()] -> ([GHC.Types.IO ()], [GHC.Types.IO ()])
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ (a1 :: [GHC.Types.IO ()]) ->
+                 (GHC.Types.[] @ (GHC.Types.IO ()), a1)) -}
+9b569a5cef186afe8ac403b1907e8987
+  mkWeak ::
+    Data.Array.Accelerate.Lifetime.Lifetime k
+    -> v -> GHC.Types.IO (GHC.Weak.Weak v)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(SLL),1*U(U,A,A)><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Lifetime.mkWeak1
+                  `cast`
+                (forall (k :: <*>_N) (v :: <*>_N).
+                 <Data.Array.Accelerate.Lifetime.Lifetime k>_R
+                 ->_R <v>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <GHC.Weak.Weak v>_R)) -}
+9c81afa75bbeb95581d626c16eba3f46
+  mkWeak1 ::
+    Data.Array.Accelerate.Lifetime.Lifetime k
+    -> v
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Weak.Weak v #)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(SLL),1*U(U,A,A)><L,U><S,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ k
+                   @ v
+                   (w :: Data.Array.Accelerate.Lifetime.Lifetime k)
+                   (w1 :: v)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { Data.Array.Accelerate.Lifetime.Lifetime ww1 ww2 ww3 ->
+                 Data.Array.Accelerate.Lifetime.$wmkWeak @ k @ v ww1 ww2 w1 w2 }) -}
+eadb72172a42311a611e2be76cc9b57a
+  mkWeak2 ::
+    [GHC.Types.IO ()]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,U> -}
+48a78e1699dbec7d638e8ef70c9369cc
+  mkWeakPtr ::
+    Data.Array.Accelerate.Lifetime.Lifetime a
+    -> GHC.Types.IO
+         (GHC.Weak.Weak (Data.Array.Accelerate.Lifetime.Lifetime a))
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U(U,U,U)>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Lifetime.mkWeakPtr1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Data.Array.Accelerate.Lifetime.Lifetime a>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <GHC.Weak.Weak (Data.Array.Accelerate.Lifetime.Lifetime a)>_R)) -}
+e27d2a7469e352a5faf0f4bad709be12
+  mkWeakPtr1 ::
+    Data.Array.Accelerate.Lifetime.Lifetime a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          GHC.Weak.Weak (Data.Array.Accelerate.Lifetime.Lifetime a) #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U(U,U,U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a
+                   (l :: Data.Array.Accelerate.Lifetime.Lifetime a)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Data.Array.Accelerate.Lifetime.mkWeak1
+                   @ a
+                   @ (Data.Array.Accelerate.Lifetime.Lifetime a)
+                   l
+                   l
+                   eta) -}
+5130d6f6181091110a2e4a1e8d45a97e
+  newLifetime ::
+    a -> GHC.Types.IO (Data.Array.Accelerate.Lifetime.Lifetime a)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Lifetime.newLifetime1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <a>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <Data.Array.Accelerate.Lifetime.Lifetime a>_R)) -}
+c73c06408b7bb8704b9274a2cfe60b2a
+  newLifetime1 ::
+    a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Array.Accelerate.Lifetime.Lifetime a #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,U>,
+     Unfolding: (\ @ a
+                   (a1 :: a)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newMutVar#
+                        @ [GHC.Types.IO ()]
+                        @ GHC.Prim.RealWorld
+                        (GHC.Types.[] @ (GHC.Types.IO ()))
+                        eta of ds { (#,#) ipv ipv1 ->
+                 case GHC.Prim.mkWeak#
+                        @ 'GHC.Types.PtrRepUnlifted
+                        @ (GHC.Prim.MutVar# GHC.Prim.RealWorld [GHC.Types.IO ()])
+                        @ (GHC.IORef.IORef [GHC.Types.IO ()])
+                        @ ()
+                        ipv1
+                        (GHC.STRef.STRef @ GHC.Prim.RealWorld @ [GHC.Types.IO ()] ipv1)
+                          `cast`
+                        (Sym (GHC.IORef.N:IORef[0]) <[GHC.Types.IO ()]>_N)
+                        (\ (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                         case GHC.Prim.atomicModifyMutVar#
+                                @ GHC.Prim.RealWorld
+                                @ [GHC.Types.IO ()]
+                                @ ([GHC.Types.IO ()], [GHC.Types.IO ()])
+                                @ [GHC.Types.IO ()]
+                                ipv1
+                                Data.Array.Accelerate.Lifetime.finalize3
+                                eta1 of ds1 { (#,#) ipv2 ipv3 ->
+                         Data.Array.Accelerate.Lifetime.newLifetime2 ipv3 ipv2 })
+                        ipv of ds1 { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    Data.Array.Accelerate.Lifetime.Lifetime @ a ipv1 ipv3 a1 #) } }) -}
+20bf5f659c2da9b2066093cf7fe5b43c
+  newLifetime2 ::
+    [GHC.Types.IO ()]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,U> -}
+1555c9389963103b270313cf7151af6c
+  touchLifetime ::
+    Data.Array.Accelerate.Lifetime.Lifetime a -> GHC.Types.IO ()
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U(U,A,A)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Lifetime.touchLifetime1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Data.Array.Accelerate.Lifetime.Lifetime a>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+eab6323705cf3b5f7feeb3dce00be676
+  touchLifetime1 ::
+    Data.Array.Accelerate.Lifetime.Lifetime a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U(U,A,A)><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   (ds :: Data.Array.Accelerate.Lifetime.Lifetime a)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case ds of wild { Data.Array.Accelerate.Lifetime.Lifetime dt dt1 ds1 ->
+                 case GHC.Prim.touch#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ (GHC.IORef.IORef [GHC.Types.IO ()])
+                        (GHC.STRef.STRef @ GHC.Prim.RealWorld @ [GHC.Types.IO ()] dt)
+                          `cast`
+                        (Sym (GHC.IORef.N:IORef[0]) <[GHC.Types.IO ()]>_N)
+                        eta of s' { DEFAULT ->
+                 (# s', GHC.Tuple.() #) } }) -}
+be7118e9efbf727dc692f066b569d714
+  unsafeGetValue :: Data.Array.Accelerate.Lifetime.Lifetime a -> a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (ds :: Data.Array.Accelerate.Lifetime.Lifetime a) ->
+                 case ds of wild { Data.Array.Accelerate.Lifetime.Lifetime dt dt1 a1 ->
+                 a1 }) -}
+918c885b5f4582e49bf3f9d9efbcaa66
+  withLifetime ::
+    Data.Array.Accelerate.Lifetime.Lifetime a
+    -> (a -> GHC.Types.IO b) -> GHC.Types.IO b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S,1*U(U,A,U)><C(C(S(SL))),1*C1(C1(U(U,U)))><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Lifetime.withLifetime1
+                  `cast`
+                (forall (a :: <*>_N) (b :: <*>_N).
+                 <Data.Array.Accelerate.Lifetime.Lifetime a>_R
+                 ->_R <a -> GHC.Types.IO b>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <b>_R)) -}
+bf5137c011e8209d57ef5b4d783d3d46
+  withLifetime1 ::
+    Data.Array.Accelerate.Lifetime.Lifetime a
+    -> (a -> GHC.Types.IO b)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, b #)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S,1*U(U,A,U)><C(C(S(SL))),1*C1(C1(U(U,U)))><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ b
+                   (ds :: Data.Array.Accelerate.Lifetime.Lifetime a)
+                   (f :: a -> GHC.Types.IO b)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case ds of wild { Data.Array.Accelerate.Lifetime.Lifetime dt dt1 a1 ->
+                 case (f a1) `cast` (GHC.Types.N:IO[0] <b>_R)
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.Prim.touch#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ (GHC.IORef.IORef [GHC.Types.IO ()])
+                        (GHC.STRef.STRef @ GHC.Prim.RealWorld @ [GHC.Types.IO ()] dt)
+                          `cast`
+                        (Sym (GHC.IORef.N:IORef[0]) <[GHC.Types.IO ()]>_N)
+                        ipv of s' { DEFAULT ->
+                 (# s', ipv1 #) } } }) -}
+instance GHC.Classes.Eq [Data.Array.Accelerate.Lifetime.Lifetime]
+  = Data.Array.Accelerate.Lifetime.$fEqLifetime
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

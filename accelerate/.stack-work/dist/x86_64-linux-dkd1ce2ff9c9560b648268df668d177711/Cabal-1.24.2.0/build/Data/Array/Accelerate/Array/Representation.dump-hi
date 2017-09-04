@@ -1,0 +1,1346 @@
+
+==================== FINAL INTERFACE ====================
+2017-08-29 05:26:56.405045 UTC
+
+interface accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Representation [family instance module] 8002
+  interface hash: ddf25eca543a45f62c5cf39af7ad1433
+  ABI hash: 7ecc085451773e8538fbcc949c8f13b8
+  export-list hash: 572b3ca30546aa8fe21350a43e265cdd
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 953252f2cc25939c3046a4b9c4e4dcc2
+  sig of: Nothing
+  used TH splices: True
+  where
+exports:
+  Data.Array.Accelerate.Array.Representation.enumSlices
+  Data.Array.Accelerate.Array.Representation.sliceShape
+  Data.Array.Accelerate.Array.Representation.Shape{Data.Array.Accelerate.Array.Representation.empty Data.Array.Accelerate.Array.Representation.fromIndex Data.Array.Accelerate.Array.Representation.ignore Data.Array.Accelerate.Array.Representation.intersect Data.Array.Accelerate.Array.Representation.iter Data.Array.Accelerate.Array.Representation.iter1 Data.Array.Accelerate.Array.Representation.listToShape Data.Array.Accelerate.Array.Representation.rangeToShape Data.Array.Accelerate.Array.Representation.rank Data.Array.Accelerate.Array.Representation.shapeToList Data.Array.Accelerate.Array.Representation.shapeToRange Data.Array.Accelerate.Array.Representation.size Data.Array.Accelerate.Array.Representation.toIndex Data.Array.Accelerate.Array.Representation.union}
+  Data.Array.Accelerate.Array.Representation.Slice{Data.Array.Accelerate.Array.Representation.CoSliceShape Data.Array.Accelerate.Array.Representation.FullShape Data.Array.Accelerate.Array.Representation.SliceShape Data.Array.Accelerate.Array.Representation.sliceIndex}
+  Data.Array.Accelerate.Array.Representation.SliceIndex{Data.Array.Accelerate.Array.Representation.SliceAll Data.Array.Accelerate.Array.Representation.SliceFixed Data.Array.Accelerate.Array.Representation.SliceNil}
+module dependencies: Data.Array.Accelerate.Error
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-boot-th-8.0.2@ghc-boot-th-8.0.2
+                      ghc-prim-0.5.0.0 integer-gmp-1.0.0.1 pretty-1.1.3.3@pretty-1.1.3.3
+                      template-haskell-2.11.1.0
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+import  -/  Data.Array.Accelerate.Error 9ed2d4a71009d558f562e118e9d36a23
+  exports: f46a01ad5e78f9618f7a91c4ba90bc31
+  Bounds 6fadf6ef603dc3165050a5db5f9142ea
+  Internal 354d17f13fa8c5b135052bcadc13dc67
+  boundsCheck 5afb1405eec221b95d5609c09f30023b
+  boundsError ee7cd39f0708f034be4ec704652502ef
+  call 95bf4b02947c8c3e282c15050c022fa9
+  doChecks ceda3ca04bd3b8516235aa07ff825eef
+  indexCheck 54e07801f21c65f47e61eb3bf2a3f03e
+  internalError aa331c50846093a3a39d2946a445c28d
+  message 43164dbb4cecc9911948fd9ecaf0a042
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+23bf73ee0b15d2a1866ef90520688420
+  $fShape() :: Data.Array.Accelerate.Array.Representation.Shape ()
+  DFunId
+  {- Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ()
+                  GHC.Classes.$fEq()
+                  Data.Array.Accelerate.Array.Representation.$fShape()_$csliceIndex
+                    `cast`
+                  (Sym (Data.Array.Accelerate.Array.Representation.N:Slice[0]
+                            <()>_N))
+                  Data.Array.Accelerate.Array.Representation.$fShape()_$crank
+                  Data.Array.Accelerate.Array.Representation.$fShape()_$csize
+                  GHC.Tuple.()
+                  Data.Array.Accelerate.Array.Representation.$fShape()_$cunion
+                  Data.Array.Accelerate.Array.Representation.$fShape()_$cunion
+                  GHC.Tuple.()
+                  Data.Array.Accelerate.Array.Representation.$fShape()_$ctoIndex
+                  Data.Array.Accelerate.Array.Representation.$fShape()_$cfromIndex
+                  Data.Array.Accelerate.Array.Representation.$fShape()_$citer
+                  Data.Array.Accelerate.Array.Representation.$fShape()_$citer1
+                  Data.Array.Accelerate.Array.Representation.$fShape()_$crangeToShape
+                  Data.Array.Accelerate.Array.Representation.$fShape()_$cshapeToRange
+                  Data.Array.Accelerate.Array.Representation.$fShape()_$cshapeToList
+                  Data.Array.Accelerate.Array.Representation.$fShape()_$clistToShape -}
+cdc32f5bc9f5cbc71b019545a7d8a438
+  $fShape()1 :: ()
+  {- Strictness: x -}
+fb13101d7e20a7f501bcfdb3c8c2fdb6
+  $fShape()2 :: ((), ())
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((GHC.Tuple.(), GHC.Tuple.())) -}
+53599d26f2d03126b6f35e54c67fa6a1
+  $fShape()3 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+09c154c51ccfbffeebe5d418b0c52e64
+  $fShape()4 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
+4a55c8f30c2f188284f1692ec5ea0bad
+  $fShape()5 ::
+    ()
+    -> Data.Array.Accelerate.Array.Representation.SliceIndex
+         () () () ()
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>m1,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: ()) ->
+                 Data.Array.Accelerate.Array.Representation.$WSliceNil) -}
+a50180c664ce9e1754806ba193dde708
+  $fShape()_$cfromIndex :: () -> GHC.Types.Int -> ()
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U()><L,A>m,
+     Unfolding: InlineRule (2, True, True)
+                (\ (ds :: ()) (ds1 :: GHC.Types.Int) -> ds) -}
+9096e5c784f548c0111a1d0b2b13a4d8
+  $fShape()_$citer :: () -> (() -> a) -> (a -> a -> a) -> a -> a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,1*H><C(S),1*C1(U)><L,A><L,A>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a (ds :: ()) (f :: () -> a) (ds1 :: a -> a -> a) (ds2 :: a) ->
+                 case ds of wild { () -> f GHC.Tuple.() }) -}
+23eabfe7471952da40f3d3689fbec74c
+  $fShape()_$citer1 :: () -> (() -> a) -> (a -> a -> a) -> a
+  {- Arity: 3, HasNoCafRefs, Strictness: <S,1*H><C(S),1*C1(U)><L,A>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a (ds :: ()) (f :: () -> a) (ds1 :: a -> a -> a) ->
+                 case ds of wild { () -> f GHC.Tuple.() }) -}
+e211fc9a2d2b522e6323da33b933021e
+  $fShape()_$clistToShape :: [GHC.Types.Int] -> ()
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: [GHC.Types.Int]) ->
+                 case ds of wild {
+                   [] -> GHC.Tuple.()
+                   : ipv ipv1
+                   -> Data.Array.Accelerate.Array.Representation.$fShape()1 }) -}
+ae0d14ec778a595880ccef33587f6b9f
+  $fShape()_$crangeToShape :: ((), ()) -> ()
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SS),1*U(1*H,1*U())>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: ((), ())) ->
+                 case ds of wild { (,) ds1 ds2 ->
+                 case ds1 of wild1 { () -> ds2 } }) -}
+c74a5ec0c7e8f472855cf3b0994ccac2
+  $fShape()_$crank :: () -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>m,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: ()) ->
+                 Data.Array.Accelerate.Array.Representation.$fShape()3) -}
+c8163a956ad17f2dc838baaf3dbc2b7d
+  $fShape()_$cshapeToList :: () -> [GHC.Types.Int]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*H>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: ()) ->
+                 case ds of wild { () -> GHC.Types.[] @ GHC.Types.Int }) -}
+c654ceb2bcc9f1390c3f468bcabac52e
+  $fShape()_$cshapeToRange :: () -> ((), ())
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*H>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: ()) ->
+                 case ds of wild { () ->
+                 Data.Array.Accelerate.Array.Representation.$fShape()2 }) -}
+d8af826f477dd2b0c7be3040e8777c4c
+  $fShape()_$csize :: () -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*H>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: ()) ->
+                 case ds of wild { () ->
+                 Data.Array.Accelerate.Array.Representation.$fShape()4 }) -}
+19f9c03055812344a644e8091c1a01ad
+  $fShape()_$csliceIndex ::
+    ()
+    -> Data.Array.Accelerate.Array.Representation.SliceIndex
+         ()
+         (Data.Array.Accelerate.Array.Representation.SliceShape ())
+         (Data.Array.Accelerate.Array.Representation.CoSliceShape ())
+         (Data.Array.Accelerate.Array.Representation.FullShape ())
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>m1,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Array.Representation.$fShape()5
+                  `cast`
+                (<()>_R
+                 ->_R (Data.Array.Accelerate.Array.Representation.SliceIndex
+                         <()>_N
+                         (Sym (Data.Array.Accelerate.Array.Representation.D:R:SliceShape()[0]))
+                         (Sym (Data.Array.Accelerate.Array.Representation.D:R:CoSliceShape()[0]))
+                         (Sym (Data.Array.Accelerate.Array.Representation.D:R:FullShape()[0])))_R) -}
+ff4fd85681810ac12394637d7e855c90
+  $fShape()_$ctoIndex :: () -> () -> GHC.Types.Int
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*H><S,1*H>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds :: ()) (ds1 :: ()) ->
+                 case ds of wild { () ->
+                 case ds1 of wild1 { () ->
+                 Data.Array.Accelerate.Array.Representation.$fShape()3 } }) -}
+1dd7dcc72e623632b486ff20fd665c69
+  $fShape()_$cunion :: () -> () -> ()
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*H><S,1*U()>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds :: ()) (ds1 :: ()) -> case ds of wild { () -> ds1 }) -}
+23bf73ee0b15d2a1866ef90520688420
+  $fShape(,) ::
+    Data.Array.Accelerate.Array.Representation.Shape sh =>
+    Data.Array.Accelerate.Array.Representation.Shape
+      (sh, GHC.Types.Int)
+  DFunId
+  {- Arity: 1,
+     Strictness: <L,U(1*U(C(C1(U)),A),1*C1(U),C(U(U)),C(U(U)),1*U,C(C1(U)),C(C1(U)),1*U,C(C1(U(U))),C(C1(U)),C(C1(C1(C1(U)))),C(C1(C1(U))),C(U),C(U(U,U)),C(U),C(U))>,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ sh
+                      ($dShape :: Data.Array.Accelerate.Array.Representation.Shape sh).
+                  @ (sh, GHC.Types.Int)
+                  (Data.Array.Accelerate.Array.Representation.$fShape(,)_$cp1Shape
+                     @ sh
+                     $dShape)
+                  (Data.Array.Accelerate.Array.Representation.$fShape(,)_$cp2Shape
+                     @ sh
+                     $dShape)
+                  (Data.Array.Accelerate.Array.Representation.$fShape(,)_$crank
+                     @ sh
+                     $dShape)
+                  (Data.Array.Accelerate.Array.Representation.$fShape(,)_$csize
+                     @ sh
+                     $dShape)
+                  (Data.Array.Accelerate.Array.Representation.$fShape(,)_$cempty
+                     @ sh
+                     $dShape)
+                  (Data.Array.Accelerate.Array.Representation.$fShape(,)_$cintersect
+                     @ sh
+                     $dShape)
+                  (Data.Array.Accelerate.Array.Representation.$fShape(,)_$cunion
+                     @ sh
+                     $dShape)
+                  (Data.Array.Accelerate.Array.Representation.$fShape(,)_$cignore
+                     @ sh
+                     $dShape)
+                  (Data.Array.Accelerate.Array.Representation.$fShape(,)_$ctoIndex
+                     @ sh
+                     $dShape)
+                  (Data.Array.Accelerate.Array.Representation.$fShape(,)_$cfromIndex
+                     @ sh
+                     $dShape)
+                  (Data.Array.Accelerate.Array.Representation.$fShape(,)_$citer
+                     @ sh
+                     $dShape)
+                  (Data.Array.Accelerate.Array.Representation.$fShape(,)_$citer1
+                     @ sh
+                     $dShape)
+                  (Data.Array.Accelerate.Array.Representation.$fShape(,)_$crangeToShape
+                     @ sh
+                     $dShape)
+                  (Data.Array.Accelerate.Array.Representation.$fShape(,)_$cshapeToRange
+                     @ sh
+                     $dShape)
+                  (Data.Array.Accelerate.Array.Representation.$fShape(,)_$cshapeToList
+                     @ sh
+                     $dShape)
+                  (Data.Array.Accelerate.Array.Representation.$fShape(,)_$clistToShape
+                     @ sh
+                     $dShape) -}
+9d3ad5523c1f394050e747775caa1a29
+  $fShape(,)1 :: (sh, GHC.Types.Int)
+  {- Strictness: x -}
+56d258dabd30a128adb5f6562e6f964a
+  $fShape(,)2 :: a
+  {- Strictness: x -}
+7f74624cbf8ceb8ce8efae7599c180ea
+  $fShape(,)3 ::
+    GHC.Prim.Int# -> GHC.Prim.Int# -> GHC.Types.Int -> GHC.Types.Int
+  {- Arity: 2, Strictness: <L,U><L,U>x -}
+a587f7951d1c1c1ea1aa2e8ec79d1082
+  $fShape(,)4 ::
+    GHC.Prim.Int# -> GHC.Prim.Int# -> GHC.Types.Int -> GHC.Types.Int
+  {- Arity: 2, Strictness: <L,U><L,U>x -}
+fb5b5129a6e1dde6c8195ffec2e04b35
+  $fShape(,)5 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# -1#) -}
+f2ccf56016cd04570121dd39d0d279a3
+  $fShape(,)6 :: GHC.Types.Int
+  {- Strictness: x -}
+a8263896fbf3f3745712192817bc61e7
+  $fShape(,)7 :: sh
+  {- Strictness: x -}
+a104dfff0cd034da5f640fc3ab3392b5
+  $fShape(,)8 :: sl
+  {- Strictness: x -}
+23bf73ee0b15d2a1866ef90520688420
+  $fShape(,)_$cempty ::
+    Data.Array.Accelerate.Array.Representation.Shape sh =>
+    (sh, GHC.Types.Int)
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,1*U(A,A,A,A,1*U,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ sh
+                   ($dShape :: Data.Array.Accelerate.Array.Representation.Shape sh) ->
+                 (Data.Array.Accelerate.Array.Representation.empty @ sh $dShape,
+                  Data.Array.Accelerate.Array.Representation.$fShape()3)) -}
+23bf73ee0b15d2a1866ef90520688420
+  $fShape(,)_$cfromIndex ::
+    Data.Array.Accelerate.Array.Representation.Shape sh =>
+    (sh, GHC.Types.Int) -> GHC.Types.Int -> (sh, GHC.Types.Int)
+  {- Arity: 3,
+     Strictness: <L,U(A,A,1*C1(U(1*U)),A,A,A,A,A,A,1*C1(C1(U)),A,A,A,A,A,A)><S,1*U(U,U(U))><L,U(U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ sh
+                   (w :: Data.Array.Accelerate.Array.Representation.Shape sh)
+                   (w1 :: (sh, GHC.Types.Int))
+                   (w2 :: GHC.Types.Int) ->
+                 case w1 of ww { (,) ww1 ww2 ->
+                 case Data.Array.Accelerate.Array.Representation.$w$cfromIndex
+                        @ sh
+                        w
+                        ww1
+                        ww2
+                        w2 of ww3 { (#,#) ww4 ww5 ->
+                 (ww4, ww5) } }) -}
+23bf73ee0b15d2a1866ef90520688420
+  $fShape(,)_$cignore ::
+    Data.Array.Accelerate.Array.Representation.Shape sh =>
+    (sh, GHC.Types.Int)
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,1*U(A,A,A,A,A,A,A,1*U,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ sh
+                   ($dShape :: Data.Array.Accelerate.Array.Representation.Shape sh) ->
+                 (Data.Array.Accelerate.Array.Representation.ignore @ sh $dShape,
+                  Data.Array.Accelerate.Array.Representation.$fShape(,)5)) -}
+23bf73ee0b15d2a1866ef90520688420
+  $fShape(,)_$cintersect ::
+    Data.Array.Accelerate.Array.Representation.Shape sh =>
+    (sh, GHC.Types.Int) -> (sh, GHC.Types.Int) -> (sh, GHC.Types.Int)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(A,A,A,A,A,1*C1(C1(U)),A,A,A,A,A,A,A,A,A,A)><S,1*U(U,1*U(U))><S,1*U(U,1*U(U))>m,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ sh
+                   ($dShape :: Data.Array.Accelerate.Array.Representation.Shape sh)
+                   (ds :: (sh, GHC.Types.Int))
+                   (ds1 :: (sh, GHC.Types.Int)) ->
+                 case ds of wild { (,) sh1 sz1 ->
+                 case ds1 of wild1 { (,) sh2 sz2 ->
+                 (Data.Array.Accelerate.Array.Representation.intersect
+                    @ sh
+                    $dShape
+                    sh1
+                    sh2,
+                  GHC.Classes.$fOrdInt_$cmin sz1 sz2) } }) -}
+23bf73ee0b15d2a1866ef90520688420
+  $fShape(,)_$citer ::
+    Data.Array.Accelerate.Array.Representation.Shape sh =>
+    forall a.
+    (sh, GHC.Types.Int)
+    -> ((sh, GHC.Types.Int) -> a) -> (a -> a -> a) -> a -> a
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLC(C(C(C(S))))LLLLL),1*U(A,A,A,A,A,A,A,A,A,A,1*C1(C1(C1(C1(U)))),A,A,A,A,A)><S,1*U(U,U(U))><L,C(U)><L,U><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (5, True, False)
+                (\ @ sh
+                   (w :: Data.Array.Accelerate.Array.Representation.Shape sh)
+                   @ a
+                   (w1 :: (sh, GHC.Types.Int))
+                   (w2 :: (sh, GHC.Types.Int) -> a)
+                   (w3 :: a -> a -> a)
+                   (w4 :: a) ->
+                 case w1 of ww { (,) ww1 ww2 ->
+                 Data.Array.Accelerate.Array.Representation.$w$citer
+                   @ sh
+                   w
+                   @ a
+                   ww1
+                   ww2
+                   w2
+                   w3
+                   w4 }) -}
+23bf73ee0b15d2a1866ef90520688420
+  $fShape(,)_$citer1 ::
+    Data.Array.Accelerate.Array.Representation.Shape sh =>
+    forall a.
+    (sh, GHC.Types.Int)
+    -> ((sh, GHC.Types.Int) -> a) -> (a -> a -> a) -> a
+  {- Arity: 4,
+     Strictness: <S(LLLLLLLLLLLC(C(C(S)))LLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,1*C1(C1(C1(U))),A,A,A,A)><S(LS(S)),1*U(U,1*U(1*U))><L,C(U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ sh
+                   (w :: Data.Array.Accelerate.Array.Representation.Shape sh)
+                   @ a
+                   (w1 :: (sh, GHC.Types.Int))
+                   (w2 :: (sh, GHC.Types.Int) -> a)
+                   (w3 :: a -> a -> a) ->
+                 case w1 of ww { (,) ww1 ww2 ->
+                 case ww2 of ww3 { GHC.Types.I# ww4 ->
+                 Data.Array.Accelerate.Array.Representation.$w$citer1
+                   @ sh
+                   w
+                   @ a
+                   ww1
+                   ww4
+                   w2
+                   w3 } }) -}
+23bf73ee0b15d2a1866ef90520688420
+  $fShape(,)_$clistToShape ::
+    Data.Array.Accelerate.Array.Representation.Shape sh =>
+    [GHC.Types.Int] -> (sh, GHC.Types.Int)
+  {- Arity: 2,
+     Strictness: <L,1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*C1(U))><S,1*U>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ sh
+                   ($dShape :: Data.Array.Accelerate.Array.Representation.Shape sh)
+                   (ds :: [GHC.Types.Int]) ->
+                 case ds of wild {
+                   [] -> Data.Array.Accelerate.Array.Representation.$fShape(,)1 @ sh
+                   : x xs
+                   -> (Data.Array.Accelerate.Array.Representation.listToShape
+                         @ sh
+                         $dShape
+                         xs,
+                       x) }) -}
+23bf73ee0b15d2a1866ef90520688420
+  $fShape(,)_$cp1Shape ::
+    Data.Array.Accelerate.Array.Representation.Shape sh =>
+    GHC.Classes.Eq (sh, GHC.Types.Int)
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,1*U(1*U(C(C1(U)),A),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ sh
+                   ($dShape :: Data.Array.Accelerate.Array.Representation.Shape sh) ->
+                 GHC.Classes.$fEq(,)
+                   @ sh
+                   @ GHC.Types.Int
+                   (Data.Array.Accelerate.Array.Representation.$p1Shape @ sh $dShape)
+                   GHC.Classes.$fEqInt) -}
+23bf73ee0b15d2a1866ef90520688420
+  $fShape(,)_$cp2Shape ::
+    Data.Array.Accelerate.Array.Representation.Shape sh =>
+    Data.Array.Accelerate.Array.Representation.Slice
+      (sh, GHC.Types.Int)
+  {- Arity: 1,
+     Strictness: <L,1*U(A,1*C1(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ sh
+                   ($dShape :: Data.Array.Accelerate.Array.Representation.Shape sh) ->
+                 let {
+                   lvl70 :: Data.Array.Accelerate.Array.Representation.SliceIndex
+                              sh
+                              (Data.Array.Accelerate.Array.Representation.SliceShape sh)
+                              (Data.Array.Accelerate.Array.Representation.CoSliceShape sh)
+                              (Data.Array.Accelerate.Array.Representation.FullShape sh)
+                   = (Data.Array.Accelerate.Array.Representation.$p2Shape
+                        @ sh
+                        $dShape)
+                       `cast`
+                     (Data.Array.Accelerate.Array.Representation.N:Slice[0] <sh>_N)
+                       (Data.Array.Accelerate.Array.Representation.$fShape(,)8 @ sh)
+                 } in
+                 let {
+                   lvl71 :: Data.Array.Accelerate.Array.Representation.SliceIndex
+                              (sh, GHC.Types.Int)
+                              (Data.Array.Accelerate.Array.Representation.SliceShape sh)
+                              (Data.Array.Accelerate.Array.Representation.CoSliceShape sh,
+                               GHC.Types.Int)
+                              (Data.Array.Accelerate.Array.Representation.FullShape sh,
+                               GHC.Types.Int)
+                   = Data.Array.Accelerate.Array.Representation.SliceFixed
+                       @ (sh, GHC.Types.Int)
+                       @ (Data.Array.Accelerate.Array.Representation.SliceShape sh)
+                       @ (Data.Array.Accelerate.Array.Representation.CoSliceShape sh,
+                          GHC.Types.Int)
+                       @ (Data.Array.Accelerate.Array.Representation.FullShape sh,
+                          GHC.Types.Int)
+                       @ sh
+                       @ (Data.Array.Accelerate.Array.Representation.CoSliceShape sh)
+                       @ (Data.Array.Accelerate.Array.Representation.FullShape sh)
+                       @~ <(sh, GHC.Types.Int)>_N
+                       @~ <(Data.Array.Accelerate.Array.Representation.CoSliceShape sh,
+                            GHC.Types.Int)>_N
+                       @~ <(Data.Array.Accelerate.Array.Representation.FullShape sh,
+                            GHC.Types.Int)>_N
+                       lvl70
+                 } in
+                 (\ (ds :: (sh, GHC.Types.Int)) -> lvl71)
+                   `cast`
+                 (Trans
+                      (<(sh, GHC.Types.Int)>_R
+                       ->_R (Data.Array.Accelerate.Array.Representation.SliceIndex
+                               <(sh, GHC.Types.Int)>_N
+                               (Sym (Data.Array.Accelerate.Array.Representation.D:R:SliceShape(,)[0]
+                                         <sh>_N))
+                               (Sym (Data.Array.Accelerate.Array.Representation.D:R:CoSliceShape(,)[0]
+                                         <sh>_N))
+                               (Sym (Data.Array.Accelerate.Array.Representation.D:R:FullShape(,)[0]
+                                         <sh>_N)))_R)
+                      (Sym (Data.Array.Accelerate.Array.Representation.N:Slice[0]
+                                <(sh, GHC.Types.Int)>_N)))) -}
+23bf73ee0b15d2a1866ef90520688420
+  $fShape(,)_$crangeToShape ::
+    Data.Array.Accelerate.Array.Representation.Shape sh =>
+    ((sh, GHC.Types.Int), (sh, GHC.Types.Int)) -> (sh, GHC.Types.Int)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,1*U(A,A,A,A,A,A,A,A,A,A,A,A,1*C1(U),A,A,A)><S(SS),1*U(1*U(U,1*U(U)),1*U(U,1*U(U)))>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ sh
+                   (w :: Data.Array.Accelerate.Array.Representation.Shape sh)
+                   (w1 :: ((sh, GHC.Types.Int), (sh, GHC.Types.Int))) ->
+                 case w1 of ww { (,) ww1 ww2 ->
+                 case ww1 of ww3 { (,) ww4 ww5 ->
+                 case ww2 of ww6 { (,) ww7 ww8 ->
+                 (Data.Array.Accelerate.Array.Representation.rangeToShape
+                    @ sh
+                    w
+                    (ww4, ww7),
+                  case ww8 of wild { GHC.Types.I# x ->
+                  case ww5 of wild1 { GHC.Types.I# y ->
+                  GHC.Types.I# (GHC.Prim.+# (GHC.Prim.-# x y) 1#) } }) } } }) -}
+23bf73ee0b15d2a1866ef90520688420
+  $fShape(,)_$crank ::
+    Data.Array.Accelerate.Array.Representation.Shape sh =>
+    (sh, GHC.Types.Int) -> GHC.Types.Int
+  {- Arity: 1,
+     Strictness: <L,1*U(A,A,1*C1(U(U)),A,A,A,A,A,A,A,A,A,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ sh
+                   ($dShape :: Data.Array.Accelerate.Array.Representation.Shape sh) ->
+                 let {
+                   lvl70 :: GHC.Types.Int
+                   = case Data.Array.Accelerate.Array.Representation.rank
+                            @ sh
+                            $dShape
+                            (Data.Array.Accelerate.Array.Representation.$fShape(,)7
+                               @ sh) of wild { GHC.Types.I# x ->
+                     GHC.Types.I# (GHC.Prim.+# x 1#) }
+                 } in
+                 \ (ds :: (sh, GHC.Types.Int)) -> lvl70) -}
+23bf73ee0b15d2a1866ef90520688420
+  $fShape(,)_$cshapeToList ::
+    Data.Array.Accelerate.Array.Representation.Shape sh =>
+    (sh, GHC.Types.Int) -> [GHC.Types.Int]
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*C1(U),A)><S,1*U(U,U)>m2,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ sh
+                   ($dShape :: Data.Array.Accelerate.Array.Representation.Shape sh)
+                   (ds :: (sh, GHC.Types.Int)) ->
+                 case ds of wild { (,) sh1 sz ->
+                 GHC.Types.:
+                   @ GHC.Types.Int
+                   sz
+                   (Data.Array.Accelerate.Array.Representation.shapeToList
+                      @ sh
+                      $dShape
+                      sh1) }) -}
+23bf73ee0b15d2a1866ef90520688420
+  $fShape(,)_$cshapeToRange ::
+    Data.Array.Accelerate.Array.Representation.Shape sh =>
+    (sh, GHC.Types.Int) -> ((sh, GHC.Types.Int), (sh, GHC.Types.Int))
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,1*C1(U(U,U)),A,A)><S,1*U(U,1*U(U))>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ sh
+                   (w :: Data.Array.Accelerate.Array.Representation.Shape sh)
+                   (w1 :: (sh, GHC.Types.Int)) ->
+                 case w1 of ww { (,) ww1 ww2 ->
+                 let {
+                   ds :: (sh, sh)
+                   = Data.Array.Accelerate.Array.Representation.shapeToRange
+                       @ sh
+                       w
+                       ww1
+                 } in
+                 ((case ds of wild { (,) low high -> low },
+                   Data.Array.Accelerate.Array.Representation.$fShape()3),
+                  (case ds of wild { (,) low high -> high },
+                   case ww2 of wild { GHC.Types.I# x ->
+                   GHC.Types.I# (GHC.Prim.-# x 1#) })) }) -}
+23bf73ee0b15d2a1866ef90520688420
+  $fShape(,)_$csize ::
+    Data.Array.Accelerate.Array.Representation.Shape sh =>
+    (sh, GHC.Types.Int) -> GHC.Types.Int
+  {- Arity: 2,
+     Strictness: <S(LLLC(S(S))LLLLLLLLLLLL),1*U(A,A,A,1*C1(U(U)),A,A,A,A,A,A,A,A,A,A,A,A)><S(LS(S)),1*U(U,1*U(U))>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ sh
+                   (w :: Data.Array.Accelerate.Array.Representation.Shape sh)
+                   (w1 :: (sh, GHC.Types.Int)) ->
+                 case w1 of ww { (,) ww1 ww2 ->
+                 case ww2 of ww3 { GHC.Types.I# ww4 ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww4 0#) of wild {
+                   GHC.Types.False
+                   -> Data.Array.Accelerate.Array.Representation.$fShape(,)6
+                   GHC.Types.True
+                   -> case Data.Array.Accelerate.Array.Representation.size
+                             @ sh
+                             w
+                             ww1 of wild1 { GHC.Types.I# x ->
+                      GHC.Types.I# (GHC.Prim.*# x ww4) } } } }) -}
+23bf73ee0b15d2a1866ef90520688420
+  $fShape(,)_$ctoIndex ::
+    Data.Array.Accelerate.Array.Representation.Shape sh =>
+    (sh, GHC.Types.Int) -> (sh, GHC.Types.Int) -> GHC.Types.Int
+  {- Arity: 3,
+     Strictness: <S(LLLLLLLLC(C(S(S)))LLLLLLL),1*U(A,A,A,A,A,A,A,A,1*C1(C1(U(U))),A,A,A,A,A,A,A)><S(LS(S)),1*U(U,U(U))><S(LS(S)),1*U(U,1*U(U))>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ sh
+                   (w :: Data.Array.Accelerate.Array.Representation.Shape sh)
+                   (w1 :: (sh, GHC.Types.Int))
+                   (w2 :: (sh, GHC.Types.Int)) ->
+                 case w1 of ww { (,) ww1 ww2 ->
+                 case ww2 of ww3 { GHC.Types.I# ww4 ->
+                 case w2 of ww5 { (,) ww6 ww7 ->
+                 case ww7 of ww8 { GHC.Types.I# ww9 ->
+                 case Data.Array.Accelerate.Array.Representation.$w$ctoIndex
+                        @ sh
+                        w
+                        ww1
+                        ww4
+                        ww6
+                        ww9 of ww10 { DEFAULT ->
+                 GHC.Types.I# ww10 } } } } }) -}
+23bf73ee0b15d2a1866ef90520688420
+  $fShape(,)_$cunion ::
+    Data.Array.Accelerate.Array.Representation.Shape sh =>
+    (sh, GHC.Types.Int) -> (sh, GHC.Types.Int) -> (sh, GHC.Types.Int)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(A,A,A,A,A,A,1*C1(C1(U)),A,A,A,A,A,A,A,A,A)><S,1*U(U,1*U(U))><S,1*U(U,1*U(U))>m,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ sh
+                   ($dShape :: Data.Array.Accelerate.Array.Representation.Shape sh)
+                   (ds :: (sh, GHC.Types.Int))
+                   (ds1 :: (sh, GHC.Types.Int)) ->
+                 case ds of wild { (,) sh1 sz1 ->
+                 case ds1 of wild1 { (,) sh2 sz2 ->
+                 (Data.Array.Accelerate.Array.Representation.union
+                    @ sh
+                    $dShape
+                    sh1
+                    sh2,
+                  GHC.Classes.$fOrdInt_$cmax sz1 sz2) } }) -}
+23dde5ac3819531720383c4ce52892fc
+  $fShowSliceIndex ::
+    GHC.Show.Show
+      (Data.Array.Accelerate.Array.Representation.SliceIndex
+         ix slice coSlice sliceDim)
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ ix @ slice @ coSlice @ sliceDim.
+                  @ (Data.Array.Accelerate.Array.Representation.SliceIndex
+                       ix slice coSlice sliceDim)
+                  (Data.Array.Accelerate.Array.Representation.$fShowSliceIndex_$cshowsPrec
+                     @ ix
+                     @ slice
+                     @ coSlice
+                     @ sliceDim)
+                  (Data.Array.Accelerate.Array.Representation.$fShowSliceIndex_$cshow
+                     @ ix
+                     @ slice
+                     @ coSlice
+                     @ sliceDim)
+                  (Data.Array.Accelerate.Array.Representation.$fShowSliceIndex_$cshowList
+                     @ ix
+                     @ slice
+                     @ coSlice
+                     @ sliceDim) -}
+23dde5ac3819531720383c4ce52892fc
+  $fShowSliceIndex1 ::
+    Data.Array.Accelerate.Array.Representation.SliceIndex
+      ix slice coSlice sliceDim
+    -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2,
+     Unfolding: (\ @ ix
+                   @ slice
+                   @ coSlice
+                   @ sliceDim
+                   (x :: Data.Array.Accelerate.Array.Representation.SliceIndex
+                           ix slice coSlice sliceDim)
+                   (s :: GHC.Base.String)[OneShot] ->
+                 GHC.Base.++
+                   @ GHC.Types.Char
+                   (Data.Array.Accelerate.Array.Representation.$fShowSliceIndex_$cshow
+                      @ ix
+                      @ slice
+                      @ coSlice
+                      @ sliceDim
+                      x)
+                   s) -}
+23dde5ac3819531720383c4ce52892fc
+  $fShowSliceIndex_$cshow ::
+    Data.Array.Accelerate.Array.Representation.SliceIndex
+      ix slice coSlice sliceDim
+    -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U> -}
+23dde5ac3819531720383c4ce52892fc
+  $fShowSliceIndex_$cshowList ::
+    [Data.Array.Accelerate.Array.Representation.SliceIndex
+       ix slice coSlice sliceDim]
+    -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ @ ix
+                   @ slice
+                   @ coSlice
+                   @ sliceDim
+                   (ls :: [Data.Array.Accelerate.Array.Representation.SliceIndex
+                             ix slice coSlice sliceDim])
+                   (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (Data.Array.Accelerate.Array.Representation.SliceIndex
+                        ix slice coSlice sliceDim)
+                   (Data.Array.Accelerate.Array.Representation.$fShowSliceIndex1
+                      @ ix
+                      @ slice
+                      @ coSlice
+                      @ sliceDim)
+                   ls
+                   s) -}
+23dde5ac3819531720383c4ce52892fc
+  $fShowSliceIndex_$cshowsPrec ::
+    GHC.Types.Int
+    -> Data.Array.Accelerate.Array.Representation.SliceIndex
+         ix slice coSlice sliceDim
+    -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ ix
+                   @ slice
+                   @ coSlice
+                   @ sliceDim
+                   (ds :: GHC.Types.Int)
+                   (x :: Data.Array.Accelerate.Array.Representation.SliceIndex
+                           ix slice coSlice sliceDim)
+                   (s :: GHC.Base.String) ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b
+                      c
+                      n
+                      (Data.Array.Accelerate.Array.Representation.$fShowSliceIndex_$cshow
+                         @ ix
+                         @ slice
+                         @ coSlice
+                         @ sliceDim
+                         x))
+                   s) -}
+19f9c03055812344a644e8091c1a01ad
+  $fSlice() :: Data.Array.Accelerate.Array.Representation.Slice ()
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>m1,
+     Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                Data.Array.Accelerate.Array.Representation.$fShape()_$csliceIndex
+                  `cast`
+                (Sym (Data.Array.Accelerate.Array.Representation.N:Slice[0]
+                          <()>_N)) -}
+19f9c03055812344a644e8091c1a01ad
+  $fSlice(,) ::
+    Data.Array.Accelerate.Array.Representation.Slice sl =>
+    Data.Array.Accelerate.Array.Representation.Slice
+      (sl, GHC.Types.Int)
+  DFunId
+  {- Arity: 1, Strictness: <L,1*C1(U)>, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (1, False, True)
+                Data.Array.Accelerate.Array.Representation.$fSlice(,)_$csliceIndex
+                  `cast`
+                (forall (sl :: <*>_N).
+                 <Data.Array.Accelerate.Array.Representation.Slice sl>_R
+                 ->_R Sym (Data.Array.Accelerate.Array.Representation.N:Slice[0]
+                               <(sl, GHC.Types.Int)>_N)) -}
+19f9c03055812344a644e8091c1a01ad
+  $fSlice(,)0 ::
+    Data.Array.Accelerate.Array.Representation.Slice sl =>
+    Data.Array.Accelerate.Array.Representation.Slice (sl, ())
+  DFunId
+  {- Arity: 1, Strictness: <L,1*C1(U)>, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (1, False, True)
+                Data.Array.Accelerate.Array.Representation.$fSlice(,)0_$csliceIndex
+                  `cast`
+                (forall (sl :: <*>_N).
+                 <Data.Array.Accelerate.Array.Representation.Slice sl>_R
+                 ->_R Sym (Data.Array.Accelerate.Array.Representation.N:Slice[0]
+                               <(sl, ())>_N)) -}
+19f9c03055812344a644e8091c1a01ad
+  $fSlice(,)0_$csliceIndex ::
+    Data.Array.Accelerate.Array.Representation.Slice sl =>
+    (sl, ())
+    -> Data.Array.Accelerate.Array.Representation.SliceIndex
+         (sl, ())
+         (Data.Array.Accelerate.Array.Representation.SliceShape (sl, ()))
+         (Data.Array.Accelerate.Array.Representation.CoSliceShape (sl, ()))
+         (Data.Array.Accelerate.Array.Representation.FullShape (sl, ()))
+  {- Arity: 1, Strictness: <L,1*C1(U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ sl
+                   ($dSlice :: Data.Array.Accelerate.Array.Representation.Slice sl) ->
+                 let {
+                   lvl70 :: Data.Array.Accelerate.Array.Representation.SliceIndex
+                              sl
+                              (Data.Array.Accelerate.Array.Representation.SliceShape sl)
+                              (Data.Array.Accelerate.Array.Representation.CoSliceShape sl)
+                              (Data.Array.Accelerate.Array.Representation.FullShape sl)
+                   = $dSlice
+                       `cast`
+                     (Data.Array.Accelerate.Array.Representation.N:Slice[0] <sl>_N)
+                       (Data.Array.Accelerate.Array.Representation.$fSlice(,)1 @ sl)
+                 } in
+                 let {
+                   lvl71 :: Data.Array.Accelerate.Array.Representation.SliceIndex
+                              (sl, ())
+                              (Data.Array.Accelerate.Array.Representation.SliceShape sl,
+                               GHC.Types.Int)
+                              (Data.Array.Accelerate.Array.Representation.CoSliceShape sl)
+                              (Data.Array.Accelerate.Array.Representation.FullShape sl,
+                               GHC.Types.Int)
+                   = Data.Array.Accelerate.Array.Representation.SliceAll
+                       @ (sl, ())
+                       @ (Data.Array.Accelerate.Array.Representation.SliceShape sl,
+                          GHC.Types.Int)
+                       @ (Data.Array.Accelerate.Array.Representation.CoSliceShape sl)
+                       @ (Data.Array.Accelerate.Array.Representation.FullShape sl,
+                          GHC.Types.Int)
+                       @ sl
+                       @ (Data.Array.Accelerate.Array.Representation.SliceShape sl)
+                       @ (Data.Array.Accelerate.Array.Representation.FullShape sl)
+                       @~ <(sl, ())>_N
+                       @~ <(Data.Array.Accelerate.Array.Representation.SliceShape sl,
+                            GHC.Types.Int)>_N
+                       @~ <(Data.Array.Accelerate.Array.Representation.FullShape sl,
+                            GHC.Types.Int)>_N
+                       lvl70
+                 } in
+                 (\ (ds :: (sl, ())) -> lvl71)
+                   `cast`
+                 (<(sl, ())>_R
+                  ->_R (Data.Array.Accelerate.Array.Representation.SliceIndex
+                          <(sl, ())>_N
+                          (Sym (Data.Array.Accelerate.Array.Representation.D:R:SliceShape(,)0[0]
+                                    <sl>_N))
+                          (Sym (Data.Array.Accelerate.Array.Representation.D:R:CoSliceShape(,)0[0]
+                                    <sl>_N))
+                          (Sym (Data.Array.Accelerate.Array.Representation.D:R:FullShape(,)0[0]
+                                    <sl>_N)))_R)) -}
+954c9a286c9c579246fd82b22c1a36b0
+  $fSlice(,)1 :: sl
+  {- Strictness: x -}
+19f9c03055812344a644e8091c1a01ad
+  $fSlice(,)_$csliceIndex ::
+    Data.Array.Accelerate.Array.Representation.Slice sl =>
+    (sl, GHC.Types.Int)
+    -> Data.Array.Accelerate.Array.Representation.SliceIndex
+         (sl, GHC.Types.Int)
+         (Data.Array.Accelerate.Array.Representation.SliceShape
+            (sl, GHC.Types.Int))
+         (Data.Array.Accelerate.Array.Representation.CoSliceShape
+            (sl, GHC.Types.Int))
+         (Data.Array.Accelerate.Array.Representation.FullShape
+            (sl, GHC.Types.Int))
+  {- Arity: 1, Strictness: <L,1*C1(U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ sl
+                   ($dSlice :: Data.Array.Accelerate.Array.Representation.Slice sl) ->
+                 let {
+                   lvl70 :: Data.Array.Accelerate.Array.Representation.SliceIndex
+                              sl
+                              (Data.Array.Accelerate.Array.Representation.SliceShape sl)
+                              (Data.Array.Accelerate.Array.Representation.CoSliceShape sl)
+                              (Data.Array.Accelerate.Array.Representation.FullShape sl)
+                   = $dSlice
+                       `cast`
+                     (Data.Array.Accelerate.Array.Representation.N:Slice[0] <sl>_N)
+                       (Data.Array.Accelerate.Array.Representation.$fShape(,)8 @ sl)
+                 } in
+                 let {
+                   lvl71 :: Data.Array.Accelerate.Array.Representation.SliceIndex
+                              (sl, GHC.Types.Int)
+                              (Data.Array.Accelerate.Array.Representation.SliceShape sl)
+                              (Data.Array.Accelerate.Array.Representation.CoSliceShape sl,
+                               GHC.Types.Int)
+                              (Data.Array.Accelerate.Array.Representation.FullShape sl,
+                               GHC.Types.Int)
+                   = Data.Array.Accelerate.Array.Representation.SliceFixed
+                       @ (sl, GHC.Types.Int)
+                       @ (Data.Array.Accelerate.Array.Representation.SliceShape sl)
+                       @ (Data.Array.Accelerate.Array.Representation.CoSliceShape sl,
+                          GHC.Types.Int)
+                       @ (Data.Array.Accelerate.Array.Representation.FullShape sl,
+                          GHC.Types.Int)
+                       @ sl
+                       @ (Data.Array.Accelerate.Array.Representation.CoSliceShape sl)
+                       @ (Data.Array.Accelerate.Array.Representation.FullShape sl)
+                       @~ <(sl, GHC.Types.Int)>_N
+                       @~ <(Data.Array.Accelerate.Array.Representation.CoSliceShape sl,
+                            GHC.Types.Int)>_N
+                       @~ <(Data.Array.Accelerate.Array.Representation.FullShape sl,
+                            GHC.Types.Int)>_N
+                       lvl70
+                 } in
+                 (\ (ds :: (sl, GHC.Types.Int)) -> lvl71)
+                   `cast`
+                 (<(sl, GHC.Types.Int)>_R
+                  ->_R (Data.Array.Accelerate.Array.Representation.SliceIndex
+                          <(sl, GHC.Types.Int)>_N
+                          (Sym (Data.Array.Accelerate.Array.Representation.D:R:SliceShape(,)[0]
+                                    <sl>_N))
+                          (Sym (Data.Array.Accelerate.Array.Representation.D:R:CoSliceShape(,)[0]
+                                    <sl>_N))
+                          (Sym (Data.Array.Accelerate.Array.Representation.D:R:FullShape(,)[0]
+                                    <sl>_N)))_R)) -}
+02e1bdbc46e89bb1edc90f2af8e46232
+  $tc'C:Shape :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12378824437753334465##
+                   316777559864629730##
+                   Data.Array.Accelerate.Array.Representation.$trModule
+                   Data.Array.Accelerate.Array.Representation.$tc'C:Shape1) -}
+efa14b9bbfb27cf95bb1dfaea49d6336
+  $tc'C:Shape1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'C:Shape"#) -}
+bd3f20c727956f7abf1a0185ab22e5c5
+  $tc'C:Slice :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15272905556696202244##
+                   16288404505296186189##
+                   Data.Array.Accelerate.Array.Representation.$trModule
+                   Data.Array.Accelerate.Array.Representation.$tc'C:Slice1) -}
+e94d0cf1181314fe63b8ce72770f88cf
+  $tc'C:Slice1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'C:Slice"#) -}
+72fe2f6ba4abf166819aae8544d88f61
+  $tc'SliceAll :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12397294615306656584##
+                   2318868309472459607##
+                   Data.Array.Accelerate.Array.Representation.$trModule
+                   Data.Array.Accelerate.Array.Representation.$tc'SliceAll1) -}
+26682b95e3fd9b261334ee1cd9ae0de8
+  $tc'SliceAll1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'SliceAll"#) -}
+80a181d6d3b3bc3ea65077360beda427
+  $tc'SliceFixed :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14466272625006284427##
+                   14538948451273979685##
+                   Data.Array.Accelerate.Array.Representation.$trModule
+                   Data.Array.Accelerate.Array.Representation.$tc'SliceFixed1) -}
+3f7222df7c8627ac2b8d8828c86ab694
+  $tc'SliceFixed1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'SliceFixed"#) -}
+2014c17bf972b0f9f69198976cbe43a5
+  $tc'SliceNil :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4362501112977348396##
+                   9859972840933673327##
+                   Data.Array.Accelerate.Array.Representation.$trModule
+                   Data.Array.Accelerate.Array.Representation.$tc'SliceNil1) -}
+f2843cfabb5cf4bc273d4fa3475e38a8
+  $tc'SliceNil1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'SliceNil"#) -}
+2364a9c5b38033b986ec5480bcf64850
+  $tcShape :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6955169482264273424##
+                   16737722733975347857##
+                   Data.Array.Accelerate.Array.Representation.$trModule
+                   Data.Array.Accelerate.Array.Representation.$tcShape1) -}
+dd671ded841cc0cb9d40c2dbb749a668
+  $tcShape1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Shape"#) -}
+8c7dbcb1a179a35909f95078cae6b48e
+  $tcSlice :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   634660379808547249##
+                   5993633093608531879##
+                   Data.Array.Accelerate.Array.Representation.$trModule
+                   Data.Array.Accelerate.Array.Representation.$tcSlice1) -}
+fb5f8a7f97e9f9ef73479d115754ca9c
+  $tcSlice1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Slice"#) -}
+c7d32ce7e025b77ab7194acabdf5dfb6
+  $tcSliceIndex :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12769953114487647623##
+                   15513255082967931816##
+                   Data.Array.Accelerate.Array.Representation.$trModule
+                   Data.Array.Accelerate.Array.Representation.$tcSliceIndex1) -}
+3f0ee8b504666f20fd36bc8c78e578d2
+  $tcSliceIndex1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "SliceIndex"#) -}
+95bbae2a4d02ddc7b9d239a5d633c50d
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Data.Array.Accelerate.Array.Representation.$trModule2
+                   Data.Array.Accelerate.Array.Representation.$trModule1) -}
+00d5497ce7505f44ac440e34f5527bbb
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Data.Array.Accelerate.Array.Representation"#) -}
+9f88bd2ec21b5b00bcafbe3cef7d46df
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw"#) -}
+23bf73ee0b15d2a1866ef90520688420
+  $w$cfromIndex ::
+    Data.Array.Accelerate.Array.Representation.Shape sh =>
+    sh -> GHC.Types.Int -> GHC.Types.Int -> (# sh, GHC.Types.Int #)
+  {- Arity: 4,
+     Strictness: <L,U(A,A,1*C1(U(1*U)),A,A,A,A,A,A,1*C1(C1(U)),A,A,A,A,A,A)><L,U><L,U(U)><L,U(U)>,
+     Inline: [0],
+     Unfolding: (\ @ sh
+                   (w :: Data.Array.Accelerate.Array.Representation.Shape sh)
+                   (ww :: sh)
+                   (ww1 :: GHC.Types.Int)
+                   (w1 :: GHC.Types.Int) ->
+                 (# Data.Array.Accelerate.Array.Representation.fromIndex
+                      @ sh
+                      w
+                      ww
+                      (case w1 of wild { GHC.Types.I# x ->
+                       case ww1 of wild1 { GHC.Types.I# y ->
+                       case GHC.Prim.quotInt# x y of wild2 { DEFAULT ->
+                       GHC.Types.I# wild2 } } }),
+                    case Data.Array.Accelerate.Array.Representation.rank
+                           @ sh
+                           w
+                           ww of wild { GHC.Types.I# x ->
+                    case x of wild1 {
+                      DEFAULT -> GHC.Base.remInt w1 ww1
+                      0#
+                      -> case w1 of wild2 { GHC.Types.I# x1 ->
+                         case GHC.Prim.tagToEnum#
+                                @ GHC.Types.Bool
+                                (GHC.Prim.>=# x1 0#) of wild3 {
+                           GHC.Types.False
+                           -> case ww1 of ww2 { GHC.Types.I# ww3 ->
+                              case Data.Array.Accelerate.Array.Representation.$fShape(,)3 ww3 x1
+                              ret_ty GHC.Types.Int
+                              of {} }
+                           GHC.Types.True
+                           -> case ww1 of wild4 { GHC.Types.I# y ->
+                              case GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.<# x1 y) of wild5 {
+                                GHC.Types.False
+                                -> case Data.Array.Accelerate.Array.Representation.$fShape(,)3 y x1
+                                   ret_ty GHC.Types.Int
+                                   of {}
+                                GHC.Types.True -> wild2 } } } } } } #)) -}
+23bf73ee0b15d2a1866ef90520688420
+  $w$citer ::
+    Data.Array.Accelerate.Array.Representation.Shape sh =>
+    forall a.
+    sh
+    -> GHC.Types.Int
+    -> ((sh, GHC.Types.Int) -> a)
+    -> (a -> a -> a)
+    -> a
+    -> a
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLC(C(C(C(S))))LLLLL),1*U(A,A,A,A,A,A,A,A,A,A,1*C1(C1(C1(C1(U)))),A,A,A,A,A)><L,U><L,U(U)><L,C(U)><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ sh
+                   (w :: Data.Array.Accelerate.Array.Representation.Shape sh)
+                   @ a
+                   (ww :: sh)
+                   (ww1 :: GHC.Types.Int)
+                   (w1 :: (sh, GHC.Types.Int) -> a)
+                   (w2 :: a -> a -> a)
+                   (w3 :: a) ->
+                 Data.Array.Accelerate.Array.Representation.iter
+                   @ sh
+                   w
+                   @ a
+                   ww
+                   (\ (ix :: sh) ->
+                    case ww1 of wild1 { GHC.Types.I# y ->
+                    case GHC.Prim.tagToEnum#
+                           @ GHC.Types.Bool
+                           (GHC.Prim.>=# 0# y) of wild {
+                      GHC.Types.False
+                      -> w2
+                           (w1 (ix, GHC.Types.I# 0#))
+                           (letrec {
+                              $witer' :: sh -> GHC.Prim.Int# -> a
+                                {- Arity: 2, Strictness: <L,U><S,U>, Inline: [0] -}
+                              = \ (ww2 :: sh) (ww3 :: GHC.Prim.Int#) ->
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.>=# ww3 y) of wild2 {
+                                  GHC.Types.False
+                                  -> w2
+                                       (w1 (ww2, GHC.Types.I# ww3))
+                                       ($witer' ww2 (GHC.Prim.+# ww3 1#))
+                                  GHC.Types.True -> w3 }
+                            } in
+                            $witer' ix 1#)
+                      GHC.Types.True -> w3 } })
+                   w2
+                   w3) -}
+23bf73ee0b15d2a1866ef90520688420
+  $w$citer1 ::
+    Data.Array.Accelerate.Array.Representation.Shape sh =>
+    forall a.
+    sh
+    -> GHC.Prim.Int#
+    -> ((sh, GHC.Types.Int) -> a)
+    -> (a -> a -> a)
+    -> a
+  {- Arity: 5,
+     Strictness: <S(LLLLLLLLLLLC(C(C(S)))LLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,1*C1(C1(C1(U))),A,A,A,A)><L,U><S,1*U><L,C(U)><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ sh
+                   (w :: Data.Array.Accelerate.Array.Representation.Shape sh)
+                   @ a
+                   (ww :: sh)
+                   (ww1 :: GHC.Prim.Int#)
+                   (w1 :: (sh, GHC.Types.Int) -> a)
+                   (w2 :: a -> a -> a) ->
+                 case ww1 of ds {
+                   DEFAULT
+                   -> let {
+                        lvl70 :: GHC.Prim.Int# = GHC.Prim.-# ds 1#
+                      } in
+                      letrec {
+                        $witer1' :: sh -> GHC.Prim.Int# -> a
+                          {- Arity: 2, Strictness: <L,U><S,U>, Inline: [0] -}
+                        = \ (ww2 :: sh) (ww3 :: GHC.Prim.Int#) ->
+                          case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.==# ww3 lvl70) of wild {
+                            GHC.Types.False
+                            -> w2
+                                 (w1 (ww2, GHC.Types.I# ww3))
+                                 ($witer1' ww2 (GHC.Prim.+# ww3 1#))
+                            GHC.Types.True -> w1 (ww2, GHC.Types.I# ww3) }
+                      } in
+                      Data.Array.Accelerate.Array.Representation.iter1
+                        @ sh
+                        w
+                        @ a
+                        ww
+                        (\ (ix :: sh) -> $witer1' ix 0#)
+                        w2
+                   0#
+                   -> Data.Array.Accelerate.Array.Representation.$fShape(,)2 @ a }) -}
+23bf73ee0b15d2a1866ef90520688420
+  $w$ctoIndex ::
+    Data.Array.Accelerate.Array.Representation.Shape sh =>
+    sh -> GHC.Prim.Int# -> sh -> GHC.Prim.Int# -> GHC.Prim.Int#
+  {- Arity: 5,
+     Strictness: <S(LLLLLLLLC(C(S(S)))LLLLLLL),1*U(A,A,A,A,A,A,A,A,1*C1(C1(U(U))),A,A,A,A,A,A,A)><L,U><S,U><L,U><S,U>,
+     Inline: [0],
+     Unfolding: (\ @ sh
+                   (w :: Data.Array.Accelerate.Array.Representation.Shape sh)
+                   (ww :: sh)
+                   (ww1 :: GHC.Prim.Int#)
+                   (ww2 :: sh)
+                   (ww3 :: GHC.Prim.Int#) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww3 0#) of wild {
+                   GHC.Types.False
+                   -> case Data.Array.Accelerate.Array.Representation.$fShape(,)4
+                             ww1
+                             ww3
+                      ret_ty GHC.Prim.Int#
+                      of {}
+                   GHC.Types.True
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<# ww3 ww1) of wild1 {
+                        GHC.Types.False
+                        -> case Data.Array.Accelerate.Array.Representation.$fShape(,)4
+                                  ww1
+                                  ww3
+                           ret_ty GHC.Prim.Int#
+                           of {}
+                        GHC.Types.True
+                        -> case Data.Array.Accelerate.Array.Representation.toIndex
+                                  @ sh
+                                  w
+                                  ww
+                                  ww2 of wild2 { GHC.Types.I# x ->
+                           GHC.Prim.+# (GHC.Prim.*# x ww1) ww3 } } }) -}
+19f9c03055812344a644e8091c1a01ad
+  axiom D:R:CoSliceShape()::
+      Data.Array.Accelerate.Array.Representation.CoSliceShape () = ()
+19f9c03055812344a644e8091c1a01ad
+  axiom D:R:CoSliceShape(,)::
+    [sl]
+      Data.Array.Accelerate.Array.Representation.CoSliceShape
+        (sl, GHC.Types.Int)
+        = (Data.Array.Accelerate.Array.Representation.CoSliceShape sl,
+           GHC.Types.Int)
+19f9c03055812344a644e8091c1a01ad
+  axiom D:R:CoSliceShape(,)0::
+    [sl]
+      Data.Array.Accelerate.Array.Representation.CoSliceShape (sl, ())
+        = Data.Array.Accelerate.Array.Representation.CoSliceShape sl
+19f9c03055812344a644e8091c1a01ad
+  axiom D:R:FullShape()::
+      Data.Array.Accelerate.Array.Representation.FullShape () = ()
+19f9c03055812344a644e8091c1a01ad
+  axiom D:R:FullShape(,)::
+    [sl]
+      Data.Array.Accelerate.Array.Representation.FullShape
+        (sl, GHC.Types.Int)
+        = (Data.Array.Accelerate.Array.Representation.FullShape sl,
+           GHC.Types.Int)
+19f9c03055812344a644e8091c1a01ad
+  axiom D:R:FullShape(,)0::
+    [sl]
+      Data.Array.Accelerate.Array.Representation.FullShape (sl, ())
+        = (Data.Array.Accelerate.Array.Representation.FullShape sl,
+           GHC.Types.Int)
+19f9c03055812344a644e8091c1a01ad
+  axiom D:R:SliceShape()::
+      Data.Array.Accelerate.Array.Representation.SliceShape () = ()
+19f9c03055812344a644e8091c1a01ad
+  axiom D:R:SliceShape(,)::
+    [sl]
+      Data.Array.Accelerate.Array.Representation.SliceShape
+        (sl, GHC.Types.Int)
+        = Data.Array.Accelerate.Array.Representation.SliceShape sl
+19f9c03055812344a644e8091c1a01ad
+  axiom D:R:SliceShape(,)0::
+    [sl]
+      Data.Array.Accelerate.Array.Representation.SliceShape (sl, ())
+        = (Data.Array.Accelerate.Array.Representation.SliceShape sl,
+           GHC.Types.Int)
+23bf73ee0b15d2a1866ef90520688420
+  class (GHC.Classes.Eq sh,
+         Data.Array.Accelerate.Array.Representation.Slice sh) =>
+        Shape sh where
+    rank :: sh -> GHC.Types.Int
+    size :: sh -> GHC.Types.Int
+    empty :: sh
+    intersect :: sh -> sh -> sh
+    union :: sh -> sh -> sh
+    ignore :: sh
+    toIndex :: sh -> sh -> GHC.Types.Int
+    fromIndex :: sh -> GHC.Types.Int -> sh
+    iter :: sh -> (sh -> a) -> (a -> a -> a) -> a -> a
+    iter1 :: sh -> (sh -> a) -> (a -> a -> a) -> a
+    rangeToShape :: (sh, sh) -> sh
+    shapeToRange :: sh -> (sh, sh)
+    shapeToList :: sh -> [GHC.Types.Int]
+    listToShape :: [GHC.Types.Int] -> sh
+    {-# MINIMAL rank, size, empty, intersect, union, ignore, toIndex,
+                fromIndex, iter, iter1, rangeToShape, shapeToRange, shapeToList,
+                listToShape #-}
+19f9c03055812344a644e8091c1a01ad
+  class Slice sl where
+    type family SliceShape sl :: * open
+    type family CoSliceShape sl :: * open
+    type family FullShape sl :: * open
+    sliceIndex :: sl
+                  -> Data.Array.Accelerate.Array.Representation.SliceIndex
+                       sl
+                       (Data.Array.Accelerate.Array.Representation.SliceShape sl)
+                       (Data.Array.Accelerate.Array.Representation.CoSliceShape sl)
+                       (Data.Array.Accelerate.Array.Representation.FullShape sl)
+    {-# MINIMAL sliceIndex #-}
+23dde5ac3819531720383c4ce52892fc
+  type role SliceIndex nominal nominal nominal nominal
+  data SliceIndex ix slice coSlice sliceDim where
+    SliceNil :: SliceIndex () () () ()
+    SliceAll :: (Data.Array.Accelerate.Array.Representation.SliceIndex
+                   ix1 slice1 coSlice dim)
+                -> SliceIndex (ix1, ())
+                              (slice1, GHC.Types.Int)
+                              coSlice
+                              (dim, GHC.Types.Int)
+    SliceFixed :: (Data.Array.Accelerate.Array.Representation.SliceIndex
+                     ix1 slice co dim)
+                  -> SliceIndex (ix1, GHC.Types.Int)
+                                slice
+                                (co, GHC.Types.Int)
+                                (dim, GHC.Types.Int)
+a3e50578b8123a62bfb850f6baabd4f1
+  enumSlices ::
+    Data.Array.Accelerate.Array.Representation.SliceIndex
+      slix sl co dim
+    -> dim -> [slix]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+05791fb2be905a3a2a3220e658a5ab41
+  sliceShape ::
+    Data.Array.Accelerate.Array.Representation.SliceIndex
+      slix sl co dim
+    -> dim -> sl
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+instance Data.Array.Accelerate.Array.Representation.Shape [()]
+  = Data.Array.Accelerate.Array.Representation.$fShape()
+instance Data.Array.Accelerate.Array.Representation.Shape [(,)]
+  = Data.Array.Accelerate.Array.Representation.$fShape(,)
+instance GHC.Show.Show [Data.Array.Accelerate.Array.Representation.SliceIndex]
+  = Data.Array.Accelerate.Array.Representation.$fShowSliceIndex
+instance Data.Array.Accelerate.Array.Representation.Slice [()]
+  = Data.Array.Accelerate.Array.Representation.$fSlice()
+instance Data.Array.Accelerate.Array.Representation.Slice [(,)]
+  = Data.Array.Accelerate.Array.Representation.$fSlice(,)
+instance Data.Array.Accelerate.Array.Representation.Slice [(,)]
+  = Data.Array.Accelerate.Array.Representation.$fSlice(,)0
+family instance Data.Array.Accelerate.Array.Representation.CoSliceShape [()]
+  = Data.Array.Accelerate.Array.Representation.D:R:CoSliceShape()
+family instance Data.Array.Accelerate.Array.Representation.CoSliceShape [(,)]
+  = Data.Array.Accelerate.Array.Representation.D:R:CoSliceShape(,)0
+family instance Data.Array.Accelerate.Array.Representation.CoSliceShape [(,)]
+  = Data.Array.Accelerate.Array.Representation.D:R:CoSliceShape(,)
+family instance Data.Array.Accelerate.Array.Representation.FullShape [()]
+  = Data.Array.Accelerate.Array.Representation.D:R:FullShape()
+family instance Data.Array.Accelerate.Array.Representation.FullShape [(,)]
+  = Data.Array.Accelerate.Array.Representation.D:R:FullShape(,)0
+family instance Data.Array.Accelerate.Array.Representation.FullShape [(,)]
+  = Data.Array.Accelerate.Array.Representation.D:R:FullShape(,)
+family instance Data.Array.Accelerate.Array.Representation.SliceShape [()]
+  = Data.Array.Accelerate.Array.Representation.D:R:SliceShape()
+family instance Data.Array.Accelerate.Array.Representation.SliceShape [(,)]
+  = Data.Array.Accelerate.Array.Representation.D:R:SliceShape(,)0
+family instance Data.Array.Accelerate.Array.Representation.SliceShape [(,)]
+  = Data.Array.Accelerate.Array.Representation.D:R:SliceShape(,)
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

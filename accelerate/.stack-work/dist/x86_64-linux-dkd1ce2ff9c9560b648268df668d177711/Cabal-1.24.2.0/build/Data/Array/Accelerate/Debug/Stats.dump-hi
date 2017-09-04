@@ -1,0 +1,1020 @@
+
+==================== FINAL INTERFACE ====================
+2017-08-29 05:26:55.701849 UTC
+
+interface accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Debug.Stats 8002
+  interface hash: 6be97a8fbfb122ec32bd6df8c1f7c27f
+  ABI hash: 233b556167dd26bfa71d8540af4d79bd
+  export-list hash: 1a390e34a04e023aa79411b38bd9c6fa
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 34a49282cefe37c63ca0ad1ec596249f
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Data.Array.Accelerate.Debug.Stats.betaReduce
+  Data.Array.Accelerate.Debug.Stats.fusionDone
+  Data.Array.Accelerate.Debug.Stats.inline
+  Data.Array.Accelerate.Debug.Stats.knownBranch
+  Data.Array.Accelerate.Debug.Stats.resetSimplCount
+  Data.Array.Accelerate.Debug.Stats.ruleFired
+  Data.Array.Accelerate.Debug.Stats.simplCount
+  Data.Array.Accelerate.Debug.Stats.simplifierDone
+  Data.Array.Accelerate.Debug.Stats.substitution
+module dependencies: Data.Array.Accelerate.Debug.Flags
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1 pretty-1.1.3.3@pretty-1.1.3.3
+                      template-haskell-2.11.1.0
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt:Data.Label.Point
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+import  -/  Data.Array.Accelerate.Debug.Flags 4ae65d880031597019ea1d1d62ef661e
+  exports: 13ef378da3ed97cd263f65489c45c172
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:Data.Function 7aca86bfbd92366def5f260e30cb2628
+import  -/  base-4.9.1.0:Data.IORef 71c87b0b25a8bca3e3f4497725f5e543
+import  -/  base-4.9.1.0:Data.List 07ae2acca6538aa0800bd0a993ac6ac1
+import  -/  base-4.9.1.0:Data.OldList 27987919d8da2f92e3f472ca81f730f8
+import  -/  base-4.9.1.0:Data.Ord 7fde5c9d64d4c27431689be19182758a
+import  -/  base-4.9.1.0:Data.Tuple 7dc4bbb45d2e69c991ffac438beeca11
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.1.0:GHC.IO.Unsafe 1c057c642b0e201f55a24585d3d94564
+import  -/  base-4.9.1.0:GHC.IORef 306bd532f2f3b000347cbe6316adc20e
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:System.IO.Unsafe 1e3c5b8dd8cf6850ae43cce967bb46cd
+import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Map 20d4ffbee41965d03d6a989425473dc4
+import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base d432f6875983131473086af8cb290590
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint abe8aeb00d775221281f89090d9fbe2a
+import  -/  pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ 5fd6ee2fcb3f4a1e810ed36714963e44
+addDependentFile "/home/pwoh/.stack/programs/x86_64-linux-dkd1ce2ff9c9560b648268df668d177711/ghc-8.0.2/lib/ghc-8.0.2/include/ghcversion.h"
+addDependentFile ".stack-work/dist/x86_64-linux-dkd1ce2ff9c9560b648268df668d177711/Cabal-1.24.2.0/build/autogen/cabal_macros.h"
+addDependentFile "/usr/include/stdc-predef.h"
+84ff04945eca97f162c9ef29ab33b92e
+  $fEqId :: GHC.Classes.Eq Data.Array.Accelerate.Debug.Stats.Id
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Data.Array.Accelerate.Debug.Stats.Id
+                  Data.Array.Accelerate.Debug.Stats.$fEqId_$c==
+                  Data.Array.Accelerate.Debug.Stats.$fEqId_$c/= -}
+84ff04945eca97f162c9ef29ab33b92e
+  $fEqId_$c/= ::
+    Data.Array.Accelerate.Debug.Stats.Id
+    -> Data.Array.Accelerate.Debug.Stats.Id -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S),1*U(1*U)><S(S),1*U(1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Data.Array.Accelerate.Debug.Stats.Id)
+                   (b :: Data.Array.Accelerate.Debug.Stats.Id) ->
+                 case a of wild { Data.Array.Accelerate.Debug.Stats.Id a1 ->
+                 case b of wild1 { Data.Array.Accelerate.Debug.Stats.Id b1 ->
+                 case GHC.Base.eqString a1 b1 of wild2 {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False } } }) -}
+84ff04945eca97f162c9ef29ab33b92e
+  $fEqId_$c== ::
+    Data.Array.Accelerate.Debug.Stats.Id
+    -> Data.Array.Accelerate.Debug.Stats.Id -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S),1*U(1*U)><S(S),1*U(1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds :: Data.Array.Accelerate.Debug.Stats.Id)
+                   (ds1 :: Data.Array.Accelerate.Debug.Stats.Id) ->
+                 case ds of wild { Data.Array.Accelerate.Debug.Stats.Id a1 ->
+                 case ds1 of wild1 { Data.Array.Accelerate.Debug.Stats.Id b1 ->
+                 GHC.Base.eqString a1 b1 } }) -}
+0f7113eb896fb812888fd2eb2ee1ea24
+  $fEqTick :: GHC.Classes.Eq Data.Array.Accelerate.Debug.Stats.Tick
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Data.Array.Accelerate.Debug.Stats.Tick
+                  Data.Array.Accelerate.Debug.Stats.$fEqTick_$c==
+                  Data.Array.Accelerate.Debug.Stats.$fEqTick_$c/= -}
+0f7113eb896fb812888fd2eb2ee1ea24
+  $fEqTick_$c/= ::
+    Data.Array.Accelerate.Debug.Stats.Tick
+    -> Data.Array.Accelerate.Debug.Stats.Tick -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Data.Array.Accelerate.Debug.Stats.Tick)
+                   (b :: Data.Array.Accelerate.Debug.Stats.Tick) ->
+                 case Data.Array.Accelerate.Debug.Stats.$fEqTick_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+0f7113eb896fb812888fd2eb2ee1ea24
+  $fEqTick_$c== ::
+    Data.Array.Accelerate.Debug.Stats.Tick
+    -> Data.Array.Accelerate.Debug.Stats.Tick -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: Data.Array.Accelerate.Debug.Stats.Tick)
+                   (ds1 :: Data.Array.Accelerate.Debug.Stats.Tick) ->
+                 case ds of wild {
+                   Data.Array.Accelerate.Debug.Stats.Inline a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Data.Array.Accelerate.Debug.Stats.Inline b1
+                        -> Data.Array.Accelerate.Debug.Stats.$fEqId_$c== a1 b1 }
+                   Data.Array.Accelerate.Debug.Stats.RuleFired a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Data.Array.Accelerate.Debug.Stats.RuleFired b1
+                        -> Data.Array.Accelerate.Debug.Stats.$fEqId_$c== a1 b1 }
+                   Data.Array.Accelerate.Debug.Stats.KnownBranch a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Data.Array.Accelerate.Debug.Stats.KnownBranch b1
+                        -> Data.Array.Accelerate.Debug.Stats.$fEqId_$c== a1 b1 }
+                   Data.Array.Accelerate.Debug.Stats.BetaReduce a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Data.Array.Accelerate.Debug.Stats.BetaReduce b1
+                        -> Data.Array.Accelerate.Debug.Stats.$fEqId_$c== a1 b1 }
+                   Data.Array.Accelerate.Debug.Stats.Substitution a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Data.Array.Accelerate.Debug.Stats.Substitution b1
+                        -> Data.Array.Accelerate.Debug.Stats.$fEqId_$c== a1 b1 }
+                   Data.Array.Accelerate.Debug.Stats.SimplifierDone
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Data.Array.Accelerate.Debug.Stats.SimplifierDone
+                        -> GHC.Types.True }
+                   Data.Array.Accelerate.Debug.Stats.FusionDone
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Data.Array.Accelerate.Debug.Stats.FusionDone
+                        -> GHC.Types.True } }) -}
+84ff04945eca97f162c9ef29ab33b92e
+  $fOrdId :: GHC.Classes.Ord Data.Array.Accelerate.Debug.Stats.Id
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Data.Array.Accelerate.Debug.Stats.Id
+                  Data.Array.Accelerate.Debug.Stats.$fEqId
+                  Data.Array.Accelerate.Debug.Stats.$fOrdId_$ccompare
+                  Data.Array.Accelerate.Debug.Stats.$fOrdId_$c<
+                  Data.Array.Accelerate.Debug.Stats.$fOrdId_$c<=
+                  Data.Array.Accelerate.Debug.Stats.$fOrdId_$c>
+                  Data.Array.Accelerate.Debug.Stats.$fOrdId_$c>=
+                  Data.Array.Accelerate.Debug.Stats.$fOrdId_$cmax
+                  Data.Array.Accelerate.Debug.Stats.$fOrdId_$cmin -}
+84ff04945eca97f162c9ef29ab33b92e
+  $fOrdId_$c< ::
+    Data.Array.Accelerate.Debug.Stats.Id
+    -> Data.Array.Accelerate.Debug.Stats.Id -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S),1*U(1*U)><S(S),1*U(1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Data.Array.Accelerate.Debug.Stats.Id)
+                   (b :: Data.Array.Accelerate.Debug.Stats.Id) ->
+                 case a of wild { Data.Array.Accelerate.Debug.Stats.Id a1 ->
+                 case b of wild1 { Data.Array.Accelerate.Debug.Stats.Id b1 ->
+                 GHC.Classes.$fOrd[]_$s$c<1 a1 b1 } }) -}
+84ff04945eca97f162c9ef29ab33b92e
+  $fOrdId_$c<= ::
+    Data.Array.Accelerate.Debug.Stats.Id
+    -> Data.Array.Accelerate.Debug.Stats.Id -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S),1*U(1*U)><S(S),1*U(1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Data.Array.Accelerate.Debug.Stats.Id)
+                   (b :: Data.Array.Accelerate.Debug.Stats.Id) ->
+                 case a of wild { Data.Array.Accelerate.Debug.Stats.Id a1 ->
+                 case b of wild1 { Data.Array.Accelerate.Debug.Stats.Id b1 ->
+                 GHC.Classes.$fOrd[]_$s$c<=1 a1 b1 } }) -}
+84ff04945eca97f162c9ef29ab33b92e
+  $fOrdId_$c> ::
+    Data.Array.Accelerate.Debug.Stats.Id
+    -> Data.Array.Accelerate.Debug.Stats.Id -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S),1*U(1*U)><S(S),1*U(1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Data.Array.Accelerate.Debug.Stats.Id)
+                   (b :: Data.Array.Accelerate.Debug.Stats.Id) ->
+                 case a of wild { Data.Array.Accelerate.Debug.Stats.Id a1 ->
+                 case b of wild1 { Data.Array.Accelerate.Debug.Stats.Id b1 ->
+                 GHC.Classes.$fOrd[]_$s$c>1 a1 b1 } }) -}
+84ff04945eca97f162c9ef29ab33b92e
+  $fOrdId_$c>= ::
+    Data.Array.Accelerate.Debug.Stats.Id
+    -> Data.Array.Accelerate.Debug.Stats.Id -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S),1*U(1*U)><S(S),1*U(1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Data.Array.Accelerate.Debug.Stats.Id)
+                   (b :: Data.Array.Accelerate.Debug.Stats.Id) ->
+                 case a of wild { Data.Array.Accelerate.Debug.Stats.Id a1 ->
+                 case b of wild1 { Data.Array.Accelerate.Debug.Stats.Id b1 ->
+                 GHC.Classes.$fOrd[]_$s$c>=1 a1 b1 } }) -}
+84ff04945eca97f162c9ef29ab33b92e
+  $fOrdId_$ccompare ::
+    Data.Array.Accelerate.Debug.Stats.Id
+    -> Data.Array.Accelerate.Debug.Stats.Id -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S),1*U(1*U)><S(S),1*U(1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Data.Array.Accelerate.Debug.Stats.Id)
+                   (b :: Data.Array.Accelerate.Debug.Stats.Id) ->
+                 case a of wild { Data.Array.Accelerate.Debug.Stats.Id a1 ->
+                 case b of wild1 { Data.Array.Accelerate.Debug.Stats.Id b1 ->
+                 GHC.Classes.$fOrd[]_$s$ccompare1 a1 b1 } }) -}
+84ff04945eca97f162c9ef29ab33b92e
+  $fOrdId_$cmax ::
+    Data.Array.Accelerate.Debug.Stats.Id
+    -> Data.Array.Accelerate.Debug.Stats.Id
+    -> Data.Array.Accelerate.Debug.Stats.Id
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Data.Array.Accelerate.Debug.Stats.Id)
+                   (y :: Data.Array.Accelerate.Debug.Stats.Id) ->
+                 case x of wild { Data.Array.Accelerate.Debug.Stats.Id a1 ->
+                 case y of wild1 { Data.Array.Accelerate.Debug.Stats.Id b1 ->
+                 case GHC.Classes.$fOrd[]_$s$ccompare1 a1 b1 of wild2 {
+                   DEFAULT -> wild1 GHC.Types.GT -> wild } } }) -}
+84ff04945eca97f162c9ef29ab33b92e
+  $fOrdId_$cmin ::
+    Data.Array.Accelerate.Debug.Stats.Id
+    -> Data.Array.Accelerate.Debug.Stats.Id
+    -> Data.Array.Accelerate.Debug.Stats.Id
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Data.Array.Accelerate.Debug.Stats.Id)
+                   (y :: Data.Array.Accelerate.Debug.Stats.Id) ->
+                 case x of wild { Data.Array.Accelerate.Debug.Stats.Id a1 ->
+                 case y of wild1 { Data.Array.Accelerate.Debug.Stats.Id b1 ->
+                 case GHC.Classes.$fOrd[]_$s$ccompare1 a1 b1 of wild2 {
+                   DEFAULT -> wild GHC.Types.GT -> wild1 } } }) -}
+0f7113eb896fb812888fd2eb2ee1ea24
+  $fOrdTick :: GHC.Classes.Ord Data.Array.Accelerate.Debug.Stats.Tick
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Data.Array.Accelerate.Debug.Stats.Tick
+                  Data.Array.Accelerate.Debug.Stats.$fEqTick
+                  Data.Array.Accelerate.Debug.Stats.$fOrdTick_$ccompare
+                  Data.Array.Accelerate.Debug.Stats.$fOrdTick_$c<
+                  Data.Array.Accelerate.Debug.Stats.$fOrdTick_$c<=
+                  Data.Array.Accelerate.Debug.Stats.$fOrdTick_$c>
+                  Data.Array.Accelerate.Debug.Stats.$fOrdTick_$c>=
+                  Data.Array.Accelerate.Debug.Stats.$fOrdTick_$cmax
+                  Data.Array.Accelerate.Debug.Stats.$fOrdTick_$cmin -}
+0f7113eb896fb812888fd2eb2ee1ea24
+  $fOrdTick_$c< ::
+    Data.Array.Accelerate.Debug.Stats.Tick
+    -> Data.Array.Accelerate.Debug.Stats.Tick -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Data.Array.Accelerate.Debug.Stats.Tick)
+                   (y :: Data.Array.Accelerate.Debug.Stats.Tick) ->
+                 case Data.Array.Accelerate.Debug.Stats.$fOrdTick_$ccompare
+                        x
+                        y of wild {
+                   DEFAULT -> GHC.Types.False GHC.Types.LT -> GHC.Types.True }) -}
+0f7113eb896fb812888fd2eb2ee1ea24
+  $fOrdTick_$c<= ::
+    Data.Array.Accelerate.Debug.Stats.Tick
+    -> Data.Array.Accelerate.Debug.Stats.Tick -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Data.Array.Accelerate.Debug.Stats.Tick)
+                   (y :: Data.Array.Accelerate.Debug.Stats.Tick) ->
+                 case Data.Array.Accelerate.Debug.Stats.$fOrdTick_$ccompare
+                        x
+                        y of wild {
+                   DEFAULT -> GHC.Types.True GHC.Types.GT -> GHC.Types.False }) -}
+0f7113eb896fb812888fd2eb2ee1ea24
+  $fOrdTick_$c> ::
+    Data.Array.Accelerate.Debug.Stats.Tick
+    -> Data.Array.Accelerate.Debug.Stats.Tick -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Data.Array.Accelerate.Debug.Stats.Tick)
+                   (y :: Data.Array.Accelerate.Debug.Stats.Tick) ->
+                 case Data.Array.Accelerate.Debug.Stats.$fOrdTick_$ccompare
+                        x
+                        y of wild {
+                   DEFAULT -> GHC.Types.False GHC.Types.GT -> GHC.Types.True }) -}
+0f7113eb896fb812888fd2eb2ee1ea24
+  $fOrdTick_$c>= ::
+    Data.Array.Accelerate.Debug.Stats.Tick
+    -> Data.Array.Accelerate.Debug.Stats.Tick -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Data.Array.Accelerate.Debug.Stats.Tick)
+                   (y :: Data.Array.Accelerate.Debug.Stats.Tick) ->
+                 case Data.Array.Accelerate.Debug.Stats.$fOrdTick_$ccompare
+                        x
+                        y of wild {
+                   DEFAULT -> GHC.Types.True GHC.Types.LT -> GHC.Types.False }) -}
+0f7113eb896fb812888fd2eb2ee1ea24
+  $fOrdTick_$ccompare ::
+    Data.Array.Accelerate.Debug.Stats.Tick
+    -> Data.Array.Accelerate.Debug.Stats.Tick -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: Data.Array.Accelerate.Debug.Stats.Tick)
+                   (b :: Data.Array.Accelerate.Debug.Stats.Tick) ->
+                 case a of wild {
+                   Data.Array.Accelerate.Debug.Stats.Inline a1
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.LT
+                        Data.Array.Accelerate.Debug.Stats.Inline b1
+                        -> Data.Array.Accelerate.Debug.Stats.$fOrdId_$ccompare a1 b1 }
+                   Data.Array.Accelerate.Debug.Stats.RuleFired a1
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.LT
+                        Data.Array.Accelerate.Debug.Stats.Inline ds -> GHC.Types.GT
+                        Data.Array.Accelerate.Debug.Stats.RuleFired b1
+                        -> Data.Array.Accelerate.Debug.Stats.$fOrdId_$ccompare a1 b1 }
+                   Data.Array.Accelerate.Debug.Stats.KnownBranch a1
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.GT
+                        Data.Array.Accelerate.Debug.Stats.KnownBranch ds
+                        -> Data.Array.Accelerate.Debug.Stats.$fOrdId_$ccompare a1 ds
+                        Data.Array.Accelerate.Debug.Stats.BetaReduce ds -> GHC.Types.LT
+                        Data.Array.Accelerate.Debug.Stats.Substitution ds -> GHC.Types.LT
+                        Data.Array.Accelerate.Debug.Stats.SimplifierDone -> GHC.Types.LT
+                        Data.Array.Accelerate.Debug.Stats.FusionDone -> GHC.Types.LT }
+                   Data.Array.Accelerate.Debug.Stats.BetaReduce a1
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.GT
+                        Data.Array.Accelerate.Debug.Stats.BetaReduce ds
+                        -> Data.Array.Accelerate.Debug.Stats.$fOrdId_$ccompare a1 ds
+                        Data.Array.Accelerate.Debug.Stats.Substitution ds -> GHC.Types.LT
+                        Data.Array.Accelerate.Debug.Stats.SimplifierDone -> GHC.Types.LT
+                        Data.Array.Accelerate.Debug.Stats.FusionDone -> GHC.Types.LT }
+                   Data.Array.Accelerate.Debug.Stats.Substitution a1
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.GT
+                        Data.Array.Accelerate.Debug.Stats.Substitution ds
+                        -> Data.Array.Accelerate.Debug.Stats.$fOrdId_$ccompare a1 ds
+                        Data.Array.Accelerate.Debug.Stats.SimplifierDone -> GHC.Types.LT
+                        Data.Array.Accelerate.Debug.Stats.FusionDone -> GHC.Types.LT }
+                   Data.Array.Accelerate.Debug.Stats.SimplifierDone
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.GT
+                        Data.Array.Accelerate.Debug.Stats.SimplifierDone -> GHC.Types.EQ
+                        Data.Array.Accelerate.Debug.Stats.FusionDone -> GHC.Types.LT }
+                   Data.Array.Accelerate.Debug.Stats.FusionDone
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.GT
+                        Data.Array.Accelerate.Debug.Stats.FusionDone
+                        -> GHC.Types.EQ } }) -}
+0f7113eb896fb812888fd2eb2ee1ea24
+  $fOrdTick_$cmax ::
+    Data.Array.Accelerate.Debug.Stats.Tick
+    -> Data.Array.Accelerate.Debug.Stats.Tick
+    -> Data.Array.Accelerate.Debug.Stats.Tick
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Data.Array.Accelerate.Debug.Stats.Tick)
+                   (y :: Data.Array.Accelerate.Debug.Stats.Tick) ->
+                 case Data.Array.Accelerate.Debug.Stats.$fOrdTick_$ccompare
+                        x
+                        y of wild {
+                   DEFAULT -> y GHC.Types.GT -> x }) -}
+0f7113eb896fb812888fd2eb2ee1ea24
+  $fOrdTick_$cmin ::
+    Data.Array.Accelerate.Debug.Stats.Tick
+    -> Data.Array.Accelerate.Debug.Stats.Tick
+    -> Data.Array.Accelerate.Debug.Stats.Tick
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Data.Array.Accelerate.Debug.Stats.Tick)
+                   (y :: Data.Array.Accelerate.Debug.Stats.Tick) ->
+                 case Data.Array.Accelerate.Debug.Stats.$fOrdTick_$ccompare
+                        x
+                        y of wild {
+                   DEFAULT -> x GHC.Types.GT -> y }) -}
+8c4b3a4f48614747481ba4f6614b925f
+  $fShowSimplStats ::
+    GHC.Show.Show Data.Array.Accelerate.Debug.Stats.SimplStats
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Data.Array.Accelerate.Debug.Stats.SimplStats
+                  Data.Array.Accelerate.Debug.Stats.$fShowSimplStats_$cshowsPrec
+                  Data.Array.Accelerate.Debug.Stats.$fShowSimplStats_$cshow
+                  Data.Array.Accelerate.Debug.Stats.$fShowSimplStats_$cshowList -}
+8c4b3a4f48614747481ba4f6614b925f
+  $fShowSimplStats1 ::
+    Data.Array.Accelerate.Debug.Stats.SimplStats
+    -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2,
+     Unfolding: (\ (x :: Data.Array.Accelerate.Debug.Stats.SimplStats)
+                   (s :: GHC.Base.String)[OneShot] ->
+                 GHC.Base.++
+                   @ GHC.Types.Char
+                   (Data.Array.Accelerate.Debug.Stats.$fShowSimplStats_$cshow x)
+                   s) -}
+8ebeffb3e1eddd8b77c9f8ed42c35487
+  $fShowSimplStats2 ::
+    (Data.Array.Accelerate.Debug.Stats.Tick, GHC.Types.Int)
+    -> (Data.Array.Accelerate.Debug.Stats.Tick, GHC.Types.Int)
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,A)><S(SL),1*U(1*U,A)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: (Data.Array.Accelerate.Debug.Stats.Tick, GHC.Types.Int))
+                   (w1 :: (Data.Array.Accelerate.Debug.Stats.Tick, GHC.Types.Int)) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case w1 of ww3 { (,) ww4 ww5 ->
+                 Data.Array.Accelerate.Debug.Stats.$wlvl ww1 ww4 } }) -}
+313ffd3fc4e7a62ffbd92fdfc1710095
+  $fShowSimplStats3 :: Text.PrettyPrint.HughesPJ.Doc
+  {- Unfolding: (case GHC.List.$wlenAcc
+                        @ GHC.Types.Char
+                        (GHC.Types.[] @ GHC.Types.Char)
+                        0# of ww2 { DEFAULT ->
+                 (Text.PrettyPrint.Annotated.HughesPJ.TextBeside
+                    @ ()
+                    (Text.PrettyPrint.Annotated.HughesPJ.NoAnnot
+                       @ ()
+                       Data.Array.Accelerate.Debug.Stats.$fShowSimplStats4
+                       ww2)
+                    (Text.PrettyPrint.Annotated.HughesPJ.Empty @ ()))
+                   `cast`
+                 (Sym (Text.PrettyPrint.HughesPJ.N:Doc[0])) }) -}
+4bf19240fe3a79346f2a0b02c834c4e1
+  $fShowSimplStats4 ::
+    Text.PrettyPrint.Annotated.HughesPJ.TextDetails
+  {- HasNoCafRefs,
+     Unfolding: (Text.PrettyPrint.Annotated.HughesPJ.Str
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+120536638e41220ce81879a18cdfe9a0
+  $fShowSimplStats5 :: Text.PrettyPrint.HughesPJ.Doc
+  {- Unfolding: (case GHC.List.$wlenAcc
+                        @ GHC.Types.Char
+                        Data.Array.Accelerate.Debug.Stats.$fShowSimplStats_s
+                        0# of ww2 { DEFAULT ->
+                 (Text.PrettyPrint.Annotated.HughesPJ.TextBeside
+                    @ ()
+                    (Text.PrettyPrint.Annotated.HughesPJ.NoAnnot
+                       @ ()
+                       Data.Array.Accelerate.Debug.Stats.$fShowSimplStats6
+                       ww2)
+                    (Text.PrettyPrint.Annotated.HughesPJ.Empty @ ()))
+                   `cast`
+                 (Sym (Text.PrettyPrint.HughesPJ.N:Doc[0])) }) -}
+a1b8cc0a70cdf856538a01f9aa6418cc
+  $fShowSimplStats6 ::
+    Text.PrettyPrint.Annotated.HughesPJ.TextDetails
+  {- Unfolding: (Text.PrettyPrint.Annotated.HughesPJ.Str
+                   Data.Array.Accelerate.Debug.Stats.$fShowSimplStats_s) -}
+c92796e98595691f8efde2b183773f8f
+  $fShowSimplStats7 ::
+    Text.PrettyPrint.Annotated.HughesPJ.AnnotDetails ()
+    -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, HasNoCafRefs,
+     Unfolding: (\ (ds :: Text.PrettyPrint.Annotated.HughesPJ.AnnotDetails
+                            ())
+                   (eta :: GHC.Base.String)[OneShot] ->
+                 case ds of wild {
+                   DEFAULT -> eta
+                   Text.PrettyPrint.Annotated.HughesPJ.NoAnnot s dt1
+                   -> case s of wild1 {
+                        Text.PrettyPrint.Annotated.HughesPJ.Chr dt
+                        -> GHC.Types.: @ GHC.Types.Char (GHC.Types.C# dt) eta
+                        Text.PrettyPrint.Annotated.HughesPJ.Str s1
+                        -> GHC.Base.++ @ GHC.Types.Char s1 eta
+                        Text.PrettyPrint.Annotated.HughesPJ.PStr s1
+                        -> GHC.Base.++ @ GHC.Types.Char s1 eta } }) -}
+8c4b3a4f48614747481ba4f6614b925f
+  $fShowSimplStats_$cshow ::
+    Data.Array.Accelerate.Debug.Stats.SimplStats -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (x :: Data.Array.Accelerate.Debug.Stats.SimplStats) ->
+                 Text.PrettyPrint.Annotated.HughesPJ.fullRenderAnn
+                   @ ()
+                   @ GHC.Base.String
+                   Text.PrettyPrint.Annotated.HughesPJ.PageMode
+                   Text.PrettyPrint.Annotated.HughesPJ.render3
+                   Text.PrettyPrint.Annotated.HughesPJ.render2
+                   Data.Array.Accelerate.Debug.Stats.$fShowSimplStats7
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   (Data.Array.Accelerate.Debug.Stats.pprSimplCount x)
+                     `cast`
+                   (Text.PrettyPrint.HughesPJ.N:Doc[0])) -}
+8c4b3a4f48614747481ba4f6614b925f
+  $fShowSimplStats_$cshowList ::
+    [Data.Array.Accelerate.Debug.Stats.SimplStats] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ (ls :: [Data.Array.Accelerate.Debug.Stats.SimplStats])
+                   (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ Data.Array.Accelerate.Debug.Stats.SimplStats
+                   Data.Array.Accelerate.Debug.Stats.$fShowSimplStats1
+                   ls
+                   s) -}
+8c4b3a4f48614747481ba4f6614b925f
+  $fShowSimplStats_$cshowsPrec ::
+    GHC.Types.Int
+    -> Data.Array.Accelerate.Debug.Stats.SimplStats -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><L,1*U><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (ds :: GHC.Types.Int)
+                   (x :: Data.Array.Accelerate.Debug.Stats.SimplStats)
+                   (s :: GHC.Base.String) ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b
+                      c
+                      n
+                      (Data.Array.Accelerate.Debug.Stats.$fShowSimplStats_$cshow x))
+                   s) -}
+a2b335de7b2885c13e14ed7a144c7ae0
+  $fShowSimplStats_go ::
+    [[(Data.Array.Accelerate.Debug.Stats.Tick, GHC.Types.Int)]]
+    -> [Text.PrettyPrint.Annotated.HughesPJ.Doc ()]
+  {- Arity: 1, Strictness: <S,1*U> -}
+715406505f3b1f19269c8de6b8340dc0
+  $fShowSimplStats_s :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "Total ticks:"#) -}
+5c4dbaa0b0dec7ccb10a2e9bff4c02a3
+  $tc'BetaReduce :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14131024565704612673##
+                   8194951808371335240##
+                   Data.Array.Accelerate.Debug.Stats.$trModule
+                   Data.Array.Accelerate.Debug.Stats.$tc'BetaReduce1) -}
+d583e4bef18aba5c14a65562893b03a3
+  $tc'BetaReduce1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'BetaReduce"#) -}
+b909444ab6871a7eed9b972d0f56fa39
+  $tc'Detail :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17692175987824873449##
+                   7618033521695583413##
+                   Data.Array.Accelerate.Debug.Stats.$trModule
+                   Data.Array.Accelerate.Debug.Stats.$tc'Detail1) -}
+7213051135c064bcf3d641595e5fe765
+  $tc'Detail1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Detail"#) -}
+55e2c2eeb5afa661de8f199b39bdffc9
+  $tc'FusionDone :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3108418237866080689##
+                   15844997942375741724##
+                   Data.Array.Accelerate.Debug.Stats.$trModule
+                   Data.Array.Accelerate.Debug.Stats.$tc'FusionDone1) -}
+b42db1698c02f401d6e9d63a3a8e38f1
+  $tc'FusionDone1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'FusionDone"#) -}
+7ad5f02cd037c7dcd3c2b6d0de4761a9
+  $tc'Id :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14406093370282945909##
+                   3128465935693996283##
+                   Data.Array.Accelerate.Debug.Stats.$trModule
+                   Data.Array.Accelerate.Debug.Stats.$tc'Id1) -}
+492e50a90ee5bbbdfd15f5db2c83e880
+  $tc'Id1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Id"#) -}
+0b09a79648cb3c24c097a20a58b80d95
+  $tc'Inline :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13027900284048347920##
+                   9813152813673957764##
+                   Data.Array.Accelerate.Debug.Stats.$trModule
+                   Data.Array.Accelerate.Debug.Stats.$tc'Inline1) -}
+1463a8575524c4bc405c3918bee99e2f
+  $tc'Inline1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Inline"#) -}
+b74b336578902c6b794fb0f8d8426101
+  $tc'KnownBranch :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17541235822449991753##
+                   8883469604783863295##
+                   Data.Array.Accelerate.Debug.Stats.$trModule
+                   Data.Array.Accelerate.Debug.Stats.$tc'KnownBranch1) -}
+82d973006d98f78623a949519b51d11e
+  $tc'KnownBranch1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'KnownBranch"#) -}
+d1552c95500f8af12304b916230d2d48
+  $tc'RuleFired :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   238177778155492292##
+                   15637038004697269104##
+                   Data.Array.Accelerate.Debug.Stats.$trModule
+                   Data.Array.Accelerate.Debug.Stats.$tc'RuleFired1) -}
+615856a9bdaf3a555ed7bd11994ef8d6
+  $tc'RuleFired1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'RuleFired"#) -}
+b94a244b9faaa8c772eb5a5930896d61
+  $tc'Simple :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12512361776230831376##
+                   16453607505660667975##
+                   Data.Array.Accelerate.Debug.Stats.$trModule
+                   Data.Array.Accelerate.Debug.Stats.$tc'Simple1) -}
+262ec9ce8c976eccf743e695bf663a09
+  $tc'Simple1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Simple"#) -}
+ea5c68b4a751a45f83d7b149637e361d
+  $tc'SimplifierDone :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   681478715802104325##
+                   9375713440180525319##
+                   Data.Array.Accelerate.Debug.Stats.$trModule
+                   Data.Array.Accelerate.Debug.Stats.$tc'SimplifierDone1) -}
+f6662c340db23dbacc5781a95ec389cf
+  $tc'SimplifierDone1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'SimplifierDone"#) -}
+80fb8d3ec2d4fec286dd5e550230ed3f
+  $tc'Substitution :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11396236359475201062##
+                   14821491181832080192##
+                   Data.Array.Accelerate.Debug.Stats.$trModule
+                   Data.Array.Accelerate.Debug.Stats.$tc'Substitution1) -}
+f7f9f8ab5f58f3f232748e9bad99dda1
+  $tc'Substitution1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Substitution"#) -}
+12a5ee945d6c07f27348fe9a3e60c3ef
+  $tcId :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5184848347328120272##
+                   11559459679807803434##
+                   Data.Array.Accelerate.Debug.Stats.$trModule
+                   Data.Array.Accelerate.Debug.Stats.$tcId1) -}
+a9332abe39e988b22b0379cb38f9dddb
+  $tcId1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Id"#) -}
+05b3eb72767730a9b0df571a45d9ccac
+  $tcSimplStats :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1692603660252187811##
+                   14934499095319395633##
+                   Data.Array.Accelerate.Debug.Stats.$trModule
+                   Data.Array.Accelerate.Debug.Stats.$tcSimplStats1) -}
+f5dfa323dafea30253733c06ac35506f
+  $tcSimplStats1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "SimplStats"#) -}
+e040a0f8c2a4157a7845fa1f09b23b59
+  $tcTick :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8841633670663096207##
+                   17601685361571648941##
+                   Data.Array.Accelerate.Debug.Stats.$trModule
+                   Data.Array.Accelerate.Debug.Stats.$tcTick1) -}
+be1e3d860c20708a9f5b48ecaac83ce0
+  $tcTick1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Tick"#) -}
+5ac139a186b74825e84b5efc330e24e5
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Data.Array.Accelerate.Debug.Stats.$trModule2
+                   Data.Array.Accelerate.Debug.Stats.$trModule1) -}
+76070d0558bdae030aa6316e7781f5ee
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Data.Array.Accelerate.Debug.Stats"#) -}
+3d0001b32ac23185ec0373b871acf7dd
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw"#) -}
+133ebd846610de47da88e107f77dcb7b
+  $wlvl ::
+    Data.Array.Accelerate.Debug.Stats.Tick
+    -> Data.Array.Accelerate.Debug.Stats.Tick -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>, Inline: [0],
+     Unfolding: (\ (ww :: Data.Array.Accelerate.Debug.Stats.Tick)
+                   (ww1 :: Data.Array.Accelerate.Debug.Stats.Tick) ->
+                 case ww1 of wild {
+                   Data.Array.Accelerate.Debug.Stats.Inline ds
+                   -> case ww of wild1 {
+                        Data.Array.Accelerate.Debug.Stats.Inline ds1 -> GHC.Types.True
+                        Data.Array.Accelerate.Debug.Stats.RuleFired ds1 -> GHC.Types.False
+                        Data.Array.Accelerate.Debug.Stats.KnownBranch ds1
+                        -> GHC.Types.False
+                        Data.Array.Accelerate.Debug.Stats.BetaReduce ds1 -> GHC.Types.False
+                        Data.Array.Accelerate.Debug.Stats.Substitution ds1
+                        -> GHC.Types.False
+                        Data.Array.Accelerate.Debug.Stats.SimplifierDone -> GHC.Types.False
+                        Data.Array.Accelerate.Debug.Stats.FusionDone -> GHC.Types.False }
+                   Data.Array.Accelerate.Debug.Stats.RuleFired ds
+                   -> case ww of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Data.Array.Accelerate.Debug.Stats.RuleFired ds1 -> GHC.Types.True }
+                   Data.Array.Accelerate.Debug.Stats.KnownBranch ds
+                   -> case ww of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Data.Array.Accelerate.Debug.Stats.KnownBranch ds1
+                        -> GHC.Types.True }
+                   Data.Array.Accelerate.Debug.Stats.BetaReduce ds
+                   -> case ww of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Data.Array.Accelerate.Debug.Stats.BetaReduce ds1
+                        -> GHC.Types.True }
+                   Data.Array.Accelerate.Debug.Stats.Substitution ds
+                   -> case ww of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Data.Array.Accelerate.Debug.Stats.Substitution ds1
+                        -> GHC.Types.True }
+                   Data.Array.Accelerate.Debug.Stats.SimplifierDone
+                   -> case ww of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Data.Array.Accelerate.Debug.Stats.SimplifierDone
+                        -> GHC.Types.True }
+                   Data.Array.Accelerate.Debug.Stats.FusionDone
+                   -> case ww of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Data.Array.Accelerate.Debug.Stats.FusionDone
+                        -> GHC.Types.True } }) -}
+84ff04945eca97f162c9ef29ab33b92e
+  data Id = Id GHC.Base.String
+8c4b3a4f48614747481ba4f6614b925f
+  data SimplStats
+    = Simple {-# UNPACK #-}GHC.Types.Int
+    | Detail {ticks :: {-# UNPACK #-}GHC.Types.Int,
+              details :: !Data.Array.Accelerate.Debug.Stats.TickCount}
+0f7113eb896fb812888fd2eb2ee1ea24
+  data Tick
+    = Inline Data.Array.Accelerate.Debug.Stats.Id
+    | RuleFired Data.Array.Accelerate.Debug.Stats.Id
+    | KnownBranch Data.Array.Accelerate.Debug.Stats.Id
+    | BetaReduce Data.Array.Accelerate.Debug.Stats.Id
+    | Substitution Data.Array.Accelerate.Debug.Stats.Id
+    | SimplifierDone
+    | FusionDone
+6e7d1de44785a70fc6bd4990c26b7422
+  type TickCount =
+    Data.Map.Base.Map
+      Data.Array.Accelerate.Debug.Stats.Tick GHC.Types.Int
+4c3e5128011849b171ea8c54de850a86
+  betaReduce :: GHC.Base.String -> a -> a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a (ctx :: GHC.Base.String) (eta :: a) -> eta) -}
+b0a76ad31cfcbfbc3c35d1d0cc8d3a07
+  details ::
+    Data.Array.Accelerate.Debug.Stats.SimplStats
+    -> Data.Array.Accelerate.Debug.Stats.TickCount
+  RecSel Left Data.Array.Accelerate.Debug.Stats.SimplStats
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Data.Array.Accelerate.Debug.Stats.SimplStats) ->
+                 case ds of wild {
+                   Data.Array.Accelerate.Debug.Stats.Simple ipv
+                   -> Data.Array.Accelerate.Debug.Stats.details1
+                   Data.Array.Accelerate.Debug.Stats.Detail dt ds1 -> ds1 }) -}
+871fe9733a314ac90a6d89572504635c
+  details1 :: Data.Array.Accelerate.Debug.Stats.TickCount
+  {- Strictness: x -}
+1bffa5b1da995c1230e031fa13a87fd6
+  fusionDone :: a -> a
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ @ a ->
+                 Data.Array.Accelerate.Debug.Stats.tick
+                   @ a
+                   Data.Array.Accelerate.Debug.Stats.FusionDone) -}
+46a5ffda24dd0c2be1ab1f9ee38ddb39
+  inline :: GHC.Base.String -> a -> a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a (ctx :: GHC.Base.String) (eta :: a) -> eta) -}
+53bbe56a36ff7b30b2054a14e7d6a097
+  knownBranch :: GHC.Base.String -> a -> a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a (ctx :: GHC.Base.String) (eta :: a) -> eta) -}
+8c4b3a4f48614747481ba4f6614b925f
+  pprSimplCount ::
+    Data.Array.Accelerate.Debug.Stats.SimplStats
+    -> Text.PrettyPrint.HughesPJ.Doc
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: Data.Array.Accelerate.Debug.Stats.SimplStats) ->
+                 case ds of wild {
+                   Data.Array.Accelerate.Debug.Stats.Simple dt
+                   -> case Text.PrettyPrint.HughesPJ.$wint
+                             dt of ww2 { (#,#) ww3 ww4 ->
+                      case Data.Array.Accelerate.Debug.Stats.$fShowSimplStats5
+                             `cast`
+                           (Text.PrettyPrint.HughesPJ.N:Doc[0]) of wild1 {
+                        DEFAULT
+                        -> (Text.PrettyPrint.Annotated.HughesPJ.Beside
+                              @ ()
+                              wild1
+                              GHC.Types.True
+                              (Text.PrettyPrint.Annotated.HughesPJ.TextBeside @ () ww3 ww4))
+                             `cast`
+                           (Sym (Text.PrettyPrint.HughesPJ.N:Doc[0]))
+                        Text.PrettyPrint.Annotated.HughesPJ.Empty
+                        -> (Text.PrettyPrint.Annotated.HughesPJ.TextBeside @ () ww3 ww4)
+                             `cast`
+                           (Sym (Text.PrettyPrint.HughesPJ.N:Doc[0])) } }
+                   Data.Array.Accelerate.Debug.Stats.Detail dt dts
+                   -> case Text.PrettyPrint.Annotated.HughesPJ.$wreduceVert
+                             @ ()
+                             (Text.PrettyPrint.Annotated.HughesPJ.vcat1
+                                @ ()
+                                (GHC.Types.:
+                                   @ (Text.PrettyPrint.Annotated.HughesPJ.Doc ())
+                                   (case Text.PrettyPrint.HughesPJ.$wint
+                                           dt of ww2 { (#,#) ww3 ww4 ->
+                                    case Data.Array.Accelerate.Debug.Stats.$fShowSimplStats5
+                                           `cast`
+                                         (Text.PrettyPrint.HughesPJ.N:Doc[0]) of wild1 {
+                                      DEFAULT
+                                      -> Text.PrettyPrint.Annotated.HughesPJ.Beside
+                                           @ ()
+                                           wild1
+                                           GHC.Types.True
+                                           (Text.PrettyPrint.Annotated.HughesPJ.TextBeside
+                                              @ ()
+                                              ww3
+                                              ww4)
+                                      Text.PrettyPrint.Annotated.HughesPJ.Empty
+                                      -> Text.PrettyPrint.Annotated.HughesPJ.TextBeside
+                                           @ ()
+                                           ww3
+                                           ww4 } })
+                                   (GHC.Types.:
+                                      @ (Text.PrettyPrint.Annotated.HughesPJ.Doc ())
+                                      Data.Array.Accelerate.Debug.Stats.$fShowSimplStats3
+                                        `cast`
+                                      (Text.PrettyPrint.HughesPJ.N:Doc[0])
+                                      (GHC.Types.:
+                                         @ (Text.PrettyPrint.Annotated.HughesPJ.Doc ())
+                                         (case Text.PrettyPrint.Annotated.HughesPJ.$wreduceVert
+                                                 @ ()
+                                                 (Text.PrettyPrint.Annotated.HughesPJ.vcat1
+                                                    @ ()
+                                                    (Data.Array.Accelerate.Debug.Stats.$fShowSimplStats_go
+                                                       (Data.OldList.groupBy
+                                                          @ (Data.Array.Accelerate.Debug.Stats.Tick,
+                                                             GHC.Types.Int)
+                                                          Data.Array.Accelerate.Debug.Stats.$fShowSimplStats2
+                                                          (Data.Map.Base.toAscList1
+                                                             @ Data.Array.Accelerate.Debug.Stats.Tick
+                                                             @ GHC.Types.Int
+                                                             (GHC.Types.[]
+                                                                @ (Data.Array.Accelerate.Debug.Stats.Tick,
+                                                                   GHC.Types.Int))
+                                                             dts)))) of ww { (#,#) ww1 ww2 ->
+                                          ww2 })
+                                         (GHC.Types.[]
+                                            @ (Text.PrettyPrint.Annotated.HughesPJ.Doc
+                                                 ())))))) of ww { (#,#) ww1 ww2 ->
+                      ww2 `cast` (Sym (Text.PrettyPrint.HughesPJ.N:Doc[0])) } }) -}
+103b96923d1ab3ec8e66f168d26dc210
+  resetSimplCount :: GHC.Types.IO ()
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Debug.Stats.resetSimplCount1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+7fe55580b7d8234c87cdb6b11dc36025
+  resetSimplCount1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (# s, GHC.Tuple.() #)) -}
+c3be9536bf45c798d855857bd67bd5a1
+  ruleFired :: GHC.Base.String -> a -> a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a (ctx :: GHC.Base.String) (eta :: a) -> eta) -}
+d2a55bbb0eb9c8845191d3f4115d6c16
+  simplCount :: GHC.Types.IO Text.PrettyPrint.HughesPJ.Doc
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Debug.Stats.simplCount1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <Text.PrettyPrint.HughesPJ.Doc>_R)) -}
+cf7ad0badad338920c21212e320ccdbb
+  simplCount1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Text.PrettyPrint.HughesPJ.Doc #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Data.Array.Accelerate.Debug.Stats.statistics
+                        `cast`
+                      (GHC.IORef.N:IORef[0] <Data.Array.Accelerate.Debug.Stats.SimplStats>_N) of wild { GHC.STRef.STRef var# ->
+                 case GHC.Prim.readMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ Data.Array.Accelerate.Debug.Stats.SimplStats
+                        var#
+                        eta of ds { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    Data.Array.Accelerate.Debug.Stats.pprSimplCount ipv1 #) } }) -}
+6ce3de298e235207d48554dcca73d481
+  simplifierDone :: a -> a
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ @ a ->
+                 Data.Array.Accelerate.Debug.Stats.tick
+                   @ a
+                   Data.Array.Accelerate.Debug.Stats.SimplifierDone) -}
+1315dd51a5962bfd78244edf12c1d054
+  statistics ::
+    GHC.IORef.IORef Data.Array.Accelerate.Debug.Stats.SimplStats
+  {- Inline: NOINLINE -}
+8d30b18fdbea434f732e01539cdc959a
+  substitution :: GHC.Base.String -> a -> a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a (ctx :: GHC.Base.String) (eta :: a) -> eta) -}
+4afe3dc6741bf0ce6e993b6e5cb55e56
+  tick :: Data.Array.Accelerate.Debug.Stats.Tick -> a -> a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, True)
+                (\ @ a
+                   (ds :: Data.Array.Accelerate.Debug.Stats.Tick)
+                   (expr :: a) ->
+                 expr) -}
+db7cd22ae4fa577e9ef4e52bb2120ec1
+  ticks ::
+    Data.Array.Accelerate.Debug.Stats.SimplStats -> GHC.Types.Int
+  RecSel Left Data.Array.Accelerate.Debug.Stats.SimplStats
+  {- Arity: 1, Strictness: <S,1*U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Data.Array.Accelerate.Debug.Stats.SimplStats) ->
+                 case ds of wild {
+                   Data.Array.Accelerate.Debug.Stats.Simple ipv
+                   -> Data.Array.Accelerate.Debug.Stats.ticks1
+                   Data.Array.Accelerate.Debug.Stats.Detail dt ds1
+                   -> GHC.Types.I# dt }) -}
+715239d66e911261dd94a505a75450d4
+  ticks1 :: GHC.Types.Int
+  {- Strictness: x -}
+instance GHC.Classes.Eq [Data.Array.Accelerate.Debug.Stats.Id]
+  = Data.Array.Accelerate.Debug.Stats.$fEqId
+instance GHC.Classes.Eq [Data.Array.Accelerate.Debug.Stats.Tick]
+  = Data.Array.Accelerate.Debug.Stats.$fEqTick
+instance GHC.Classes.Ord [Data.Array.Accelerate.Debug.Stats.Id]
+  = Data.Array.Accelerate.Debug.Stats.$fOrdId
+instance GHC.Classes.Ord [Data.Array.Accelerate.Debug.Stats.Tick]
+  = Data.Array.Accelerate.Debug.Stats.$fOrdTick
+instance GHC.Show.Show [Data.Array.Accelerate.Debug.Stats.SimplStats]
+  = Data.Array.Accelerate.Debug.Stats.$fShowSimplStats
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

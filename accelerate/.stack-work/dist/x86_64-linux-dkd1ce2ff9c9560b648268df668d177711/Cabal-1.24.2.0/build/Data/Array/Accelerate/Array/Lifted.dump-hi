@@ -1,0 +1,1817 @@
+
+==================== FINAL INTERFACE ====================
+2017-08-29 05:27:11.016299 UTC
+
+interface accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Lifted [family instance module] 8002
+  interface hash: 356004e1ee4d3caa0a722f4da4be7646
+  ABI hash: d596d46d30a0cbdda25eec130ee3f4e6
+  export-list hash: 7dff39363839c217e02a140999602543
+  orphan hash: e59a060d3ddf05c17bd8264e4b2bcdc2
+  flag hash: b2a1005dad9ab2508486b981478b8698
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Data.Array.Accelerate.Array.Lifted.drop'
+  Data.Array.Accelerate.Array.Lifted.elements'
+  Data.Array.Accelerate.Array.Lifted.empty'
+  Data.Array.Accelerate.Array.Lifted.fromList'
+  Data.Array.Accelerate.Array.Lifted.isArraysFlat
+  Data.Array.Accelerate.Array.Lifted.length'
+  Data.Array.Accelerate.Array.Lifted.shapes'
+  Data.Array.Accelerate.Array.Lifted.toList'
+  Data.Array.Accelerate.Array.Lifted.vec2Vec'
+  Data.Array.Accelerate.Array.Lifted.IsConstrained{Data.Array.Accelerate.Array.Lifted.IsC}
+  Data.Array.Accelerate.Array.Lifted.LiftedArray
+  Data.Array.Accelerate.Array.Lifted.LiftedTupleRepr
+  Data.Array.Accelerate.Array.Lifted.Vector'{Data.Array.Accelerate.Array.Lifted.Vector'}
+module dependencies: Data.Array.Accelerate.Array.Data
+                     Data.Array.Accelerate.Array.Representation
+                     Data.Array.Accelerate.Array.Sugar
+                     Data.Array.Accelerate.Array.Unique
+                     Data.Array.Accelerate.Debug.Flags
+                     Data.Array.Accelerate.Debug.Monitoring
+                     Data.Array.Accelerate.Debug.Trace Data.Array.Accelerate.Error
+                     Data.Array.Accelerate.Lifetime Data.Array.Accelerate.Product
+                     Data.Array.Accelerate.Type
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol
+                      integer-gmp-1.0.0.1 pretty-1.1.3.3@pretty-1.1.3.3
+                      template-haskell-2.11.1.0
+                      text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00
+                      unique-0@unique-0-9CJQKYGbqiDaFUmoekKeA
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu:Data.Orphans
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt:Data.Label.Point
+         hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable.Generic
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Show
+family instance modules: accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Data
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Representation
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Sugar
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Product
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Type
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+import  -/  Data.Array.Accelerate.Array.Representation 7ecc085451773e8538fbcc949c8f13b8
+  exports: 572b3ca30546aa8fe21350a43e265cdd
+  size 84a4d0e8e6d55188a3525c577ff3b863
+import  -/  Data.Array.Accelerate.Array.Sugar 1095a84a969562bd64b7800341e0d23c
+  exports: a6dd551b39ab2a3a217fc8c2a6979cd5
+  ! e3807c35fb9030eeade8527a73714557
+  :. c223783565410a9b6198a1e17ba970e9
+  ArrRepr 48c28c524980b12342608b2cad31d1b9
+  Array 39e81388e8157c36ce0f8d403ca58e72
+  Array 78f23e81404aaf1e43268a71a575425c
+  Arrays 3cc6db7d6b3c36ee0c840e1566f75d38
+  ArraysFarray 91c5e4251ec27e92f438e2ebdbd5bb34
+  ArraysFtuple 6e9ee0b79ee2db6d11fd573901c231ab
+  ArraysFunit 248cae15393ed16586a138ff495c88c5
+  ArraysR 1eac944ac7c8e073edb268e364d17067
+  ArraysRpair 4a39ee401d2432acb13acbb83cb9df9f
+  ArraysRunit 3606c7a420b27d30646af778b2e4270e
+  Elt 78f23e81404aaf1e43268a71a575425c
+  Scalar 78f23e81404aaf1e43268a71a575425c
+  Segments 1aaba37901236c62a5f4ce21960ed8e9
+  Shape 78f23e81404aaf1e43268a71a575425c
+  TupleRepr 8aa32b8ecd758273647e9e2e97033eb7
+  Vector 78f23e81404aaf1e43268a71a575425c
+  Z 58fea0448d1d85af1b349a305fb8b4d6
+  arrays 8f280417dcca648029fd19ae6c13f4f7
+  flavour 5ed46c14ecdf8b8d673b4b57bc4bd68f
+  fromArr a02fba7e549192bcfaec3707ce480284
+  fromList 0174d79fdd9a9ab6b2f24d0cafa59f23
+  shape fb9238b911a10d86b4323d1d75ed9837
+  toArr d5ae4611e31ffb5ade4a8fc2fbb51317
+import  -/  Data.Array.Accelerate.Product 8b6346e847887a013338cfe4431f2f5a
+  exports: aebe828f4ca2c96d5390ff50126a2bd3
+  IsProduct f6af3d33d87461c8507cabb9d14916a8
+  ProdR bc179ba7dcbfec12a55132ac94afddf4
+  ProdRepr 0d61c92e96be18fac6577f3d6512c149
+  ProdRsnoc c5ad3ac4029cb1cc567238b2ef51d8cb
+  ProdRunit c97f80510e9b3fdf6953382a45833225
+  fromProd 232063dda3c7335d0303031245764c71
+  prod 8d199261e6ea783434f051d08fd6c2eb
+  toProd 3146d338cf4fb23b835e5970566031fc
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:Data.Proxy d7f87a37cf7ec5ca87c59c8d2859031f
+import  -/  base-4.9.1.0:Data.Tuple 7dc4bbb45d2e69c991ffac438beeca11
+import  -/  base-4.9.1.0:Data.Type.Equality e58d97d060ef5a0f7906bf33d6e50df2
+import  -/  base-4.9.1.0:Data.Typeable 9257e47d10882145c67c5b489965cfb7
+import  -/  base-4.9.1.0:Data.Typeable.Internal 0e9bdefa4325a0112d8e73b5e1e1f85d
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+74c9a01d493e3f4f794c188a576e53b7
+  $fArraysVector' ::
+    (Data.Array.Accelerate.Array.Sugar.Arrays t,
+     Data.Typeable.Internal.Typeable
+       (Data.Array.Accelerate.Array.Sugar.ArrRepr
+          (Data.Array.Accelerate.Array.Lifted.Vector' t))) =>
+    Data.Array.Accelerate.Array.Sugar.Arrays
+      (Data.Array.Accelerate.Array.Lifted.Vector' t)
+  DFunId
+  {- Arity: 2, Strictness: <L,U(1*C1(U),A,A,C(U),A,A)><L,U>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ t
+                      ($dArrays :: Data.Array.Accelerate.Array.Sugar.Arrays t)
+                      ($dTypeable :: Data.Typeable.Internal.Typeable
+                                       (Data.Array.Accelerate.Array.Sugar.ArrRepr
+                                          (Data.Array.Accelerate.Array.Lifted.Vector' t))).
+                  @ (Data.Array.Accelerate.Array.Lifted.Vector' t)
+                  (Data.Array.Accelerate.Array.Lifted.$fArraysVector'_$cp1Arrays
+                     @ t
+                     $dArrays
+                     $dTypeable)
+                  (Data.Array.Accelerate.Array.Lifted.$fArraysVector'_$cp2Arrays
+                     @ t
+                     $dArrays
+                     $dTypeable)
+                  (Data.Array.Accelerate.Array.Lifted.$fArraysVector'_$carrays
+                     @ t
+                     $dArrays
+                     $dTypeable)
+                  (Data.Array.Accelerate.Array.Lifted.$fArraysVector'_$cflavour
+                     @ t
+                     $dArrays
+                     $dTypeable)
+                  (Data.Array.Accelerate.Array.Lifted.$fArraysVector'_$ctoArr
+                     @ t
+                     $dArrays
+                     $dTypeable)
+                  (Data.Array.Accelerate.Array.Lifted.$fArraysVector'_$cfromArr
+                     @ t
+                     $dArrays
+                     $dTypeable) -}
+74c9a01d493e3f4f794c188a576e53b7
+  $fArraysVector'1 :: Data.Array.Accelerate.Array.Lifted.Vector' t
+  {- Strictness: x -}
+97969399126bc00dfa31a1443b394a64
+  $fArraysVector'10 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        (GHC.Types.[]
+                           @ Data.Typeable.Internal.TypeRep) of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Data.Array.Accelerate.Array.Lifted.$fArraysVector'11
+                           kt_fps) of dt { GHC.Fingerprint.Type.Fingerprint dt1 dt2 ->
+                 Data.Typeable.Internal.TypeRep
+                   dt1
+                   dt2
+                   Data.Array.Accelerate.Array.Lifted.$tcVector'
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
+ceaa17ee79c3e0f423f4320e95f01648
+  $fArraysVector'11 :: GHC.Fingerprint.Type.Fingerprint
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Fingerprint.Type.Fingerprint
+                   831483735221646156##
+                   16262324839397770661##) -}
+2692bbf2a70f119be66cfd2eaf2f78eb
+  $fArraysVector'2 :: t
+  {- Strictness: x -}
+094f3babeb74fd9deee58c8c1e61c70d
+  $fArraysVector'3 ::
+    Data.Array.Accelerate.Product.ProdR
+      Data.Array.Accelerate.Array.Sugar.Arrays
+      ((), Data.Array.Accelerate.Array.Sugar.Scalar GHC.Types.Int)
+  {- Unfolding: (Data.Array.Accelerate.Product.ProdRsnoc
+                   @ Data.Array.Accelerate.Array.Sugar.Arrays
+                   @ ((), Data.Array.Accelerate.Array.Sugar.Scalar GHC.Types.Int)
+                   @ (Data.Array.Accelerate.Array.Sugar.Scalar GHC.Types.Int)
+                   @ ()
+                   @~ <((), Data.Array.Accelerate.Array.Sugar.Scalar GHC.Types.Int)>_N
+                   Data.Array.Accelerate.Array.Lifted.$fArraysVector'_$s$fArraysArray
+                   (Data.Array.Accelerate.Product.$WProdRunit
+                      @ Data.Array.Accelerate.Array.Sugar.Arrays)) -}
+187075e7eea683ee3865a1d3f376b1be
+  $fArraysVector'4 :: t
+  {- Strictness: x -}
+74c9a01d493e3f4f794c188a576e53b7
+  $fArraysVector'5 :: Data.Array.Accelerate.Array.Lifted.Vector' t
+  {- Strictness: x -}
+74c9a01d493e3f4f794c188a576e53b7
+  $fArraysVector'6 ::
+    Data.Array.Accelerate.Array.Sugar.ArraysFlavour
+      (Data.Array.Accelerate.Array.Lifted.Vector' t)
+  {- Strictness: x -}
+8e9a93223810fbda36f0d8840f028237
+  $fArraysVector'7 :: t
+  {- Strictness: x -}
+9c5ae2bef1a3c3f273c3e3256bb2f9d1
+  $fArraysVector'8 :: t
+  {- Strictness: x -}
+74c9a01d493e3f4f794c188a576e53b7
+  $fArraysVector'9 :: Data.Array.Accelerate.Array.Lifted.Vector' t
+  {- Strictness: x -}
+74c9a01d493e3f4f794c188a576e53b7
+  $fArraysVector'_$carrays ::
+    (Data.Array.Accelerate.Array.Sugar.Arrays t,
+     Data.Typeable.Internal.Typeable
+       (Data.Array.Accelerate.Array.Sugar.ArrRepr
+          (Data.Array.Accelerate.Array.Lifted.Vector' t))) =>
+    Data.Array.Accelerate.Array.Lifted.Vector' t
+    -> Data.Array.Accelerate.Array.Sugar.ArraysR
+         (Data.Array.Accelerate.Array.Sugar.ArrRepr
+            (Data.Array.Accelerate.Array.Lifted.Vector' t))
+  {- Arity: 2, Strictness: <L,1*U(A,A,A,1*C1(U),A,A)><L,A>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ t
+                   ($dArrays :: Data.Array.Accelerate.Array.Sugar.Arrays t)
+                   ($dTypeable :: Data.Typeable.Internal.Typeable
+                                    (Data.Array.Accelerate.Array.Sugar.ArrRepr
+                                       (Data.Array.Accelerate.Array.Lifted.Vector' t))) ->
+                 let {
+                   lvl213 :: Data.Array.Accelerate.Array.Sugar.ArraysR
+                               (Data.Array.Accelerate.Array.Sugar.ArrRepr
+                                  (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                                     (Data.Array.Accelerate.Array.Sugar.ArrRepr t) t))
+                   = Data.Array.Accelerate.Array.Lifted.$fArraysVector'_arrs
+                       @ (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                            (Data.Array.Accelerate.Array.Sugar.ArrRepr t) t)
+                       (Data.Array.Accelerate.Array.Lifted.$fArraysVector'_$cprod
+                          @ t
+                          $dArrays
+                          @ Data.Proxy.Proxy
+                          (Data.Proxy.Proxy
+                             @ (* -> GHC.Types.Constraint)
+                             @ Data.Array.Accelerate.Array.Sugar.Arrays)
+                          (Data.Array.Accelerate.Array.Lifted.$fArraysVector'9 @ t))
+                         `cast`
+                       (Data.Array.Accelerate.Product.ProdR
+                          <Data.Array.Accelerate.Array.Sugar.Arrays>_R
+                          (Data.Array.Accelerate.Array.Lifted.D:R:ProdReprVector'[0]
+                               <t>_N))_R
+                 } in
+                 (\ (ds5 :: Data.Array.Accelerate.Array.Lifted.Vector' t) -> lvl213)
+                   `cast`
+                 (<Data.Array.Accelerate.Array.Lifted.Vector' t>_R
+                  ->_R (Data.Array.Accelerate.Array.Sugar.ArraysR
+                          (Trans
+                               (Data.Array.Accelerate.Array.Sugar.ArrRepr
+                                  (Sym (Data.Array.Accelerate.Array.Lifted.D:R:ProdReprVector'[0]
+                                            <t>_N)))_N
+                               (Sym (Data.Array.Accelerate.Array.Lifted.D:R:ArrReprVector'[0]
+                                         <t>_N))))_R)) -}
+74c9a01d493e3f4f794c188a576e53b7
+  $fArraysVector'_$cflavour ::
+    (Data.Array.Accelerate.Array.Sugar.Arrays t,
+     Data.Typeable.Internal.Typeable
+       (Data.Array.Accelerate.Array.Sugar.ArrRepr
+          (Data.Array.Accelerate.Array.Lifted.Vector' t))) =>
+    Data.Array.Accelerate.Array.Lifted.Vector' t
+    -> Data.Array.Accelerate.Array.Sugar.ArraysFlavour
+         (Data.Array.Accelerate.Array.Lifted.Vector' t)
+  {- Arity: 2, Strictness: <L,U(A,A,A,C(U),A,A)><L,A>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, True)
+                (\ @ t
+                   (w :: Data.Array.Accelerate.Array.Sugar.Arrays t)
+                   (w1 :: Data.Typeable.Internal.Typeable
+                            (Data.Array.Accelerate.Array.Sugar.ArrRepr
+                               (Data.Array.Accelerate.Array.Lifted.Vector' t))) ->
+                 Data.Array.Accelerate.Array.Lifted.$w$cflavour @ t w) -}
+74c9a01d493e3f4f794c188a576e53b7
+  $fArraysVector'_$cfromArr ::
+    (Data.Array.Accelerate.Array.Sugar.Arrays t,
+     Data.Typeable.Internal.Typeable
+       (Data.Array.Accelerate.Array.Sugar.ArrRepr
+          (Data.Array.Accelerate.Array.Lifted.Vector' t))) =>
+    Data.Array.Accelerate.Array.Lifted.Vector' t
+    -> Data.Array.Accelerate.Array.Sugar.ArrRepr
+         (Data.Array.Accelerate.Array.Lifted.Vector' t)
+  {- Arity: 2, Strictness: <L,1*U(A,A,A,1*C1(U),A,A)><L,A>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ t
+                   ($dArrays :: Data.Array.Accelerate.Array.Sugar.Arrays t)
+                   ($dTypeable :: Data.Typeable.Internal.Typeable
+                                    (Data.Array.Accelerate.Array.Sugar.ArrRepr
+                                       (Data.Array.Accelerate.Array.Lifted.Vector' t))) ->
+                 let {
+                   lvl213 :: Data.Array.Accelerate.Product.ProdR
+                               Data.Array.Accelerate.Array.Sugar.Arrays
+                               (Data.Array.Accelerate.Product.ProdRepr
+                                  (Data.Array.Accelerate.Array.Lifted.Vector' t))
+                   = Data.Array.Accelerate.Array.Lifted.$fArraysVector'_$cprod
+                       @ t
+                       $dArrays
+                       @ Data.Proxy.Proxy
+                       (Data.Proxy.Proxy
+                          @ (* -> GHC.Types.Constraint)
+                          @ Data.Array.Accelerate.Array.Sugar.Arrays)
+                       (Data.Array.Accelerate.Array.Lifted.$fArraysVector'1 @ t)
+                 } in
+                 (\ (ds5 :: Data.Array.Accelerate.Array.Lifted.Vector' t) ->
+                  Data.Array.Accelerate.Array.Lifted.$fArraysVector'_fa
+                    @ (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                         (Data.Array.Accelerate.Array.Sugar.ArrRepr t) t)
+                    lvl213
+                      `cast`
+                    (Data.Array.Accelerate.Product.ProdR
+                       <Data.Array.Accelerate.Array.Sugar.Arrays>_R
+                       (Data.Array.Accelerate.Array.Lifted.D:R:ProdReprVector'[0]
+                            <t>_N))_R
+                    ds5 `cast` (Data.Array.Accelerate.Array.Lifted.N:Vector'[0] <t>_N))
+                   `cast`
+                 (<Data.Array.Accelerate.Array.Lifted.Vector' t>_R
+                  ->_R Trans
+                           (Data.Array.Accelerate.Array.Sugar.ArrRepr
+                              (Sym (Data.Array.Accelerate.Array.Lifted.D:R:ProdReprVector'[0]
+                                        <t>_N)))_R
+                           (Sub (Sym (Data.Array.Accelerate.Array.Lifted.D:R:ArrReprVector'[0]
+                                          <t>_N))))) -}
+74c9a01d493e3f4f794c188a576e53b7
+  $fArraysVector'_$cp1Arrays ::
+    (Data.Array.Accelerate.Array.Sugar.Arrays t,
+     Data.Typeable.Internal.Typeable
+       (Data.Array.Accelerate.Array.Sugar.ArrRepr
+          (Data.Array.Accelerate.Array.Lifted.Vector' t))) =>
+    Data.Typeable.Internal.Typeable
+      (Data.Array.Accelerate.Array.Lifted.Vector' t)
+  {- Arity: 2, Strictness: <L,1*U(1*C1(U),A,A,A,A,A)><L,A>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, True)
+                (\ @ t
+                   (w :: Data.Array.Accelerate.Array.Sugar.Arrays t)
+                   (w1 :: Data.Typeable.Internal.Typeable
+                            (Data.Array.Accelerate.Array.Sugar.ArrRepr
+                               (Data.Array.Accelerate.Array.Lifted.Vector' t))) ->
+                 Data.Array.Accelerate.Array.Lifted.$w$cp1Arrays @ t w) -}
+74c9a01d493e3f4f794c188a576e53b7
+  $fArraysVector'_$cp2Arrays ::
+    (Data.Array.Accelerate.Array.Sugar.Arrays t,
+     Data.Typeable.Internal.Typeable
+       (Data.Array.Accelerate.Array.Sugar.ArrRepr
+          (Data.Array.Accelerate.Array.Lifted.Vector' t))) =>
+    Data.Typeable.Internal.Typeable
+      (Data.Array.Accelerate.Array.Sugar.ArrRepr
+         (Data.Array.Accelerate.Array.Lifted.Vector' t))
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ t
+                   ($dArrays :: Data.Array.Accelerate.Array.Sugar.Arrays t)
+                   ($dTypeable :: Data.Typeable.Internal.Typeable
+                                    (Data.Array.Accelerate.Array.Sugar.ArrRepr
+                                       (Data.Array.Accelerate.Array.Lifted.Vector' t))) ->
+                 $dTypeable) -}
+74c9a01d493e3f4f794c188a576e53b7
+  $fArraysVector'_$cprod ::
+    Data.Array.Accelerate.Array.Sugar.Arrays t =>
+    forall (proxy :: (* -> GHC.Types.Constraint) -> *).
+    proxy Data.Array.Accelerate.Array.Sugar.Arrays
+    -> Data.Array.Accelerate.Array.Lifted.Vector' t
+    -> Data.Array.Accelerate.Product.ProdR
+         Data.Array.Accelerate.Array.Sugar.Arrays
+         (Data.Array.Accelerate.Product.ProdRepr
+            (Data.Array.Accelerate.Array.Lifted.Vector' t))
+  {- Arity: 1, Strictness: <L,1*U(A,A,A,1*C1(U),A,A)>,
+     Unfolding: (\ @ t
+                   ($dArrays :: Data.Array.Accelerate.Array.Sugar.Arrays t)
+                   @ (proxy :: (* -> GHC.Types.Constraint) -> *) ->
+                 let {
+                   lvl213 :: Data.Array.Accelerate.Product.ProdR
+                               Data.Array.Accelerate.Array.Sugar.Arrays
+                               (Data.Array.Accelerate.Product.ProdRepr
+                                  (Data.Array.Accelerate.Array.Lifted.Vector' t))
+                   = case Data.Array.Accelerate.Array.Sugar.flavour
+                            @ t
+                            $dArrays
+                            (Data.Array.Accelerate.Array.Lifted.$fArraysVector'4 @ t) of wild {
+                       Data.Array.Accelerate.Array.Sugar.ArraysFunit cobox0
+                       -> Data.Array.Accelerate.Array.Lifted.$fArraysVector'3
+                            `cast`
+                          (Data.Array.Accelerate.Product.ProdR
+                             <Data.Array.Accelerate.Array.Sugar.Arrays>_R
+                             (Trans
+                                  (Sym (Data.Array.Accelerate.Array.Lifted.D:R:LiftedRepr[0]))
+                                  (Trans
+                                       (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                                          (Trans
+                                               (Sym (Data.Array.Accelerate.Array.Sugar.D:R:ArrRepr()[0]))
+                                               (Data.Array.Accelerate.Array.Sugar.ArrRepr
+                                                  (Sym cobox0))_N)
+                                          (Sym cobox0))_N
+                                       (Sym (Data.Array.Accelerate.Array.Lifted.D:R:ProdReprVector'[0]
+                                                 <t>_N)))))_R
+                       Data.Array.Accelerate.Array.Sugar.ArraysFarray sh e cobox0 $dShape $dElt
+                       -> case GHC.Types.HEq_sc
+                                 @ GHC.Types.*
+                                 @ GHC.Types.*
+                                 @ (Data.Array.Accelerate.Array.Sugar.SliceShape sh)
+                                 @ Data.Array.Accelerate.Array.Sugar.Z
+                                 (Data.Array.Accelerate.Array.Sugar.$p6Shape @ sh $dShape)
+                                   `cast`
+                                 (Data.Type.Equality.N:~[0]
+                                      <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.SliceShape
+                                                         sh>_N <Data.Array.Accelerate.Array.Sugar.Z>_N) of cobox1 { DEFAULT ->
+                          case GHC.Types.HEq_sc
+                                 @ GHC.Types.*
+                                 @ GHC.Types.*
+                                 @ (Data.Array.Accelerate.Array.Sugar.CoSliceShape sh)
+                                 @ sh
+                                 (Data.Array.Accelerate.Array.Sugar.$p5Shape @ sh $dShape)
+                                   `cast`
+                                 (Data.Type.Equality.N:~[0]
+                                      <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.CoSliceShape
+                                                         sh>_N <sh>_N) of cobox2 { DEFAULT ->
+                          case GHC.Types.HEq_sc
+                                 @ GHC.Types.*
+                                 @ GHC.Types.*
+                                 @ (Data.Array.Accelerate.Array.Sugar.FullShape sh)
+                                 @ sh
+                                 (Data.Array.Accelerate.Array.Sugar.$p4Shape @ sh $dShape)
+                                   `cast`
+                                 (Data.Type.Equality.N:~[0]
+                                      <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.FullShape
+                                                         sh>_N <sh>_N) of cobox3 { DEFAULT ->
+                          (Data.Array.Accelerate.Product.ProdRsnoc
+                             @ Data.Array.Accelerate.Array.Sugar.Arrays
+                             @ (((), Data.Array.Accelerate.Array.Sugar.Segments sh),
+                                Data.Array.Accelerate.Array.Sugar.Vector e)
+                             @ (Data.Array.Accelerate.Array.Sugar.Vector e)
+                             @ ((), Data.Array.Accelerate.Array.Sugar.Segments sh)
+                             @~ <(((), Data.Array.Accelerate.Array.Sugar.Segments sh),
+                                  Data.Array.Accelerate.Array.Sugar.Vector e)>_N
+                             (Data.Array.Accelerate.Array.Sugar.$fArraysArray
+                                @ (Data.Array.Accelerate.Array.Sugar.DIM0
+                                   Data.Array.Accelerate.Array.Sugar.:. GHC.Types.Int)
+                                @ e
+                                Data.Array.Accelerate.Array.Lifted.$fArraysVector'_$s$fShape:.
+                                $dElt)
+                             (Data.Array.Accelerate.Product.ProdRsnoc
+                                @ Data.Array.Accelerate.Array.Sugar.Arrays
+                                @ ((), Data.Array.Accelerate.Array.Sugar.Segments sh)
+                                @ (Data.Array.Accelerate.Array.Sugar.Segments sh)
+                                @ ()
+                                @~ <((), Data.Array.Accelerate.Array.Sugar.Segments sh)>_N
+                                (Data.Array.Accelerate.Array.Sugar.$fArraysArray
+                                   @ (Data.Array.Accelerate.Array.Sugar.DIM0
+                                      Data.Array.Accelerate.Array.Sugar.:. GHC.Types.Int)
+                                   @ sh
+                                   Data.Array.Accelerate.Array.Lifted.$fArraysVector'_$s$fShape:.
+                                   (Data.Array.Accelerate.Array.Sugar.$p1Shape @ sh $dShape))
+                                (Data.Array.Accelerate.Product.$WProdRunit
+                                   @ Data.Array.Accelerate.Array.Sugar.Arrays)))
+                            `cast`
+                          (Data.Array.Accelerate.Product.ProdR
+                             <Data.Array.Accelerate.Array.Sugar.Arrays>_R
+                             (Trans
+                                  (Sym (Data.Array.Accelerate.Array.Lifted.D:R:LiftedRepr[1]
+                                            <e>_N <sh>_N))
+                                  (Trans
+                                       (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                                          (Trans
+                                               (Sym (Data.Array.Accelerate.Array.Sugar.D:R:ArrReprArray[0]
+                                                         <e>_N <sh>_N))
+                                               (Data.Array.Accelerate.Array.Sugar.ArrRepr
+                                                  (Sym cobox0))_N)
+                                          (Sym cobox0))_N
+                                       (Sym (Data.Array.Accelerate.Array.Lifted.D:R:ProdReprVector'[0]
+                                                 <t>_N)))))_R } } }
+                       Data.Array.Accelerate.Array.Sugar.ArraysFtuple l r $dIsProduct $d~
+                       -> case GHC.Types.HEq_sc
+                                 @ GHC.Types.*
+                                 @ GHC.Types.*
+                                 @ (Data.Array.Accelerate.Array.Sugar.ArrRepr t)
+                                 @ (l, r)
+                                 $d~
+                                   `cast`
+                                 (Data.Type.Equality.N:~[0]
+                                      <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.ArrRepr
+                                                         t>_N <(l, r)>_N) of cobox0 { DEFAULT ->
+                          (Data.Array.Accelerate.Array.Lifted.$fArraysVector'_tup
+                             @ (Data.Array.Accelerate.Product.ProdRepr t)
+                             (Data.Array.Accelerate.Product.prod
+                                @ Data.Array.Accelerate.Array.Sugar.Arrays
+                                @ t
+                                $dIsProduct
+                                @ Data.Proxy.Proxy
+                                (Data.Proxy.Proxy
+                                   @ (* -> GHC.Types.Constraint)
+                                   @ Data.Array.Accelerate.Array.Sugar.Arrays)
+                                (Data.Array.Accelerate.Array.Lifted.$fArraysVector'2 @ t)))
+                            `cast`
+                          (Data.Array.Accelerate.Product.ProdR
+                             <Data.Array.Accelerate.Array.Sugar.Arrays>_R
+                             (Trans
+                                  (Sym (Data.Array.Accelerate.Array.Lifted.D:R:LiftedRepr[2]
+                                            <r>_N <l>_N <t>_N))
+                                  (Trans
+                                       (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                                          (Sym cobox0) <t>_N)_N
+                                       (Sym (Data.Array.Accelerate.Array.Lifted.D:R:ProdReprVector'[0]
+                                                 <t>_N)))))_R } }
+                 } in
+                 \ (ds5 :: proxy Data.Array.Accelerate.Array.Sugar.Arrays)
+                   (ds6 :: Data.Array.Accelerate.Array.Lifted.Vector' t) ->
+                 lvl213) -}
+74c9a01d493e3f4f794c188a576e53b7
+  $fArraysVector'_$ctoArr ::
+    (Data.Array.Accelerate.Array.Sugar.Arrays t,
+     Data.Typeable.Internal.Typeable
+       (Data.Array.Accelerate.Array.Sugar.ArrRepr
+          (Data.Array.Accelerate.Array.Lifted.Vector' t))) =>
+    Data.Array.Accelerate.Array.Sugar.ArrRepr
+      (Data.Array.Accelerate.Array.Lifted.Vector' t)
+    -> Data.Array.Accelerate.Array.Lifted.Vector' t
+  {- Arity: 2, Strictness: <L,1*U(A,A,A,1*C1(U),A,A)><L,A>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ t
+                   ($dArrays :: Data.Array.Accelerate.Array.Sugar.Arrays t)
+                   ($dTypeable :: Data.Typeable.Internal.Typeable
+                                    (Data.Array.Accelerate.Array.Sugar.ArrRepr
+                                       (Data.Array.Accelerate.Array.Lifted.Vector' t))) ->
+                 let {
+                   g :: Data.Array.Accelerate.Product.ProdR
+                          Data.Array.Accelerate.Array.Sugar.Arrays
+                          (Data.Array.Accelerate.Product.ProdRepr
+                             (Data.Array.Accelerate.Array.Lifted.Vector' t))
+                   = Data.Array.Accelerate.Array.Lifted.$fArraysVector'_$cprod
+                       @ t
+                       $dArrays
+                       @ Data.Proxy.Proxy
+                       (Data.Proxy.Proxy
+                          @ (* -> GHC.Types.Constraint)
+                          @ Data.Array.Accelerate.Array.Sugar.Arrays)
+                       (Data.Array.Accelerate.Array.Lifted.$fArraysVector'5 @ t)
+                 } in
+                 (\ (x :: Data.Array.Accelerate.Array.Sugar.ArrRepr
+                            (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                               (Data.Array.Accelerate.Array.Sugar.ArrRepr t) t)) ->
+                  Data.Array.Accelerate.Array.Lifted.$fArraysVector'_ta
+                    @ (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                         (Data.Array.Accelerate.Array.Sugar.ArrRepr t) t)
+                    g `cast`
+                    (Data.Array.Accelerate.Product.ProdR
+                       <Data.Array.Accelerate.Array.Sugar.Arrays>_R
+                       (Data.Array.Accelerate.Array.Lifted.D:R:ProdReprVector'[0]
+                            <t>_N))_R
+                    x)
+                   `cast`
+                 (Trans
+                      (Data.Array.Accelerate.Array.Sugar.ArrRepr
+                         (Sym (Data.Array.Accelerate.Array.Lifted.D:R:ProdReprVector'[0]
+                                   <t>_N)))_R
+                      (Sub (Sym (Data.Array.Accelerate.Array.Lifted.D:R:ArrReprVector'[0]
+                                     <t>_N)))
+                  ->_R Sym (Data.Array.Accelerate.Array.Lifted.N:Vector'[0]
+                                <t>_N))) -}
+74c9a01d493e3f4f794c188a576e53b7
+  $fArraysVector'_$d~~ ::
+    (((),
+      Data.Array.Accelerate.Array.Sugar.ArrRepr
+        (Data.Array.Accelerate.Array.Lifted.LiftedTupleRepr t)),
+     Data.Array.Accelerate.Array.Sugar.ArrRepr
+       (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+          (Data.Array.Accelerate.Array.Sugar.ArrRepr e) e))
+    GHC.Types.~~ (((),
+                   Data.Array.Accelerate.Array.Sugar.ArrRepr
+                     (Data.Array.Accelerate.Array.Lifted.LiftedTupleRepr t)),
+                  Data.Array.Accelerate.Array.Sugar.ArrRepr
+                    (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                       (Data.Array.Accelerate.Array.Sugar.ArrRepr e) e))
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (\ @ e @ t ->
+                 GHC.Types.Eq#
+                   @ *
+                   @ *
+                   @ (((),
+                       Data.Array.Accelerate.Array.Sugar.ArrRepr
+                         (Data.Array.Accelerate.Array.Lifted.LiftedTupleRepr t)),
+                      Data.Array.Accelerate.Array.Sugar.ArrRepr
+                        (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                           (Data.Array.Accelerate.Array.Sugar.ArrRepr e) e))
+                   @ (((),
+                       Data.Array.Accelerate.Array.Sugar.ArrRepr
+                         (Data.Array.Accelerate.Array.Lifted.LiftedTupleRepr t)),
+                      Data.Array.Accelerate.Array.Sugar.ArrRepr
+                        (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                           (Data.Array.Accelerate.Array.Sugar.ArrRepr e) e))
+                   @~ <(((),
+                         Data.Array.Accelerate.Array.Sugar.ArrRepr
+                           (Data.Array.Accelerate.Array.Lifted.LiftedTupleRepr t)),
+                        Data.Array.Accelerate.Array.Sugar.ArrRepr
+                          (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                             (Data.Array.Accelerate.Array.Sugar.ArrRepr e) e))>_N) -}
+beb97b6f1a87383ecd19de495d527726
+  $fArraysVector'_$d~~1 ::
+    (((),
+      (((), ()),
+       Data.Array.Accelerate.Array.Sugar.Array
+         (Data.Array.Accelerate.Array.Sugar.DIM0
+          Data.Array.Accelerate.Array.Sugar.:. GHC.Types.Int)
+         sh)),
+     Data.Array.Accelerate.Array.Sugar.Array
+       (Data.Array.Accelerate.Array.Sugar.DIM0
+        Data.Array.Accelerate.Array.Sugar.:. GHC.Types.Int)
+       e)
+    GHC.Types.~~ (((),
+                   (((), ()),
+                    Data.Array.Accelerate.Array.Sugar.Array
+                      (Data.Array.Accelerate.Array.Sugar.DIM0
+                       Data.Array.Accelerate.Array.Sugar.:. GHC.Types.Int)
+                      sh)),
+                  Data.Array.Accelerate.Array.Sugar.Array
+                    (Data.Array.Accelerate.Array.Sugar.DIM0
+                     Data.Array.Accelerate.Array.Sugar.:. GHC.Types.Int)
+                    e)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (\ @ e @ sh ->
+                 GHC.Types.Eq#
+                   @ *
+                   @ *
+                   @ (((),
+                       (((), ()),
+                        Data.Array.Accelerate.Array.Sugar.Array
+                          (Data.Array.Accelerate.Array.Sugar.DIM0
+                           Data.Array.Accelerate.Array.Sugar.:. GHC.Types.Int)
+                          sh)),
+                      Data.Array.Accelerate.Array.Sugar.Array
+                        (Data.Array.Accelerate.Array.Sugar.DIM0
+                         Data.Array.Accelerate.Array.Sugar.:. GHC.Types.Int)
+                        e)
+                   @ (((),
+                       (((), ()),
+                        Data.Array.Accelerate.Array.Sugar.Array
+                          (Data.Array.Accelerate.Array.Sugar.DIM0
+                           Data.Array.Accelerate.Array.Sugar.:. GHC.Types.Int)
+                          sh)),
+                      Data.Array.Accelerate.Array.Sugar.Array
+                        (Data.Array.Accelerate.Array.Sugar.DIM0
+                         Data.Array.Accelerate.Array.Sugar.:. GHC.Types.Int)
+                        e)
+                   @~ <(((),
+                         (((), ()),
+                          Data.Array.Accelerate.Array.Sugar.Array
+                            (Data.Array.Accelerate.Array.Sugar.DIM0
+                             Data.Array.Accelerate.Array.Sugar.:. GHC.Types.Int)
+                            sh)),
+                        Data.Array.Accelerate.Array.Sugar.Array
+                          (Data.Array.Accelerate.Array.Sugar.DIM0
+                           Data.Array.Accelerate.Array.Sugar.:. GHC.Types.Int)
+                          e)>_N) -}
+2c56ed1af32bb0cfc92c814e11b83e48
+  $fArraysVector'_$d~~2 ::
+    (((), ()),
+     Data.Array.Accelerate.Array.Sugar.Array
+       Data.Array.Accelerate.Array.Sugar.Z GHC.Types.Int)
+    GHC.Types.~~ (((), ()),
+                  Data.Array.Accelerate.Array.Sugar.Array
+                    Data.Array.Accelerate.Array.Sugar.Z GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Eq#
+                   @ *
+                   @ *
+                   @ (((), ()),
+                      Data.Array.Accelerate.Array.Sugar.Array
+                        Data.Array.Accelerate.Array.Sugar.Z GHC.Types.Int)
+                   @ (((), ()),
+                      Data.Array.Accelerate.Array.Sugar.Array
+                        Data.Array.Accelerate.Array.Sugar.Z GHC.Types.Int)
+                   @~ <(((), ()),
+                        Data.Array.Accelerate.Array.Sugar.Array
+                          Data.Array.Accelerate.Array.Sugar.Z GHC.Types.Int)>_N) -}
+1568b789470ed16983e5a2342f2154f4
+  $fArraysVector'_$s$fArraysArray ::
+    Data.Array.Accelerate.Array.Sugar.Arrays
+      (Data.Array.Accelerate.Array.Sugar.Array
+         Data.Array.Accelerate.Array.Sugar.Z GHC.Types.Int)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Data.Array.Accelerate.Array.Sugar.Array
+                       Data.Array.Accelerate.Array.Sugar.Z GHC.Types.Int)
+                  (Data.Array.Accelerate.Array.Sugar.$fArraysArray_$cp1Arrays
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     @ GHC.Types.Int
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ
+                     Data.Array.Accelerate.Array.Sugar.$fEltInt)
+                  (Data.Array.Accelerate.Array.Sugar.$fArraysArray_$cp2Arrays
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     @ GHC.Types.Int
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ
+                     Data.Array.Accelerate.Array.Sugar.$fEltInt)
+                  (Data.Array.Accelerate.Array.Sugar.$fArraysArray_$carrays
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     @ GHC.Types.Int
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ
+                     Data.Array.Accelerate.Array.Sugar.$fEltInt)
+                  (Data.Array.Accelerate.Array.Sugar.$fArraysArray_$cflavour
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     @ GHC.Types.Int
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ
+                     Data.Array.Accelerate.Array.Sugar.$fEltInt)
+                  (Data.Array.Accelerate.Array.Sugar.$fArraysArray_$ctoArr
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     @ GHC.Types.Int
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ
+                     Data.Array.Accelerate.Array.Sugar.$fEltInt)
+                  (Data.Array.Accelerate.Array.Sugar.$fArraysArray_$cfromArr
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     @ GHC.Types.Int
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ
+                     Data.Array.Accelerate.Array.Sugar.$fEltInt) -}
+cbde1cdfacbf3a8aede916aea08c0676
+  $fArraysVector'_$s$fShape:. ::
+    Data.Array.Accelerate.Array.Sugar.Shape
+      (Data.Array.Accelerate.Array.Sugar.Z
+       Data.Array.Accelerate.Array.Sugar.:. GHC.Types.Int)
+  {- Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.:. GHC.Types.Int)
+                  (Data.Array.Accelerate.Array.Sugar.$fShape:._$cp1Shape
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ)
+                  (Data.Array.Accelerate.Array.Sugar.$fShape:._$cp2Shape
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ)
+                  (Data.Array.Accelerate.Array.Sugar.$fShape:._$cp3Shape
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ)
+                  (Data.Array.Accelerate.Array.Sugar.$fShape:._$cp4Shape
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ)
+                  (Data.Array.Accelerate.Array.Sugar.$fShape:._$cp5Shape
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ)
+                  (Data.Array.Accelerate.Array.Sugar.$fShape:._$cp6Shape
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ)
+                  (Data.Array.Accelerate.Array.Sugar.$fShape:._$crank
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ)
+                  Data.Array.Accelerate.Array.Sugar.$fShape:._$s$csize
+                  (Data.Array.Accelerate.Array.Sugar.$fShape:._$cempty
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ)
+                  (Data.Array.Accelerate.Array.Sugar.$fShape:._$cignore
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ)
+                  (Data.Array.Accelerate.Array.Sugar.$fShape:._$cintersect
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ)
+                  (Data.Array.Accelerate.Array.Sugar.$fShape:._$cunion
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ)
+                  (Data.Array.Accelerate.Array.Sugar.$fShape:._$ctoIndex
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ)
+                  (Data.Array.Accelerate.Array.Sugar.$fShape:._$cfromIndex
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ)
+                  (Data.Array.Accelerate.Array.Sugar.$fShape:._$citer
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ)
+                  (Data.Array.Accelerate.Array.Sugar.$fShape:._$citer1
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ)
+                  (Data.Array.Accelerate.Array.Sugar.$fShape:._$crangeToShape
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ)
+                  (Data.Array.Accelerate.Array.Sugar.$fShape:._$cshapeToRange
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ)
+                  (Data.Array.Accelerate.Array.Sugar.$fShape:._$cshapeToList
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ)
+                  (Data.Array.Accelerate.Array.Sugar.$fShape:._$clistToShape
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ)
+                  (Data.Array.Accelerate.Array.Sugar.$fShape:._$csliceAnyIndex
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ)
+                  (Data.Array.Accelerate.Array.Sugar.$fShape:._$csliceNoneIndex
+                     @ Data.Array.Accelerate.Array.Sugar.Z
+                     Data.Array.Accelerate.Array.Sugar.$fShapeZ) -}
+eb9a52a1eef1a5638ae00bf1dee0ea9c
+  $fArraysVector'_arrs ::
+    Data.Array.Accelerate.Product.ProdR
+      Data.Array.Accelerate.Array.Sugar.Arrays a
+    -> Data.Array.Accelerate.Array.Sugar.ArraysR
+         (Data.Array.Accelerate.Array.Sugar.ArrRepr a)
+  {- Arity: 1, Strictness: <S,1*U> -}
+35c1df09f5241f622b78e39061c66630
+  $fArraysVector'_fa ::
+    Data.Array.Accelerate.Product.ProdR
+      Data.Array.Accelerate.Array.Sugar.Arrays a
+    -> a -> Data.Array.Accelerate.Array.Sugar.ArrRepr a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+b0819b80aac3d54bffa0d2ab169d7a71
+  $fArraysVector'_ta ::
+    Data.Array.Accelerate.Product.ProdR
+      Data.Array.Accelerate.Array.Sugar.Arrays a
+    -> Data.Array.Accelerate.Array.Sugar.ArrRepr a -> a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+74c9a01d493e3f4f794c188a576e53b7
+  $fArraysVector'_tup ::
+    Data.Array.Accelerate.Product.ProdR
+      Data.Array.Accelerate.Array.Sugar.Arrays a
+    -> Data.Array.Accelerate.Product.ProdR
+         Data.Array.Accelerate.Array.Sugar.Arrays
+         (Data.Array.Accelerate.Array.Lifted.LiftedTupleRepr a)
+  {- Arity: 1, Strictness: <S,1*U> -}
+74c9a01d493e3f4f794c188a576e53b7
+  $fIsProductArraysVector' ::
+    Data.Array.Accelerate.Array.Sugar.Arrays t =>
+    Data.Array.Accelerate.Product.IsProduct
+      Data.Array.Accelerate.Array.Sugar.Arrays
+      (Data.Array.Accelerate.Array.Lifted.Vector' t)
+  DFunId
+  {- Arity: 1, Strictness: <L,1*U(A,A,A,1*C1(U),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ t
+                      ($dArrays :: Data.Array.Accelerate.Array.Sugar.Arrays t).
+                  @ Data.Array.Accelerate.Array.Sugar.Arrays
+                  @ (Data.Array.Accelerate.Array.Lifted.Vector' t)
+                  (Data.Array.Accelerate.Array.Lifted.$fIsProductArraysVector'_$cfromProd
+                     @ t
+                     $dArrays)
+                  (Data.Array.Accelerate.Array.Lifted.$fIsProductArraysVector'_$ctoProd
+                     @ t
+                     $dArrays)
+                  (Data.Array.Accelerate.Array.Lifted.$fArraysVector'_$cprod
+                     @ t
+                     $dArrays) -}
+74c9a01d493e3f4f794c188a576e53b7
+  $fIsProductArraysVector'1 ::
+    Data.Array.Accelerate.Array.Sugar.Arrays t =>
+    forall (proxy :: (* -> GHC.Types.Constraint) -> *).
+    proxy Data.Array.Accelerate.Array.Sugar.Arrays
+    -> Data.Array.Accelerate.Array.Lifted.LiftedRepr
+         (Data.Array.Accelerate.Array.Sugar.ArrRepr t) t
+    -> Data.Array.Accelerate.Array.Lifted.LiftedRepr
+         (Data.Array.Accelerate.Array.Sugar.ArrRepr t) t
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,A><L,A><S,1*U>,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ t
+                   ($dArrays :: Data.Array.Accelerate.Array.Sugar.Arrays t)
+                   @ (proxy :: (* -> GHC.Types.Constraint) -> *)
+                   (ds5 :: proxy Data.Array.Accelerate.Array.Sugar.Arrays)
+                   (tpl :: Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                             (Data.Array.Accelerate.Array.Sugar.ArrRepr t) t) ->
+                 tpl) -}
+74c9a01d493e3f4f794c188a576e53b7
+  $fIsProductArraysVector'2 ::
+    Data.Array.Accelerate.Array.Sugar.Arrays t =>
+    forall (proxy :: (* -> GHC.Types.Constraint) -> *).
+    proxy Data.Array.Accelerate.Array.Sugar.Arrays
+    -> Data.Array.Accelerate.Array.Lifted.Vector' t
+    -> Data.Array.Accelerate.Array.Lifted.Vector' t
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,A><L,A><S,1*U>,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ t
+                   ($dArrays :: Data.Array.Accelerate.Array.Sugar.Arrays t)
+                   @ (proxy :: (* -> GHC.Types.Constraint) -> *)
+                   (ds5 :: proxy Data.Array.Accelerate.Array.Sugar.Arrays)
+                   (ds6 :: Data.Array.Accelerate.Array.Lifted.Vector' t) ->
+                 ds6) -}
+74c9a01d493e3f4f794c188a576e53b7
+  $fIsProductArraysVector'_$cfromProd ::
+    Data.Array.Accelerate.Array.Sugar.Arrays t =>
+    forall (proxy :: (* -> GHC.Types.Constraint) -> *).
+    proxy Data.Array.Accelerate.Array.Sugar.Arrays
+    -> Data.Array.Accelerate.Array.Lifted.Vector' t
+    -> Data.Array.Accelerate.Product.ProdRepr
+         (Data.Array.Accelerate.Array.Lifted.Vector' t)
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,A><L,A><S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Array.Lifted.$fIsProductArraysVector'2
+                  `cast`
+                (forall (t :: <*>_N).
+                 <Data.Array.Accelerate.Array.Sugar.Arrays t>_R
+                 ->_R forall (proxy :: <(* -> GHC.Types.Constraint) -> *>_N).
+                      <proxy Data.Array.Accelerate.Array.Sugar.Arrays>_R
+                      ->_R <Data.Array.Accelerate.Array.Lifted.Vector' t>_R
+                      ->_R Trans
+                               (Data.Array.Accelerate.Array.Lifted.N:Vector'[0] <t>_N)
+                               (Sub (Sym (Data.Array.Accelerate.Array.Lifted.D:R:ProdReprVector'[0]
+                                              <t>_N)))) -}
+74c9a01d493e3f4f794c188a576e53b7
+  $fIsProductArraysVector'_$ctoProd ::
+    Data.Array.Accelerate.Array.Sugar.Arrays t =>
+    forall (proxy :: (* -> GHC.Types.Constraint) -> *).
+    proxy Data.Array.Accelerate.Array.Sugar.Arrays
+    -> Data.Array.Accelerate.Product.ProdRepr
+         (Data.Array.Accelerate.Array.Lifted.Vector' t)
+    -> Data.Array.Accelerate.Array.Lifted.Vector' t
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,A><L,A><S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Array.Lifted.$fIsProductArraysVector'1
+                  `cast`
+                (forall (t :: <*>_N).
+                 <Data.Array.Accelerate.Array.Sugar.Arrays t>_R
+                 ->_R forall (proxy :: <(* -> GHC.Types.Constraint) -> *>_N).
+                      <proxy Data.Array.Accelerate.Array.Sugar.Arrays>_R
+                      ->_R Sub (Sym (Data.Array.Accelerate.Array.Lifted.D:R:ProdReprVector'[0]
+                                         <t>_N))
+                      ->_R Sym (Data.Array.Accelerate.Array.Lifted.N:Vector'[0]
+                                    <t>_N)) -}
+059472e603d7bfa4d4d46d250ef0b8c8
+  $stypeRep#12 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        (GHC.Types.[]
+                           @ Data.Typeable.Internal.TypeRep) of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Data.Array.Accelerate.Array.Lifted.$stypeRep#13
+                           kt_fps) of dt { GHC.Fingerprint.Type.Fingerprint dt1 dt2 ->
+                 Data.Typeable.Internal.TypeRep
+                   dt1
+                   dt2
+                   Data.Array.Accelerate.Array.Sugar.$tc:.
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
+875ffe8eee36c2930c8549c6cbd15c9b
+  $stypeRep#13 :: GHC.Fingerprint.Type.Fingerprint
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Fingerprint.Type.Fingerprint
+                   1936543264398198033##
+                   16676657196993113259##) -}
+6b0a4b5cd548ba99b6e16b631d5ce2a7
+  $stypeRep#16 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Array.Accelerate.Array.Lifted.$stypeRep#12 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
+                 let {
+                   types6 :: [Data.Typeable.Internal.TypeRep]
+                   = GHC.Base.++
+                       @ Data.Typeable.Internal.TypeRep
+                       trs
+                       Data.Array.Accelerate.Array.Lifted.$stypeRep#17
+                 } in
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        ks
+                        types6 of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           (Data.Typeable.Internal.tyConFingerprint tc)
+                           kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
+                 Data.Typeable.Internal.TypeRep dt3 dt4 tc ks types6 } } }) -}
+1fcdb6513b44434c678f6132d365f448
+  $stypeRep#17 :: [Data.Typeable.Internal.TypeRep]
+  {- Unfolding: (GHC.Types.:
+                   @ Data.Typeable.Internal.TypeRep
+                   Data.Array.Accelerate.Array.Lifted.$stypeRep#18
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+4b048c65637dcc4bc754106828ca6645
+  $stypeRep#18 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        (GHC.Types.[]
+                           @ Data.Typeable.Internal.TypeRep) of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Data.Array.Accelerate.Array.Lifted.$stypeRep#19
+                           kt_fps) of dt { GHC.Fingerprint.Type.Fingerprint dt1 dt2 ->
+                 Data.Typeable.Internal.TypeRep
+                   dt1
+                   dt2
+                   Data.Array.Accelerate.Array.Sugar.$tcZ
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
+466c5c5f2dd78cc5cc17091b091862a6
+  $stypeRep#19 :: GHC.Fingerprint.Type.Fingerprint
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Fingerprint.Type.Fingerprint
+                   8452476611439654124##
+                   6760158545453672353##) -}
+240330d30d47d3d948185117bc1cd03b
+  $stypeRep#24 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Array.Accelerate.Array.Lifted.$stypeRep#16 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
+                 let {
+                   types6 :: [Data.Typeable.Internal.TypeRep]
+                   = GHC.Base.++
+                       @ Data.Typeable.Internal.TypeRep
+                       trs
+                       Data.Array.Accelerate.Array.Lifted.$stypeRep#25
+                 } in
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        ks
+                        types6 of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           (Data.Typeable.Internal.tyConFingerprint tc)
+                           kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
+                 Data.Typeable.Internal.TypeRep dt3 dt4 tc ks types6 } } }) -}
+9e813638abd756a8ffdd8efa21f17276
+  $stypeRep#25 :: [Data.Typeable.Internal.TypeRep]
+  {- Unfolding: (GHC.Types.:
+                   @ Data.Typeable.Internal.TypeRep
+                   Data.Array.Accelerate.Array.Lifted.$stypeRep#26
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+f92159fcab11bba88c0b96a7ba68d774
+  $stypeRep#26 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        (GHC.Types.[]
+                           @ Data.Typeable.Internal.TypeRep) of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Data.Array.Accelerate.Array.Lifted.$stypeRep#27
+                           kt_fps) of dt { GHC.Fingerprint.Type.Fingerprint dt1 dt2 ->
+                 Data.Typeable.Internal.TypeRep
+                   dt1
+                   dt2
+                   GHC.Types.$tcInt
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
+e951c30fefa03d00692f7de83d19b56f
+  $stypeRep#27 :: GHC.Fingerprint.Type.Fingerprint
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Fingerprint.Type.Fingerprint
+                   16287469036901857884##
+                   16587023596664995632##) -}
+3a1b366ccb9f1f47d52dbeb992928bce
+  $stypeRep#3 :: GHC.Prim.Proxy# () -> Data.Typeable.Internal.TypeRep
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (wild :: GHC.Prim.Proxy# ()) ->
+                 Data.Array.Accelerate.Array.Lifted.$stypeRep#4) -}
+a13a6425d21b5db589a2f1991fe8649d
+  $stypeRep#32 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        (GHC.Types.[]
+                           @ Data.Typeable.Internal.TypeRep) of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Data.Array.Accelerate.Array.Lifted.$stypeRep#9
+                           kt_fps) of dt { GHC.Fingerprint.Type.Fingerprint dt1 dt2 ->
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        Data.Array.Accelerate.Array.Lifted.$stypeRep#17 of kt_fps1 { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Data.Array.Accelerate.Array.Lifted.$stypeRep#9
+                           kt_fps1) of dt4 { GHC.Fingerprint.Type.Fingerprint dt3 dt5 ->
+                 Data.Typeable.Internal.TypeRep
+                   dt3
+                   dt5
+                   Data.Array.Accelerate.Array.Sugar.$tcArray
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                   Data.Array.Accelerate.Array.Lifted.$stypeRep#17 } } } }) -}
+e1615540511f5bcc3c51f1b2773a98cd
+  $stypeRep#35 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Array.Accelerate.Array.Lifted.$stypeRep#32 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
+                 let {
+                   types6 :: [Data.Typeable.Internal.TypeRep]
+                   = GHC.Base.++
+                       @ Data.Typeable.Internal.TypeRep
+                       trs
+                       Data.Array.Accelerate.Array.Lifted.$stypeRep#25
+                 } in
+                 case Data.Typeable.Internal.typeRepFingerprints
+                        ks
+                        types6 of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           (Data.Typeable.Internal.tyConFingerprint tc)
+                           kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
+                 Data.Typeable.Internal.TypeRep dt3 dt4 tc ks types6 } } }) -}
+baea343f75f183a0b8582ffbab9caccc
+  $stypeRep#4 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        (GHC.Types.[]
+                           @ Data.Typeable.Internal.TypeRep) of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Data.Array.Accelerate.Array.Lifted.$stypeRep#5
+                           kt_fps) of dt { GHC.Fingerprint.Type.Fingerprint dt1 dt2 ->
+                 Data.Typeable.Internal.TypeRep
+                   dt1
+                   dt2
+                   GHC.Tuple.$tc()
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
+8c3fcee5067babbb5409e2dff0d2bf9e
+  $stypeRep#5 :: GHC.Fingerprint.Type.Fingerprint
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Fingerprint.Type.Fingerprint
+                   15843165073189925570##
+                   13730769858450861905##) -}
+cc3ccc46020fe87a083bb8153061f62f
+  $stypeRep#8 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Data.Typeable.Internal.typeRepFingerprints
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                        (GHC.Types.[]
+                           @ Data.Typeable.Internal.TypeRep) of kt_fps { DEFAULT ->
+                 case GHC.Fingerprint.fingerprintFingerprints
+                        (GHC.Types.:
+                           @ GHC.Fingerprint.Type.Fingerprint
+                           Data.Array.Accelerate.Array.Lifted.$stypeRep#9
+                           kt_fps) of dt { GHC.Fingerprint.Type.Fingerprint dt1 dt2 ->
+                 Data.Typeable.Internal.TypeRep
+                   dt1
+                   dt2
+                   Data.Array.Accelerate.Array.Sugar.$tcArray
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep) } }) -}
+675c998c1afaf8324392be787c4687ad
+  $stypeRep#9 :: GHC.Fingerprint.Type.Fingerprint
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Fingerprint.Type.Fingerprint
+                   15503067570392668097##
+                   1099276473081943541##) -}
+7f86bd9b1e17b502944376f9e222cec4
+  $tc'IsC :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10812340095409885329##
+                   18355205093049647693##
+                   Data.Array.Accelerate.Array.Lifted.$trModule
+                   Data.Array.Accelerate.Array.Lifted.$tc'IsC1) -}
+d7047d4cecf5a406ad71acec159adbad
+  $tc'IsC1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'IsC"#) -}
+1bfe1f9ba8e2df4b9ca9363af0449ca0
+  $tc'Vector' :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2530558180566799818##
+                   10958297455688911774##
+                   Data.Array.Accelerate.Array.Lifted.$trModule
+                   Data.Array.Accelerate.Array.Lifted.$tc'Vector'1) -}
+416943f7c838ce2e8f1350009460cc97
+  $tc'Vector'1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Vector'"#) -}
+7f7dc16cd2c3da89ab846adeb5872bb9
+  $tcIsConstrained :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10219172751606891816##
+                   7826812151292073217##
+                   Data.Array.Accelerate.Array.Lifted.$trModule
+                   Data.Array.Accelerate.Array.Lifted.$tcIsConstrained1) -}
+9beb76c95ed5f30048e1ec74eb613d7d
+  $tcIsConstrained1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "IsConstrained"#) -}
+3be12596e77a15c441b7e5a1018187cc
+  $tcVector' :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   831483735221646156##
+                   16262324839397770661##
+                   Data.Array.Accelerate.Array.Lifted.$trModule
+                   Data.Array.Accelerate.Array.Lifted.$tcVector'1) -}
+5ba2bbc1c853427cbc5d59a65d9edd6e
+  $tcVector'1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Vector'"#) -}
+69b01a7dc7c727749c901dc2ef81e853
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Data.Array.Accelerate.Array.Lifted.$trModule2
+                   Data.Array.Accelerate.Array.Lifted.$trModule1) -}
+b9c57a49decdd7143e1fa25c8b8c7ec1
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Data.Array.Accelerate.Array.Lifted"#) -}
+5ce082f89c6b4492c4772349086bf402
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw"#) -}
+74c9a01d493e3f4f794c188a576e53b7
+  $w$cflavour ::
+    Data.Array.Accelerate.Array.Sugar.Arrays t =>
+    Data.Array.Accelerate.Array.Lifted.Vector' t
+    -> Data.Array.Accelerate.Array.Sugar.ArraysFlavour
+         (Data.Array.Accelerate.Array.Lifted.Vector' t)
+  {- Arity: 1, Strictness: <L,U(A,A,A,C(U),A,A)>, Inline: [0],
+     Unfolding: (\ @ t
+                   (w :: Data.Array.Accelerate.Array.Sugar.Arrays t) ->
+                 let {
+                   lvl213 :: Data.Array.Accelerate.Product.IsProduct
+                               Data.Array.Accelerate.Array.Sugar.Arrays
+                               (Data.Array.Accelerate.Array.Lifted.Vector' t)
+                   = Data.Array.Accelerate.Array.Lifted.$fIsProductArraysVector' @ t w
+                 } in
+                 let {
+                   lvl214 :: Data.Array.Accelerate.Array.Sugar.ArraysFlavour t
+                   = Data.Array.Accelerate.Array.Sugar.flavour
+                       @ t
+                       w
+                       (Data.Array.Accelerate.Array.Lifted.$fArraysVector'8 @ t)
+                 } in
+                 \ (ds5 :: Data.Array.Accelerate.Array.Lifted.Vector' t) ->
+                 case lvl214 of wild {
+                   Data.Array.Accelerate.Array.Sugar.ArraysFunit cobox0
+                   -> Data.Array.Accelerate.Array.Sugar.ArraysFtuple
+                        @ (Data.Array.Accelerate.Array.Lifted.Vector' t)
+                        @ ((), ())
+                        @ (Data.Array.Accelerate.Array.Sugar.Array
+                             Data.Array.Accelerate.Array.Sugar.Z GHC.Types.Int)
+                        (Data.Array.Accelerate.Array.Lifted.$fIsProductArraysVector'
+                           @ ()
+                           w `cast` (Data.Array.Accelerate.Array.Sugar.Arrays cobox0)_R)
+                          `cast`
+                        (Data.Array.Accelerate.Product.IsProduct
+                           <Data.Array.Accelerate.Array.Sugar.Arrays>_N
+                           (Data.Array.Accelerate.Array.Lifted.Vector' (Sym cobox0))_N)_R
+                        Data.Array.Accelerate.Array.Lifted.$fArraysVector'_$d~~2
+                          `cast`
+                        (Sym (Data.Type.Equality.N:~[0] <*>_N) (Trans
+                                                                    (Sym (Data.Array.Accelerate.Product.D:R:ProdRepr(,)[0]
+                                                                              (Data.Array.Accelerate.Array.Sugar.D:R:ArrReprArray[0]
+                                                                                   <GHC.Types.Int>_N
+                                                                                   <Data.Array.Accelerate.Array.Sugar.Z>_N)
+                                                                              (Data.Array.Accelerate.Array.Sugar.D:R:ArrRepr()[0])))
+                                                                    (Trans
+                                                                         (Sym (Data.Array.Accelerate.Array.Sugar.D:R:ArrRepr(,)[0]
+                                                                                   <Data.Array.Accelerate.Array.Sugar.Array
+                                                                                      Data.Array.Accelerate.Array.Sugar.DIM0
+                                                                                      GHC.Types.Int>_N
+                                                                                   <()>_N))
+                                                                         (Trans
+                                                                              (Data.Array.Accelerate.Array.Sugar.ArrRepr
+                                                                                 (Trans
+                                                                                      (Sym (Data.Array.Accelerate.Array.Lifted.D:R:LiftedRepr[0]))
+                                                                                      (Trans
+                                                                                           (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                                                                                              (Sym (Data.Array.Accelerate.Array.Sugar.D:R:ArrRepr()[0]))
+                                                                                              <()>_N)_N
+                                                                                           (Sym (Data.Array.Accelerate.Array.Lifted.D:R:ProdReprVector'[0]
+                                                                                                     <()>_N)))))_N
+                                                                              (Sym (Data.Array.Accelerate.Array.Lifted.D:R:ArrReprVector'[0]
+                                                                                        cobox0))))) <(((),
+                                                                                                       ()),
+                                                                                                      Data.Array.Accelerate.Array.Sugar.Array
+                                                                                                        Data.Array.Accelerate.Array.Sugar.Z
+                                                                                                        GHC.Types.Int)>_N)
+                   Data.Array.Accelerate.Array.Sugar.ArraysFarray sh e cobox0 $dShape $dElt
+                   -> case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ (Data.Array.Accelerate.Array.Sugar.SliceShape sh)
+                             @ Data.Array.Accelerate.Array.Sugar.Z
+                             (Data.Array.Accelerate.Array.Sugar.$p6Shape @ sh $dShape)
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.SliceShape
+                                                     sh>_N <Data.Array.Accelerate.Array.Sugar.Z>_N) of cobox1 { DEFAULT ->
+                      case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ (Data.Array.Accelerate.Array.Sugar.CoSliceShape sh)
+                             @ sh
+                             (Data.Array.Accelerate.Array.Sugar.$p5Shape @ sh $dShape)
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.CoSliceShape
+                                                     sh>_N <sh>_N) of cobox2 { DEFAULT ->
+                      case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ (Data.Array.Accelerate.Array.Sugar.FullShape sh)
+                             @ sh
+                             (Data.Array.Accelerate.Array.Sugar.$p4Shape @ sh $dShape)
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.FullShape
+                                                     sh>_N <sh>_N) of cobox3 { DEFAULT ->
+                      Data.Array.Accelerate.Array.Sugar.ArraysFtuple
+                        @ (Data.Array.Accelerate.Array.Lifted.Vector' t)
+                        @ ((),
+                           (((), ()),
+                            Data.Array.Accelerate.Array.Sugar.Array
+                              (Data.Array.Accelerate.Array.Sugar.DIM0
+                               Data.Array.Accelerate.Array.Sugar.:. GHC.Types.Int)
+                              sh))
+                        @ (Data.Array.Accelerate.Array.Sugar.Array
+                             (Data.Array.Accelerate.Array.Sugar.DIM0
+                              Data.Array.Accelerate.Array.Sugar.:. GHC.Types.Int)
+                             e)
+                        (Data.Array.Accelerate.Array.Lifted.$fIsProductArraysVector'
+                           @ (Data.Array.Accelerate.Array.Sugar.Array sh e)
+                           w `cast` (Data.Array.Accelerate.Array.Sugar.Arrays cobox0)_R)
+                          `cast`
+                        (Data.Array.Accelerate.Product.IsProduct
+                           <Data.Array.Accelerate.Array.Sugar.Arrays>_N
+                           (Data.Array.Accelerate.Array.Lifted.Vector' (Sym cobox0))_N)_R
+                        (Data.Array.Accelerate.Array.Lifted.$fArraysVector'_$d~~1 @ e @ sh)
+                          `cast`
+                        (Sym (Data.Type.Equality.N:~[0] <*>_N) (Trans
+                                                                    (Sym (Data.Array.Accelerate.Product.D:R:ProdRepr(,)[0]
+                                                                              (Data.Array.Accelerate.Array.Sugar.D:R:ArrReprArray[0]
+                                                                                   <e>_N
+                                                                                   <Data.Array.Accelerate.Array.Sugar.DIM0
+                                                                                    Data.Array.Accelerate.Array.Sugar.:. GHC.Types.Int>_N)
+                                                                              (Trans
+                                                                                   (Data.Array.Accelerate.Array.Sugar.D:R:ArrRepr(,)[0]
+                                                                                        <Data.Array.Accelerate.Array.Sugar.Array
+                                                                                           Data.Array.Accelerate.Array.Sugar.DIM1
+                                                                                           sh>_N
+                                                                                        <()>_N)
+                                                                                   (Data.Array.Accelerate.Product.D:R:ProdRepr(,)[0]
+                                                                                        (Data.Array.Accelerate.Array.Sugar.D:R:ArrReprArray[0]
+                                                                                             <sh>_N
+                                                                                             <Data.Array.Accelerate.Array.Sugar.DIM0
+                                                                                              Data.Array.Accelerate.Array.Sugar.:. GHC.Types.Int>_N)
+                                                                                        (Data.Array.Accelerate.Array.Sugar.D:R:ArrRepr()[0])))))
+                                                                    (Trans
+                                                                         (Sym (Data.Array.Accelerate.Array.Sugar.D:R:ArrRepr(,)[0]
+                                                                                   <Data.Array.Accelerate.Array.Sugar.Array
+                                                                                      Data.Array.Accelerate.Array.Sugar.DIM1
+                                                                                      e>_N
+                                                                                   <((),
+                                                                                     Data.Array.Accelerate.Array.Sugar.Segments
+                                                                                       sh)>_N))
+                                                                         (Trans
+                                                                              (Data.Array.Accelerate.Array.Sugar.ArrRepr
+                                                                                 (Trans
+                                                                                      (Sym (Data.Array.Accelerate.Array.Lifted.D:R:LiftedRepr[1]
+                                                                                                <e>_N
+                                                                                                <sh>_N))
+                                                                                      (Trans
+                                                                                           (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                                                                                              (Sym (Data.Array.Accelerate.Array.Sugar.D:R:ArrReprArray[0]
+                                                                                                        <e>_N
+                                                                                                        <sh>_N))
+                                                                                              <Data.Array.Accelerate.Array.Sugar.Array
+                                                                                                 sh
+                                                                                                 e>_N)_N
+                                                                                           (Sym (Data.Array.Accelerate.Array.Lifted.D:R:ProdReprVector'[0]
+                                                                                                     <Data.Array.Accelerate.Array.Sugar.Array
+                                                                                                        sh
+                                                                                                        e>_N)))))_N
+                                                                              (Sym (Data.Array.Accelerate.Array.Lifted.D:R:ArrReprVector'[0]
+                                                                                        cobox0))))) <(((),
+                                                                                                       (((),
+                                                                                                         ()),
+                                                                                                        Data.Array.Accelerate.Array.Sugar.Array
+                                                                                                          (Data.Array.Accelerate.Array.Sugar.DIM0
+                                                                                                           Data.Array.Accelerate.Array.Sugar.:. GHC.Types.Int)
+                                                                                                          sh)),
+                                                                                                      Data.Array.Accelerate.Array.Sugar.Array
+                                                                                                        (Data.Array.Accelerate.Array.Sugar.DIM0
+                                                                                                         Data.Array.Accelerate.Array.Sugar.:. GHC.Types.Int)
+                                                                                                        e)>_N) } } }
+                   Data.Array.Accelerate.Array.Sugar.ArraysFtuple l r $dIsProduct $d~
+                   -> case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ (Data.Array.Accelerate.Array.Sugar.ArrRepr t)
+                             @ (l, r)
+                             $d~
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <Data.Array.Accelerate.Array.Sugar.ArrRepr
+                                                     t>_N <(l, r)>_N) of cobox0 { DEFAULT ->
+                      case Data.Array.Accelerate.Product.prod
+                             @ Data.Array.Accelerate.Array.Sugar.Arrays
+                             @ t
+                             $dIsProduct
+                             @ Data.Proxy.Proxy
+                             (Data.Proxy.Proxy
+                                @ (* -> GHC.Types.Constraint)
+                                @ Data.Array.Accelerate.Array.Sugar.Arrays)
+                             (Data.Array.Accelerate.Array.Lifted.$fArraysVector'7
+                                @ t) of wild1 {
+                        Data.Array.Accelerate.Product.ProdRunit ipv
+                        -> Data.Array.Accelerate.Array.Lifted.$fArraysVector'6 @ t
+                        Data.Array.Accelerate.Product.ProdRsnoc e t1 cobox1 irred ds6
+                        -> Data.Array.Accelerate.Array.Sugar.ArraysFtuple
+                             @ (Data.Array.Accelerate.Array.Lifted.Vector' t)
+                             @ ((),
+                                Data.Array.Accelerate.Array.Sugar.ArrRepr
+                                  (Data.Array.Accelerate.Array.Lifted.LiftedTupleRepr t1))
+                             @ (Data.Array.Accelerate.Array.Sugar.ArrRepr
+                                  (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                                     (Data.Array.Accelerate.Array.Sugar.ArrRepr e) e))
+                             lvl213
+                             (Data.Array.Accelerate.Array.Lifted.$fArraysVector'_$d~~ @ e @ t1)
+                               `cast`
+                             (Sym (Data.Type.Equality.N:~[0] <*>_N) (Trans
+                                                                         (Sym (Data.Array.Accelerate.Product.D:R:ProdRepr(,)[0]
+                                                                                   (Trans
+                                                                                        (Data.Array.Accelerate.Array.Lifted.D:R:ArrReprVector'[0]
+                                                                                             <e>_N)
+                                                                                        (Data.Array.Accelerate.Array.Sugar.ArrRepr
+                                                                                           (Data.Array.Accelerate.Array.Lifted.D:R:ProdReprVector'[0]
+                                                                                                <e>_N))_N)
+                                                                                   <Data.Array.Accelerate.Array.Sugar.ArrRepr
+                                                                                      (Data.Array.Accelerate.Array.Lifted.LiftedTupleRepr
+                                                                                         t1)>_N))
+                                                                         (Trans
+                                                                              (Sym (Data.Array.Accelerate.Array.Sugar.D:R:ArrRepr(,)[0]
+                                                                                        <Data.Array.Accelerate.Array.Lifted.Vector'
+                                                                                           e>_N
+                                                                                        <Data.Array.Accelerate.Array.Lifted.LiftedTupleRepr
+                                                                                           t1>_N))
+                                                                              (Trans
+                                                                                   (Data.Array.Accelerate.Array.Sugar.ArrRepr
+                                                                                      (Trans
+                                                                                           (Sym (Data.Array.Accelerate.Array.Lifted.D:R:LiftedTupleRepr(,)[0]
+                                                                                                     <e>_N
+                                                                                                     <t1>_N))
+                                                                                           (Trans
+                                                                                                (Data.Array.Accelerate.Array.Lifted.LiftedTupleRepr
+                                                                                                   (Sym cobox1))_N
+                                                                                                (Trans
+                                                                                                     (Sym (Data.Array.Accelerate.Array.Lifted.D:R:LiftedRepr[2]
+                                                                                                               <r>_N
+                                                                                                               <l>_N
+                                                                                                               <t>_N))
+                                                                                                     (Trans
+                                                                                                          (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                                                                                                             (Sym cobox0)
+                                                                                                             <t>_N)_N
+                                                                                                          (Sym (Data.Array.Accelerate.Array.Lifted.D:R:ProdReprVector'[0]
+                                                                                                                    <t>_N)))))))_N
+                                                                                   (Sym (Data.Array.Accelerate.Array.Lifted.D:R:ArrReprVector'[0]
+                                                                                             <t>_N))))) <(((),
+                                                                                                           Data.Array.Accelerate.Array.Sugar.ArrRepr
+                                                                                                             (Data.Array.Accelerate.Array.Lifted.LiftedTupleRepr
+                                                                                                                t1)),
+                                                                                                          Data.Array.Accelerate.Array.Sugar.ArrRepr
+                                                                                                            (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                                                                                                               (Data.Array.Accelerate.Array.Sugar.ArrRepr
+                                                                                                                  e)
+                                                                                                               e))>_N) } } }) -}
+74c9a01d493e3f4f794c188a576e53b7
+  $w$cp1Arrays ::
+    Data.Array.Accelerate.Array.Sugar.Arrays t =>
+    Data.Typeable.Internal.Typeable
+      (Data.Array.Accelerate.Array.Lifted.Vector' t)
+  {- Arity: 1, Strictness: <L,1*U(1*C1(U),A,A,A,A,A)>, Inline: [0],
+     Unfolding: (\ @ t
+                   (w :: Data.Array.Accelerate.Array.Sugar.Arrays t) ->
+                 let {
+                   ds5 :: Data.Typeable.Internal.TypeRep
+                   = case Data.Array.Accelerate.Array.Lifted.$fArraysVector'10 of wild { Data.Typeable.Internal.TypeRep dt dt1 tc ks trs ->
+                     let {
+                       types6 :: [Data.Typeable.Internal.TypeRep]
+                       = GHC.Base.++
+                           @ Data.Typeable.Internal.TypeRep
+                           trs
+                           (GHC.Types.:
+                              @ Data.Typeable.Internal.TypeRep
+                              ((Data.Array.Accelerate.Array.Sugar.$p1Arrays @ t w)
+                                 `cast`
+                               (Data.Typeable.Internal.N:Typeable[0] <*>_N <t>_N)
+                                 (GHC.Prim.proxy# @ * @ t))
+                              (GHC.Types.[] @ Data.Typeable.Internal.TypeRep))
+                     } in
+                     case Data.Typeable.Internal.typeRepFingerprints
+                            ks
+                            types6 of kt_fps { DEFAULT ->
+                     case GHC.Fingerprint.fingerprintFingerprints
+                            (GHC.Types.:
+                               @ GHC.Fingerprint.Type.Fingerprint
+                               (Data.Typeable.Internal.tyConFingerprint tc)
+                               kt_fps) of dt2 { GHC.Fingerprint.Type.Fingerprint dt3 dt4 ->
+                     Data.Typeable.Internal.TypeRep dt3 dt4 tc ks types6 } } }
+                 } in
+                 (\ (wild :: GHC.Prim.Proxy#
+                               (Data.Array.Accelerate.Array.Lifted.Vector' t)) ->
+                  ds5)
+                   `cast`
+                 (Sym (Data.Typeable.Internal.N:Typeable[0]
+                           <*>_N <Data.Array.Accelerate.Array.Lifted.Vector' t>_N))) -}
+bbfbd5e3c892dd3d837ae1d35ef29eb9
+  $wisArraysFlat ::
+    Data.Array.Accelerate.Array.Sugar.Arrays t =>
+    t
+    -> (# Data.Array.Accelerate.Array.Sugar.Arrays
+            (Data.Array.Accelerate.Array.Lifted.Vector' t) #)
+  {- Arity: 2,
+     Strictness: <S(LLLC(S)LL),U(C(U),1*U,A,C(U),A,A)><L,U>,
+     Inline: [0] -}
+74c9a01d493e3f4f794c188a576e53b7
+  axiom D:R:ArrReprVector'::
+    [a]
+      Data.Array.Accelerate.Array.Sugar.ArrRepr
+        (Data.Array.Accelerate.Array.Lifted.Vector' a)
+        = Data.Array.Accelerate.Array.Sugar.ArrRepr
+            (Data.Array.Accelerate.Array.Sugar.TupleRepr
+               (Data.Array.Accelerate.Array.Lifted.Vector' a))
+74c9a01d493e3f4f794c188a576e53b7
+  axiom D:R:LiftedRepr::
+      Data.Array.Accelerate.Array.Lifted.LiftedRepr () ()
+        = ((), Data.Array.Accelerate.Array.Sugar.Scalar GHC.Types.Int)
+    [e, sh]
+      Data.Array.Accelerate.Array.Lifted.LiftedRepr
+        (Data.Array.Accelerate.Array.Sugar.Array
+           sh e) (Data.Array.Accelerate.Array.Sugar.Array sh e)
+        = (((), Data.Array.Accelerate.Array.Sugar.Segments sh),
+           Data.Array.Accelerate.Array.Sugar.Vector e)
+    [r, l, a]
+      Data.Array.Accelerate.Array.Lifted.LiftedRepr (l, r) a
+        = Data.Array.Accelerate.Array.Lifted.LiftedTupleRepr
+            (Data.Array.Accelerate.Array.Sugar.TupleRepr a)
+74c9a01d493e3f4f794c188a576e53b7
+  axiom D:R:LiftedTupleRepr()::
+      Data.Array.Accelerate.Array.Lifted.LiftedTupleRepr () = ()
+74c9a01d493e3f4f794c188a576e53b7
+  axiom D:R:LiftedTupleRepr(,)::
+    [a, b]
+      Data.Array.Accelerate.Array.Lifted.LiftedTupleRepr (b, a)
+        = (Data.Array.Accelerate.Array.Lifted.LiftedTupleRepr b,
+           Data.Array.Accelerate.Array.Lifted.Vector' a)
+74c9a01d493e3f4f794c188a576e53b7
+  axiom D:R:ProdReprVector'::
+    [t]
+      Data.Array.Accelerate.Product.ProdRepr
+        (Data.Array.Accelerate.Array.Lifted.Vector' t)
+        = Data.Array.Accelerate.Array.Lifted.LiftedRepr
+            (Data.Array.Accelerate.Array.Sugar.ArrRepr t) t
+e91f6fbc1c84840e4733a83ba60eb653
+  type IsArraysFlat t =
+    Data.Array.Accelerate.Array.Lifted.IsConstrained
+      (Data.Array.Accelerate.Array.Sugar.Arrays
+         (Data.Array.Accelerate.Array.Lifted.Vector' t))
+9dd7d1ab683ffc3288519f3ab39ae75c
+  data IsConstrained (c :: GHC.Types.Constraint) where
+    IsC :: c => IsConstrained c
+fea8a8e352568e1a9fc932dcf505db04
+  type IsTypeableArrRepr t =
+    Data.Array.Accelerate.Array.Lifted.IsConstrained
+      (Data.Typeable.Internal.Typeable
+         (Data.Array.Accelerate.Array.Sugar.ArrRepr t))
+274c8321ba78e6d68bab7da3e4441020
+  type LiftedArray sh e =
+    Data.Array.Accelerate.Array.Lifted.Vector'
+      (Data.Array.Accelerate.Array.Sugar.Array sh e)
+74c9a01d493e3f4f794c188a576e53b7
+  type family LiftedRepr r a :: *
+    where
+        LiftedRepr () ()
+          = ((), Data.Array.Accelerate.Array.Sugar.Scalar GHC.Types.Int)
+      [e, sh]
+        LiftedRepr
+          (Data.Array.Accelerate.Array.Sugar.Array
+             sh e) (Data.Array.Accelerate.Array.Sugar.Array sh e)
+          = (((), Data.Array.Accelerate.Array.Sugar.Segments sh),
+             Data.Array.Accelerate.Array.Sugar.Vector e)
+      [r, l, a]
+        LiftedRepr (l, r) a
+          = Data.Array.Accelerate.Array.Lifted.LiftedTupleRepr
+              (Data.Array.Accelerate.Array.Sugar.TupleRepr a)
+      axiom Data.Array.Accelerate.Array.Lifted.D:R:LiftedRepr
+74c9a01d493e3f4f794c188a576e53b7
+  type family LiftedTupleRepr t :: GHC.Types.* open
+74c9a01d493e3f4f794c188a576e53b7
+  type role Vector' nominal
+  newtype Vector' a
+    = Vector' (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                 (Data.Array.Accelerate.Array.Sugar.ArrRepr a) a)
+a33520dff7cc0616c86728076f8e932a
+  drop' ::
+    Data.Array.Accelerate.Array.Sugar.Arrays a =>
+    (forall e.
+     Data.Array.Accelerate.Array.Sugar.Elt e =>
+     GHC.Types.Int
+     -> Data.Array.Accelerate.Array.Sugar.Vector e
+     -> Data.Array.Accelerate.Array.Sugar.Vector e)
+    -> (forall sh.
+        Data.Array.Accelerate.Array.Sugar.Shape sh =>
+        Data.Array.Accelerate.Array.Sugar.Segments sh
+        -> Data.Array.Accelerate.Array.Sugar.Vector GHC.Types.Int)
+    -> GHC.Types.Int
+    -> Data.Array.Accelerate.Array.Lifted.Vector' a
+    -> Data.Array.Accelerate.Array.Lifted.Vector' a
+  {- Arity: 1, Strictness: <L,1*U(A,A,A,1*C1(U),A,A)> -}
+34f4c4fe17313e3849e2d960ea6e87d1
+  elements' ::
+    Data.Array.Accelerate.Array.Lifted.Vector'
+      (Data.Array.Accelerate.Array.Sugar.Array sh e)
+    -> Data.Array.Accelerate.Array.Sugar.Vector e
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LS),1*U(A,1*U(U,U,U,U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ sh
+                   @ e
+                   (ds5 :: Data.Array.Accelerate.Array.Lifted.Vector'
+                             (Data.Array.Accelerate.Array.Sugar.Array sh e)) ->
+                 case ds5
+                        `cast`
+                      (Trans
+                           (Data.Array.Accelerate.Array.Lifted.N:Vector'[0]
+                                <Data.Array.Accelerate.Array.Sugar.Array sh e>_N)
+                           (Trans
+                                (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                                   (Data.Array.Accelerate.Array.Sugar.D:R:ArrReprArray[0]
+                                        <e>_N <sh>_N)
+                                   <Data.Array.Accelerate.Array.Sugar.Array sh e>_N)_R
+                                (Sub (Data.Array.Accelerate.Array.Lifted.D:R:LiftedRepr[1]
+                                          <e>_N <sh>_N)))) of wild { (,) ds6 elts ->
+                 elts }) -}
+4592f56f4105982cfaa6679242962331
+  empty' ::
+    Data.Array.Accelerate.Array.Sugar.Arrays a =>
+    Data.Array.Accelerate.Array.Lifted.Vector' a
+  {- Arity: 1, Strictness: <S(LLLC(S)LL),1*U(A,A,A,1*C1(U),A,A)> -}
+bc3cd6ca4f5698bcac347322bab14a0f
+  fromList' ::
+    Data.Array.Accelerate.Array.Sugar.Arrays a =>
+    (forall e.
+     Data.Array.Accelerate.Array.Sugar.Elt e =>
+     [Data.Array.Accelerate.Array.Sugar.Vector e]
+     -> Data.Array.Accelerate.Array.Sugar.Vector e)
+    -> [a] -> Data.Array.Accelerate.Array.Lifted.Vector' a
+  {- Arity: 1, Strictness: <L,1*U(A,A,A,1*C1(U),A,A)> -}
+debca18282693170a9a09cd578181c64
+  isArraysFlat ::
+    Data.Array.Accelerate.Array.Sugar.Arrays t =>
+    t -> Data.Array.Accelerate.Array.Lifted.IsArraysFlat t
+  {- Arity: 2,
+     Strictness: <S(LLLC(S)LL),U(C(U),1*U,A,C(U),A,A)><L,U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ t
+                   (w :: Data.Array.Accelerate.Array.Sugar.Arrays t)
+                   (w1 :: t) ->
+                 case Data.Array.Accelerate.Array.Lifted.$wisArraysFlat
+                        @ t
+                        w
+                        w1 of ww { Unit# ww1 ->
+                 Data.Array.Accelerate.Array.Lifted.IsC
+                   @ (Data.Array.Accelerate.Array.Sugar.Arrays
+                        (Data.Array.Accelerate.Array.Lifted.Vector' t))
+                   ww1 }) -}
+7c6249f5ce66284966ff97da0676ff1d
+  length' ::
+    Data.Array.Accelerate.Array.Sugar.Arrays a =>
+    Data.Array.Accelerate.Array.Lifted.Vector' a -> GHC.Types.Int
+  {- Arity: 1, Strictness: <L,1*U(A,A,A,1*C1(U),A,A)> -}
+2f09407a0330c714193604100e29dd53
+  shapes' ::
+    Data.Array.Accelerate.Array.Lifted.Vector'
+      (Data.Array.Accelerate.Array.Sugar.Array sh a)
+    -> Data.Array.Accelerate.Array.Sugar.Vector sh
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(S(SS)L),1*U(1*U(1*H,1*U(U,U,U,U)),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ sh
+                   @ a
+                   (ds5 :: Data.Array.Accelerate.Array.Lifted.Vector'
+                             (Data.Array.Accelerate.Array.Sugar.Array sh a)) ->
+                 case ds5
+                        `cast`
+                      (Trans
+                           (Data.Array.Accelerate.Array.Lifted.N:Vector'[0]
+                                <Data.Array.Accelerate.Array.Sugar.Array sh a>_N)
+                           (Trans
+                                (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                                   (Data.Array.Accelerate.Array.Sugar.D:R:ArrReprArray[0]
+                                        <a>_N <sh>_N)
+                                   <Data.Array.Accelerate.Array.Sugar.Array sh a>_N)_R
+                                (Sub (Data.Array.Accelerate.Array.Lifted.D:R:LiftedRepr[1]
+                                          <a>_N <sh>_N)))) of wild { (,) ds6 ds7 ->
+                 case ds6 of wild1 { (,) ds8 shapes ->
+                 case ds8 of wild2 { () -> shapes } } }) -}
+309c3448f28b566b5dbd84533271807d
+  toList' ::
+    Data.Array.Accelerate.Array.Sugar.Arrays a =>
+    (forall sh e.
+     (Data.Array.Accelerate.Array.Sugar.Shape sh,
+      Data.Array.Accelerate.Array.Sugar.Elt e) =>
+     Data.Array.Accelerate.Array.Sugar.Segments sh
+     -> Data.Array.Accelerate.Array.Sugar.Vector e
+     -> [Data.Array.Accelerate.Array.Sugar.Array sh e])
+    -> Data.Array.Accelerate.Array.Lifted.Vector' a -> [a]
+  {- Arity: 1, Strictness: <L,1*U(A,A,A,1*C1(U),A,A)> -}
+6f89a43f0605356bc8b79b82360aee7d
+  vec2Vec' ::
+    Data.Array.Accelerate.Array.Sugar.Elt e =>
+    Data.Array.Accelerate.Array.Sugar.Vector e
+    -> Data.Array.Accelerate.Array.Lifted.Vector'
+         (Data.Array.Accelerate.Array.Sugar.Scalar e)
+  {- Arity: 2, Strictness: <L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Array.Lifted.vec2Vec'1
+                  `cast`
+                (forall (e :: <*>_N).
+                 <Data.Array.Accelerate.Array.Sugar.Elt e>_R
+                 ->_R <Data.Array.Accelerate.Array.Sugar.Vector e>_R
+                 ->_R Trans
+                          (Sub (Sym (Data.Array.Accelerate.Array.Lifted.D:R:LiftedRepr[1]
+                                         <e>_N <Data.Array.Accelerate.Array.Sugar.Z>_N)))
+                          (Trans
+                               (Data.Array.Accelerate.Array.Lifted.LiftedRepr
+                                  (Sym (Data.Array.Accelerate.Array.Sugar.D:R:ArrReprArray[0]
+                                            <e>_N <Data.Array.Accelerate.Array.Sugar.Z>_N))
+                                  <Data.Array.Accelerate.Array.Sugar.Array
+                                     Data.Array.Accelerate.Array.Sugar.Z e>_N)_R
+                               (Sym (Data.Array.Accelerate.Array.Lifted.N:Vector'[0]
+                                         <Data.Array.Accelerate.Array.Sugar.Scalar e>_N)))) -}
+42e452f1d6a6eb8967df84b0d09eab17
+  vec2Vec'1 ::
+    Data.Array.Accelerate.Array.Sugar.Elt e =>
+    Data.Array.Accelerate.Array.Sugar.Vector e
+    -> (((),
+         Data.Array.Accelerate.Array.Sugar.Segments
+           Data.Array.Accelerate.Array.Sugar.Z),
+        Data.Array.Accelerate.Array.Sugar.Vector e)
+  {- Arity: 2, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ e
+                   ($dElt :: Data.Array.Accelerate.Array.Sugar.Elt e)
+                   (eta :: Data.Array.Accelerate.Array.Sugar.Vector e) ->
+                 Data.Array.Accelerate.Array.Lifted.vec2Vec'2 @ e eta) -}
+d960eb1e9a05b50e160834c23551a2cf
+  vec2Vec'2 ::
+    Data.Array.Accelerate.Array.Sugar.Vector e
+    -> (((),
+         Data.Array.Accelerate.Array.Sugar.Segments
+           Data.Array.Accelerate.Array.Sugar.Z),
+        Data.Array.Accelerate.Array.Sugar.Vector e)
+  {- Arity: 1, Strictness: <L,U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ e (v :: Data.Array.Accelerate.Array.Sugar.Vector e) ->
+                 (Data.Array.Accelerate.Array.Lifted.vec2Vec'3, v)) -}
+4a03dda7c113bed7928c5269ee4d1b64
+  vec2Vec'3 ::
+    ((),
+     Data.Array.Accelerate.Array.Sugar.Segments
+       Data.Array.Accelerate.Array.Sugar.Z)
+  {- Strictness: m,
+     Unfolding: ((GHC.Tuple.(),
+                  Data.Array.Accelerate.Array.Lifted.vec2Vec'4)) -}
+e5f6d8d5c8b4f1e55c95bc04f198741f
+  vec2Vec'4 ::
+    Data.Array.Accelerate.Array.Sugar.Segments
+      Data.Array.Accelerate.Array.Sugar.Z
+  {- Strictness: x -}
+instance Data.Array.Accelerate.Array.Sugar.Arrays [Data.Array.Accelerate.Array.Lifted.Vector']
+  = Data.Array.Accelerate.Array.Lifted.$fArraysVector'
+instance Data.Array.Accelerate.Product.IsProduct [Data.Array.Accelerate.Array.Sugar.Arrays,
+                                                  Data.Array.Accelerate.Array.Lifted.Vector']
+  = Data.Array.Accelerate.Array.Lifted.$fIsProductArraysVector'
+family instance Data.Array.Accelerate.Array.Sugar.ArrRepr [Data.Array.Accelerate.Array.Lifted.Vector']
+  = Data.Array.Accelerate.Array.Lifted.D:R:ArrReprVector'
+family instance Data.Array.Accelerate.Array.Lifted.LiftedTupleRepr [()]
+  = Data.Array.Accelerate.Array.Lifted.D:R:LiftedTupleRepr()
+family instance Data.Array.Accelerate.Array.Lifted.LiftedTupleRepr [(,)]
+  = Data.Array.Accelerate.Array.Lifted.D:R:LiftedTupleRepr(,)
+family instance Data.Array.Accelerate.Product.ProdRepr [Data.Array.Accelerate.Array.Lifted.Vector']
+  = Data.Array.Accelerate.Array.Lifted.D:R:ProdReprVector'
+"SPEC/Data.Array.Accelerate.Array.Lifted $fArraysArray @ Z @ Int" [ALWAYS] forall ($dElt :: Data.Array.Accelerate.Array.Sugar.Elt
+                                                                                              GHC.Types.Int)
+                                                                                  ($dShape :: Data.Array.Accelerate.Array.Sugar.Shape
+                                                                                                Data.Array.Accelerate.Array.Sugar.Z)
+  Data.Array.Accelerate.Array.Sugar.$fArraysArray @ Data.Array.Accelerate.Array.Sugar.Z
+                                                  @ GHC.Types.Int
+                                                  $dShape
+                                                  $dElt
+  = Data.Array.Accelerate.Array.Lifted.$fArraysVector'_$s$fArraysArray
+"SPEC/Data.Array.Accelerate.Array.Lifted $fShape:. @ Z" [ALWAYS] forall ($dShape :: Data.Array.Accelerate.Array.Sugar.Shape
+                                                                                      Data.Array.Accelerate.Array.Sugar.Z)
+  Data.Array.Accelerate.Array.Sugar.$fShape:. @ Data.Array.Accelerate.Array.Sugar.Z
+                                              $dShape
+  = Data.Array.Accelerate.Array.Lifted.$fArraysVector'_$s$fShape:.
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

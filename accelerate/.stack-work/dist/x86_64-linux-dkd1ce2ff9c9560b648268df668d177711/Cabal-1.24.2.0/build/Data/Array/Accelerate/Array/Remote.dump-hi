@@ -1,0 +1,164 @@
+
+==================== FINAL INTERFACE ====================
+2017-08-29 05:28:08.13966 UTC
+
+interface accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Remote 8002
+  interface hash: f5ff0a400a6799a643f5710e67aa6a82
+  ABI hash: 5e0c2814c6e5d54fde56cfaa2385df5d
+  export-list hash: a7eaf73318dc94174bc5fd8dfeb0da79
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: f5e22126a89313b8f49e392aae70fb4b
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Data.Array.Accelerate.Array.Remote.LRU.free
+  Data.Array.Accelerate.Array.Remote.LRU.insertUnmanaged
+  Data.Array.Accelerate.Array.Remote.LRU.malloc
+  Data.Array.Accelerate.Array.Remote.LRU.new
+  Data.Array.Accelerate.Array.Remote.LRU.reclaim
+  Data.Array.Accelerate.Array.Remote.LRU.withRemote
+  Data.Array.Accelerate.Array.Remote.Class.PrimElt
+  Data.Array.Accelerate.Array.Remote.Class.RemoteMemory{Data.Array.Accelerate.Array.Remote.Class.RemotePtr Data.Array.Accelerate.Array.Remote.Class.availableRemoteMem Data.Array.Accelerate.Array.Remote.Class.castRemotePtr Data.Array.Accelerate.Array.Remote.Class.mallocRemote Data.Array.Accelerate.Array.Remote.Class.peekRemote Data.Array.Accelerate.Array.Remote.Class.pokeRemote Data.Array.Accelerate.Array.Remote.Class.remoteAllocationSize Data.Array.Accelerate.Array.Remote.Class.totalRemoteMem}
+  Data.Array.Accelerate.Array.Remote.LRU.MemoryTable
+  Data.Array.Accelerate.Array.Remote.LRU.Task{Data.Array.Accelerate.Array.Remote.LRU.completed}
+module dependencies: Data.Array.Accelerate.AST
+                     Data.Array.Accelerate.Analysis.Hash
+                     Data.Array.Accelerate.Analysis.Hash.TH
+                     Data.Array.Accelerate.Analysis.Match
+                     Data.Array.Accelerate.Array.Data
+                     Data.Array.Accelerate.Array.Remote.Class
+                     Data.Array.Accelerate.Array.Remote.LRU
+                     Data.Array.Accelerate.Array.Remote.Nursery
+                     Data.Array.Accelerate.Array.Remote.Table
+                     Data.Array.Accelerate.Array.Representation
+                     Data.Array.Accelerate.Array.Sugar
+                     Data.Array.Accelerate.Array.Unique Data.Array.Accelerate.Debug
+                     Data.Array.Accelerate.Debug.Flags
+                     Data.Array.Accelerate.Debug.Monitoring
+                     Data.Array.Accelerate.Debug.Stats Data.Array.Accelerate.Debug.Timed
+                     Data.Array.Accelerate.Debug.Trace Data.Array.Accelerate.Error
+                     Data.Array.Accelerate.Lifetime
+                     Data.Array.Accelerate.Pretty.Graphviz
+                     Data.Array.Accelerate.Pretty.Graphviz.Monad
+                     Data.Array.Accelerate.Pretty.Graphviz.Type
+                     Data.Array.Accelerate.Pretty.Print Data.Array.Accelerate.Product
+                     Data.Array.Accelerate.Trafo.Base
+                     Data.Array.Accelerate.Trafo.Substitution Data.Array.Accelerate.Type
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      exceptions-0.8.3@exceptions-0.8.3-ADEDRATtUrMK1JW4zMQ9U
+                      fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol
+                      hashtables-1.2.1.1@hashtables-1.2.1.1-CvCXxmZFzjODUwEtnf4YU7
+                      integer-gmp-1.0.0.1 mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      pretty-1.1.3.3@pretty-1.1.3.3
+                      primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh
+                      stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      template-haskell-2.11.1.0
+                      text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00
+                      transformers-0.5.2.0@transformers-0.5.2.0
+                      unique-0@unique-0-9CJQKYGbqiDaFUmoekKeA
+                      unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC
+                      vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu:Data.Orphans
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt:Data.Label.Point
+         hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable.Generic
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Show
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Fusion.Bundle
+         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
+family instance modules: accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Data
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Representation
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Sugar
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Product
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Trafo.Base
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Trafo.Substitution
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Type
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh:Control.Monad.Primitive
+                         primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh:Data.Primitive.Array
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC:Data.HashMap.Base
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC:Data.HashSet
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Primitive
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed.Base
+import  -/  Data.Array.Accelerate.Array.Remote.Class 5df3add7aed665043bdbc95bd79c53c0
+  exports: 39f76bfc3c76412a4f6824f91d8c4b44
+  PrimElt ccee7f76acd8658406856eb6d3c5c58e
+  RemoteMemory 647dd81a1e6daa4de9564ac0e752c75c
+  RemotePtr 311a41fce32ec8c5adf8389b3000dc19
+  availableRemoteMem 3e8c117935bc77df34a37ae01134afa3
+  castRemotePtr 8e40c8c4221c51c5a90606f8f5e935e6
+  mallocRemote bce0094a73ed11cfa3c46d9053cd1809
+  peekRemote 4cfc36e229e0a164ca79548430de53e0
+  pokeRemote 04d68ec39344f6d1dd08a1e720c422d1
+  remoteAllocationSize c6ceb7507ce185fd75b9a49d97389c2b
+  totalRemoteMem f45afddefca6d32a2fbd63f3a101b1a7
+import  -/  Data.Array.Accelerate.Array.Remote.LRU 5ef9a7e5004482e4467438c5ff68989a
+  exports: 02b60d274eb5e74e79ee0f98d39d47e4
+  MemoryTable d21b6d1da18379d628eae0143944deff
+  Task 7b25f8d75ba91360119410828d323429
+  completed 1ba972c30a3f6eef41bd24c8d769dbe4
+  free f9d58194d43ecd84a492c63c484226b5
+  insertUnmanaged 04d82cb3ae9421e86f75244033b0b477
+  malloc 1e082e206d3316f08860aa95e65b9533
+  new a58ffb9f37b02660f5a5f9fe49cf3b6d
+  reclaim 191504afaa5ebe5d29806b6f75583a60
+  withRemote 6de477051da9e3ff294a35fb1404db55
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+8944a5ca6621e6451519709fed37fc3f
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Data.Array.Accelerate.Array.Remote.$trModule2
+                   Data.Array.Accelerate.Array.Remote.$trModule1) -}
+a6653c2cf01b2a0ee128544163feba7a
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Data.Array.Accelerate.Array.Remote"#) -}
+0252f94b50f0454f8d332cfa27c98452
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw"#) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

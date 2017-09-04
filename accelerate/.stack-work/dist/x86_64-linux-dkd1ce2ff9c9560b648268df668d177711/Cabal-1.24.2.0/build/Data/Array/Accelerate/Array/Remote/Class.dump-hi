@@ -1,0 +1,196 @@
+
+==================== FINAL INTERFACE ====================
+2017-08-29 05:26:58.544262 UTC
+
+interface accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Remote.Class 8002
+  interface hash: e21e77c38590990da868e10e52739dcf
+  ABI hash: 5df3add7aed665043bdbc95bd79c53c0
+  export-list hash: 39f76bfc3c76412a4f6824f91d8c4b44
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: df38719ccabe2a285b0f4b5a7f967116
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Data.Array.Accelerate.Array.Remote.Class.PrimElt
+  Data.Array.Accelerate.Array.Remote.Class.RemoteMemory{Data.Array.Accelerate.Array.Remote.Class.RemotePtr Data.Array.Accelerate.Array.Remote.Class.availableRemoteMem Data.Array.Accelerate.Array.Remote.Class.castRemotePtr Data.Array.Accelerate.Array.Remote.Class.mallocRemote Data.Array.Accelerate.Array.Remote.Class.peekRemote Data.Array.Accelerate.Array.Remote.Class.pokeRemote Data.Array.Accelerate.Array.Remote.Class.remoteAllocationSize Data.Array.Accelerate.Array.Remote.Class.totalRemoteMem}
+module dependencies: Data.Array.Accelerate.Array.Data
+                     Data.Array.Accelerate.Array.Unique
+                     Data.Array.Accelerate.Debug.Flags
+                     Data.Array.Accelerate.Debug.Monitoring
+                     Data.Array.Accelerate.Debug.Trace Data.Array.Accelerate.Error
+                     Data.Array.Accelerate.Lifetime Data.Array.Accelerate.Type
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      exceptions-0.8.3@exceptions-0.8.3-ADEDRATtUrMK1JW4zMQ9U
+                      fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol
+                      integer-gmp-1.0.0.1 mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      pretty-1.1.3.3@pretty-1.1.3.3
+                      stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      template-haskell-2.11.1.0
+                      text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00
+                      transformers-0.5.2.0@transformers-0.5.2.0
+                      unique-0@unique-0-9CJQKYGbqiDaFUmoekKeA
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu:Data.Orphans
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt:Data.Label.Point
+         hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable.Generic
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Show
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+family instance modules: accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Data
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Type
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+import  -/  Data.Array.Accelerate.Array.Data 0f7788ba6235b9caff0f10d41744f81c
+  exports: 2e401fd3c8bac4bea058169f3641bb3b
+  ArrayData 251ac8cc288dc0eb1e92b71f08b6e16e
+  ArrayElt ff45a629a63c423d76148392bf0a84a4
+  ArrayPtrs 7730299a757175918b51050a31ccccef
+  MutableArrayData 36b8be1e9c5b0193942b260165aaf8f0
+import  -/  base-4.9.1.0:Control.Applicative 32430a90492e727f4bd80db71c28600c
+import  -/  base-4.9.1.0:Data.Int 07f5a36c488acfe0ac32e81c7536b8ff
+import  -/  base-4.9.1.0:Data.Type.Equality e58d97d060ef5a0f7906bf33d6e50df2
+import  -/  base-4.9.1.0:Data.Typeable 9257e47d10882145c67c5b489965cfb7
+import  -/  base-4.9.1.0:Data.Typeable.Internal 0e9bdefa4325a0112d8e73b5e1e1f85d
+import  -/  base-4.9.1.0:Data.Word 77f42e01d0fb6b071f1ea2176d87fa6c
+import  -/  base-4.9.1.0:Foreign.Ptr 436587875917047a95f3be0fc1891fc4
+import  -/  base-4.9.1.0:Foreign.Storable 085c8d7f42ceec1dbb4e818f06339b9d
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Int e6f85fcab22769385fba2b5fce0acb40
+import  -/  base-4.9.1.0:GHC.Ptr 427a6ad9312f04edb98e0f5b7c4e2596
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  exceptions-0.8.3@exceptions-0.8.3-ADEDRATtUrMK1JW4zMQ9U:Control.Monad.Catch b7c0706f1693a3a340b0c0acefd4e19d
+5545999ca1b3f6a4b852a455b358bcb0
+  $dmremoteAllocationSize ::
+    Data.Array.Accelerate.Array.Remote.Class.RemoteMemory m =>
+    m GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LS(LLLC(S)L)LLLLLLLLL),1*U(A,1*U(A,A,A,1*C1(U),A),A,A,A,A,A,A,A,A,A)>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ (m :: * -> *)
+                   ($dRemoteMemory :: Data.Array.Accelerate.Array.Remote.Class.RemoteMemory
+                                        m) ->
+                 GHC.Base.return
+                   @ m
+                   (Data.Array.Accelerate.Array.Remote.Class.$p2RemoteMemory
+                      @ m
+                      $dRemoteMemory)
+                   @ GHC.Types.Int
+                   (GHC.Types.I# 1024#)) -}
+8c79c2c830eef428c254091f0718f311
+  $tc'C:RemoteMemory :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7377532511138752316##
+                   9549722000691827014##
+                   Data.Array.Accelerate.Array.Remote.Class.$trModule
+                   Data.Array.Accelerate.Array.Remote.Class.$tc'C:RemoteMemory1) -}
+f895148ed10a132370608bf6fc9c7e74
+  $tc'C:RemoteMemory1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'C:RemoteMemory"#) -}
+1a3bf509d2374af8d5a21a4ca07594c3
+  $tcRemoteMemory :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10835779327123509542##
+                   11856913655581856045##
+                   Data.Array.Accelerate.Array.Remote.Class.$trModule
+                   Data.Array.Accelerate.Array.Remote.Class.$tcRemoteMemory1) -}
+d37332d3a78079b9e5c19f5d4b0ec802
+  $tcRemoteMemory1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "RemoteMemory"#) -}
+9178281b2663e937813976fc82cee810
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Data.Array.Accelerate.Array.Remote.Class.$trModule2
+                   Data.Array.Accelerate.Array.Remote.Class.$trModule1) -}
+c4942c5c04f5808fbc12b57023319c12
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Data.Array.Accelerate.Array.Remote.Class"#) -}
+9ae72cbfc5472e9a78ec69bd85f7b53b
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw"#) -}
+ccee7f76acd8658406856eb6d3c5c58e
+  type PrimElt e a =
+    (Data.Array.Accelerate.Array.Data.ArrayElt e,
+     Foreign.Storable.Storable a,
+     Data.Array.Accelerate.Array.Data.ArrayPtrs e
+     Data.Type.Equality.~ GHC.Ptr.Ptr a,
+     Data.Typeable.Internal.Typeable e,
+     Data.Typeable.Internal.Typeable a)
+    :: GHC.Types.Constraint
+647dd81a1e6daa4de9564ac0e752c75c
+  class (GHC.Base.Applicative m, GHC.Base.Monad m,
+         Control.Monad.Catch.MonadCatch m,
+         Control.Monad.Catch.MonadMask m) =>
+        RemoteMemory (m :: * -> *) where
+    type family RemotePtr (m :: * -> *) :: GHC.Types.* -> GHC.Types.*
+      open
+    mallocRemote :: GHC.Types.Int
+                    -> m (GHC.Base.Maybe
+                            (Data.Array.Accelerate.Array.Remote.Class.RemotePtr
+                               m GHC.Word.Word8))
+    pokeRemote :: Data.Array.Accelerate.Array.Remote.Class.PrimElt
+                    e a =>
+                  GHC.Types.Int
+                  -> Data.Array.Accelerate.Array.Remote.Class.RemotePtr m a
+                  -> Data.Array.Accelerate.Array.Data.ArrayData e
+                  -> m ()
+    peekRemote :: Data.Array.Accelerate.Array.Remote.Class.PrimElt
+                    e a =>
+                  GHC.Types.Int
+                  -> Data.Array.Accelerate.Array.Remote.Class.RemotePtr m a
+                  -> Data.Array.Accelerate.Array.Data.MutableArrayData e
+                  -> m ()
+    castRemotePtr :: proxy m
+                     -> Data.Array.Accelerate.Array.Remote.Class.RemotePtr m a
+                     -> Data.Array.Accelerate.Array.Remote.Class.RemotePtr m b
+    totalRemoteMem :: m GHC.Int.Int64
+    availableRemoteMem :: m GHC.Int.Int64
+    remoteAllocationSize :: m GHC.Types.Int
+    {-# MINIMAL mallocRemote, pokeRemote, peekRemote, castRemotePtr,
+                totalRemoteMem, availableRemoteMem #-}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

@@ -1,0 +1,611 @@
+
+==================== FINAL INTERFACE ====================
+2017-08-29 05:26:54.268695 UTC
+
+interface accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Pretty.Graphviz.Monad 8002
+  interface hash: ee2fd6ca7f1e6a58177a82d7ac3b8695
+  ABI hash: d80e9debbba472cba1e38e78bac936b0
+  export-list hash: 4cce58265625fc6521f0112a3cc00324
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 6a6d5f524f1a400112e212e0f6720e5e
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Data.Array.Accelerate.Pretty.Graphviz.Monad.emptyState
+  Data.Array.Accelerate.Pretty.Graphviz.Monad.evalDot
+  Data.Array.Accelerate.Pretty.Graphviz.Monad.execDot
+  Data.Array.Accelerate.Pretty.Graphviz.Monad.mkGraph
+  Data.Array.Accelerate.Pretty.Graphviz.Monad.mkLabel
+  Data.Array.Accelerate.Pretty.Graphviz.Monad.mkNodeId
+  Data.Array.Accelerate.Pretty.Graphviz.Monad.mkSubgraph
+  Data.Array.Accelerate.Pretty.Graphviz.Monad.runDot
+  Data.Array.Accelerate.Pretty.Graphviz.Monad.Dot
+  Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState{Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState dotEdges dotGraph dotNodes fresh}
+module dependencies: Data.Array.Accelerate.Pretty.Graphviz.Type
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0*
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1*
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol
+                      integer-gmp-1.0.0.1 mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      pretty-1.1.3.3@pretty-1.1.3.3
+                      text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00
+                      transformers-0.5.2.0@transformers-0.5.2.0
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable.Generic
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Show
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Compose base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+import  -/  Data.Array.Accelerate.Pretty.Graphviz.Type a76ff553665b62c8638b260f9275d644
+  exports: a2d91d49bf2eb9a1e34adc7dffe19362
+  E 23960623de2116302b359d21e25880fa
+  Edge 0da379cef6040c978614b1d0e097a66d
+  G e22f5a9398c328efa7ef7250021eee2b
+  Graph 94f9de762af9dad8b4e636b360925892
+  Graph 34a982a49eb2afcbac7df3b42d42f45f
+  Label 6d4549ed4e413ca9c360072a7a55d7fd
+  N 434a93943a532c96b2f62e025785d36e
+  Node 33e09ea5fc021af7aefbc8df2dd3af64
+  NodeId d7c08438c67910cd3e643ad984792b83
+  NodeId 013d0295203ef1076b8b2216e96ac311
+import  -/  base-4.9.1.0:Control.Applicative 32430a90492e727f4bd80db71c28600c
+import  -/  base-4.9.1.0:Control.Monad.IO.Class 1a4384f66ee999caf5366398edb6ca7b
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:Data.Functor 5ab1dc703df5b482e77efb697833ca3c
+import  -/  base-4.9.1.0:Data.Tuple 7dc4bbb45d2e69c991ffac438beeca11
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:System.Mem.StableName 23f9e05ef19db7982375ca2ae4791ca9
+import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Sequence 47585f299e23ea17caeacc3eeb88d264
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6:Control.Monad.State 749dca8ca0e6625b32091d445bd92b01
+import  -/  mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6:Control.Monad.State.Class 6d31234b0a911b56412061943d18b89e
+import  -/  transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Class 45530f1305724ee3931a9be21b40ca7e
+import  -/  transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.State.Lazy 371607e50dde46b5f4103b3ab334a497
+438b1a932074611f5996f2093c5184b1
+  $tc'DotState :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9592281858403931244##
+                   9957929803862845923##
+                   Data.Array.Accelerate.Pretty.Graphviz.Monad.$trModule
+                   Data.Array.Accelerate.Pretty.Graphviz.Monad.$tc'DotState1) -}
+e547fd9891ce7c28f4eb364001e36b37
+  $tc'DotState1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'DotState"#) -}
+e7546479250c348dadaf787b2dc5a5a2
+  $tcDotState :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7025888232162015102##
+                   8069599493840536541##
+                   Data.Array.Accelerate.Pretty.Graphviz.Monad.$trModule
+                   Data.Array.Accelerate.Pretty.Graphviz.Monad.$tcDotState1) -}
+bf0db97e432540d798dbe98f52549f4c
+  $tcDotState1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "DotState"#) -}
+4f34199706e715a0f60db96fcd5e6ce3
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Data.Array.Accelerate.Pretty.Graphviz.Monad.$trModule2
+                   Data.Array.Accelerate.Pretty.Graphviz.Monad.$trModule1) -}
+9407ee4639ad8b2854977b5216088adc
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Data.Array.Accelerate.Pretty.Graphviz.Monad"#) -}
+f3f961a7f39630a75d8030cc7a8c5a29
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw"#) -}
+d469dc096f31b3d87fa630c5cdec2a5b
+  type Dot a =
+    Control.Monad.Trans.State.Lazy.StateT
+      Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState GHC.Types.IO a
+f551124a98089ba32d20716e54b1e201
+  data DotState
+    = DotState {fresh :: {-# UNPACK #-}GHC.Types.Int,
+                dotGraph :: Data.Sequence.Seq
+                              Data.Array.Accelerate.Pretty.Graphviz.Type.Graph,
+                dotEdges :: Data.Sequence.Seq
+                              Data.Array.Accelerate.Pretty.Graphviz.Type.Edge,
+                dotNodes :: Data.Sequence.Seq
+                              Data.Array.Accelerate.Pretty.Graphviz.Type.Node}
+0b467a4ec245afd1da308c502ee18b57
+  dotEdges ::
+    Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState
+    -> Data.Sequence.Seq
+         Data.Array.Accelerate.Pretty.Graphviz.Type.Edge
+  RecSel Left Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLSL),1*U(A,A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState) ->
+                 case ds of wild { Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState dt ds1 ds2 ds3 ->
+                 ds2 }) -}
+c0f1493e4ac7bb5754d0f21a63f0ba2d
+  dotGraph ::
+    Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState
+    -> Data.Sequence.Seq
+         Data.Array.Accelerate.Pretty.Graphviz.Type.Graph
+  RecSel Left Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSLL),1*U(A,1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState) ->
+                 case ds of wild { Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState dt ds1 ds2 ds3 ->
+                 ds1 }) -}
+e80c16df25c4998ef65929cad852fbe2
+  dotNodes ::
+    Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState
+    -> Data.Sequence.Seq
+         Data.Array.Accelerate.Pretty.Graphviz.Type.Node
+  RecSel Left Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLLS),1*U(A,A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState) ->
+                 case ds of wild { Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState dt ds1 ds2 ds3 ->
+                 ds3 }) -}
+85e728350602d1b504d39984f360164c
+  emptyState :: Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState
+                   0#
+                   (Data.Sequence.Empty
+                      @ (Data.Sequence.Elem
+                           Data.Array.Accelerate.Pretty.Graphviz.Type.Graph))
+                     `cast`
+                   (Sym (Data.Sequence.N:Seq[0]
+                             <Data.Array.Accelerate.Pretty.Graphviz.Type.Graph>_R))
+                   (Data.Sequence.Empty
+                      @ (Data.Sequence.Elem
+                           Data.Array.Accelerate.Pretty.Graphviz.Type.Edge))
+                     `cast`
+                   (Sym (Data.Sequence.N:Seq[0]
+                             <Data.Array.Accelerate.Pretty.Graphviz.Type.Edge>_R))
+                   (Data.Sequence.Empty
+                      @ (Data.Sequence.Elem
+                           Data.Array.Accelerate.Pretty.Graphviz.Type.Node))
+                     `cast`
+                   (Sym (Data.Sequence.N:Seq[0]
+                             <Data.Array.Accelerate.Pretty.Graphviz.Type.Node>_R))) -}
+a12b666ce0ecfba24e8f32369b680215
+  evalDot ::
+    Data.Array.Accelerate.Pretty.Graphviz.Monad.Dot a -> GHC.Types.IO a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <C(C(S(SL))),1*C1(C1(U(U,1*U(1*U,A))))><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Pretty.Graphviz.Monad.evalDot1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Data.Array.Accelerate.Pretty.Graphviz.Monad.Dot a>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <a>_R)) -}
+85a751a7b29a60c049b239715c98470e
+  evalDot1 ::
+    Data.Array.Accelerate.Pretty.Graphviz.Monad.Dot a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, a #)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <C(C(S(SL))),1*C1(C1(U(U,1*U(1*U,A))))><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   (dot :: Data.Array.Accelerate.Pretty.Graphviz.Monad.Dot a)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case (dot
+                         `cast`
+                       (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                            <Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState>_N
+                            <GHC.Types.IO>_R
+                            <a>_N)
+                         Data.Array.Accelerate.Pretty.Graphviz.Monad.emptyState)
+                        `cast`
+                      (GHC.Types.N:IO[0]
+                           <(a, Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState)>_R)
+                        eta of ds { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    Data.Tuple.fst
+                      @ a
+                      @ Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState
+                      ipv1 #) }) -}
+d2989df9a85799b80bc110320c096d17
+  execDot ::
+    Data.Array.Accelerate.Pretty.Graphviz.Monad.Dot a
+    -> GHC.Types.IO
+         Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <C(C(S(SL))),1*C1(C1(U(U,1*U(A,1*U))))><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Pretty.Graphviz.Monad.execDot1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Data.Array.Accelerate.Pretty.Graphviz.Monad.Dot a>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState>_R)) -}
+930042deba1291009eeae11bc40503d7
+  execDot1 ::
+    Data.Array.Accelerate.Pretty.Graphviz.Monad.Dot a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState #)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <C(C(S(SL))),1*C1(C1(U(U,1*U(A,1*U))))><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   (dot :: Data.Array.Accelerate.Pretty.Graphviz.Monad.Dot a)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case (dot
+                         `cast`
+                       (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                            <Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState>_N
+                            <GHC.Types.IO>_R
+                            <a>_N)
+                         Data.Array.Accelerate.Pretty.Graphviz.Monad.emptyState)
+                        `cast`
+                      (GHC.Types.N:IO[0]
+                           <(a, Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState)>_R)
+                        eta of ds { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    Data.Tuple.snd
+                      @ a
+                      @ Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState
+                      ipv1 #) }) -}
+64c712bd57cda892c8ee8cc34bd1edd8
+  fresh ::
+    Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState
+    -> GHC.Types.Int
+  RecSel Left Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLLL),1*U(U,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState) ->
+                 case ds of wild { Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState dt ds1 ds2 ds3 ->
+                 GHC.Types.I# dt }) -}
+a4035ff98f232448b8bb44f07049e522
+  mkGraph ::
+    Data.Array.Accelerate.Pretty.Graphviz.Monad.Dot
+      Data.Array.Accelerate.Pretty.Graphviz.Type.Graph
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U,1*U,1*U,1*U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Pretty.Graphviz.Monad.mkGraph1
+                  `cast`
+                (Trans
+                     (<Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState>_R
+                      ->_R Sym (GHC.Types.N:IO[0]
+                                    <(Data.Array.Accelerate.Pretty.Graphviz.Type.Graph,
+                                      Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState)>_R))
+                     (Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                               <Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState>_N
+                               <GHC.Types.IO>_R
+                               <Data.Array.Accelerate.Pretty.Graphviz.Type.Graph>_N))) -}
+0e811fdabbc71bfd2014fdf99cd75638
+  mkGraph1 ::
+    Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          (Data.Array.Accelerate.Pretty.Graphviz.Type.Graph,
+           Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState) #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U,1*U,1*U,1*U)><S,U>,
+     Unfolding: (\ (eta1 :: Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (# s,
+                    case eta1 of wild { Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState dt ds ds1 ds2 ->
+                    (Data.Array.Accelerate.Pretty.Graphviz.Type.Graph
+                       (GHC.Types.[] @ GHC.Types.Char)
+                       (Data.Sequence.$fEqSeq_$cfoldr
+                          @ (Data.Sequence.Elem
+                               Data.Array.Accelerate.Pretty.Graphviz.Type.Statement)
+                          @ [Data.Array.Accelerate.Pretty.Graphviz.Type.Statement]
+                          (GHC.Types.:
+                             @ Data.Array.Accelerate.Pretty.Graphviz.Type.Statement)
+                            `cast`
+                          (Sym (Data.Sequence.N:Elem[0]
+                                    <Data.Array.Accelerate.Pretty.Graphviz.Type.Statement>_R)
+                           ->_R <[Data.Array.Accelerate.Pretty.Graphviz.Type.Statement]
+                                 -> [Data.Array.Accelerate.Pretty.Graphviz.Type.Statement]>_R)
+                          (GHC.Types.[]
+                             @ Data.Array.Accelerate.Pretty.Graphviz.Type.Statement)
+                          (Data.Sequence.$fAlternativeSeq2
+                             @ Data.Array.Accelerate.Pretty.Graphviz.Type.Statement
+                             (Data.Sequence.$fAlternativeSeq_$cfmap
+                                @ (Data.Sequence.Elem
+                                     Data.Array.Accelerate.Pretty.Graphviz.Type.Node)
+                                @ (Data.Sequence.Elem
+                                     Data.Array.Accelerate.Pretty.Graphviz.Type.Statement)
+                                Data.Array.Accelerate.Pretty.Graphviz.Type.N
+                                  `cast`
+                                (Sym (Data.Sequence.N:Elem[0]
+                                          <Data.Array.Accelerate.Pretty.Graphviz.Type.Node>_R)
+                                 ->_R Sym (Data.Sequence.N:Elem[0]
+                                               <Data.Array.Accelerate.Pretty.Graphviz.Type.Statement>_R))
+                                ds2
+                                  `cast`
+                                (Data.Sequence.N:Seq[0]
+                                     <Data.Array.Accelerate.Pretty.Graphviz.Type.Node>_R))
+                               `cast`
+                             (Sym (Data.Sequence.N:Seq[0]
+                                       <Data.Array.Accelerate.Pretty.Graphviz.Type.Statement>_R))
+                             (Data.Sequence.$fAlternativeSeq2
+                                @ Data.Array.Accelerate.Pretty.Graphviz.Type.Statement
+                                (Data.Sequence.$fAlternativeSeq_$cfmap
+                                   @ (Data.Sequence.Elem
+                                        Data.Array.Accelerate.Pretty.Graphviz.Type.Edge)
+                                   @ (Data.Sequence.Elem
+                                        Data.Array.Accelerate.Pretty.Graphviz.Type.Statement)
+                                   Data.Array.Accelerate.Pretty.Graphviz.Type.E
+                                     `cast`
+                                   (Sym (Data.Sequence.N:Elem[0]
+                                             <Data.Array.Accelerate.Pretty.Graphviz.Type.Edge>_R)
+                                    ->_R Sym (Data.Sequence.N:Elem[0]
+                                                  <Data.Array.Accelerate.Pretty.Graphviz.Type.Statement>_R))
+                                   ds1
+                                     `cast`
+                                   (Data.Sequence.N:Seq[0]
+                                        <Data.Array.Accelerate.Pretty.Graphviz.Type.Edge>_R))
+                                  `cast`
+                                (Sym (Data.Sequence.N:Seq[0]
+                                          <Data.Array.Accelerate.Pretty.Graphviz.Type.Statement>_R))
+                                (Data.Sequence.$fAlternativeSeq_$cfmap
+                                   @ (Data.Sequence.Elem
+                                        Data.Array.Accelerate.Pretty.Graphviz.Type.Graph)
+                                   @ (Data.Sequence.Elem
+                                        Data.Array.Accelerate.Pretty.Graphviz.Type.Statement)
+                                   Data.Array.Accelerate.Pretty.Graphviz.Type.G
+                                     `cast`
+                                   (Sym (Data.Sequence.N:Elem[0]
+                                             <Data.Array.Accelerate.Pretty.Graphviz.Type.Graph>_R)
+                                    ->_R Sym (Data.Sequence.N:Elem[0]
+                                                  <Data.Array.Accelerate.Pretty.Graphviz.Type.Statement>_R))
+                                   ds
+                                     `cast`
+                                   (Data.Sequence.N:Seq[0]
+                                        <Data.Array.Accelerate.Pretty.Graphviz.Type.Graph>_R))
+                                  `cast`
+                                (Sym (Data.Sequence.N:Seq[0]
+                                          <Data.Array.Accelerate.Pretty.Graphviz.Type.Statement>_R)))
+                               `cast`
+                             (Sym (Data.Sequence.N:Seq[0]
+                                       <Data.Array.Accelerate.Pretty.Graphviz.Type.Statement>_R)))),
+                     Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState
+                       dt
+                       (Data.Sequence.Empty
+                          @ (Data.Sequence.Elem
+                               Data.Array.Accelerate.Pretty.Graphviz.Type.Graph))
+                         `cast`
+                       (Sym (Data.Sequence.N:Seq[0]
+                                 <Data.Array.Accelerate.Pretty.Graphviz.Type.Graph>_R))
+                       (Data.Sequence.Empty
+                          @ (Data.Sequence.Elem
+                               Data.Array.Accelerate.Pretty.Graphviz.Type.Edge))
+                         `cast`
+                       (Sym (Data.Sequence.N:Seq[0]
+                                 <Data.Array.Accelerate.Pretty.Graphviz.Type.Edge>_R))
+                       (Data.Sequence.Empty
+                          @ (Data.Sequence.Elem
+                               Data.Array.Accelerate.Pretty.Graphviz.Type.Node))
+                         `cast`
+                       (Sym (Data.Sequence.N:Seq[0]
+                                 <Data.Array.Accelerate.Pretty.Graphviz.Type.Node>_R))) } #)) -}
+3f7478021c14cc8f7477c27ac2f745e4
+  mkLabel ::
+    Data.Array.Accelerate.Pretty.Graphviz.Monad.Dot
+      Data.Array.Accelerate.Pretty.Graphviz.Type.Label
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Pretty.Graphviz.Monad.mkLabel1
+                  `cast`
+                (Trans
+                     (<Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState>_R
+                      ->_R Sym (GHC.Types.N:IO[0]
+                                    <([GHC.Types.Char],
+                                      Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState)>_R))
+                     (Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                               <Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState>_N
+                               <GHC.Types.IO>_R
+                               <[GHC.Types.Char]>_N))) -}
+5c90eafe964543af050b0e2799fabcb2
+  mkLabel1 ::
+    Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ([GHC.Types.Char],
+           Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState) #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U(U,U,U,U)><S,U>,
+     Unfolding: (\ (eta1 :: Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (# s,
+                    let {
+                      n :: GHC.Types.Int
+                      = case eta1 of wild { Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState dt ds ds1 ds2 ->
+                        GHC.Types.I# dt }
+                    } in
+                    (GHC.Types.:
+                       @ GHC.Types.Char
+                       Data.Array.Accelerate.Pretty.Graphviz.Monad.mkLabel2
+                       (case n of ww2 { GHC.Types.I# ww3 ->
+                        case GHC.Show.$wshowSignedInt
+                               0#
+                               ww3
+                               (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                        GHC.Types.: @ GHC.Types.Char ww5 ww6 } }),
+                     case eta1 of wild { Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState dt ds ds1 ds2 ->
+                     case n of wild1 { GHC.Types.I# x ->
+                     Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState
+                       (GHC.Prim.+# x 1#)
+                       ds
+                       ds1
+                       ds2 } }) #)) -}
+ce64e7669da9539c87157350f0660f19
+  mkLabel2 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# 'a'#) -}
+a8e71215c9aba3929a1fa469c4eeb257
+  mkNodeId ::
+    a
+    -> Data.Array.Accelerate.Pretty.Graphviz.Monad.Dot
+         Data.Array.Accelerate.Pretty.Graphviz.Type.NodeId
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Pretty.Graphviz.Monad.mkNodeId1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <a>_R
+                 ->_R Trans
+                          (<Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState>_R
+                           ->_R Sym (GHC.Types.N:IO[0]
+                                         <(Data.Array.Accelerate.Pretty.Graphviz.Type.NodeId,
+                                           Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState)>_R))
+                          (Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                                    <Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState>_N
+                                    <GHC.Types.IO>_R
+                                    <Data.Array.Accelerate.Pretty.Graphviz.Type.NodeId>_N))) -}
+a264944824e3b29ca5b3f872d1fca428
+  mkNodeId1 ::
+    a
+    -> Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          (Data.Array.Accelerate.Pretty.Graphviz.Type.NodeId,
+           Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState) #)
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,U><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (node :: a)
+                   (eta :: Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState)
+                   (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.makeStableName#
+                        @ a
+                        node
+                        eta1 of ds { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    (Data.Array.Accelerate.Pretty.Graphviz.Type.NodeId
+                       (GHC.Prim.stableNameToInt# @ a ipv1),
+                     eta) #) }) -}
+7bd008bad40a835e4b8f48aca487ba39
+  mkSubgraph ::
+    Data.Array.Accelerate.Pretty.Graphviz.Monad.Dot
+      Data.Array.Accelerate.Pretty.Graphviz.Type.Graph
+    -> Data.Array.Accelerate.Pretty.Graphviz.Monad.Dot
+         Data.Array.Accelerate.Pretty.Graphviz.Type.Graph
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(C(S(SS))),1*C1(C1(U(U,1*U(U,1*U(U,A,A,A)))))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Pretty.Graphviz.Monad.mkSubgraph1
+                  `cast`
+                (<Data.Array.Accelerate.Pretty.Graphviz.Monad.Dot
+                    Data.Array.Accelerate.Pretty.Graphviz.Type.Graph>_R
+                 ->_R Trans
+                          (<Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState>_R
+                           ->_R Sym (GHC.Types.N:IO[0]
+                                         <(Data.Array.Accelerate.Pretty.Graphviz.Type.Graph,
+                                           Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState)>_R))
+                          (Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                                    <Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState>_N
+                                    <GHC.Types.IO>_R
+                                    <Data.Array.Accelerate.Pretty.Graphviz.Type.Graph>_N))) -}
+0cce59cc9e3bcf5336f48bff5f3a3385
+  mkSubgraph1 ::
+    Data.Array.Accelerate.Pretty.Graphviz.Monad.Dot
+      Data.Array.Accelerate.Pretty.Graphviz.Type.Graph
+    -> Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          (Data.Array.Accelerate.Pretty.Graphviz.Type.Graph,
+           Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState) #)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(C(S(SS))),1*C1(C1(U(U,1*U(U,1*U(U,A,A,A)))))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (g :: Data.Array.Accelerate.Pretty.Graphviz.Monad.Dot
+                           Data.Array.Accelerate.Pretty.Graphviz.Type.Graph)
+                   (s1 :: Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case (g `cast`
+                       (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                            <Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState>_N
+                            <GHC.Types.IO>_R
+                            <Data.Array.Accelerate.Pretty.Graphviz.Type.Graph>_N)
+                         (case s1 of wild { Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState dt ds ds1 ds2 ->
+                          Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState
+                            dt
+                            (Data.Sequence.Empty
+                               @ (Data.Sequence.Elem
+                                    Data.Array.Accelerate.Pretty.Graphviz.Type.Graph))
+                              `cast`
+                            (Sym (Data.Sequence.N:Seq[0]
+                                      <Data.Array.Accelerate.Pretty.Graphviz.Type.Graph>_R))
+                            (Data.Sequence.Empty
+                               @ (Data.Sequence.Elem
+                                    Data.Array.Accelerate.Pretty.Graphviz.Type.Edge))
+                              `cast`
+                            (Sym (Data.Sequence.N:Seq[0]
+                                      <Data.Array.Accelerate.Pretty.Graphviz.Type.Edge>_R))
+                            (Data.Sequence.Empty
+                               @ (Data.Sequence.Elem
+                                    Data.Array.Accelerate.Pretty.Graphviz.Type.Node))
+                              `cast`
+                            (Sym (Data.Sequence.N:Seq[0]
+                                      <Data.Array.Accelerate.Pretty.Graphviz.Type.Node>_R)) }))
+                        `cast`
+                      (GHC.Types.N:IO[0]
+                           <(Data.Array.Accelerate.Pretty.Graphviz.Type.Graph,
+                             Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState)>_R)
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of wild { (,) r s' ->
+                 (# ipv,
+                    (r,
+                     case s1 of wild1 { Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState dt ds ds2 ds3 ->
+                     case s' of wild2 { Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState dt1 ds4 ds5 ds6 ->
+                     Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState
+                       dt1
+                       ds
+                       ds2
+                       ds3 } }) #) } }) -}
+4314def014f18833e7391b95020250ed
+  runDot ::
+    Data.Array.Accelerate.Pretty.Graphviz.Monad.Dot a
+    -> GHC.Types.IO
+         (a, Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState)
+  {- Arity: 1, HasNoCafRefs, Strictness: <C(S),1*C1(U)>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a
+                   (dot :: Data.Array.Accelerate.Pretty.Graphviz.Monad.Dot a) ->
+                 dot
+                   `cast`
+                 (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                      <Data.Array.Accelerate.Pretty.Graphviz.Monad.DotState>_N
+                      <GHC.Types.IO>_R
+                      <a>_N)
+                   Data.Array.Accelerate.Pretty.Graphviz.Monad.emptyState) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

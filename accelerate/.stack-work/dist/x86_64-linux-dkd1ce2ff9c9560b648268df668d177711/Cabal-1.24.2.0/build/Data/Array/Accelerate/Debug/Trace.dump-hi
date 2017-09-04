@@ -1,0 +1,279 @@
+
+==================== FINAL INTERFACE ====================
+2017-08-29 05:26:55.851297 UTC
+
+interface accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Debug.Trace 8002
+  interface hash: e5a72f390692ed17d883f46093c18ebe
+  ABI hash: 365190b9829a1554a2d495d3f4fb1682
+  export-list hash: fc0e54c6e0326121433c4f1f751ba0d8
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1055b9cb35c7fcda3a1156205d7a402a
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Data.Array.Accelerate.Debug.Trace.putTraceMsg
+  Data.Array.Accelerate.Debug.Trace.showFFloatSIBase
+  Data.Array.Accelerate.Debug.Trace.trace
+  Data.Array.Accelerate.Debug.Trace.traceEvent
+  Data.Array.Accelerate.Debug.Trace.traceEventIO
+  Data.Array.Accelerate.Debug.Trace.traceIO
+module dependencies: Data.Array.Accelerate.Debug.Flags
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1 pretty-1.1.3.3@pretty-1.1.3.3
+                      template-haskell-2.11.1.0
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt:Data.Label.Point
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+import  -/  Data.Array.Accelerate.Debug.Flags 4ae65d880031597019ea1d1d62ef661e
+  exports: 13ef378da3ed97cd263f65489c45c172
+  Mode 052ee85d5a9c7af53ad05aa09470b380
+import  -/  base-4.9.1.0:Debug.Trace a9edf3aec504f4423d8ba829ab373a25
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Float 33e2b9ffe427edd6a5c2fd6a3b26703c
+import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:Numeric bdcfa841811670500691657d058d32ea
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:System.CPUTime 24d2cdcecf449f6e92f8845206b7bfba
+import  -/  base-4.9.1.0:System.IO.Unsafe 1e3c5b8dd8cf6850ae43cce967bb46cd
+import  -/  base-4.9.1.0:Text.Printf 6701574960cd2af960fec5d940be0c25
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+addDependentFile "/home/pwoh/.stack/programs/x86_64-linux-dkd1ce2ff9c9560b648268df668d177711/ghc-8.0.2/lib/ghc-8.0.2/include/ghcversion.h"
+addDependentFile ".stack-work/dist/x86_64-linux-dkd1ce2ff9c9560b648268df668d177711/Cabal-1.24.2.0/build/autogen/cabal_macros.h"
+addDependentFile "/usr/include/stdc-predef.h"
+5392bfb711a26aaf480abb655e378f5b
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Data.Array.Accelerate.Debug.Trace.$trModule2
+                   Data.Array.Accelerate.Debug.Trace.$trModule1) -}
+7379e89e8d2c61b98cf2438be4a92b2d
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Data.Array.Accelerate.Debug.Trace"#) -}
+6084a5e942a74f13f53e74f3d83046da
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw"#) -}
+9d7cd181e29d90cdba48c3cdaa50721c
+  putTraceMsg :: GHC.Base.String -> GHC.Types.IO ()
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Debug.Trace.putTraceMsg1
+                  `cast`
+                (<GHC.Base.String>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+f1cbfb5e6df189b4558d1ca8388f55e8
+  putTraceMsg1 ::
+    GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: GHC.Base.String)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Data.Array.Accelerate.Debug.Trace.putTraceMsg2 eta) -}
+2d2355a67071ecf2b98e729dc2518a4b
+  putTraceMsg2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (# s, GHC.Tuple.() #)) -}
+572e7eb53989d902ab58f67446571cb9
+  showFFloatSIBase ::
+    GHC.Float.RealFloat a =>
+    GHC.Base.Maybe GHC.Types.Int -> a -> a -> GHC.Show.ShowS
+  {- Arity: 4,
+     Strictness: <S(SLLLLLLLLLLLLLLL),U(U,1*U(A,A,A,A,A,A,1*C1(C1(U)),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A),C(U),C(U(U)),C(U(1*U(U),A)),C(U(U,U)),A,A,A,A,C(U),C(U),A,C(U),A,A)><L,U><S,1*U><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dRealFloat :: GHC.Float.RealFloat a)
+                   (eta :: GHC.Base.Maybe GHC.Types.Int)
+                   (eta1 :: a)
+                   (eta2 :: a) ->
+                 case eta1 of base { DEFAULT ->
+                 case eta2 of k { DEFAULT ->
+                 let {
+                   $dRealFrac :: GHC.Real.RealFrac a
+                   = GHC.Float.$p1RealFloat @ a $dRealFloat
+                 } in
+                 case GHC.Real.floor
+                        @ a
+                        $dRealFrac
+                        @ GHC.Types.Int
+                        GHC.Real.$fIntegralInt
+                        (GHC.Float.logBase
+                           @ a
+                           (GHC.Float.$p2RealFloat @ a $dRealFloat)
+                           base
+                           k) of pow { GHC.Types.I# ipv ->
+                 let {
+                   $dFractional :: GHC.Real.Fractional a
+                   = GHC.Real.$p2RealFrac @ a $dRealFrac
+                 } in
+                 case GHC.Real./
+                        @ a
+                        $dFractional
+                        k
+                        (GHC.Real.^^
+                           @ a
+                           @ GHC.Types.Int
+                           $dFractional
+                           GHC.Real.$fIntegralInt
+                           base
+                           pow) of k' { DEFAULT ->
+                 GHC.Base.++
+                   @ GHC.Types.Char
+                   (let {
+                      with :: [GHC.Types.Char] -> GHC.Base.String
+                        {- Arity: 1, Strictness: <L,U> -}
+                      = \ (unit :: [GHC.Types.Char])[OneShot] ->
+                        GHC.Base.++
+                          @ GHC.Types.Char
+                          (GHC.Float.formatRealFloatAlt
+                             @ a
+                             $dRealFloat
+                             GHC.Float.FFFixed
+                             eta
+                             GHC.Types.False
+                             k')
+                          (GHC.Types.:
+                             @ GHC.Types.Char
+                             Data.Array.Accelerate.Debug.Trace.showFFloatSIBase10
+                             unit)
+                    } in
+                    case ipv of ds {
+                      DEFAULT
+                      -> GHC.Base.++
+                           @ GHC.Types.Char
+                           (GHC.Float.formatRealFloatAlt
+                              @ a
+                              $dRealFloat
+                              GHC.Float.FFGeneric
+                              eta
+                              GHC.Types.False
+                              k)
+                           Data.Array.Accelerate.Debug.Trace.showFFloatSIBase9
+                      -4# -> with Data.Array.Accelerate.Debug.Trace.showFFloatSIBase8
+                      -3# -> with Data.Array.Accelerate.Debug.Trace.showFFloatSIBase7
+                      -2# -> with Data.Array.Accelerate.Debug.Trace.showFFloatSIBase6
+                      -1# -> with Data.Array.Accelerate.Debug.Trace.showFFloatSIBase5
+                      1# -> with Data.Array.Accelerate.Debug.Trace.showFFloatSIBase4
+                      2# -> with Data.Array.Accelerate.Debug.Trace.showFFloatSIBase3
+                      3# -> with Data.Array.Accelerate.Debug.Trace.showFFloatSIBase2
+                      4#
+                      -> with
+                           Data.Array.Accelerate.Debug.Trace.showFFloatSIBase1 }) } } } }) -}
+1f4e8dfa23ac7b9ee69af1bfa7a6029e
+  showFFloatSIBase1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "T"#) -}
+3915bc6b04194d41a2286b5c52336dc9
+  showFFloatSIBase10 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# ' '#) -}
+9964d7840075ef20dc838d69635c456d
+  showFFloatSIBase2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "G"#) -}
+eb315bfd6a87cdea39bf9cf08f5e092e
+  showFFloatSIBase3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "M"#) -}
+8fee70d64c6d27cb64b708d624a2cbbd
+  showFFloatSIBase4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "k"#) -}
+29820f4caf5b7af119fe4af157464d11
+  showFFloatSIBase5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "m"#) -}
+901efcc782782aeda66cd30d51c712c5
+  showFFloatSIBase6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCStringUtf8# "\\194\\181"#) -}
+5534ba5a029b2b03584341e2bc933d8d
+  showFFloatSIBase7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "n"#) -}
+3eb3195c696913ff0154149f53faf04c
+  showFFloatSIBase8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "p"#) -}
+efda79becbcf25a02ce596a89dc8ca5e
+  showFFloatSIBase9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# " "#) -}
+cdd87d23deae53b9ad0b8bc78882192c
+  trace ::
+    Data.Array.Accelerate.Debug.Flags.Mode -> GHC.Base.String -> a -> a
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,A><L,A><S,1*U>,
+     Inline: INLINE (sat-args=3),
+     Unfolding: InlineRule (3, False, True)
+                (\ @ a
+                   (ds :: Data.Array.Accelerate.Debug.Flags.Mode)
+                   (ds1 :: GHC.Base.String)
+                   (expr :: a) ->
+                 expr) -}
+cb8574b6b71ee82ae4f0640fdbcf51f0
+  traceEvent ::
+    Data.Array.Accelerate.Debug.Flags.Mode -> GHC.Base.String -> a -> a
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,A><L,A><S,1*U>,
+     Inline: INLINE (sat-args=3),
+     Unfolding: InlineRule (3, False, True)
+                (\ @ a
+                   (ds :: Data.Array.Accelerate.Debug.Flags.Mode)
+                   (ds1 :: GHC.Base.String)
+                   (expr :: a) ->
+                 expr) -}
+29a3516801561bb26d1c4a71ea8da5cc
+  traceEventIO ::
+    Data.Array.Accelerate.Debug.Flags.Mode
+    -> GHC.Base.String -> GHC.Types.IO ()
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,A><L,A>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, True)
+                (\ (ds :: Data.Array.Accelerate.Debug.Flags.Mode)
+                   (ds1 :: GHC.Base.String)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (GHC.Base.returnIO @ () GHC.Tuple.())
+                   `cast`
+                 (GHC.Types.N:IO[0] <()>_R)
+                   eta)
+                  `cast`
+                (<Data.Array.Accelerate.Debug.Flags.Mode>_R
+                 ->_R <GHC.Base.String>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+bf3190e68fbfa59511d56a82757db26c
+  traceIO ::
+    Data.Array.Accelerate.Debug.Flags.Mode
+    -> GHC.Base.String -> GHC.Types.IO ()
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,A><L,A>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, True)
+                (\ (ds :: Data.Array.Accelerate.Debug.Flags.Mode)
+                   (ds1 :: GHC.Base.String)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (GHC.Base.returnIO @ () GHC.Tuple.())
+                   `cast`
+                 (GHC.Types.N:IO[0] <()>_R)
+                   eta)
+                  `cast`
+                (<Data.Array.Accelerate.Debug.Flags.Mode>_R
+                 ->_R <GHC.Base.String>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

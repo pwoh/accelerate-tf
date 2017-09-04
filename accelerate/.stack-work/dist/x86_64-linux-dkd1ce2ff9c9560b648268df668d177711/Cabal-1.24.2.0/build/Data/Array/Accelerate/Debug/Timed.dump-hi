@@ -1,0 +1,206 @@
+
+==================== FINAL INTERFACE ====================
+2017-08-29 05:26:55.891956 UTC
+
+interface accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Debug.Timed 8002
+  interface hash: 83841c147d0bab35d6114468c067dfbe
+  ABI hash: e448ffa6c758f516e228b344c72a62fa
+  export-list hash: 88ce71707891f896ac87f1085f37389e
+  orphan hash: 54fc7efea177feecd2e44d4f6aa088fc
+  flag hash: 34a49282cefe37c63ca0ad1ec596249f
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Data.Array.Accelerate.Debug.Timed.elapsed
+  Data.Array.Accelerate.Debug.Timed.timed
+module dependencies: Data.Array.Accelerate.Debug.Flags
+                     Data.Array.Accelerate.Debug.Trace
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1 mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      pretty-1.1.3.3@pretty-1.1.3.3 template-haskell-2.11.1.0
+                      transformers-0.5.2.0@transformers-0.5.2.0
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt:Data.Label.Point
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+import  -/  Data.Array.Accelerate.Debug.Flags 4ae65d880031597019ea1d1d62ef661e
+  exports: 13ef378da3ed97cd263f65489c45c172
+  Mode 052ee85d5a9c7af53ad05aa09470b380
+import  -/  Data.Array.Accelerate.Debug.Trace 365190b9829a1554a2d495d3f4fb1682
+  exports: fc0e54c6e0326121433c4f1f751ba0d8
+  showFFloatSIBase 572e7eb53989d902ab58f67446571cb9
+import  -/  base-4.9.1.0:Control.Monad.IO.Class 1a4384f66ee999caf5366398edb6ca7b
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:Text.Printf 6701574960cd2af960fec5d940be0c25
+import  -/  mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6:Control.Monad.Trans d69bc2e104a90fb918d853b240f7af2e
+addDependentFile "/home/pwoh/.stack/programs/x86_64-linux-dkd1ce2ff9c9560b648268df668d177711/ghc-8.0.2/lib/ghc-8.0.2/include/ghcversion.h"
+addDependentFile ".stack-work/dist/x86_64-linux-dkd1ce2ff9c9560b648268df668d177711/Cabal-1.24.2.0/build/autogen/cabal_macros.h"
+addDependentFile "/usr/include/stdc-predef.h"
+ae586503f8ceb329c587b7de3ace943a
+  $s$fPrintfArg[]_$s$fPrintfArg[]_$cparseFormat ::
+    [GHC.Types.Char] -> Text.Printf.ModifierParser
+  {- Arity: 2, Strictness: <L,A><S,1*U>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds1 :: [GHC.Types.Char]) (ds2 :: [GHC.Types.Char]) ->
+                 case ds2 of wild {
+                   [] -> Text.Printf.errorShortFormat @ Text.Printf.FormatParse
+                   : c1 cs
+                   -> Text.Printf.FormatParse
+                        (GHC.Types.[] @ GHC.Types.Char)
+                        c1
+                        cs }) -}
+a76e7230f7feffc9b64bd6f1e9ac0172
+  $sprintf3 ::
+    GHC.Base.String -> [Text.Printf.UPrintf] -> [GHC.Types.Char]
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>,
+     Unfolding: (\ (fmts :: GHC.Base.String)
+                   (args :: [Text.Printf.UPrintf]) ->
+                 GHC.Base.map
+                   @ GHC.Types.Char
+                   @ GHC.Types.Char
+                   Text.Printf.$fIsCharChar_$cfromChar
+                   (Text.Printf.uprintfs
+                      fmts
+                      (GHC.List.reverse1
+                         @ Text.Printf.UPrintf
+                         args
+                         (GHC.Types.[] @ Text.Printf.UPrintf))
+                      (GHC.Types.[] @ GHC.Types.Char))) -}
+68abeda757cc628c9db2134ea2bec154
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Data.Array.Accelerate.Debug.Timed.$trModule2
+                   Data.Array.Accelerate.Debug.Timed.$trModule1) -}
+54e105fd4cb2b82dd21ddd3c4ea16fb3
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Data.Array.Accelerate.Debug.Timed"#) -}
+15f58bff3c33a81de9992ef11e32038d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw"#) -}
+63316e340b1b9a9cd0f2675a73d0e4ba
+  elapsed :: GHC.Types.Double -> GHC.Types.Double -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,1*U><L,1*U>,
+     Unfolding: (\ (wallTime :: GHC.Types.Double)
+                   (cpuTime :: GHC.Types.Double) ->
+                 let {
+                   a1 :: [GHC.Types.Char]
+                   = Data.Array.Accelerate.Debug.Trace.showFFloatSIBase
+                       @ GHC.Types.Double
+                       GHC.Float.$fRealFloatDouble
+                       Data.Array.Accelerate.Debug.Timed.elapsed4
+                       Data.Array.Accelerate.Debug.Timed.elapsed3
+                       wallTime
+                       Data.Array.Accelerate.Debug.Timed.elapsed2
+                 } in
+                 let {
+                   a2 :: [GHC.Types.Char]
+                   = Data.Array.Accelerate.Debug.Trace.showFFloatSIBase
+                       @ GHC.Types.Double
+                       GHC.Float.$fRealFloatDouble
+                       Data.Array.Accelerate.Debug.Timed.elapsed4
+                       Data.Array.Accelerate.Debug.Timed.elapsed3
+                       cpuTime
+                       Data.Array.Accelerate.Debug.Timed.elapsed2
+                 } in
+                 Data.Array.Accelerate.Debug.Timed.$sprintf3
+                   Data.Array.Accelerate.Debug.Timed.elapsed1
+                   (GHC.Types.:
+                      @ (Text.Printf.ModifierParser, Text.Printf.FieldFormatter)
+                      (Data.Array.Accelerate.Debug.Timed.$s$fPrintfArg[]_$s$fPrintfArg[]_$cparseFormat
+                         a2,
+                       \ (w2 :: Text.Printf.FieldFormat) ->
+                       case w2 of ww { Text.Printf.FieldFormat ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                       case ww7 of ww8 { GHC.Types.C# ww9 ->
+                       Text.Printf.$wformatString
+                         @ GHC.Types.Char
+                         Text.Printf.$fIsCharChar
+                         a2
+                         ww1
+                         ww2
+                         ww3
+                         ww9 } })
+                      (GHC.Types.:
+                         @ (Text.Printf.ModifierParser, Text.Printf.FieldFormatter)
+                         (Data.Array.Accelerate.Debug.Timed.$s$fPrintfArg[]_$s$fPrintfArg[]_$cparseFormat
+                            a1,
+                          \ (w2 :: Text.Printf.FieldFormat) ->
+                          case w2 of ww { Text.Printf.FieldFormat ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                          case ww7 of ww8 { GHC.Types.C# ww9 ->
+                          Text.Printf.$wformatString
+                            @ GHC.Types.Char
+                            Text.Printf.$fIsCharChar
+                            a1
+                            ww1
+                            ww2
+                            ww3
+                            ww9 } })
+                         (GHC.Types.[] @ Text.Printf.UPrintf)))) -}
+2a2c182713fe7f711a07e62c6814d9f1
+  elapsed1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "%s (wall), %s (cpu)"#) -}
+3c6932713fe73a1309304290b3320a49
+  elapsed2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "s"#) -}
+c13ca7904ee2f9790f0fb0287303ab9b
+  elapsed3 :: GHC.Types.Double
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.D# 1000.0##) -}
+bb10001bf6167107e4da3c8e098ff07f
+  elapsed4 :: GHC.Base.Maybe GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ GHC.Types.Int
+                   Data.Array.Accelerate.Debug.Timed.elapsed5) -}
+6569b1037afa0ba48539d36ccf070a8c
+  elapsed5 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 3#) -}
+f26581d956db094039b21db5cbbac039
+  timed ::
+    Control.Monad.IO.Class.MonadIO m =>
+    Data.Array.Accelerate.Debug.Flags.Mode
+    -> (GHC.Types.Double -> GHC.Types.Double -> GHC.Base.String)
+    -> m a
+    -> m a
+  {- Arity: 4, HasNoCafRefs, Strictness: <L,A><L,A><L,A><S,1*U>,
+     Inline: INLINABLE[ALWAYS],
+     Unfolding: InlineRule (4, True, True)
+                (\ @ (m :: * -> *)
+                   @ a
+                   ($dMonadIO :: Control.Monad.IO.Class.MonadIO m)
+                   (ds :: Data.Array.Accelerate.Debug.Flags.Mode)
+                   (ds1 :: GHC.Types.Double -> GHC.Types.Double -> GHC.Base.String)
+                   (action :: m a) ->
+                 action) -}
+"SPEC/Data.Array.Accelerate.Debug.Timed $fPrintfArg[]_$cparseFormat @ Char" [ALWAYS] forall ($dIsChar :: Text.Printf.IsChar
+                                                                                                           GHC.Types.Char)
+  Text.Printf.$fPrintfArg[]_$cparseFormat @ GHC.Types.Char $dIsChar
+  = Data.Array.Accelerate.Debug.Timed.$s$fPrintfArg[]_$s$fPrintfArg[]_$cparseFormat
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

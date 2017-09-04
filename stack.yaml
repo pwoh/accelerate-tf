@@ -2,6 +2,7 @@ flags: {}
 extra-package-dbs: []
 packages:
 - '.'
+- accelerate
 extra-deps: []
 resolver: lts-9.0
 explicit-setup-deps:

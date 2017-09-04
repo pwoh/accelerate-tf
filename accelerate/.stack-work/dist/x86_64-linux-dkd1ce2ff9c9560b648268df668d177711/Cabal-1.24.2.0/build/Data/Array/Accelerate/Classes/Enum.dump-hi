@@ -1,0 +1,245 @@
+
+==================== FINAL INTERFACE ====================
+2017-08-29 05:27:32.150828 UTC
+
+interface accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Classes.Enum [orphan module] 8002
+  interface hash: 1d0933f44bf30d175b06f383aa519f89
+  ABI hash: 2b97a20c5916bcc2515658c856fb10a4
+  export-list hash: dd24268563fc42e37264ad56d77870c2
+  orphan hash: f765801da1a5901ceb721149c99ae7af
+  flag hash: d43ea9ed3c19733cbb6cd0f5f8093682
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Data.Array.Accelerate.Classes.Enum.Enum
+module dependencies: Data.Array.Accelerate.AST
+                     Data.Array.Accelerate.Array.Data
+                     Data.Array.Accelerate.Array.Representation
+                     Data.Array.Accelerate.Array.Sugar
+                     Data.Array.Accelerate.Array.Unique
+                     Data.Array.Accelerate.Debug.Flags
+                     Data.Array.Accelerate.Debug.Monitoring
+                     Data.Array.Accelerate.Debug.Trace Data.Array.Accelerate.Error
+                     Data.Array.Accelerate.Lifetime Data.Array.Accelerate.Product
+                     Data.Array.Accelerate.Smart Data.Array.Accelerate.Type
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol
+                      integer-gmp-1.0.0.1 pretty-1.1.3.3@pretty-1.1.3.3
+                      template-haskell-2.11.1.0
+                      text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00
+                      unique-0@unique-0-9CJQKYGbqiDaFUmoekKeA
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu:Data.Orphans
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt:Data.Label.Point
+         hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable.Generic
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Show
+family instance modules: accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Data
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Representation
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Sugar
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Product
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Smart
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Type
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+import  -/  Data.Array.Accelerate.Smart c6a471aeed497009ce791e94dc05d100
+  exports: 1e3a20050ce25466608a82a26d24d5f0
+  Exp dff601899922d9e86e5ab6941dfbac5f
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Enum 3811281f7b5f26da514529cf3ed44009
+import  -/  base-4.9.1.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:Text.Printf 6701574960cd2af960fec5d940be0c25
+8984d46428b75ed0746cc28d026f82e6
+  $fEnumExp :: GHC.Enum.Enum (Data.Array.Accelerate.Smart.Exp a)
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a.
+                  @ (Data.Array.Accelerate.Smart.Exp a)
+                  (Data.Array.Accelerate.Classes.Enum.$fEnumExp_$csucc @ a)
+                  (Data.Array.Accelerate.Classes.Enum.$fEnumExp_$csucc @ a)
+                  (Data.Array.Accelerate.Classes.Enum.$fEnumExp_$ctoEnum @ a)
+                  (Data.Array.Accelerate.Classes.Enum.$fEnumExp_$cfromEnum @ a)
+                  (Data.Array.Accelerate.Classes.Enum.$fEnumExp_$cenumFrom @ a)
+                  (Data.Array.Accelerate.Classes.Enum.$fEnumExp_$cenumFromThen @ a)
+                  (Data.Array.Accelerate.Classes.Enum.$fEnumExp_$cenumFromTo @ a)
+                  (Data.Array.Accelerate.Classes.Enum.$fEnumExp_$cenumFromThenTo
+                     @ a) -}
+4fa524f1271bdd22489ab7fded6a0316
+  $fEnumExp_$cenumFrom ::
+    Data.Array.Accelerate.Smart.Exp a
+    -> [Data.Array.Accelerate.Smart.Exp a]
+  {- Arity: 1, Strictness: <B,A>x, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a (w :: Data.Array.Accelerate.Smart.Exp a) ->
+                 Data.Array.Accelerate.Classes.Enum.$w$cenumFrom
+                   @ a
+                   GHC.Prim.void#) -}
+c446f63721557605a9e16f3289feab66
+  $fEnumExp_$cenumFromThen ::
+    Data.Array.Accelerate.Smart.Exp a
+    -> Data.Array.Accelerate.Smart.Exp a
+    -> [Data.Array.Accelerate.Smart.Exp a]
+  {- Arity: 2, Strictness: <B,A><B,A>x, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a
+                   (w :: Data.Array.Accelerate.Smart.Exp a)
+                   (w1 :: Data.Array.Accelerate.Smart.Exp a) ->
+                 Data.Array.Accelerate.Classes.Enum.$w$cenumFromThen
+                   @ a
+                   GHC.Prim.void#) -}
+0f8b43ebf01e07cd2abb39abaf2ef631
+  $fEnumExp_$cenumFromThenTo ::
+    Data.Array.Accelerate.Smart.Exp a
+    -> Data.Array.Accelerate.Smart.Exp a
+    -> Data.Array.Accelerate.Smart.Exp a
+    -> [Data.Array.Accelerate.Smart.Exp a]
+  {- Arity: 3, Strictness: <B,A><B,A><B,A>x, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, True)
+                (\ @ a
+                   (w :: Data.Array.Accelerate.Smart.Exp a)
+                   (w1 :: Data.Array.Accelerate.Smart.Exp a)
+                   (w2 :: Data.Array.Accelerate.Smart.Exp a) ->
+                 Data.Array.Accelerate.Classes.Enum.$w$cenumFromThenTo
+                   @ a
+                   GHC.Prim.void#) -}
+bbf651aa6aad56c21af8e2e5180ceee9
+  $fEnumExp_$cenumFromTo ::
+    Data.Array.Accelerate.Smart.Exp a
+    -> Data.Array.Accelerate.Smart.Exp a
+    -> [Data.Array.Accelerate.Smart.Exp a]
+  {- Arity: 2, Strictness: <B,A><B,A>x, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a
+                   (w :: Data.Array.Accelerate.Smart.Exp a)
+                   (w1 :: Data.Array.Accelerate.Smart.Exp a) ->
+                 Data.Array.Accelerate.Classes.Enum.$w$cenumFromTo
+                   @ a
+                   GHC.Prim.void#) -}
+22f2d33ae91a8a8ef26eb059e881057d
+  $fEnumExp_$cfromEnum ::
+    Data.Array.Accelerate.Smart.Exp a -> GHC.Types.Int
+  {- Strictness: x -}
+70796d4478f6cb0c5f08362ae7da8298
+  $fEnumExp_$csucc ::
+    Data.Array.Accelerate.Smart.Exp a
+    -> Data.Array.Accelerate.Smart.Exp a
+  {- Arity: 1, Strictness: <B,A>x,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (eta :: Data.Array.Accelerate.Smart.Exp a) ->
+                 case Data.Array.Accelerate.Classes.Enum.$fEnumExp_$ctoEnum
+                 ret_ty (Data.Array.Accelerate.Smart.Exp a)
+                 of {}) -}
+bfb326833b90f3030ccb5d38887c1eb2
+  $fEnumExp_$ctoEnum ::
+    GHC.Types.Int -> Data.Array.Accelerate.Smart.Exp a
+  {- Strictness: x -}
+32ea2e40df90b925cda07894f9f562aa
+  $s$fPrintfArg[]_$s$fPrintfArg[]_$cparseFormat ::
+    [GHC.Types.Char] -> Text.Printf.ModifierParser
+  {- Arity: 2, Strictness: <L,A><S,1*U>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds1 :: [GHC.Types.Char]) (ds2 :: [GHC.Types.Char]) ->
+                 case ds2 of wild {
+                   [] -> Text.Printf.errorShortFormat @ Text.Printf.FormatParse
+                   : c1 cs
+                   -> Text.Printf.FormatParse
+                        (GHC.Types.[] @ GHC.Types.Char)
+                        c1
+                        cs }) -}
+cc9c921f553407b675a81337148fc005
+  $sprintf3 ::
+    GHC.Base.String -> [Text.Printf.UPrintf] -> [GHC.Types.Char]
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>,
+     Unfolding: (\ (fmts :: GHC.Base.String)
+                   (args :: [Text.Printf.UPrintf]) ->
+                 GHC.Base.map
+                   @ GHC.Types.Char
+                   @ GHC.Types.Char
+                   Text.Printf.$fIsCharChar_$cfromChar
+                   (Text.Printf.uprintfs
+                      fmts
+                      (GHC.List.reverse1
+                         @ Text.Printf.UPrintf
+                         args
+                         (GHC.Types.[] @ Text.Printf.UPrintf))
+                      (GHC.Types.[] @ GHC.Types.Char))) -}
+325859a6d6f378423692d88703aa455e
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Data.Array.Accelerate.Classes.Enum.$trModule2
+                   Data.Array.Accelerate.Classes.Enum.$trModule1) -}
+e8931b7d4a743e21afc4360c95cf2ae6
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Data.Array.Accelerate.Classes.Enum"#) -}
+152c1417eee1c03406bffa33d6ff7761
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw"#) -}
+0228da7ca754f6447856d4df4c192c4e
+  $w$cenumFrom ::
+    GHC.Prim.Void# -> [Data.Array.Accelerate.Smart.Exp a]
+  {- Arity: 1, Strictness: <L,U>x, Inline: [0] -}
+716d3211f3bf41b513dd0484c602d299
+  $w$cenumFromThen ::
+    GHC.Prim.Void# -> [Data.Array.Accelerate.Smart.Exp a]
+  {- Arity: 1, Strictness: <L,U>x, Inline: [0] -}
+ed300557c1a0360ee2bb5e4c2ff00cba
+  $w$cenumFromThenTo ::
+    GHC.Prim.Void# -> [Data.Array.Accelerate.Smart.Exp a]
+  {- Arity: 1, Strictness: <L,U>x, Inline: [0] -}
+31d7bb3e1cb9a69e6536859cd79c9868
+  $w$cenumFromTo ::
+    GHC.Prim.Void# -> [Data.Array.Accelerate.Smart.Exp a]
+  {- Arity: 1, Strictness: <L,U>x, Inline: [0] -}
+6a0db69c65db7335d66e7445f00dbf68
+  type Enum a =
+    GHC.Enum.Enum (Data.Array.Accelerate.Smart.Exp a)
+    :: GHC.Types.Constraint
+instance GHC.Enum.Enum [Data.Array.Accelerate.Smart.Exp]
+  = Data.Array.Accelerate.Classes.Enum.$fEnumExp
+"SPEC/Data.Array.Accelerate.Classes.Enum $fPrintfArg[]_$cparseFormat @ Char" [ALWAYS] forall ($dIsChar :: Text.Printf.IsChar
+                                                                                                            GHC.Types.Char)
+  Text.Printf.$fPrintfArg[]_$cparseFormat @ GHC.Types.Char $dIsChar
+  = Data.Array.Accelerate.Classes.Enum.$s$fPrintfArg[]_$s$fPrintfArg[]_$cparseFormat
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

@@ -1,0 +1,153 @@
+
+==================== FINAL INTERFACE ====================
+2017-08-29 05:27:11.351743 UTC
+
+interface accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Analysis.Hash.TH 8002
+  interface hash: d3b9a06a00d34f8ad5f646d60865eb93
+  ABI hash: 977cc08136d5af87c132c6fcef1eecba
+  export-list hash: 53f04d90b520ee9a9d28f5d6e16252b0
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 35616bb19ec40ad72e96d3940346d130
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Data.Array.Accelerate.Analysis.Hash.TH.hashQ
+  Data.Array.Accelerate.Analysis.Hash.TH.hashWithSaltQ
+module dependencies:
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-boot-th-8.0.2@ghc-boot-th-8.0.2
+                      ghc-prim-0.5.0.0
+                      hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol
+                      integer-gmp-1.0.0.1 pretty-1.1.3.3@pretty-1.1.3.3
+                      template-haskell-2.11.1.0
+                      text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable.Generic
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Show
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Compose base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable 27b03ff780e9d73195c5aaa1719f6919
+import  -/  hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable.Class a1b222b41dee000240e3f24bda9d56d9
+import  -/  template-haskell-2.11.1.0:Language.Haskell.TH d856a1f9d606be57026da48a46c8b0a9
+import  -/  template-haskell-2.11.1.0:Language.Haskell.TH.Lib 715cf040319ba19bc69da4853519bde7
+7e8bbd55672997bdb94d563abab74c00
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Data.Array.Accelerate.Analysis.Hash.TH.$trModule2
+                   Data.Array.Accelerate.Analysis.Hash.TH.$trModule1) -}
+9bd6488df6446c4f5150c7f648bcc0aa
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Data.Array.Accelerate.Analysis.Hash.TH"#) -}
+570f939a63f0aea35531ff9373ddc2f3
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw"#) -}
+f4dfb5662d6b88b5ee7f09313db035ce
+  hashQ ::
+    Data.Hashable.Class.Hashable a => a -> Language.Haskell.TH.Lib.ExpQ
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(A,1*C1(U(U)))><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Analysis.Hash.TH.hashQ1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Data.Hashable.Class.Hashable a>_R
+                 ->_R <a>_R
+                 ->_R Sym (Language.Haskell.TH.Syntax.N:Q[0]
+                               <Language.Haskell.TH.Syntax.Exp>_N)) -}
+b14f765cf02e4a988105b31858a8f535
+  hashQ1 ::
+    Data.Hashable.Class.Hashable a =>
+    a
+    -> forall (m :: * -> *).
+       Language.Haskell.TH.Syntax.Quasi m =>
+       m Language.Haskell.TH.Syntax.Exp
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(A,1*C1(U(U)))><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dHashable :: Data.Hashable.Class.Hashable a) (eta :: a) ->
+                 Language.Haskell.TH.Lib.litE1
+                   (Language.Haskell.TH.Syntax.IntegerL
+                      (case Data.Hashable.Class.hash
+                              @ a
+                              $dHashable
+                              eta of wild { GHC.Types.I# i ->
+                       GHC.Integer.Type.smallInteger i }))) -}
+872a109feab31abc41477309e94831e5
+  hashWithSaltQ ::
+    Data.Hashable.Class.Hashable a =>
+    GHC.Types.Int -> a -> Language.Haskell.TH.Lib.ExpQ
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U(U))),A)><L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Analysis.Hash.TH.hashWithSaltQ1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Data.Hashable.Class.Hashable a>_R
+                 ->_R <GHC.Types.Int>_R
+                 ->_R <a>_R
+                 ->_R Sym (Language.Haskell.TH.Syntax.N:Q[0]
+                               <Language.Haskell.TH.Syntax.Exp>_N)) -}
+206c5c05a8a8db8abb0fa0752788786f
+  hashWithSaltQ1 ::
+    Data.Hashable.Class.Hashable a =>
+    GHC.Types.Int
+    -> a
+    -> forall (m :: * -> *).
+       Language.Haskell.TH.Syntax.Quasi m =>
+       m Language.Haskell.TH.Syntax.Exp
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(C1(U(U))),A)><L,U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dHashable :: Data.Hashable.Class.Hashable a)
+                   (s :: GHC.Types.Int)
+                   (x :: a) ->
+                 Language.Haskell.TH.Lib.litE1
+                   (Language.Haskell.TH.Syntax.IntegerL
+                      (case Data.Hashable.Class.hashWithSalt
+                              @ a
+                              $dHashable
+                              s
+                              x of wild { GHC.Types.I# i ->
+                       GHC.Integer.Type.smallInteger i }))) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

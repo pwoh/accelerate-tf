@@ -1,0 +1,1491 @@
+
+==================== FINAL INTERFACE ====================
+2017-08-29 05:28:05.593882 UTC
+
+interface accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Remote.Nursery 8002
+  interface hash: c808b53ca22890cadd716a445db367ab
+  ABI hash: a49f901ebbfc4e2596e790cfd76f443b
+  export-list hash: 0cec5da3748423e84fe9b44d308cb1fd
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 08576d4ad78037f8ea87830b7c0af12a
+  sig of: Nothing
+  used TH splices: True
+  where
+exports:
+  Data.Array.Accelerate.Array.Remote.Nursery.cleanup
+  Data.Array.Accelerate.Array.Remote.Nursery.insert
+  Data.Array.Accelerate.Array.Remote.Nursery.lookup
+  Data.Array.Accelerate.Array.Remote.Nursery.new
+  Data.Array.Accelerate.Array.Remote.Nursery.size
+  Data.Array.Accelerate.Array.Remote.Nursery.NRS
+  Data.Array.Accelerate.Array.Remote.Nursery.Nursery{Data.Array.Accelerate.Array.Remote.Nursery.Nursery}
+module dependencies: Data.Array.Accelerate.AST
+                     Data.Array.Accelerate.Analysis.Hash
+                     Data.Array.Accelerate.Analysis.Hash.TH
+                     Data.Array.Accelerate.Analysis.Match
+                     Data.Array.Accelerate.Array.Data
+                     Data.Array.Accelerate.Array.Representation
+                     Data.Array.Accelerate.Array.Sugar
+                     Data.Array.Accelerate.Array.Unique Data.Array.Accelerate.Debug
+                     Data.Array.Accelerate.Debug.Flags
+                     Data.Array.Accelerate.Debug.Monitoring
+                     Data.Array.Accelerate.Debug.Stats Data.Array.Accelerate.Debug.Timed
+                     Data.Array.Accelerate.Debug.Trace Data.Array.Accelerate.Error
+                     Data.Array.Accelerate.Lifetime
+                     Data.Array.Accelerate.Pretty.Graphviz
+                     Data.Array.Accelerate.Pretty.Graphviz.Monad
+                     Data.Array.Accelerate.Pretty.Graphviz.Type
+                     Data.Array.Accelerate.Pretty.Print Data.Array.Accelerate.Product
+                     Data.Array.Accelerate.Trafo.Base
+                     Data.Array.Accelerate.Trafo.Substitution Data.Array.Accelerate.Type
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol
+                      integer-gmp-1.0.0.1 mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      pretty-1.1.3.3@pretty-1.1.3.3 template-haskell-2.11.1.0
+                      text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00
+                      transformers-0.5.2.0@transformers-0.5.2.0
+                      unique-0@unique-0-9CJQKYGbqiDaFUmoekKeA
+                      unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu:Data.Orphans
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt:Data.Label.Point
+         hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable.Generic
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Show
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+family instance modules: accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Data
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Representation
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Sugar
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Product
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Trafo.Base
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Trafo.Substitution
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Type
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC:Data.HashMap.Base
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC:Data.HashSet
+import  -/  Data.Array.Accelerate.Debug 48fd217a26d4240434223974d5084c0c
+  exports: 7e8587d30c425be122b3b310eb4ec0ea
+import  -/  Data.Array.Accelerate.Debug.Flags 4ae65d880031597019ea1d1d62ef661e
+  dump_gc 3f516b9cb45832ff1a83110fbafce5b1
+import  -/  Data.Array.Accelerate.Debug.Monitoring c306cb0432a1d9ab3d42c81522d7d428
+  setCurrentBytesNursery d2131f6995db423561ad6726c17ff13e
+import  -/  Data.Array.Accelerate.Debug.Trace 365190b9829a1554a2d495d3f4fb1682
+  traceIO bf3190e68fbfa59511d56a82757db26c
+import  -/  Data.Array.Accelerate.Error 9ed2d4a71009d558f562e118e9d36a23
+  exports: f46a01ad5e78f9618f7a91c4ba90bc31
+  Internal 354d17f13fa8c5b135052bcadc13dc67
+  call 95bf4b02947c8c3e282c15050c022fa9
+  internalError aa331c50846093a3a39d2946a445c28d
+  message 43164dbb4cecc9911948fd9ecaf0a042
+import  -/  base-4.9.1.0:Control.Concurrent.MVar 1e4f68fc63da1d1a554d5258431dd0c6
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:Data.Int 07f5a36c488acfe0ac32e81c7536b8ff
+import  -/  base-4.9.1.0:Data.Traversable 556020d7cf3c4a34a774600512918a37
+import  -/  base-4.9.1.0:Data.Word 77f42e01d0fb6b071f1ea2176d87fa6c
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.1.0:GHC.Int e6f85fcab22769385fba2b5fce0acb40
+import  -/  base-4.9.1.0:GHC.MVar 2b6c6f2887cffa9e72fc08229ba0f346
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
+import  -/  base-4.9.1.0:GHC.Weak d858f2ea485b32b834c9359490c9096f
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:System.Mem.Weak a4b32e71ac550b6c495fe15abe3b80d2
+import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.IntMap 95327db6b6fbb3f03bedc684af6bf84f
+import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base 248d3140f4906d3f80988682df5d56f3
+import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Strict ed6a6dc2532da5c9a45406821568538c
+import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Sequence 47585f299e23ea17caeacc3eeb88d264
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+945f014351d1345c778211490aa203cd
+  $tc'N :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10974346425859013491##
+                   4247290253535130483##
+                   Data.Array.Accelerate.Array.Remote.Nursery.$trModule
+                   Data.Array.Accelerate.Array.Remote.Nursery.$tc'N1) -}
+ee319e7a70068c894df853159dfe2e71
+  $tc'N1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'N"#) -}
+111f25d60e697dc13bd76939ea5d4274
+  $tc'Nursery :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13139760549333087927##
+                   17393051453704743641##
+                   Data.Array.Accelerate.Array.Remote.Nursery.$trModule
+                   Data.Array.Accelerate.Array.Remote.Nursery.$tc'Nursery1) -}
+5dcb4d9897b555e936be312a94a18e43
+  $tc'Nursery1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Nursery"#) -}
+511594a51545e40011684304d02c47eb
+  $tcN :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13324126291291948800##
+                   5634846149889815836##
+                   Data.Array.Accelerate.Array.Remote.Nursery.$trModule
+                   Data.Array.Accelerate.Array.Remote.Nursery.$tcN1) -}
+7bf164a194677b1f4db2932524ca620f
+  $tcN1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "N"#) -}
+56b60aee400a91053fc31f4eee5b2e89
+  $tcNursery :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8102653617550747975##
+                   3575728936984727093##
+                   Data.Array.Accelerate.Array.Remote.Nursery.$trModule
+                   Data.Array.Accelerate.Array.Remote.Nursery.$tcNursery1) -}
+7d9021ad1ffe330f7e59116b6d395917
+  $tcNursery1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Nursery"#) -}
+0b5f6c6e59b0745e56655cabe065f21a
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Data.Array.Accelerate.Array.Remote.Nursery.$trModule2
+                   Data.Array.Accelerate.Array.Remote.Nursery.$trModule1) -}
+91dd7786fdf7dd4d621b6938df2cd008
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Data.Array.Accelerate.Array.Remote.Nursery"#) -}
+ed439391424193e452196514fe1be618
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw"#) -}
+64804f58ddc8b00a1d36f83b172b5823
+  $wcleanup ::
+    (ptr GHC.Word.Word8 -> GHC.Types.IO ())
+    -> GHC.Prim.MVar#
+         GHC.Prim.RealWorld
+         (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,C(C1(U(U,U)))><S,U><S,U>,
+     Inline: INLINABLE[0],
+     Unfolding: <stable> (\ @ (ptr :: * -> *)
+                            (w :: ptr GHC.Word.Word8 -> GHC.Types.IO ())
+                            (ww :: GHC.Prim.MVar#
+                                     GHC.Prim.RealWorld
+                                     (Data.Array.Accelerate.Array.Remote.Nursery.N ptr))
+                            (w1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                          let {
+                            io :: Data.Array.Accelerate.Array.Remote.Nursery.N ptr
+                                  -> GHC.Types.IO (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                              {- Arity: 1 -}
+                            = \ (ds :: Data.Array.Accelerate.Array.Remote.Nursery.N ptr) ->
+                              case ds of wild { Data.Array.Accelerate.Array.Remote.Nursery.N nrs dt ->
+                              (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                               let {
+                                 z1 :: GHC.Prim.State# GHC.Prim.RealWorld
+                                       -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                                   {- Arity: 1 -}
+                                 = \ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                   (# s1, GHC.Tuple.() #)
+                               } in
+                               letrec {
+                                 go :: [Data.Sequence.Seq (ptr GHC.Word.Word8)] -> GHC.Types.IO ()
+                                   {- Arity: 1 -}
+                                 = \ (ds1 :: [Data.Sequence.Seq (ptr GHC.Word.Word8)]) ->
+                                   case ds1 of wild1 {
+                                     [] -> z1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))
+                                     : y ys
+                                     -> (\ (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                         case (Data.Sequence.$fTraversableFingerTree_$ctraverse
+                                                 @ GHC.Types.IO
+                                                 @ (Data.Sequence.Elem (ptr GHC.Word.Word8))
+                                                 @ (Data.Sequence.Elem ())
+                                                 GHC.Base.$fApplicativeIO
+                                                 (\ (eta1 :: Data.Sequence.Elem
+                                                               (ptr GHC.Word.Word8))
+                                                    (eta2 :: GHC.Prim.State#
+                                                               GHC.Prim.RealWorld)[OneShot] ->
+                                                  case (w eta1
+                                                            `cast`
+                                                          (Data.Sequence.N:Elem[0]
+                                                               <ptr GHC.Word.Word8>_R))
+                                                         `cast`
+                                                       (GHC.Types.N:IO[0] <()>_R)
+                                                         eta2 of ds2 { (#,#) ipv ipv1 ->
+                                                  (# ipv,
+                                                     ipv1
+                                                       `cast`
+                                                     (Sym (Data.Sequence.N:Elem[0] <()>_R)) #) })
+                                                   `cast`
+                                                 (<Data.Sequence.Elem (ptr GHC.Word.Word8)>_R
+                                                  ->_R Sym (GHC.Types.N:IO[0]
+                                                                <Data.Sequence.Elem ()>_R))
+                                                 y `cast`
+                                                 (Data.Sequence.N:Seq[0] <ptr GHC.Word.Word8>_R))
+                                                `cast`
+                                              (GHC.Types.N:IO[0]
+                                                   <Data.Sequence.FingerTree
+                                                      (Data.Sequence.Elem ())>_R)
+                                                eta of ds2 { (#,#) ipv ipv1 ->
+                                         (go ys) `cast` (GHC.Types.N:IO[0] <()>_R) ipv })
+                                          `cast`
+                                        (Sym (GHC.Types.N:IO[0] <()>_R)) }
+                               } in
+                               case (go
+                                       (letrec {
+                                          go2 :: [Data.Sequence.Seq (ptr GHC.Word.Word8)]
+                                                 -> Data.IntMap.Base.IntMap
+                                                      (Data.Sequence.Seq (ptr GHC.Word.Word8))
+                                                 -> [Data.Sequence.Seq (ptr GHC.Word.Word8)]
+                                            {- Arity: 2 -}
+                                          = \ (z' :: [Data.Sequence.Seq (ptr GHC.Word.Word8)])
+                                              (ds1 :: Data.IntMap.Base.IntMap
+                                                        (Data.Sequence.Seq (ptr GHC.Word.Word8))) ->
+                                            case ds1 of wild1 {
+                                              Data.IntMap.Base.Bin dt1 dt2 l r -> go2 (go2 z' r) l
+                                              Data.IntMap.Base.Tip dt1 x
+                                              -> GHC.Types.:
+                                                   @ (Data.Sequence.Seq (ptr GHC.Word.Word8))
+                                                   x
+                                                   z'
+                                              Data.IntMap.Base.Nil -> z' }
+                                        } in
+                                        case nrs of wild1 {
+                                          DEFAULT
+                                          -> go2
+                                               (GHC.Types.[]
+                                                  @ (Data.Sequence.Seq (ptr GHC.Word.Word8)))
+                                               wild1
+                                          Data.IntMap.Base.Bin dt1 dt2 l r
+                                          -> case GHC.Prim.tagToEnum#
+                                                    @ GHC.Types.Bool
+                                                    (GHC.Prim.<# dt2 0#) of wild2 {
+                                               GHC.Types.False
+                                               -> go2
+                                                    (go2
+                                                       (GHC.Types.[]
+                                                          @ (Data.Sequence.Seq
+                                                               (ptr GHC.Word.Word8)))
+                                                       r)
+                                                    l
+                                               GHC.Types.True
+                                               -> go2
+                                                    (go2
+                                                       (GHC.Types.[]
+                                                          @ (Data.Sequence.Seq
+                                                               (ptr GHC.Word.Word8)))
+                                                       l)
+                                                    r } }))
+                                      `cast`
+                                    (GHC.Types.N:IO[0] <()>_R)
+                                      s of ds1 { (#,#) ipv ipv1 ->
+                               (# ipv,
+                                  Data.Array.Accelerate.Array.Remote.Nursery.N
+                                    @ ptr
+                                    (Data.IntMap.Base.Nil
+                                       @ (Data.Sequence.Seq (ptr GHC.Word.Word8)))
+                                    0# #) })
+                                `cast`
+                              (Sym (GHC.Types.N:IO[0]
+                                        <Data.Array.Accelerate.Array.Remote.Nursery.N ptr>_R)) }
+                          } in
+                          case GHC.Prim.getMaskingState# w1 of ds { (#,#) ipv ipv1 ->
+                          case ipv1 of ds1 {
+                            DEFAULT
+                            -> case GHC.Prim.takeMVar#
+                                      @ GHC.Prim.RealWorld
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                      ww
+                                      ipv of ds2 { (#,#) ipv2 ipv3 ->
+                               case GHC.Prim.catch#
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                      @ GHC.Exception.SomeException
+                                      (GHC.Magic.lazy
+                                         @ (GHC.Types.IO
+                                              (Data.Array.Accelerate.Array.Remote.Nursery.N ptr))
+                                         (GHC.Prim.maskAsyncExceptions#
+                                            @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                            (io ipv3)
+                                              `cast`
+                                            (GHC.Types.N:IO[0]
+                                                 <Data.Array.Accelerate.Array.Remote.Nursery.N
+                                                    ptr>_R))
+                                           `cast`
+                                         (Sym (GHC.Types.N:IO[0]
+                                                   <Data.Array.Accelerate.Array.Remote.Nursery.N
+                                                      ptr>_R)))
+                                        `cast`
+                                      (GHC.Types.N:IO[0]
+                                           <Data.Array.Accelerate.Array.Remote.Nursery.N ptr>_R)
+                                      (\ (e1 :: GHC.Exception.SomeException)[OneShot]
+                                         (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                       case GHC.Prim.putMVar#
+                                              @ GHC.Prim.RealWorld
+                                              @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                              ww
+                                              ipv3
+                                              eta1 of s2# { DEFAULT ->
+                                       GHC.Prim.raiseIO#
+                                         @ GHC.Exception.SomeException
+                                         @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                         e1
+                                         s2# })
+                                      ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                               case GHC.Prim.putMVar#
+                                      @ GHC.Prim.RealWorld
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                      ww
+                                      ipv5
+                                      ipv4 of s2# { DEFAULT ->
+                               (# s2#, GHC.Tuple.() #) } } }
+                            0#
+                            -> GHC.Prim.maskAsyncExceptions#
+                                 @ ()
+                                 (\ (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                  case GHC.Prim.takeMVar#
+                                         @ GHC.Prim.RealWorld
+                                         @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                         ww
+                                         eta of ds2 { (#,#) ipv2 ipv3 ->
+                                  case GHC.Prim.catch#
+                                         @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                         @ GHC.Exception.SomeException
+                                         (GHC.Magic.lazy
+                                            @ (GHC.Types.IO
+                                                 (Data.Array.Accelerate.Array.Remote.Nursery.N ptr))
+                                            (GHC.Prim.unmaskAsyncExceptions#
+                                               @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                               (io ipv3)
+                                                 `cast`
+                                               (GHC.Types.N:IO[0]
+                                                    <Data.Array.Accelerate.Array.Remote.Nursery.N
+                                                       ptr>_R))
+                                              `cast`
+                                            (Sym (GHC.Types.N:IO[0]
+                                                      <Data.Array.Accelerate.Array.Remote.Nursery.N
+                                                         ptr>_R)))
+                                           `cast`
+                                         (GHC.Types.N:IO[0]
+                                              <Data.Array.Accelerate.Array.Remote.Nursery.N ptr>_R)
+                                         (\ (e1 :: GHC.Exception.SomeException)[OneShot]
+                                            (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                          case GHC.Prim.putMVar#
+                                                 @ GHC.Prim.RealWorld
+                                                 @ (Data.Array.Accelerate.Array.Remote.Nursery.N
+                                                      ptr)
+                                                 ww
+                                                 ipv3
+                                                 eta1 of s2# { DEFAULT ->
+                                          GHC.Prim.raiseIO#
+                                            @ GHC.Exception.SomeException
+                                            @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                            e1
+                                            s2# })
+                                         ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                                  case GHC.Prim.putMVar#
+                                         @ GHC.Prim.RealWorld
+                                         @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                         ww
+                                         ipv5
+                                         ipv4 of s2# { DEFAULT ->
+                                  (# s2#, GHC.Tuple.() #) } } })
+                                 ipv
+                            1#
+                            -> case GHC.Prim.takeMVar#
+                                      @ GHC.Prim.RealWorld
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                      ww
+                                      ipv of ds2 { (#,#) ipv2 ipv3 ->
+                               case GHC.Prim.catch#
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                      @ GHC.Exception.SomeException
+                                      (GHC.Magic.lazy
+                                         @ (GHC.Types.IO
+                                              (Data.Array.Accelerate.Array.Remote.Nursery.N ptr))
+                                         (GHC.Prim.maskUninterruptible#
+                                            @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                            (io ipv3)
+                                              `cast`
+                                            (GHC.Types.N:IO[0]
+                                                 <Data.Array.Accelerate.Array.Remote.Nursery.N
+                                                    ptr>_R))
+                                           `cast`
+                                         (Sym (GHC.Types.N:IO[0]
+                                                   <Data.Array.Accelerate.Array.Remote.Nursery.N
+                                                      ptr>_R)))
+                                        `cast`
+                                      (GHC.Types.N:IO[0]
+                                           <Data.Array.Accelerate.Array.Remote.Nursery.N ptr>_R)
+                                      (\ (e1 :: GHC.Exception.SomeException)[OneShot]
+                                         (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                       case GHC.Prim.putMVar#
+                                              @ GHC.Prim.RealWorld
+                                              @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                              ww
+                                              ipv3
+                                              eta1 of s2# { DEFAULT ->
+                                       GHC.Prim.raiseIO#
+                                         @ GHC.Exception.SomeException
+                                         @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                         e1
+                                         s2# })
+                                      ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                               case GHC.Prim.putMVar#
+                                      @ GHC.Prim.RealWorld
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                      ww
+                                      ipv5
+                                      ipv4 of s2# { DEFAULT ->
+                               (# s2#, GHC.Tuple.() #) } } } } }) -}
+4c10d1c3eb853fde3f3f5f526a83de38
+  $winsert ::
+    GHC.Prim.Int#
+    -> ptr GHC.Word.Word8
+    -> GHC.Prim.MVar#
+         GHC.Prim.RealWorld
+         (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+    -> GHC.Prim.Weak#
+         (Data.Array.Accelerate.Array.Remote.Nursery.NRS ptr)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 5, HasNoCafRefs, Strictness: <L,U><S,1*U><S,U><L,A><S,U>,
+     Inline: INLINABLE[0],
+     Unfolding: <stable> (\ @ (ptr :: * -> *)
+                            (ww :: GHC.Prim.Int#)
+                            (w :: ptr GHC.Word.Word8)
+                            (ww1 :: GHC.Prim.MVar#
+                                      GHC.Prim.RealWorld
+                                      (Data.Array.Accelerate.Array.Remote.Nursery.N ptr))
+                            (ww2 :: GHC.Prim.Weak#
+                                      (Data.Array.Accelerate.Array.Remote.Nursery.NRS ptr))
+                            (w1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                          case w of val { DEFAULT ->
+                          let {
+                            f :: GHC.Base.Maybe (Data.Sequence.Seq (ptr GHC.Word.Word8))
+                                 -> GHC.Base.Maybe (Data.Sequence.Seq (ptr GHC.Word.Word8))
+                              {- Arity: 1 -}
+                            = \ (ds :: GHC.Base.Maybe
+                                         (Data.Sequence.Seq (ptr GHC.Word.Word8))) ->
+                              case ds of wild {
+                                GHC.Base.Nothing
+                                -> GHC.Base.Just
+                                     @ (Data.Sequence.Seq (ptr GHC.Word.Word8))
+                                     (Data.Sequence.Single
+                                        @ (Data.Sequence.Elem (ptr GHC.Word.Word8))
+                                        val
+                                          `cast`
+                                        (Sym (Data.Sequence.N:Elem[0] <ptr GHC.Word.Word8>_R)))
+                                       `cast`
+                                     (Sym (Data.Sequence.N:Seq[0] <ptr GHC.Word.Word8>_R))
+                                GHC.Base.Just vs
+                                -> GHC.Base.Just
+                                     @ (Data.Sequence.Seq (ptr GHC.Word.Word8))
+                                     (Data.Sequence.filter_$ssnocTree
+                                        @ (ptr GHC.Word.Word8)
+                                        vs `cast` (Data.Sequence.N:Seq[0] <ptr GHC.Word.Word8>_R)
+                                        val
+                                          `cast`
+                                        (Sym (Data.Sequence.N:Elem[0] <ptr GHC.Word.Word8>_R)))
+                                       `cast`
+                                     (Sym (Data.Sequence.N:Seq[0] <ptr GHC.Word.Word8>_R)) }
+                          } in
+                          let {
+                            io :: Data.Array.Accelerate.Array.Remote.Nursery.N ptr
+                                  -> GHC.Prim.State# GHC.Prim.RealWorld
+                                  -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                        Data.Array.Accelerate.Array.Remote.Nursery.N ptr #)
+                              {- Arity: 2 -}
+                            = \ (ds :: Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                              case ds of wild { Data.Array.Accelerate.Array.Remote.Nursery.N im dt ->
+                              case Data.IntMap.Strict.$walter
+                                     @ (Data.Sequence.Seq (ptr GHC.Word.Word8))
+                                     f
+                                     ww
+                                     im of dt1 { DEFAULT ->
+                              (# eta,
+                                 Data.Array.Accelerate.Array.Remote.Nursery.N
+                                   @ ptr
+                                   dt1
+                                   (GHC.Prim.+# dt ww) #) } }
+                          } in
+                          case GHC.Prim.getMaskingState# w1 of ds { (#,#) ipv ipv1 ->
+                          case ipv1 of ds1 {
+                            DEFAULT
+                            -> case GHC.Prim.takeMVar#
+                                      @ GHC.Prim.RealWorld
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                      ww1
+                                      ipv of ds2 { (#,#) ipv2 ipv3 ->
+                               case GHC.Prim.catch#
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                      @ GHC.Exception.SomeException
+                                      (GHC.Magic.lazy
+                                         @ (GHC.Types.IO
+                                              (Data.Array.Accelerate.Array.Remote.Nursery.N ptr))
+                                         (GHC.Prim.maskAsyncExceptions#
+                                            @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                            (io ipv3))
+                                           `cast`
+                                         (Sym (GHC.Types.N:IO[0]
+                                                   <Data.Array.Accelerate.Array.Remote.Nursery.N
+                                                      ptr>_R)))
+                                        `cast`
+                                      (GHC.Types.N:IO[0]
+                                           <Data.Array.Accelerate.Array.Remote.Nursery.N ptr>_R)
+                                      (\ (e1 :: GHC.Exception.SomeException)[OneShot]
+                                         (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                       case GHC.Prim.putMVar#
+                                              @ GHC.Prim.RealWorld
+                                              @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                              ww1
+                                              ipv3
+                                              eta1 of s2# { DEFAULT ->
+                                       GHC.Prim.raiseIO#
+                                         @ GHC.Exception.SomeException
+                                         @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                         e1
+                                         s2# })
+                                      ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                               case GHC.Prim.putMVar#
+                                      @ GHC.Prim.RealWorld
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                      ww1
+                                      ipv5
+                                      ipv4 of s2# { DEFAULT ->
+                               (# s2#, GHC.Tuple.() #) } } }
+                            0#
+                            -> GHC.Prim.maskAsyncExceptions#
+                                 @ ()
+                                 (\ (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                  case GHC.Prim.takeMVar#
+                                         @ GHC.Prim.RealWorld
+                                         @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                         ww1
+                                         eta of ds2 { (#,#) ipv2 ipv3 ->
+                                  case GHC.Prim.catch#
+                                         @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                         @ GHC.Exception.SomeException
+                                         (GHC.Magic.lazy
+                                            @ (GHC.Types.IO
+                                                 (Data.Array.Accelerate.Array.Remote.Nursery.N ptr))
+                                            (GHC.Prim.unmaskAsyncExceptions#
+                                               @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                               (io ipv3))
+                                              `cast`
+                                            (Sym (GHC.Types.N:IO[0]
+                                                      <Data.Array.Accelerate.Array.Remote.Nursery.N
+                                                         ptr>_R)))
+                                           `cast`
+                                         (GHC.Types.N:IO[0]
+                                              <Data.Array.Accelerate.Array.Remote.Nursery.N ptr>_R)
+                                         (\ (e1 :: GHC.Exception.SomeException)[OneShot]
+                                            (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                          case GHC.Prim.putMVar#
+                                                 @ GHC.Prim.RealWorld
+                                                 @ (Data.Array.Accelerate.Array.Remote.Nursery.N
+                                                      ptr)
+                                                 ww1
+                                                 ipv3
+                                                 eta1 of s2# { DEFAULT ->
+                                          GHC.Prim.raiseIO#
+                                            @ GHC.Exception.SomeException
+                                            @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                            e1
+                                            s2# })
+                                         ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                                  case GHC.Prim.putMVar#
+                                         @ GHC.Prim.RealWorld
+                                         @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                         ww1
+                                         ipv5
+                                         ipv4 of s2# { DEFAULT ->
+                                  (# s2#, GHC.Tuple.() #) } } })
+                                 ipv
+                            1#
+                            -> case GHC.Prim.takeMVar#
+                                      @ GHC.Prim.RealWorld
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                      ww1
+                                      ipv of ds2 { (#,#) ipv2 ipv3 ->
+                               case GHC.Prim.catch#
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                      @ GHC.Exception.SomeException
+                                      (GHC.Magic.lazy
+                                         @ (GHC.Types.IO
+                                              (Data.Array.Accelerate.Array.Remote.Nursery.N ptr))
+                                         (GHC.Prim.maskUninterruptible#
+                                            @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                            (io ipv3))
+                                           `cast`
+                                         (Sym (GHC.Types.N:IO[0]
+                                                   <Data.Array.Accelerate.Array.Remote.Nursery.N
+                                                      ptr>_R)))
+                                        `cast`
+                                      (GHC.Types.N:IO[0]
+                                           <Data.Array.Accelerate.Array.Remote.Nursery.N ptr>_R)
+                                      (\ (e1 :: GHC.Exception.SomeException)[OneShot]
+                                         (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                       case GHC.Prim.putMVar#
+                                              @ GHC.Prim.RealWorld
+                                              @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                              ww1
+                                              ipv3
+                                              eta1 of s2# { DEFAULT ->
+                                       GHC.Prim.raiseIO#
+                                         @ GHC.Exception.SomeException
+                                         @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                         e1
+                                         s2# })
+                                      ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                               case GHC.Prim.putMVar#
+                                      @ GHC.Prim.RealWorld
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                      ww1
+                                      ipv5
+                                      ipv4 of s2# { DEFAULT ->
+                               (# s2#, GHC.Tuple.() #) } } } } } }) -}
+d99e98392c200f636507810a154a5cd5
+  $wlookup ::
+    GHC.Prim.Int#
+    -> GHC.Prim.MVar#
+         GHC.Prim.RealWorld
+         (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+    -> GHC.Prim.Weak#
+         (Data.Array.Accelerate.Array.Remote.Nursery.NRS ptr)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          GHC.Base.Maybe (ptr GHC.Word.Word8) #)
+  {- Arity: 4, Strictness: <L,U><S,U><L,A><S,U>,
+     Inline: INLINABLE[0],
+     Unfolding: <stable> (\ @ (ptr :: * -> *)
+                            (ww :: GHC.Prim.Int#)
+                            (ww1 :: GHC.Prim.MVar#
+                                      GHC.Prim.RealWorld
+                                      (Data.Array.Accelerate.Array.Remote.Nursery.N ptr))
+                            (ww2 :: GHC.Prim.Weak#
+                                      (Data.Array.Accelerate.Array.Remote.Nursery.NRS ptr))
+                            (w :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                          let {
+                            key :: GHC.Types.Int = GHC.Types.I# ww
+                          } in
+                          let {
+                            io :: Data.Array.Accelerate.Array.Remote.Nursery.N ptr
+                                  -> GHC.Prim.State# GHC.Prim.RealWorld
+                                  -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                        (Data.Array.Accelerate.Array.Remote.Nursery.N ptr,
+                                         GHC.Base.Maybe (ptr GHC.Word.Word8)) #)
+                              {- Arity: 2 -}
+                            = \ (nrs :: Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                              case nrs of wild { Data.Array.Accelerate.Array.Remote.Nursery.N im dt ->
+                              let {
+                                w1 :: Data.IntSet.Base.Key
+                                      -> Data.Sequence.Seq (ptr GHC.Word.Word8)
+                                      -> GHC.Base.Maybe (Data.Sequence.Seq (ptr GHC.Word.Word8))
+                                  {- Arity: 2 -}
+                                = \ (_k :: Data.IntSet.Base.Key)[OneShot]
+                                    (v :: Data.Sequence.Seq (ptr GHC.Word.Word8))[OneShot] ->
+                                  case Data.Sequence.viewl @ (ptr GHC.Word.Word8) v of wild1 {
+                                    Data.Sequence.EmptyL
+                                    -> GHC.Err.error
+                                         @ 'GHC.Types.PtrRepLifted
+                                         @ (GHC.Base.Maybe (Data.Sequence.Seq (ptr GHC.Word.Word8)))
+                                         (GHC.Stack.Types.PushCallStack
+                                            (GHC.CString.unpackCString# "error"#)
+                                            (GHC.Stack.Types.SrcLoc
+                                               (GHC.CString.unpackCString#
+                                                  "accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw"#)
+                                               (GHC.CString.unpackCString#
+                                                  "Data.Array.Accelerate.Array.Remote.Nursery"#)
+                                               (GHC.CString.unpackCString#
+                                                  "./Data/Array/Accelerate/Array/Remote/Nursery.hs"#)
+                                               (GHC.Types.I# 77#)
+                                               (GHC.Types.I# 28#)
+                                               (GHC.Types.I# 77#)
+                                               (GHC.Types.I# 42#))
+                                            GHC.Stack.Types.EmptyCallStack)
+                                           `cast`
+                                         (Sym (GHC.Classes.N:IP[0]
+                                                   <"callStack">_N <GHC.Stack.Types.CallStack>_N))
+                                         (GHC.Base.++
+                                            @ GHC.Types.Char
+                                            Data.Array.Accelerate.Error.message1
+                                            (GHC.CString.unpackAppendCString#
+                                               "./Data/Array/Accelerate/Array/Remote/Nursery.hs:77:28: "#
+                                               (let {
+                                                  z1 :: [GHC.Types.Char]
+                                                  = let {
+                                                      z2 :: [GHC.Types.Char]
+                                                      = let {
+                                                          z3 :: [GHC.Types.Char]
+                                                          = GHC.CString.unpackCString#
+                                                              "expected non-empty sequence"#
+                                                        } in
+                                                        letrec {
+                                                          go :: [GHC.Types.Char] -> [GHC.Types.Char]
+                                                            {- Arity: 1 -}
+                                                          = \ (ds :: [GHC.Types.Char]) ->
+                                                            case ds of wild2 {
+                                                              [] -> z3
+                                                              : y ys
+                                                              -> GHC.Types.:
+                                                                   @ GHC.Types.Char
+                                                                   y
+                                                                   (go ys) }
+                                                        } in
+                                                        go Data.Array.Accelerate.Error.call1
+                                                    } in
+                                                    letrec {
+                                                      go :: [GHC.Types.Char] -> [GHC.Types.Char]
+                                                        {- Arity: 1 -}
+                                                      = \ (ds :: [GHC.Types.Char]) ->
+                                                        case ds of wild2 {
+                                                          [] -> z2
+                                                          : y ys
+                                                          -> GHC.Types.:
+                                                               @ GHC.Types.Char
+                                                               y
+                                                               (go ys) }
+                                                    } in
+                                                    go (GHC.CString.unpackCString# "lookup"#)
+                                                } in
+                                                letrec {
+                                                  go :: [GHC.Types.Char] -> [GHC.Types.Char]
+                                                    {- Arity: 1 -}
+                                                  = \ (ds :: [GHC.Types.Char]) ->
+                                                    case ds of wild2 {
+                                                      [] -> z1
+                                                      : y ys
+                                                      -> GHC.Types.: @ GHC.Types.Char y (go ys) }
+                                                } in
+                                                go Data.Array.Accelerate.Error.call2)))
+                                    Data.Sequence.:< ds vs
+                                    -> case vs
+                                              `cast`
+                                            (Data.Sequence.N:Seq[0]
+                                                 <ptr GHC.Word.Word8>_R) of wild2 {
+                                         DEFAULT
+                                         -> GHC.Base.Just
+                                              @ (Data.Sequence.Seq (ptr GHC.Word.Word8))
+                                              wild2
+                                                `cast`
+                                              (Sym (Data.Sequence.N:Seq[0] <ptr GHC.Word.Word8>_R))
+                                         Data.Sequence.Empty
+                                         -> GHC.Base.Nothing
+                                              @ (Data.Sequence.Seq (ptr GHC.Word.Word8)) } }
+                              } in
+                              let {
+                                $j :: GHC.Base.Maybe (Data.Sequence.Seq (ptr GHC.Word.Word8))
+                                      -> Data.IntMap.Base.IntMap
+                                           (Data.Sequence.Seq (ptr GHC.Word.Word8))
+                                      -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                            (Data.Array.Accelerate.Array.Remote.Nursery.N ptr,
+                                             GHC.Base.Maybe (ptr GHC.Word.Word8)) #)
+                                  {- Arity: 2 -}
+                                = \ (ww3 :: GHC.Base.Maybe
+                                              (Data.Sequence.Seq (ptr GHC.Word.Word8)))[OneShot]
+                                    (ww4 :: Data.IntMap.Base.IntMap
+                                              (Data.Sequence.Seq (ptr GHC.Word.Word8)))[OneShot] ->
+                                  case ww3 of wild1 {
+                                    GHC.Base.Nothing
+                                    -> (# eta, (wild, GHC.Base.Nothing @ (ptr GHC.Word.Word8)) #)
+                                    GHC.Base.Just x
+                                    -> case Data.Sequence.viewl @ (ptr GHC.Word.Word8) x of wild2 {
+                                         Data.Sequence.EmptyL
+                                         -> (# eta,
+                                               (wild, GHC.Base.Nothing @ (ptr GHC.Word.Word8)) #)
+                                         Data.Sequence.:< v ds
+                                         -> (# eta,
+                                               (case ww4 of dt1 { DEFAULT ->
+                                                Data.Array.Accelerate.Array.Remote.Nursery.N
+                                                  @ ptr
+                                                  dt1
+                                                  (GHC.Prim.-# dt ww) },
+                                                GHC.Base.Just @ (ptr GHC.Word.Word8) v) #) } }
+                              } in
+                              case im of wild1 {
+                                Data.IntMap.Base.Bin dt1 dt2 l r
+                                -> let {
+                                     m1 :: GHC.Prim.Word# = GHC.Prim.int2Word# dt2
+                                   } in
+                                   case GHC.Prim.tagToEnum#
+                                          @ GHC.Types.Bool
+                                          (GHC.Prim./=#
+                                             (GHC.Prim.word2Int#
+                                                (GHC.Prim.and#
+                                                   (GHC.Prim.int2Word# ww)
+                                                   (GHC.Prim.xor#
+                                                      (GHC.Prim.xor#
+                                                         (GHC.Prim.minusWord# m1 1##)
+                                                         18446744073709551615##)
+                                                      m1)))
+                                             dt1) of wild2 {
+                                     GHC.Types.False
+                                     -> case GHC.Prim.and# (GHC.Prim.int2Word# ww) m1 of wild3 {
+                                          DEFAULT
+                                          -> case Data.IntMap.Strict.updateLookupWithKey_$s$wpoly_go
+                                                    @ (Data.Sequence.Seq (ptr GHC.Word.Word8))
+                                                    r
+                                                    ww
+                                                    w1 of ww3 { (#,#) ww4 ww5 ->
+                                             case case ww5 of wild4 {
+                                                    DEFAULT
+                                                    -> case l of wild5 {
+                                                         DEFAULT
+                                                         -> Data.IntMap.Base.Bin
+                                                              @ (Data.Sequence.Seq
+                                                                   (ptr GHC.Word.Word8))
+                                                              dt1
+                                                              dt2
+                                                              wild5
+                                                              wild4
+                                                         Data.IntMap.Base.Nil -> wild4 }
+                                                    Data.IntMap.Base.Nil -> l } of dt3 { DEFAULT ->
+                                             $j ww4 dt3 } }
+                                          0##
+                                          -> case Data.IntMap.Strict.updateLookupWithKey_$s$wpoly_go
+                                                    @ (Data.Sequence.Seq (ptr GHC.Word.Word8))
+                                                    l
+                                                    ww
+                                                    w1 of ww3 { (#,#) ww4 ww5 ->
+                                             case case r of wild4 {
+                                                    DEFAULT
+                                                    -> case ww5 of wild5 {
+                                                         DEFAULT
+                                                         -> Data.IntMap.Base.Bin
+                                                              @ (Data.Sequence.Seq
+                                                                   (ptr GHC.Word.Word8))
+                                                              dt1
+                                                              dt2
+                                                              wild5
+                                                              wild4
+                                                         Data.IntMap.Base.Nil -> wild4 }
+                                                    Data.IntMap.Base.Nil
+                                                    -> ww5 } of dt3 { DEFAULT ->
+                                             $j ww4 dt3 } } }
+                                     GHC.Types.True
+                                     -> (# eta, (wild, GHC.Base.Nothing @ (ptr GHC.Word.Word8)) #) }
+                                Data.IntMap.Base.Tip dt1 y
+                                -> case GHC.Prim.tagToEnum#
+                                          @ GHC.Types.Bool
+                                          (GHC.Prim.==# ww dt1) of wild2 {
+                                     GHC.Types.False
+                                     -> (# eta, (wild, GHC.Base.Nothing @ (ptr GHC.Word.Word8)) #)
+                                     GHC.Types.True
+                                     -> case w1 key y of wild3 {
+                                          GHC.Base.Nothing
+                                          -> case Data.Sequence.viewl
+                                                    @ (ptr GHC.Word.Word8)
+                                                    y of wild5 {
+                                               Data.Sequence.EmptyL
+                                               -> (# eta,
+                                                     (wild,
+                                                      GHC.Base.Nothing @ (ptr GHC.Word.Word8)) #)
+                                               Data.Sequence.:< v ds
+                                               -> (# eta,
+                                                     (Data.Array.Accelerate.Array.Remote.Nursery.N
+                                                        @ ptr
+                                                        (Data.IntMap.Base.Nil
+                                                           @ (Data.Sequence.Seq
+                                                                (ptr GHC.Word.Word8)))
+                                                        (GHC.Prim.-# dt ww),
+                                                      GHC.Base.Just @ (ptr GHC.Word.Word8) v) #) }
+                                          GHC.Base.Just y'
+                                          -> case y'
+                                                    `cast`
+                                                  (Data.Sequence.N:Seq[0]
+                                                       <ptr GHC.Word.Word8>_R) of nt { DEFAULT ->
+                                             case Data.Sequence.viewl
+                                                    @ (ptr GHC.Word.Word8)
+                                                    y of wild5 {
+                                               Data.Sequence.EmptyL
+                                               -> (# eta,
+                                                     (wild,
+                                                      GHC.Base.Nothing @ (ptr GHC.Word.Word8)) #)
+                                               Data.Sequence.:< v ds
+                                               -> (# eta,
+                                                     (Data.Array.Accelerate.Array.Remote.Nursery.N
+                                                        @ ptr
+                                                        (Data.IntMap.Base.Tip
+                                                           @ (Data.Sequence.Seq
+                                                                (ptr GHC.Word.Word8))
+                                                           dt1
+                                                           nt
+                                                             `cast`
+                                                           (Sym (Data.Sequence.N:Seq[0]
+                                                                     <ptr GHC.Word.Word8>_R)))
+                                                        (GHC.Prim.-# dt ww),
+                                                      GHC.Base.Just
+                                                        @ (ptr GHC.Word.Word8)
+                                                        v) #) } } } }
+                                Data.IntMap.Base.Nil
+                                -> (# eta, (wild, GHC.Base.Nothing @ (ptr GHC.Word.Word8)) #) } }
+                          } in
+                          case GHC.Prim.getMaskingState# w of ds { (#,#) ipv ipv1 ->
+                          case ipv1 of ds1 {
+                            DEFAULT
+                            -> case GHC.Prim.takeMVar#
+                                      @ GHC.Prim.RealWorld
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                      ww1
+                                      ipv of ds2 { (#,#) ipv2 ipv3 ->
+                               case GHC.Prim.catch#
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr,
+                                         GHC.Base.Maybe (ptr GHC.Word.Word8))
+                                      @ GHC.Exception.SomeException
+                                      (GHC.Magic.lazy
+                                         @ (GHC.Types.IO
+                                              (Data.Array.Accelerate.Array.Remote.Nursery.N ptr,
+                                               GHC.Base.Maybe (ptr GHC.Word.Word8)))
+                                         (GHC.Prim.maskAsyncExceptions#
+                                            @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr,
+                                               GHC.Base.Maybe (ptr GHC.Word.Word8))
+                                            (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                             case io ipv3 s of ds3 { (#,#) ipv4 ipv5 ->
+                                             GHC.Prim.seq#
+                                               @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr,
+                                                  GHC.Base.Maybe (ptr GHC.Word.Word8))
+                                               @ GHC.Prim.RealWorld
+                                               ipv5
+                                               ipv4 }))
+                                           `cast`
+                                         (Sym (GHC.Types.N:IO[0]
+                                                   <(Data.Array.Accelerate.Array.Remote.Nursery.N
+                                                       ptr,
+                                                     GHC.Base.Maybe (ptr GHC.Word.Word8))>_R)))
+                                        `cast`
+                                      (GHC.Types.N:IO[0]
+                                           <(Data.Array.Accelerate.Array.Remote.Nursery.N ptr,
+                                             GHC.Base.Maybe (ptr GHC.Word.Word8))>_R)
+                                      (\ (e1 :: GHC.Exception.SomeException)[OneShot]
+                                         (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                       case GHC.Prim.putMVar#
+                                              @ GHC.Prim.RealWorld
+                                              @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                              ww1
+                                              ipv3
+                                              eta1 of s2# { DEFAULT ->
+                                       GHC.Prim.raiseIO#
+                                         @ GHC.Exception.SomeException
+                                         @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr,
+                                            GHC.Base.Maybe (ptr GHC.Word.Word8))
+                                         e1
+                                         s2# })
+                                      ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                               case ipv5 of wild { (,) a' b1 ->
+                               case GHC.Prim.putMVar#
+                                      @ GHC.Prim.RealWorld
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                      ww1
+                                      a'
+                                      ipv4 of s2# { DEFAULT ->
+                               (# s2#, b1 #) } } } }
+                            0#
+                            -> GHC.Prim.maskAsyncExceptions#
+                                 @ (GHC.Base.Maybe (ptr GHC.Word.Word8))
+                                 (\ (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                  case GHC.Prim.takeMVar#
+                                         @ GHC.Prim.RealWorld
+                                         @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                         ww1
+                                         eta of ds2 { (#,#) ipv2 ipv3 ->
+                                  case GHC.Prim.catch#
+                                         @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr,
+                                            GHC.Base.Maybe (ptr GHC.Word.Word8))
+                                         @ GHC.Exception.SomeException
+                                         (GHC.Magic.lazy
+                                            @ (GHC.Types.IO
+                                                 (Data.Array.Accelerate.Array.Remote.Nursery.N ptr,
+                                                  GHC.Base.Maybe (ptr GHC.Word.Word8)))
+                                            (GHC.Prim.unmaskAsyncExceptions#
+                                               @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr,
+                                                  GHC.Base.Maybe (ptr GHC.Word.Word8))
+                                               (\ (s :: GHC.Prim.State#
+                                                          GHC.Prim.RealWorld)[OneShot] ->
+                                                case io ipv3 s of ds3 { (#,#) ipv4 ipv5 ->
+                                                GHC.Prim.seq#
+                                                  @ (Data.Array.Accelerate.Array.Remote.Nursery.N
+                                                       ptr,
+                                                     GHC.Base.Maybe (ptr GHC.Word.Word8))
+                                                  @ GHC.Prim.RealWorld
+                                                  ipv5
+                                                  ipv4 }))
+                                              `cast`
+                                            (Sym (GHC.Types.N:IO[0]
+                                                      <(Data.Array.Accelerate.Array.Remote.Nursery.N
+                                                          ptr,
+                                                        GHC.Base.Maybe (ptr GHC.Word.Word8))>_R)))
+                                           `cast`
+                                         (GHC.Types.N:IO[0]
+                                              <(Data.Array.Accelerate.Array.Remote.Nursery.N ptr,
+                                                GHC.Base.Maybe (ptr GHC.Word.Word8))>_R)
+                                         (\ (e1 :: GHC.Exception.SomeException)[OneShot]
+                                            (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                          case GHC.Prim.putMVar#
+                                                 @ GHC.Prim.RealWorld
+                                                 @ (Data.Array.Accelerate.Array.Remote.Nursery.N
+                                                      ptr)
+                                                 ww1
+                                                 ipv3
+                                                 eta1 of s2# { DEFAULT ->
+                                          GHC.Prim.raiseIO#
+                                            @ GHC.Exception.SomeException
+                                            @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr,
+                                               GHC.Base.Maybe (ptr GHC.Word.Word8))
+                                            e1
+                                            s2# })
+                                         ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                                  case ipv5 of wild { (,) a' b1 ->
+                                  case GHC.Prim.putMVar#
+                                         @ GHC.Prim.RealWorld
+                                         @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                         ww1
+                                         a'
+                                         ipv4 of s2# { DEFAULT ->
+                                  (# s2#, b1 #) } } } })
+                                 ipv
+                            1#
+                            -> case GHC.Prim.takeMVar#
+                                      @ GHC.Prim.RealWorld
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                      ww1
+                                      ipv of ds2 { (#,#) ipv2 ipv3 ->
+                               case GHC.Prim.catch#
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr,
+                                         GHC.Base.Maybe (ptr GHC.Word.Word8))
+                                      @ GHC.Exception.SomeException
+                                      (GHC.Magic.lazy
+                                         @ (GHC.Types.IO
+                                              (Data.Array.Accelerate.Array.Remote.Nursery.N ptr,
+                                               GHC.Base.Maybe (ptr GHC.Word.Word8)))
+                                         (GHC.Prim.maskUninterruptible#
+                                            @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr,
+                                               GHC.Base.Maybe (ptr GHC.Word.Word8))
+                                            (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                             case io ipv3 s of ds3 { (#,#) ipv4 ipv5 ->
+                                             GHC.Prim.seq#
+                                               @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr,
+                                                  GHC.Base.Maybe (ptr GHC.Word.Word8))
+                                               @ GHC.Prim.RealWorld
+                                               ipv5
+                                               ipv4 }))
+                                           `cast`
+                                         (Sym (GHC.Types.N:IO[0]
+                                                   <(Data.Array.Accelerate.Array.Remote.Nursery.N
+                                                       ptr,
+                                                     GHC.Base.Maybe (ptr GHC.Word.Word8))>_R)))
+                                        `cast`
+                                      (GHC.Types.N:IO[0]
+                                           <(Data.Array.Accelerate.Array.Remote.Nursery.N ptr,
+                                             GHC.Base.Maybe (ptr GHC.Word.Word8))>_R)
+                                      (\ (e1 :: GHC.Exception.SomeException)[OneShot]
+                                         (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                       case GHC.Prim.putMVar#
+                                              @ GHC.Prim.RealWorld
+                                              @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                              ww1
+                                              ipv3
+                                              eta1 of s2# { DEFAULT ->
+                                       GHC.Prim.raiseIO#
+                                         @ GHC.Exception.SomeException
+                                         @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr,
+                                            GHC.Base.Maybe (ptr GHC.Word.Word8))
+                                         e1
+                                         s2# })
+                                      ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                               case ipv5 of wild { (,) a' b1 ->
+                               case GHC.Prim.putMVar#
+                                      @ GHC.Prim.RealWorld
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                      ww1
+                                      a'
+                                      ipv4 of s2# { DEFAULT ->
+                               (# s2#, b1 #) } } } } } }) -}
+cb3cbe3ea260e3c4def54a996b169ffe
+  $wsize ::
+    GHC.Prim.MVar#
+      GHC.Prim.RealWorld
+      (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+    -> GHC.Prim.Weak#
+         (Data.Array.Accelerate.Array.Remote.Nursery.NRS ptr)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Int.Int64 #)
+  {- Arity: 3, HasNoCafRefs, Strictness: <S,U><L,A><S,U>,
+     Inline: INLINABLE[0],
+     Unfolding: <stable> (\ @ (ptr :: * -> *)
+                            (ww :: GHC.Prim.MVar#
+                                     GHC.Prim.RealWorld
+                                     (Data.Array.Accelerate.Array.Remote.Nursery.N ptr))
+                            (ww1 :: GHC.Prim.Weak#
+                                      (Data.Array.Accelerate.Array.Remote.Nursery.NRS ptr))
+                            (w :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                          case GHC.Prim.getMaskingState# w of ds { (#,#) ipv ipv1 ->
+                          case ipv1 of ds1 {
+                            DEFAULT
+                            -> case GHC.Prim.takeMVar#
+                                      @ GHC.Prim.RealWorld
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                      ww
+                                      ipv of ds2 { (#,#) ipv2 ipv3 ->
+                               case GHC.Prim.catch#
+                                      @ GHC.Int.Int64
+                                      @ GHC.Exception.SomeException
+                                      (GHC.Magic.lazy
+                                         @ (GHC.Types.IO GHC.Int.Int64)
+                                         (GHC.Prim.maskAsyncExceptions#
+                                            @ GHC.Int.Int64
+                                            (\ (eta :: GHC.Prim.State#
+                                                         GHC.Prim.RealWorld)[OneShot] ->
+                                             case ipv3 of wild { Data.Array.Accelerate.Array.Remote.Nursery.N ds3 dt ->
+                                             (# eta, GHC.Int.I64# dt #) }))
+                                           `cast`
+                                         (Sym (GHC.Types.N:IO[0] <GHC.Int.Int64>_R)))
+                                        `cast`
+                                      (GHC.Types.N:IO[0] <GHC.Int.Int64>_R)
+                                      (\ (e1 :: GHC.Exception.SomeException)[OneShot]
+                                         (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                       case GHC.Prim.putMVar#
+                                              @ GHC.Prim.RealWorld
+                                              @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                              ww
+                                              ipv3
+                                              eta1 of s2# { DEFAULT ->
+                                       GHC.Prim.raiseIO#
+                                         @ GHC.Exception.SomeException
+                                         @ GHC.Int.Int64
+                                         e1
+                                         s2# })
+                                      ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                               case GHC.Prim.putMVar#
+                                      @ GHC.Prim.RealWorld
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                      ww
+                                      ipv3
+                                      ipv4 of s2# { DEFAULT ->
+                               (# s2#, ipv5 #) } } }
+                            0#
+                            -> GHC.Prim.maskAsyncExceptions#
+                                 @ GHC.Int.Int64
+                                 (\ (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                  case GHC.Prim.takeMVar#
+                                         @ GHC.Prim.RealWorld
+                                         @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                         ww
+                                         eta of ds2 { (#,#) ipv2 ipv3 ->
+                                  case GHC.Prim.catch#
+                                         @ GHC.Int.Int64
+                                         @ GHC.Exception.SomeException
+                                         (GHC.Magic.lazy
+                                            @ (GHC.Types.IO GHC.Int.Int64)
+                                            (GHC.Prim.unmaskAsyncExceptions#
+                                               @ GHC.Int.Int64
+                                               (\ (eta1 :: GHC.Prim.State#
+                                                             GHC.Prim.RealWorld)[OneShot] ->
+                                                case ipv3 of wild { Data.Array.Accelerate.Array.Remote.Nursery.N ds3 dt ->
+                                                (# eta1, GHC.Int.I64# dt #) }))
+                                              `cast`
+                                            (Sym (GHC.Types.N:IO[0] <GHC.Int.Int64>_R)))
+                                           `cast`
+                                         (GHC.Types.N:IO[0] <GHC.Int.Int64>_R)
+                                         (\ (e1 :: GHC.Exception.SomeException)[OneShot]
+                                            (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                          case GHC.Prim.putMVar#
+                                                 @ GHC.Prim.RealWorld
+                                                 @ (Data.Array.Accelerate.Array.Remote.Nursery.N
+                                                      ptr)
+                                                 ww
+                                                 ipv3
+                                                 eta1 of s2# { DEFAULT ->
+                                          GHC.Prim.raiseIO#
+                                            @ GHC.Exception.SomeException
+                                            @ GHC.Int.Int64
+                                            e1
+                                            s2# })
+                                         ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                                  case GHC.Prim.putMVar#
+                                         @ GHC.Prim.RealWorld
+                                         @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                         ww
+                                         ipv3
+                                         ipv4 of s2# { DEFAULT ->
+                                  (# s2#, ipv5 #) } } })
+                                 ipv
+                            1#
+                            -> case GHC.Prim.takeMVar#
+                                      @ GHC.Prim.RealWorld
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                      ww
+                                      ipv of ds2 { (#,#) ipv2 ipv3 ->
+                               case GHC.Prim.catch#
+                                      @ GHC.Int.Int64
+                                      @ GHC.Exception.SomeException
+                                      (GHC.Magic.lazy
+                                         @ (GHC.Types.IO GHC.Int.Int64)
+                                         (GHC.Prim.maskUninterruptible#
+                                            @ GHC.Int.Int64
+                                            (\ (eta :: GHC.Prim.State#
+                                                         GHC.Prim.RealWorld)[OneShot] ->
+                                             case ipv3 of wild { Data.Array.Accelerate.Array.Remote.Nursery.N ds3 dt ->
+                                             (# eta, GHC.Int.I64# dt #) }))
+                                           `cast`
+                                         (Sym (GHC.Types.N:IO[0] <GHC.Int.Int64>_R)))
+                                        `cast`
+                                      (GHC.Types.N:IO[0] <GHC.Int.Int64>_R)
+                                      (\ (e1 :: GHC.Exception.SomeException)[OneShot]
+                                         (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                       case GHC.Prim.putMVar#
+                                              @ GHC.Prim.RealWorld
+                                              @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                              ww
+                                              ipv3
+                                              eta1 of s2# { DEFAULT ->
+                                       GHC.Prim.raiseIO#
+                                         @ GHC.Exception.SomeException
+                                         @ GHC.Int.Int64
+                                         e1
+                                         s2# })
+                                      ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                               case GHC.Prim.putMVar#
+                                      @ GHC.Prim.RealWorld
+                                      @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                      ww
+                                      ipv3
+                                      ipv4 of s2# { DEFAULT ->
+                               (# s2#, ipv5 #) } } } } }) -}
+57e1ba48cf63be608c8c09bf64694a15
+  data N (ptr :: * -> *)
+    = N !(Data.IntMap.Base.IntMap
+            (Data.Sequence.Seq (ptr GHC.Word.Word8)))
+        {-# UNPACK #-}GHC.Int.Int64
+e8fa7f44f7dc3cab7e19faef7103a5f9
+  type NRS (ptr :: * -> *) =
+    GHC.MVar.MVar (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+c9736bbbb81177b21e76f9534e5d645e
+  data Nursery (ptr :: * -> *)
+    = Nursery {-# UNPACK #-}(Data.Array.Accelerate.Array.Remote.Nursery.NRS
+                               ptr)
+              {-# UNPACK #-}(GHC.Weak.Weak
+                               (Data.Array.Accelerate.Array.Remote.Nursery.NRS ptr))
+7a24926adaa072cd9554f94f0a3afb5c
+  cleanup ::
+    (ptr GHC.Word.Word8 -> GHC.Types.IO ())
+    -> Data.Array.Accelerate.Array.Remote.Nursery.NRS ptr
+    -> GHC.Types.IO ()
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,C(C1(U(U,U)))><S(S),1*U(U)><S,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ (ptr :: * -> *)
+                   (w :: ptr GHC.Word.Word8 -> GHC.Types.IO ())
+                   (w1 :: Data.Array.Accelerate.Array.Remote.Nursery.NRS ptr)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w1 of ww { GHC.MVar.MVar ww1 ->
+                 Data.Array.Accelerate.Array.Remote.Nursery.$wcleanup
+                   @ ptr
+                   w
+                   ww1
+                   w2 })
+                  `cast`
+                (forall (ptr :: <* -> *>_N).
+                 <ptr GHC.Word.Word8 -> GHC.Types.IO ()>_R
+                 ->_R <Data.Array.Accelerate.Array.Remote.Nursery.NRS ptr>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+762a991b7254bf85e0f80563b1ab86a2
+  insert ::
+    GHC.Types.Int
+    -> ptr GHC.Word.Word8
+    -> Data.Array.Accelerate.Array.Remote.Nursery.Nursery ptr
+    -> GHC.Types.IO ()
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,1*U(U)><S,1*U><S(SL),1*U(U,A)><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ (ptr :: * -> *)
+                   (w :: GHC.Types.Int)
+                   (w1 :: ptr GHC.Word.Word8)
+                   (w2 :: Data.Array.Accelerate.Array.Remote.Nursery.Nursery ptr)
+                   (w3 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w2 of ww2 { Data.Array.Accelerate.Array.Remote.Nursery.Nursery ww3 ww4 ->
+                 Data.Array.Accelerate.Array.Remote.Nursery.$winsert
+                   @ ptr
+                   ww1
+                   w1
+                   ww3
+                   ww4
+                   w3 } })
+                  `cast`
+                (forall (ptr :: <* -> *>_N).
+                 <GHC.Types.Int>_R
+                 ->_R <ptr GHC.Word.Word8>_R
+                 ->_R <Data.Array.Accelerate.Array.Remote.Nursery.Nursery ptr>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+8db35eb3456da0c9994f3e6cd908d8ed
+  lookup ::
+    GHC.Types.Int
+    -> Data.Array.Accelerate.Array.Remote.Nursery.Nursery ptr
+    -> GHC.Types.IO (GHC.Base.Maybe (ptr GHC.Word.Word8))
+  {- Arity: 3, Strictness: <S,1*U(U)><S(SL),1*U(U,A)><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ (ptr :: * -> *)
+                   (w :: GHC.Types.Int)
+                   (w1 :: Data.Array.Accelerate.Array.Remote.Nursery.Nursery ptr)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Data.Array.Accelerate.Array.Remote.Nursery.Nursery ww3 ww4 ->
+                 Data.Array.Accelerate.Array.Remote.Nursery.$wlookup
+                   @ ptr
+                   ww1
+                   ww3
+                   ww4
+                   w2 } })
+                  `cast`
+                (forall (ptr :: <* -> *>_N).
+                 <GHC.Types.Int>_R
+                 ->_R <Data.Array.Accelerate.Array.Remote.Nursery.Nursery ptr>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <GHC.Base.Maybe (ptr GHC.Word.Word8)>_R)) -}
+604ed8a3ed6d1356dd4884137c1ed556
+  new ::
+    (ptr GHC.Word.Word8 -> GHC.Types.IO ())
+    -> GHC.Types.IO
+         (Data.Array.Accelerate.Array.Remote.Nursery.Nursery ptr)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(C1(U(U,U)))><S,U>,
+     Inline: INLINABLE[ALWAYS],
+     Unfolding: <stable> ((\ @ (ptr :: * -> *)
+                             (delete :: ptr GHC.Word.Word8 -> GHC.Types.IO ())
+                             (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                           (GHC.Base.thenIO
+                              @ ()
+                              @ (Data.Array.Accelerate.Array.Remote.Nursery.Nursery ptr)
+                              (\ (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                               (GHC.Base.returnIO @ () GHC.Tuple.())
+                                 `cast`
+                               (GHC.Types.N:IO[0] <()>_R)
+                                 eta1)
+                                `cast`
+                              (Sym (GHC.Types.N:IO[0] <()>_R))
+                              (GHC.Base.bindIO
+                                 @ (GHC.MVar.MVar
+                                      (Data.Array.Accelerate.Array.Remote.Nursery.N ptr))
+                                 @ (Data.Array.Accelerate.Array.Remote.Nursery.Nursery ptr)
+                                 (GHC.MVar.newMVar
+                                    @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                    (case GHC.Int.$fBitsInt64_$cfromInteger
+                                            0 of dt { GHC.Int.I64# dt1 ->
+                                     Data.Array.Accelerate.Array.Remote.Nursery.N
+                                       @ ptr
+                                       (Data.IntMap.Base.Nil
+                                          @ (Data.Sequence.Seq (ptr GHC.Word.Word8)))
+                                       dt1 }))
+                                 (\ (ref :: GHC.MVar.MVar
+                                              (Data.Array.Accelerate.Array.Remote.Nursery.N ptr))
+                                    (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                  (GHC.Base.bindIO
+                                     @ (GHC.Weak.Weak
+                                          (GHC.MVar.MVar
+                                             (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)))
+                                     @ (Data.Array.Accelerate.Array.Remote.Nursery.Nursery ptr)
+                                     (Control.Concurrent.MVar.mkWeakMVar
+                                        @ (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)
+                                        ref
+                                        (Data.Array.Accelerate.Array.Remote.Nursery.cleanup
+                                           @ ptr
+                                           delete
+                                           ref))
+                                     (\ (weak :: GHC.Weak.Weak
+                                                   (GHC.MVar.MVar
+                                                      (Data.Array.Accelerate.Array.Remote.Nursery.N
+                                                         ptr))) ->
+                                      GHC.Base.$!
+                                        @ (Data.Array.Accelerate.Array.Remote.Nursery.Nursery ptr)
+                                        @ (GHC.Types.IO
+                                             (Data.Array.Accelerate.Array.Remote.Nursery.Nursery
+                                                ptr))
+                                        (GHC.Base.returnIO
+                                           @ (Data.Array.Accelerate.Array.Remote.Nursery.Nursery
+                                                ptr))
+                                        (Data.Array.Accelerate.Array.Remote.Nursery.$WNursery
+                                           @ ptr
+                                           ref
+                                           weak)))
+                                    `cast`
+                                  (GHC.Types.N:IO[0]
+                                       <Data.Array.Accelerate.Array.Remote.Nursery.Nursery ptr>_R)
+                                    eta1)
+                                   `cast`
+                                 (<GHC.MVar.MVar
+                                     (Data.Array.Accelerate.Array.Remote.Nursery.N ptr)>_R
+                                  ->_R Sym (GHC.Types.N:IO[0]
+                                                <Data.Array.Accelerate.Array.Remote.Nursery.Nursery
+                                                   ptr>_R))))
+                             `cast`
+                           (GHC.Types.N:IO[0]
+                                <Data.Array.Accelerate.Array.Remote.Nursery.Nursery ptr>_R)
+                             eta)
+                            `cast`
+                          (forall (ptr :: <* -> *>_N).
+                           <ptr GHC.Word.Word8 -> GHC.Types.IO ()>_R
+                           ->_R Sym (GHC.Types.N:IO[0]
+                                         <Data.Array.Accelerate.Array.Remote.Nursery.Nursery
+                                            ptr>_R))) -}
+9771787de53e53567583dd91fb4e2ffd
+  size ::
+    Data.Array.Accelerate.Array.Remote.Nursery.Nursery ptr
+    -> GHC.Types.IO GHC.Int.Int64
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(SL),1*U(U,A)><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ (ptr :: * -> *)
+                   (w :: Data.Array.Accelerate.Array.Remote.Nursery.Nursery ptr)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w of ww { Data.Array.Accelerate.Array.Remote.Nursery.Nursery ww1 ww2 ->
+                 Data.Array.Accelerate.Array.Remote.Nursery.$wsize
+                   @ ptr
+                   ww1
+                   ww2
+                   w1 })
+                  `cast`
+                (forall (ptr :: <* -> *>_N).
+                 <Data.Array.Accelerate.Array.Remote.Nursery.Nursery ptr>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <GHC.Int.Int64>_R)) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

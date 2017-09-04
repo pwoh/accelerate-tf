@@ -1,0 +1,609 @@
+
+==================== FINAL INTERFACE ====================
+2017-08-29 05:26:54.449495 UTC
+
+interface accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.FullList 8002
+  interface hash: 70fc02fed7f4abd11d8485bc5cd0b946
+  ABI hash: 66353fa83cc2bc86e6632b6b7bea0bae
+  export-list hash: b976aeb09b1169ad3be81bbd6521601d
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 39bc412e9bc846a74d7858c2473eed4c
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Data.Array.Accelerate.FullList.cons
+  Data.Array.Accelerate.FullList.lookup
+  Data.Array.Accelerate.FullList.lookupDelete
+  Data.Array.Accelerate.FullList.mapM_
+  Data.Array.Accelerate.FullList.singleton
+  Data.Array.Accelerate.FullList.size
+  Data.Array.Accelerate.FullList.FullList{Data.Array.Accelerate.FullList.FL}
+  Data.Array.Accelerate.FullList.List{Data.Array.Accelerate.FullList.Cons Data.Array.Accelerate.FullList.Nil}
+module dependencies:
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+fixities infixr 5 Cons, infixr 5 cons
+a937e235e65bf170925df86cc1ea2b82
+  $fEqFullList ::
+    (GHC.Classes.Eq k, GHC.Classes.Eq v) =>
+    GHC.Classes.Eq (Data.Array.Accelerate.FullList.FullList k v)
+  DFunId
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),C(C1(U)))><L,U(C(C1(U)),C(C1(U)))>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ k
+                      @ v
+                      ($dEq :: GHC.Classes.Eq k)
+                      ($dEq1 :: GHC.Classes.Eq v).
+                  @ (Data.Array.Accelerate.FullList.FullList k v)
+                  (Data.Array.Accelerate.FullList.$fEqFullList_$c==
+                     @ k
+                     @ v
+                     $dEq
+                     $dEq1)
+                  (Data.Array.Accelerate.FullList.$fEqFullList_$c/=
+                     @ k
+                     @ v
+                     $dEq
+                     $dEq1) -}
+a937e235e65bf170925df86cc1ea2b82
+  $fEqFullList_$c/= ::
+    (GHC.Classes.Eq k, GHC.Classes.Eq v) =>
+    Data.Array.Accelerate.FullList.FullList k v
+    -> Data.Array.Accelerate.FullList.FullList k v -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(LC(C(S))),U(A,C(C1(U)))><L,U(A,C(C1(U)))><S(SLS),1*U(U,U,U)><S(SLS),1*U(U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ k
+                   @ v
+                   (w :: GHC.Classes.Eq k)
+                   (w1 :: GHC.Classes.Eq v)
+                   (w2 :: Data.Array.Accelerate.FullList.FullList k v)
+                   (w3 :: Data.Array.Accelerate.FullList.FullList k v) ->
+                 case w2 of ww { Data.Array.Accelerate.FullList.FL ww1 ww2 ww3 ->
+                 case w3 of ww4 { Data.Array.Accelerate.FullList.FL ww5 ww6 ww7 ->
+                 Data.Array.Accelerate.FullList.$w$c/=
+                   @ k
+                   @ v
+                   w
+                   w1
+                   ww1
+                   ww2
+                   ww3
+                   ww5
+                   ww6
+                   ww7 } }) -}
+e8559d77e37ce82b218ceb735720cdbb
+  $fEqFullList_$c/=1 ::
+    (GHC.Classes.Eq k, GHC.Classes.Eq v) =>
+    Data.Array.Accelerate.FullList.List k v
+    -> Data.Array.Accelerate.FullList.List k v -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(A,C(C1(U)))><L,U(A,C(C1(U)))><S,1*U><S,1*U> -}
+a937e235e65bf170925df86cc1ea2b82
+  $fEqFullList_$c== ::
+    (GHC.Classes.Eq k, GHC.Classes.Eq v) =>
+    Data.Array.Accelerate.FullList.FullList k v
+    -> Data.Array.Accelerate.FullList.FullList k v -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><L,U(C(C1(U)),A)><S(SLS),1*U(U,U,U)><S(SLS),1*U(U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ k
+                   @ v
+                   (w :: GHC.Classes.Eq k)
+                   (w1 :: GHC.Classes.Eq v)
+                   (w2 :: Data.Array.Accelerate.FullList.FullList k v)
+                   (w3 :: Data.Array.Accelerate.FullList.FullList k v) ->
+                 case w2 of ww { Data.Array.Accelerate.FullList.FL ww1 ww2 ww3 ->
+                 case w3 of ww4 { Data.Array.Accelerate.FullList.FL ww5 ww6 ww7 ->
+                 Data.Array.Accelerate.FullList.$w$c==
+                   @ k
+                   @ v
+                   w
+                   w1
+                   ww1
+                   ww2
+                   ww3
+                   ww5
+                   ww6
+                   ww7 } }) -}
+e8559d77e37ce82b218ceb735720cdbb
+  $fEqFullList_$c==1 ::
+    (GHC.Classes.Eq k, GHC.Classes.Eq v) =>
+    Data.Array.Accelerate.FullList.List k v
+    -> Data.Array.Accelerate.FullList.List k v -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(C(C1(U)),A)><S,1*U><S,1*U> -}
+e8559d77e37ce82b218ceb735720cdbb
+  $fEqList ::
+    (GHC.Classes.Eq k, GHC.Classes.Eq v) =>
+    GHC.Classes.Eq (Data.Array.Accelerate.FullList.List k v)
+  DFunId
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),C(C1(U)))><L,U(C(C1(U)),C(C1(U)))>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ k
+                      @ v
+                      ($dEq :: GHC.Classes.Eq k)
+                      ($dEq1 :: GHC.Classes.Eq v).
+                  @ (Data.Array.Accelerate.FullList.List k v)
+                  (Data.Array.Accelerate.FullList.$fEqFullList_$c==1
+                     @ k
+                     @ v
+                     $dEq
+                     $dEq1)
+                  (Data.Array.Accelerate.FullList.$fEqFullList_$c/=1
+                     @ k
+                     @ v
+                     $dEq
+                     $dEq1) -}
+949d2039b26492554bbcc0852e938c3d
+  $tc'Cons :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16330992338960142985##
+                   10085281717942509825##
+                   Data.Array.Accelerate.FullList.$trModule
+                   Data.Array.Accelerate.FullList.$tc'Cons1) -}
+644f25d03998552bbebb436afc9c5c22
+  $tc'Cons1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Cons"#) -}
+09b0ff93fcbd023f1ad3b7ee3a03ced8
+  $tc'FL :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15023810413591445621##
+                   8304629568214735305##
+                   Data.Array.Accelerate.FullList.$trModule
+                   Data.Array.Accelerate.FullList.$tc'FL1) -}
+441429cd2e4e1247a2305be5c218b32d
+  $tc'FL1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'FL"#) -}
+93cfb1727713bff5e3dbf26204c96183
+  $tc'Nil :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16914267579737801164##
+                   2892008287926316708##
+                   Data.Array.Accelerate.FullList.$trModule
+                   Data.Array.Accelerate.FullList.$tc'Nil1) -}
+29111fc34c3676080c2eb63253361507
+  $tc'Nil1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Nil"#) -}
+277457aa7769731e10db3dcf333301a4
+  $tcFullList :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12348385030488119162##
+                   6533381521494369136##
+                   Data.Array.Accelerate.FullList.$trModule
+                   Data.Array.Accelerate.FullList.$tcFullList1) -}
+024fab8aa7d790fb9a0f63fb8f9c2ec1
+  $tcFullList1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "FullList"#) -}
+798efa4c6e6d643651f0c8222d99f545
+  $tcList :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14425836034412634860##
+                   5442424744341822642##
+                   Data.Array.Accelerate.FullList.$trModule
+                   Data.Array.Accelerate.FullList.$tcList1) -}
+bddec2e96267fc353f531b59ba8f7603
+  $tcList1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "List"#) -}
+81b8dd78e9cec2ee89c405fda6acb0fa
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Data.Array.Accelerate.FullList.$trModule2
+                   Data.Array.Accelerate.FullList.$trModule1) -}
+66f54698ea4d3be0808c7418bbc7e0a5
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Data.Array.Accelerate.FullList"#) -}
+c0a3a4e141814ce97005648f6edee87f
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw"#) -}
+c0cb41b86e1fe0c77d946d93ef7338ba
+  $w$c/= ::
+    (GHC.Classes.Eq k, GHC.Classes.Eq v) =>
+    k
+    -> v
+    -> Data.Array.Accelerate.FullList.List k v
+    -> k
+    -> v
+    -> Data.Array.Accelerate.FullList.List k v
+    -> GHC.Types.Bool
+  {- Arity: 8, HasNoCafRefs,
+     Strictness: <S(LC(C(S))),U(A,C(C1(U)))><L,U(A,C(C1(U)))><S,U><L,U><S,U><S,U><L,U><S,U>,
+     Inline: [0],
+     Unfolding: (\ @ k
+                   @ v
+                   (w :: GHC.Classes.Eq k)
+                   (w1 :: GHC.Classes.Eq v)
+                   (ww :: k)
+                   (ww1 :: v)
+                   (ww2 :: Data.Array.Accelerate.FullList.List k v)
+                   (ww3 :: k)
+                   (ww4 :: v)
+                   (ww5 :: Data.Array.Accelerate.FullList.List k v) ->
+                 case GHC.Classes./= @ k w ww ww3 of wild {
+                   GHC.Types.False
+                   -> case GHC.Classes./= @ v w1 ww1 ww4 of wild1 {
+                        GHC.Types.False
+                        -> Data.Array.Accelerate.FullList.$fEqFullList_$c/=1
+                             @ k
+                             @ v
+                             w
+                             w1
+                             ww2
+                             ww5
+                        GHC.Types.True -> GHC.Types.True }
+                   GHC.Types.True -> GHC.Types.True }) -}
+2f59ac94b6b2d111f599e2f8cabb50be
+  $w$c== ::
+    (GHC.Classes.Eq k, GHC.Classes.Eq v) =>
+    k
+    -> v
+    -> Data.Array.Accelerate.FullList.List k v
+    -> k
+    -> v
+    -> Data.Array.Accelerate.FullList.List k v
+    -> GHC.Types.Bool
+  {- Arity: 8, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><L,U(C(C1(U)),A)><S,U><L,U><S,U><S,U><L,U><S,U>,
+     Inline: [0],
+     Unfolding: (\ @ k
+                   @ v
+                   (w :: GHC.Classes.Eq k)
+                   (w1 :: GHC.Classes.Eq v)
+                   (ww :: k)
+                   (ww1 :: v)
+                   (ww2 :: Data.Array.Accelerate.FullList.List k v)
+                   (ww3 :: k)
+                   (ww4 :: v)
+                   (ww5 :: Data.Array.Accelerate.FullList.List k v) ->
+                 case GHC.Classes.== @ k w ww ww3 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Classes.== @ v w1 ww1 ww4 of wild1 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> Data.Array.Accelerate.FullList.$fEqFullList_$c==1
+                             @ k
+                             @ v
+                             w
+                             w1
+                             ww2
+                             ww5 } }) -}
+1203ca756bcdd76f470540529344af01
+  $wlookupDeleteL ::
+    GHC.Classes.Eq k =>
+    k
+    -> Data.Array.Accelerate.FullList.List k v
+    -> (# GHC.Base.Maybe v, Data.Array.Accelerate.FullList.List k v #)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><S,1*U><S,1*U>, Inline: INLINABLE[0],
+     Unfolding: <stable> (\ @ k
+                            @ v
+                            (w :: GHC.Classes.Eq k)
+                            (w1 :: k)
+                            (w2 :: Data.Array.Accelerate.FullList.List k v) ->
+                          case w1 of key { DEFAULT ->
+                          letrec {
+                            go :: Data.Array.Accelerate.FullList.List k v
+                                  -> (GHC.Base.Maybe v, Data.Array.Accelerate.FullList.List k v)
+                              {- Arity: 1 -}
+                            = \ (ds :: Data.Array.Accelerate.FullList.List k v) ->
+                              case ds of wild {
+                                Data.Array.Accelerate.FullList.Nil
+                                -> (GHC.Base.Nothing @ v,
+                                    Data.Array.Accelerate.FullList.Nil @ k @ v)
+                                Data.Array.Accelerate.FullList.Cons k1 v1 xs
+                                -> case GHC.Classes.== @ k w key k1 of wild1 {
+                                     GHC.Types.False
+                                     -> case go xs of wild2 { (,) r xs' ->
+                                        (r,
+                                         case xs' of dt { DEFAULT ->
+                                         Data.Array.Accelerate.FullList.Cons @ k @ v k1 v1 dt }) }
+                                     GHC.Types.True -> (GHC.Base.Just @ v v1, xs) } }
+                          } in
+                          case go w2 of ww { (,) ww1 ww2 -> (# ww1, ww2 #) } }) -}
+9082fd682790b782c3d775c1863f737a
+  $wsizeL :: Data.Array.Accelerate.FullList.List k v -> GHC.Prim.Int#
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>, Inline: [0] -}
+a937e235e65bf170925df86cc1ea2b82
+  data FullList k v
+    = FL !k v !(Data.Array.Accelerate.FullList.List k v)
+e8559d77e37ce82b218ceb735720cdbb
+  data List k v
+    = Nil | Cons !k v !(Data.Array.Accelerate.FullList.List k v)
+eef70531fad77473aa85056366984af4
+  cons ::
+    k
+    -> v
+    -> Data.Array.Accelerate.FullList.FullList k v
+    -> Data.Array.Accelerate.FullList.FullList k v
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S,1*U><L,U><S(SLS),1*U(U,U,U)>m,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ k
+                   @ v
+                   (k1 :: k)
+                   (v1 :: v)
+                   (ds :: Data.Array.Accelerate.FullList.FullList k v) ->
+                 case ds of wild { Data.Array.Accelerate.FullList.FL k' v' xs ->
+                 case k1 of dt { DEFAULT ->
+                 Data.Array.Accelerate.FullList.FL
+                   @ k
+                   @ v
+                   dt
+                   v1
+                   (Data.Array.Accelerate.FullList.Cons @ k @ v k' v' xs) } }) -}
+6a64520971667c33068da253b5f0d4d6
+  lookup ::
+    GHC.Classes.Eq k =>
+    k
+    -> Data.Array.Accelerate.FullList.FullList k v -> GHC.Base.Maybe v
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><L,U><S(SLS),1*U(U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ k
+                   @ v
+                   (w :: GHC.Classes.Eq k)
+                   (w1 :: k)
+                   (w2 :: Data.Array.Accelerate.FullList.FullList k v) ->
+                 case w2 of ww { Data.Array.Accelerate.FullList.FL ww1 ww2 ww3 ->
+                 case GHC.Classes.== @ k w w1 ww1 of wild {
+                   GHC.Types.False
+                   -> Data.Array.Accelerate.FullList.lookupL @ k @ v w w1 ww3
+                   GHC.Types.True -> GHC.Base.Just @ v ww2 } }) -}
+e8725205978b2a47d2dff06c61c801eb
+  lookupDelete ::
+    GHC.Classes.Eq k =>
+    k
+    -> Data.Array.Accelerate.FullList.FullList k v
+    -> (GHC.Base.Maybe v,
+        GHC.Base.Maybe (Data.Array.Accelerate.FullList.FullList k v))
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><L,U><S(SLS),1*U(U,U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ k
+                   @ v
+                   (w :: GHC.Classes.Eq k)
+                   (w1 :: k)
+                   (w2 :: Data.Array.Accelerate.FullList.FullList k v) ->
+                 case w2 of ww { Data.Array.Accelerate.FullList.FL ww1 ww2 ww3 ->
+                 case GHC.Classes.== @ k w w1 ww1 of wild {
+                   GHC.Types.False
+                   -> case Data.Array.Accelerate.FullList.$wlookupDeleteL
+                             @ k
+                             @ v
+                             w
+                             ww1
+                             ww3 of ww4 { (#,#) ww5 ww6 ->
+                      (ww5,
+                       GHC.Base.Just
+                         @ (Data.Array.Accelerate.FullList.FullList k v)
+                         (case ww6 of dt { DEFAULT ->
+                          Data.Array.Accelerate.FullList.FL @ k @ v ww1 ww2 dt })) }
+                   GHC.Types.True
+                   -> case ww3 of wild1 {
+                        Data.Array.Accelerate.FullList.Nil
+                        -> (GHC.Base.Just @ v ww2,
+                            GHC.Base.Nothing @ (Data.Array.Accelerate.FullList.FullList k v))
+                        Data.Array.Accelerate.FullList.Cons k' v' xs'
+                        -> (GHC.Base.Just @ v ww2,
+                            GHC.Base.Just
+                              @ (Data.Array.Accelerate.FullList.FullList k v)
+                              (Data.Array.Accelerate.FullList.FL @ k @ v k' v' xs')) } } }) -}
+bcc037a5c0c102a57c978c7a31d24cbf
+  lookupDelete_$slookupDelete ::
+    ()
+    -> Data.Array.Accelerate.FullList.FullList () v
+    -> (GHC.Base.Maybe v,
+        GHC.Base.Maybe (Data.Array.Accelerate.FullList.FullList () v))
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*H><S(LLS),1*U(A,U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ v
+                   (w :: ())
+                   (w1 :: Data.Array.Accelerate.FullList.FullList () v) ->
+                 case w of w2 { () ->
+                 case w1 of ww { Data.Array.Accelerate.FullList.FL ww1 ww2 ww3 ->
+                 case ww3 of wild {
+                   Data.Array.Accelerate.FullList.Nil
+                   -> (GHC.Base.Just @ v ww2,
+                       GHC.Base.Nothing @ (Data.Array.Accelerate.FullList.FullList () v))
+                   Data.Array.Accelerate.FullList.Cons k' v' xs'
+                   -> (GHC.Base.Just @ v ww2,
+                       GHC.Base.Just
+                         @ (Data.Array.Accelerate.FullList.FullList () v)
+                         (Data.Array.Accelerate.FullList.FL @ () @ v k' v' xs')) } } }) -}
+6e901776006da27d1e2a8bbed9b703f4
+  lookupL ::
+    GHC.Classes.Eq k =>
+    k -> Data.Array.Accelerate.FullList.List k v -> GHC.Base.Maybe v
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><S,1*U><S,1*U>,
+     Inline: INLINABLE[ALWAYS],
+     Unfolding: <stable> (\ @ k
+                            @ v
+                            ($dEq :: GHC.Classes.Eq k)
+                            (key :: k)
+                            (eta :: Data.Array.Accelerate.FullList.List k v) ->
+                          case key of key1 { DEFAULT ->
+                          letrec {
+                            go :: Data.Array.Accelerate.FullList.List k v -> GHC.Base.Maybe v
+                              {- Arity: 1 -}
+                            = \ (ds :: Data.Array.Accelerate.FullList.List k v) ->
+                              case ds of wild {
+                                Data.Array.Accelerate.FullList.Nil -> GHC.Base.Nothing @ v
+                                Data.Array.Accelerate.FullList.Cons k1 v1 xs
+                                -> case GHC.Classes.== @ k $dEq key1 k1 of wild1 {
+                                     GHC.Types.False -> go xs
+                                     GHC.Types.True -> GHC.Base.Just @ v v1 } }
+                          } in
+                          go eta }) -}
+3cb9b3be723b92c00a21ed5c0684e9b3
+  lookup_$slookup ::
+    ()
+    -> Data.Array.Accelerate.FullList.FullList () v -> GHC.Base.Maybe v
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*H><S,1*U(A,U,A)>m2,
+     Inline: INLINABLE[ALWAYS],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ v
+                   (key :: ())
+                   (ds :: Data.Array.Accelerate.FullList.FullList () v) ->
+                 case ds of wild { Data.Array.Accelerate.FullList.FL k v1 xs ->
+                 case key of wild1 { () -> GHC.Base.Just @ v v1 } }) -}
+d61fe6c6f86446d077e1b65f8823b602
+  lookup_$slookupL ::
+    () -> Data.Array.Accelerate.FullList.List () v -> GHC.Base.Maybe v
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*H><S,1*U>,
+     Inline: INLINABLE[ALWAYS],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ v
+                   (key :: ())
+                   (eta :: Data.Array.Accelerate.FullList.List () v) ->
+                 case key of key1 { () ->
+                 case eta of wild {
+                   Data.Array.Accelerate.FullList.Nil -> GHC.Base.Nothing @ v
+                   Data.Array.Accelerate.FullList.Cons k v1 xs
+                   -> GHC.Base.Just @ v v1 } }) -}
+2509b1a968e33638dc5b6f3a31dd58e5
+  mapML_ ::
+    GHC.Base.Monad m =>
+    (k -> v -> m a) -> Data.Array.Accelerate.FullList.List k v -> m ()
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S,U(A,A,C(C1(U)),1*C1(U),A)><S,1*U><S,1*U>,
+     Inline: INLINABLE[ALWAYS],
+     Unfolding: <stable> (\ @ (m :: * -> *)
+                            @ k
+                            @ v
+                            @ a
+                            ($dMonad :: GHC.Base.Monad m)
+                            (f :: k -> v -> m a)
+                            (eta :: Data.Array.Accelerate.FullList.List k v) ->
+                          case f of f1 { DEFAULT ->
+                          letrec {
+                            go :: Data.Array.Accelerate.FullList.List k v -> m ()
+                              {- Arity: 1 -}
+                            = \ (ds :: Data.Array.Accelerate.FullList.List k v) ->
+                              case ds of wild {
+                                Data.Array.Accelerate.FullList.Nil
+                                -> GHC.Base.return @ m $dMonad @ () GHC.Tuple.()
+                                Data.Array.Accelerate.FullList.Cons k1 v1 xs
+                                -> GHC.Base.>> @ m $dMonad @ a @ () (f1 k1 v1) (go xs) }
+                          } in
+                          go eta }) -}
+21c14b45540b7b2d41958011604b9e80
+  mapM_ ::
+    GHC.Base.Monad m =>
+    (k -> v -> m a)
+    -> Data.Array.Accelerate.FullList.FullList k v -> m ()
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LLC(C(S))LL),U(A,A,C(C1(U)),C(U),A)><S,1*U><S(SLS),1*U(U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ (m :: * -> *)
+                   @ k
+                   @ v
+                   @ a
+                   (w :: GHC.Base.Monad m)
+                   (w1 :: k -> v -> m a)
+                   (w2 :: Data.Array.Accelerate.FullList.FullList k v) ->
+                 case w2 of ww { Data.Array.Accelerate.FullList.FL ww1 ww2 ww3 ->
+                 case w1 of f { DEFAULT ->
+                 GHC.Base.>>
+                   @ m
+                   w
+                   @ a
+                   @ ()
+                   (f ww1 ww2)
+                   (Data.Array.Accelerate.FullList.mapML_
+                      @ m
+                      @ k
+                      @ v
+                      @ a
+                      w
+                      f
+                      ww3) } }) -}
+7246fdb46cce7b47e833626beb4206ee
+  singleton :: k -> v -> Data.Array.Accelerate.FullList.FullList k v
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ k @ v (k1 :: k) (v1 :: v) ->
+                 case k1 of dt { DEFAULT ->
+                 Data.Array.Accelerate.FullList.FL
+                   @ k
+                   @ v
+                   dt
+                   v1
+                   (Data.Array.Accelerate.FullList.Nil @ k @ v) }) -}
+5fe714fdc6d65b1c168a34ac6b01b7bb
+  size ::
+    Data.Array.Accelerate.FullList.FullList k v -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ k @ v (ds :: Data.Array.Accelerate.FullList.FullList k v) ->
+                 case ds of wild { Data.Array.Accelerate.FullList.FL ds1 ds2 xs ->
+                 case Data.Array.Accelerate.FullList.sizeL
+                        @ k
+                        @ v
+                        xs of wild1 { GHC.Types.I# y ->
+                 GHC.Types.I# (GHC.Prim.+# 1# y) } }) -}
+8ea6f6b5f44926171e3cb1797aadd3ea
+  sizeL :: Data.Array.Accelerate.FullList.List k v -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>m, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ @ k @ v (w :: Data.Array.Accelerate.FullList.List k v) ->
+                 case Data.Array.Accelerate.FullList.$wsizeL
+                        @ k
+                        @ v
+                        w of ww { DEFAULT ->
+                 GHC.Types.I# ww }) -}
+instance [safe] GHC.Classes.Eq [Data.Array.Accelerate.FullList.FullList]
+  = Data.Array.Accelerate.FullList.$fEqFullList
+instance [safe] GHC.Classes.Eq [Data.Array.Accelerate.FullList.List]
+  = Data.Array.Accelerate.FullList.$fEqList
+"SPEC lookup" [ALWAYS] forall @ v ($dEq :: GHC.Classes.Eq ())
+  Data.Array.Accelerate.FullList.lookup @ () @ v $dEq
+  = Data.Array.Accelerate.FullList.lookup_$slookup @ v
+"SPEC lookupDelete" [ALWAYS] forall @ v ($dEq :: GHC.Classes.Eq ())
+  Data.Array.Accelerate.FullList.lookupDelete @ () @ v $dEq
+  = Data.Array.Accelerate.FullList.lookupDelete_$slookupDelete @ v
+"SPEC lookupL" [ALWAYS] forall @ v ($dEq :: GHC.Classes.Eq ())
+  Data.Array.Accelerate.FullList.lookupL @ () @ v $dEq
+  = Data.Array.Accelerate.FullList.lookup_$slookupL @ v
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

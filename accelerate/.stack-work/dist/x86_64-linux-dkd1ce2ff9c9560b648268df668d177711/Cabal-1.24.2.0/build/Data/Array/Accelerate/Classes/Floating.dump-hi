@@ -1,0 +1,3240 @@
+
+==================== FINAL INTERFACE ====================
+2017-08-29 05:27:36.457992 UTC
+
+interface accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Classes.Floating [orphan module] 8002
+  interface hash: 60f26e894d9e8f3e49102358fda4b328
+  ABI hash: 78c7950257cd37d694096876cf1b7382
+  export-list hash: 691d74993cefe4e7a712f639003341ed
+  orphan hash: 627d4f6055ab3ff7219b807792c11c06
+  flag hash: 2158dc2d57e8bda6a28c5d022066f0d5
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Data.Array.Accelerate.Classes.Floating.Floating
+  GHC.Float.Floating|{GHC.Float.** GHC.Float.acos GHC.Float.acosh GHC.Float.asin GHC.Float.asinh GHC.Float.atan GHC.Float.atanh GHC.Float.cos GHC.Float.cosh GHC.Float.exp GHC.Float.log GHC.Float.logBase GHC.Float.pi GHC.Float.sin GHC.Float.sinh GHC.Float.sqrt GHC.Float.tan GHC.Float.tanh}
+module dependencies: Data.Array.Accelerate.AST
+                     Data.Array.Accelerate.Array.Data
+                     Data.Array.Accelerate.Array.Representation
+                     Data.Array.Accelerate.Array.Sugar
+                     Data.Array.Accelerate.Array.Unique
+                     Data.Array.Accelerate.Classes.Fractional
+                     Data.Array.Accelerate.Classes.Num Data.Array.Accelerate.Debug.Flags
+                     Data.Array.Accelerate.Debug.Monitoring
+                     Data.Array.Accelerate.Debug.Trace Data.Array.Accelerate.Error
+                     Data.Array.Accelerate.Lifetime Data.Array.Accelerate.Product
+                     Data.Array.Accelerate.Smart Data.Array.Accelerate.Type
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol
+                      integer-gmp-1.0.0.1 pretty-1.1.3.3@pretty-1.1.3.3
+                      template-haskell-2.11.1.0
+                      text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00
+                      unique-0@unique-0-9CJQKYGbqiDaFUmoekKeA
+orphans: accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Classes.Fractional
+         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Classes.Num
+         base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu:Data.Orphans
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt:Data.Label.Point
+         hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable.Generic
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Show
+family instance modules: accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Data
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Representation
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Sugar
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Product
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Smart
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Type
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+import  -/  Data.Array.Accelerate.Classes.Fractional 74c1164036fe4be54acc34add9158746
+  exports: 880c91e8ac0c615b5198682ab744764f
+  Fractional 6f99f01ef298935759845630a1e863d2
+import  -/  Data.Array.Accelerate.Smart c6a471aeed497009ce791e94dc05d100
+  exports: 1e3a20050ce25466608a82a26d24d5f0
+  Exp dff601899922d9e86e5ab6941dfbac5f
+  mkAcos e54af217219aa25b7d642c634245745d
+  mkAcosh 5e6e4567f53f5764866f163fc7fc2a26
+  mkAsin 8e8fc4555a90910bebf2a90687dc8c58
+  mkAsinh e74921bec8788bccf7ae010272b45dbd
+  mkAtan 82d301e204c6848783fd85e58930898a
+  mkAtanh 6da891bad21be3910f78b0b431caba23
+  mkCos e941bd4d2aa476391bb561dfa1781df8
+  mkCosh 5d70453bf19ef0c8c602b4b7accc4fa3
+  mkExpFloating 8bb542982a07ef8e19bb4bd659261f35
+  mkFPow ffbd73f1dc4d9da6032f709f718c9aa0
+  mkLog 4e9f97d409d960fb70067147f9364bb6
+  mkLogBase ef8c706aa7558a191d32e51a408bc3ab
+  mkPi be7f115b8e13ed3ce806770b99202066
+  mkSin 811a3b969c5e3b19b1672d957cb3bcdb
+  mkSinh 63c88b790656830975063c38d4b58d13
+  mkSqrt 961227e4eb0b02a70c5866c1d693a5f3
+  mkTan 58d3a8772c463a592a4e32925f5bcf98
+  mkTanh 1b5df456fe442794a31a780f4f9e2970
+import  -/  Data.Array.Accelerate.Type a1c7885f4a79193eaa1f192a9acbec78
+  exports: 7aad7ca015788892b1349ebab929b71f
+import  -/  base-4.9.1.0:Foreign.C.Types bf568ee9a3ec4aa42333a0da5f4345de
+import  -/  base-4.9.1.0:GHC.Float 33e2b9ffe427edd6a5c2fd6a3b26703c
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+2a8c1d8f1d86db16bc8db160f0c97a20
+  $fFloatingExp ::
+    GHC.Float.Floating
+      (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble)
+  DFunId
+  {- Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble)
+                  Data.Array.Accelerate.Classes.Fractional.$fFractionalExp
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$cpi
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$cexp
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$clog
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$csqrt
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$c**
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$clogBase
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$csin
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$ccos
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$ctan
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$casin
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$cacos
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$catan
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$csinh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$ccosh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$ctanh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$casinh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$cacosh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$catanh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$clog1p
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$cexpm1
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$clog1pexp
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$clog1mexp -}
+84c52f5c2d386c179db1cc5c5627abd0
+  $fFloatingExp0 ::
+    GHC.Float.Floating
+      (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat)
+  DFunId
+  {- Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat)
+                  Data.Array.Accelerate.Classes.Fractional.$fFractionalExp0
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$cpi
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$cexp
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$clog
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$csqrt
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$c**
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$clogBase
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$csin
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$ccos
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$ctan
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$casin
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$cacos
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$catan
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$csinh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$ccosh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$ctanh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$casinh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$cacosh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$catanh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$clog1p
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$cexpm1
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$clog1pexp
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$clog1mexp -}
+c5436ef694a88f4ff5caac708c7cfea7
+  $fFloatingExp0_$c** ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp38
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CFloat>_N) -}
+ae3dc99576a00408fe8a08e902b0813c
+  $fFloatingExp0_$cacos ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp32
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CFloat>_N) -}
+c9dd4f30c7820f5e8d9f2179d6b86682
+  $fFloatingExp0_$cacosh ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp26
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CFloat>_N) -}
+27217a113de3bbdf6d8bb8a958ac1dc7
+  $fFloatingExp0_$casin ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp33
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CFloat>_N) -}
+a0c3b5a8c41d3e276fc93a70569f77e4
+  $fFloatingExp0_$casinh ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp27
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CFloat>_N) -}
+879e82062882000f2b340bcf0c4798d1
+  $fFloatingExp0_$catan ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp31
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CFloat>_N) -}
+442b8e949a30b5691ef53aef6865fdf1
+  $fFloatingExp0_$catanh ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp25
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CFloat>_N) -}
+ca86fdb32cd9d80e936ca9d494ac256c
+  $fFloatingExp0_$ccos ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp35
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CFloat>_N) -}
+91d82f36b51099d72e3257e962441422
+  $fFloatingExp0_$ccosh ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp29
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CFloat>_N) -}
+cdc6eec7c3fcd9cd00e3afaecddaa828
+  $fFloatingExp0_$cexp ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp23
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CFloat>_N) -}
+6959a05322aa9c0e5410097b1af85025
+  $fFloatingExp0_$cexpm1 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ (eta :: Data.Array.Accelerate.Smart.Exp
+                             Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Classes.Num.$fNumExp0_$c-
+                   (Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$cexp eta)
+                   (Data.Array.Accelerate.Classes.Num.$fNumExp0_$cfromInteger 1)) -}
+a4b989b45eef41aa4ac11f3594f23ec9
+  $fFloatingExp0_$clog ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp24
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CFloat>_N) -}
+7381795f7ae557b651b0410560f62a44
+  $fFloatingExp0_$clog1mexp ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ (eta :: Data.Array.Accelerate.Smart.Exp
+                             Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$clog
+                   (Data.Array.Accelerate.Classes.Num.$fNumExp0_$c+
+                      (Data.Array.Accelerate.Classes.Num.$fNumExp0_$cfromInteger 1)
+                      (Data.Array.Accelerate.Classes.Num.$fNumExp0_$cnegate
+                         (Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$cexp
+                            eta)))) -}
+acb1e5e2b67b059e7b7be4f6e0424184
+  $fFloatingExp0_$clog1p ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ (eta :: Data.Array.Accelerate.Smart.Exp
+                             Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$clog
+                   (Data.Array.Accelerate.Classes.Num.$fNumExp0_$c+
+                      (Data.Array.Accelerate.Classes.Num.$fNumExp0_$cfromInteger 1)
+                      eta)) -}
+9fb2d89b44a78a08cc04b5c067663831
+  $fFloatingExp0_$clog1pexp ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$clog
+                   (Data.Array.Accelerate.Classes.Num.$fNumExp0_$c+
+                      (Data.Array.Accelerate.Classes.Num.$fNumExp0_$cfromInteger 1)
+                      (Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_$cexp
+                         x))) -}
+22d504c5dd8fe9978c94a285689ede55
+  $fFloatingExp0_$clogBase ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp37
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CFloat>_N) -}
+7900ba879f1c569c49a935d7613fd30a
+  $fFloatingExp0_$cpi ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Strictness: m14,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp40
+                  `cast`
+                (Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CFloat>_N) -}
+9a1dcfa73b27262533920ec00bc8ae68
+  $fFloatingExp0_$csin ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp36
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CFloat>_N) -}
+bb66f283960577fd6469ca0457b5ee83
+  $fFloatingExp0_$csinh ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp30
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CFloat>_N) -}
+7915a6d7f2924716c7351819d168ea5b
+  $fFloatingExp0_$csqrt ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp39
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CFloat>_N) -}
+1e7c0639550549eb0ee1027850aab2a1
+  $fFloatingExp0_$ctan ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp34
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CFloat>_N) -}
+ac27475ad95905b199b4cda843921457
+  $fFloatingExp0_$ctanh ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp28
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CFloat>_N) -}
+bdb6def38283f91fee835e9fd0755202
+  $fFloatingExp0_lvl1 ::
+    Data.Array.Accelerate.AST.PrimFun
+      ((Foreign.C.Types.CFloat, Foreign.C.Types.CFloat)
+       -> Foreign.C.Types.CFloat)
+  {- Unfolding: (Data.Array.Accelerate.AST.PrimFPow
+                   @ ((Foreign.C.Types.CFloat, Foreign.C.Types.CFloat)
+                      -> Foreign.C.Types.CFloat)
+                   @ Foreign.C.Types.CFloat
+                   @~ <(Foreign.C.Types.CFloat, Foreign.C.Types.CFloat)
+                       -> Foreign.C.Types.CFloat>_N
+                   Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType) -}
+6b89500fe02bd5dbed0cdcc4fd7a4547
+  $fFloatingExp0_lvl196 ::
+    Data.Array.Accelerate.Array.Sugar.Elt
+      (Foreign.C.Types.CFloat, Foreign.C.Types.CFloat)
+  {- Unfolding: (Data.Array.Accelerate.Array.Sugar.$fElt(,)
+                   @ Foreign.C.Types.CFloat
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat) -}
+680f9b069283dd8726c892a53034083a
+  $fFloatingExp0_lvl198 ::
+    Data.Array.Accelerate.AST.PrimFun
+      ((Foreign.C.Types.CFloat, Foreign.C.Types.CFloat)
+       -> Foreign.C.Types.CFloat)
+  {- Unfolding: (Data.Array.Accelerate.AST.PrimLogBase
+                   @ ((Foreign.C.Types.CFloat, Foreign.C.Types.CFloat)
+                      -> Foreign.C.Types.CFloat)
+                   @ Foreign.C.Types.CFloat
+                   @~ <(Foreign.C.Types.CFloat, Foreign.C.Types.CFloat)
+                       -> Foreign.C.Types.CFloat>_N
+                   Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType) -}
+6ec27aeaafab9fb2f418da521cc216fc
+  $fFloatingExp0_lvl199 ::
+    Data.Array.Accelerate.Product.IsProduct
+      Data.Array.Accelerate.Array.Sugar.Elt
+      (Foreign.C.Types.CFloat, Foreign.C.Types.CFloat)
+  {- Unfolding: (Data.Array.Accelerate.Product.$fIsProductcst(,)
+                   @ Data.Array.Accelerate.Array.Sugar.Elt
+                   @ Foreign.C.Types.CFloat
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat) -}
+bafa30bfcbb90fb52e7b17ef560acc6f
+  $fFloatingExp1 ::
+    GHC.Float.Floating
+      (Data.Array.Accelerate.Smart.Exp GHC.Types.Double)
+  DFunId
+  {- Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Data.Array.Accelerate.Smart.Exp GHC.Types.Double)
+                  Data.Array.Accelerate.Classes.Fractional.$fFractionalExp1
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$cpi
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$cexp
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$clog
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$csqrt
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$c**
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$clogBase
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$csin
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$ccos
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$ctan
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$casin
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$cacos
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$catan
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$csinh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$ccosh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$ctanh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$casinh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$cacosh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$catanh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$clog1p
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$cexpm1
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$clog1pexp
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$clog1mexp -}
+867ad44ee45ffdaf4aedf937a353a65b
+  $fFloatingExp10 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp
+                           Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CDouble
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   (Data.Array.Accelerate.AST.PrimCosh
+                      @ (Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble)
+                      @ Foreign.C.Types.CDouble
+                      @~ <Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType)
+                   x) -}
+6a57a4330bc1ed4b9cf192c2ca3357ee
+  $fFloatingExp11 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp
+                           Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CDouble
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   (Data.Array.Accelerate.AST.PrimSinh
+                      @ (Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble)
+                      @ Foreign.C.Types.CDouble
+                      @~ <Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType)
+                   x) -}
+43424c8bb00ea44d89d5cb9e391a9c0b
+  $fFloatingExp12 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp
+                           Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CDouble
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   (Data.Array.Accelerate.AST.PrimAtan
+                      @ (Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble)
+                      @ Foreign.C.Types.CDouble
+                      @~ <Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType)
+                   x) -}
+c8a3e803a8477641173b534ec7bfca1f
+  $fFloatingExp13 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp
+                           Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CDouble
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   (Data.Array.Accelerate.AST.PrimAcos
+                      @ (Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble)
+                      @ Foreign.C.Types.CDouble
+                      @~ <Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType)
+                   x) -}
+1b5dc8114282c414387f44152713bd23
+  $fFloatingExp14 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp
+                           Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CDouble
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   (Data.Array.Accelerate.AST.PrimAsin
+                      @ (Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble)
+                      @ Foreign.C.Types.CDouble
+                      @~ <Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType)
+                   x) -}
+1495a177966e530e2ad01db90b087e04
+  $fFloatingExp15 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp
+                           Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CDouble
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   (Data.Array.Accelerate.AST.PrimTan
+                      @ (Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble)
+                      @ Foreign.C.Types.CDouble
+                      @~ <Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType)
+                   x) -}
+8e51e11918f79df058c5a4258590ad4e
+  $fFloatingExp16 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp
+                           Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CDouble
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   (Data.Array.Accelerate.AST.PrimCos
+                      @ (Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble)
+                      @ Foreign.C.Types.CDouble
+                      @~ <Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType)
+                   x) -}
+e9e2889f7ca07724167a981a49a218a3
+  $fFloatingExp17 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp
+                           Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CDouble
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   (Data.Array.Accelerate.AST.PrimSin
+                      @ (Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble)
+                      @ Foreign.C.Types.CDouble
+                      @~ <Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType)
+                   x) -}
+132abe35e4c8dec1ad86416a302ec2a7
+  $fFloatingExp18 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CDouble
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble)
+                   (y :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CDouble
+                   @ (Foreign.C.Types.CDouble, Foreign.C.Types.CDouble)
+                   Data.Array.Accelerate.Classes.Floating.$fFloatingExp_lvl196
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   Data.Array.Accelerate.Classes.Floating.$fFloatingExp_lvl198
+                   (Data.Array.Accelerate.Smart.Tuple
+                      @ Data.Array.Accelerate.Smart.Acc
+                      @ Data.Array.Accelerate.Smart.Exp
+                      @ (Foreign.C.Types.CDouble, Foreign.C.Types.CDouble)
+                      Data.Array.Accelerate.Classes.Floating.$fFloatingExp_lvl196
+                      Data.Array.Accelerate.Classes.Floating.$fFloatingExp_lvl199
+                      (Data.Array.Accelerate.Array.Sugar.SnocTup
+                         @ Data.Array.Accelerate.Smart.Exp
+                         @ (((), Foreign.C.Types.CDouble), Foreign.C.Types.CDouble)
+                         @ Foreign.C.Types.CDouble
+                         @ ((), Foreign.C.Types.CDouble)
+                         @~ <(((), Foreign.C.Types.CDouble), Foreign.C.Types.CDouble)>_N
+                         Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                         (Data.Array.Accelerate.Array.Sugar.SnocTup
+                            @ Data.Array.Accelerate.Smart.Exp
+                            @ ((), Foreign.C.Types.CDouble)
+                            @ Foreign.C.Types.CDouble
+                            @ ()
+                            @~ <((), Foreign.C.Types.CDouble)>_N
+                            Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                            (Data.Array.Accelerate.Array.Sugar.$WNilTup
+                               @ Data.Array.Accelerate.Smart.Exp)
+                            x)
+                         y)
+                        `cast`
+                      (Data.Array.Accelerate.Array.Sugar.Tuple
+                         <Data.Array.Accelerate.Smart.Exp>_R
+                         (Sym (Data.Array.Accelerate.Product.D:R:ProdRepr(,)[0]
+                                   <Foreign.C.Types.CDouble>_N <Foreign.C.Types.CDouble>_N)))_R)
+                     `cast`
+                   (Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <(Foreign.C.Types.CDouble,
+                                                                 Foreign.C.Types.CDouble)>_N)) -}
+694534f0af26fca08c6b92a84c770731
+  $fFloatingExp19 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CDouble
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble)
+                   (y :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CDouble
+                   @ (Foreign.C.Types.CDouble, Foreign.C.Types.CDouble)
+                   Data.Array.Accelerate.Classes.Floating.$fFloatingExp_lvl196
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   Data.Array.Accelerate.Classes.Floating.$fFloatingExp_lvl1
+                   (Data.Array.Accelerate.Smart.Tuple
+                      @ Data.Array.Accelerate.Smart.Acc
+                      @ Data.Array.Accelerate.Smart.Exp
+                      @ (Foreign.C.Types.CDouble, Foreign.C.Types.CDouble)
+                      Data.Array.Accelerate.Classes.Floating.$fFloatingExp_lvl196
+                      Data.Array.Accelerate.Classes.Floating.$fFloatingExp_lvl199
+                      (Data.Array.Accelerate.Array.Sugar.SnocTup
+                         @ Data.Array.Accelerate.Smart.Exp
+                         @ (((), Foreign.C.Types.CDouble), Foreign.C.Types.CDouble)
+                         @ Foreign.C.Types.CDouble
+                         @ ((), Foreign.C.Types.CDouble)
+                         @~ <(((), Foreign.C.Types.CDouble), Foreign.C.Types.CDouble)>_N
+                         Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                         (Data.Array.Accelerate.Array.Sugar.SnocTup
+                            @ Data.Array.Accelerate.Smart.Exp
+                            @ ((), Foreign.C.Types.CDouble)
+                            @ Foreign.C.Types.CDouble
+                            @ ()
+                            @~ <((), Foreign.C.Types.CDouble)>_N
+                            Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                            (Data.Array.Accelerate.Array.Sugar.$WNilTup
+                               @ Data.Array.Accelerate.Smart.Exp)
+                            x)
+                         y)
+                        `cast`
+                      (Data.Array.Accelerate.Array.Sugar.Tuple
+                         <Data.Array.Accelerate.Smart.Exp>_R
+                         (Sym (Data.Array.Accelerate.Product.D:R:ProdRepr(,)[0]
+                                   <Foreign.C.Types.CDouble>_N <Foreign.C.Types.CDouble>_N)))_R)
+                     `cast`
+                   (Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <(Foreign.C.Types.CDouble,
+                                                                 Foreign.C.Types.CDouble)>_N)) -}
+b5acc091d61df41ee77452382ddfb981
+  $fFloatingExp1_$c** ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp57
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Double>_N) -}
+ea69874624d58a42ba522fd88e517c50
+  $fFloatingExp1_$cacos ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp51
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Double>_N) -}
+bc14aafe5c92dc8ddbe90e1670398805
+  $fFloatingExp1_$cacosh ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp45
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Double>_N) -}
+b2f65f76d2a9534babe48e0474845716
+  $fFloatingExp1_$casin ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp52
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Double>_N) -}
+6216dffe07470f16a6961ad6689a404a
+  $fFloatingExp1_$casinh ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp46
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Double>_N) -}
+b17259b63729fe28223341186875cbef
+  $fFloatingExp1_$catan ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp50
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Double>_N) -}
+ee07fff12421f6ab1b1ce73a20d9c540
+  $fFloatingExp1_$catanh ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp44
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Double>_N) -}
+d85614ce6813b103f14be702b041c2bd
+  $fFloatingExp1_$ccos ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp54
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Double>_N) -}
+bf05c0ea27ca986428b1dbebe9692e03
+  $fFloatingExp1_$ccosh ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp48
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Double>_N) -}
+84862c3bd8e9f599c10bffc0145da4d2
+  $fFloatingExp1_$cexp ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp42
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Double>_N) -}
+93c4494155e212cf9da179df49ca2908
+  $fFloatingExp1_$cexpm1 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ (eta :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Classes.Num.$fNumExp1_$c-
+                   (Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$cexp eta)
+                   (Data.Array.Accelerate.Classes.Num.$fNumExp1_$cfromInteger 1)) -}
+05340f7248052f880580699ffb3753f6
+  $fFloatingExp1_$clog ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp43
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Double>_N) -}
+f74e9db03342b02dc51fbfa4ad07006c
+  $fFloatingExp1_$clog1mexp ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ (eta :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$clog
+                   (Data.Array.Accelerate.Classes.Num.$fNumExp1_$c+
+                      (Data.Array.Accelerate.Classes.Num.$fNumExp1_$cfromInteger 1)
+                      (Data.Array.Accelerate.Classes.Num.$fNumExp1_$cnegate
+                         (Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$cexp
+                            eta)))) -}
+c7706107f6b04558cb4ef725f66f0c27
+  $fFloatingExp1_$clog1p ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ (eta :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$clog
+                   (Data.Array.Accelerate.Classes.Num.$fNumExp1_$c+
+                      (Data.Array.Accelerate.Classes.Num.$fNumExp1_$cfromInteger 1)
+                      eta)) -}
+11817389014dca19b89743f3bd713e93
+  $fFloatingExp1_$clog1pexp ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$clog
+                   (Data.Array.Accelerate.Classes.Num.$fNumExp1_$c+
+                      (Data.Array.Accelerate.Classes.Num.$fNumExp1_$cfromInteger 1)
+                      (Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_$cexp
+                         x))) -}
+8d12c203735ddd0c4a2186b37916f92b
+  $fFloatingExp1_$clogBase ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp56
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Double>_N) -}
+36e6e2f0835107a8f011d20f9e340830
+  $fFloatingExp1_$cpi ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Strictness: m14,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp59
+                  `cast`
+                (Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Double>_N) -}
+5bf1421c20e9e4d70b821b3e8423e278
+  $fFloatingExp1_$csin ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp55
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Double>_N) -}
+0e76047659127b8ad3c9168398608fe5
+  $fFloatingExp1_$csinh ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp49
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Double>_N) -}
+9db441ad7788e4b216eb4be502271681
+  $fFloatingExp1_$csqrt ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp58
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Double>_N) -}
+197e3819fd8c52a6a2039bf0d24b26d6
+  $fFloatingExp1_$ctan ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp53
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Double>_N) -}
+5bf933c3555874f296ea5dad7f748e1c
+  $fFloatingExp1_$ctanh ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp47
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Double>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Double>_N) -}
+5a80034582b68291a8f2c6c1bd57d6f4
+  $fFloatingExp1_lvl1 ::
+    Data.Array.Accelerate.AST.PrimFun
+      ((GHC.Types.Double, GHC.Types.Double) -> GHC.Types.Double)
+  {- Unfolding: (Data.Array.Accelerate.AST.PrimFPow
+                   @ ((GHC.Types.Double, GHC.Types.Double) -> GHC.Types.Double)
+                   @ GHC.Types.Double
+                   @~ <(GHC.Types.Double, GHC.Types.Double) -> GHC.Types.Double>_N
+                   Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType) -}
+8d8dad17c335497f452eb134a71a038e
+  $fFloatingExp1_lvl196 ::
+    Data.Array.Accelerate.Array.Sugar.Elt
+      (GHC.Types.Double, GHC.Types.Double)
+  {- Unfolding: (Data.Array.Accelerate.Array.Sugar.$fElt(,)
+                   @ GHC.Types.Double
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble) -}
+3dbb8a4d6cf086e61017bb23d43e637f
+  $fFloatingExp1_lvl198 ::
+    Data.Array.Accelerate.AST.PrimFun
+      ((GHC.Types.Double, GHC.Types.Double) -> GHC.Types.Double)
+  {- Unfolding: (Data.Array.Accelerate.AST.PrimLogBase
+                   @ ((GHC.Types.Double, GHC.Types.Double) -> GHC.Types.Double)
+                   @ GHC.Types.Double
+                   @~ <(GHC.Types.Double, GHC.Types.Double) -> GHC.Types.Double>_N
+                   Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType) -}
+e38008cb75d6def611ad11092ce30d7b
+  $fFloatingExp1_lvl199 ::
+    Data.Array.Accelerate.Product.IsProduct
+      Data.Array.Accelerate.Array.Sugar.Elt
+      (GHC.Types.Double, GHC.Types.Double)
+  {- Unfolding: (Data.Array.Accelerate.Product.$fIsProductcst(,)
+                   @ Data.Array.Accelerate.Array.Sugar.Elt
+                   @ GHC.Types.Double
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble) -}
+640796a1b8068610fed09dc8bae2606a
+  $fFloatingExp2 ::
+    GHC.Float.Floating
+      (Data.Array.Accelerate.Smart.Exp GHC.Types.Float)
+  DFunId
+  {- Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Data.Array.Accelerate.Smart.Exp GHC.Types.Float)
+                  Data.Array.Accelerate.Classes.Fractional.$fFractionalExp2
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$cpi
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$cexp
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$clog
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$csqrt
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$c**
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$clogBase
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$csin
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$ccos
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$ctan
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$casin
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$cacos
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$catan
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$csinh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$ccosh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$ctanh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$casinh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$cacosh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$catanh
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$clog1p
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$cexpm1
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$clog1pexp
+                  Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$clog1mexp -}
+261f6ea674a25514370a53a6f3cde92f
+  $fFloatingExp20 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp
+                           Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CDouble
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   (Data.Array.Accelerate.AST.PrimSqrt
+                      @ (Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble)
+                      @ Foreign.C.Types.CDouble
+                      @~ <Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType)
+                   x) -}
+6dd029a537eeaee84483442f6cad13fc
+  $fFloatingExp21 ::
+    Data.Array.Accelerate.Smart.PreExp
+      Data.Array.Accelerate.Smart.Acc
+      Data.Array.Accelerate.Smart.Exp
+      Foreign.C.Types.CDouble
+  {- Strictness: m14,
+     Unfolding: (Data.Array.Accelerate.Smart.PrimConst
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   Data.Array.Accelerate.Classes.Floating.$fFloatingExp22) -}
+5a4ee413a48cf1569d70cf191bb64d2e
+  $fFloatingExp22 ::
+    Data.Array.Accelerate.AST.PrimConst Foreign.C.Types.CDouble
+  {- Strictness: m3,
+     Unfolding: (Data.Array.Accelerate.AST.PrimPi
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType) -}
+2389b2120f83f551229c0c8c14c92eb7
+  $fFloatingExp23 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CFloat
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   (Data.Array.Accelerate.AST.PrimExpFloating
+                      @ (Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat)
+                      @ Foreign.C.Types.CFloat
+                      @~ <Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType)
+                   x) -}
+54f9d2d6bc6281a78ecc1cef6196f07d
+  $fFloatingExp24 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CFloat
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   (Data.Array.Accelerate.AST.PrimLog
+                      @ (Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat)
+                      @ Foreign.C.Types.CFloat
+                      @~ <Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType)
+                   x) -}
+63076a71e38e14a7dd26e13b6cfc7d0d
+  $fFloatingExp25 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CFloat
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   (Data.Array.Accelerate.AST.PrimAtanh
+                      @ (Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat)
+                      @ Foreign.C.Types.CFloat
+                      @~ <Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType)
+                   x) -}
+fd387bd1cd387c796a1ad901ec6124fe
+  $fFloatingExp26 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CFloat
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   (Data.Array.Accelerate.AST.PrimAcosh
+                      @ (Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat)
+                      @ Foreign.C.Types.CFloat
+                      @~ <Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType)
+                   x) -}
+4843577faa404f778de3d4eb03cb4aec
+  $fFloatingExp27 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CFloat
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   (Data.Array.Accelerate.AST.PrimAsinh
+                      @ (Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat)
+                      @ Foreign.C.Types.CFloat
+                      @~ <Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType)
+                   x) -}
+83a30d7223536d7fe88672437583246c
+  $fFloatingExp28 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CFloat
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   (Data.Array.Accelerate.AST.PrimTanh
+                      @ (Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat)
+                      @ Foreign.C.Types.CFloat
+                      @~ <Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType)
+                   x) -}
+74eee8e67eca393d30447edde5900da8
+  $fFloatingExp29 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CFloat
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   (Data.Array.Accelerate.AST.PrimCosh
+                      @ (Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat)
+                      @ Foreign.C.Types.CFloat
+                      @~ <Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType)
+                   x) -}
+eec6dfd5b282a33e0b1aab78551c6312
+  $fFloatingExp2_$c** ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp76
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Float>_N) -}
+bb49c73f17f5fb13b3032b48e149b20c
+  $fFloatingExp2_$cacos ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp70
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Float>_N) -}
+d3c121b9f111fa02b002dbe2a2f87245
+  $fFloatingExp2_$cacosh ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp64
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Float>_N) -}
+846047fa930642369159092b1ef80f06
+  $fFloatingExp2_$casin ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp71
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Float>_N) -}
+78c565974637c3d2594d16fd0f2d50bd
+  $fFloatingExp2_$casinh ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp65
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Float>_N) -}
+f64ecac4d29156a2db6a6ddcb79cf4a5
+  $fFloatingExp2_$catan ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp69
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Float>_N) -}
+9bc2e8066e278c2aec13b5b254b89723
+  $fFloatingExp2_$catanh ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp63
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Float>_N) -}
+f8004c8d7844864eb542c51d05bcae98
+  $fFloatingExp2_$ccos ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp73
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Float>_N) -}
+e925d8428582122755f739d7496a84c1
+  $fFloatingExp2_$ccosh ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp67
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Float>_N) -}
+e0f3259ba53e407cbdeb2a40b1b3d61d
+  $fFloatingExp2_$cexp ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp61
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Float>_N) -}
+5c434e4a6a37852748ece961762e4a44
+  $fFloatingExp2_$cexpm1 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ (eta :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Classes.Num.$fNumExp2_$c-
+                   (Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$cexp eta)
+                   (Data.Array.Accelerate.Classes.Num.$fNumExp2_$cfromInteger 1)) -}
+cdd58b946842dfa079714d6e99c863cf
+  $fFloatingExp2_$clog ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp62
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Float>_N) -}
+ae2c5170eb31be7e9c5ba7d0f4219127
+  $fFloatingExp2_$clog1mexp ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ (eta :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$clog
+                   (Data.Array.Accelerate.Classes.Num.$fNumExp2_$c+
+                      (Data.Array.Accelerate.Classes.Num.$fNumExp2_$cfromInteger 1)
+                      (Data.Array.Accelerate.Classes.Num.$fNumExp2_$cnegate
+                         (Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$cexp
+                            eta)))) -}
+12d89912cc0bc5c000375cd99919093e
+  $fFloatingExp2_$clog1p ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ (eta :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$clog
+                   (Data.Array.Accelerate.Classes.Num.$fNumExp2_$c+
+                      (Data.Array.Accelerate.Classes.Num.$fNumExp2_$cfromInteger 1)
+                      eta)) -}
+733e53eacc81a9c6723367784bd9d98b
+  $fFloatingExp2_$clog1pexp ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$clog
+                   (Data.Array.Accelerate.Classes.Num.$fNumExp2_$c+
+                      (Data.Array.Accelerate.Classes.Num.$fNumExp2_$cfromInteger 1)
+                      (Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_$cexp
+                         x))) -}
+b69e2a6d364f45e9bab87f0348baeb80
+  $fFloatingExp2_$clogBase ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp75
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Float>_N) -}
+b546b6baf066bc754e7cf614352eafd2
+  $fFloatingExp2_$cpi ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Strictness: m14,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp78
+                  `cast`
+                (Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Float>_N) -}
+63062243c53ad9bc62a201a475706d16
+  $fFloatingExp2_$csin ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp74
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Float>_N) -}
+a01e955c70bb9335586505abb84bff55
+  $fFloatingExp2_$csinh ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp68
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Float>_N) -}
+a82e4bd92b3baaa49870e4e0efdfda9b
+  $fFloatingExp2_$csqrt ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp77
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Float>_N) -}
+dac0ed1d455223d6167cee94dd258ddf
+  $fFloatingExp2_$ctan ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp72
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Float>_N) -}
+8c30768566d829a0fce806efd9fc9675
+  $fFloatingExp2_$ctanh ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp66
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp GHC.Types.Float>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <GHC.Types.Float>_N) -}
+67d514d66366ab1da1420953cedb93cb
+  $fFloatingExp2_lvl1 ::
+    Data.Array.Accelerate.AST.PrimFun
+      ((GHC.Types.Float, GHC.Types.Float) -> GHC.Types.Float)
+  {- Unfolding: (Data.Array.Accelerate.AST.PrimFPow
+                   @ ((GHC.Types.Float, GHC.Types.Float) -> GHC.Types.Float)
+                   @ GHC.Types.Float
+                   @~ <(GHC.Types.Float, GHC.Types.Float) -> GHC.Types.Float>_N
+                   Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType) -}
+db8e29f8477067c9f668cc1b5f5bf1c2
+  $fFloatingExp2_lvl196 ::
+    Data.Array.Accelerate.Array.Sugar.Elt
+      (GHC.Types.Float, GHC.Types.Float)
+  {- Unfolding: (Data.Array.Accelerate.Array.Sugar.$fElt(,)
+                   @ GHC.Types.Float
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat) -}
+df01c65cde3097dce9960a63e3c8edc6
+  $fFloatingExp2_lvl198 ::
+    Data.Array.Accelerate.AST.PrimFun
+      ((GHC.Types.Float, GHC.Types.Float) -> GHC.Types.Float)
+  {- Unfolding: (Data.Array.Accelerate.AST.PrimLogBase
+                   @ ((GHC.Types.Float, GHC.Types.Float) -> GHC.Types.Float)
+                   @ GHC.Types.Float
+                   @~ <(GHC.Types.Float, GHC.Types.Float) -> GHC.Types.Float>_N
+                   Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType) -}
+60c972c133bb53ca0b454e16698fa2b9
+  $fFloatingExp2_lvl199 ::
+    Data.Array.Accelerate.Product.IsProduct
+      Data.Array.Accelerate.Array.Sugar.Elt
+      (GHC.Types.Float, GHC.Types.Float)
+  {- Unfolding: (Data.Array.Accelerate.Product.$fIsProductcst(,)
+                   @ Data.Array.Accelerate.Array.Sugar.Elt
+                   @ GHC.Types.Float
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat) -}
+07d8854540018e14e97c726545e7b760
+  $fFloatingExp30 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CFloat
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   (Data.Array.Accelerate.AST.PrimSinh
+                      @ (Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat)
+                      @ Foreign.C.Types.CFloat
+                      @~ <Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType)
+                   x) -}
+54d556dcd523706f9fe004cfef15ae3f
+  $fFloatingExp31 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CFloat
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   (Data.Array.Accelerate.AST.PrimAtan
+                      @ (Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat)
+                      @ Foreign.C.Types.CFloat
+                      @~ <Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType)
+                   x) -}
+7a9bc7cf4628ea72f71bcaf3069eb948
+  $fFloatingExp32 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CFloat
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   (Data.Array.Accelerate.AST.PrimAcos
+                      @ (Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat)
+                      @ Foreign.C.Types.CFloat
+                      @~ <Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType)
+                   x) -}
+2f2b300f4e4e86161602ac2a29755e62
+  $fFloatingExp33 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CFloat
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   (Data.Array.Accelerate.AST.PrimAsin
+                      @ (Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat)
+                      @ Foreign.C.Types.CFloat
+                      @~ <Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType)
+                   x) -}
+df6a566d72a9cab39bdc4fe1aaa837be
+  $fFloatingExp34 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CFloat
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   (Data.Array.Accelerate.AST.PrimTan
+                      @ (Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat)
+                      @ Foreign.C.Types.CFloat
+                      @~ <Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType)
+                   x) -}
+d22dd807670d302649498aaf741f678a
+  $fFloatingExp35 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CFloat
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   (Data.Array.Accelerate.AST.PrimCos
+                      @ (Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat)
+                      @ Foreign.C.Types.CFloat
+                      @~ <Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType)
+                   x) -}
+2acfee1c2a725b80970e391fbd124e81
+  $fFloatingExp36 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CFloat
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   (Data.Array.Accelerate.AST.PrimSin
+                      @ (Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat)
+                      @ Foreign.C.Types.CFloat
+                      @~ <Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType)
+                   x) -}
+0e3038cc49764784a8efbc17b2772b39
+  $fFloatingExp37 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CFloat
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat)
+                   (y :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CFloat
+                   @ (Foreign.C.Types.CFloat, Foreign.C.Types.CFloat)
+                   Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_lvl196
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_lvl198
+                   (Data.Array.Accelerate.Smart.Tuple
+                      @ Data.Array.Accelerate.Smart.Acc
+                      @ Data.Array.Accelerate.Smart.Exp
+                      @ (Foreign.C.Types.CFloat, Foreign.C.Types.CFloat)
+                      Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_lvl196
+                      Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_lvl199
+                      (Data.Array.Accelerate.Array.Sugar.SnocTup
+                         @ Data.Array.Accelerate.Smart.Exp
+                         @ (((), Foreign.C.Types.CFloat), Foreign.C.Types.CFloat)
+                         @ Foreign.C.Types.CFloat
+                         @ ((), Foreign.C.Types.CFloat)
+                         @~ <(((), Foreign.C.Types.CFloat), Foreign.C.Types.CFloat)>_N
+                         Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                         (Data.Array.Accelerate.Array.Sugar.SnocTup
+                            @ Data.Array.Accelerate.Smart.Exp
+                            @ ((), Foreign.C.Types.CFloat)
+                            @ Foreign.C.Types.CFloat
+                            @ ()
+                            @~ <((), Foreign.C.Types.CFloat)>_N
+                            Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                            (Data.Array.Accelerate.Array.Sugar.$WNilTup
+                               @ Data.Array.Accelerate.Smart.Exp)
+                            x)
+                         y)
+                        `cast`
+                      (Data.Array.Accelerate.Array.Sugar.Tuple
+                         <Data.Array.Accelerate.Smart.Exp>_R
+                         (Sym (Data.Array.Accelerate.Product.D:R:ProdRepr(,)[0]
+                                   <Foreign.C.Types.CFloat>_N <Foreign.C.Types.CFloat>_N)))_R)
+                     `cast`
+                   (Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <(Foreign.C.Types.CFloat,
+                                                                 Foreign.C.Types.CFloat)>_N)) -}
+7047656827ef1f4ba5cef09fbd565f4d
+  $fFloatingExp38 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CFloat
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat)
+                   (y :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CFloat
+                   @ (Foreign.C.Types.CFloat, Foreign.C.Types.CFloat)
+                   Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_lvl196
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_lvl1
+                   (Data.Array.Accelerate.Smart.Tuple
+                      @ Data.Array.Accelerate.Smart.Acc
+                      @ Data.Array.Accelerate.Smart.Exp
+                      @ (Foreign.C.Types.CFloat, Foreign.C.Types.CFloat)
+                      Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_lvl196
+                      Data.Array.Accelerate.Classes.Floating.$fFloatingExp0_lvl199
+                      (Data.Array.Accelerate.Array.Sugar.SnocTup
+                         @ Data.Array.Accelerate.Smart.Exp
+                         @ (((), Foreign.C.Types.CFloat), Foreign.C.Types.CFloat)
+                         @ Foreign.C.Types.CFloat
+                         @ ((), Foreign.C.Types.CFloat)
+                         @~ <(((), Foreign.C.Types.CFloat), Foreign.C.Types.CFloat)>_N
+                         Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                         (Data.Array.Accelerate.Array.Sugar.SnocTup
+                            @ Data.Array.Accelerate.Smart.Exp
+                            @ ((), Foreign.C.Types.CFloat)
+                            @ Foreign.C.Types.CFloat
+                            @ ()
+                            @~ <((), Foreign.C.Types.CFloat)>_N
+                            Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                            (Data.Array.Accelerate.Array.Sugar.$WNilTup
+                               @ Data.Array.Accelerate.Smart.Exp)
+                            x)
+                         y)
+                        `cast`
+                      (Data.Array.Accelerate.Array.Sugar.Tuple
+                         <Data.Array.Accelerate.Smart.Exp>_R
+                         (Sym (Data.Array.Accelerate.Product.D:R:ProdRepr(,)[0]
+                                   <Foreign.C.Types.CFloat>_N <Foreign.C.Types.CFloat>_N)))_R)
+                     `cast`
+                   (Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <(Foreign.C.Types.CFloat,
+                                                                 Foreign.C.Types.CFloat)>_N)) -}
+7e2655bf5eb48e6e268e61d961e5a667
+  $fFloatingExp39 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CFloat
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CFloat) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CFloat
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   (Data.Array.Accelerate.AST.PrimSqrt
+                      @ (Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat)
+                      @ Foreign.C.Types.CFloat
+                      @~ <Foreign.C.Types.CFloat -> Foreign.C.Types.CFloat>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType)
+                   x) -}
+a344004ace0d8a515d5bc551429204f9
+  $fFloatingExp4 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp
+                           Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CDouble
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   (Data.Array.Accelerate.AST.PrimExpFloating
+                      @ (Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble)
+                      @ Foreign.C.Types.CDouble
+                      @~ <Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType)
+                   x) -}
+c6cda76a201d9e4cf15ffe2935f8aac9
+  $fFloatingExp40 ::
+    Data.Array.Accelerate.Smart.PreExp
+      Data.Array.Accelerate.Smart.Acc
+      Data.Array.Accelerate.Smart.Exp
+      Foreign.C.Types.CFloat
+  {- Strictness: m14,
+     Unfolding: (Data.Array.Accelerate.Smart.PrimConst
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltCFloat
+                   Data.Array.Accelerate.Classes.Floating.$fFloatingExp41) -}
+b712056de2cb39895a9a1980933ca83a
+  $fFloatingExp41 ::
+    Data.Array.Accelerate.AST.PrimConst Foreign.C.Types.CFloat
+  {- Strictness: m3,
+     Unfolding: (Data.Array.Accelerate.AST.PrimPi
+                   @ Foreign.C.Types.CFloat
+                   Data.Array.Accelerate.Type.$fIsFloatingCFloat_$cfloatingType) -}
+4c13433244b05e72adf95c37c53f6351
+  $fFloatingExp42 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Double
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   (Data.Array.Accelerate.AST.PrimExpFloating
+                      @ (GHC.Types.Double -> GHC.Types.Double)
+                      @ GHC.Types.Double
+                      @~ <GHC.Types.Double -> GHC.Types.Double>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType)
+                   x) -}
+db97b3477255e2dcf45ca27411e9e96a
+  $fFloatingExp43 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Double
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   (Data.Array.Accelerate.AST.PrimLog
+                      @ (GHC.Types.Double -> GHC.Types.Double)
+                      @ GHC.Types.Double
+                      @~ <GHC.Types.Double -> GHC.Types.Double>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType)
+                   x) -}
+4946844e556bc2155db104fcd0d001b9
+  $fFloatingExp44 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Double
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   (Data.Array.Accelerate.AST.PrimAtanh
+                      @ (GHC.Types.Double -> GHC.Types.Double)
+                      @ GHC.Types.Double
+                      @~ <GHC.Types.Double -> GHC.Types.Double>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType)
+                   x) -}
+8adfcbd00a6b6645b4fe68073e76c9fc
+  $fFloatingExp45 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Double
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   (Data.Array.Accelerate.AST.PrimAcosh
+                      @ (GHC.Types.Double -> GHC.Types.Double)
+                      @ GHC.Types.Double
+                      @~ <GHC.Types.Double -> GHC.Types.Double>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType)
+                   x) -}
+06f71e636f1b83ccb4cdb186a500e1cb
+  $fFloatingExp46 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Double
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   (Data.Array.Accelerate.AST.PrimAsinh
+                      @ (GHC.Types.Double -> GHC.Types.Double)
+                      @ GHC.Types.Double
+                      @~ <GHC.Types.Double -> GHC.Types.Double>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType)
+                   x) -}
+606950aeba8facd9bb6714abf8ab3155
+  $fFloatingExp47 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Double
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   (Data.Array.Accelerate.AST.PrimTanh
+                      @ (GHC.Types.Double -> GHC.Types.Double)
+                      @ GHC.Types.Double
+                      @~ <GHC.Types.Double -> GHC.Types.Double>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType)
+                   x) -}
+6a0b08cb979faa4b09ce0e2e93ab46e8
+  $fFloatingExp48 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Double
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   (Data.Array.Accelerate.AST.PrimCosh
+                      @ (GHC.Types.Double -> GHC.Types.Double)
+                      @ GHC.Types.Double
+                      @~ <GHC.Types.Double -> GHC.Types.Double>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType)
+                   x) -}
+625d5c5c4a942df5a5b5a26582d6aa71
+  $fFloatingExp49 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Double
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   (Data.Array.Accelerate.AST.PrimSinh
+                      @ (GHC.Types.Double -> GHC.Types.Double)
+                      @ GHC.Types.Double
+                      @~ <GHC.Types.Double -> GHC.Types.Double>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType)
+                   x) -}
+3d9fa761182fb9c59affc75d4f36e9b3
+  $fFloatingExp5 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp
+                           Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CDouble
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   (Data.Array.Accelerate.AST.PrimLog
+                      @ (Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble)
+                      @ Foreign.C.Types.CDouble
+                      @~ <Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType)
+                   x) -}
+e652f63e62ea22002b13bac3f5153c90
+  $fFloatingExp50 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Double
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   (Data.Array.Accelerate.AST.PrimAtan
+                      @ (GHC.Types.Double -> GHC.Types.Double)
+                      @ GHC.Types.Double
+                      @~ <GHC.Types.Double -> GHC.Types.Double>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType)
+                   x) -}
+1a7843d1a4a5d6923150f67241b064ae
+  $fFloatingExp51 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Double
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   (Data.Array.Accelerate.AST.PrimAcos
+                      @ (GHC.Types.Double -> GHC.Types.Double)
+                      @ GHC.Types.Double
+                      @~ <GHC.Types.Double -> GHC.Types.Double>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType)
+                   x) -}
+d3505be8d5a2f2015ea4e564bc41b3b2
+  $fFloatingExp52 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Double
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   (Data.Array.Accelerate.AST.PrimAsin
+                      @ (GHC.Types.Double -> GHC.Types.Double)
+                      @ GHC.Types.Double
+                      @~ <GHC.Types.Double -> GHC.Types.Double>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType)
+                   x) -}
+0937a0b3833a9310148acf8b926e39d0
+  $fFloatingExp53 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Double
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   (Data.Array.Accelerate.AST.PrimTan
+                      @ (GHC.Types.Double -> GHC.Types.Double)
+                      @ GHC.Types.Double
+                      @~ <GHC.Types.Double -> GHC.Types.Double>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType)
+                   x) -}
+77c330525344867723bfa697d4cab352
+  $fFloatingExp54 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Double
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   (Data.Array.Accelerate.AST.PrimCos
+                      @ (GHC.Types.Double -> GHC.Types.Double)
+                      @ GHC.Types.Double
+                      @~ <GHC.Types.Double -> GHC.Types.Double>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType)
+                   x) -}
+1f2795cd7c2ac23613cf5cfbc064a7b8
+  $fFloatingExp55 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Double
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   (Data.Array.Accelerate.AST.PrimSin
+                      @ (GHC.Types.Double -> GHC.Types.Double)
+                      @ GHC.Types.Double
+                      @~ <GHC.Types.Double -> GHC.Types.Double>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType)
+                   x) -}
+cd7efa37510e933d14757c6216fa4b67
+  $fFloatingExp56 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Double
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double)
+                   (y :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Double
+                   @ (GHC.Types.Double, GHC.Types.Double)
+                   Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_lvl196
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_lvl198
+                   (Data.Array.Accelerate.Smart.Tuple
+                      @ Data.Array.Accelerate.Smart.Acc
+                      @ Data.Array.Accelerate.Smart.Exp
+                      @ (GHC.Types.Double, GHC.Types.Double)
+                      Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_lvl196
+                      Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_lvl199
+                      (Data.Array.Accelerate.Array.Sugar.SnocTup
+                         @ Data.Array.Accelerate.Smart.Exp
+                         @ (((), GHC.Types.Double), GHC.Types.Double)
+                         @ GHC.Types.Double
+                         @ ((), GHC.Types.Double)
+                         @~ <(((), GHC.Types.Double), GHC.Types.Double)>_N
+                         Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                         (Data.Array.Accelerate.Array.Sugar.SnocTup
+                            @ Data.Array.Accelerate.Smart.Exp
+                            @ ((), GHC.Types.Double)
+                            @ GHC.Types.Double
+                            @ ()
+                            @~ <((), GHC.Types.Double)>_N
+                            Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                            (Data.Array.Accelerate.Array.Sugar.$WNilTup
+                               @ Data.Array.Accelerate.Smart.Exp)
+                            x)
+                         y)
+                        `cast`
+                      (Data.Array.Accelerate.Array.Sugar.Tuple
+                         <Data.Array.Accelerate.Smart.Exp>_R
+                         (Sym (Data.Array.Accelerate.Product.D:R:ProdRepr(,)[0]
+                                   <GHC.Types.Double>_N <GHC.Types.Double>_N)))_R)
+                     `cast`
+                   (Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <(GHC.Types.Double,
+                                                                 GHC.Types.Double)>_N)) -}
+e828a02681794e2e2ca8f0bedc594283
+  $fFloatingExp57 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Double
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double)
+                   (y :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Double
+                   @ (GHC.Types.Double, GHC.Types.Double)
+                   Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_lvl196
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_lvl1
+                   (Data.Array.Accelerate.Smart.Tuple
+                      @ Data.Array.Accelerate.Smart.Acc
+                      @ Data.Array.Accelerate.Smart.Exp
+                      @ (GHC.Types.Double, GHC.Types.Double)
+                      Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_lvl196
+                      Data.Array.Accelerate.Classes.Floating.$fFloatingExp1_lvl199
+                      (Data.Array.Accelerate.Array.Sugar.SnocTup
+                         @ Data.Array.Accelerate.Smart.Exp
+                         @ (((), GHC.Types.Double), GHC.Types.Double)
+                         @ GHC.Types.Double
+                         @ ((), GHC.Types.Double)
+                         @~ <(((), GHC.Types.Double), GHC.Types.Double)>_N
+                         Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                         (Data.Array.Accelerate.Array.Sugar.SnocTup
+                            @ Data.Array.Accelerate.Smart.Exp
+                            @ ((), GHC.Types.Double)
+                            @ GHC.Types.Double
+                            @ ()
+                            @~ <((), GHC.Types.Double)>_N
+                            Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                            (Data.Array.Accelerate.Array.Sugar.$WNilTup
+                               @ Data.Array.Accelerate.Smart.Exp)
+                            x)
+                         y)
+                        `cast`
+                      (Data.Array.Accelerate.Array.Sugar.Tuple
+                         <Data.Array.Accelerate.Smart.Exp>_R
+                         (Sym (Data.Array.Accelerate.Product.D:R:ProdRepr(,)[0]
+                                   <GHC.Types.Double>_N <GHC.Types.Double>_N)))_R)
+                     `cast`
+                   (Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <(GHC.Types.Double,
+                                                                 GHC.Types.Double)>_N)) -}
+283995c9eb55c9a3d7d27476bbbd96a9
+  $fFloatingExp58 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Double
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Double
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Double) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Double
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   (Data.Array.Accelerate.AST.PrimSqrt
+                      @ (GHC.Types.Double -> GHC.Types.Double)
+                      @ GHC.Types.Double
+                      @~ <GHC.Types.Double -> GHC.Types.Double>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType)
+                   x) -}
+b38edc46e4cb4b278d069791739cfb26
+  $fFloatingExp59 ::
+    Data.Array.Accelerate.Smart.PreExp
+      Data.Array.Accelerate.Smart.Acc
+      Data.Array.Accelerate.Smart.Exp
+      GHC.Types.Double
+  {- Strictness: m14,
+     Unfolding: (Data.Array.Accelerate.Smart.PrimConst
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Array.Sugar.$fEltDouble
+                   Data.Array.Accelerate.Classes.Floating.$fFloatingExp60) -}
+0cfa4d4d3f327eb2ff22aa9a22b4b333
+  $fFloatingExp6 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp
+                           Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CDouble
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   (Data.Array.Accelerate.AST.PrimAtanh
+                      @ (Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble)
+                      @ Foreign.C.Types.CDouble
+                      @~ <Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType)
+                   x) -}
+4cb0a648659bf9f4e2701c9ecb0a73a8
+  $fFloatingExp60 ::
+    Data.Array.Accelerate.AST.PrimConst GHC.Types.Double
+  {- Strictness: m3,
+     Unfolding: (Data.Array.Accelerate.AST.PrimPi
+                   @ GHC.Types.Double
+                   Data.Array.Accelerate.Type.$fIsFloatingDouble_$cfloatingType) -}
+8180bd9bb482255b796232d3ffc361c3
+  $fFloatingExp61 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Float
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   (Data.Array.Accelerate.AST.PrimExpFloating
+                      @ (GHC.Types.Float -> GHC.Types.Float)
+                      @ GHC.Types.Float
+                      @~ <GHC.Types.Float -> GHC.Types.Float>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType)
+                   x) -}
+8fa5bb4726981affb13f3f9248bcb206
+  $fFloatingExp62 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Float
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   (Data.Array.Accelerate.AST.PrimLog
+                      @ (GHC.Types.Float -> GHC.Types.Float)
+                      @ GHC.Types.Float
+                      @~ <GHC.Types.Float -> GHC.Types.Float>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType)
+                   x) -}
+7fca9b3c6620aa0b1d8be442d5c8e564
+  $fFloatingExp63 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Float
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   (Data.Array.Accelerate.AST.PrimAtanh
+                      @ (GHC.Types.Float -> GHC.Types.Float)
+                      @ GHC.Types.Float
+                      @~ <GHC.Types.Float -> GHC.Types.Float>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType)
+                   x) -}
+cf1453abea7e327eacd026a1e05433b9
+  $fFloatingExp64 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Float
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   (Data.Array.Accelerate.AST.PrimAcosh
+                      @ (GHC.Types.Float -> GHC.Types.Float)
+                      @ GHC.Types.Float
+                      @~ <GHC.Types.Float -> GHC.Types.Float>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType)
+                   x) -}
+2e2dde445af77c0f62cfccd4abcd4b1c
+  $fFloatingExp65 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Float
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   (Data.Array.Accelerate.AST.PrimAsinh
+                      @ (GHC.Types.Float -> GHC.Types.Float)
+                      @ GHC.Types.Float
+                      @~ <GHC.Types.Float -> GHC.Types.Float>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType)
+                   x) -}
+112239fc22c1bb567cc59c0e648057d7
+  $fFloatingExp66 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Float
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   (Data.Array.Accelerate.AST.PrimTanh
+                      @ (GHC.Types.Float -> GHC.Types.Float)
+                      @ GHC.Types.Float
+                      @~ <GHC.Types.Float -> GHC.Types.Float>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType)
+                   x) -}
+c8452d9182a88b7aec0043f69211716f
+  $fFloatingExp67 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Float
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   (Data.Array.Accelerate.AST.PrimCosh
+                      @ (GHC.Types.Float -> GHC.Types.Float)
+                      @ GHC.Types.Float
+                      @~ <GHC.Types.Float -> GHC.Types.Float>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType)
+                   x) -}
+4b010e718dcd8c675bc27a4ce0b9e173
+  $fFloatingExp68 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Float
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   (Data.Array.Accelerate.AST.PrimSinh
+                      @ (GHC.Types.Float -> GHC.Types.Float)
+                      @ GHC.Types.Float
+                      @~ <GHC.Types.Float -> GHC.Types.Float>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType)
+                   x) -}
+667032f5fcf053a59254a5485dac7469
+  $fFloatingExp69 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Float
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   (Data.Array.Accelerate.AST.PrimAtan
+                      @ (GHC.Types.Float -> GHC.Types.Float)
+                      @ GHC.Types.Float
+                      @~ <GHC.Types.Float -> GHC.Types.Float>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType)
+                   x) -}
+1c68ad616819bf24f9e93cd1325cb13e
+  $fFloatingExp7 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp
+                           Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CDouble
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   (Data.Array.Accelerate.AST.PrimAcosh
+                      @ (Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble)
+                      @ Foreign.C.Types.CDouble
+                      @~ <Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType)
+                   x) -}
+29627f22751ff6d447615f4c39398364
+  $fFloatingExp70 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Float
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   (Data.Array.Accelerate.AST.PrimAcos
+                      @ (GHC.Types.Float -> GHC.Types.Float)
+                      @ GHC.Types.Float
+                      @~ <GHC.Types.Float -> GHC.Types.Float>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType)
+                   x) -}
+ab7137f7120d8b923e9410d88bea2c1b
+  $fFloatingExp71 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Float
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   (Data.Array.Accelerate.AST.PrimAsin
+                      @ (GHC.Types.Float -> GHC.Types.Float)
+                      @ GHC.Types.Float
+                      @~ <GHC.Types.Float -> GHC.Types.Float>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType)
+                   x) -}
+b8ed705a3241d4c9d035fd9466cdeddc
+  $fFloatingExp72 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Float
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   (Data.Array.Accelerate.AST.PrimTan
+                      @ (GHC.Types.Float -> GHC.Types.Float)
+                      @ GHC.Types.Float
+                      @~ <GHC.Types.Float -> GHC.Types.Float>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType)
+                   x) -}
+32f510463389a30add11cefd4108aed4
+  $fFloatingExp73 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Float
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   (Data.Array.Accelerate.AST.PrimCos
+                      @ (GHC.Types.Float -> GHC.Types.Float)
+                      @ GHC.Types.Float
+                      @~ <GHC.Types.Float -> GHC.Types.Float>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType)
+                   x) -}
+1682283e20c745435a618bac472ef1ed
+  $fFloatingExp74 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Float
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   (Data.Array.Accelerate.AST.PrimSin
+                      @ (GHC.Types.Float -> GHC.Types.Float)
+                      @ GHC.Types.Float
+                      @~ <GHC.Types.Float -> GHC.Types.Float>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType)
+                   x) -}
+d4f18ac402975177d43570af8a92bb69
+  $fFloatingExp75 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Float
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float)
+                   (y :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Float
+                   @ (GHC.Types.Float, GHC.Types.Float)
+                   Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_lvl196
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_lvl198
+                   (Data.Array.Accelerate.Smart.Tuple
+                      @ Data.Array.Accelerate.Smart.Acc
+                      @ Data.Array.Accelerate.Smart.Exp
+                      @ (GHC.Types.Float, GHC.Types.Float)
+                      Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_lvl196
+                      Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_lvl199
+                      (Data.Array.Accelerate.Array.Sugar.SnocTup
+                         @ Data.Array.Accelerate.Smart.Exp
+                         @ (((), GHC.Types.Float), GHC.Types.Float)
+                         @ GHC.Types.Float
+                         @ ((), GHC.Types.Float)
+                         @~ <(((), GHC.Types.Float), GHC.Types.Float)>_N
+                         Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                         (Data.Array.Accelerate.Array.Sugar.SnocTup
+                            @ Data.Array.Accelerate.Smart.Exp
+                            @ ((), GHC.Types.Float)
+                            @ GHC.Types.Float
+                            @ ()
+                            @~ <((), GHC.Types.Float)>_N
+                            Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                            (Data.Array.Accelerate.Array.Sugar.$WNilTup
+                               @ Data.Array.Accelerate.Smart.Exp)
+                            x)
+                         y)
+                        `cast`
+                      (Data.Array.Accelerate.Array.Sugar.Tuple
+                         <Data.Array.Accelerate.Smart.Exp>_R
+                         (Sym (Data.Array.Accelerate.Product.D:R:ProdRepr(,)[0]
+                                   <GHC.Types.Float>_N <GHC.Types.Float>_N)))_R)
+                     `cast`
+                   (Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <(GHC.Types.Float,
+                                                                 GHC.Types.Float)>_N)) -}
+8fbd2852e84e781bc4cd065297c3231f
+  $fFloatingExp76 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Float
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float)
+                   (y :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Float
+                   @ (GHC.Types.Float, GHC.Types.Float)
+                   Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_lvl196
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_lvl1
+                   (Data.Array.Accelerate.Smart.Tuple
+                      @ Data.Array.Accelerate.Smart.Acc
+                      @ Data.Array.Accelerate.Smart.Exp
+                      @ (GHC.Types.Float, GHC.Types.Float)
+                      Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_lvl196
+                      Data.Array.Accelerate.Classes.Floating.$fFloatingExp2_lvl199
+                      (Data.Array.Accelerate.Array.Sugar.SnocTup
+                         @ Data.Array.Accelerate.Smart.Exp
+                         @ (((), GHC.Types.Float), GHC.Types.Float)
+                         @ GHC.Types.Float
+                         @ ((), GHC.Types.Float)
+                         @~ <(((), GHC.Types.Float), GHC.Types.Float)>_N
+                         Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                         (Data.Array.Accelerate.Array.Sugar.SnocTup
+                            @ Data.Array.Accelerate.Smart.Exp
+                            @ ((), GHC.Types.Float)
+                            @ GHC.Types.Float
+                            @ ()
+                            @~ <((), GHC.Types.Float)>_N
+                            Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                            (Data.Array.Accelerate.Array.Sugar.$WNilTup
+                               @ Data.Array.Accelerate.Smart.Exp)
+                            x)
+                         y)
+                        `cast`
+                      (Data.Array.Accelerate.Array.Sugar.Tuple
+                         <Data.Array.Accelerate.Smart.Exp>_R
+                         (Sym (Data.Array.Accelerate.Product.D:R:ProdRepr(,)[0]
+                                   <GHC.Types.Float>_N <GHC.Types.Float>_N)))_R)
+                     `cast`
+                   (Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <(GHC.Types.Float,
+                                                                 GHC.Types.Float)>_N)) -}
+9cd3b06d3885c01657a426199374a44e
+  $fFloatingExp77 ::
+    Data.Array.Accelerate.Smart.Exp GHC.Types.Float
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         GHC.Types.Float
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp GHC.Types.Float) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Float
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   (Data.Array.Accelerate.AST.PrimSqrt
+                      @ (GHC.Types.Float -> GHC.Types.Float)
+                      @ GHC.Types.Float
+                      @~ <GHC.Types.Float -> GHC.Types.Float>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType)
+                   x) -}
+a1957dfe604578556976602cfd5c7d84
+  $fFloatingExp78 ::
+    Data.Array.Accelerate.Smart.PreExp
+      Data.Array.Accelerate.Smart.Acc
+      Data.Array.Accelerate.Smart.Exp
+      GHC.Types.Float
+  {- Strictness: m14,
+     Unfolding: (Data.Array.Accelerate.Smart.PrimConst
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Array.Sugar.$fEltFloat
+                   Data.Array.Accelerate.Classes.Floating.$fFloatingExp79) -}
+81a7958dc315125fde42b38f38aa077b
+  $fFloatingExp79 ::
+    Data.Array.Accelerate.AST.PrimConst GHC.Types.Float
+  {- Strictness: m3,
+     Unfolding: (Data.Array.Accelerate.AST.PrimPi
+                   @ GHC.Types.Float
+                   Data.Array.Accelerate.Type.$fIsFloatingFloat_$cfloatingType) -}
+a27b671c473a873e58f53e4190637b3a
+  $fFloatingExp8 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp
+                           Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CDouble
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   (Data.Array.Accelerate.AST.PrimAsinh
+                      @ (Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble)
+                      @ Foreign.C.Types.CDouble
+                      @~ <Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType)
+                   x) -}
+1bfbcc6c83d0e196664426a710b09d23
+  $fFloatingExp9 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.PreExp
+         Data.Array.Accelerate.Smart.Acc
+         Data.Array.Accelerate.Smart.Exp
+         Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp
+                           Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Smart.PrimApp
+                   @ Data.Array.Accelerate.Smart.Acc
+                   @ Data.Array.Accelerate.Smart.Exp
+                   @ Foreign.C.Types.CDouble
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   (Data.Array.Accelerate.AST.PrimTanh
+                      @ (Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble)
+                      @ Foreign.C.Types.CDouble
+                      @~ <Foreign.C.Types.CDouble -> Foreign.C.Types.CDouble>_N
+                      Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType)
+                   x) -}
+b2f0975272c3d30da6be969b96d66c00
+  $fFloatingExp_$c** ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp19
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CDouble>_N) -}
+9f5243cba9da75ece358bace75e12e96
+  $fFloatingExp_$cacos ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp13
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CDouble>_N) -}
+b6d09fe7f200dedbda3eca2aecf7ba52
+  $fFloatingExp_$cacosh ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp7
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CDouble>_N) -}
+e23802cd84c4030c89ee91e4cf354552
+  $fFloatingExp_$casin ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp14
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CDouble>_N) -}
+c0e961fca1198f2076afaaee3b718283
+  $fFloatingExp_$casinh ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp8
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CDouble>_N) -}
+cd71fea55b6e09a84ba50815cd7c401b
+  $fFloatingExp_$catan ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp12
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CDouble>_N) -}
+829bceb356387bbb8a840d6fb05350e1
+  $fFloatingExp_$catanh ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp6
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CDouble>_N) -}
+65126ef3c0700467e2d656d4adff3163
+  $fFloatingExp_$ccos ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp16
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CDouble>_N) -}
+e35a4f531fc1bc5c1e5d67465070663c
+  $fFloatingExp_$ccosh ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp10
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CDouble>_N) -}
+cbda682983c5b6b66de6a6a7628818e4
+  $fFloatingExp_$cexp ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp4
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CDouble>_N) -}
+ee0d9041abaad22b4285179c50e05393
+  $fFloatingExp_$cexpm1 ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ (eta :: Data.Array.Accelerate.Smart.Exp
+                             Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Classes.Num.$fNumExp_$c-
+                   (Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$cexp eta)
+                   (Data.Array.Accelerate.Classes.Num.$fNumExp_$cfromInteger 1)) -}
+b033d0e230fd437c2c5a6239fd027443
+  $fFloatingExp_$clog ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp5
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CDouble>_N) -}
+c33f6a62ae874cc7ff42d44e45a9e817
+  $fFloatingExp_$clog1mexp ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ (eta :: Data.Array.Accelerate.Smart.Exp
+                             Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$clog
+                   (Data.Array.Accelerate.Classes.Num.$fNumExp_$c+
+                      (Data.Array.Accelerate.Classes.Num.$fNumExp_$cfromInteger 1)
+                      (Data.Array.Accelerate.Classes.Num.$fNumExp_$cnegate
+                         (Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$cexp
+                            eta)))) -}
+1089b7c5f4bace8c07124a10061500d2
+  $fFloatingExp_$clog1p ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ (eta :: Data.Array.Accelerate.Smart.Exp
+                             Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$clog
+                   (Data.Array.Accelerate.Classes.Num.$fNumExp_$c+
+                      (Data.Array.Accelerate.Classes.Num.$fNumExp_$cfromInteger 1)
+                      eta)) -}
+a8f77b93d2e5a795ee672c049902456c
+  $fFloatingExp_$clog1pexp ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ (x :: Data.Array.Accelerate.Smart.Exp
+                           Foreign.C.Types.CDouble) ->
+                 Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$clog
+                   (Data.Array.Accelerate.Classes.Num.$fNumExp_$c+
+                      (Data.Array.Accelerate.Classes.Num.$fNumExp_$cfromInteger 1)
+                      (Data.Array.Accelerate.Classes.Floating.$fFloatingExp_$cexp x))) -}
+76ef795028769bcbf25a3cff2aff8cf1
+  $fFloatingExp_$clogBase ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp18
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R <Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CDouble>_N) -}
+0b022ed14fb2b570312c7698d1c3a505
+  $fFloatingExp_$cpi ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Strictness: m14,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp21
+                  `cast`
+                (Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CDouble>_N) -}
+1d1e6e0ac7216464ff808051e99ff53a
+  $fFloatingExp_$csin ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp17
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CDouble>_N) -}
+264e56b0b8434a5ba2a9d48fcc2f41ed
+  $fFloatingExp_$csinh ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp11
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CDouble>_N) -}
+7e74cff394564f9233f25e32f5e85aee
+  $fFloatingExp_$csqrt ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp20
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CDouble>_N) -}
+23628e8539b75280e2d2a39e2715e435
+  $fFloatingExp_$ctan ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp15
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CDouble>_N) -}
+34a30022df80ade1e1f330ec0b5b8f4f
+  $fFloatingExp_$ctanh ::
+    Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+    -> Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Classes.Floating.$fFloatingExp9
+                  `cast`
+                (<Data.Array.Accelerate.Smart.Exp Foreign.C.Types.CDouble>_R
+                 ->_R Sym (Data.Array.Accelerate.Smart.N:Exp[0]) <Foreign.C.Types.CDouble>_N) -}
+e02f6a7dfce0f63cc58aeb43c9f78d9d
+  $fFloatingExp_lvl1 ::
+    Data.Array.Accelerate.AST.PrimFun
+      ((Foreign.C.Types.CDouble, Foreign.C.Types.CDouble)
+       -> Foreign.C.Types.CDouble)
+  {- Unfolding: (Data.Array.Accelerate.AST.PrimFPow
+                   @ ((Foreign.C.Types.CDouble, Foreign.C.Types.CDouble)
+                      -> Foreign.C.Types.CDouble)
+                   @ Foreign.C.Types.CDouble
+                   @~ <(Foreign.C.Types.CDouble, Foreign.C.Types.CDouble)
+                       -> Foreign.C.Types.CDouble>_N
+                   Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType) -}
+77cbf7f3d5fdc3b2dcb2244cc579e21f
+  $fFloatingExp_lvl196 ::
+    Data.Array.Accelerate.Array.Sugar.Elt
+      (Foreign.C.Types.CDouble, Foreign.C.Types.CDouble)
+  {- Unfolding: (Data.Array.Accelerate.Array.Sugar.$fElt(,)
+                   @ Foreign.C.Types.CDouble
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble) -}
+139f98b3acf887aa6b701317302d325d
+  $fFloatingExp_lvl198 ::
+    Data.Array.Accelerate.AST.PrimFun
+      ((Foreign.C.Types.CDouble, Foreign.C.Types.CDouble)
+       -> Foreign.C.Types.CDouble)
+  {- Unfolding: (Data.Array.Accelerate.AST.PrimLogBase
+                   @ ((Foreign.C.Types.CDouble, Foreign.C.Types.CDouble)
+                      -> Foreign.C.Types.CDouble)
+                   @ Foreign.C.Types.CDouble
+                   @~ <(Foreign.C.Types.CDouble, Foreign.C.Types.CDouble)
+                       -> Foreign.C.Types.CDouble>_N
+                   Data.Array.Accelerate.Type.$fIsFloatingCDouble_$cfloatingType) -}
+018c9bbba63c32a691a9f37c77f00973
+  $fFloatingExp_lvl199 ::
+    Data.Array.Accelerate.Product.IsProduct
+      Data.Array.Accelerate.Array.Sugar.Elt
+      (Foreign.C.Types.CDouble, Foreign.C.Types.CDouble)
+  {- Unfolding: (Data.Array.Accelerate.Product.$fIsProductcst(,)
+                   @ Data.Array.Accelerate.Array.Sugar.Elt
+                   @ Foreign.C.Types.CDouble
+                   @ Foreign.C.Types.CDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble
+                   Data.Array.Accelerate.Array.Sugar.$fEltCDouble) -}
+4d2a1371a8aba60ccb0f5543d793bbc0
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Data.Array.Accelerate.Classes.Floating.$trModule2
+                   Data.Array.Accelerate.Classes.Floating.$trModule1) -}
+4ada17a069a4abac2775580e489c0c9c
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Data.Array.Accelerate.Classes.Floating"#) -}
+4f0351b27924eef09ef72726f249d83a
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw"#) -}
+c6033b504a6fb428fc9d28610d2d2d7f
+  type Floating a =
+    (Data.Array.Accelerate.Classes.Fractional.Fractional a,
+     GHC.Float.Floating (Data.Array.Accelerate.Smart.Exp a))
+    :: GHC.Types.Constraint
+instance GHC.Float.Floating [Data.Array.Accelerate.Smart.Exp]
+  = Data.Array.Accelerate.Classes.Floating.$fFloatingExp
+instance GHC.Float.Floating [Data.Array.Accelerate.Smart.Exp]
+  = Data.Array.Accelerate.Classes.Floating.$fFloatingExp0
+instance GHC.Float.Floating [Data.Array.Accelerate.Smart.Exp]
+  = Data.Array.Accelerate.Classes.Floating.$fFloatingExp1
+instance GHC.Float.Floating [Data.Array.Accelerate.Smart.Exp]
+  = Data.Array.Accelerate.Classes.Floating.$fFloatingExp2
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

@@ -1,0 +1,881 @@
+
+==================== FINAL INTERFACE ====================
+2017-08-29 05:28:07.725873 UTC
+
+interface accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Remote.LRU 8002
+  interface hash: f1ae717d6013233891099653d10efe36
+  ABI hash: 5ef9a7e5004482e4467438c5ff68989a
+  export-list hash: 02b60d274eb5e74e79ee0f98d39d47e4
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1cb86965fdd3dffc3633800454794ebf
+  sig of: Nothing
+  used TH splices: True
+  where
+exports:
+  Data.Array.Accelerate.Array.Remote.LRU.free
+  Data.Array.Accelerate.Array.Remote.LRU.insertUnmanaged
+  Data.Array.Accelerate.Array.Remote.LRU.malloc
+  Data.Array.Accelerate.Array.Remote.LRU.new
+  Data.Array.Accelerate.Array.Remote.LRU.reclaim
+  Data.Array.Accelerate.Array.Remote.LRU.withRemote
+  Data.Array.Accelerate.Array.Remote.LRU.MemoryTable
+  Data.Array.Accelerate.Array.Remote.LRU.Task{Data.Array.Accelerate.Array.Remote.LRU.completed}
+module dependencies: Data.Array.Accelerate.AST
+                     Data.Array.Accelerate.Analysis.Hash
+                     Data.Array.Accelerate.Analysis.Hash.TH
+                     Data.Array.Accelerate.Analysis.Match
+                     Data.Array.Accelerate.Array.Data
+                     Data.Array.Accelerate.Array.Remote.Class
+                     Data.Array.Accelerate.Array.Remote.Nursery
+                     Data.Array.Accelerate.Array.Remote.Table
+                     Data.Array.Accelerate.Array.Representation
+                     Data.Array.Accelerate.Array.Sugar
+                     Data.Array.Accelerate.Array.Unique Data.Array.Accelerate.Debug
+                     Data.Array.Accelerate.Debug.Flags
+                     Data.Array.Accelerate.Debug.Monitoring
+                     Data.Array.Accelerate.Debug.Stats Data.Array.Accelerate.Debug.Timed
+                     Data.Array.Accelerate.Debug.Trace Data.Array.Accelerate.Error
+                     Data.Array.Accelerate.Lifetime
+                     Data.Array.Accelerate.Pretty.Graphviz
+                     Data.Array.Accelerate.Pretty.Graphviz.Monad
+                     Data.Array.Accelerate.Pretty.Graphviz.Type
+                     Data.Array.Accelerate.Pretty.Print Data.Array.Accelerate.Product
+                     Data.Array.Accelerate.Trafo.Base
+                     Data.Array.Accelerate.Trafo.Substitution Data.Array.Accelerate.Type
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      exceptions-0.8.3@exceptions-0.8.3-ADEDRATtUrMK1JW4zMQ9U
+                      fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol
+                      hashtables-1.2.1.1@hashtables-1.2.1.1-CvCXxmZFzjODUwEtnf4YU7
+                      integer-gmp-1.0.0.1 mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      pretty-1.1.3.3@pretty-1.1.3.3
+                      primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh
+                      stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      template-haskell-2.11.1.0
+                      text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00
+                      transformers-0.5.2.0@transformers-0.5.2.0
+                      unique-0@unique-0-9CJQKYGbqiDaFUmoekKeA
+                      unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC
+                      vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu:Data.Orphans
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         fclabels-2.0.3.2@fclabels-2.0.3.2-4EezQlp7n1w9uoh5Y3yxAt:Data.Label.Point
+         hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable.Generic
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Show
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Fusion.Bundle
+         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
+family instance modules: accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Data
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Representation
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Array.Sugar
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Product
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Trafo.Base
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Trafo.Substitution
+                         accelerate-1.0.0.0@accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw:Data.Array.Accelerate.Type
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh:Control.Monad.Primitive
+                         primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh:Data.Primitive.Array
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC:Data.HashMap.Base
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC:Data.HashSet
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Primitive
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed.Base
+import  -/  Data.Array.Accelerate.Array.Data 0f7788ba6235b9caff0f10d41744f81c
+  exports: 2e401fd3c8bac4bea058169f3641bb3b
+  ArrayData 251ac8cc288dc0eb1e92b71f08b6e16e
+  touchArrayData cb84a533bf453cf62f03da24736f455f
+import  -/  Data.Array.Accelerate.Array.Remote.Class 5df3add7aed665043bdbc95bd79c53c0
+  exports: 39f76bfc3c76412a4f6824f91d8c4b44
+  PrimElt ccee7f76acd8658406856eb6d3c5c58e
+  RemoteMemory 647dd81a1e6daa4de9564ac0e752c75c
+  RemotePtr 311a41fce32ec8c5adf8389b3000dc19
+  peekRemote 4cfc36e229e0a164ca79548430de53e0
+  pokeRemote 04d68ec39344f6d1dd08a1e720c422d1
+import  -/  Data.Array.Accelerate.Array.Remote.Table 6ab3f30beee01b536fe83ae6f1d71779
+  exports: 1010c8edba7872ab6881c10ea39ef54c
+  MemoryTable 1746c8fc88667410412c8a843b75f65d
+  StableArray 20e391ee06ad286bf66b76c95abe69fd
+  freeStable 4ce47b3114ad9015c9ebb8a5352de083
+  insertUnmanaged 5f8f59276ab663688fbd7c44cf0d5d47
+  lookup 048fc094019bfd0636e71bc9a43ed0a2
+  makeStableArray b5d5a12d794d8ede71f18972f00b57a9
+  makeWeakArrayData f9a7109408bb8cc48efe0d5e31b61718
+  malloc e65251185ad97138e98275a77dd7c710
+  new 27276fe5ff78984c5ddca618548ecb74
+  reclaim 5b76a1691d67d885d0b93ffc5af0b575
+import  -/  Data.Array.Accelerate.Debug 48fd217a26d4240434223974d5084c0c
+  exports: 7e8587d30c425be122b3b310eb4ec0ea
+import  -/  Data.Array.Accelerate.Debug.Flags 4ae65d880031597019ea1d1d62ef661e
+  dump_gc 3f516b9cb45832ff1a83110fbafce5b1
+import  -/  Data.Array.Accelerate.Debug.Monitoring c306cb0432a1d9ab3d42c81522d7d428
+  didEvictBytes 102236f734abf75b5564bc08ee709ec1
+import  -/  Data.Array.Accelerate.Debug.Trace 365190b9829a1554a2d495d3f4fb1682
+  traceIO bf3190e68fbfa59511d56a82757db26c
+import  -/  Data.Array.Accelerate.Error 9ed2d4a71009d558f562e118e9d36a23
+  exports: f46a01ad5e78f9618f7a91c4ba90bc31
+  Internal 354d17f13fa8c5b135052bcadc13dc67
+  call 95bf4b02947c8c3e282c15050c022fa9
+  internalError aa331c50846093a3a39d2946a445c28d
+  message 43164dbb4cecc9911948fd9ecaf0a042
+import  -/  base-4.9.1.0:Control.Concurrent.MVar 1e4f68fc63da1d1a554d5258431dd0c6
+import  -/  base-4.9.1.0:Control.Monad a6784c5dab0d75c63dabec5a37843f98
+import  -/  base-4.9.1.0:Control.Monad.IO.Class 1a4384f66ee999caf5366398edb6ca7b
+import  -/  base-4.9.1.0:Data.Functor 5ab1dc703df5b482e77efb697833ca3c
+import  -/  base-4.9.1.0:Data.Int 07f5a36c488acfe0ac32e81c7536b8ff
+import  -/  base-4.9.1.0:Data.Maybe d876c4ffe4b3c43755a781e8ad860d88
+import  -/  base-4.9.1.0:Data.Proxy d7f87a37cf7ec5ca87c59c8d2859031f
+import  -/  base-4.9.1.0:Foreign.Storable 085c8d7f42ceec1dbb4e818f06339b9d
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.1.0:GHC.Int e6f85fcab22769385fba2b5fce0acb40
+import  -/  base-4.9.1.0:GHC.MVar 2b6c6f2887cffa9e72fc08229ba0f346
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:GHC.Weak d858f2ea485b32b834c9359490c9096f
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:System.CPUTime 24d2cdcecf449f6e92f8845206b7bfba
+import  -/  base-4.9.1.0:System.Mem.Weak a4b32e71ac550b6c495fe15abe3b80d2
+import  -/  exceptions-0.8.3@exceptions-0.8.3-ADEDRATtUrMK1JW4zMQ9U:Control.Monad.Catch b7c0706f1693a3a340b0c0acefd4e19d
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  hashtables-1.2.1.1@hashtables-1.2.1.1-CvCXxmZFzjODUwEtnf4YU7:Data.HashTable.IO f47b4486acd7885cd54517bc141fe8b4
+import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 318df275d77dcdb18e0006d8d7870c2a
+04edead43eaf0b72d233eba24fe33433
+  $fEqStatus ::
+    GHC.Classes.Eq Data.Array.Accelerate.Array.Remote.LRU.Status
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Data.Array.Accelerate.Array.Remote.LRU.Status
+                  Data.Array.Accelerate.Array.Remote.LRU.$fEqStatus_$c==
+                  Data.Array.Accelerate.Array.Remote.LRU.$fEqStatus_$c/= -}
+04edead43eaf0b72d233eba24fe33433
+  $fEqStatus_$c/= ::
+    Data.Array.Accelerate.Array.Remote.LRU.Status
+    -> Data.Array.Accelerate.Array.Remote.LRU.Status -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: Data.Array.Accelerate.Array.Remote.LRU.Status)
+                   (b :: Data.Array.Accelerate.Array.Remote.LRU.Status) ->
+                 case a of wild {
+                   Data.Array.Accelerate.Array.Remote.LRU.Clean
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Data.Array.Accelerate.Array.Remote.LRU.Clean -> GHC.Types.False }
+                   Data.Array.Accelerate.Array.Remote.LRU.Dirty
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Data.Array.Accelerate.Array.Remote.LRU.Dirty -> GHC.Types.False }
+                   Data.Array.Accelerate.Array.Remote.LRU.Unmanaged
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Data.Array.Accelerate.Array.Remote.LRU.Unmanaged
+                        -> GHC.Types.False }
+                   Data.Array.Accelerate.Array.Remote.LRU.Evicted
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Data.Array.Accelerate.Array.Remote.LRU.Evicted
+                        -> GHC.Types.False } }) -}
+04edead43eaf0b72d233eba24fe33433
+  $fEqStatus_$c== ::
+    Data.Array.Accelerate.Array.Remote.LRU.Status
+    -> Data.Array.Accelerate.Array.Remote.LRU.Status -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: Data.Array.Accelerate.Array.Remote.LRU.Status)
+                   (ds1 :: Data.Array.Accelerate.Array.Remote.LRU.Status) ->
+                 case ds of wild {
+                   Data.Array.Accelerate.Array.Remote.LRU.Clean
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Data.Array.Accelerate.Array.Remote.LRU.Clean -> GHC.Types.True }
+                   Data.Array.Accelerate.Array.Remote.LRU.Dirty
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Data.Array.Accelerate.Array.Remote.LRU.Dirty -> GHC.Types.True }
+                   Data.Array.Accelerate.Array.Remote.LRU.Unmanaged
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Data.Array.Accelerate.Array.Remote.LRU.Unmanaged
+                        -> GHC.Types.True }
+                   Data.Array.Accelerate.Array.Remote.LRU.Evicted
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Data.Array.Accelerate.Array.Remote.LRU.Evicted
+                        -> GHC.Types.True } }) -}
+7b25f8d75ba91360119410828d323429
+  $fTask() :: Data.Array.Accelerate.Array.Remote.LRU.Task ()
+  DFunId
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*H><S,U>,
+     Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                Data.Array.Accelerate.Array.Remote.LRU.$fTask()_$ccompleted
+                  `cast`
+                (Sym (Data.Array.Accelerate.Array.Remote.LRU.N:Task[0] <()>_N)) -}
+a46edef2426e45cdd962b725f529d5ca
+  $fTask()1 ::
+    ()
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Bool #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*H><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds :: ())
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case ds of wild { () -> (# eta, GHC.Types.True #) }) -}
+0ebbd22f2612afaa86cc90717c6d9c05
+  $fTask()_$ccompleted :: () -> GHC.Types.IO GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*H><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Array.Remote.LRU.$fTask()1
+                  `cast`
+                (<()>_R ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
+53469e82c2cc1ab431df545323196190
+  $tc'C:Task :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7860520934260742955##
+                   8074189916553308980##
+                   Data.Array.Accelerate.Array.Remote.LRU.$trModule
+                   Data.Array.Accelerate.Array.Remote.LRU.$tc'C:Task1) -}
+46e17e460ecd96e31dd9c4065e47272e
+  $tc'C:Task1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'C:Task"#) -}
+a129963308e10f2ced7bedd91651114c
+  $tc'Clean :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4394564805676055151##
+                   16552014674757849085##
+                   Data.Array.Accelerate.Array.Remote.LRU.$trModule
+                   Data.Array.Accelerate.Array.Remote.LRU.$tc'Clean1) -}
+0eac7caf5dbed4f1e4edfb1a2c97fa26
+  $tc'Clean1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Clean"#) -}
+da0f0891b509bf16a60264663da142a2
+  $tc'Dirty :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   36931060628294018##
+                   1706091176684991211##
+                   Data.Array.Accelerate.Array.Remote.LRU.$trModule
+                   Data.Array.Accelerate.Array.Remote.LRU.$tc'Dirty1) -}
+1d089a4ce04014100225497128bc9767
+  $tc'Dirty1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Dirty"#) -}
+d264fd9ff7ab6f6ff8e1d24e5de572a1
+  $tc'Evicted :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6802691366934140167##
+                   11717431740824072590##
+                   Data.Array.Accelerate.Array.Remote.LRU.$trModule
+                   Data.Array.Accelerate.Array.Remote.LRU.$tc'Evicted1) -}
+9415bd1c0ea2a57c64d82fec11438c8c
+  $tc'Evicted1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Evicted"#) -}
+359ad99ae7798bbc081ac0f23aca66b0
+  $tc'MemoryTable :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13779027390065746104##
+                   16823737526212333405##
+                   Data.Array.Accelerate.Array.Remote.LRU.$trModule
+                   Data.Array.Accelerate.Array.Remote.LRU.$tc'MemoryTable1) -}
+dbcf717f5a71781c207f561702172300
+  $tc'MemoryTable1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'MemoryTable"#) -}
+cf9f7af370cdef782eb2d3367dc0b395
+  $tc'Unmanaged :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   209482403138806918##
+                   4253693192192168033##
+                   Data.Array.Accelerate.Array.Remote.LRU.$trModule
+                   Data.Array.Accelerate.Array.Remote.LRU.$tc'Unmanaged1) -}
+5d46f336cca3ffa3086efe4f76137d4c
+  $tc'Unmanaged1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Unmanaged"#) -}
+a1a03c089ee160994becdda5dc47418b
+  $tc'Used :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5309640359062330044##
+                   15006561343337226373##
+                   Data.Array.Accelerate.Array.Remote.LRU.$trModule
+                   Data.Array.Accelerate.Array.Remote.LRU.$tc'Used1) -}
+9766841815fb6bd20040c85889f68dbb
+  $tc'Used1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Used"#) -}
+903dc1150e8f456364809def3bf1a3b9
+  $tcMemoryTable :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17892906976090015412##
+                   3377466718793866816##
+                   Data.Array.Accelerate.Array.Remote.LRU.$trModule
+                   Data.Array.Accelerate.Array.Remote.LRU.$tcMemoryTable1) -}
+4587f32c3e8a16c65ba414c2b5e016c4
+  $tcMemoryTable1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "MemoryTable"#) -}
+f66a4787219f219903d830f407ce03e2
+  $tcStatus :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11467489352505216109##
+                   6301699571126532221##
+                   Data.Array.Accelerate.Array.Remote.LRU.$trModule
+                   Data.Array.Accelerate.Array.Remote.LRU.$tcStatus1) -}
+e6d75b696ffc9770aa6c4d395c8300fe
+  $tcStatus1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Status"#) -}
+53fc02aee932175edd44659f7dacc6ba
+  $tcTask :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   18157418462975181738##
+                   17257891446893987438##
+                   Data.Array.Accelerate.Array.Remote.LRU.$trModule
+                   Data.Array.Accelerate.Array.Remote.LRU.$tcTask1) -}
+b2525ee0fc3deac8efdf322fd08d18bf
+  $tcTask1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Task"#) -}
+db598a8798a5f7de9af2bce1aea49f41
+  $tcUsed :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17518994146491175329##
+                   10838743463292770842##
+                   Data.Array.Accelerate.Array.Remote.LRU.$trModule
+                   Data.Array.Accelerate.Array.Remote.LRU.$tcUsed1) -}
+0338d21c3181fae65bc03104f4856ec6
+  $tcUsed1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Used"#) -}
+b0792e84012ca2dcb63610b16ea05888
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Data.Array.Accelerate.Array.Remote.LRU.$trModule2
+                   Data.Array.Accelerate.Array.Remote.LRU.$trModule1) -}
+c329fba05c1d476364ede5a403b27693
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Data.Array.Accelerate.Array.Remote.LRU"#) -}
+2369df286075496621439642dfaee11e
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "accelerate-1.0.0.0-5KTewgBt554ICR3vZPllxw"#) -}
+58ca4088cf01737360d7eae6871cc8b2
+  $wfree ::
+    (Data.Array.Accelerate.Array.Remote.Class.RemoteMemory m,
+     Data.Array.Accelerate.Array.Remote.Class.PrimElt a b) =>
+    proxy m
+    -> GHC.Prim.MVar#
+         GHC.Prim.RealWorld
+         (Data.Array.Accelerate.Array.Remote.Table.HashTable
+            Data.Array.Accelerate.Array.Remote.Table.StableArray
+            (Data.Array.Accelerate.Array.Remote.Table.RemoteArray
+               (Data.Array.Accelerate.Array.Remote.Class.RemotePtr m)))
+    -> GHC.Prim.Weak#
+         (Data.Array.Accelerate.Array.Remote.Table.MT
+            (Data.Array.Accelerate.Array.Remote.Class.RemotePtr m))
+    -> GHC.Prim.MVar#
+         GHC.Prim.RealWorld
+         (Data.Array.Accelerate.Array.Remote.Nursery.N
+            (Data.Array.Accelerate.Array.Remote.Class.RemotePtr m))
+    -> GHC.Prim.Weak#
+         (Data.Array.Accelerate.Array.Remote.Nursery.NRS
+            (Data.Array.Accelerate.Array.Remote.Class.RemotePtr m))
+    -> GHC.Prim.MVar#
+         GHC.Prim.RealWorld (Data.Array.Accelerate.Array.Remote.LRU.UT task)
+    -> GHC.Prim.Weak#
+         (Data.Array.Accelerate.Array.Remote.LRU.UseTable task)
+    -> Data.Array.Accelerate.Array.Data.ArrayData a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 11,
+     Strictness: <L,U(A,A,A,A,A,A,A,C(C1(U)),A,A,A)><S(LLSLL),U(U(U,A,A,A,A,A,A,A,A),A,1*U,A,A)><L,U><L,U><L,U><L,U><L,U><S,U><L,A><S,1*U><S,U>,
+     Inline: [0] -}
+8a9b47e5bebc167d3fcd1bd89a826819
+  $winsertUnmanaged ::
+    (Data.Array.Accelerate.Array.Remote.Class.PrimElt e a,
+     Control.Monad.IO.Class.MonadIO m) =>
+    GHC.Prim.MVar#
+      GHC.Prim.RealWorld
+      (Data.Array.Accelerate.Array.Remote.Table.HashTable
+         Data.Array.Accelerate.Array.Remote.Table.StableArray
+         (Data.Array.Accelerate.Array.Remote.Table.RemoteArray p))
+    -> GHC.Prim.Weak# (Data.Array.Accelerate.Array.Remote.Table.MT p)
+    -> GHC.Prim.MVar#
+         GHC.Prim.RealWorld (Data.Array.Accelerate.Array.Remote.Nursery.N p)
+    -> GHC.Prim.Weak#
+         (Data.Array.Accelerate.Array.Remote.Nursery.NRS p)
+    -> GHC.Prim.MVar#
+         GHC.Prim.RealWorld (Data.Array.Accelerate.Array.Remote.LRU.UT task)
+    -> GHC.Prim.Weak#
+         (Data.Array.Accelerate.Array.Remote.LRU.UseTable task)
+    -> Data.Array.Accelerate.Array.Data.ArrayData e
+    -> p a
+    -> m ()
+  {- Arity: 10,
+     Strictness: <S(LLSLL),U(U,U,U,U,U)><S(LC(S)),1*U(A,1*C1(U))><L,U><L,U><L,1*U><L,1*U><L,U><L,U><S,1*U><S,1*U>,
+     Inline: [0] -}
+51c845df8895f44fcc1abcf08f341602
+  $wlvl ::
+    Data.Array.Accelerate.Array.Remote.LRU.Used task
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,U>, Inline: [0],
+     Unfolding: (\ @ task
+                   (ww :: Data.Array.Accelerate.Array.Remote.LRU.Used task)
+                   (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case ww of wild { Data.Array.Accelerate.Array.Remote.LRU.Used e a $d(%,,,,%) ds ds1 dt ds2 dt1 dt2 ->
+                 case GHC.Types.HEq_sc
+                        @ *
+                        @ *
+                        @ (Data.Array.Accelerate.Array.Data.ArrayPtrs e)
+                        @ (GHC.Ptr.Ptr a)
+                        (GHC.Classes.$p3(%,,,,%)
+                           @ (Data.Array.Accelerate.Array.Data.ArrayElt e)
+                           @ (Foreign.Storable.Storable a)
+                           @ (Data.Array.Accelerate.Array.Data.ArrayPtrs e
+                              Data.Type.Equality.~ GHC.Ptr.Ptr a)
+                           @ (Data.Typeable.Internal.Typeable e)
+                           @ (Data.Typeable.Internal.Typeable a)
+                           $d(%,,,,%))
+                          `cast`
+                        (Data.Type.Equality.N:~[0]
+                             <*>_N <Data.Array.Accelerate.Array.Data.ArrayPtrs e>_N <GHC.Ptr.Ptr
+                                                                                       a>_N) of cobox0 { DEFAULT ->
+                 case GHC.Prim.finalizeWeak#
+                        @ (Data.Array.Accelerate.Array.Data.ArrayData e)
+                        @ ()
+                        dt2
+                        w of ds3 { (#,,#) ipv ipv1 ipv2 ->
+                 case ipv1 of ds4 {
+                   DEFAULT -> ipv2 ipv 0# -> (# ipv, GHC.Tuple.() #) } } } }) -}
+28deb7bd338184101497c50d830c40df
+  $wwithRemote ::
+    (Data.Array.Accelerate.Array.Remote.Class.PrimElt a b,
+     Data.Array.Accelerate.Array.Remote.LRU.Task task,
+     Data.Array.Accelerate.Array.Remote.Class.RemoteMemory m,
+     Control.Monad.IO.Class.MonadIO m) =>
+    Data.Array.Accelerate.Array.Remote.LRU.MemoryTable
+      (Data.Array.Accelerate.Array.Remote.Class.RemotePtr m) task
+    -> Data.Array.Accelerate.Array.Data.ArrayData a
+    -> (Data.Array.Accelerate.Array.Remote.Class.RemotePtr m b
+        -> m (task, c))
+    -> m (GHC.Base.Maybe c)
+  {- Arity: 4,
+     Strictness: <S(LLSLL),U(U(U,U,U,U,U,U,U,U,U),U(U,U,U,U,U,U,U,U),U(U),U,U)><L,C(C1(U(U,1*U)))><L,U(U,U,A,1*U,C(U),C(C1(C1(C1(U)))),C(C1(C1(C1(U)))),C(U),U,U,U)><L,U(U(U,U,U,U,U),U)>,
+     Inline: [0] -}
+d21b6d1da18379d628eae0143944deff
+  type role MemoryTable nominal nominal
+  data MemoryTable (p :: * -> *) task
+    = MemoryTable {-# UNPACK #-}(Data.Array.Accelerate.Array.Remote.Table.MemoryTable
+                                   p)
+                  {-# UNPACK #-}(Data.Array.Accelerate.Array.Remote.LRU.UseTable
+                                   task)
+                  {-# UNPACK #-}(GHC.Weak.Weak
+                                   (Data.Array.Accelerate.Array.Remote.LRU.UseTable task))
+04edead43eaf0b72d233eba24fe33433
+  data Status = Clean | Dirty | Unmanaged | Evicted
+7b25f8d75ba91360119410828d323429
+  class Task task where
+    completed :: task -> GHC.Types.IO GHC.Types.Bool
+    {-# MINIMAL completed #-}
+d80d5ea739d241a934013b4043c884ee
+  type Timestamp = GHC.Integer.Type.Integer
+ad8a98f3e53f33e4c2549df49814e248
+  type UT task =
+    Data.HashTable.IO.BasicHashTable
+      Data.Array.Accelerate.Array.Remote.Table.StableArray
+      (Data.Array.Accelerate.Array.Remote.LRU.Used task)
+e6e01150f85c388316accde9b8ec1b49
+  type UseTable task =
+    GHC.MVar.MVar (Data.Array.Accelerate.Array.Remote.LRU.UT task)
+21352e11d27692cf9de0a3e09331bb48
+  data Used task where
+    Used :: Data.Array.Accelerate.Array.Remote.Class.PrimElt e a =>
+            !Data.Array.Accelerate.Array.Remote.LRU.Timestamp
+            -> !Data.Array.Accelerate.Array.Remote.LRU.Status
+            -> {-# UNPACK #-}GHC.Types.Int -> ![task]
+            -> {-# UNPACK #-}GHC.Types.Int
+            -> {-# UNPACK #-}(GHC.Weak.Weak
+                                (Data.Array.Accelerate.Array.Data.ArrayData e))
+            -> Used task
+f9d58194d43ecd84a492c63c484226b5
+  free ::
+    (Data.Array.Accelerate.Array.Remote.Class.RemoteMemory m,
+     Data.Array.Accelerate.Array.Remote.Class.PrimElt a b) =>
+    proxy m
+    -> Data.Array.Accelerate.Array.Remote.LRU.MemoryTable
+         (Data.Array.Accelerate.Array.Remote.Class.RemotePtr m) task
+    -> Data.Array.Accelerate.Array.Data.ArrayData a
+    -> GHC.Types.IO ()
+  {- Arity: 6,
+     Strictness: <L,U(A,A,A,A,A,A,A,C(C1(U)),A,A,A)><S(LLSLL),U(U(U,A,A,A,A,A,A,A,A),A,1*U,A,A)><L,U><S(LLLLLSL),1*U(U,U,U,U,A,U,A)><S,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Array.Remote.LRU.free1
+                  `cast`
+                (forall (m :: <*
+                               -> *>_N) (a :: <GHC.Types.*>_N) (b :: <*>_N) (proxy :: <(* -> *)
+                                                                                       -> *>_N) (task :: <*>_N).
+                 <Data.Array.Accelerate.Array.Remote.Class.RemoteMemory m>_R
+                 ->_R <Data.Array.Accelerate.Array.Remote.Class.PrimElt a b>_R
+                 ->_R <proxy m>_R
+                 ->_R <Data.Array.Accelerate.Array.Remote.LRU.MemoryTable
+                         (Data.Array.Accelerate.Array.Remote.Class.RemotePtr m) task>_R
+                 ->_R <Data.Array.Accelerate.Array.Data.ArrayData a>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+e19f0064f1f8f8d4db34fd1122106dc9
+  free1 ::
+    (Data.Array.Accelerate.Array.Remote.Class.RemoteMemory m,
+     Data.Array.Accelerate.Array.Remote.Class.PrimElt a b) =>
+    proxy m
+    -> Data.Array.Accelerate.Array.Remote.LRU.MemoryTable
+         (Data.Array.Accelerate.Array.Remote.Class.RemotePtr m) task
+    -> Data.Array.Accelerate.Array.Data.ArrayData a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 6,
+     Strictness: <L,U(A,A,A,A,A,A,A,C(C1(U)),A,A,A)><S(LLSLL),U(U(U,A,A,A,A,A,A,A,A),A,1*U,A,A)><L,U><S(LLLLLSL),1*U(U,U,U,U,A,U,A)><S,1*U><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (6, True, False)
+                (\ @ (m :: * -> *)
+                   @ a
+                   @ b
+                   @ (proxy :: (* -> *) -> *)
+                   @ task
+                   (w :: Data.Array.Accelerate.Array.Remote.Class.RemoteMemory m)
+                   (w1 :: Data.Array.Accelerate.Array.Remote.Class.PrimElt a b)
+                   (w2 :: proxy m)
+                   (w3 :: Data.Array.Accelerate.Array.Remote.LRU.MemoryTable
+                            (Data.Array.Accelerate.Array.Remote.Class.RemotePtr m) task)
+                   (w4 :: Data.Array.Accelerate.Array.Data.ArrayData a)
+                   (w5 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w3 of ww { Data.Array.Accelerate.Array.Remote.LRU.MemoryTable ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                 Data.Array.Accelerate.Array.Remote.LRU.$wfree
+                   @ m
+                   @ a
+                   @ b
+                   @ proxy
+                   @ task
+                   w
+                   w1
+                   w2
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   ww6
+                   ww7
+                   w4
+                   w5 }) -}
+04d82cb3ae9421e86f75244033b0b477
+  insertUnmanaged ::
+    (Data.Array.Accelerate.Array.Remote.Class.PrimElt e a,
+     Control.Monad.IO.Class.MonadIO m) =>
+    Data.Array.Accelerate.Array.Remote.LRU.MemoryTable p task
+    -> Data.Array.Accelerate.Array.Data.ArrayData e -> p a -> m ()
+  {- Arity: 5,
+     Strictness: <S(LLSLL),U(U,U,U,U,U)><S(LC(S)),1*U(A,1*C1(U))><S,1*U(U,U,1*U,1*U,A,U,U)><S,1*U><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (5, True, False)
+                (\ @ e
+                   @ a
+                   @ (m :: * -> *)
+                   @ (p :: * -> *)
+                   @ task
+                   (w :: Data.Array.Accelerate.Array.Remote.Class.PrimElt e a)
+                   (w1 :: Control.Monad.IO.Class.MonadIO m)
+                   (w2 :: Data.Array.Accelerate.Array.Remote.LRU.MemoryTable p task)
+                   (w3 :: Data.Array.Accelerate.Array.Data.ArrayData e)
+                   (w4 :: p a) ->
+                 case w2 of ww { Data.Array.Accelerate.Array.Remote.LRU.MemoryTable ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                 Data.Array.Accelerate.Array.Remote.LRU.$winsertUnmanaged
+                   @ e
+                   @ a
+                   @ m
+                   @ p
+                   @ task
+                   w
+                   w1
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   ww6
+                   ww7
+                   w3
+                   w4 }) -}
+1e082e206d3316f08860aa95e65b9533
+  malloc ::
+    (Data.Array.Accelerate.Array.Remote.Class.PrimElt e a,
+     Data.Array.Accelerate.Array.Remote.Class.RemoteMemory m,
+     Control.Monad.IO.Class.MonadIO m,
+     Data.Array.Accelerate.Array.Remote.LRU.Task task) =>
+    Data.Array.Accelerate.Array.Remote.LRU.MemoryTable
+      (Data.Array.Accelerate.Array.Remote.Class.RemotePtr m) task
+    -> Data.Array.Accelerate.Array.Data.ArrayData e
+    -> GHC.Types.Bool
+    -> GHC.Types.Int
+    -> m GHC.Types.Bool
+  {- Arity: 4,
+     Strictness: <S(LLSLL),U(U(U,U,U,U,U,U,U,U,U),U(U,U,U,U,U,U,U,U),U(U),U,U)><L,U(U,U,A,1*U,C(U),A,C(C1(C1(C1(U)))),C(U),U,U,U)><L,U(U(U,U,U,U,U),U)><L,C(C1(U(U,1*U)))> -}
+a58ffb9f37b02660f5a5f9fe49cf3b6d
+  new ::
+    (forall a. ptr a -> GHC.Types.IO ())
+    -> GHC.Types.IO
+         (Data.Array.Accelerate.Array.Remote.LRU.MemoryTable ptr task)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Accelerate.Array.Remote.LRU.new1
+                  `cast`
+                (forall (ptr :: <* -> *>_N) (task :: <*>_N).
+                 <forall a. ptr a -> GHC.Types.IO ()>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <Data.Array.Accelerate.Array.Remote.LRU.MemoryTable
+                                  ptr task>_R)) -}
+b3198ff6bdfe784ba09ed9bd9b34dec3
+  new1 ::
+    (forall a. ptr a -> GHC.Types.IO ())
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Array.Accelerate.Array.Remote.LRU.MemoryTable ptr task #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: (\ @ (ptr :: * -> *)
+                   @ task
+                   (release :: forall a. ptr a -> GHC.Types.IO ())
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Data.Array.Accelerate.Array.Remote.Table.new1
+                        @ ptr
+                        release
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 case Data.HashTable.Internal.Utils.$wnextBestPrime
+                        Data.Array.Accelerate.Array.Remote.LRU.new3 of ww { DEFAULT ->
+                 case Data.HashTable.ST.Basic.$wnewSizedReal
+                        @ GHC.Prim.RealWorld
+                        @ Data.Array.Accelerate.Array.Remote.Table.StableArray
+                        @ (Data.Array.Accelerate.Array.Remote.LRU.Used task)
+                        ww
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case GHC.Prim.newMutVar#
+                        @ (Data.HashTable.ST.Basic.HashTable_
+                             GHC.Prim.RealWorld
+                             Data.Array.Accelerate.Array.Remote.Table.StableArray
+                             (Data.Array.Accelerate.Array.Remote.LRU.Used task))
+                        @ GHC.Prim.RealWorld
+                        ipv3
+                        ipv2 of ds { (#,#) ipv4 ipv5 ->
+                 case GHC.Prim.newMVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Data.HashTable.IO.IOHashTable
+                             Data.HashTable.ST.Basic.HashTable
+                             Data.Array.Accelerate.Array.Remote.Table.StableArray
+                             (Data.Array.Accelerate.Array.Remote.LRU.Used task))
+                        ipv4 of ds3 { (#,#) ipv6 ipv7 ->
+                 case GHC.Prim.putMVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Data.HashTable.IO.IOHashTable
+                             Data.HashTable.ST.Basic.HashTable
+                             Data.Array.Accelerate.Array.Remote.Table.StableArray
+                             (Data.Array.Accelerate.Array.Remote.LRU.Used task))
+                        ipv7
+                        (GHC.STRef.STRef
+                           @ GHC.Prim.RealWorld
+                           @ (Data.HashTable.ST.Basic.HashTable_
+                                GHC.Prim.RealWorld
+                                Data.Array.Accelerate.Array.Remote.Table.StableArray
+                                (Data.Array.Accelerate.Array.Remote.LRU.Used task))
+                           ipv5)
+                          `cast`
+                        (Sym (Data.HashTable.ST.Basic.N:HashTable[0]
+                                  (Control.Monad.Primitive.D:R:PrimStateIO[0])
+                                  <Data.Array.Accelerate.Array.Remote.Table.StableArray>_R
+                                  <Data.Array.Accelerate.Array.Remote.LRU.Used task>_R))
+                        ipv6 of s2# { DEFAULT ->
+                 case GHC.Prim.mkWeak#
+                        @ 'GHC.Types.PtrRepUnlifted
+                        @ (GHC.Prim.MVar#
+                             GHC.Prim.RealWorld
+                             (Data.HashTable.IO.IOHashTable
+                                Data.HashTable.ST.Basic.HashTable
+                                Data.Array.Accelerate.Array.Remote.Table.StableArray
+                                (Data.Array.Accelerate.Array.Remote.LRU.Used task)))
+                        @ (GHC.MVar.MVar
+                             (Data.HashTable.IO.IOHashTable
+                                Data.HashTable.ST.Basic.HashTable
+                                Data.Array.Accelerate.Array.Remote.Table.StableArray
+                                (Data.Array.Accelerate.Array.Remote.LRU.Used task)))
+                        @ ()
+                        ipv7
+                        (GHC.MVar.MVar
+                           @ (Data.HashTable.IO.IOHashTable
+                                Data.HashTable.ST.Basic.HashTable
+                                Data.Array.Accelerate.Array.Remote.Table.StableArray
+                                (Data.Array.Accelerate.Array.Remote.LRU.Used task))
+                           ipv7)
+                        (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                         Data.HashTable.ST.Basic.$wmapM_
+                           @ Data.Array.Accelerate.Array.Remote.Table.StableArray
+                           @ (Data.Array.Accelerate.Array.Remote.LRU.Used task)
+                           @ GHC.Prim.RealWorld
+                           @ ()
+                           (Data.Array.Accelerate.Array.Remote.LRU.new2 @ task)
+                             `cast`
+                           (<(Data.Array.Accelerate.Array.Remote.Table.StableArray,
+                              Data.Array.Accelerate.Array.Remote.LRU.Used task)>_R
+                            ->_R Sym (GHC.ST.N:ST[0] <GHC.Prim.RealWorld>_N <()>_R))
+                           ipv5
+                           s)
+                        s2# of ds4 { (#,#) ipv8 ipv9 ->
+                 case ipv1 of dt { Data.Array.Accelerate.Array.Remote.Table.MemoryTable dt1 dt2 dt3 dt4 dt5 ->
+                 (# ipv8,
+                    Data.Array.Accelerate.Array.Remote.LRU.MemoryTable
+                      @ ptr
+                      @ task
+                      dt1
+                      dt2
+                      dt3
+                      dt4
+                      dt5
+                      ipv7
+                      ipv9 #) } } } } } } } }) -}
+39a1c47ccfdefe898b6e8b9d263ba483
+  new2 ::
+    (Data.Array.Accelerate.Array.Remote.Table.StableArray,
+     Data.Array.Accelerate.Array.Remote.LRU.Used task)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ task
+                   (w :: (Data.Array.Accelerate.Array.Remote.Table.StableArray,
+                          Data.Array.Accelerate.Array.Remote.LRU.Used task))
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { (,) ww1 ww2 ->
+                 Data.Array.Accelerate.Array.Remote.LRU.$wlvl @ task ww2 w1 }) -}
+93e3f4d93784bccb176685166d25d62f
+  new3 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 2#) -}
+191504afaa5ebe5d29806b6f75583a60
+  reclaim ::
+    (Data.Array.Accelerate.Array.Remote.Class.RemoteMemory m,
+     Control.Monad.IO.Class.MonadIO m) =>
+    Data.Array.Accelerate.Array.Remote.LRU.MemoryTable
+      (Data.Array.Accelerate.Array.Remote.Class.RemotePtr m) task
+    -> m ()
+  {- Arity: 3,
+     Strictness: <S(LS(LLC(C(S))LL)LLLLLLLLL),U(A,U(U,U,U,U,U),A,A,A,A,A,C(C1(U)),U,U,A)><L,U(U,C(U))><S,1*U(U,U,U,U,C(C1(U(U,U))),A,A)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ (m :: * -> *)
+                   @ task
+                   ($dRemoteMemory :: Data.Array.Accelerate.Array.Remote.Class.RemoteMemory
+                                        m)
+                   ($dMonadIO :: Control.Monad.IO.Class.MonadIO m)
+                   (ds :: Data.Array.Accelerate.Array.Remote.LRU.MemoryTable
+                            (Data.Array.Accelerate.Array.Remote.Class.RemotePtr m) task) ->
+                 case ds of wild { Data.Array.Accelerate.Array.Remote.LRU.MemoryTable dt dt1 dt2 dt3 dt4 dt5 dt6 ->
+                 Data.Array.Accelerate.Array.Remote.Table.reclaim
+                   @ m
+                   $dRemoteMemory
+                   $dMonadIO
+                   (Data.Array.Accelerate.Array.Remote.Table.MemoryTable
+                      @ (Data.Array.Accelerate.Array.Remote.Class.RemotePtr m)
+                      dt
+                      dt1
+                      dt2
+                      dt3
+                      dt4) }) -}
+6de477051da9e3ff294a35fb1404db55
+  withRemote ::
+    (Data.Array.Accelerate.Array.Remote.Class.PrimElt a b,
+     Data.Array.Accelerate.Array.Remote.LRU.Task task,
+     Data.Array.Accelerate.Array.Remote.Class.RemoteMemory m,
+     Control.Monad.IO.Class.MonadIO m, GHC.Base.Functor m) =>
+    Data.Array.Accelerate.Array.Remote.LRU.MemoryTable
+      (Data.Array.Accelerate.Array.Remote.Class.RemotePtr m) task
+    -> Data.Array.Accelerate.Array.Data.ArrayData a
+    -> (Data.Array.Accelerate.Array.Remote.Class.RemotePtr m b
+        -> m (task, c))
+    -> m (GHC.Base.Maybe c)
+  {- Arity: 5,
+     Strictness: <S(LLSLL),U(U(U,U,U,U,U,U,U,U,U),U(U,U,U,U,U,U,U,U),U(U),U,U)><L,C(C1(U(U,1*U)))><L,U(U,U,A,1*U,C(U),C(C1(C1(C1(U)))),C(C1(C1(C1(U)))),C(U),U,U,U)><L,U(U(U,U,U,U,U),U)><L,A>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (5, True, True)
+                (\ @ task
+                   @ (m :: * -> *)
+                   @ a
+                   @ b
+                   @ c
+                   (w :: Data.Array.Accelerate.Array.Remote.Class.PrimElt a b)
+                   (w1 :: Data.Array.Accelerate.Array.Remote.LRU.Task task)
+                   (w2 :: Data.Array.Accelerate.Array.Remote.Class.RemoteMemory m)
+                   (w3 :: Control.Monad.IO.Class.MonadIO m)
+                   (w4 :: GHC.Base.Functor m) ->
+                 Data.Array.Accelerate.Array.Remote.LRU.$wwithRemote
+                   @ task
+                   @ m
+                   @ a
+                   @ b
+                   @ c
+                   w
+                   w1
+                   w2
+                   w3) -}
+instance GHC.Classes.Eq [Data.Array.Accelerate.Array.Remote.LRU.Status]
+  = Data.Array.Accelerate.Array.Remote.LRU.$fEqStatus
+instance Data.Array.Accelerate.Array.Remote.LRU.Task [()]
+  = Data.Array.Accelerate.Array.Remote.LRU.$fTask()
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
