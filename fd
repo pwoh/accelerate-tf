@@ -1,0 +1,68 @@
+[1mdiff --git a/DerpTest.hs b/DerpTest.hs[m
+[1mindex c5ba761..bca05c6 100644[m
+[1m--- a/DerpTest.hs[m
+[1m+++ b/DerpTest.hs[m
+[36m@@ -1,11 +1,9 @@[m
+[31m--- | Simple linear regression example for the README.[m
+[31m-[m
+ import Control.Monad (replicateM, replicateM_, zipWithM)[m
+ import System.Random (randomIO)[m
+ import Test.HUnit (assertBool)[m
+ [m
+ import qualified TensorFlow.Core as TF[m
+[31m---import qualified TensorFlow.GenOps.Core as TF[m
+[32m+[m[32mimport qualified TensorFlow.GenOps.Core as TF[m
+ import qualified TensorFlow.Gradient as TF[m
+ import qualified TensorFlow.Ops as TF[m
+ [m
+[36m@@ -18,10 +16,7 @@[m [mmain = do[m
+     (w, b) <- fit xData yData[m
+     assertBool "w == 3" (abs (3 - w) < 0.001)[m
+     assertBool "b == 8" (abs (8 - b) < 0.001)[m
+[31m-    print w[m
+[31m-    print b[m
+[31m-    putStrLn "lolasdfasdf"[m
+[31m-    putStrLn "asdfdshfgvbhtfgtr"[m
+[32m+[m[32m    putStrLn "asdfsd"[m
+ [m
+ fit :: [Float] -> [Float] -> IO (Float, Float)[m
+ fit xData yData = TF.runSession $ do[m
+[1mdiff --git a/accelerate-tf.cabal b/accelerate-tf.cabal[m
+[1mindex 2416974..d5cf9ad 100644[m
+[1m--- a/accelerate-tf.cabal[m
+[1m+++ b/accelerate-tf.cabal[m
+[36m@@ -25,29 +25,15 @@[m [mexecutable DerpTest[m
+   build-depends: base >= 4.7 && < 5[m
+                 , random[m
+                 , HUnit[m
+[31m-                , proto-lens == 0.2.*[m
+[31m-                , proto-lens-protoc == 0.2.*[m
+[31m-                , tensorflow-proto == 0.1.*[m
+[31m-                , async[m
+[31m-                , attoparsec[m
+[31m-                , bytestring[m
+[31m-                , containers[m
+[31m-                , data-default[m
+[31m-                , exceptions[m
+[31m-                , fgl[m
+[31m-                , lens-family[m
+[31m-                , mainland-pretty[m
+[31m-                , mtl[m
+[31m-                , semigroups[m
+[31m-                , split[m
+[31m-                , text[m
+[31m-                , temporary[m
+[31m-                , transformers[m
+[31m-                , vector[m
+[32m+[m[32m               , lens-family[m
+[32m+[m[32m               , transformers[m
+[32m+[m[32m               , random[m
+                 , tensorflow == 0.1.*[m
+                 , tensorflow-core-ops[m
+                 , tensorflow-ops[m
+                 , tensorflow-opgen[m
+[32m+[m[32m                , tensorflow-proto == 0.1.*[m
+[32m+[m[32m                , tensorflow-test[m
+ [m
+ source-repository head[m
+   type:     git[m

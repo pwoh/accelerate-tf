@@ -1,0 +1,152 @@
+stack --docker --docker-image=tensorflow/haskell:v0 exec ghci
+:l test/AccelerateDotp.hs
+let x = [1.0, 2.0, 3.0]
+let test = toAccVector 3 x
+AST.convertAccWith (AST.phases {AST.enableAccFusion = False}) (dotp test test)
+let a0 =
+  let a0 = use (Array (Z :. 3) [1.0,2.0,3.0])
+  in map (\x0 -> x0 * x0) a0
+in fold (\x0 x1 -> x0 + x1) 0.0 a0
+
+
+
+stack --docker --docker-image=tensorflow/haskell:v0 exec ghci
+GHCi, version 8.0.2: http://www.haskell.org/ghc/  :? for help
+Prelude> :l test/AccelerateDotp.hs
+[1 of 1] Compiling Main             ( test/AccelerateDotp.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> 
+*Main> let test = toAccVector 3 [1.0,2.0,3.0]
+*Main> import qualified Data.Array.Accelerate.Trafo.Sharing    as Sharing
+*Main Sharing> x = Sharing.convertAcc True True True True (plusone test)
+map (\x0 -> x0 + 1.0) (use (Array (Z :. 3) [1.0,2.0,3.0]))
+*Main Sharing> :force x
+
+x = Data.Array.Accelerate.AST.OpenAcc (Data.Array.Accelerate.AST.Map
+                                         (Data.Array.Accelerate.AST.Lam
+                                            (Data.Array.Accelerate.AST.Body
+                                               (Data.Array.Accelerate.AST.PrimApp
+                                                  (Data.Array.Accelerate.AST.PrimAdd
+                                                     (Data.Array.Accelerate.Type.FloatingNumType
+                                                        (Data.Array.Accelerate.Type.TypeDouble
+                                                           Data.Array.Accelerate.Type.FloatingDict)))
+                                                  (Data.Array.Accelerate.AST.Tuple
+                                                     (Data.Array.Accelerate.Array.Sugar.SnocTup
+                                                        (Data.Array.Accelerate.Array.Sugar.SnocTup
+                                                           Data.Array.Accelerate.Array.Sugar.NilTup
+                                                           (Data.Array.Accelerate.AST.Var
+                                                              Data.Array.Accelerate.AST.ZeroIdx))
+                                                        (Data.Array.Accelerate.AST.Const
+                                                           (GHC.Types.D# 1.0)))))))
+                                         (Data.Array.Accelerate.AST.OpenAcc (Data.Array.Accelerate.AST.Use
+                                                                               (Data.Array.Accelerate.Array.Sugar.Array
+                                                                                  ((,) () 3)
+                                                                                  (Data.Array.Accelerate.Array.Data.AD_Double
+                                                                                     (Data.Array.Accelerate.Array.Unique.UniqueArray
+                                                                                        283611087608
+                                                                                        _
+                                                                                        (GHC.Prim.MutVar# [])
+                                                                                        _
+                                                                                        (GHC.ForeignPtr.ForeignPtr
+                                                                                           0x000000420888b2a0
+                                                                                           (GHC.ForeignPtr.PlainPtr
+                                                                                              _))))))))
+
+
+
+addVector x y
+let a0 = use (Array (Z :. 3) [1.0,2.0,3.0]) in
+let a1 = use (Array (Z :. 3) [4.0,5.0,6.0])
+in generate (intersect (shape a0) (shape a1)) (\x0 -> (a0!x0) + (a1!x0))
+
+Acc (Data.Array.Accelerate.Smart.ZipWith
+           _
+           (Acc (Data.Array.Accelerate.Smart.Use
+                   (Array
+                      ((,) () 3)
+                      (AD_Double
+                         (UniqueArray
+                            (Control.Concurrent.Unique.Unique 283603758752 _)
+                            (Lifetime
+                               (GHC.IORef.IORef (GHC.STRef.STRef (GHC.Prim.MutVar# [])))
+                               (GHC.Weak.Weak _)
+                               (GHC.ForeignPtr.ForeignPtr
+                                  0x000000420818ae50 (GHC.ForeignPtr.PlainPtr _))))))))
+           (Acc (Data.Array.Accelerate.Smart.Use
+                   (Array
+                      ((,) () 3)
+                      (AD_Double
+                         (UniqueArray
+                            (Control.Concurrent.Unique.Unique 283603924456 _)
+                            (Lifetime
+                               (GHC.IORef.IORef (GHC.STRef.STRef (GHC.Prim.MutVar# [])))
+                               (GHC.Weak.Weak _)
+                               (GHC.ForeignPtr.ForeignPtr
+                                  0x000000420818ae80 (GHC.ForeignPtr.PlainPtr _)))))))))
+
+addVector x x
+let a0 = use (Array (Z :. 3) [1.0,2.0,3.0])
+in map (\x0 -> x0 + x0) a0
+
+Acc (Data.Array.Accelerate.Smart.ZipWith
+            _
+            (Acc (Data.Array.Accelerate.Smart.Use
+                    (Array
+                       ((,) () 3)
+                       (AD_Double
+                          (UniqueArray
+                             (Control.Concurrent.Unique.Unique 283603758752 _)
+                             (Lifetime
+                                (GHC.IORef.IORef (GHC.STRef.STRef (GHC.Prim.MutVar# [])))
+                                (GHC.Weak.Weak _)
+                                (GHC.ForeignPtr.ForeignPtr
+                                   0x000000420818ae50 (GHC.ForeignPtr.PlainPtr _))))))))
+            (Acc (Data.Array.Accelerate.Smart.Use
+                    (Array
+                       ((,) () 3)
+                       (AD_Double
+                          (UniqueArray
+                             (Control.Concurrent.Unique.Unique 283603758752 _)
+                             (Lifetime
+                                (GHC.IORef.IORef (GHC.STRef.STRef (GHC.Prim.MutVar# [])))
+                                (GHC.Weak.Weak _)
+                                (GHC.ForeignPtr.ForeignPtr
+                                   0x000000420818ae50 (GHC.ForeignPtr.PlainPtr _)))))))))
+
+
+
+
+===========
+ :set prompt ">"
+>let xs = A.use (A.fromList (Z:.3) [1,2,3] :: Vector Double)
+>import qualified Data.Array.Accelerate.Trafo.Sharing    as Sharing
+>let f = Sharing.convertAcc True True True True $ A.zipWith (+) xs xs
+>f
+let a0 = use (Array (Z :. 3) [1.0,2.0,3.0])
+in zipWith (\x0 x1 -> x0 + x1) a0 a0
+>:force f
+f = OpenAcc (Alet
+               (OpenAcc (Data.Array.Accelerate.AST.Use
+                           (Array
+                              ((,) () 3)
+                              (AD_Double
+                                 (UniqueArray
+                                    (Control.Concurrent.Unique.Unique 283947927112 _)
+                                    (Lifetime
+                                       (GHC.IORef.IORef (GHC.STRef.STRef (GHC.Prim.MutVar# [])))
+                                       (GHC.Weak.Weak _)
+                                       (GHC.ForeignPtr.ForeignPtr
+                                          0x000000421cad95a0 (GHC.ForeignPtr.PlainPtr _))))))))
+               (OpenAcc (Data.Array.Accelerate.AST.ZipWith
+                           (Lam
+                              (Lam
+                                 (Body
+                                    (Data.Array.Accelerate.AST.PrimApp
+                                       (PrimAdd (FloatingNumType (TypeDouble FloatingDict)))
+                                       (Data.Array.Accelerate.AST.Tuple
+                                          (SnocTup
+                                             (SnocTup NilTup (Var (SuccIdx ZeroIdx)))
+                                             (Var ZeroIdx)))))))
+                           (Avar ZeroIdx) (Avar ZeroIdx))))
+
+                           
