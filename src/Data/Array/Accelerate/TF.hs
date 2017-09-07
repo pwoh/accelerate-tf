@@ -66,8 +66,8 @@ evalOpenAcc
     -> String
     -- -> a
 
---evalOpenAcc (AST.OpenAcc (AST.Use a)) aenv' = show $ toList (toArr a)
-evalOpenAcc (AST.OpenAcc (AST.Map f (AST.OpenAcc a))) aenv' = (evalLam f aenv') P.++ " ** " P.++ AST.showPreAccOp a
+evalOpenAcc (AST.OpenAcc (AST.Use a')) aenv' = show $ toList (toArr a')
+evalOpenAcc (AST.OpenAcc (AST.Map f (AST.OpenAcc a'))) aenv' = (evalLam f aenv') P.++ " ** " P.++ AST.showPreAccOp a'
 evalOpenAcc _ _ = "???"
 
 evalLam :: AST.PreOpenFun f env aenv t -> AST.Val aenv -> String
