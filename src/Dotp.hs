@@ -48,3 +48,4 @@ plusone_constants = TF.runSession $ do
     result <- TF.run (x `TF.add` (TF.constant (TF.Shape []) [1.0 :: Float]))
 
     return result
+

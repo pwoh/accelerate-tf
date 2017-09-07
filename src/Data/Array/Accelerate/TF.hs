@@ -14,7 +14,7 @@ import Data.Array.Accelerate                            as A
 
 --import Data.Array.Accelerate.Array.Data
 --import Data.Array.Accelerate.Array.Representation                   ( SliceIndex(..) )
-import Data.Array.Accelerate.Array.Sugar
+import Data.Array.Accelerate.Array.Sugar as Sugar
 --import Data.Array.Accelerate.Error
 --import Data.Array.Accelerate.Product
 import Data.Array.Accelerate.Trafo                                  hiding ( Delayed )
@@ -26,6 +26,9 @@ import qualified Data.Array.Accelerate.AST                          as AST
 import qualified Data.Array.Accelerate.Trafo                        as AST
 import qualified Data.Array.Accelerate.Trafo.Sharing    as Sharing
 
+
+import qualified Data.List as List (intercalate)
+
 --import qualified Data.Array.Accelerate.Debug                        as D
 
 --convertAccWith
@@ -33,12 +36,29 @@ import qualified Data.Array.Accelerate.Trafo.Sharing    as Sharing
 --     Phase -> Data.Array.Accelerate.Smart.Acc arrs -> DelayedAcc arrs
 
 
+-- Environments
+-- ------------
+
+-- Valuation for an environment
+--
+data TFEnv env where
+  Empty :: TFEnv ()
+  Push  :: TFEnv env -> String -> TFEnv (env, String)
+
+-- Projection of a value from a valuation using a de Bruijn index
+--
+tfprj :: AST.Idx env String -> TFEnv env -> String
+tfprj AST.ZeroIdx       (Push _   v) = v
+tfprj (AST.SuccIdx idx) (Push val _) = tfprj idx val
+
+
 run :: (Acc (Vector Double)) -> String
 run a = execute--unsafePerformIO execute
   where
     !acc    =  Sharing.convertAcc True True True True a
     execute = (evalOpenAcc acc AST.Empty)
---The rule of thumb is to use evaluate to force or handle exceptions in lazy values. 
+
+
 evalOpenAcc
     :: --forall aenv a.
        AST.OpenAcc aenv a
@@ -46,26 +66,22 @@ evalOpenAcc
     -> String
     -- -> a
 
-evalOpenAcc (AST.OpenAcc (AST.Map f (AST.OpenAcc a))) aenv' = evalLam f P.++ " ** " P.++ AST.showPreAccOp a
+--evalOpenAcc (AST.OpenAcc (AST.Use a)) aenv' = show $ toList (toArr a)
+evalOpenAcc (AST.OpenAcc (AST.Map f (AST.OpenAcc a))) aenv' = (evalLam f aenv') P.++ " ** " P.++ AST.showPreAccOp a
+evalOpenAcc _ _ = "???"
 
-evalLam :: AST.PreOpenFun f env aenv t -> String
-evalLam (AST.Lam acc) = "Lam .. " P.++ evalLam acc
-evalLam (AST.Body acc) = AST.showPreExpOp acc
+evalLam :: AST.PreOpenFun f env aenv t -> AST.Val aenv -> String
+evalLam (AST.Lam acc) aenv' = evalLam acc aenv' --assume single var for now?
+evalLam (AST.Body (AST.PrimApp (AST.PrimAdd eltType) (AST.Tuple args))) aenv' = "Add " P.++ show eltType P.++ show (evalTuple args aenv')
 
---run :: (Acc (Vector Double) -> Acc (Vector Double) -> Acc (Scalar Double)) -> Scalar Double
----- What should be the real type?
---run fn = Data.Array.Accelerate.Array.Sugar.fromList Z [5.0]
+-- scalar expr
+evalPreOpenExp :: forall acc env aenv t. AST.PreOpenExp acc env aenv t -> AST.Val aenv-> String
+evalPreOpenExp _ _ = "..."  -- first do constant or variable look up 
 
--- Implement Let, Use and Map. How to do map in TF-haskell?
+evalTuple :: Tuple (AST.PreOpenExp acc env aenv) e -> AST.Val aenv -> [String]
+evalTuple (Sugar.SnocTup xs x) aenv' = (evalPreOpenExp x aenv'):(evalTuple xs aenv')
+evalTuple (Sugar.NilTup) aenv' = []
 
---run :: Arrays a => Sugar.Acc a -> a
---run a = unsafePerformIO execute
---  where
---    !acc    = convertAccWith config a
---    execute = do
---      D.dumpGraph $!! acc
---      D.dumpSimplStats
---      phase "execute" D.elapsed (evaluate (evalOpenAcc acc Empty))
 
 
 config :: Phase
@@ -78,9 +94,3 @@ config =  Phase
   , convertOffsetOfSegment = False
   --, vectoriseSequences     = True
   }
-
----- Debugging
----- ---------
-
---phase :: String -> (Double -> Double -> String) -> IO a -> IO a
---phase n fmt go = D.timed D.dump_phases (\wall cpu -> printf "phase %s: %s" n (fmt wall cpu)) go
