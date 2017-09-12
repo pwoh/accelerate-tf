@@ -2,6 +2,9 @@
 {-# LANGUAGE RankNTypes          #-}
 {-# LANGUAGE RecordWildCards     #-}
 {-# LANGUAGE GADTs                 #-}
+
+{-# LANGUAGE ScopedTypeVariables   #-}
+
 module Data.Array.Accelerate.TF where
 
 import Prelude as P
@@ -60,13 +63,13 @@ run a = execute--unsafePerformIO execute
 
 
 evalOpenAcc
-    :: --forall aenv a.
+    :: forall aenv a.
        AST.OpenAcc aenv a
     -> AST.Val aenv
     -> String
     -- -> a
 
-evalOpenAcc (AST.OpenAcc (AST.Use a')) aenv' = show $ toList (toArr a')
+evalOpenAcc (AST.OpenAcc (AST.Use a')) aenv' = myShowArrays (toArr a' :: arrs)
 evalOpenAcc (AST.OpenAcc (AST.Map f (AST.OpenAcc a'))) aenv' = (evalLam f aenv') P.++ " ** " P.++ AST.showPreAccOp a'
 evalOpenAcc _ _ = "???"
 
@@ -82,6 +85,25 @@ evalTuple :: Tuple (AST.PreOpenExp acc env aenv) e -> AST.Val aenv -> [String]
 evalTuple (Sugar.SnocTup xs x) aenv' = (evalPreOpenExp x aenv'):(evalTuple xs aenv')
 evalTuple (Sugar.NilTup) aenv' = []
 
+
+myShowArrays :: forall arrs. Arrays arrs => arrs -> String
+myShowArrays = display . collect (arrays (undefined::arrs)) . Sugar.fromArr
+  where
+    collect :: ArraysR a -> a -> [String]
+    collect ArraysRunit         _        = []
+    collect ArraysRarray        arr      = [myShowShortendArr arr]
+    collect (ArraysRpair r1 r2) (a1, a2) = collect r1 a1 P.++ collect r2 a2
+    --
+    display []  = []
+    display [x] = x
+    display xs  = "(" P.++ List.intercalate ", " xs P.++ ")"
+
+myShowShortendArr :: Elt e => Array sh e -> String
+myShowShortendArr arr
+  = show (P.take cutoff l) P.++ if P.length l P.> cutoff then ".." else ""
+  where
+    l      = toList arr
+    cutoff = 5
 
 
 config :: Phase
