@@ -44,13 +44,13 @@ import qualified Data.List as List (intercalate)
 
 -- Valuation for an environment
 --
-data TFEnv env where
+data TFEnv env2 where
   Empty :: TFEnv ()
-  Push  :: TFEnv env -> String -> TFEnv (env, String)
+  Push  :: TFEnv env2 -> String -> TFEnv (env2, String)
 
 -- Projection of a value from a valuation using a de Bruijn index
 --
-tfprj :: AST.Idx env String -> TFEnv env -> String
+tfprj :: AST.Idx env t -> TFEnv env2 -> String
 tfprj AST.ZeroIdx       (Push _   v) = v
 tfprj (AST.SuccIdx idx) (Push val _) = tfprj idx val
 
@@ -63,28 +63,39 @@ run a = execute--unsafePerformIO execute
 
 
 evalOpenAcc
-    :: forall aenv a.
+    :: forall aenv a. Arrays a => 
        AST.OpenAcc aenv a
     -> AST.Val aenv
     -> String
     -- -> a
-
-evalOpenAcc (AST.OpenAcc (AST.Use a')) aenv' = myShowArrays (toArr a' :: arrs)
-evalOpenAcc (AST.OpenAcc (AST.Map f (AST.OpenAcc a'))) aenv' = (evalLam f aenv') P.++ " ** " P.++ AST.showPreAccOp a'
+{-
+1) Print the aenv possibly to look at it. -- not sure how to do this.
+2) Print function properly with PrimApp and PrimAdd. [done]
+2.5) implement variables properly for env. should i have my own env? probably not - use AST?
+3) Test PlusOne, and print out what my tensorflow should do.
+4) Pattern match Let. Write simple example with Let. Use environments.
+5) Implement Zipwith.
+6) Test Dotp.
+7) Make it actually run instead of print? keep print version for debugging.
+-}
+    
+evalOpenAcc (AST.OpenAcc (AST.Use a')) aenv' = "[Using" P.++ myShowArrays (toArr a' :: a) P.++ "]"
+evalOpenAcc (AST.OpenAcc (AST.Map f (a'))) aenv' = "[Fun: " P.++ (evalLam f Empty aenv') P.++ " => " P.++ evalOpenAcc a' aenv' P.++ "]"
 evalOpenAcc _ _ = "???"
 
-evalLam :: AST.PreOpenFun f env aenv t -> AST.Val aenv -> String
-evalLam (AST.Lam acc) aenv' = evalLam acc aenv' --assume single var for now?
-evalLam (AST.Body (AST.PrimApp (AST.PrimAdd eltType) (AST.Tuple args))) aenv' = "Add " P.++ show eltType P.++ show (evalTuple args aenv')
+evalLam :: AST.PreOpenFun f env aenv t -> TFEnv env2 -> AST.Val aenv -> String
+evalLam (AST.Lam f) env' aenv' = evalLam f (env' `Push` "meep") aenv' --assume single var for now?
+evalLam (AST.Body (AST.PrimApp (AST.PrimAdd eltType) (AST.Tuple args))) env' aenv' = "Add " P.++ show eltType P.++ show (evalTuple args env' aenv')
 
 -- scalar expr
-evalPreOpenExp :: forall acc env aenv t. AST.PreOpenExp acc env aenv t -> AST.Val aenv-> String
-evalPreOpenExp _ _ = "..."  -- first do constant or variable look up 
+evalPreOpenExp :: forall acc env aenv t env2. AST.PreOpenExp acc env aenv t -> TFEnv env2 -> AST.Val aenv -> String
+evalPreOpenExp (AST.Var ix) env' aenv = "var..." P.++ show (tfprj ix env')  -- first do constant or variable look up 
+evalPreOpenExp (AST.Const c) _ _ = "const..." P.++ show (Sugar.toElt c :: t)  -- first do constant or variable look up 
+evalPreOpenExp _ _ _ = "..."  -- first do constant or variable look up 
 
-evalTuple :: Tuple (AST.PreOpenExp acc env aenv) e -> AST.Val aenv -> [String]
-evalTuple (Sugar.SnocTup xs x) aenv' = (evalPreOpenExp x aenv'):(evalTuple xs aenv')
-evalTuple (Sugar.NilTup) aenv' = []
-
+evalTuple :: Tuple (AST.PreOpenExp acc env aenv) t -> TFEnv env2 -> AST.Val aenv -> [String]
+evalTuple (Sugar.SnocTup xs x) env' aenv' = (evalPreOpenExp x env' aenv'):(evalTuple xs env' aenv')
+evalTuple (Sugar.NilTup) env' aenv' = []
 
 myShowArrays :: forall arrs. Arrays arrs => arrs -> String
 myShowArrays = display . collect (arrays (undefined::arrs)) . Sugar.fromArr
