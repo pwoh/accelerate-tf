@@ -36,6 +36,8 @@ main = do
     yyy <- putStrLn $ (show $ AccTF.run $ addVector test test2)
     yyyy <- putStrLn $ (show $ AccTF.run $ (A.zipWith (*) (A.zipWith (+) (A.zipWith (+) test test2) test) test2))
     yyyyy <- putStrLn $ (show $ AccTF.run $ (A.zipWith (*) (A.zipWith (+) (A.zipWith (+) test test2) test3) test2))
+    putStrLn "----"
+    putStrLn $ (show $ AccTF.run $ dotp test test2)
 
     --w <- putStrLn $ (show $ AccTF.run $ addVector test test)
     return ()
