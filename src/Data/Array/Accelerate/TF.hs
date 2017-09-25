@@ -9,7 +9,7 @@ module Data.Array.Accelerate.TF where
 
 import Prelude as P
 
-import System.IO.Unsafe                                             ( unsafePerformIO )
+--import System.IO.Unsafe                                             ( unsafePerformIO )
 
 --import Data.Array.Accelerate.AST 
 import Data.Array.Accelerate                            as A
@@ -26,9 +26,11 @@ import Data.Array.Accelerate.Trafo                                  hiding ( Del
 import qualified Data.Array.Accelerate.AST                          as AST
 --import qualified Data.Array.Accelerate.Array.Representation         as R
 --import qualified Data.Array.Accelerate.Smart                        as Sugar
-import qualified Data.Array.Accelerate.Trafo                        as AST
+--import qualified Data.Array.Accelerate.Trafo                        as AST
 import qualified Data.Array.Accelerate.Trafo.Sharing    as Sharing
 
+
+import qualified Data.Array.Accelerate.Trafo.Vectorise as Vectorise
 
 import qualified Data.List as List (intercalate)
 
@@ -61,6 +63,10 @@ run a = execute--unsafePerformIO execute
     !acc    =  Sharing.convertAcc True True True True a
     execute = (evalOpenAcc acc Empty AST.Empty)
 
+liftTest :: forall aenv t. Arrays t
+         => AST.OpenAcc aenv t
+         -> AST.OpenAcc aenv t
+liftTest (AST.OpenAcc (AST.Map f a')) = AST.OpenAcc (AST.Apply (Vectorise.liftFun1 f) a')
 
 evalOpenAcc
     :: forall aenv a env2. Arrays a => 
@@ -83,6 +89,9 @@ evalOpenAcc
 6) Test Dotp. [done]
 CLEAN UP CODE then...
 7) Make it actually run instead of print? keep print version for debugging.
+
+Need reshape.
+Generate?
 -}
 
 evalOpenAcc (AST.OpenAcc (AST.Use a')) env' aenv' = "[Use TF.constant" P.++ myArrayShapes (toArr a' :: a) P.++ myShowArrays (toArr a' :: a) P.++ "]"
@@ -109,6 +118,7 @@ evalFoldLam (AST.Lam f) env' aenv' = evalFoldLam f (env') aenv' --assume single 
 evalFoldLam (AST.Body (AST.PrimApp (AST.PrimAdd eltType) (AST.Tuple args))) env' aenv' = "TF.add " P.++ show first P.++ "TF.reduceSum " P.++ show second
   where first:second = evalTuple args env' aenv'
 
+--TOdo openAFun???
 
 evalMapLam :: AST.PreOpenFun f env aenv t -> TFEnv env2 -> AST.Val aenv -> String
 evalMapLam (AST.Lam f) env' aenv' = evalMapLam f (env') aenv' --assume single var for now?
@@ -119,6 +129,9 @@ evalMapLam (AST.Body (AST.PrimApp (AST.PrimMul eltType) (AST.Tuple args))) env' 
 evalPreOpenExp :: forall acc env aenv t env2. AST.PreOpenExp acc env aenv t -> TFEnv env2 -> AST.Val aenv -> String
 evalPreOpenExp (AST.Var ix) env' aenv = show (tfprj ix env')  -- first do constant or variable look up 
 evalPreOpenExp (AST.Const c) _ _ = "TF.constant (TF.Shape []) [" P.++ show (Sugar.toElt c :: t) P.++ "]" -- first do constant or variable look up 
+evalPreOpenExp (AST.Let bnd body) _ _ = "...Let..." 
+evalPreOpenExp (AST.Tuple t) _ _ = "...Tuple..." 
+evalPreOpenExp (AST.PrimApp f x) _ _ = "...PrimApp..." 
 evalPreOpenExp _ _ _ = "..."  -- first do constant or variable look up 
 
 evalTuple :: Tuple (AST.PreOpenExp acc env aenv) t -> TFEnv env2 -> AST.Val aenv -> [String]

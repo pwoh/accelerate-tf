@@ -26,18 +26,17 @@ x = toAccVector 3 [1.0,2.0,3.0]
 --y = toAccVector 3 [4.0,5.0,6.0]
 
 main = do
-    let x = [1.0, 2.0, 3.0]
-    let test = toAccVector 3 x
+    let test = toAccVector 3 [1.0, 2.0, 3.0]
     let test2 = toAccVector 3 [4.0, 6.0, 8.0]
     let test3 = toAccVector 3 [10.0, 20.0, 30.0]
-    z <- putStrLn $ (show $ I.run $ dotp test test)
-    y <- putStrLn $ (show $ AccTF.run $ plusone test)
-    yy <- putStrLn $ (show $ AccTF.run $ double test)
-    yyy <- putStrLn $ (show $ AccTF.run $ addVector test test2)
-    yyyy <- putStrLn $ (show $ AccTF.run $ (A.zipWith (*) (A.zipWith (+) (A.zipWith (+) test test2) test) test2))
-    yyyyy <- putStrLn $ (show $ AccTF.run $ (A.zipWith (*) (A.zipWith (+) (A.zipWith (+) test test2) test3) test2))
+    putStrLn $ show $ I.run $ dotp test test
+    putStrLn $ show $ AccTF.run $ plusone test
+    putStrLn $ show $ AccTF.run $ double test
+    putStrLn $ show $ AccTF.run $ addVector test test2
+    putStrLn $ show $ AccTF.run $ A.zipWith (*) (A.zipWith (+) (A.zipWith (+) test test2) test) test2
+    putStrLn $ show $ AccTF.run $ A.zipWith (*) (A.zipWith (+) (A.zipWith (+) test test2) test3) test2
     putStrLn "----"
-    putStrLn $ (show $ AccTF.run $ dotp test test2)
+    putStrLn $ show $ AccTF.run $ dotp test test2
 
     --w <- putStrLn $ (show $ AccTF.run $ addVector test test)
     return ()
