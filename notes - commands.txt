@@ -149,4 +149,24 @@ f = OpenAcc (Alet
                                              (Var ZeroIdx)))))))
                            (Avar ZeroIdx) (Avar ZeroIdx))))
 
-                           
+===
+tf types
+yo :: TF.Fetchable (TF.Tensor TF.Build Float) a => IO a
+x :: TF.Tensor TF.Build Float
+(tf constant)
+
+
+vv
+  :: (TF.MonadBuild m', TF.TensorType dtype) =>
+     m' (TF.Tensor TF.Ref dtype)
+(tf variable)
+
+data Tensor v a where
+
+A named output of a TensorFlow operation.
+
+The type parameter a is the type of the elements in the Tensor. The parameter v is either:
+
+Build: An unrendered, immutable value.
+Value: A rendered, immutable value.
+Ref: A rendered stateful handle (e.g., a variable).

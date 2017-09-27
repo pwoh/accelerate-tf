@@ -4,6 +4,7 @@
 {-# LANGUAGE GADTs                 #-}
 
 {-# LANGUAGE ScopedTypeVariables   #-}
+{-# LANGUAGE FlexibleContexts #-}
 
 module Data.Array.Accelerate.TF where
 
@@ -30,9 +31,13 @@ import qualified Data.Array.Accelerate.AST                          as AST
 import qualified Data.Array.Accelerate.Trafo.Sharing    as Sharing
 
 
-import qualified Data.Array.Accelerate.Trafo.Vectorise as Vectorise
+--import qualified Data.Array.Accelerate.Trafo.Vectorise as Vectorise
 
 import qualified Data.List as List (intercalate)
+
+
+import qualified TensorFlow.Core as TF
+--import qualified TensorFlow.Ops as TF
 
 --import qualified Data.Array.Accelerate.Debug                        as D
 
@@ -46,13 +51,17 @@ import qualified Data.List as List (intercalate)
 
 -- Valuation for an environment
 --
-data TFEnv env2 where
+data TFEnv tfenv where
   Empty :: TFEnv ()
-  Push  :: TFEnv env2 -> String -> TFEnv (env2, String)
+  Push  :: TFEnv tfenv -> String -> TFEnv (tfenv, String)
+
+data TFEnv1 tfenv where
+  Empty1 :: TFEnv1 ()
+  Push1  :: TFEnv1 tfenv -> TF.Tensor TF.Build e -> TFEnv1 (tfenv, TF.Tensor TF.Build e)
 
 -- Projection of a value from a valuation using a de Bruijn index
 --
-tfprj :: AST.Idx env t -> TFEnv env2 -> String
+tfprj :: AST.Idx env t -> TFEnv tfenv -> String
 tfprj AST.ZeroIdx       (Push _   v) = v
 tfprj (AST.SuccIdx idx) (Push val _) = tfprj idx val
 
@@ -61,18 +70,19 @@ run :: Arrays a => Acc a  -> String
 run a = execute--unsafePerformIO execute
   where
     !acc    =  Sharing.convertAcc True True True True a
-    execute = (evalOpenAcc acc Empty AST.Empty)
+    execute = (evalOpenAcc acc Empty)
 
-liftTest :: forall aenv t. Arrays t
-         => AST.OpenAcc aenv t
-         -> AST.OpenAcc aenv t
-liftTest (AST.OpenAcc (AST.Map f a')) = AST.OpenAcc (AST.Apply (Vectorise.liftFun1 f) a')
+--liftTest :: forall aenv t. Arrays t
+--         => AST.OpenAcc aenv t
+--         -> AST.OpenAcc aenv t
+--liftTest (AST.OpenAcc (AST.Map f a')) = AST.OpenAcc (AST.Apply (Vectorise.liftFun1 f) a')
+
+type Evaluator = forall acc env aenv t tfenv. AST.PreOpenExp acc env aenv t -> TFEnv tfenv -> String
 
 evalOpenAcc
-    :: forall aenv t env2. Arrays t => 
+    :: forall aenv t tfenv. Arrays t => 
        AST.OpenAcc aenv t
-    -> TFEnv env2
-    -> AST.Val aenv
+    -> TFEnv tfenv
     -> String
     -- -> a
 {-
@@ -87,78 +97,61 @@ let thing = liftTest (Sharing.convertAcc True True True True $ A.map (\a -> a * 
 
 -}
 
-evalOpenAcc (AST.OpenAcc (AST.Use a')) env' aenv' = "[Use TF.constant" P.++ myArrayShapes (toArr a' :: t) P.++ myShowArrays (toArr a' :: t) P.++ "]"
-evalOpenAcc (AST.OpenAcc (AST.Map f (a'))) env' aenv' = "[Fun: " P.++ (evalMapLam f (env' `Push` arrVal) aenv') --P.++ " => " P.++ evalOpenAcc a' aenv' P.++ "]"
-    where arrVal = evalOpenAcc a' env' aenv'
-
-evalOpenAcc (AST.OpenAcc (AST.Alet acc1 acc2)) env' aenv' = let eval1 = (evalOpenAcc acc1 env' aenv') in
-  "Let: " P.++ evalOpenAcc acc2 (env' `Push` ("Ref to: " P.++ eval1)) (aenv' `AST.Push` (error "..."))
-
-evalOpenAcc (AST.OpenAcc (AST.ZipWith f acc1 acc2)) env' aenv' = "Zipwith: " P.++  evalMapLam f newEnv aenv'
-  where eval1 = evalOpenAcc acc1 env' aenv'
-        eval2 = evalOpenAcc acc2 env' aenv'
+evalOpenAcc (AST.OpenAcc (AST.Use a')) env' = "[Use TF.constant" P.++ myArrayShapes (toArr a' :: t) P.++ myShowArrays (toArr a' :: t) P.++ "]"
+evalOpenAcc (AST.OpenAcc (AST.Map f (a'))) env' = "[Fun: " P.++ (evalLam f (env' `Push` arrVal) evalPreOpenExpMap) --P.++ " => " P.++ evalOpenAcc a' aenv' P.++ "]"
+    where arrVal = evalOpenAcc a' env'
+evalOpenAcc (AST.OpenAcc (AST.Alet acc1 acc2)) env' = let eval1 = (evalOpenAcc acc1 env') in
+  "Let: " P.++ evalOpenAcc acc2 (env' `Push` ("Ref to: " P.++ eval1)) 
+evalOpenAcc (AST.OpenAcc (AST.ZipWith f acc1 acc2)) env' = "Zipwith: " P.++  evalLam f newEnv evalPreOpenExpMap
+  where eval1 = evalOpenAcc acc1 env'
+        eval2 = evalOpenAcc acc2 env'
         newEnv = env' `Push` eval1 `Push` eval2
-evalOpenAcc (AST.OpenAcc (AST.Avar ix)) env' aenv' = show (tfprj ix env')
+evalOpenAcc (AST.OpenAcc (AST.Avar ix)) env' = show (tfprj ix env')
+evalOpenAcc (AST.OpenAcc (AST.Fold f z acc)) env' = "[Fold: " P.++ (evalLam f (env' `Push` arrVal `Push` zVal) evalPreOpenExpFold)
+    where arrVal = evalOpenAcc acc env'
+          zVal = evalPreOpenExp z env'
+evalOpenAcc (AST.OpenAcc (AST.Apply f a)) env' = "Apply" P.++ evalAlam f (env' `Push` arrVal)
+  where arrVal = evalOpenAcc a env'
+evalOpenAcc (AST.OpenAcc (AST.Reshape sh a)) env' = "..reshape" P.++ evalOpenAcc a env'
+evalOpenAcc (AST.OpenAcc (AST.Generate sh f)) env' = "..generate"
+evalOpenAcc (AST.OpenAcc (AST.Replicate slice sh a)) env' = "..replicate"
 
-evalOpenAcc (AST.OpenAcc (AST.Fold f z acc)) env' aenv' = "[Fold: " P.++ (evalFoldLam f (env' `Push` arrVal `Push` zVal) aenv')
-    where arrVal = evalOpenAcc acc env' aenv'
-          zVal = evalPreOpenExp z env' aenv'
+evalOpenAcc _ _ = "???"
 
-evalOpenAcc (AST.OpenAcc (AST.Apply f a)) env' aenv' = "Apply" P.++ evalAlam f (env' `Push` arrVal) aenv'
-  where arrVal = evalOpenAcc a env' aenv' 
+evalAlam :: AST.PreOpenAfun AST.OpenAcc aenv t -> TFEnv tfenv -> String
+evalAlam (AST.Alam f) env' = evalAlam f env' 
+evalAlam (AST.Abody b) env' = evalOpenAcc b env'
 
-evalOpenAcc (AST.OpenAcc (AST.Reshape sh a)) env' aenv' = "..reshape" P.++ evalOpenAcc a env' aenv'
-evalOpenAcc (AST.OpenAcc (AST.Generate sh f)) env' aenv' = "..generate"
-evalOpenAcc (AST.OpenAcc (AST.Replicate slice sh a)) env' aenv' = "..replicate"
+evalLam :: AST.PreOpenFun f env aenv t -> TFEnv tfenv  -> Evaluator -> String
+evalLam (AST.Lam f) env' evalExp = evalLam f env' evalExp--assume single var for now?
+evalLam (AST.Body b) env' evalExp = evalExp b env'
 
-evalOpenAcc _ _ _ = "???"
-
-evalAlam :: AST.PreOpenAfun AST.OpenAcc aenv t -> TFEnv env2 -> AST.Val aenv -> String
-evalAlam (AST.Alam f) env' aenv' = evalAlam f env' (aenv' `AST.Push` (error "..."))
-evalAlam (AST.Abody b) env' aenv' = evalOpenAcc b env' aenv'
-
-evalFoldLam :: AST.PreOpenFun f env aenv t -> TFEnv env2 -> AST.Val aenv -> String
-evalFoldLam (AST.Lam f) env' aenv' = evalFoldLam f (env') aenv' --assume single var for now?
-evalFoldLam (AST.Body b) env' aenv' = evalPreOpenExpFold b env' aenv'
 
 --TOdo openAFun???
 
-evalMapLam :: AST.PreOpenFun f env aenv t -> TFEnv env2 -> AST.Val aenv -> String
-evalMapLam (AST.Lam f) env' aenv' = evalMapLam f (env') aenv' --assume single var for now?
-evalMapLam (AST.Body b) env' aenv' = evalPreOpenExpMap b env' aenv'
-
 -- scalar expr
-evalPreOpenExp :: forall acc env aenv t env2. AST.PreOpenExp acc env aenv t -> TFEnv env2 -> AST.Val aenv -> String
-evalPreOpenExp (AST.Var ix) env' aenv' = show (tfprj ix env')  -- first do constant or variable look up 
-evalPreOpenExp (AST.Const c) _ _ = "TF.constant (TF.Shape []) [" P.++ show (Sugar.toElt c :: t) P.++ "]" -- first do constant or variable look up 
-evalPreOpenExp (AST.Let bnd body) _ _ = "...Let..." 
-evalPreOpenExp (AST.Tuple t) _ _ = "...Tuple..." 
-evalPreOpenExp (AST.PrimApp f x) _ _ = "...PrimApp..."
-evalPreOpenExp _ _ _ = "..."  -- first do constant or variable look up 
+evalPreOpenExp :: forall acc env aenv t tfenv. AST.PreOpenExp acc env aenv t -> TFEnv tfenv -> String
+evalPreOpenExp (AST.Var ix) env' = show (tfprj ix env') 
+evalPreOpenExp (AST.Const c) _ = "TF.constant (TF.Shape []) [" P.++ show (Sugar.toElt c :: t) P.++ "]"
+evalPreOpenExp (AST.Let bnd body) _ = "...Let..." 
+evalPreOpenExp (AST.Tuple t) _  = "...Tuple..." 
+evalPreOpenExp (AST.PrimApp f x) _ = "...PrimApp..."
+evalPreOpenExp _ _  = "..."  -- first do constant or variable look up 
 
-evalPreOpenExpFold :: forall acc env aenv t env2. AST.PreOpenExp acc env aenv t -> TFEnv env2 -> AST.Val aenv -> String
-evalPreOpenExpFold (AST.PrimApp (AST.PrimAdd eltType) (AST.Tuple args)) env' aenv' = "TF.add " P.++ show first P.++ "TF.reduceSum " P.++ show second
-  where first:second = evalTupleFold args env' aenv'
-evalPreOpenExpFold expr env' aenv' = evalPreOpenExp expr env' aenv'
+evalPreOpenExpFold :: forall acc env aenv t tfenv. AST.PreOpenExp acc env aenv t -> TFEnv tfenv -> String
+evalPreOpenExpFold (AST.PrimApp (AST.PrimAdd eltType) (AST.Tuple args)) env' = "TF.add " P.++ show first P.++ "TF.reduceSum " P.++ show second
+  where first:second = evalTuple args env' evalPreOpenExpFold
+evalPreOpenExpFold expr env'  = evalPreOpenExp expr env' 
 
-evalPreOpenExpMap :: forall acc env aenv t env2. AST.PreOpenExp acc env aenv t -> TFEnv env2 -> AST.Val aenv -> String
-evalPreOpenExpMap (AST.PrimApp (AST.PrimAdd eltType) (AST.Tuple args)) env' aenv' = "TF.add "{-P.++ show eltType-}  P.++ show (evalTupleMap args env' aenv')
-evalPreOpenExpMap (AST.PrimApp (AST.PrimMul eltType) (AST.Tuple args)) env' aenv' = "TF.mul "{-P.++ show eltType-}  P.++ show (evalTupleMap args env' aenv')
-evalPreOpenExpMap (AST.PrimApp (AST.PrimAdd eltType) x) env' aenv' = "TF.add ??????" P.++ evalPreOpenExpMap x env' aenv'
-evalPreOpenExpMap expr env' aenv' = evalPreOpenExp expr env' aenv'
+evalPreOpenExpMap :: forall acc env aenv t tfenv. AST.PreOpenExp acc env aenv t -> TFEnv tfenv -> String
+evalPreOpenExpMap (AST.PrimApp (AST.PrimAdd eltType) (AST.Tuple args)) env' = "TF.add "{-P.++ show eltType-}  P.++ show (evalTuple args env' evalPreOpenExpMap)
+evalPreOpenExpMap (AST.PrimApp (AST.PrimMul eltType) (AST.Tuple args)) env' = "TF.mul "{-P.++ show eltType-}  P.++ show (evalTuple args env' evalPreOpenExpMap)
+evalPreOpenExpMap (AST.PrimApp (AST.PrimAdd eltType) x) env' = "TF.add ??????" P.++ evalPreOpenExpMap x env'
+evalPreOpenExpMap expr env' = evalPreOpenExp expr env'
 
--- todo abstract this out
-evalTupleFold :: Tuple (AST.PreOpenExp acc env aenv) t -> TFEnv env2 -> AST.Val aenv -> [String]
-evalTupleFold (Sugar.SnocTup xs x) env' aenv' = (evalPreOpenExpFold x env' aenv'):(evalTupleFold xs env' aenv')
-evalTupleFold (Sugar.NilTup) env' aenv' = []
-
-evalTupleMap :: Tuple (AST.PreOpenExp acc env aenv) t -> TFEnv env2 -> AST.Val aenv -> [String]
-evalTupleMap (Sugar.SnocTup xs x) env' aenv' = (evalPreOpenExpMap x env' aenv'):(evalTupleMap xs env' aenv')
-evalTupleMap (Sugar.NilTup) env' aenv' = []
-
-evalTuple :: Tuple (AST.PreOpenExp acc env aenv) t -> TFEnv env2 -> AST.Val aenv -> [String]
-evalTuple (Sugar.SnocTup xs x) env' aenv' = (evalPreOpenExp x env' aenv'):(evalTuple xs env' aenv')
-evalTuple (Sugar.NilTup) env' aenv' = []
+evalTuple :: Tuple (AST.PreOpenExp acc env aenv) t -> TFEnv tfenv -> Evaluator -> [String]
+evalTuple  (Sugar.SnocTup xs x) env' evalExp = (evalExp x env'):(evalTuple xs env' evalExp)
+evalTuple  (Sugar.NilTup) _env' _evalExp = []
 
 myArrayShapes :: forall arrs. Arrays arrs => arrs -> String
 myArrayShapes = display . collect (arrays (undefined::arrs)) . Sugar.fromArr
@@ -197,7 +190,6 @@ myShowShortendArr arr
   where
     l      = toList arr
     cutoff = 5
-
 
 config :: Phase
 config =  Phase
