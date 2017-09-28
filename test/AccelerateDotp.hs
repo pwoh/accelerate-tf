@@ -1,6 +1,7 @@
 import Data.Array.Accelerate                            as A
 import Data.Array.Accelerate.Interpreter as I
-import Data.Array.Accelerate.TF as AccTF
+import Data.Array.Accelerate.AccTF as AccTF
+import Data.Array.Accelerate.AccTF2 as AccTF2
 
 
 --import Data.Array.Accelerate.Trafo
@@ -40,6 +41,11 @@ main = do
     putStrLn "----"
     putStrLn $ show $ AccTF.run $ dotp test test2
     putStrLn $ show $ AccTF.run $ A.map (\a -> a * 2.0 + 1.0) test
+
+    putStrLn "----"
+
+    res1 <- AccTF2.run $ test3
+    putStrLn $ show $ res1
 
     --w <- putStrLn $ (show $ AccTF.run $ addVector test test)
     return ()

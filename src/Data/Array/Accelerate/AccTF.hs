@@ -6,7 +6,7 @@
 {-# LANGUAGE ScopedTypeVariables   #-}
 {-# LANGUAGE FlexibleContexts #-}
 
-module Data.Array.Accelerate.TF where
+module Data.Array.Accelerate.AccTF where
 
 import Prelude as P
 
@@ -37,7 +37,7 @@ import qualified Data.List as List (intercalate)
 
 
 import qualified TensorFlow.Core as TF
---import qualified TensorFlow.Ops as TF
+import qualified TensorFlow.Ops as TF
 
 --import qualified Data.Array.Accelerate.Debug                        as D
 
@@ -55,22 +55,18 @@ data TFEnv tfenv where
   Empty :: TFEnv ()
   Push  :: TFEnv tfenv -> String -> TFEnv (tfenv, String)
 
-data TFEnv1 tfenv where
-  Empty1 :: TFEnv1 ()
-  Push1  :: TFEnv1 tfenv -> TF.Tensor TF.Build e -> TFEnv1 (tfenv, TF.Tensor TF.Build e)
-
 -- Projection of a value from a valuation using a de Bruijn index
 --
 tfprj :: AST.Idx env t -> TFEnv tfenv -> String
 tfprj AST.ZeroIdx       (Push _   v) = v
 tfprj (AST.SuccIdx idx) (Push val _) = tfprj idx val
 
-
 run :: Arrays a => Acc a  -> String
 run a = execute--unsafePerformIO execute
   where
     !acc    =  Sharing.convertAcc True True True True a
     execute = (evalOpenAcc acc Empty)
+
 
 --liftTest :: forall aenv t. Arrays t
 --         => AST.OpenAcc aenv t
@@ -95,11 +91,14 @@ let thing = liftTest (Sharing.convertAcc True True True True $ A.map (\a -> a * 
 >evalOpenAcc thing Data.Array.Accelerate.TF.Empty Data.Array.Accelerate.AST.Empty
 
 
+--TOdo openAFun???
+
 -}
 
 evalOpenAcc (AST.OpenAcc (AST.Use a')) env' = "[Use TF.constant" P.++ myArrayShapes (toArr a' :: t) P.++ myShowArrays (toArr a' :: t) P.++ "]"
-evalOpenAcc (AST.OpenAcc (AST.Map f (a'))) env' = "[Fun: " P.++ (evalLam f (env' `Push` arrVal) evalPreOpenExpMap) --P.++ " => " P.++ evalOpenAcc a' aenv' P.++ "]"
+evalOpenAcc (AST.OpenAcc (AST.Map f (a'))) env' = "[Fun: " P.++ (evalLam f newEnv evalPreOpenExpMap) --P.++ " => " P.++ evalOpenAcc a' aenv' P.++ "]"
     where arrVal = evalOpenAcc a' env'
+          newEnv = env' `Push` arrVal
 evalOpenAcc (AST.OpenAcc (AST.Alet acc1 acc2)) env' = let eval1 = (evalOpenAcc acc1 env') in
   "Let: " P.++ evalOpenAcc acc2 (env' `Push` ("Ref to: " P.++ eval1)) 
 evalOpenAcc (AST.OpenAcc (AST.ZipWith f acc1 acc2)) env' = "Zipwith: " P.++  evalLam f newEnv evalPreOpenExpMap
@@ -107,15 +106,16 @@ evalOpenAcc (AST.OpenAcc (AST.ZipWith f acc1 acc2)) env' = "Zipwith: " P.++  eva
         eval2 = evalOpenAcc acc2 env'
         newEnv = env' `Push` eval1 `Push` eval2
 evalOpenAcc (AST.OpenAcc (AST.Avar ix)) env' = show (tfprj ix env')
-evalOpenAcc (AST.OpenAcc (AST.Fold f z acc)) env' = "[Fold: " P.++ (evalLam f (env' `Push` arrVal `Push` zVal) evalPreOpenExpFold)
+evalOpenAcc (AST.OpenAcc (AST.Fold f z acc)) env' = "[Fold: " P.++ (evalLam f newEnv evalPreOpenExpFold)
     where arrVal = evalOpenAcc acc env'
           zVal = evalPreOpenExp z env'
-evalOpenAcc (AST.OpenAcc (AST.Apply f a)) env' = "Apply" P.++ evalAlam f (env' `Push` arrVal)
+          newEnv = env' `Push` arrVal `Push` zVal
+evalOpenAcc (AST.OpenAcc (AST.Apply f a)) env' = "Apply" P.++ evalAlam f newEnv
   where arrVal = evalOpenAcc a env'
+        newEnv = env' `Push` arrVal
 evalOpenAcc (AST.OpenAcc (AST.Reshape sh a)) env' = "..reshape" P.++ evalOpenAcc a env'
 evalOpenAcc (AST.OpenAcc (AST.Generate sh f)) env' = "..generate"
 evalOpenAcc (AST.OpenAcc (AST.Replicate slice sh a)) env' = "..replicate"
-
 evalOpenAcc _ _ = "???"
 
 evalAlam :: AST.PreOpenAfun AST.OpenAcc aenv t -> TFEnv tfenv -> String
@@ -125,9 +125,6 @@ evalAlam (AST.Abody b) env' = evalOpenAcc b env'
 evalLam :: AST.PreOpenFun f env aenv t -> TFEnv tfenv  -> Evaluator -> String
 evalLam (AST.Lam f) env' evalExp = evalLam f env' evalExp--assume single var for now?
 evalLam (AST.Body b) env' evalExp = evalExp b env'
-
-
---TOdo openAFun???
 
 -- scalar expr
 evalPreOpenExp :: forall acc env aenv t tfenv. AST.PreOpenExp acc env aenv t -> TFEnv tfenv -> String
