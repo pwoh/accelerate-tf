@@ -1,8 +1,12 @@
 {-# LANGUAGE FlexibleContexts #-}
+{-# LANGUAGE TypeOperators #-}
 
 import qualified TensorFlow.Core as TF
 import qualified TensorFlow.Ops as TF
 import qualified Data.Vector.Storable as V
+import qualified Data.ByteString as B
+import Data.Int
+import Data.Word
 
 main :: IO ()
 main = do
@@ -49,3 +53,28 @@ plusone_constants = TF.runSession $ do
 
     return result
 
+addIdentity :: (Num a, TF.TensorType a) => TF.Tensor TF.Build a
+addIdentity = TF.zeros (TF.Shape [1])
+
+mulIdentity
+  :: (Num t, TF.TensorType t, t TF./= Int8,
+      t TF./= Int16, t TF./= Word8,
+      t TF./= Word16,
+      t TF./= B.ByteString,
+      t TF./= Bool) =>
+     TF.Tensor TF.Build t
+mulIdentity = TF.fill (TF.constant (TF.Shape [1]) [1]) 1
+
+plusNothing :: IO (V.Vector Float)
+plusNothing = TF.runSession $ do
+    let x = TF.constant (TF.Shape [3]) [1.0, 2.0, 4.0 :: Float]
+    result <- TF.run (x `TF.add` addIdentity)
+
+    return result
+
+mulNothing :: IO (V.Vector Float)
+mulNothing = TF.runSession $ do
+    let x = TF.constant (TF.Shape [3]) [1.0, 2.0, 4.0 :: Float]
+    result <- TF.run (x `TF.mul` mulIdentity)
+
+    return result
