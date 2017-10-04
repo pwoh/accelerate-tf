@@ -42,7 +42,7 @@ tfprj AST.ZeroIdx       (Push _   v) = v
 tfprj (AST.SuccIdx idx) (Push val _) = tfprj idx val
 
 run :: forall sh e. (Shape sh, Elt e) => Acc (Array sh e) -> IO (V.Vector e)
-run a | Just IsTensorType <- (isTensorType :: Maybe (IsTensorType e))
+run a | Just (IsTensorType _) <- (isTensorType :: Maybe (IsTensorType e))
   = TF.runSession $ do
     result <- TF.run execute
     return result
@@ -53,18 +53,29 @@ run a | Just IsTensorType <- (isTensorType :: Maybe (IsTensorType e))
 type ExpEvaluator = forall sh e acc env aenv tfenv. (Shape sh, Elt e) => AST.PreOpenExp acc env aenv (Array sh e) -> TFEnv tfenv -> TF.Tensor TF.Build e 
 
 data IsTensorType t where
-  IsTensorType :: (TF.TensorType t, TF.TensorDataType V.Vector t) => IsTensorType t
+  IsTensorType :: (TF.TensorType t, TF.TensorDataType V.Vector t) => TensorTypeR t -> IsTensorType t
   
 isTensorType :: forall a. Typeable a => Maybe (IsTensorType a)
-isTensorType | Just Refl <- (eqT :: Maybe (a :~: Bool)) = Just IsTensorType
-             | Just Refl <- (eqT :: Maybe (a :~: Double)) = Just IsTensorType
-             | Just Refl <- (eqT :: Maybe (a :~: Float)) = Just IsTensorType
-             | Just Refl <- (eqT :: Maybe (a :~: Int8)) = Just IsTensorType
-             | Just Refl <- (eqT :: Maybe (a :~: Int16)) = Just IsTensorType
-             | Just Refl <- (eqT :: Maybe (a :~: Int32)) = Just IsTensorType
-             | Just Refl <- (eqT :: Maybe (a :~: Int64)) = Just IsTensorType
-             | Just Refl <- (eqT :: Maybe (a :~: Word8)) = Just IsTensorType
-             | Just Refl <- (eqT :: Maybe (a :~: Word16)) = Just IsTensorType
+isTensorType | Just Refl <- (eqT :: Maybe (a :~: Bool)) = Just (IsTensorType TensorTypeBool)
+             | Just Refl <- (eqT :: Maybe (a :~: Double)) = Just (IsTensorType TensorTypeDouble)
+             | Just Refl <- (eqT :: Maybe (a :~: Float)) = Just (IsTensorType TensorTypeFloat)
+             | Just Refl <- (eqT :: Maybe (a :~: Int8)) = Just (IsTensorType TensorTypeInt8)
+             | Just Refl <- (eqT :: Maybe (a :~: Int16)) = Just (IsTensorType TensorTypeInt16)
+             | Just Refl <- (eqT :: Maybe (a :~: Int32)) = Just (IsTensorType TensorTypeInt32)
+             | Just Refl <- (eqT :: Maybe (a :~: Int64)) = Just (IsTensorType TensorTypeInt64)
+             | Just Refl <- (eqT :: Maybe (a :~: Word8)) = Just (IsTensorType TensorTypeWord8)
+             | Just Refl <- (eqT :: Maybe (a :~: Word16)) = Just (IsTensorType TensorTypeWord16)
+
+data TensorTypeR t where
+    TensorTypeBool   :: TensorTypeR Bool
+    TensorTypeDouble :: TensorTypeR Double
+    TensorTypeFloat  :: TensorTypeR Float
+    TensorTypeInt8   :: TensorTypeR Int8
+    TensorTypeInt16  :: TensorTypeR Int16
+    TensorTypeInt32  :: TensorTypeR Int32
+    TensorTypeInt64  :: TensorTypeR Int64
+    TensorTypeWord8  :: TensorTypeR Word8
+    TensorTypeWord16 :: TensorTypeR Word16
 
 evalOpenAcc
     :: forall aenv sh e tfenv. (Shape sh, Elt e) =>
@@ -73,7 +84,7 @@ evalOpenAcc
     -> TF.Tensor TF.Build e 
 evalOpenAcc (AST.OpenAcc (AST.Use a)) env = 
   case (isTensorType :: Maybe (IsTensorType e)) of
-    Just IsTensorType -> TF.constant (tfShape a) (toList (toArr a))
+    Just (IsTensorType _)-> TF.constant (tfShape a) (toList (toArr a))
     Nothing -> error "type not supported by tensor flow"
 
 evalOpenAcc _ _ = error "..." -- TF.constant (TF.Shape [3]) [1.0, 2.0, 4.0 :: Float]
@@ -81,18 +92,26 @@ evalOpenAcc _ _ = error "..." -- TF.constant (TF.Shape [3]) [1.0, 2.0, 4.0 :: Fl
 evalPreOpenExp :: ExpEvaluator
 evalPreOpenExp _ _ = error "..."
 
-evalPreOpenExpMap :: ExpEvaluator
+evalPreOpenExpMap ::  forall sh e acc env aenv tfenv. (Shape sh, Elt e) => AST.PreOpenExp acc env aenv (Array sh e) -> TFEnv tfenv -> TF.Tensor TF.Build e 
 evalPreOpenExpMap (AST.PrimApp (AST.PrimAdd eltType) (AST.Tuple args)) env' = 
   case (isTensorType :: Maybe (IsTensorType e)) of
-    Just IsTensorType -> foldl TF.add addIdentity (evalTuple (undefined :: e) args env' evalPreOpenExpMap)
+    Just (IsTensorType TensorTypeDouble) -> foldl TF.add addIdentity (evalTuple (undefined :: NumType Double) args env' evalPreOpenExpMap)
+    Just (IsTensorType TensorTypeFloat) -> foldl TF.add addIdentity (evalTuple (undefined :: NumType Float) args env' evalPreOpenExpMap)
+    Just (IsTensorType TensorTypeInt8) -> foldl TF.add addIdentity (evalTuple (undefined :: NumType Int8) args env' evalPreOpenExpMap)
+    Just (IsTensorType TensorTypeInt16) -> foldl TF.add addIdentity (evalTuple (undefined :: NumType Int16) args env' evalPreOpenExpMap)
+    Just (IsTensorType TensorTypeInt32) -> foldl TF.add addIdentity (evalTuple (undefined :: NumType Int32) args env' evalPreOpenExpMap)
+    Just (IsTensorType TensorTypeInt64) -> foldl TF.add addIdentity (evalTuple (undefined :: NumType Int64) args env' evalPreOpenExpMap)
     Nothing -> error "type not supported by tensor flow"
 evalPreOpenExpMap (AST.PrimApp (AST.PrimMul eltType) (AST.Tuple args)) env' = 
   case (isTensorType :: Maybe (IsTensorType e)) of
-    Just IsTensorType -> foldl TF.mul mulIdentity (evalTuple (undefined :: e) args env' evalPreOpenExpMap)
+    Just (IsTensorType TensorTypeDouble) -> foldl TF.mul mulIdentity (evalTuple (undefined :: NumType Double) args env' evalPreOpenExpMap)
+    Just (IsTensorType TensorTypeFloat) -> foldl TF.mul mulIdentity (evalTuple (undefined :: NumType Float) args env' evalPreOpenExpMap)
+    Just (IsTensorType TensorTypeInt32) -> foldl TF.mul mulIdentity (evalTuple (undefined :: NumType Int32) args env' evalPreOpenExpMap)
+    Just (IsTensorType TensorTypeInt64) -> foldl TF.mul mulIdentity (evalTuple (undefined :: NumType Int64) args env' evalPreOpenExpMap)
     Nothing -> error "type not supported by tensor flow"
 evalPreOpenExpMap expr env' = evalPreOpenExp expr env'
 
-evalTuple :: NumType e -> Tuple (AST.PreOpenExp acc env aenv) t -> TFEnv tfenv -> ExpEvaluator -> [TF.Tensor TF.Build e]
+evalTuple ::  forall sh e acc env aenv tfenv t. (Shape sh, Elt e) => NumType e -> Tuple (AST.PreOpenExp acc env aenv) t -> TFEnv tfenv -> (AST.PreOpenExp acc env aenv (Array sh e) -> TFEnv tfenv -> TF.Tensor TF.Build e) -> [TF.Tensor TF.Build e]
 evalTuple eltType (Sugar.SnocTup xs x) env' evalExp = (evalExp x env'):(evalTuple eltType xs env' evalExp)
 evalTuple eltType (Sugar.NilTup) _env' _evalExp = []
 evalTuple _ _ _ _ = error "..."
