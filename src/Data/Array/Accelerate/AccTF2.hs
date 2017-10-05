@@ -114,7 +114,7 @@ evalPreOpenExpMap (AST.PrimApp (AST.PrimAdd eltType) (AST.Tuple args)) env' =
   case (isTensorType :: Maybe (IsTensorType e)) of
     Just (IsTensorType TensorTypeDouble) -> (P.uncurry $ TF.add) (evalTuple2 (undefined :: NumType Double) (undefined :: NumType Double) args env' evalPreOpenExpMap)
     -- TODO: how to make sure this actually matches evalTuple2 with a size 2 tuple?
-    
+
     --Just (IsTensorType TensorTypeFloat) -> foldl TF.add addIdentity (evalTuple (undefined :: NumType Float) args env' evalPreOpenExpMap)
     --Just (IsTensorType TensorTypeInt8) -> foldl TF.add addIdentity (evalTuple (undefined :: NumType Int8) args env' evalPreOpenExpMap)
     --Just (IsTensorType TensorTypeInt16) -> foldl TF.add addIdentity (evalTuple (undefined :: NumType Int16) args env' evalPreOpenExpMap)
@@ -153,6 +153,7 @@ mulIdentity
       t TF./= Bool) =>
      TF.Tensor TF.Build t
 mulIdentity = TF.fill (TF.constant (TF.Shape [1]) [1]) 1
+-- note tensorflow supports broadcasting so shape is ok
 
 listToInt64 :: [Int] -> [Int64]
 listToInt64 [] = []
