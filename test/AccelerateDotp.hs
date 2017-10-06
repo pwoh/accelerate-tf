@@ -3,11 +3,15 @@ import Data.Array.Accelerate.Interpreter as I
 import Data.Array.Accelerate.AccTF as AccTF
 import Data.Array.Accelerate.AccTF2 as AccTF2
 
+import Data.Array.Accelerate.AccTF2 as TF
+
+import qualified Data.Vector.Storable                   as S
+
 
 --import Data.Array.Accelerate.Trafo
 
 dotp :: Acc (Vector Double) -> Acc (Vector Double) -> Acc (Scalar Double)
-dotp xs ys = fold (+) 0 (A.zipWith (*) xs ys)
+dotp xs ys = A.fold1 (+) (A.zipWith (*) xs ys)
 
 -- Takes a size and a list of doubles to produce an Accelerate vector
 toAccVector :: Int -> [Double] -> Acc (Vector Double)
@@ -23,9 +27,19 @@ double xs = A.zipWith (+) xs xs
 addVector :: Acc (Vector Double) -> Acc (Vector Double) -> Acc (Vector Double)
 addVector xs ys = A.zipWith (+) xs ys
 
-x :: Acc (Vector Double)
-x = toAccVector 3 [1.0,2.0,3.0]
+xs :: Acc (Vector Double)
+xs = toAccVector 3 [1.0,2.0,3.0]
 --y = toAccVector 3 [4.0,5.0,6.0]
+
+ys :: Acc (Vector Double)
+ys = use $ fromList (Z:.3) [10,20,42]
+
+i1 :: Acc (Array DIM2 Int64)
+i1 = use $ fromList (Z :. 10 :. 5) [0..]
+
+i2 :: Acc (Array DIM3 Int64)
+i2 = use $ fromList (Z :. 5 :. 10 :. 5) [0..]
+
 
 main :: IO ()
 main = do
@@ -49,3 +63,10 @@ main = do
 
     --w <- putStrLn $ (show $ AccTF.run $ addVector test test)
     return ()
+
+t2 :: IO (S.Vector Double)
+t2 = TF.run $ addVector xs ys
+
+t3 :: IO (S.Vector Double)
+t3 = TF.run $ dotp xs ys
+

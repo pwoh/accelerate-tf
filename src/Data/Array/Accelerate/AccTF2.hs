@@ -1,10 +1,10 @@
 {-# LANGUAGE BangPatterns        #-}
+{-# LANGUAGE FlexibleContexts    #-}
+{-# LANGUAGE GADTs               #-}
 {-# LANGUAGE RankNTypes          #-}
 {-# LANGUAGE RecordWildCards     #-}
-{-# LANGUAGE GADTs                 #-}
-
-{-# LANGUAGE ScopedTypeVariables   #-}
-{-# LANGUAGE FlexibleContexts #-}
+{-# LANGUAGE ScopedTypeVariables #-}
+{-# LANGUAGE TypeFamilies        #-}
 {-# LANGUAGE TypeOperators       #-}
 
 module Data.Array.Accelerate.AccTF2 where
@@ -33,11 +33,11 @@ import qualified Data.ByteString as B
 import Data.Int
 import Data.Word
 
-data TFEnv tfenv where
+data TFEnv env where
   Empty :: TFEnv ()
-  Push  :: TFEnv tfenv -> t -> TFEnv (tfenv, t)
+  Push  :: TFEnv env -> TF.Tensor TF.Build t -> TFEnv (env, Array sh t)
 
-tfprj :: AST.Idx env t -> TFEnv tfenv -> t
+tfprj :: AST.Idx env (Array sh t) -> TFEnv env -> TF.Tensor TF.Build t
 tfprj AST.ZeroIdx       (Push _   v) = v
 tfprj (AST.SuccIdx idx) (Push val _) = tfprj idx val --TODO: how to get it to ignore the type t here, or allow t to be an array even if in the original expr it expects an expression?
 
@@ -75,36 +75,63 @@ data TensorTypeR t where
     TensorTypeWord8  :: TensorTypeR Word8
     TensorTypeWord16 :: TensorTypeR Word16
 
+
+
 evalOpenAcc
     :: forall aenv sh e tfenv. (Shape sh, Elt e) =>
        AST.OpenAcc aenv (Array sh e)
-    -> TFEnv tfenv
+    -> TFEnv aenv
     -> TF.Tensor TF.Build e 
-evalOpenAcc (AST.OpenAcc (AST.Use a)) env = 
-  case (isTensorType :: Maybe (IsTensorType e)) of
-    Just (IsTensorType _)-> TF.constant (tfShape a) (toList (toArr a))
-    Nothing -> error "type not supported by tensor flow"
-evalOpenAcc (AST.OpenAcc (AST.Avar ix)) env = 
-  case (isTensorType :: Maybe (IsTensorType e)) of
-    Just (IsTensorType _)-> let a = tfprj ix env in TF.constant (tfShape a) (toList (toArr a))
-    Nothing -> error "type not supported by tensor flow"
-evalOpenAcc (AST.OpenAcc (AST.Alet acc1 acc2)) env =  --TODO: how to ensure acc1 is a plain Array sh e?
-  case (isTensorType :: Maybe (IsTensorType e)) of
-    Just (IsTensorType _)-> let eval1 = evalOpenAcc acc1 env in evalOpenAcc acc2 (env `Push` eval1)
-    Nothing -> error "type not supported by tensor flow"
-evalOpenAcc (AST.OpenAcc (AST.Map f a)) env = 
-  case (isTensorType :: Maybe (IsTensorType e)) of
-    Just (IsTensorType _)-> unwrapLam f newEnv evalPreOpenExpMap
-      where arrVal = evalOpenAcc a env
-            newEnv = env `Push` arrVal
-    Nothing -> error "type not supported by tensor flow"
+evalOpenAcc (AST.OpenAcc pacc) aenv
+  | Just (IsTensorType{} :: IsTensorType e) <- isTensorType = evalPreOpenAcc pacc aenv
+  | otherwise                                               = error "type not supported by tensorflow ):"
 
-evalOpenAcc _ _ = error "..."
+evalPreOpenAcc
+    :: forall aenv sh e. (Shape sh, Elt e, TF.TensorType e)
+    => AST.PreOpenAcc AST.OpenAcc aenv (Array sh e)
+    -> TFEnv aenv
+    -> TF.Tensor TF.Build e 
+evalPreOpenAcc pacc aenv =
+  case pacc of
+    AST.Use a           -> TF.constant (tfShape a) (toList (toArr a))
+    AST.Avar ix         -> tfprj ix aenv
 
-type ExpEvaluator = forall sh e acc env aenv tfenv. (Shape sh, Elt e) => AST.PreOpenExp acc env aenv (Array sh e) -> TFEnv tfenv -> TF.Tensor TF.Build e 
-unwrapLam :: (Shape sh, Elt e) => AST.PreOpenFun f env aenv (Array sh e) -> TFEnv tfenv -> ExpEvaluator -> TF.Tensor TF.Build e
-unwrapLam (AST.Lam f) env' evalExp = unwrapLam f env' evalExp
-unwrapLam (AST.Body b) env' evalExp =  evalExp b env' --TODO make this match 
+    AST.Alet (bnd :: AST.OpenAcc aenv bnd) body ->
+      case flavour (undefined::bnd) of
+        ArraysFarray -> let bnd' = evalOpenAcc bnd aenv         -- eeeerm...
+                        in  evalOpenAcc body (aenv `Push` bnd')
+
+    AST.Map f a
+      | Just f' <- isPrimFun1 f
+      , a'      <- evalOpenAcc a aenv
+      -> evalMap f' a'
+
+    AST.ZipWith f a b
+      | Just f' <- isPrimFun2 f
+      , a'      <- evalOpenAcc a aenv
+      , b'      <- evalOpenAcc b aenv
+      -> evalZipWith f' a' b'
+
+    AST.Fold1 f a
+      | Just f' <- isPrimFun2 f
+      , a'      <- evalOpenAcc a aenv
+      -> evalFold1 f' a'
+
+
+type ExpEvaluator =
+       forall sh e acc env aenv. (Shape sh, Elt e)
+    => AST.PreOpenExp acc env aenv (Array sh e)
+    -> TFEnv aenv
+    -> TF.Tensor TF.Build e 
+
+unwrapLam
+    :: (Shape sh, Elt e)
+    => AST.PreOpenFun f env aenv (Array sh e)
+    -> TFEnv aenv
+    -> ExpEvaluator
+    -> TF.Tensor TF.Build e
+-- unwrapLam (AST.Lam f)  env' evalExp = unwrapLam f env' evalExp
+unwrapLam (AST.Body b) env' evalExp = evalExp b env' --TODO make this match 
 
 evalPreOpenExp :: forall sh e acc env aenv tfenv. (Shape sh, Elt e) => AST.PreOpenExp acc env aenv (Array sh e) -> TFEnv tfenv -> TF.Tensor TF.Build e 
 evalPreOpenExp _ _ = error "..."
@@ -112,7 +139,7 @@ evalPreOpenExp _ _ = error "..."
 evalPreOpenExpMap ::  forall sh e acc env aenv tfenv. (Shape sh, Elt e) => AST.PreOpenExp acc env aenv (Array sh e) -> TFEnv tfenv -> TF.Tensor TF.Build e 
 evalPreOpenExpMap (AST.PrimApp (AST.PrimAdd eltType) (AST.Tuple args)) env' = 
   case (isTensorType :: Maybe (IsTensorType e)) of
-    Just (IsTensorType TensorTypeDouble) -> (P.uncurry $ TF.add) (evalTuple2 (undefined :: NumType Double) (undefined :: NumType Double) args env' evalPreOpenExpMap)
+    -- Just (IsTensorType TensorTypeDouble) -> (P.uncurry $ TF.add) (evalTuple2 (undefined :: NumType Double) (undefined :: NumType Double) args env' evalPreOpenExpMap)
     -- TODO: how to make sure this actually matches evalTuple2 with a size 2 tuple?
 
     --Just (IsTensorType TensorTypeFloat) -> foldl TF.add addIdentity (evalTuple (undefined :: NumType Float) args env' evalPreOpenExpMap)
@@ -130,17 +157,108 @@ evalPreOpenExpMap (AST.PrimApp (AST.PrimAdd eltType) (AST.Tuple args)) env' =
     --Nothing -> error "type not supported by tensor flow"
 evalPreOpenExpMap expr env' = evalPreOpenExp expr env'
 
+
+-- Given some function (a -> b) check that it is just applying a single
+-- primitive function to its argument. If we start with something like
+--
+-- > map (\x -> abs x) xs
+--
+-- we want to look for this specific function application and dig out the 'abs'
+-- function which was applied.
+--
+-- If there is more than a single application of a primitive function directly
+-- to the input argument, this function won't spot it.
+-- 
+isPrimFun1 :: AST.Fun aenv (a -> b) -> Maybe (AST.PrimFun (a -> b))
+isPrimFun1 fun
+  | AST.Lam  a <- fun
+  , AST.Body b <- a
+  , AST.PrimApp op arg  <- b
+  , AST.Var AST.ZeroIdx <- arg
+  = Just op
+
+  | otherwise
+  = Nothing
+
+
+isPrimFun2 :: AST.Fun aenv (a -> b -> c) -> Maybe (AST.PrimFun ((a,b) -> c))
+isPrimFun2 fun
+  | AST.Lam l1 <- fun
+  , AST.Lam l2 <- l1
+  , AST.Body b <- l2
+  , AST.PrimApp op arg <- b
+  , AST.Tuple (Sugar.SnocTup (Sugar.SnocTup Sugar.NilTup x) y) <- arg
+  , AST.Var (AST.SuccIdx AST.ZeroIdx) <- x
+  , AST.Var AST.ZeroIdx               <- y
+  = gcast op  -- uuuuuh...
+
+  | otherwise
+  = Nothing
+
+evalMap
+    :: AST.PrimFun (a -> b)
+    -> TF.Tensor TF.Build a
+    -> TF.Tensor TF.Build b
+evalMap (AST.PrimAbs t) =
+  case t of
+    IntegralNumType TypeInt32{}  -> TF.abs
+    IntegralNumType TypeInt64{}  -> TF.abs
+    FloatingNumType TypeFloat{}  -> TF.abs
+    FloatingNumType TypeDouble{} -> TF.abs
+
+
+evalZipWith
+    :: AST.PrimFun ((a,b) -> c)
+    -> TF.Tensor TF.Build a
+    -> TF.Tensor TF.Build b
+    -> TF.Tensor TF.Build c
+evalZipWith (AST.PrimAdd t) =
+  case t of
+    IntegralNumType TypeInt32{}  -> TF.add
+    IntegralNumType TypeInt64{}  -> TF.add
+    FloatingNumType TypeFloat{}  -> TF.add
+    FloatingNumType TypeDouble{} -> TF.add
+
+evalZipWith (AST.PrimMul t) =
+  case t of
+    IntegralNumType TypeInt32{}  -> TF.mul
+    IntegralNumType TypeInt64{}  -> TF.mul
+    FloatingNumType TypeFloat{}  -> TF.mul
+    FloatingNumType TypeDouble{} -> TF.mul
+
+
+evalFold1
+    :: TF.TensorType a
+    => AST.PrimFun ((a,a) -> a)
+    -> TF.Tensor TF.Build a
+    -> TF.Tensor TF.Build a
+evalFold1 (AST.PrimAdd t) arr =
+  let
+      -- 'fold*' in accelerate works over the innermost (left-most) index only.
+      -- In tensorflow this is the number of dimensions of the array.
+      --
+      dim  = TF.size (TF.shape arr) :: TF.Tensor TF.Build Int32
+      dim' = TF.sub dim (TF.constant (TF.Shape [1]) [1])
+  in
+  case t of
+    IntegralNumType TypeInt32{}  -> TF.sum arr dim'
+    IntegralNumType TypeInt64{}  -> TF.sum arr dim'
+    FloatingNumType TypeFloat{}  -> TF.sum arr dim'
+    FloatingNumType TypeDouble{} -> TF.sum arr dim'
+
+
+
 evalTuple ::  forall sh e acc env aenv tfenv t. (Shape sh, Elt e) => NumType e -> Tuple (AST.PreOpenExp acc env aenv) t -> TFEnv tfenv -> (AST.PreOpenExp acc env aenv (Array sh e) -> TFEnv tfenv -> TF.Tensor TF.Build e) -> [TF.Tensor TF.Build e]
 --evalTuple eltType (Sugar.SnocTup xs x) env' evalExp = (evalExp x env'):(evalTuple eltType xs env' evalExp)
 --evalTuple eltType (Sugar.NilTup) _env' _evalExp = []
 evalTuple _ _ _ _ = error "..."
 
 evalTuple2 :: forall sh e acc env aenv tfenv a b. (Shape sh, Elt a, Elt b) => NumType a -> NumType b -> Tuple (AST.PreOpenExp acc env aenv) (((), a), b) -> TFEnv tfenv -> (AST.PreOpenExp acc env aenv (Array sh e) -> TFEnv tfenv -> TF.Tensor TF.Build e) -> (TF.Tensor TF.Build a, TF.Tensor TF.Build b)
-evalTuple2 a' b' (Sugar.SnocTup (Sugar.SnocTup Sugar.NilTup y) x) env' evalExp = (evalExp y env', evalExp x env')
+evalTuple2 a' b' (Sugar.SnocTup (Sugar.SnocTup Sugar.NilTup y) x) env' evalExp = error "TODO" -- (evalExp y env', evalExp x env')
 -- TODO: how to make sure x and y are just plain Array sh e?
 
 evalTuple1 :: forall sh e acc env aenv tfenv a b. (Shape sh, Elt a) => NumType a -> Tuple (AST.PreOpenExp acc env aenv) ((), a) -> TFEnv tfenv -> (AST.PreOpenExp acc env aenv (Array sh e) -> TFEnv tfenv -> TF.Tensor TF.Build e) -> TF.Tensor TF.Build a
-evalTuple1 a' (Sugar.SnocTup Sugar.NilTup x) env' evalExp = evalExp x env'
+evalTuple1 a' (Sugar.SnocTup Sugar.NilTup x) env' evalExp = error "TODO" -- evalExp x env'
 
 addIdentity :: (P.Num a, TF.TensorType a) => TF.Tensor TF.Build a
 addIdentity = TF.zeros (TF.Shape [1])
@@ -160,7 +278,9 @@ listToInt64 [] = []
 listToInt64 (x:xs) = (P.fromIntegral x):(listToInt64 xs)
 
 tfShape :: (Shape sh, Elt e) => Array sh e -> TF.Shape
-tfShape a = TF.Shape (listToInt64 $ shapeToList $ Sugar.shape a)
+tfShape a = TF.Shape (listToInt64 $ P.reverse $ shapeToList $ Sugar.shape a)
 
 arrayToList :: Elt e => Array sh e -> [e]
 arrayToList arr = toList arr
+
+
