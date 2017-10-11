@@ -4,6 +4,9 @@
 import qualified TensorFlow.Core as TF
 import qualified TensorFlow.Ops as TF
 import qualified TensorFlow.GenOps.Core as TF 
+import TensorFlow.Types (ListOf(..), Scalar(..), (/:/))
+import TensorFlow.Tensor as TF
+
 --for TF.tile
 import qualified Data.Vector.Storable as V
 import qualified Data.ByteString as B
@@ -22,7 +25,18 @@ main = do
     putStrLn $ show z3
     z4 <- selectTest
     putStrLn $ show z4
+    z5 <- tensorListTest
+    putStrLn $ show z5
+
     return ()
+
+--tensorListTest = TF.runSession $ do
+--    let one = TF.constant (TF.Shape [1]) [1.0 :: Float]
+--    let two = TF.constant (TF.Shape [1]) [2.0 :: Double]
+--    let listo = one :/ two :/ Nil
+--    res <- TF.run (TF._ListToArray 2 listo) 
+--    return res
+
 
 selectTest :: IO (V.Vector Float)
 selectTest = TF.runSession $ do
