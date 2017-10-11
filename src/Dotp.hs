@@ -25,8 +25,8 @@ main = do
     putStrLn $ show z3
     z4 <- selectTest
     putStrLn $ show z4
-    z5 <- tensorListTest
-    putStrLn $ show z5
+    --z5 <- tensorListTest
+    --putStrLn $ show z5
 
     return ()
 
