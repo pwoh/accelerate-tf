@@ -3,7 +3,7 @@ import Data.Array.Accelerate.Interpreter as I
 import Data.Array.Accelerate.AccTF as AccTF
 import Data.Array.Accelerate.AccTF2 as AccTF2
 
-import Data.Array.Accelerate.AccTF2 as TF
+--import Data.Array.Accelerate.AccTF2 as TF
 
 import qualified Data.Vector.Storable                   as S
 
@@ -41,6 +41,8 @@ i2 :: Acc (Array DIM3 Int64)
 i2 = use $ fromList (Z :. 5 :. 10 :. 5) [0..]
 
 
+
+
 main :: IO ()
 main = do
     let test = toAccVector 3 [1.0, 2.0, 3.0]
@@ -61,12 +63,29 @@ main = do
     res1 <- AccTF2.run $ test3
     putStrLn $ show $ res1
 
+
+    putStrLn "----"
+    res2 <- t2
+    res3 <- t3
+    putStrLn $ show $ res2
+    putStrLn $ show $ res3
     --w <- putStrLn $ (show $ AccTF.run $ addVector test test)
+
+    putStrLn "--cond test--"
+    let one = A.constant(1.0 :: Float)
+    let zero = A.constant(0.0 :: Float)
+    let two = A.constant(2.0 :: Float)
+    let z = A.cond (one A.> two) one zero
+    let zz = A.unit z
+    res4 <- AccTF2.run $ zz
+    putStrLn $ show $ res4
+
+
     return ()
 
 t2 :: IO (S.Vector Double)
-t2 = TF.run $ addVector xs ys
+t2 = AccTF2.run $ addVector xs ys
 
 t3 :: IO (S.Vector Double)
-t3 = TF.run $ dotp xs ys
+t3 = AccTF2.run $ dotp xs ys
 

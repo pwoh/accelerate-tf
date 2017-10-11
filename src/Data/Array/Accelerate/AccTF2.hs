@@ -24,10 +24,10 @@ import qualified Data.List as List (intercalate)
 
 import qualified TensorFlow.Core as TF
 import qualified TensorFlow.Ops as TF
+import qualified TensorFlow.GenOps.Core as TF hiding (shape)
 
 import Data.Typeable
 import qualified Data.Vector.Storable as V
-
 
 import qualified Data.ByteString as B
 import Data.Int
@@ -37,9 +37,18 @@ data TFEnv env where
   Empty :: TFEnv ()
   Push  :: TFEnv env -> TF.Tensor TF.Build t -> TFEnv (env, Array sh t)
 
+data TFExpEnv env where
+  ExpEmpty :: TFExpEnv ()
+  ExpPush  :: TFExpEnv env -> TF.Tensor TF.Build t -> TFExpEnv (env, t)
+
 tfprj :: AST.Idx env (Array sh t) -> TFEnv env -> TF.Tensor TF.Build t
 tfprj AST.ZeroIdx       (Push _   v) = v
-tfprj (AST.SuccIdx idx) (Push val _) = tfprj idx val --TODO: how to get it to ignore the type t here, or allow t to be an array even if in the original expr it expects an expression?
+tfprj (AST.SuccIdx idx) (Push val _) = tfprj idx val
+
+
+tfprjexp :: AST.Idx env t -> TFExpEnv env -> TF.Tensor TF.Build t
+tfprjexp AST.ZeroIdx       (ExpPush _   v) = v
+tfprjexp (AST.SuccIdx idx) (ExpPush val _) = tfprjexp idx val
 
 run :: forall sh e. (Shape sh, Elt e) => Acc (Array sh e) -> IO (V.Vector e)
 run a | Just (IsTensorType _) <- (isTensorType :: Maybe (IsTensorType e))
@@ -75,10 +84,8 @@ data TensorTypeR t where
     TensorTypeWord8  :: TensorTypeR Word8
     TensorTypeWord16 :: TensorTypeR Word16
 
-
-
 evalOpenAcc
-    :: forall aenv sh e tfenv. (Shape sh, Elt e) =>
+    :: forall aenv sh e. (Shape sh, Elt e) =>
        AST.OpenAcc aenv (Array sh e)
     -> TFEnv aenv
     -> TF.Tensor TF.Build e 
@@ -93,6 +100,7 @@ evalPreOpenAcc
     -> TF.Tensor TF.Build e 
 evalPreOpenAcc pacc aenv =
   case pacc of
+    AST.Unit e -> evalPreOpenExp e ExpEmpty
     AST.Use a           -> TF.constant (tfShape a) (toList (toArr a))
     AST.Avar ix         -> tfprj ix aenv
 
@@ -117,46 +125,70 @@ evalPreOpenAcc pacc aenv =
       , a'      <- evalOpenAcc a aenv
       -> evalFold1 f' a'
 
+    _ -> error "???"
 
-type ExpEvaluator =
-       forall sh e acc env aenv. (Shape sh, Elt e)
-    => AST.PreOpenExp acc env aenv (Array sh e)
-    -> TFEnv aenv
+
+evalPreOpenExp
+    :: forall sh e acc env aenv. (Elt e, TF.TensorType e)
+    => AST.PreOpenExp acc env aenv e
+    -> TFExpEnv env
     -> TF.Tensor TF.Build e 
+evalPreOpenExp pacc aenv =
+  case pacc of
+    AST.Const c -> TF.constant (TF.Shape [1]) ([toElt c])
 
-unwrapLam
-    :: (Shape sh, Elt e)
-    => AST.PreOpenFun f env aenv (Array sh e)
-    -> TFEnv aenv
-    -> ExpEvaluator
-    -> TF.Tensor TF.Build e
--- unwrapLam (AST.Lam f)  env' evalExp = unwrapLam f env' evalExp
-unwrapLam (AST.Body b) env' evalExp = evalExp b env' --TODO make this match 
+    AST.Cond p e1 e2 -> TF.select p' e1' e2' 
+      where p'  = evalPreOpenExp p aenv
+            e1' = evalPreOpenExp e1 aenv
+            e2' = evalPreOpenExp e2 aenv
 
-evalPreOpenExp :: forall sh e acc env aenv tfenv. (Shape sh, Elt e) => AST.PreOpenExp acc env aenv (Array sh e) -> TFEnv tfenv -> TF.Tensor TF.Build e 
+    AST.Let (bnd :: (TF.TensorType bnd_t) => AST.PreOpenExp acc env aenv bnd_t) (body :: (TF.TensorType bnd_t) => AST.PreOpenExp acc (env, bnd_t) aenv e) ->
+      case (isTensorType :: Maybe (IsTensorType bnd_t)) of
+        Just (IsTensorType bnd_t) ->
+          let bnd' = (evalPreOpenExp bnd aenv :: (TF.TensorType bnd_t) => TF.Tensor TF.Build bnd_t) in 
+              case () of
+              _ | Just (IsTensorType{} :: IsTensorType e) <- isTensorType -> evalPreOpenExp body (aenv `ExpPush` bnd') --what's up with the syntax? '=' works above...
+                | otherwise -> error "type not supported by tensorflow ):"
+        otherwise -> error "..aslksd"
+        
+    AST.Var ix -> tfprjexp ix aenv
+    AST.PrimApp f x -> evalPrimFun1 f x aenv
 evalPreOpenExp _ _ = error "..."
 
-evalPreOpenExpMap ::  forall sh e acc env aenv tfenv. (Shape sh, Elt e) => AST.PreOpenExp acc env aenv (Array sh e) -> TFEnv tfenv -> TF.Tensor TF.Build e 
-evalPreOpenExpMap (AST.PrimApp (AST.PrimAdd eltType) (AST.Tuple args)) env' = 
-  case (isTensorType :: Maybe (IsTensorType e)) of
-    -- Just (IsTensorType TensorTypeDouble) -> (P.uncurry $ TF.add) (evalTuple2 (undefined :: NumType Double) (undefined :: NumType Double) args env' evalPreOpenExpMap)
-    -- TODO: how to make sure this actually matches evalTuple2 with a size 2 tuple?
 
-    --Just (IsTensorType TensorTypeFloat) -> foldl TF.add addIdentity (evalTuple (undefined :: NumType Float) args env' evalPreOpenExpMap)
-    --Just (IsTensorType TensorTypeInt8) -> foldl TF.add addIdentity (evalTuple (undefined :: NumType Int8) args env' evalPreOpenExpMap)
-    --Just (IsTensorType TensorTypeInt16) -> foldl TF.add addIdentity (evalTuple (undefined :: NumType Int16) args env' evalPreOpenExpMap)
-    --Just (IsTensorType TensorTypeInt32) -> foldl TF.add addIdentity (evalTuple (undefined :: NumType Int32) args env' evalPreOpenExpMap)
-    --Just (IsTensorType TensorTypeInt64) -> foldl TF.add addIdentity (evalTuple (undefined :: NumType Int64) args env' evalPreOpenExpMap)
-    Nothing -> error "type not supported by tensor flow"
---evalPreOpenExpMap (AST.PrimApp (AST.PrimMul eltType) (AST.Tuple args)) env' = 
---  case (isTensorType :: Maybe (IsTensorType e)) of
-    --Just (IsTensorType TensorTypeDouble) -> foldl TF.mul mulIdentity (evalTuple (undefined :: NumType Double) args env' evalPreOpenExpMap)
-    --Just (IsTensorType TensorTypeFloat) -> foldl TF.mul mulIdentity (evalTuple (undefined :: NumType Float) args env' evalPreOpenExpMap)
-    --Just (IsTensorType TensorTypeInt32) -> foldl TF.mul mulIdentity (evalTuple (undefined :: NumType Int32) args env' evalPreOpenExpMap)
-    --Just (IsTensorType TensorTypeInt64) -> foldl TF.mul mulIdentity (evalTuple (undefined :: NumType Int64) args env' evalPreOpenExpMap)
-    --Nothing -> error "type not supported by tensor flow"
-evalPreOpenExpMap expr env' = evalPreOpenExp expr env'
-
+evalPrimFun1 :: AST.PrimFun (a -> b) -> AST.PreOpenExp acc env aenv a -> TFExpEnv env -> TF.Tensor TF.Build b
+evalPrimFun1 (AST.PrimSub ty) (AST.Tuple (Sugar.SnocTup (Sugar.SnocTup Sugar.NilTup x) y)) aenv =
+  case ty of
+    IntegralNumType TypeInt32{}  -> TF.sub (evalPreOpenExp x aenv) (evalPreOpenExp y aenv) 
+    IntegralNumType TypeInt64{}  -> TF.sub (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
+    FloatingNumType TypeFloat{}  -> TF.sub (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
+    FloatingNumType TypeDouble{} -> TF.sub (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
+evalPrimFun1 (AST.PrimFDiv ty) (AST.Tuple (Sugar.SnocTup (Sugar.SnocTup Sugar.NilTup x) y)) aenv =
+  case ty of
+    TypeFloat{}  -> TF.div (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
+    TypeDouble{} -> TF.div (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
+evalPrimFun1 (AST.PrimNeg ty) x aenv =
+  case ty of
+    IntegralNumType TypeInt32{}  -> TF.neg (evalPreOpenExp x aenv)
+    IntegralNumType TypeInt64{}  -> TF.neg (evalPreOpenExp x aenv)
+    FloatingNumType TypeFloat{}  -> TF.neg (evalPreOpenExp x aenv)
+    FloatingNumType TypeDouble{} -> TF.neg (evalPreOpenExp x aenv)
+evalPrimFun1 (AST.PrimExpFloating ty) x aenv =
+  case ty of
+    TypeFloat{}  -> TF.exp (evalPreOpenExp x aenv)
+    TypeDouble{} -> TF.exp (evalPreOpenExp x aenv)
+evalPrimFun1 (AST.PrimLog ty) x aenv =
+  case ty of
+    TypeFloat{}  -> TF.log (evalPreOpenExp x aenv)
+    TypeDouble{} -> TF.log (evalPreOpenExp x aenv)
+evalPrimFun1 (AST.PrimGt ty) (AST.Tuple (Sugar.SnocTup (Sugar.SnocTup Sugar.NilTup x) y)) aenv =
+  case ty of
+   NumScalarType (IntegralNumType TypeInt8{})   -> TF.greater (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
+   NumScalarType (IntegralNumType TypeInt16{})  -> TF.greater (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
+   NumScalarType (IntegralNumType TypeInt32{})  -> TF.greater (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
+   NumScalarType (IntegralNumType TypeInt64{})  -> TF.greater (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
+   NumScalarType (FloatingNumType TypeFloat{})  -> TF.greater (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
+   NumScalarType (FloatingNumType TypeDouble{}) -> TF.greater (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
 
 -- Given some function (a -> b) check that it is just applying a single
 -- primitive function to its argument. If we start with something like
@@ -179,7 +211,6 @@ isPrimFun1 fun
 
   | otherwise
   = Nothing
-
 
 isPrimFun2 :: AST.Fun aenv (a -> b -> c) -> Maybe (AST.PrimFun ((a,b) -> c))
 isPrimFun2 fun
@@ -206,7 +237,6 @@ evalMap (AST.PrimAbs t) =
     FloatingNumType TypeFloat{}  -> TF.abs
     FloatingNumType TypeDouble{} -> TF.abs
 
-
 evalZipWith
     :: AST.PrimFun ((a,b) -> c)
     -> TF.Tensor TF.Build a
@@ -225,7 +255,6 @@ evalZipWith (AST.PrimMul t) =
     IntegralNumType TypeInt64{}  -> TF.mul
     FloatingNumType TypeFloat{}  -> TF.mul
     FloatingNumType TypeDouble{} -> TF.mul
-
 
 evalFold1
     :: TF.TensorType a
@@ -246,19 +275,6 @@ evalFold1 (AST.PrimAdd t) arr =
     FloatingNumType TypeFloat{}  -> TF.sum arr dim'
     FloatingNumType TypeDouble{} -> TF.sum arr dim'
 
-
-
-evalTuple ::  forall sh e acc env aenv tfenv t. (Shape sh, Elt e) => NumType e -> Tuple (AST.PreOpenExp acc env aenv) t -> TFEnv tfenv -> (AST.PreOpenExp acc env aenv (Array sh e) -> TFEnv tfenv -> TF.Tensor TF.Build e) -> [TF.Tensor TF.Build e]
---evalTuple eltType (Sugar.SnocTup xs x) env' evalExp = (evalExp x env'):(evalTuple eltType xs env' evalExp)
---evalTuple eltType (Sugar.NilTup) _env' _evalExp = []
-evalTuple _ _ _ _ = error "..."
-
-evalTuple2 :: forall sh e acc env aenv tfenv a b. (Shape sh, Elt a, Elt b) => NumType a -> NumType b -> Tuple (AST.PreOpenExp acc env aenv) (((), a), b) -> TFEnv tfenv -> (AST.PreOpenExp acc env aenv (Array sh e) -> TFEnv tfenv -> TF.Tensor TF.Build e) -> (TF.Tensor TF.Build a, TF.Tensor TF.Build b)
-evalTuple2 a' b' (Sugar.SnocTup (Sugar.SnocTup Sugar.NilTup y) x) env' evalExp = error "TODO" -- (evalExp y env', evalExp x env')
--- TODO: how to make sure x and y are just plain Array sh e?
-
-evalTuple1 :: forall sh e acc env aenv tfenv a b. (Shape sh, Elt a) => NumType a -> Tuple (AST.PreOpenExp acc env aenv) ((), a) -> TFEnv tfenv -> (AST.PreOpenExp acc env aenv (Array sh e) -> TFEnv tfenv -> TF.Tensor TF.Build e) -> TF.Tensor TF.Build a
-evalTuple1 a' (Sugar.SnocTup Sugar.NilTup x) env' evalExp = error "TODO" -- evalExp x env'
 
 addIdentity :: (P.Num a, TF.TensorType a) => TF.Tensor TF.Build a
 addIdentity = TF.zeros (TF.Shape [1])

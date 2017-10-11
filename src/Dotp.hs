@@ -3,6 +3,8 @@
 
 import qualified TensorFlow.Core as TF
 import qualified TensorFlow.Ops as TF
+import qualified TensorFlow.GenOps.Core as TF 
+--for TF.tile
 import qualified Data.Vector.Storable as V
 import qualified Data.ByteString as B
 import Data.Int
@@ -16,7 +18,30 @@ main = do
     putStrLn $ show z1
     z2 <- plusone_constants
     putStrLn $ show z2
+    z3 <- tile
+    putStrLn $ show z3
+    z4 <- selectTest
+    putStrLn $ show z4
     return ()
+
+selectTest :: IO (V.Vector Float)
+selectTest = TF.runSession $ do
+    let one = TF.constant (TF.Shape [1]) [1.0 :: Float]
+    let two = TF.constant (TF.Shape [1]) [2.0 :: Float]
+    let cond = TF.greater one two
+    let zero = TF.zeros (TF.Shape [1])
+    let thing = TF.select cond one zero
+    result <- TF.run thing
+    return result
+
+
+tile :: IO (V.Vector Float)
+tile = TF.runSession $ do
+    let x = TF.constant (TF.Shape [3,2]) [1.0, 2.0, 4.0, 5.0,7.0,9.0 :: Float]
+    let repl = TF.constant (TF.Shape [2]) [1, 2 :: Int32]
+    result <- TF.run (TF.tile x repl)
+
+    return result
 
 derp :: IO (V.Vector Float, Float)
 derp = TF.runSession $ do 
