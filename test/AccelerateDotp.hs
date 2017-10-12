@@ -80,6 +80,9 @@ main = do
     res4 <- AccTF2.run $ zz
     putStrLn $ show $ res4
 
+    putStrLn "--saxpy test--"
+    res5 <- saxpy
+    putStrLn $ show $ res5
 
     return ()
 
@@ -89,3 +92,5 @@ t2 = AccTF2.run $ addVector xs ys
 t3 :: IO (S.Vector Double)
 t3 = AccTF2.run $ dotp xs ys
 
+saxpy :: IO (S.Vector Double)
+saxpy = AccTF2.run $ A.zipWith (\x y -> 10 * x + y) xs ys

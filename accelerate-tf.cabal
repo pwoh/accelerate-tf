@@ -71,16 +71,9 @@ executable BlackScholes
   main-is: test/BlackScholes.hs
   build-depends: base >= 4.7 && < 5
                 , accelerate
-                , accelerate-io                   >= 1.0
                 , accelerate-tf
                 , vector
-                , fclabels
                 , random
-                , QuickCheck                      >= 2.7
-                , test-framework                  >= 0.5
-                , test-framework-hunit            >= 0.3
-                , test-framework-quickcheck2      >= 0.2
-
 
 source-repository head
   type:     git

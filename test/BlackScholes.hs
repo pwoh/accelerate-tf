@@ -30,11 +30,18 @@ main = do
     putStrLn $ show $ I.run $ x
     putStrLn $ show $ I.run $ blackscholes x
     putStrLn "----"
-    putStrLn $ show $ AccTF.run $ blackscholes x
+    res <- AccTF2.run $ blackscholes x
+    --putStrLn $ show $ res (Foreign.Storable.Storable (Float, Float))
+
     putStrLn "----"
     --res <- AccTF2.run $ blackscholes x
     --putStrLn $ show $ res
     putStrLn "----"
+    let prices = A.use $ A.fromList (Z :. (3 :: Int)) $ [5 :: Float, 17, 30]
+    let strikes = A.use $ A.fromList (Z :. (3 :: Int)) $ [1 :: Float, 50, 100]
+    let years = A.use $ A.fromList (Z :. (3 :: Int)) $ [0.25 :: Float, 5, 10]
+    res2 <- AccTF2.run $ blackscholes' (prices,strikes,years)
+    putStrLn $ show $ res2
 
 --opts :: (P.Floating a, Random a) => Gen (a,a,a)
 --opts = (,,) <$> choose (5,30) <*> choose (1,100) <*> choose (0.25,10)
@@ -135,9 +142,13 @@ cnd' d =
 -- T = time to expiration
 -- v = implied volatility for the underlying stock
 
--- a is a type variable, they are all the same type
+
+blackscholes' :: (P.Floating a, A.Floating a, A.Ord a) => (Acc (Vector a), Acc (Vector a), Acc (Vector a)) -> (Acc (Vector a), Acc (Vector a))
+blackscholes' (price, strike, years) = (price, years)
+
+
 blackscholes :: (P.Floating a, A.Floating a, A.Ord a) => Acc (Vector (a, a, a)) -> Acc (Vector (a, a))
-blackscholes = A.map go
+blackscholes = A.map go          --TODO this needs to be rewritten?
   where
   go x =
     let (price, strike, years) = A.unlift x

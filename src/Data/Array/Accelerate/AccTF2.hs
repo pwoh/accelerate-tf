@@ -30,6 +30,7 @@ import Data.Typeable
 import qualified Data.Vector.Storable as V
 
 import qualified Data.ByteString as B
+import Data.Complex
 import Data.Int
 import Data.Word
 
@@ -50,6 +51,7 @@ tfprjexp :: AST.Idx env t -> TFExpEnv env -> TF.Tensor TF.Build t
 tfprjexp AST.ZeroIdx       (ExpPush _   v) = v
 tfprjexp (AST.SuccIdx idx) (ExpPush val _) = tfprjexp idx val
 
+--TODO tuples
 run :: forall sh e. (Shape sh, Elt e) => Acc (Array sh e) -> IO (V.Vector e)
 run a | Just (IsTensorType _) <- (isTensorType :: Maybe (IsTensorType e))
   = TF.runSession $ do
@@ -72,6 +74,7 @@ isTensorType | Just Refl <- (eqT :: Maybe (a :~: Bool)) = Just (IsTensorType Ten
              | Just Refl <- (eqT :: Maybe (a :~: Int64)) = Just (IsTensorType TensorTypeInt64)
              | Just Refl <- (eqT :: Maybe (a :~: Word8)) = Just (IsTensorType TensorTypeWord8)
              | Just Refl <- (eqT :: Maybe (a :~: Word16)) = Just (IsTensorType TensorTypeWord16)
+             {--| Just Refl <- (eqT :: Maybe (a :~: (Complex Double))) = Just (IsTensorType TensorTypeCDouble)-}
 
 data TensorTypeR t where
     TensorTypeBool   :: TensorTypeR Bool
@@ -83,6 +86,7 @@ data TensorTypeR t where
     TensorTypeInt64  :: TensorTypeR Int64
     TensorTypeWord8  :: TensorTypeR Word8
     TensorTypeWord16 :: TensorTypeR Word16
+    --TensorTypeCDouble :: TensorTypeR (Complex Double)
 
 evalOpenAcc
     :: forall aenv sh e. (Shape sh, Elt e) =>
@@ -119,6 +123,7 @@ evalPreOpenAcc pacc aenv =
       , a'      <- evalOpenAcc a aenv
       , b'      <- evalOpenAcc b aenv
       -> evalZipWith f' a' b'
+      | otherwise -> error "zipwith error"
 
     AST.Fold1 f a
       | Just f' <- isPrimFun2 f
@@ -147,13 +152,12 @@ evalPreOpenExp pacc aenv =
         Just (IsTensorType bnd_t) ->
           let bnd' = (evalPreOpenExp bnd aenv :: (TF.TensorType bnd_t) => TF.Tensor TF.Build bnd_t) in 
               case () of
-              _ | Just (IsTensorType{} :: IsTensorType e) <- isTensorType -> evalPreOpenExp body (aenv `ExpPush` bnd') --what's up with the syntax? '=' works above...
+              _ | Just (IsTensorType{} :: IsTensorType e) <- isTensorType -> evalPreOpenExp body (aenv `ExpPush` bnd') 
                 | otherwise -> error "type not supported by tensorflow ):"
         otherwise -> error "..aslksd"
         
     AST.Var ix -> tfprjexp ix aenv
     AST.PrimApp f x -> evalPrimFun1 f x aenv
-evalPreOpenExp _ _ = error "..."
 
 
 evalPrimFun1 :: AST.PrimFun (a -> b) -> AST.PreOpenExp acc env aenv a -> TFExpEnv env -> TF.Tensor TF.Build b
@@ -173,6 +177,12 @@ evalPrimFun1 (AST.PrimNeg ty) x aenv =
     IntegralNumType TypeInt64{}  -> TF.neg (evalPreOpenExp x aenv)
     FloatingNumType TypeFloat{}  -> TF.neg (evalPreOpenExp x aenv)
     FloatingNumType TypeDouble{} -> TF.neg (evalPreOpenExp x aenv)
+evalPrimFun1 (AST.PrimAbs ty) x aenv =
+  case ty of
+    IntegralNumType TypeInt32{}  -> TF.abs (evalPreOpenExp x aenv)
+    IntegralNumType TypeInt64{}  -> TF.abs (evalPreOpenExp x aenv)
+    FloatingNumType TypeFloat{}  -> TF.abs (evalPreOpenExp x aenv)
+    FloatingNumType TypeDouble{} -> TF.abs (evalPreOpenExp x aenv)
 evalPrimFun1 (AST.PrimExpFloating ty) x aenv =
   case ty of
     TypeFloat{}  -> TF.exp (evalPreOpenExp x aenv)
