@@ -88,6 +88,7 @@ data TensorTypeR t where
     TensorTypeWord16 :: TensorTypeR Word16
     --TensorTypeCDouble :: TensorTypeR (Complex Double)
 
+    
 evalOpenAcc
     :: forall aenv sh e. (Shape sh, Elt e) =>
        AST.OpenAcc aenv (Array sh e)
@@ -157,41 +158,41 @@ evalPreOpenExp pacc aenv =
         otherwise -> error "..aslksd"
         
     AST.Var ix -> tfprjexp ix aenv
-    AST.PrimApp f x -> evalPrimFun1 f x aenv
+    AST.PrimApp f x -> evalExpPrimFun f x aenv
 
 
-evalPrimFun1 :: AST.PrimFun (a -> b) -> AST.PreOpenExp acc env aenv a -> TFExpEnv env -> TF.Tensor TF.Build b
-evalPrimFun1 (AST.PrimSub ty) (AST.Tuple (Sugar.SnocTup (Sugar.SnocTup Sugar.NilTup x) y)) aenv =
+evalExpPrimFun :: AST.PrimFun (a -> b) -> AST.PreOpenExp acc env aenv a -> TFExpEnv env -> TF.Tensor TF.Build b
+evalExpPrimFun (AST.PrimSub ty) (AST.Tuple (Sugar.SnocTup (Sugar.SnocTup Sugar.NilTup x) y)) aenv =
   case ty of
     IntegralNumType TypeInt32{}  -> TF.sub (evalPreOpenExp x aenv) (evalPreOpenExp y aenv) 
     IntegralNumType TypeInt64{}  -> TF.sub (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
     FloatingNumType TypeFloat{}  -> TF.sub (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
     FloatingNumType TypeDouble{} -> TF.sub (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
-evalPrimFun1 (AST.PrimFDiv ty) (AST.Tuple (Sugar.SnocTup (Sugar.SnocTup Sugar.NilTup x) y)) aenv =
+evalExpPrimFun (AST.PrimFDiv ty) (AST.Tuple (Sugar.SnocTup (Sugar.SnocTup Sugar.NilTup x) y)) aenv =
   case ty of
     TypeFloat{}  -> TF.div (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
     TypeDouble{} -> TF.div (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
-evalPrimFun1 (AST.PrimNeg ty) x aenv =
+evalExpPrimFun (AST.PrimNeg ty) x aenv =
   case ty of
     IntegralNumType TypeInt32{}  -> TF.neg (evalPreOpenExp x aenv)
     IntegralNumType TypeInt64{}  -> TF.neg (evalPreOpenExp x aenv)
     FloatingNumType TypeFloat{}  -> TF.neg (evalPreOpenExp x aenv)
     FloatingNumType TypeDouble{} -> TF.neg (evalPreOpenExp x aenv)
-evalPrimFun1 (AST.PrimAbs ty) x aenv =
+evalExpPrimFun (AST.PrimAbs ty) x aenv =
   case ty of
     IntegralNumType TypeInt32{}  -> TF.abs (evalPreOpenExp x aenv)
     IntegralNumType TypeInt64{}  -> TF.abs (evalPreOpenExp x aenv)
     FloatingNumType TypeFloat{}  -> TF.abs (evalPreOpenExp x aenv)
     FloatingNumType TypeDouble{} -> TF.abs (evalPreOpenExp x aenv)
-evalPrimFun1 (AST.PrimExpFloating ty) x aenv =
+evalExpPrimFun (AST.PrimExpFloating ty) x aenv =
   case ty of
     TypeFloat{}  -> TF.exp (evalPreOpenExp x aenv)
     TypeDouble{} -> TF.exp (evalPreOpenExp x aenv)
-evalPrimFun1 (AST.PrimLog ty) x aenv =
+evalExpPrimFun (AST.PrimLog ty) x aenv =
   case ty of
     TypeFloat{}  -> TF.log (evalPreOpenExp x aenv)
     TypeDouble{} -> TF.log (evalPreOpenExp x aenv)
-evalPrimFun1 (AST.PrimGt ty) (AST.Tuple (Sugar.SnocTup (Sugar.SnocTup Sugar.NilTup x) y)) aenv =
+evalExpPrimFun (AST.PrimGt ty) (AST.Tuple (Sugar.SnocTup (Sugar.SnocTup Sugar.NilTup x) y)) aenv =
   case ty of
    NumScalarType (IntegralNumType TypeInt8{})   -> TF.greater (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
    NumScalarType (IntegralNumType TypeInt16{})  -> TF.greater (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
@@ -199,6 +200,8 @@ evalPrimFun1 (AST.PrimGt ty) (AST.Tuple (Sugar.SnocTup (Sugar.SnocTup Sugar.NilT
    NumScalarType (IntegralNumType TypeInt64{})  -> TF.greater (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
    NumScalarType (FloatingNumType TypeFloat{})  -> TF.greater (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
    NumScalarType (FloatingNumType TypeDouble{}) -> TF.greater (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
+
+-- TODO generalise
 
 -- Given some function (a -> b) check that it is just applying a single
 -- primitive function to its argument. If we start with something like

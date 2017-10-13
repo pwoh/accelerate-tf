@@ -40,8 +40,11 @@ main = do
     let prices = A.use $ A.fromList (Z :. (3 :: Int)) $ [5 :: Float, 17, 30]
     let strikes = A.use $ A.fromList (Z :. (3 :: Int)) $ [1 :: Float, 50, 100]
     let years = A.use $ A.fromList (Z :. (3 :: Int)) $ [0.25 :: Float, 5, 10]
-    res2 <- AccTF2.run $ blackscholes' (prices,strikes,years)
-    putStrLn $ show $ res2
+    --res2 <- AccTF2.run $ blackscholes' (prices,strikes,years)
+    --putStrLn $ show $ res2
+
+    putStrLn "----"
+    
 
 --opts :: (P.Floating a, Random a) => Gen (a,a,a)
 --opts = (,,) <$> choose (5,30) <*> choose (1,100) <*> choose (0.25,10)

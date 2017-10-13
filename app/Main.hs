@@ -1,6 +1,28 @@
+{-# LANGUAGE FlexibleContexts #-}
+{-# LANGUAGE TypeOperators #-}
+{-# LANGUAGE ScopedTypeVariables #-}
+{-# LANGUAGE TypeFamilies #-}
+{-# LANGUAGE ConstraintKinds #-}
+
 module Main where
 
-import Lib
+import Prelude                                          as P
+import Data.Array.Accelerate                            as A
+import Data.List
+import System.Environment
+import Control.Monad
+import Dotp
+import ExampleUtil
+
 
 main :: IO ()
-main = someFunc
+main = do 
+  [sizeStr, timesStr, functionStr] <- getArgs
+  let size = read sizeStr :: Int
+  let times = read timesStr :: Int
+  let f = case functionStr of
+        "noop" -> noop
+        "accdotp" -> accdotpRandom
+        "tfdotp" -> tfdotpRandom
+  replicateM_ times (f size)
+
