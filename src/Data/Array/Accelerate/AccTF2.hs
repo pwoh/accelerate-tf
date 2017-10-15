@@ -46,7 +46,6 @@ tfprj :: AST.Idx env (Array sh t) -> TFEnv env -> TF.Tensor TF.Build t
 tfprj AST.ZeroIdx       (Push _   v) = v
 tfprj (AST.SuccIdx idx) (Push val _) = tfprj idx val
 
-
 tfprjexp :: AST.Idx env t -> TFExpEnv env -> TF.Tensor TF.Build t
 tfprjexp AST.ZeroIdx       (ExpPush _   v) = v
 tfprjexp (AST.SuccIdx idx) (ExpPush val _) = tfprjexp idx val
@@ -114,17 +113,26 @@ evalPreOpenAcc pacc aenv =
         ArraysFarray -> let bnd' = evalOpenAcc bnd aenv         -- eeeerm...
                         in  evalOpenAcc body (aenv `Push` bnd')
 
-    AST.Map f a
-      | Just f' <- isPrimFun1 f
-      , a'      <- evalOpenAcc a aenv
-      -> evalMap f' a'
+    --AST.Map f a
+    --  | Just f' <- isPrimFun1 f
+    --  , a'      <- evalOpenAcc a aenv
+    --  -> evalMap f' a'
 
-    AST.ZipWith f a b
-      | Just f' <- isPrimFun2 f
-      , a'      <- evalOpenAcc a aenv
+    AST.Map (AST.Lam (AST.Body body)) a
+      | a'      <- evalOpenAcc a aenv
+      -> evalPreOpenExpMap body (ExpEmpty `ExpPush` a') --Pushing an array to an Exp environment
+
+    --AST.ZipWith f a b
+    --  | a'      <- evalOpenAcc a aenv,
+    --    b'      <- evalOpenAcc b aenv,
+    --   Just f' <- isPrimFun2 f 
+    --  -> evalZipWith f' a' b'
+    --  | otherwise -> error "zipwith error"
+
+    AST.ZipWith (AST.Lam (AST.Lam (AST.Body body))) a b
+      | a'      <- evalOpenAcc a aenv
       , b'      <- evalOpenAcc b aenv
-      -> evalZipWith f' a' b'
-      | otherwise -> error "zipwith error"
+      -> evalPreOpenExpZipWith body (ExpEmpty `ExpPush` a' `ExpPush` b')
 
     AST.Fold1 f a
       | Just f' <- isPrimFun2 f
@@ -133,6 +141,106 @@ evalPreOpenAcc pacc aenv =
 
     _ -> error "???"
 
+-- Given some function (a -> b) check that it is just applying a single
+-- primitive function to its argument. If we start with something like
+--
+-- > map (\x -> abs x) xs
+--
+-- we want to look for this specific function application and dig out the 'abs'
+-- function which was applied.
+--
+-- If there is more than a single application of a primitive function directly
+-- to the input argument, this function won't spot it.
+-- 
+isPrimFun1 :: AST.Fun aenv (a -> b) -> Maybe (AST.PrimFun (a -> b))
+isPrimFun1 fun
+  | AST.Lam  a <- fun
+  , AST.Body b <- a
+  , AST.PrimApp op arg  <- b
+  , AST.Var AST.ZeroIdx <- arg
+  = Just op
+
+  | otherwise
+  = Nothing
+
+isPrimFun2 :: AST.Fun aenv (a -> b -> c) -> Maybe (AST.PrimFun ((a,b) -> c))
+isPrimFun2 fun
+  | AST.Lam l1 <- fun
+  , AST.Lam l2 <- l1
+  , AST.Body b <- l2
+  , AST.PrimApp op arg <- b
+  , AST.Tuple (Sugar.SnocTup (Sugar.SnocTup Sugar.NilTup x) y) <- arg
+  , AST.Var (AST.SuccIdx AST.ZeroIdx) <- x
+  , AST.Var AST.ZeroIdx               <- y
+  = gcast op  -- uuuuuh...
+
+  | otherwise
+  = Nothing
+
+evalPreOpenExpMap :: forall acc env aenv t. (Elt t, TF.TensorType t) => AST.PreOpenExp acc env aenv t -> TFExpEnv env -> TF.Tensor TF.Build t
+evalPreOpenExpMap (AST.Var ix) env = tfprjexp ix env
+evalPreOpenExpMap expr env | AST.PrimApp op arg <- expr
+                            , AST.Tuple (Sugar.SnocTup Sugar.NilTup x) <- arg
+                            = evalMap op undefined --(evalPreOpenExpMap x env)
+                            --TODO how to get the types to match here?
+evalPreOpenExpMap expr env = evalPreOpenExp expr env
+
+evalPreOpenExpZipWith :: forall acc env aenv t. (Elt t, TF.TensorType t) => AST.PreOpenExp acc env aenv t -> TFExpEnv env -> TF.Tensor TF.Build t
+evalPreOpenExpZipWith (AST.Var ix) env = tfprjexp ix env
+evalPreOpenExpZipWith expr env | AST.PrimApp op arg <- expr
+                            , AST.Tuple (Sugar.SnocTup (Sugar.SnocTup Sugar.NilTup x) y) <- arg
+                            = evalZipWith undefined undefined undefined --op (evalZipWith x env) (evalZipWith y env)
+                            --TODO how to get the types to match here?
+evalPreOpenExpZipWith expr env = evalPreOpenExp expr env
+
+evalMap
+    :: AST.PrimFun (a -> b)
+    -> TF.Tensor TF.Build a
+    -> TF.Tensor TF.Build b
+evalMap (AST.PrimAbs t) =
+  case t of
+    IntegralNumType TypeInt32{}  -> TF.abs
+    IntegralNumType TypeInt64{}  -> TF.abs
+    FloatingNumType TypeFloat{}  -> TF.abs
+    FloatingNumType TypeDouble{} -> TF.abs
+
+evalZipWith
+    :: AST.PrimFun ((a,b) -> c)
+    -> TF.Tensor TF.Build a
+    -> TF.Tensor TF.Build b
+    -> TF.Tensor TF.Build c
+evalZipWith (AST.PrimAdd t) =
+  case t of
+    IntegralNumType TypeInt32{}  -> TF.add
+    IntegralNumType TypeInt64{}  -> TF.add
+    FloatingNumType TypeFloat{}  -> TF.add
+    FloatingNumType TypeDouble{} -> TF.add
+
+evalZipWith (AST.PrimMul t) =
+  case t of
+    IntegralNumType TypeInt32{}  -> TF.mul
+    IntegralNumType TypeInt64{}  -> TF.mul
+    FloatingNumType TypeFloat{}  -> TF.mul
+    FloatingNumType TypeDouble{} -> TF.mul
+
+evalFold1
+    :: TF.TensorType a
+    => AST.PrimFun ((a,a) -> a)
+    -> TF.Tensor TF.Build a
+    -> TF.Tensor TF.Build a
+evalFold1 (AST.PrimAdd t) arr =
+  let
+      -- 'fold*' in accelerate works over the innermost (left-most) index only.
+      -- In tensorflow this is the number of dimensions of the array.
+      --
+      dim  = TF.size (TF.shape arr) :: TF.Tensor TF.Build Int32
+      dim' = TF.sub dim (TF.constant (TF.Shape [1]) [1])
+  in
+  case t of
+    IntegralNumType TypeInt32{}  -> TF.sum arr dim'
+    IntegralNumType TypeInt64{}  -> TF.sum arr dim'
+    FloatingNumType TypeFloat{}  -> TF.sum arr dim'
+    FloatingNumType TypeDouble{} -> TF.sum arr dim'
 
 evalPreOpenExp
     :: forall sh e acc env aenv. (Elt e, TF.TensorType e)
@@ -200,93 +308,6 @@ evalExpPrimFun (AST.PrimGt ty) (AST.Tuple (Sugar.SnocTup (Sugar.SnocTup Sugar.Ni
    NumScalarType (IntegralNumType TypeInt64{})  -> TF.greater (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
    NumScalarType (FloatingNumType TypeFloat{})  -> TF.greater (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
    NumScalarType (FloatingNumType TypeDouble{}) -> TF.greater (evalPreOpenExp x aenv) (evalPreOpenExp y aenv)
-
--- TODO generalise
-
--- Given some function (a -> b) check that it is just applying a single
--- primitive function to its argument. If we start with something like
---
--- > map (\x -> abs x) xs
---
--- we want to look for this specific function application and dig out the 'abs'
--- function which was applied.
---
--- If there is more than a single application of a primitive function directly
--- to the input argument, this function won't spot it.
--- 
-isPrimFun1 :: AST.Fun aenv (a -> b) -> Maybe (AST.PrimFun (a -> b))
-isPrimFun1 fun
-  | AST.Lam  a <- fun
-  , AST.Body b <- a
-  , AST.PrimApp op arg  <- b
-  , AST.Var AST.ZeroIdx <- arg
-  = Just op
-
-  | otherwise
-  = Nothing
-
-isPrimFun2 :: AST.Fun aenv (a -> b -> c) -> Maybe (AST.PrimFun ((a,b) -> c))
-isPrimFun2 fun
-  | AST.Lam l1 <- fun
-  , AST.Lam l2 <- l1
-  , AST.Body b <- l2
-  , AST.PrimApp op arg <- b
-  , AST.Tuple (Sugar.SnocTup (Sugar.SnocTup Sugar.NilTup x) y) <- arg
-  , AST.Var (AST.SuccIdx AST.ZeroIdx) <- x
-  , AST.Var AST.ZeroIdx               <- y
-  = gcast op  -- uuuuuh...
-
-  | otherwise
-  = Nothing
-
-evalMap
-    :: AST.PrimFun (a -> b)
-    -> TF.Tensor TF.Build a
-    -> TF.Tensor TF.Build b
-evalMap (AST.PrimAbs t) =
-  case t of
-    IntegralNumType TypeInt32{}  -> TF.abs
-    IntegralNumType TypeInt64{}  -> TF.abs
-    FloatingNumType TypeFloat{}  -> TF.abs
-    FloatingNumType TypeDouble{} -> TF.abs
-
-evalZipWith
-    :: AST.PrimFun ((a,b) -> c)
-    -> TF.Tensor TF.Build a
-    -> TF.Tensor TF.Build b
-    -> TF.Tensor TF.Build c
-evalZipWith (AST.PrimAdd t) =
-  case t of
-    IntegralNumType TypeInt32{}  -> TF.add
-    IntegralNumType TypeInt64{}  -> TF.add
-    FloatingNumType TypeFloat{}  -> TF.add
-    FloatingNumType TypeDouble{} -> TF.add
-
-evalZipWith (AST.PrimMul t) =
-  case t of
-    IntegralNumType TypeInt32{}  -> TF.mul
-    IntegralNumType TypeInt64{}  -> TF.mul
-    FloatingNumType TypeFloat{}  -> TF.mul
-    FloatingNumType TypeDouble{} -> TF.mul
-
-evalFold1
-    :: TF.TensorType a
-    => AST.PrimFun ((a,a) -> a)
-    -> TF.Tensor TF.Build a
-    -> TF.Tensor TF.Build a
-evalFold1 (AST.PrimAdd t) arr =
-  let
-      -- 'fold*' in accelerate works over the innermost (left-most) index only.
-      -- In tensorflow this is the number of dimensions of the array.
-      --
-      dim  = TF.size (TF.shape arr) :: TF.Tensor TF.Build Int32
-      dim' = TF.sub dim (TF.constant (TF.Shape [1]) [1])
-  in
-  case t of
-    IntegralNumType TypeInt32{}  -> TF.sum arr dim'
-    IntegralNumType TypeInt64{}  -> TF.sum arr dim'
-    FloatingNumType TypeFloat{}  -> TF.sum arr dim'
-    FloatingNumType TypeDouble{} -> TF.sum arr dim'
 
 
 addIdentity :: (P.Num a, TF.TensorType a) => TF.Tensor TF.Build a

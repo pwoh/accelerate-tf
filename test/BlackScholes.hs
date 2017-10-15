@@ -40,6 +40,7 @@ main = do
     let prices = A.use $ A.fromList (Z :. (3 :: Int)) $ [5 :: Float, 17, 30]
     let strikes = A.use $ A.fromList (Z :. (3 :: Int)) $ [1 :: Float, 50, 100]
     let years = A.use $ A.fromList (Z :. (3 :: Int)) $ [0.25 :: Float, 5, 10]
+    --putStrLn $ show $ I.run $ blackscholes' (prices,strikes,years)
     --res2 <- AccTF2.run $ blackscholes' (prices,strikes,years)
     --putStrLn $ show $ res2
 
@@ -148,10 +149,10 @@ cnd' d =
 
 blackscholes' :: (P.Floating a, A.Floating a, A.Ord a) => (Acc (Vector a), Acc (Vector a), Acc (Vector a)) -> (Acc (Vector a), Acc (Vector a))
 blackscholes' (price, strike, years) = (price, years)
-
+-- TODO how to handle tuples?
 
 blackscholes :: (P.Floating a, A.Floating a, A.Ord a) => Acc (Vector (a, a, a)) -> Acc (Vector (a, a))
-blackscholes = A.map go          --TODO this needs to be rewritten?
+blackscholes = A.map go          --TODO this needs to be rewritten - manual vectorisation
   where
   go x =
     let (price, strike, years) = A.unlift x
