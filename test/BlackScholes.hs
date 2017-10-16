@@ -14,14 +14,23 @@
 import Prelude                                                  as P
 
 import Data.Array.Accelerate                                    as A
+import qualified Data.Array.Accelerate                          as AST
 --import Data.Array.Accelerate.Array.Sugar                        as A
 --import Data.Array.Accelerate.Examples.Internal                  as A
 --import Data.Array.Accelerate.IO                                 as A
 import Data.Array.Accelerate.Interpreter as I
+import qualified Data.Array.Accelerate.Trafo.Sharing            as Sharing
 
-import Data.Array.Accelerate.AccTF as AccTF
+-- import Data.Array.Accelerate.AccTF as AccTF
 import Data.Array.Accelerate.AccTF2 as AccTF2
 
+prices, strikes, years :: Acc (Vector Float)
+prices  = A.use $ A.fromList (Z :. (3 :: Int)) $ [5 :: Float, 17, 30]
+strikes = A.use $ A.fromList (Z :. (3 :: Int)) $ [1 :: Float, 50, 100]
+years   = A.use $ A.fromList (Z :. (3 :: Int)) $ [0.25 :: Float, 5, 10]
+
+psy :: Acc (Vector (Float,Float,Float))
+psy = use $ fromList (Z:.3) [(5.0,1.0,0.25),(17.0,50.0,5.0),(30.0,100.0,10.0)]
 
 main :: IO ()
 main = do
@@ -30,7 +39,7 @@ main = do
     putStrLn $ show $ I.run $ x
     putStrLn $ show $ I.run $ blackscholes x
     putStrLn "----"
-    res <- AccTF2.run $ blackscholes x
+    -- res <- AccTF2.run $ blackscholes x
     --putStrLn $ show $ res (Foreign.Storable.Storable (Float, Float))
 
     putStrLn "----"
@@ -168,4 +177,37 @@ blackscholes = A.map go          --TODO this needs to be rewritten - manual vect
     in
     A.lift ( price * cndD1 - x_expRT * cndD2 --V_call
            , x_expRT * (1.0 - cndD2) - price * (1.0 - cndD1)) --V_put
+
 -- NB: Lift and Unlift both happen on the GPU.
+
+
+blackscholes1
+    :: Acc (Vector Float)
+    -> Acc (Vector Float)
+    -> Acc (Vector Float)
+    -> Acc (Vector Float) -- call price
+blackscholes1 price strike years =
+  let
+      r       = A.constant riskfree 
+      v       = A.constant volatility
+
+      v_sqrtT = A.map (\y -> v * sqrt y) years
+
+      -- d1      = (log (price / strike) + (r + 0.5 * v * v) * years) / v_sqrtT
+      d1      = A.zipWith (/) (A.zipWith (\l y -> (l + (r + 0.5 * v * v) * y))
+                                         ((A.zipWith (\p s -> log (p / s))
+                                                     price
+                                                     strike))
+                                         years)
+                              v_sqrtT
+
+      d2      = A.zipWith (-) d1 v_sqrtT
+      cnd     = A.map (\d -> let c = cnd' d in d A.> 0 ? (1.0 - c, c))
+      cndD1   = cnd d1
+      cndD2   = cnd d2
+      x_expRT = A.zipWith (\s y -> s * exp (-r * y)) strike years
+  in
+  A.zipWith (-) (A.zipWith (*) price   cndD1)
+                (A.zipWith (*) x_expRT cndD2)
+    --price * cndD1 - x_expRT * cndD2
+
