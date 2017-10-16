@@ -3,16 +3,19 @@
 {-# LANGUAGE ScopedTypeVariables #-}
 {-# LANGUAGE TypeOperators       #-}
 
-module Data.Array.Accelerate.TensorFlow
-  where
+module Data.Array.Accelerate.TensorFlow (
+
+  run, run1,
+
+) where
 
 import Data.Array.Accelerate.TensorFlow.Array.Data
 
+import Data.Array.Accelerate                                        ( Acc, use )
 import Data.Array.Accelerate.Analysis.Match
 import Data.Array.Accelerate.Array.Data
 import Data.Array.Accelerate.Array.Sugar
 import Data.Array.Accelerate.Product
-import Data.Array.Accelerate.Smart                                  ( Acc )
 import Data.Array.Accelerate.Type
 import qualified Data.Array.Accelerate.AST                          as AST
 import qualified Data.Array.Accelerate.Array.Representation         as R
@@ -32,7 +35,7 @@ import Data.Maybe
 import qualified Data.Vector.Storable                               as V
 
 
--- DO ALL THE THINGS!!
+-- Evaluate an array expression
 --
 run :: (Shape sh, Elt e)
     => Acc (Array sh e)
@@ -45,6 +48,14 @@ run a
     acc     = Sharing.convertAcc True True True True a
     execute = evalOpenAcc acc Aempty
 
+-- TODO: no actual performance gain here, just for API compatability
+--
+run1 :: (Shape sh1, Shape sh2, Elt a, Elt b)
+     => (Acc (Array sh1 a) -> Acc (Array sh2 b))
+     -> Array sh1 a
+     -> Array sh2 b
+run1 f x = run (f (use x))
+
 
 -- Environments
 -- ------------
@@ -52,32 +63,15 @@ run a
 -- implicit vectorisation thing in evalOpenExp
 data Val env where
   Empty  :: Val ()
-  Push   :: Shape sh => Val env -> Tensor sh e -> Val (env, e)
+  Push   :: Val env -> Vectorised e -> Val (env, e)
 
 data Aval env where
   Aempty :: Aval ()
   Apush  :: Aval env -> t -> Aval (env,t)
 
-prj :: forall env sh e. Shape sh => AST.Idx env e -> Val env -> Tensor sh e
-prj (AST.SuccIdx idx) (Push val _)                   = prj idx val
-prj AST.ZeroIdx       (Push _  (v :: Tensor sh' e'))
-  | Just Refl <- matchShapeType (undefined::sh) (undefined::sh')
-  = v
-
-
--- Match reified shape types
---
-matchShapeType
-    :: forall sh sh'. (Shape sh, Shape sh')
-    => sh
-    -> sh'
-    -> Maybe (sh :~: sh')
-matchShapeType _ _
-  | Just Refl <- matchTupleType (eltType (undefined::sh)) (eltType (undefined::sh'))
-  = gcast Refl
-
-matchShapeType _ _
-  = Nothing
+prj :: AST.Idx env e -> Val env -> Vectorised e
+prj (AST.SuccIdx idx) (Push val _) = prj idx val
+prj AST.ZeroIdx       (Push _   v) = v
 
 
 -- Array computations
@@ -104,14 +98,16 @@ evalOpenAcc (AST.OpenAcc pacc) aenv =
 
     AST.Map f a
       | AST.Lam (AST.Body body) <- f
-      , a'                      <- travA a
-      -> evalOpenExp body (Empty `Push` a') aenv
+      , Tensor sh a'            <- travA a
+      , Vectorised r            <- evalOpenExp body (Empty `Push` Vectorised a') aenv
+      -> Tensor sh r
 
     AST.ZipWith f a b
       | AST.Lam (AST.Lam (AST.Body body)) <- f
-      , a'                                <- travA a
-      , b'                                <- travA b
-      -> evalOpenExp body (Empty `Push` a' `Push` b') aenv
+      , Tensor sh a'                      <- travA a  -- we better hope that...
+      , Tensor _  b'                      <- travA b  -- ...these shapes match
+      , Vectorised r                      <- evalOpenExp body (Empty `Push` Vectorised a' `Push` Vectorised b') aenv
+      -> Tensor sh r
 
     other           -> error ("unsupported array operation: " ++ AST.showPreAccOp other)
 
@@ -119,84 +115,87 @@ evalOpenAcc (AST.OpenAcc pacc) aenv =
 -- Scalar expressions
 -- ------------------
 
--- Scalar expressions get implicitly vectorised to arrays
+-- Scalar expressions get implicitly vectorised to arrays. We don't care about
+-- the shape of the array so we are using this specialised type 'Vectorised'
+-- here. In fact, for some operations like Const where we don't know what
+-- the vectorised size should be, we couldn't use the full 'Tensor' type.
 --
 evalExp
-    :: forall aenv sh t. (Shape sh, Elt t)
+    :: forall aenv t. Elt t
     => AST.Exp aenv t
     -> Aval aenv
-    -> Tensor sh t -- D:   (did this work...? O_o)
+    -> Vectorised t
 evalExp exp aenv = evalOpenExp exp Empty aenv
 
 evalOpenExp
-    :: forall env aenv sh t. (Shape sh, Elt t)
+    :: forall env aenv t. Elt t
     => AST.OpenExp env aenv t
     -> Val env
     -> Aval aenv
-    -> Tensor sh t -- D:
+    -> Vectorised t
 evalOpenExp exp env aenv =
   let
-      travE :: Elt s => AST.OpenExp env aenv s -> Tensor sh s
+      travE :: Elt s => AST.OpenExp env aenv s -> Vectorised s
       travE e = evalOpenExp e env aenv
 
-      travT :: forall t. (Elt t, IsTuple t) => Tuple (AST.OpenExp env aenv) (TupleRepr t) -> Tensor sh t
-      travT tup = uncurry Tensor $ go (eltType (undefined::t)) tup
+      travT :: forall t. (Elt t, IsTuple t) => Tuple (AST.OpenExp env aenv) (TupleRepr t) -> Vectorised t
+      travT tup = Vectorised $ go (eltType (undefined::t)) tup
         where
-          go :: TupleType t' -> Tuple (AST.OpenExp env aenv) tup -> (TF.Tensor TF.Build Int32, TensorArrayData t')
+          go :: TupleType t' -> Tuple (AST.OpenExp env aenv) tup -> TensorArrayData t'
           go UnitTuple         NilTup
-            = (undefined, AD_Unit)
+            = AD_Unit
           go (PairTuple ta tb) (SnocTup a (b :: AST.OpenExp env aenv b))
             -- We must assert that the reified type 'tb' of 'b' is actually
             -- equivalent to the type of 'b'. This can not fail, but is necessary
             -- because 'tb' observes the representation type of surface type 'b'.
-            | Just Refl    <- matchTupleType tb (eltType (undefined::b))
-            , (_,a')       <- go ta a -- these two shapes better match...
-            , Tensor sh b' <- travE b
-            = (sh, AD_Pair a' b')
+            | Just Refl     <- matchTupleType tb (eltType (undefined::b))
+            , a'            <- go ta a -- these two shapes better match...
+            , Vectorised b' <- travE b
+            = AD_Pair a' b'
           go _ _ = error "internal error in travT"
 
   in
   case exp of
-    -- AST.Const c       -> useArray (fromList Z [toElt c]) -- )))))))):
+    AST.Const c | Tensor _ adata <- useArray (fromList Z [toElt c :: t])
+                      -> Vectorised adata
+    AST.Let bnd body  -> evalOpenExp body (env `Push` travE bnd) aenv
     AST.Var ix        -> prj ix env
-    AST.Prj ix t      -> prjArray ix (travE t)
+    AST.Prj ix t      -> prjVectorised ix (travE t)
     AST.Tuple t       -> travT t
-
     AST.PrimApp f arg -> evalPrimFun f (travE arg)
-
+    --
     other             -> error ("unsupported scalar operation: " ++ AST.showPreExpOp other)
 
 
-prjArray
-    :: forall sh tup t. (Elt tup, Elt t)
+prjVectorised
+    :: forall tup t. (Elt tup, Elt t)
     => TupleIdx (TupleRepr tup) t
-    -> Tensor sh tup
-    -> Tensor sh t
-prjArray tix (Tensor sh tup) = Tensor sh $ go tix (eltType (undefined::tup)) tup
+    -> Vectorised tup
+    -> Vectorised t
+prjVectorised tix (Vectorised tup) = Vectorised $ go tix (eltType (undefined::tup)) tup
   where
     go :: TupleIdx v t -> TupleType tup' -> TensorArrayData tup' -> TensorArrayData (EltRepr t)
     go ZeroTupIdx (PairTuple _ t) (AD_Pair _ v)
       | Just Refl <- matchTupleType t (eltType (undefined::t))
       = v
     go (SuccTupIdx ix) (PairTuple t _) (AD_Pair tup _) = go ix t tup
-    go _               _               _               = error "prjArray: inconsistent evaluation"
+    go _               _               _               = error "prjVectorised: inconsistent evaluation"
   
 
-tfst :: (Shape sh, Elt a, Elt b) => Tensor sh (a,b) -> Tensor sh a
-tfst = prjArray (SuccTupIdx ZeroTupIdx)
+tfst :: (Elt a, Elt b) => Vectorised (a,b) -> Vectorised a
+tfst = prjVectorised (SuccTupIdx ZeroTupIdx)
 
-tsnd :: (Shape sh, Elt a, Elt b) => Tensor sh (a,b) -> Tensor sh b
-tsnd = prjArray ZeroTupIdx
+tsnd :: (Elt a, Elt b) => Vectorised (a,b) -> Vectorised b
+tsnd = prjVectorised ZeroTupIdx
 
 evalPrimFun
-    :: (Shape sh, Elt a, Elt b)
+    :: (Elt a, Elt b)
     => AST.PrimFun (a -> b)
-    -> Tensor sh a
-    -> Tensor sh b
+    -> Vectorised a
+    -> Vectorised b
 evalPrimFun f arg =
   case f of
     AST.PrimAdd t -> add t (tfst arg) (tsnd arg)
-
 
     other -> error ("unsupported primitive function: " ++ "??")
 
@@ -204,9 +203,9 @@ evalPrimFun f arg =
 -- Assume that the shapes remain the same?? For zipWith TF handles some cases
 -- where the array dimensions are not the same, but often crashes...
 --
-add :: Shape sh => NumType t -> Tensor sh t -> Tensor sh t -> Tensor sh t
-add (IntegralNumType TypeInt32{}) (Tensor sh (AD_Int32 x)) (Tensor _ (AD_Int32 y)) = Tensor sh (AD_Int32 $ TF.add x y)
-add (IntegralNumType TypeInt64{}) (Tensor sh (AD_Int64 x)) (Tensor _ (AD_Int64 y)) = Tensor sh (AD_Int64 $ TF.add x y)
+add :: NumType t -> Vectorised t -> Vectorised t -> Vectorised t
+add (IntegralNumType TypeInt32{}) (Vectorised (AD_Int32 x)) (Vectorised (AD_Int32 y)) = Vectorised (AD_Int32 $ TF.add x y)
+add (IntegralNumType TypeInt64{}) (Vectorised (AD_Int64 x)) (Vectorised (AD_Int64 y)) = Vectorised (AD_Int64 $ TF.add x y)
 
 
 -- Implementations
@@ -228,9 +227,9 @@ useArray (Array sh adata) = Tensor (encodeShape sh) (encodeData arrayElt adata)
     --
     encodeData :: ArrayEltR t -> ArrayData t -> TensorArrayData t
     encodeData ArrayEltRunit  AD_Unit = AD_Unit
-    encodeData ArrayEltRint32  ad     = AD_Int32 $ TF.constant arrayShape (toList (Array sh ad :: Array sh Int32))
-    encodeData ArrayEltRint64  ad     = AD_Int64 $ TF.constant arrayShape (toList (Array sh ad :: Array sh Int64))
-    encodeData ArrayEltRfloat  ad     = AD_Float $ TF.constant arrayShape (toList (Array sh ad :: Array sh Float))
+    encodeData ArrayEltRint32  ad     = AD_Int32  $ TF.constant arrayShape (toList (Array sh ad :: Array sh Int32))
+    encodeData ArrayEltRint64  ad     = AD_Int64  $ TF.constant arrayShape (toList (Array sh ad :: Array sh Int64))
+    encodeData ArrayEltRfloat  ad     = AD_Float  $ TF.constant arrayShape (toList (Array sh ad :: Array sh Float))
     encodeData ArrayEltRdouble ad     = AD_Double $ TF.constant arrayShape (toList (Array sh ad :: Array sh Double))
     encodeData (ArrayEltRpair ar1 ar2) (AD_Pair ad1 ad2) = AD_Pair (encodeData ar1 ad1)
                                                                    (encodeData ar2 ad2)
