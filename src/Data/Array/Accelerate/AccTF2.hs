@@ -121,6 +121,11 @@ evalPreOpenAcc pacc aenv =
     AST.Unit e -> evalPreOpenExp e ExpEmpty aenv
     -- encodeTensorData might be useful here instad of going via toList. We can
     -- convert to storable vector in O(1) with the accelerate-io package.
+    --
+    -- > AST.Use a -> toVectors (toArr a)
+    --
+    -- requires: Vectors (EltRepr e) ~ TF.Tensor TF.Build e  
+    --
     AST.Use a           -> TF.constant (tfShape a) (toList (toArr a))
     AST.Avar ix         -> tfprj ix aenv
 
