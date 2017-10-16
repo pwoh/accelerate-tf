@@ -15,6 +15,7 @@ import Data.Array.Accelerate                            as A
 import Data.Array.Accelerate.IO
 
 import Data.Array.Accelerate.Array.Sugar as Sugar
+import Data.Array.Accelerate.Array.Data
 import Data.Array.Accelerate.Trafo                                  hiding ( Delayed )
 
 import qualified Data.Array.Accelerate.AST                          as AST
@@ -37,7 +38,6 @@ import Data.Int
 import Data.Word
 
 import System.IO.Unsafe
-
 
 data TFEnv env where
   Empty :: TFEnv ()
@@ -103,10 +103,19 @@ data TensorTypeR t where
     TensorTypeWord16 :: TensorTypeR Word16
     --TensorTypeCDouble :: TensorTypeR (Complex Double)
 
-    
+-- type family TFEltRepr e :: *
+-- type instance TFEltRepr Int = TF.Tensor TF.Build Int
+-- type instance TFEltRepr Float = TF.Tensor TF.Build Float
+-- 
+-- data TFArray sh e where
+--   TFArray :: (Shape sh, Elt e)
+--           => TF.Tensor TF.Build Int32         -- shape
+--           -> EltRepr 
+--           -> TFArray sh e
+
 evalOpenAcc
-    :: forall aenv sh e. (Shape sh, Elt e) =>
-       AST.OpenAcc aenv (Array sh e)
+    :: forall aenv sh e. (Shape sh, Elt e)
+    => AST.OpenAcc aenv (Array sh e)
     -> TFEnv aenv
     -> TF.Tensor TF.Build e 
 evalOpenAcc (AST.OpenAcc pacc) aenv
