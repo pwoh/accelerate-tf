@@ -6,7 +6,7 @@
 {-# LANGUAGE TypeFamilies          #-}
 {-# LANGUAGE UndecidableInstances  #-}
 
-module Data.Array.Accelerate.TensorFlow
+module Data.Array.Accelerate.TensorFlow.Array.Data
   where
 
 import Data.Array.Accelerate.Array.Data
@@ -44,6 +44,11 @@ data Tensor sh e where
          => TF.Tensor TF.Build Int32 -- TF.Shape ??
          -> TensorArrayData (EltRepr e)
          -> Tensor sh e
+
+data Vectorised e where
+  Vectorised :: Elt e
+             => TensorArrayData (EltRepr e)
+             -> Vectorised e
  
 instance TF.Nodes (Tensor sh e) where
   getNodes (Tensor sh adata) = TF.nodesUnion [TF.getNodes sh, go arrayElt adata]
