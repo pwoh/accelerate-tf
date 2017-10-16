@@ -78,16 +78,18 @@ data IsTensorType t where
   IsTensorType :: (TF.TensorType t, TF.TensorDataType V.Vector t) => TensorTypeR t -> IsTensorType t
   
 isTensorType :: forall a. Typeable a => Maybe (IsTensorType a)
-isTensorType | Just Refl <- (eqT :: Maybe (a :~: Bool)) = Just (IsTensorType TensorTypeBool)
-             | Just Refl <- (eqT :: Maybe (a :~: Double)) = Just (IsTensorType TensorTypeDouble)
-             | Just Refl <- (eqT :: Maybe (a :~: Float)) = Just (IsTensorType TensorTypeFloat)
-             | Just Refl <- (eqT :: Maybe (a :~: Int8)) = Just (IsTensorType TensorTypeInt8)
-             | Just Refl <- (eqT :: Maybe (a :~: Int16)) = Just (IsTensorType TensorTypeInt16)
-             | Just Refl <- (eqT :: Maybe (a :~: Int32)) = Just (IsTensorType TensorTypeInt32)
-             | Just Refl <- (eqT :: Maybe (a :~: Int64)) = Just (IsTensorType TensorTypeInt64)
-             | Just Refl <- (eqT :: Maybe (a :~: Word8)) = Just (IsTensorType TensorTypeWord8)
-             | Just Refl <- (eqT :: Maybe (a :~: Word16)) = Just (IsTensorType TensorTypeWord16)
-             {--| Just Refl <- (eqT :: Maybe (a :~: (Complex Double))) = Just (IsTensorType TensorTypeCDouble)-}
+isTensorType
+  | Just Refl <- (eqT :: Maybe (a :~: Bool))   = Just (IsTensorType TensorTypeBool)
+  | Just Refl <- (eqT :: Maybe (a :~: Double)) = Just (IsTensorType TensorTypeDouble)
+  | Just Refl <- (eqT :: Maybe (a :~: Float))  = Just (IsTensorType TensorTypeFloat)
+  | Just Refl <- (eqT :: Maybe (a :~: Int8))   = Just (IsTensorType TensorTypeInt8)
+  | Just Refl <- (eqT :: Maybe (a :~: Int16))  = Just (IsTensorType TensorTypeInt16)
+  | Just Refl <- (eqT :: Maybe (a :~: Int32))  = Just (IsTensorType TensorTypeInt32)
+  | Just Refl <- (eqT :: Maybe (a :~: Int64))  = Just (IsTensorType TensorTypeInt64)
+  | Just Refl <- (eqT :: Maybe (a :~: Word8))  = Just (IsTensorType TensorTypeWord8)
+  | Just Refl <- (eqT :: Maybe (a :~: Word16)) = Just (IsTensorType TensorTypeWord16)
+  | otherwise                                  = Nothing
+  {--| Just Refl <- (eqT :: Maybe (a :~: (Complex Double))) = Just (IsTensorType TensorTypeCDouble)-}
 
 data TensorTypeR t where
     TensorTypeBool   :: TensorTypeR Bool
