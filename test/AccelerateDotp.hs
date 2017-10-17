@@ -67,7 +67,7 @@ main = do
 
     putStrLn "----"
     putStrLn $ show $ t2
-    --putStrLn $ show $ t3
+    putStrLn $ show $ t3
     --w <- putStrLn $ (show $ AccTF.run $ addVector test test)
 
     putStrLn "--cond test--"
@@ -76,7 +76,7 @@ main = do
     let two = A.constant(2.0 :: Float)
     let z = A.cond (one A.> two) one zero
     let zz = A.unit z
-    --putStrLn $ show $ TF.run $ zz
+    putStrLn $ show $ TF.run $ zz
 
 
     --putStrLn "--cond test 2--"
