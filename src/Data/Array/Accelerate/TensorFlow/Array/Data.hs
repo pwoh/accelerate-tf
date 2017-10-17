@@ -44,11 +44,10 @@ data Tensor sh e where
          => TF.Tensor TF.Build Int32 -- TF.Shape ??
          -> TensorArrayData (EltRepr e)
          -> Tensor sh e
-
-data Vectorised e where
-  Vectorised :: Elt e
-             => TensorArrayData (EltRepr e)
-             -> Vectorised e
+             
+data Vectorised t where
+  Vectorised :: TensorArrayData (EltRepr t)
+             -> Vectorised t
  
 instance TF.Nodes (Tensor sh e) where
   getNodes (Tensor sh adata) = TF.nodesUnion [TF.getNodes sh, go arrayElt adata]
@@ -59,8 +58,9 @@ instance TF.Nodes (Tensor sh e) where
       go ArrayEltRint64          (AD_Int64 ad)     = TF.getNodes ad
       go ArrayEltRfloat          (AD_Float ad)     = TF.getNodes ad
       go ArrayEltRdouble         (AD_Double ad)    = TF.getNodes ad
+      go ArrayEltRbool           (AD_Bool ad)      = TF.getNodes ad
+      go ArrayEltRword8          (AD_Word8 ad)     = TF.getNodes ad
       go (ArrayEltRpair ar1 ar2) (AD_Pair ad1 ad2) = TF.nodesUnion [go ar1 ad1, go ar2 ad2]
-
 
 instance TF.Fetchable (Tensor sh e) (Array sh e) where
   getFetch (Tensor sh adata) = liftA2 Array <$> fetchShape sh <*> fetchData arrayElt adata
@@ -74,6 +74,8 @@ instance TF.Fetchable (Tensor sh e) (Array sh e) where
       fetchData ArrayEltRint64          (AD_Int64 ad)     = liftA  AD_Int64  <$> TF.getFetch ad
       fetchData ArrayEltRfloat          (AD_Float ad)     = liftA  AD_Float  <$> TF.getFetch ad
       fetchData ArrayEltRdouble         (AD_Double ad)    = liftA  AD_Double <$> TF.getFetch ad
+      fetchData ArrayEltRbool           (AD_Bool ad)      = liftA  AD_Bool   <$> TF.getFetch ad
+      fetchData ArrayEltRword8          (AD_Word8 ad)      = liftA AD_Word8   <$> TF.getFetch ad
       fetchData (ArrayEltRpair ar1 ar2) (AD_Pair ad1 ad2) = liftA2 AD_Pair   <$> fetchData ar1 ad1 <*> fetchData ar2 ad2
 
 instance (Elt e, V.Storable e, TF.TensorDataType V.Vector e, TF.TensorType e) => TF.TensorDataType UniqueArray e where
@@ -81,10 +83,8 @@ instance (Elt e, V.Storable e, TF.TensorDataType V.Vector e, TF.TensorType e) =>
     = TF.encodeTensorData sh
     $ V.unsafeFromForeignPtr0 (unsafeGetValue (uniqueArrayData ua)) -- payload
                               (fromIntegral (product sh'))          -- number of elements
-
   decodeTensorData arr =
     let v      = TF.decodeTensorData arr
         (fp,_) = V.unsafeToForeignPtr0 v
     in
     unsafePerformIO $ newUniqueArray fp
-

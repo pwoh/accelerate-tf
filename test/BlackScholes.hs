@@ -22,7 +22,10 @@ import Data.Array.Accelerate.Interpreter as I
 import qualified Data.Array.Accelerate.Trafo.Sharing            as Sharing
 
 -- import Data.Array.Accelerate.AccTF as AccTF
-import Data.Array.Accelerate.AccTF2 as AccTF2
+--import Data.Array.Accelerate.AccTF2 as AccTF2
+
+import qualified Data.Array.Accelerate.TensorFlow as TF
+
 
 prices, strikes, years :: Acc (Vector Float)
 prices  = A.use $ A.fromList (Z :. (3 :: Int)) $ [5 :: Float, 17, 30]
@@ -52,7 +55,8 @@ main = do
     --putStrLn $ show $ I.run $ blackscholes' (prices,strikes,years)
     --res2 <- AccTF2.run $ blackscholes' (prices,strikes,years)
     --putStrLn $ show $ res2
-
+    putStrLn $ "TF.run::::::::"
+    putStrLn $ show $ TF.run $ blackscholes x
     putStrLn "----"
     
 

@@ -29,6 +29,7 @@ import qualified TensorFlow.Output                                  as TF
 import qualified TensorFlow.Types                                   as TF
 
 import System.IO.Unsafe
+import Unsafe.Coerce
 import Data.Int
 import Data.Typeable
 import Data.Maybe
@@ -43,10 +44,10 @@ run :: (Shape sh, Elt e)
 run a
   = unsafePerformIO
   $ TF.runSession
-  $ TF.run execute
+  $ TF.run tensor
   where
     acc     = Sharing.convertAcc True True True True a
-    execute = evalOpenAcc acc Aempty
+    tensor  = evalOpenAcc acc Aempty
 
 -- TODO: no actual performance gain here, just for API compatability
 --
@@ -67,12 +68,15 @@ data Val env where
 
 data Aval env where
   Aempty :: Aval ()
-  Apush  :: Aval env -> t -> Aval (env,t)
+  Apush  :: Aval env -> Tensor sh e -> Aval (env, Array sh e)
 
 prj :: AST.Idx env e -> Val env -> Vectorised e
 prj (AST.SuccIdx idx) (Push val _) = prj idx val
 prj AST.ZeroIdx       (Push _   v) = v
 
+aprj :: AST.Idx env (Array sh e) -> Aval env -> Tensor sh e
+aprj (AST.SuccIdx idx) (Apush val _) = aprj idx val
+aprj AST.ZeroIdx       (Apush _   v) = v
 
 -- Array computations
 -- ------------------
@@ -95,6 +99,17 @@ evalOpenAcc (AST.OpenAcc pacc) aenv =
   in
   case pacc of
     AST.Use a       -> useArray a
+    AST.Unit e 
+      | Vectorised r <- evalExp e aenv
+      -> Tensor (TF.constant (TF.Shape [1]) [1]) r 
+    AST.Avar ix 
+      | arr <- aprj ix aenv
+      ->  arr
+
+    AST.Alet (bnd :: AST.OpenAcc aenv bnd) body ->
+      case flavour (undefined::bnd) of
+        ArraysFarray -> let bnd' = evalOpenAcc bnd aenv         -- eeeerm...
+                        in  evalOpenAcc body (aenv `Apush` bnd')
 
     AST.Map f a
       | AST.Lam (AST.Body body) <- f
@@ -109,7 +124,49 @@ evalOpenAcc (AST.OpenAcc pacc) aenv =
       , Vectorised r                      <- evalOpenExp body (Empty `Push` Vectorised a' `Push` Vectorised b') aenv
       -> Tensor sh r
 
+    AST.Fold1 f a
+      | Just f' <- isPrimFun2 f
+      , Tensor sh a' <- travA a
+      , Vectorised r <- evalFold1 f' (Vectorised a')
+      -> Tensor sh r
     other           -> error ("unsupported array operation: " ++ AST.showPreAccOp other)
+
+evalFold1
+    :: Elt a => AST.PrimFun ((a,a) -> a)
+    -> Vectorised a
+    -> Vectorised a
+evalFold1 (AST.PrimAdd (t :: NumType a)) (Vectorised arr) = Vectorised $ go (eltType (undefined::a)) arr
+  where
+    go :: TupleType t' -> TensorArrayData t' -> TensorArrayData t'
+    go UnitTuple          AD_Unit         = AD_Unit
+    go (PairTuple t1 t2) (AD_Pair l1 l2)  = AD_Pair (go t1 l1) (go t2 l2)
+    go (SingleTuple t)    l               = evalScalarFold1 t l
+
+evalScalarFold1 :: ScalarType t -> TensorArrayData t -> TensorArrayData t
+evalScalarFold1 (NumScalarType (IntegralNumType TypeInt32{}))  (AD_Int32  arr) = AD_Int32  $ TF.sum arr (foldDim arr)
+evalScalarFold1 (NumScalarType (IntegralNumType TypeInt64{}))  (AD_Int64  arr) = AD_Int64  $ TF.sum arr (foldDim arr)
+evalScalarFold1 (NumScalarType (FloatingNumType TypeFloat{}))  (AD_Float  arr) = AD_Float  $ TF.sum arr (foldDim arr)
+evalScalarFold1 (NumScalarType (FloatingNumType TypeDouble{})) (AD_Double arr) = AD_Double $ TF.sum arr (foldDim arr)
+
+-- 'fold*' in accelerate works over the innermost (left-most) index only.
+-- In tensorflow this is the number of dimensions of the array.
+foldDim arr = TF.sub dim (TF.constant (TF.Shape [1]) [1])
+  where dim =  TF.size (TF.shape arr) :: TF.Tensor TF.Build Int32
+
+isPrimFun2 :: AST.Fun aenv (a -> b -> c) -> Maybe (AST.PrimFun ((a,b) -> c))
+isPrimFun2 fun
+  | AST.Lam l1 <- fun
+  , AST.Lam l2 <- l1
+  , AST.Body b <- l2
+  , AST.PrimApp op arg <- b
+  , AST.Tuple (SnocTup (SnocTup NilTup x) y) <- arg
+  , AST.Var (AST.SuccIdx AST.ZeroIdx) <- x
+  , AST.Var AST.ZeroIdx               <- y
+  = gcast op  -- uuuuuh...
+
+  | otherwise
+  = Nothing
+
 
 
 -- Scalar expressions
@@ -163,9 +220,26 @@ evalOpenExp exp env aenv =
     AST.Prj ix t      -> prjVectorised ix (travE t)
     AST.Tuple t       -> travT t
     AST.PrimApp f arg -> evalPrimFun f (travE arg)
-    --
+    AST.Cond p e1 e2
+      |  p'  <- travE p
+      ,  e1' <- travE e1
+      ,  e2' <- travE e2
+      -> evalCond p' e1' e2'
     other             -> error ("unsupported scalar operation: " ++ AST.showPreExpOp other)
 
+evalCond :: forall t. Elt t => Vectorised Bool -> Vectorised t -> Vectorised t -> Vectorised t
+evalCond (Vectorised p) (Vectorised l) (Vectorised r) = Vectorised $ go (eltType (undefined::t)) l r
+  where
+    go :: TupleType t' -> TensorArrayData t' -> TensorArrayData t' -> TensorArrayData t'
+    go UnitTuple          AD_Unit         AD_Unit        = AD_Unit
+    go (PairTuple t1 t2) (AD_Pair l1 l2) (AD_Pair r1 r2) = AD_Pair (go t1 l1 r1) (go t2 l2 r2)
+    go (SingleTuple t)    l               r              = evalScalarCond t p l r
+
+evalScalarCond :: ScalarType t -> TensorArrayData Bool -> TensorArrayData t -> TensorArrayData t -> TensorArrayData t
+evalScalarCond (NumScalarType (IntegralNumType TypeInt32{}))  ((AD_Bool p)) ((AD_Int32 e1))  ((AD_Int32 e2)) =  (AD_Int32 $ TF.select (unsafeCoerce p) e1 e2)
+evalScalarCond (NumScalarType (IntegralNumType TypeInt64{}))  ((AD_Bool p)) ((AD_Int64 e1))  ((AD_Int64 e2)) =  (AD_Int64 $ TF.select (unsafeCoerce p) e1 e2)
+evalScalarCond (NumScalarType (FloatingNumType TypeFloat{}))  ((AD_Bool p)) ((AD_Float e1))  ((AD_Float e2)) =  (AD_Float $ TF.select (unsafeCoerce p) e1 e2)
+evalScalarCond (NumScalarType (FloatingNumType TypeDouble{})) ((AD_Bool p)) ((AD_Double e1)) ((AD_Double e2)) = (AD_Double $ TF.select (unsafeCoerce p) e1 e2)
 
 prjVectorised
     :: forall tup t. (Elt tup, Elt t)
@@ -180,13 +254,12 @@ prjVectorised tix (Vectorised tup) = Vectorised $ go tix (eltType (undefined::tu
       = v
     go (SuccTupIdx ix) (PairTuple t _) (AD_Pair tup _) = go ix t tup
     go _               _               _               = error "prjVectorised: inconsistent evaluation"
-  
 
-tfst :: (Elt a, Elt b) => Vectorised (a,b) -> Vectorised a
-tfst = prjVectorised (SuccTupIdx ZeroTupIdx)
+tfst :: Vectorised (a,b) -> Vectorised a
+tfst (Vectorised (AD_Pair (AD_Pair AD_Unit a) _)) = Vectorised a
 
-tsnd :: (Elt a, Elt b) => Vectorised (a,b) -> Vectorised b
-tsnd = prjVectorised ZeroTupIdx
+tsnd :: Vectorised (a,b) -> Vectorised b
+tsnd (Vectorised (AD_Pair _ b)) = Vectorised b
 
 evalPrimFun
     :: (Elt a, Elt b)
@@ -195,22 +268,79 @@ evalPrimFun
     -> Vectorised b
 evalPrimFun f arg =
   case f of
-    AST.PrimAdd t -> add t (tfst arg) (tsnd arg)
-
+    AST.PrimAdd         t -> evalAdd  t (tfst arg) (tsnd arg)
+    AST.PrimSub         t -> evalSub  t (tfst arg) (tsnd arg)
+    AST.PrimMul         t -> evalMul  t (tfst arg) (tsnd arg)
+    AST.PrimFDiv        t -> evalFdiv t (tfst arg) (tsnd arg)
+    AST.PrimGt          t -> evalGt   t (tfst arg) (tsnd arg)
+    AST.PrimNeg         t -> evalNeg  t arg
+    AST.PrimAbs         t -> evalAbs  t arg
+    AST.PrimExpFloating t -> evalFexp t arg
+    AST.PrimSqrt        t -> evalSqrt t arg
+    AST.PrimLog         t -> evalLog  t arg
     other -> error ("unsupported primitive function: " ++ "??")
 
 
 -- Assume that the shapes remain the same?? For zipWith TF handles some cases
 -- where the array dimensions are not the same, but often crashes...
---
-add :: NumType t -> Vectorised t -> Vectorised t -> Vectorised t
-add (IntegralNumType TypeInt32{}) (Vectorised (AD_Int32 x)) (Vectorised (AD_Int32 y)) = Vectorised (AD_Int32 $ TF.add x y)
-add (IntegralNumType TypeInt64{}) (Vectorised (AD_Int64 x)) (Vectorised (AD_Int64 y)) = Vectorised (AD_Int64 $ TF.add x y)
+-- 
+evalAdd :: NumType t -> Vectorised t -> Vectorised t -> Vectorised t
+evalAdd (IntegralNumType TypeInt32{})  (Vectorised (AD_Int32  x)) (Vectorised (AD_Int32  y)) = Vectorised (AD_Int32  $ TF.add x y)
+evalAdd (IntegralNumType TypeInt64{})  (Vectorised (AD_Int64  x)) (Vectorised (AD_Int64  y)) = Vectorised (AD_Int64  $ TF.add x y)
+evalAdd (FloatingNumType TypeFloat{})  (Vectorised (AD_Float  x)) (Vectorised (AD_Float  y)) = Vectorised (AD_Float  $ TF.add x y)
+evalAdd (FloatingNumType TypeDouble{}) (Vectorised (AD_Double x)) (Vectorised (AD_Double y)) = Vectorised (AD_Double $ TF.add x y)
+
+evalSub :: NumType t -> Vectorised t -> Vectorised t -> Vectorised t
+evalSub (IntegralNumType TypeInt32{})  (Vectorised (AD_Int32  x)) (Vectorised (AD_Int32  y)) = Vectorised (AD_Int32  $ TF.sub x y)
+evalSub (IntegralNumType TypeInt64{})  (Vectorised (AD_Int64  x)) (Vectorised (AD_Int64  y)) = Vectorised (AD_Int64  $ TF.sub x y)
+evalSub (FloatingNumType TypeFloat{})  (Vectorised (AD_Float  x)) (Vectorised (AD_Float  y)) = Vectorised (AD_Float  $ TF.sub x y)
+evalSub (FloatingNumType TypeDouble{}) (Vectorised (AD_Double x)) (Vectorised (AD_Double y)) = Vectorised (AD_Double $ TF.sub x y)
+
+evalMul :: NumType t -> Vectorised t -> Vectorised t -> Vectorised t
+evalMul (IntegralNumType TypeInt32{})  (Vectorised (AD_Int32  x)) (Vectorised (AD_Int32  y)) = Vectorised (AD_Int32  $ TF.mul x y)
+evalMul (IntegralNumType TypeInt64{})  (Vectorised (AD_Int64  x)) (Vectorised (AD_Int64  y)) = Vectorised (AD_Int64  $ TF.mul x y)
+evalMul (FloatingNumType TypeFloat{})  (Vectorised (AD_Float  x)) (Vectorised (AD_Float  y)) = Vectorised (AD_Float  $ TF.mul x y)
+evalMul (FloatingNumType TypeDouble{}) (Vectorised (AD_Double x)) (Vectorised (AD_Double y)) = Vectorised (AD_Double $ TF.mul x y)
+
+evalGt :: ScalarType t -> Vectorised t -> Vectorised t -> Vectorised Bool
+evalGt (NumScalarType (IntegralNumType TypeInt32{}))  (Vectorised (AD_Int32  x)) (Vectorised (AD_Int32  y)) = Vectorised (AD_Bool  $ unsafeCoerce $ TF.greater x y)
+evalGt (NumScalarType (IntegralNumType TypeInt64{}))  (Vectorised (AD_Int64  x)) (Vectorised (AD_Int64  y)) = Vectorised (AD_Bool  $ unsafeCoerce $ TF.greater x y)
+evalGt (NumScalarType (FloatingNumType TypeFloat{}))  (Vectorised (AD_Float  x)) (Vectorised (AD_Float  y)) = Vectorised (AD_Bool  $ unsafeCoerce $ TF.greater x y)
+evalGt (NumScalarType (FloatingNumType TypeDouble{})) (Vectorised (AD_Double x)) (Vectorised (AD_Double y)) = Vectorised (AD_Bool  $ unsafeCoerce $ TF.greater x y)
+
+-- Array Data.hs data instance GArrayData ba Bool    = AD_Bool    (ba Word8)
+
+evalFdiv :: FloatingType t -> Vectorised t -> Vectorised t -> Vectorised t
+evalFdiv (TypeFloat{})  (Vectorised (AD_Float  x)) (Vectorised (AD_Float  y)) = Vectorised (AD_Float  $ TF.div x y)
+evalFdiv (TypeDouble{}) (Vectorised (AD_Double x)) (Vectorised (AD_Double y)) = Vectorised (AD_Double $ TF.div x y)
+
+evalNeg :: NumType t -> Vectorised t -> Vectorised t
+evalNeg (IntegralNumType TypeInt32{})  (Vectorised (AD_Int32  x)) = Vectorised (AD_Int32  $ TF.neg x)
+evalNeg (IntegralNumType TypeInt64{})  (Vectorised (AD_Int64  x)) = Vectorised (AD_Int64  $ TF.neg x)
+evalNeg (FloatingNumType TypeFloat{})  (Vectorised (AD_Float  x)) = Vectorised (AD_Float  $ TF.neg x)
+evalNeg (FloatingNumType TypeDouble{}) (Vectorised (AD_Double x)) = Vectorised (AD_Double $ TF.neg x)
+
+evalAbs :: NumType t -> Vectorised t -> Vectorised t
+evalAbs (IntegralNumType TypeInt32{})  (Vectorised (AD_Int32  x)) = Vectorised (AD_Int32  $ TF.abs x)
+evalAbs (IntegralNumType TypeInt64{})  (Vectorised (AD_Int64  x)) = Vectorised (AD_Int64  $ TF.abs x)
+evalAbs (FloatingNumType TypeFloat{})  (Vectorised (AD_Float  x)) = Vectorised (AD_Float  $ TF.abs x)
+evalAbs (FloatingNumType TypeDouble{}) (Vectorised (AD_Double x)) = Vectorised (AD_Double $ TF.abs x)
+
+evalFexp :: FloatingType t -> Vectorised t -> Vectorised t
+evalFexp (TypeFloat{})  (Vectorised (AD_Float  x)) = Vectorised (AD_Float  $ TF.exp x)
+evalFexp (TypeDouble{}) (Vectorised (AD_Double x)) = Vectorised (AD_Double $ TF.exp x)
+
+evalSqrt :: FloatingType t -> Vectorised t -> Vectorised t
+evalSqrt (TypeFloat{})  (Vectorised (AD_Float  x)) = Vectorised (AD_Float  $ TF.sqrt x)
+evalSqrt (TypeDouble{}) (Vectorised (AD_Double x)) = Vectorised (AD_Double $ TF.sqrt x)
+
+evalLog :: FloatingType t -> Vectorised t -> Vectorised t
+evalLog (TypeFloat{})  (Vectorised (AD_Float  x)) = Vectorised (AD_Float  $ TF.log x)
+evalLog (TypeDouble{}) (Vectorised (AD_Double x)) = Vectorised (AD_Double $ TF.log x)
 
 
 -- Implementations
 -- ---------------
-
 useArray :: forall sh e. Array sh e -> Tensor sh e
 useArray (Array sh adata) = Tensor (encodeShape sh) (encodeData arrayElt adata)
   where
@@ -231,6 +361,6 @@ useArray (Array sh adata) = Tensor (encodeShape sh) (encodeData arrayElt adata)
     encodeData ArrayEltRint64  ad     = AD_Int64  $ TF.constant arrayShape (toList (Array sh ad :: Array sh Int64))
     encodeData ArrayEltRfloat  ad     = AD_Float  $ TF.constant arrayShape (toList (Array sh ad :: Array sh Float))
     encodeData ArrayEltRdouble ad     = AD_Double $ TF.constant arrayShape (toList (Array sh ad :: Array sh Double))
+    encodeData ArrayEltRword8 ad      = AD_Word8   $ TF.constant arrayShape (toList (Array sh ad :: Array sh Word8))
     encodeData (ArrayEltRpair ar1 ar2) (AD_Pair ad1 ad2) = AD_Pair (encodeData ar1 ad1)
                                                                    (encodeData ar2 ad2)
-

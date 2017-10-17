@@ -1,12 +1,13 @@
 import Data.Array.Accelerate                            as A
 import Data.Array.Accelerate.Interpreter as I
-import Data.Array.Accelerate.AccTF as AccTF
-import Data.Array.Accelerate.AccTF2 as AccTF2
+--import Data.Array.Accelerate.AccTF as AccTF
+--import Data.Array.Accelerate.AccTF2 as AccTF2
 
 --import Data.Array.Accelerate.AccTF2 as TF
 
 import qualified Data.Vector.Storable                   as S
 
+import qualified Data.Array.Accelerate.TensorFlow as TF
 
 --import Data.Array.Accelerate.Trafo
 
@@ -48,6 +49,7 @@ main = do
     let test = toAccVector 3 [1.0, 2.0, 3.0]
     let test2 = toAccVector 3 [4.0, 6.0, 8.0]
     let test3 = toAccVector 3 [10.0, 20.0, 30.0]
+    {-
     putStrLn $ show $ I.run $ dotp test test
     putStrLn $ show $ AccTF.run $ plusone test
     putStrLn $ show $ AccTF.run $ double test
@@ -59,16 +61,13 @@ main = do
     putStrLn $ show $ AccTF.run $ A.map (\a -> a * 2.0 + 1.0) test
 
     putStrLn "----"
-
-    res1 <- AccTF2.run $ test3
-    putStrLn $ show $ res1
+    -}
+    putStrLn $ show $ TF.run $ test3
 
 
     putStrLn "----"
-    res2 <- t2
-    res3 <- t3
-    putStrLn $ show $ res2
-    putStrLn $ show $ res3
+    putStrLn $ show $ t2
+    --putStrLn $ show $ t3
     --w <- putStrLn $ (show $ AccTF.run $ addVector test test)
 
     putStrLn "--cond test--"
@@ -77,20 +76,24 @@ main = do
     let two = A.constant(2.0 :: Float)
     let z = A.cond (one A.> two) one zero
     let zz = A.unit z
-    res4 <- AccTF2.run $ zz
-    putStrLn $ show $ res4
+    --putStrLn $ show $ TF.run $ zz
+
+
+    --putStrLn "--cond test 2--"
+    --let asd = A.zipWith (\x y -> A.cond (x A.> y) one zero) test test
+    --putStrLn $ show $ TF.run $ asd
+
 
     putStrLn "--saxpy test--"
-    res5 <- saxpy
-    putStrLn $ show $ res5
+    putStrLn $ show $ saxpy
 
     return ()
 
-t2 :: IO (S.Vector Double)
-t2 = AccTF2.run $ addVector xs ys
+--t2 :: IO (S.Vector Double)
+t2 = TF.run $ addVector xs ys
 
-t3 :: IO (S.Vector Double)
-t3 = AccTF2.run $ dotp xs ys
+--t3 :: IO (S.Vector Double)
+t3 = TF.run $ dotp xs ys
 
-saxpy :: IO (S.Vector Double)
-saxpy = AccTF2.run $ A.zipWith (\x y -> 10 * x + y) xs ys
+--saxpy :: IO (S.Vector Double)
+saxpy = TF.run $ A.zipWith (\x y -> 10 * x + y) xs ys

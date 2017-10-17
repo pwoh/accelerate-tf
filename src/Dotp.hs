@@ -4,7 +4,7 @@
 module Dotp (accdotpRandom, tfdotpRandom) where
 import Prelude                                          as P
 import Data.Array.Accelerate                            as A
-import Data.Array.Accelerate.AccTF2 as AccTF2
+import Data.Array.Accelerate.TensorFlow as AccTF
 import System.Random
 import ExampleUtil
 
@@ -26,8 +26,7 @@ accdotpRandom size = do
     seed <- newStdGen
     let rs = randomlist size seed
     let test = toAccVector size rs
-    result <- AccTF2.run $ accdotp test test
-    x <- putStr $ show $ result
+    putStr $ show $ AccTF.run $ accdotp test test
     return ()
 
 tfdotpRandom size = do

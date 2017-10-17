@@ -15,7 +15,7 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  exposed-modules:     Lib, Data.Array.Accelerate.AccTF, Data.Array.Accelerate.AccTF2, ExampleUtil, Dotp
+  exposed-modules:     Lib, ExampleUtil, Dotp, Data.Array.Accelerate.TensorFlow, Data.Array.Accelerate.TensorFlow.Array.Data
   build-depends:  base >= 4.7 && < 5
                   , accelerate
                   , random
@@ -26,6 +26,8 @@ library
                   , tensorflow-proto == 0.1.*
                   , vector
                   , bytestring == 0.10.8.*
+                  , accelerate-io
+                  , containers
   default-language:    Haskell2010
 
 executable Main
