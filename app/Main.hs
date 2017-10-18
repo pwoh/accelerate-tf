@@ -12,6 +12,8 @@ import Data.List
 import System.Environment
 import Control.Monad
 import Dotp
+import Saxpy
+import BlackScholes
 import ExampleUtil
 
 
@@ -24,5 +26,7 @@ main = do
         "noop" -> noop
         "accdotp" -> accdotpRandom
         "tfdotp" -> tfdotpRandom
+        "accsaxpy" -> accSaxpyRandom
+        "tfsaxpy" -> tfSaxpyRandom
+        "accbs" -> accBlackScholesRandom
   replicateM_ times (f size)
-
