@@ -33,6 +33,9 @@ dotp xs ys = foldl (+) 0 (zipWithM (*) xs ys)
 --dotp_vectorised = lambda xs, ys: tf.reduce_sum(tf.multiply(xs,ys))
 --dotp_matmul = lambda xs, ys: tf.matmul(xs,ys)
 
+
+
+
 main :: IO ()
 main = do
     --(f,a,b) <- derp

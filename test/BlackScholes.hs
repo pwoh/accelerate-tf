@@ -101,7 +101,7 @@ cnd' d =
 -- v = implied volatility for the underlying stock
 
 blackscholes :: (P.Floating a, A.Floating a, A.Ord a) => Acc (Vector (a, a, a)) -> Acc (Vector (a, a))
-blackscholes = A.map go          --TODO this needs to be rewritten - manual vectorisation
+blackscholes = A.map go
   where
   go x =
     let (price, strike, years) = A.unlift x

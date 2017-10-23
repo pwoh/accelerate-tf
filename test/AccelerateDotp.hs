@@ -43,9 +43,8 @@ i2 = use $ fromList (Z :. 5 :. 10 :. 5) [0..]
 
 
 
-
 main :: IO ()
-main = do
+main = do 
     let test = toAccVector 3 [1.0, 2.0, 3.0]
     let test2 = toAccVector 3 [4.0, 6.0, 8.0]
     let test3 = toAccVector 3 [10.0, 20.0, 30.0]

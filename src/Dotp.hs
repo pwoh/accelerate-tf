@@ -34,5 +34,5 @@ tfdotpRandom size = do
     let rs = randomlist size seed
     let test = toTFVector size rs 
     result <- tfdotp test test
-    x <- putStr $ show $ result
+    putStr $ show $ result
     return ()

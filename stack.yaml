@@ -7,6 +7,8 @@ extra-deps:
 - accelerate-1.1.0.0
 - accelerate-io-1.0.0.0
 - repa-3.4.1.3
+- mwc-random-accelerate-0.1.0.0
+
 explicit-setup-deps:
   ! '*': true
 resolver: lts-9.0

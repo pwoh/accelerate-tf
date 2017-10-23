@@ -101,7 +101,7 @@ evalOpenAcc (AST.OpenAcc pacc) aenv =
     AST.Use a       -> useArray a
     AST.Unit e 
       | Vectorised r <- evalExp e aenv
-      -> Tensor (TF.constant (TF.Shape [1]) [1]) r 
+      -> Tensor (TF.constant (TF.Shape [1]) [1]) r    --- wrong?
     AST.Avar ix 
       | arr <- aprj ix aenv
       ->  arr
